@@ -1,0 +1,11 @@
+---
+title: "**Modules**"
+output:
+  html_document
+---
+
+Here you can find a list of modules we developed.
+
+1. [Recount3: Understanding Gene Expression](module/Recount3.html)
+
+2. [All of Us: Ethics in choosing methods](module/AOU_methods.html)

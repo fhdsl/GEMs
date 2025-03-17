@@ -1,0 +1,7 @@
+---
+title: "**All of Us: Ethics in choosing methods**"
+output:
+  html_document
+---
+
+Details coming soon!
