@@ -24,3 +24,8 @@ knitr::include_graphics("resources/images/gems_concept.png")
 * Elizabeth Humphries (Fred Hutch)
 * Andrew Lee (NVCC)
 * Allison Peters (Fred Hutch)
+
+
+### **Contact Us**
+
+If you have questions please contact: Ava Hoffman (ahoffma2 **at** fredhutch **dot** org)

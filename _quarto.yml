@@ -10,8 +10,6 @@ website:
       href: index.qmd
     - text: Modules
       href: modules.qmd
-    - text: Contact Us
-      href: contact.qmd
 
 format:
   html:
