@@ -6,7 +6,7 @@ website:
   title: "GEMs"
   navbar:
     left:
-    - text: Home
+    - text: ""
       href: index.qmd
     - text: Modules
       href: modules.qmd
