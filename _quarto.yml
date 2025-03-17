@@ -8,7 +8,8 @@ website:
     left:
     - text: Home
       href: index.qmd
-      icon: fa-home
+    - text: Modules
+      href: modules.qmd
     - text: Contact Us
       href: contact.qmd
 

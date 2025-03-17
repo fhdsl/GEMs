@@ -4,6 +4,4 @@ output:
   html_document
 ---
 
-
-
 If you have questions please contact: Ava Hoffman (ahoffma2 **at** fredhutch **dot** org)
