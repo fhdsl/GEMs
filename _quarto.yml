@@ -16,3 +16,6 @@ format:
     theme: minty
     css: styles.css
     toc: true
+    includes:
+      after_body: footer.html
+      
