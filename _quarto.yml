@@ -10,7 +10,7 @@ website:
       href: index.qmd
     - text: Modules
       href: modules.qmd
-  google-analytics: ""
+  google-analytics: "G-XMR6CQ1L12"
   site-url: https://genomicseducation.org
   repo-url: https://github.com/fhdsl/GEMs
   page-footer:
