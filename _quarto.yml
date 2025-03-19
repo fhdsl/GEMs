@@ -10,9 +10,17 @@ website:
       href: index.qmd
     - text: Modules
       href: modules.qmd
+  google-analytics: "G-XMR6CQ1L12"
+  site-url: https://genomicseducation.org
+  repo-url: https://github.com/fhdsl/GEMs
+  page-footer:
+    center: |
+      <p style="text-align:center;"> <small> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. </small></p>
+      <p style="text-align:center;"> <small> GEMs is funded by the National Human Genome Research Institute <a href="https://reporter.nih.gov/search/SjWuEKrSVEGVaHvRb9L-vg/project-details/10854368">1R25HG013489.</a> </p></small>
 
 format:
   html:
     theme: minty
     css: styles.css
     toc: true
+      
