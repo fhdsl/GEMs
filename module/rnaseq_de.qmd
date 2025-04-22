@@ -4,6 +4,10 @@ output:
   html_document
 ---
 
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
 This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the [C-MOOR website](https://www.c-moor.org/). An online guide to the miniCURE is [here](https://science.c-moor.org/miniCURE-RNA-seq/index.html).
 
 Each chapter introduces an RNA-seq dataset from a published research paper. The datasets have been formatted for student use.
@@ -62,19 +66,19 @@ Just like FlyBase, there is a database that tracks mouse genes. This database is
 
 To look up information on a particular gene of interest, choose the “Genes” button.
 
-```{r, echo=FALSE}
+```{r, fig.align='center', echo = FALSE, fig.alt= "To look up information on a particular gene of interest, choose the “Genes” button.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.p#slide=id.p")
 ```
 
 Next, type the gene ID into the “Search” bar up top. We’ll look up “ENSMUSG00000079516”.
 
-```{r, echo=FALSE}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the gene ID into the “Search” bar up top.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3412c9eee7c_0_1#slide=id.g3412c9eee7c_0_1")
 ```
 
 After you type the gene ID into the Search bar and hit enter, you should see a new page with basic information about the gene. Click on the gene symbol (in this example, Reg3a) to get more detailed information.
 
-```{r, echo=FALSE}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Click on the gene symbol (in this example, Reg3a) to get more detailed information.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_0#slide=id.g346083d4dc0_0_0")
 ```
 
@@ -90,20 +94,20 @@ You might come across some unexpected terms when you search the MGI for your gen
 
 On the new page that you open, details about the gene are organized into familiar categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you’ll need to expand the “homology” section yourself.
 
-```{r, echo=FALSE}
+```{r, fig.align='center', echo = FALSE, fig.alt= "To look at gene homology, you’ll need to expand the “homology” section yourself.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_5#slide=id.g346083d4dc0_0_5")
 ```
 
 Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.
 
-```{r, echo=FALSE}
+```{r, fig.align='center', echo = FALSE, fig.alt= "You can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_8#slide=id.g346083d4dc0_0_83")
 ```
 
 
 If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section. Clicking on the blue squares takes you to a page with more information about how that particular gene was assigned to a pathway or molecular process.
 
-```{r, echo=FALSE}
+```{r, fig.align='center', echo = FALSE, fig.alt= "If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_11#slide=id.g346083d4dc0_0_11")
 ```
 
@@ -111,7 +115,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.
 
 
-```{r, echo=FALSE}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
 
