@@ -1,0 +1,123 @@
+---
+title: "Untitled"
+output: html_document
+date: "2025-04-10"
+---
+
+# R Markdown
+
+This is an R Markdown document. This format allows you to combine written instructions with R code and output into a single file. The R code is embedded into the document and can be run step-by-step. 
+
+Embedded R code chunks look like this:
+
+```{r cars}
+summary(cars)
+```
+
+In order to make the code chunk run, you can click the green triangle in the upper right-hand corner of the code chunk. 
+
+You can also click the button that says "Run" in the right-hand side of the toolbar just above this panel and choose which code (single lines, entire chunks, entire document) you'd like to run.
+
+# Loading the tidyverse package and the data
+
+All the additional datasets for this activity can be loaded into R from their URL. In order to do this, we will use some code that has been saved in an R package called `tidyverse`. In order to use this code, we will need to install and open `tidyverse` using the R code chunk below.
+
+`install.packages` retrieves and installs the package
+
+`library` opens the package and makes the stored code available for you to use
+
+```{r}
+install.packages("tidyverse")
+
+library(tidyverse)
+```
+
+
+Once you have installed and opened `tidyverse`, you should be ready to load the experimental data. You can do this using the `read_csv` command.
+
+Let's say you want to open one of the differential expression datasets and call it `dat`. The command would be:
+
+dat <- read_csv("URL where the dataset is stored")
+
+Try it!
+
+```{r}
+dat <- read_csv("https://drive.google.com/file/d/1RoDiq_D1YHVinmbuLRHCoGQ2wS8eWbB2/view?usp=sharing")
+
+```
+
+## Full gene expression data (no comparisons, just counts)
+https://drive.google.com/file/d/1RoDiq_D1YHVinmbuLRHCoGQ2wS8eWbB2/view?usp=sharing
+
+## Comparing gene expression between ASD and control mice
+
+Both brain regions:
+https://drive.google.com/file/d/1IdtpRUcTpqCD41plaz9ddcow6V8ZtmEd/view?usp=sharing
+
+Prefrontal cortex only:
+https://drive.google.com/file/d/1IdtpRUcTpqCD41plaz9ddcow6V8ZtmEd/view?usp=sharing
+
+Striatum only:
+https://drive.google.com/file/d/12yDb3-XvR49Gva-_s0jKN1Zdw5G7uRe-/view?usp=sharing
+
+## Comparing gene expression between prefrontal cortex and striatum
+
+All mice:
+https://drive.google.com/file/d/1A4eHpoarGjlGNC0mij-wrx9TAcFHmXn9/view?usp=sharing
+
+Only ASD mice:
+https://drive.google.com/file/d/1I4g5jEsHL1UnYkudcESWuvoF-DV-eO3s/view?usp=sharing
+
+Only control mice:
+https://drive.google.com/file/d/1dAzC4tOIRMqy9z749rh-hNEv3nV-6YpK/view?usp=sharing
+
+# Analysis
+
+Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
+Remember, the basic steps of your analysis are:
+
+1. Examine expression of your  gene of interest expressed in this dataset.
+2. Explore whether your gene of interest is differentially expressed in different experimental groups.
+3. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
+
+You can use this chunk to analyze your data! 
+
+```{r}
+
+```
+
+
+# Code used in miniCURE exercises
+
+Here's a quick overview of some of the code you used in the lab exercises!
+
+##   Exploring the dataframe
+
+This lets you explore how the dataset is formatted and how big it is
+
+head(readCounts)
+dim(readCounts)
+
+## Summarizing count data
+
+These commands allow you to run basic statistics on a variable (column) in the dataset
+
+summary(readCounts$V2)
+sum(readCounts$V2)
+
+## Plotting a histogram
+
+A general histogram:
+hist(readCounts$V2, main="Read Counts for Drosophila RNA-seq sample")
+
+A histogram with a log-transformed x-axis:
+hist(log10(readCounts$V2), main="Log10 Read Counts for Drosophila RNA-seq sample")
+
+A histogram with a log-transformed x-axis and corrected zeros:
+hist(log10(readCounts$V2 + 0.1), main="Log10 Read Counts for Drosophila RNA-seq sample with Zero Correction")
+
+## Filtering out a specific gene
+
+You might want to look at the expression of a specific gene
+
+filter(readCounts_Cu, V1=="FBgn0002522")
