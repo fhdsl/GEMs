@@ -121,3 +121,29 @@ hist(log10(readCounts$V2 + 0.1), main="Log10 Read Counts for Drosophila RNA-seq 
 You might want to look at the expression of a specific gene
 
 filter(readCounts_Cu, V1=="FBgn0002522")
+
+### Creating a gene list
+
+In order to run gene set analyses, you will need to create a list of genes to look at. You can use the `filter` command to choose a p-value cut off. Make sure to check that your gene list has enough genes on it (and that you have a good ratio of   "real" positive versus false positive results).
+
+sig_genes <- filter(a1_vs_p1, padj <= 0.05)
+dim(sig_genes)
+
+### Running a gene set analysis
+
+You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
+
+a1_vs_p1_clusters <- runClusterProfiler(sig_genes)
+
+dotplot(a1_vs_p1_clusters, showCategory=34, title="a1 vs p1", font.size=10, label_format = 50)
+
+### Plotting a single gene across regions
+
+Finally, it might be interesting to look at the expression of a gene across all the possible regions. This is another special command that has been written for you.
+
+plotAcrossRegions("FBgn0000003")
+
+If you're interested in plotting the genes with the lowest p-values, you can use the `arrange` command to sort the results first.
+
+a1_vs_p1_sorted <- arrange(a1_vs_p1, padj)
+head(a1_vs_p1_sorted)
