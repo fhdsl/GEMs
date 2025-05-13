@@ -155,7 +155,7 @@ All the datasets for this activity can be loaded into R from their URL. In order
 
 `library` opens the package and makes the stored code available for you to use
 
-```{r}
+```{r, eval=FALSE}
 install.packages("tidyverse")
 
 library(tidyverse)
