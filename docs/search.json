@@ -32,7 +32,7 @@
     "href": "module/rnaseq_de.html",
     "title": "Differential Expression with RNA-seq",
     "section": "",
-    "text": "This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the C-MOOR website. An online guide to the miniCURE is here.\nEach chapter introduces an RNA-seq dataset from a published research paper. The datasets have been formatted for student use."
+    "text": "This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the C-MOOR website. An online guide to the miniCURE is here.\nEach section introduces an RNA-seq dataset from a published research paper. The datasets have been formatted for student use."
   },
   {
     "objectID": "module/rnaseq_de.html#the-mouse-as-a-model-organism",
@@ -89,5 +89,26 @@
     "title": "Differential Expression with RNA-seq",
     "section": "Code used in miniCURE exercises",
     "text": "Code used in miniCURE exercises\nHere’s a quick overview of some of the code you used in the lab exercises!\n\nExploring the dataframe\nThis lets you explore how the dataset is formatted and how big it is\nhead(readCounts) dim(readCounts)\n\n\nSummarizing count data\nThese commands allow you to run basic statistics on a variable (column) in the dataset\nsummary(readCounts\\(V2) sum(readCounts\\)V2)\n\n\nPlotting a histogram\nA general histogram: hist(readCounts$V2, main=“Read Counts for Drosophila RNA-seq sample”)\nA histogram with a log-transformed x-axis: hist(log10(readCounts$V2), main=“Log10 Read Counts for Drosophila RNA-seq sample”)\nA histogram with a log-transformed x-axis and corrected zeros: hist(log10(readCounts$V2 + 0.1), main=“Log10 Read Counts for Drosophila RNA-seq sample with Zero Correction”)\n\n\nFiltering out a specific gene\nYou might want to look at the expression of a specific gene\nfilter(readCounts_Cu, V1==“FBgn0002522”)\n\n\nCreating a gene list\nIn order to run gene set analyses, you will need to create a list of genes to look at. You can use the filter command to choose a p-value cut off. Make sure to check that your gene list has enough genes on it (and that you have a good ratio of “real” positive versus false positive results).\nsig_genes <- filter(a1_vs_p1, padj <= 0.05) dim(sig_genes)\n\n\nRunning a gene set analysis\nYou can use the special command runClusterProfiler to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.\na1_vs_p1_clusters <- runClusterProfiler(sig_genes)\ndotplot(a1_vs_p1_clusters, showCategory=34, title=“a1 vs p1”, font.size=10, label_format = 50)\n\n\nPlotting a single gene across regions\nFinally, it might be interesting to look at the expression of a gene across all the possible regions. This is another special command that has been written for you.\nplotAcrossRegions(“FBgn0000003”)\nIf you’re interested in plotting the genes with the lowest p-values, you can use the arrange command to sort the results first.\na1_vs_p1_sorted <- arrange(a1_vs_p1, padj) head(a1_vs_p1_sorted)"
+  },
+  {
+    "objectID": "module/rnaseq_de.html#what-comparisons-can-students-make",
+    "href": "module/rnaseq_de.html#what-comparisons-can-students-make",
+    "title": "Differential Expression with RNA-seq",
+    "section": "What comparisons can students make?",
+    "text": "What comparisons can students make?\nIn this dataset, students have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).\nAdditionally, students can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, students also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex."
+  },
+  {
+    "objectID": "module/rnaseq_de.html#what-does-the-student-guide-include",
+    "href": "module/rnaseq_de.html#what-does-the-student-guide-include",
+    "title": "Differential Expression with RNA-seq",
+    "section": "What does the student guide include?",
+    "text": "What does the student guide include?\nThe student guide includes some background information that may help your students understand the sorts of questions they may want to ask with this dataset.\n\nStudy overview and definitions\nIn addition to the basic overview of the study above, the student guide also includes definitions of Autism Spectrum Disorder, and explanations of the parts of the brain sampled in this study. It also includes a link to the story of Phineas Gage, a railroad worker who survived an iron rod through his forehead, and whose injury led to breakthroughs in our understanding of neuroanatomy.\n\n\nThe mouse as a model organism\nStudents may not be familiar with why the mouse is used as a model organism. This section provides a very general explanation of the role of mice in laboratory research, as well as why mice can be used as models for human disease.\n\n\nLearning about mouse genes\nThis section of the student guide includes information on how to navigate the Mouse Genome Informatics database maintained by The Jackson Laboratory. It also has a brief description on interpreting a mouse gene ID code and non-genes that have associated IDs."
+  },
+  {
+    "objectID": "module/rnaseq_de.html#datasets",
+    "href": "module/rnaseq_de.html#datasets",
+    "title": "Differential Expression with RNA-seq",
+    "section": "Datasets",
+    "text": "Datasets\nA separate student guide and Rmd file (with example code) has been created for this activity. The student guide can be accessed as either a webpage or as a downloadable pdf. The Rmd file should be downloaded. Once it is downloaded, students can open Rmd file with RStudio. This Rmd file can also be used in any cloud-based R environment, such as AnVIL or PositCloud.\nStudent guide Student Rmd file\nFull gene expression data; no comparisons, just counts\nComparing gene expression between ASD and control mice\nBoth brain regions\nPrefrontal cortex only\nStriatum only\nComparing gene expression between prefrontal cortex and striatum\nAll mice\nOnly ASD mice\nOnly control mice"
   }
 ]
