@@ -50,8 +50,8 @@ This section of the student guide includes information on how to navigate the [M
 ## Datasets
 A separate student guide and Rmd file (with example code) has been created for this activity. The student guide can be accessed as either a webpage or as a downloadable pdf. The Rmd file should be downloaded. Once it is downloaded, students can open Rmd file with RStudio. This Rmd file can also be used in any cloud-based R environment, such as AnVIL or PositCloud.
 
-[Student guide]()
-[Student Rmd file]()
+[Student guide](rnaseq_de_student-guide.html)
+[Student Rmd file](rnaseq_de_student_-guide_use.html)
 
 [Full gene expression data; no comparisons, just counts](https://drive.google.com/file/d/1RoDiq_D1YHVinmbuLRHCoGQ2wS8eWbB2/view?usp=sharing)
 
