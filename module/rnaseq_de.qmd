@@ -67,7 +67,7 @@ Just like FlyBase, there is a database that tracks mouse genes. This database is
 To look up information on a particular gene of interest, choose the “Genes” button.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "To look up information on a particular gene of interest, choose the “Genes” button.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.p#slide=id.p")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g357f7ed062e_9_0#slide=id.g357f7ed062e_9_0")
 ```
 
 Next, type the gene ID into the “Search” bar up top. We’ll look up “ENSMUSG00000079516”.
