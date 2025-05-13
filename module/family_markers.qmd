@@ -1,0 +1,39 @@
+---
+title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
+output:
+  html_document
+---
+
+## Materials
+
+Download this module as:
+
+-   Quarto (qmd)
+-   Rmarkdown (Rmd)
+-   Word (docx)
+
+Download the R student activity as:
+
+-   Quarto (qmd)
+-   Rmarkdown (Rmd)
+-   Word (docx)
+
+## Learning Objectives
+
+Coming soon!
+
+## Activity 1 - Literature Review
+
+Coming soon!
+
+### Questions
+
+## Activity 2 - Pedigree Construction in R
+
+In this activity
+
+### Start Posit Cloud
+
+### Get the data
+
+### Questions
