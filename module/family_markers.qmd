@@ -82,8 +82,8 @@ library(kinship2)
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_36#slide=id.g357ffc10808_0_36")
 ```
 
-:::dictionary
-**What are R Packages?**
+::: {.callout-tip}
+## What are R Packages?
 
 Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like "expansion packs" on top of your basic R software.
 
