@@ -58,7 +58,7 @@ Rename your project "Family Markers" by clicking on "Untitled Project".
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
 ```
 
-### Packages and data
+### Package Install and Load
 
 We will need to install the `kinship2` package for this activity.
 
@@ -91,5 +91,28 @@ Packages are developed by the R community and made available through repositorie
 
 We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
 :::
+
+### Get Pedigree Data
+
+We'll read in some data from the GEMs website. Run the following code in your console:
+
+```{r}
+ped_data <- read.csv("https://genomicseducation.org/data/pedigree_data.csv")
+ped_data
+```
+
+If everything went correctly, you should see both an object called `ped_data` in the Environment Pane (top right) and the data printed to the console.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_47#slide=id.g357ffc10808_0_47")
+```
+
+::: {.callout-tip}
+## What is an R object?
+
+An object is something stored in a programming language, such as data. Think of it like a "noun". In R, we assign objects using the `<-` symbol, with the name of your choice on the left, and the contents of the object on the right. Objects will show up in your Environment Pane. It's a good idea to check the Environment Pane regularly.
+:::
+
+
 
 ### Questions
