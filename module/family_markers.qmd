@@ -79,7 +79,7 @@ library(kinship2)
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_36#slide=id.g357ffc10808_0_36")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_61#slide=id.g357ffc10808_0_61")
 ```
 
 ::: {.callout-tip}
@@ -110,7 +110,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 ::: {.callout-tip}
 ## What is an R object?
 
-An object is something stored in a programming language, such as data. Think of it like a "noun". In R, we assign objects using the `<-` symbol, with the name of your choice on the left, and the contents of the object on the right. Objects will show up in your Environment Pane. It's a good idea to check the Environment Pane regularly.
+An object is something stored in a programming language, such as data. Think of it like a "noun". 
+
+In R, we assign objects using the `<-` symbol, with the name of your choice on the left, and the contents of the object on the right. 
+
+Objects will show up in your Environment Pane. It's a good idea to check the Environment Pane regularly.
 :::
 
 
