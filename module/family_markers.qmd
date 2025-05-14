@@ -6,6 +6,8 @@ output:
 
 ## Materials
 
+You will need an internet connection for this activity as written. Students can use a local installation of R or RStudio if the data is downloaded ahead of time.
+
 Download this module as:
 
 -   Quarto (qmd)
@@ -17,6 +19,8 @@ Download the R student activity as:
 -   Quarto (qmd)
 -   Rmarkdown (Rmd)
 -   Word (docx)
+
+Borrow images from [Google Slides](https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?usp=sharing).
 
 ## Learning Objectives
 
@@ -34,7 +38,7 @@ In this activity. you will ..
 
 ### Start Posit Cloud
 
-We will use Posit Cloud for this activity. Go to [https://posit.cloud/plans/free](https://posit.cloud/plans/free) and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
+We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
 
 <!-- Callout about what cloud computing is -->
 
@@ -48,6 +52,44 @@ Once logged in, select "New Project" and "New RStudio Project". It will take a f
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
 ```
 
-### Get the data
+Rename your project "Family Markers" by clicking on "Untitled Project".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
+```
+
+### Packages and data
+
+We will need to install the `kinship2` package for this activity.
+
+Type the following into your console and press return to run the code. You will see a lot of red text, but usually that's a good thing!
+
+```{r eval=F}
+install.packages("kinship2")
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30")
+```
+
+Next, we will load the package so it's ready to use:
+
+```{r eval=F}
+library(kinship2)
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_36#slide=id.g357ffc10808_0_36")
+```
+
+:::dictionary
+**What are R Packages?**
+
+Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like "expansion packs" on top of your basic R software.
+
+Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!
+
+We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
+:::
 
 ### Questions
