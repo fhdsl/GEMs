@@ -9,3 +9,5 @@ Here you can find a list of modules we developed.
 1. [Recount3: Understanding Gene Expression](module/Recount3.html)
 
 2. [All of Us: Ethics in choosing methods](module/AOU_methods.html)
+
+3. [Family Markers: Using Multiply-Affected Families to Identify Risk Genes](module/family_markers.html)

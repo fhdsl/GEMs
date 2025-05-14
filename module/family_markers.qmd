@@ -1,0 +1,53 @@
+---
+title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
+output:
+  html_document
+---
+
+## Materials
+
+Download this module as:
+
+-   Quarto (qmd)
+-   Rmarkdown (Rmd)
+-   Word (docx)
+
+Download the R student activity as:
+
+-   Quarto (qmd)
+-   Rmarkdown (Rmd)
+-   Word (docx)
+
+## Learning Objectives
+
+Coming soon!
+
+## Activity 1 - Literature Review
+
+Coming soon!
+
+### Questions
+
+## Activity 2 - Pedigree Construction in R
+
+In this activity. you will ..
+
+### Start Posit Cloud
+
+We will use Posit Cloud for this activity. Go to [https://posit.cloud/plans/free](https://posit.cloud/plans/free) and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
+
+<!-- Callout about what cloud computing is -->
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+```
+
+Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
+```
+
+### Get the data
+
+### Questions
