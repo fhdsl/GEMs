@@ -54,6 +54,11 @@ jobs:
       - name: Run render html
         id: site
         run: quarto render
+        
+       # Custom for GEMs: Copy over data dir
+      - name: Copy data
+        id: data
+        run: cp -r data docs
 
       # This checks on the steps before it and makes sure that they completed.
       # If the renders didn't complete we don't want to commit the file changes
