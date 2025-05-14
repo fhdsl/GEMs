@@ -161,20 +161,21 @@ All the datasets for this activity can be loaded into R from their URL. In order
 
 `library` opens the package and makes the stored code available for you to use
 
-`
+```{r, eval = F}
 install.packages("tidyverse")
 
 library(tidyverse)
-`
+```
 
 Once you have installed and opened `tidyverse`, you should be ready to load the experimental data. You can do this using the `read_csv` command.
 
 Let's say you want to open one of the differential expression datasets and call it `dat`. The command would be:
 
+```{r, eval = F}
 dat <- read_csv("URL where the dataset is stored")
+```
 
-
-## Code cheatsheet
+### Code cheatsheet
 
 Here's a quick overview of some of the code you used in the lab exercises!
 
@@ -182,56 +183,76 @@ Here's a quick overview of some of the code you used in the lab exercises!
 
 This lets you explore how the dataset is formatted and how big it is
 
+```{r, eval = F}
 head(readCounts)
 dim(readCounts)
+```
 
 ### Summarizing count data
 
 These commands allow you to run basic statistics on a variable (column) in the dataset
 
+```{r, eval = F}
 summary(readCounts$V2)
 sum(readCounts$V2)
+```
 
 ### Plotting a histogram
 
 A general histogram:
+```{r, eval = F}
 hist(readCounts$V2, main="Read Counts for Drosophila RNA-seq sample")
+```
 
 A histogram with a log-transformed x-axis:
+```{r, eval = F}
 hist(log10(readCounts$V2), main="Log10 Read Counts for Drosophila RNA-seq sample")
+```
 
 A histogram with a log-transformed x-axis and corrected zeros:
+```{r, eval = F}
 hist(log10(readCounts$V2 + 0.1), main="Log10 Read Counts for Drosophila RNA-seq sample with Zero Correction")
+```
 
 ### Filtering out a specific gene
 
 You might want to look at the expression of a specific gene
 
+```{r, eval = F}
 filter(readCounts_Cu, V1=="FBgn0002522")
+```
 
 ### Creating a gene list
 
-In order to run gene set analyses, you will need to create a list of genes to look at. You can use the `filter` command to choose a p-value cut off. Make sure to check that your gene list has enough genes on it (and that you have a good ratio of   "real" positive versus false positive results).
+In order to run gene set analyses, you will need to create a list of genes to look at. You can use the `filter` command to choose a p-value cut off. Make sure to check that your gene list has enough genes on it (and that you have a good ratio of "real" positive versus false positive results).
 
+```{r, eval = F}
 sig_genes <- filter(a1_vs_p1, padj <= 0.05)
 dim(sig_genes)
+```
 
 ### Running a gene set analysis
 
 You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
 
+```{r, eval = F}
 a1_vs_p1_clusters <- runClusterProfiler(sig_genes)
 
 dotplot(a1_vs_p1_clusters, showCategory=34, title="a1 vs p1", font.size=10, label_format = 50)
+```
 
 ### Plotting a single gene across regions
 
 Finally, it might be interesting to look at the expression of a gene across all the possible regions. This is another special command that has been written for you.
 
+```{r, eval = F}
 plotAcrossRegions("FBgn0000003")
+```
 
 If you're interested in plotting the genes with the lowest p-values, you can use the `arrange` command to sort the results first.
 
+```{r, eval = F}
 a1_vs_p1_sorted <- arrange(a1_vs_p1, padj)
 head(a1_vs_p1_sorted)
+```
 

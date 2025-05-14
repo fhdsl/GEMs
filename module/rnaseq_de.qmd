@@ -36,7 +36,7 @@ The student guide includes some background information that may help your studen
 
 ### Study overview and definitions
 
-In addition to the basic overview of the study above, the student guide also includes definitions of Autism Spectrum Disorder, and explanations of the parts of the brain sampled in this study. It also includes a link to the [story of Phineas Gage](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/), a railroad worker who survived an iron rod through his forehead, and whose injury led to breakthroughs in our understanding of neuroanatomy. 
+In addition to the basic overview of the study above, the student guide also includes definitions of Autism Spectrum Disorder and explanations of the parts of the brain sampled in this study. It also includes a link to the [story of Phineas Gage](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/), a railroad worker who survived an iron rod through his forehead, and whose injury led to breakthroughs in our understanding of neuroanatomy. 
 
 ### The mouse as a model organism
 
@@ -51,6 +51,7 @@ This section of the student guide includes information on how to navigate the [M
 A separate student guide and Rmd file (with example code) has been created for this activity. The student guide can be accessed as either a webpage or as a downloadable pdf. The Rmd file should be downloaded. Once it is downloaded, students can open Rmd file with RStudio. This Rmd file can also be used in any cloud-based R environment, such as AnVIL or PositCloud.
 
 [Student guide](rnaseq_de_student-guide.html)
+<br>
 [Student Rmd file](rnaseq_de_student_-guide_use.html)
 
 [Full gene expression data; no comparisons, just counts](https://drive.google.com/file/d/1RoDiq_D1YHVinmbuLRHCoGQ2wS8eWbB2/view?usp=sharing)
