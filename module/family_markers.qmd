@@ -117,6 +117,24 @@ In R, we assign objects using the `<-` symbol, with the name of your choice on t
 Objects will show up in your Environment Pane. It's a good idea to check the Environment Pane regularly.
 :::
 
+Enter the following code in the console to view the data in tabular format:
 
+```{r eval=F}
+View(ped_data)
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_74#slide=id.g357ffc10808_0_74")
+```
 
 ### Questions
+
+::: {.callout-note}
+## Check Your Knowledge
+
+1. Why might we want to install add-on packages in R?
+
+2. How can we confirm that our data loaded correctly?
+
+3. Assume the column "bipolar" is 1=yes, 0=no, and NA=missing. Assume the column "depression" is the same. Based on this information, what do you think the column "diagnosis_available" represents?
+:::
