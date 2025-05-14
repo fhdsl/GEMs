@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modules – GEMs</title>
+<title>Family Markers: Using Multiply-Affected Families to Identify Risk Genes – GEMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,7 +77,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -87,7 +87,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">GEMs</span>
     </a>
   </div>
@@ -98,11 +98,11 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text"><strong>About</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./modules.html" aria-current="page"> 
+    <a class="nav-link" href="../modules.html"> 
 <span class="menu-text">Modules</span></a>
   </li>  
 </ul>
@@ -116,15 +116,32 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#materials" id="toc-materials" class="nav-link active" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#activity-1---literature-review" id="toc-activity-1---literature-review" class="nav-link" data-scroll-target="#activity-1---literature-review">Activity 1 - Literature Review</a>
+  <ul class="collapse">
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  </ul></li>
+  <li><a href="#activity-2---pedigree-construction-in-r" id="toc-activity-2---pedigree-construction-in-r" class="nav-link" data-scroll-target="#activity-2---pedigree-construction-in-r">Activity 2 - Pedigree Construction in R</a>
+  <ul class="collapse">
+  <li><a href="#start-posit-cloud" id="toc-start-posit-cloud" class="nav-link" data-scroll-target="#start-posit-cloud">Start Posit Cloud</a></li>
+  <li><a href="#get-the-data" id="toc-get-the-data" class="nav-link" data-scroll-target="#get-the-data">Get the data</a></li>
+  <li><a href="#questions-1" id="toc-questions-1" class="nav-link" data-scroll-target="#questions-1">Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Modules</strong></h1>
+<h1 class="title"><strong>Family Markers: Using Multiply-Affected Families to Identify Risk Genes</strong></h1>
 </div>
 
 
@@ -141,14 +158,68 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </header>
 
 
-<p>Here you can find a list of modules we developed.</p>
-<ol type="1">
-<li><p><a href="module/Recount3.html">Recount3: Understanding Gene Expression</a></p></li>
-<li><p><a href="module/AOU_methods.html">All of Us: Ethics in choosing methods</a></p></li>
-<li><p><a href="module/family_markers.html">Family Markers: Using Multiply-Affected Families to Identify Risk Genes</a></p></li>
-</ol>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials</h2>
+<p>Download this module as:</p>
+<ul>
+<li>Quarto (qmd)</li>
+<li>Rmarkdown (Rmd)</li>
+<li>Word (docx)</li>
+</ul>
+<p>Download the R student activity as:</p>
+<ul>
+<li>Quarto (qmd)</li>
+<li>Rmarkdown (Rmd)</li>
+<li>Word (docx)</li>
+</ul>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>Coming soon!</p>
+</section>
+<section id="activity-1---literature-review" class="level2">
+<h2 class="anchored" data-anchor-id="activity-1---literature-review">Activity 1 - Literature Review</h2>
+<p>Coming soon!</p>
+<section id="questions" class="level3">
+<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+</section>
+</section>
+<section id="activity-2---pedigree-construction-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="activity-2---pedigree-construction-in-r">Activity 2 - Pedigree Construction in R</h2>
+<p>In this activity. you will ..</p>
+<section id="start-posit-cloud" class="level3">
+<h3 class="anchored" data-anchor-id="start-posit-cloud">Start Posit Cloud</h3>
+<p>We will use Posit Cloud for this activity. Go to <a href="https://posit.cloud/plans/free">https://posit.cloud/plans/free</a> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.</p>
+<!-- Callout about what cloud computing is -->
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g1965a5f7f0a_0_44.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Once logged in, select “New Project” and “New RStudio Project”. It will take a few seconds to deploy and load.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g357ffc10808_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="get-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="get-the-data">Get the data</h3>
+</section>
+<section id="questions-1" class="level3">
+<h3 class="anchored" data-anchor-id="questions-1">Questions</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

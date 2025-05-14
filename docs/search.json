@@ -4,7 +4,49 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Here you can find a list of modules we developed.\n\nRecount3: Understanding Gene Expression\nAll of Us: Ethics in choosing methods"
+    "text": "Here you can find a list of modules we developed.\n\nRecount3: Understanding Gene Expression\nAll of Us: Ethics in choosing methods\nFamily Markers: Using Multiply-Affected Families to Identify Risk Genes"
+  },
+  {
+    "objectID": "module/AOU_methods.html",
+    "href": "module/AOU_methods.html",
+    "title": "All of Us: Ethics in choosing methods",
+    "section": "",
+    "text": "Details coming soon!"
+  },
+  {
+    "objectID": "module/family_markers.html",
+    "href": "module/family_markers.html",
+    "title": "Family Markers: Using Multiply-Affected Families to Identify Risk Genes",
+    "section": "",
+    "text": "Download this module as:\n\nQuarto (qmd)\nRmarkdown (Rmd)\nWord (docx)\n\nDownload the R student activity as:\n\nQuarto (qmd)\nRmarkdown (Rmd)\nWord (docx)"
+  },
+  {
+    "objectID": "module/family_markers.html#materials",
+    "href": "module/family_markers.html#materials",
+    "title": "Family Markers: Using Multiply-Affected Families to Identify Risk Genes",
+    "section": "",
+    "text": "Download this module as:\n\nQuarto (qmd)\nRmarkdown (Rmd)\nWord (docx)\n\nDownload the R student activity as:\n\nQuarto (qmd)\nRmarkdown (Rmd)\nWord (docx)"
+  },
+  {
+    "objectID": "module/family_markers.html#learning-objectives",
+    "href": "module/family_markers.html#learning-objectives",
+    "title": "Family Markers: Using Multiply-Affected Families to Identify Risk Genes",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nComing soon!"
+  },
+  {
+    "objectID": "module/family_markers.html#activity-1---literature-review",
+    "href": "module/family_markers.html#activity-1---literature-review",
+    "title": "Family Markers: Using Multiply-Affected Families to Identify Risk Genes",
+    "section": "Activity 1 - Literature Review",
+    "text": "Activity 1 - Literature Review\nComing soon!\n\nQuestions"
+  },
+  {
+    "objectID": "module/family_markers.html#activity-2---pedigree-construction-in-r",
+    "href": "module/family_markers.html#activity-2---pedigree-construction-in-r",
+    "title": "Family Markers: Using Multiply-Affected Families to Identify Risk Genes",
+    "section": "Activity 2 - Pedigree Construction in R",
+    "text": "Activity 2 - Pedigree Construction in R\nIn this activity. you will ..\n\nStart Posit Cloud\nWe will use Posit Cloud for this activity. Go to https://posit.cloud/plans/free and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.\n\n\n\n\n\n\n\n\n\n\nOnce logged in, select “New Project” and “New RStudio Project”. It will take a few seconds to deploy and load.\n\n\n\n\n\n\n\n\n\n\n\nGet the data\n\n\nQuestions"
   },
   {
     "objectID": "module/Recount3.html",
@@ -19,12 +61,5 @@
     "title": "GEMs",
     "section": "",
     "text": "About\nWelcome! This is the main website for the Genomics Education Modules (GEMs) Program, a collaborative project between Fred Hutch Cancer Center, Clovis Community College, Guttman Community College, and Northern Virginia Community College.\nOur team focuses specifically on genomic data science, an interdisciplinary field that combines both biology and computational skills. Here, you will be able to find links to our modules to use in the classroom or workplace.\n\n\n\n\n\n\n\n\n\n\n\nOur Team\n\nRosa Alcazar (Clovis CC)\nStephanie Coffman (Clovis CC)\nKarla Fuller (Guttman CC)\nAva Hoffman (Fred Hutch)\nElizabeth Humphries (Fred Hutch)\nAndrew Lee (NVCC)\nAllison Peters (Fred Hutch)\n\n\n\nContact Us\nIf you have questions please contact: Ava Hoffman (ahoffma2 at fredhutch dot org)"
-  },
-  {
-    "objectID": "module/AOU_methods.html",
-    "href": "module/AOU_methods.html",
-    "title": "All of Us: Ethics in choosing methods",
-    "section": "",
-    "text": "Details coming soon!"
   }
 ]
