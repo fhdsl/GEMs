@@ -122,9 +122,7 @@ jobs:
        # Now we want to render all the html files from the qmd files
       - name: Run render html
         id: site
-        run: |
-          quarto install tinytex
-          quarto render 
+        run: quarto render 
 
       # This checks on the steps before it and makes sure that they completed.
       # If the renders didn't complete we don't want to commit the file changes

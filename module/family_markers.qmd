@@ -1,8 +1,7 @@
 ---
 title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
 format:
-    html: default 
-    pdf: default
+    html: default
 ---
 
 This module teaches about ...
