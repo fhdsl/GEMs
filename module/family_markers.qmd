@@ -31,7 +31,7 @@ Download the R student activity as:
 
 Borrow images from [Google Slides](https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?usp=sharing).
 
-## Activity
+## Activity Part 1
 
 ### Background
 
@@ -140,7 +140,7 @@ View(ped_data)
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_74#slide=id.g357ffc10808_0_74")
 ```
 
-### Questions
+## Questions Part 1
 
 ::: {.callout-note}
 ## Check Your Knowledge
@@ -151,3 +151,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 
 3. Assume the column "bipolar" is 1=yes, 0=no, and NA=missing. Assume the column "depression" is the same. Based on this information, what do you think the column "diagnosis_available" represents?
 :::
+
+## Activity Part 2
+
+...
