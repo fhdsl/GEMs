@@ -1,8 +1,17 @@
 ---
 title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
-output:
-  html_document
+format:
+    html: default 
+    pdf: default
 ---
+
+This module teaches about ...
+
+## Learning Objectives
+
+1. Interpret pedigree information to determine the suitability of a DNA marker for tracking a disease trait in a family (GSA)[https://genetics-gsa.org/education/genetics-learning-framework/].
+
+2. Build a pedigree using bioinformatics tools (R).
 
 ## Materials
 
@@ -22,21 +31,25 @@ Download the R student activity as:
 
 Borrow images from [Google Slides](https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?usp=sharing).
 
-## Learning Objectives
+## Activity
 
-Coming soon!
+### Background
 
-## Activity 1 - Literature Review
+First, let's read the "plain language" summary from a publication entitled "Rare variants implicate NMDA receptor signaling and cerebellar gene networks in risk for bipolar disorder".
 
-Coming soon!
+> This research explores the genetic basis of bipolar disorder, a serious mental health condition where people experience extreme mood swings between mania and depression. The researchers studied DNA from 41 families with multiple members affected by bipolar disorder. They identified 741 genes potentially linked to bipolar disorder, which overlapped with genes known to be involved in other brain development disorders. Their most significant finding was a specific variant in a gene called DAO (D-amino acid oxidase). When they tested this variant in human cells, it reduced the amount and activity of the DAO protein. In mice with the equivalent genetic change, they observed: (1) less DAO protein in certain brain regions, (2) greater susceptibility to stress, (3) altered responses to drugs affecting NMDAR (a type of brain receptor), and (4) changes in gene activity patterns in the cerebellum (a brain region). The team also found similar gene expression patterns in the cerebellum of human bipolar disorder patients. The study suggests bipolar disorder may involve disruptions to NMDAR signaling and gene expression in the cerebellum, providing new insights into how this condition develops at the molecular level.
 
-### Questions
+::: {.callout-note}
+## Check Your Knowledge
 
-## Activity 2 - Pedigree Construction in R
+1. What does the DAO gene do?
 
-In this activity. you will ..
+2. How did researchers identify DAO and other possible genes linked to bipolar disorder?
+:::
 
 ### Start Posit Cloud
+
+In the next steps, we will construct a pedegree from the publiation described above.
 
 We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
 
