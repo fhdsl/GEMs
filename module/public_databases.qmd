@@ -1,0 +1,14 @@
+---
+title: "Using Public Genomic Databases"
+format: html
+editor: visual
+---
+
+## The suspected genes
+
+Six fruit fly genes: scarlet, plum, mustard, white, green body, and bluestreak
+
+## The databases
+
+FlyBase, Mouse Genome Informatics, ??
+
