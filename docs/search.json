@@ -4,7 +4,7 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Here you can find a list of modules we developed.\n\nRecount3: Understanding Gene Expression\nAll of Us: Ethics in choosing methods\nFamily Markers: Using Multiply-Affected Families to Identify Risk Genes"
+    "text": "Here you can find a list of modules we developed.\n\nRecount3: Understanding Gene Expression\nAll of Us: Ethics in choosing methods\nFamily Markers: Using Multiply-Affected Families to Identify Risk Genes\nUsing Public Genomic Databases"
   },
   {
     "objectID": "module/AOU_methods.html",
@@ -12,6 +12,27 @@
     "title": "All of Us: Ethics in choosing methods",
     "section": "",
     "text": "Details coming soon!"
+  },
+  {
+    "objectID": "module/public_databases.html",
+    "href": "module/public_databases.html",
+    "title": "Using Public Genomic Databases",
+    "section": "",
+    "text": "Six fruit fly genes: scarlet, plum, mustard, white, green body, and bluestreak"
+  },
+  {
+    "objectID": "module/public_databases.html#the-suspected-genes",
+    "href": "module/public_databases.html#the-suspected-genes",
+    "title": "Using Public Genomic Databases",
+    "section": "",
+    "text": "Six fruit fly genes: scarlet, plum, mustard, white, green body, and bluestreak"
+  },
+  {
+    "objectID": "module/public_databases.html#the-databases",
+    "href": "module/public_databases.html#the-databases",
+    "title": "Using Public Genomic Databases",
+    "section": "The databases",
+    "text": "The databases\nFlyBase, Mouse Genome Informatics, ??"
   },
   {
     "objectID": "module/family_markers.html",

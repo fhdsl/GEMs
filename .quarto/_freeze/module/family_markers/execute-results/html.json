@@ -1,0 +1,17 @@
+{
+  "hash": "2737bb7de14f56429baccc3d7751168a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**\"\noutput:\n  html_document\n---\n\n\n\n## Materials\n\nDownload this module as:\n\n-   Quarto (qmd)\n-   Rmarkdown (Rmd)\n-   Word (docx)\n\nDownload the R student activity as:\n\n-   Quarto (qmd)\n-   Rmarkdown (Rmd)\n-   Word (docx)\n\n## Learning Objectives\n\nComing soon!\n\n## Activity 1 - Literature Review\n\nComing soon!\n\n### Questions\n\n## Activity 2 - Pedigree Construction in R\n\nIn this activity. you will ..\n\n### Start Posit Cloud\n\nWe will use Posit Cloud for this activity. Go to [https://posit.cloud/plans/free](https://posit.cloud/plans/free) and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.\n\n<!-- Callout about what cloud computing is -->\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g1965a5f7f0a_0_44.png){fig-align='center' fig-alt='TO ADD' width=90%}\n:::\n:::\n\n\n\nOnce logged in, select \"New Project\" and \"New RStudio Project\". It will take a few seconds to deploy and load.\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g357ffc10808_0_3.png){fig-align='center' fig-alt='TO ADD' width=90%}\n:::\n:::\n\n\n\n### Get the data\n\n### Questions\n",
+    "supporting": [
+      "family_markers_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
