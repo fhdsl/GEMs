@@ -182,3 +182,7 @@ Take a look at the column names. Compare these to the data dictionary below to i
 
 Now, we'll run R code that generates a pedigree!
 
+
+
+
+
