@@ -4,7 +4,9 @@ format:
     html: default
 ---
 
-This module teaches about ...
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_0#slide=id.g35ad481b335_0_0")
+```
 
 ## Learning Objectives
 
