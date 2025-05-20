@@ -178,3 +178,4 @@ Take a look at the column names. Compare these to the data dictionary below to i
 
 ## Part 2
 
+Making the Pedigree
