@@ -3,6 +3,7 @@ Alcazar
 AOU
 automations
 avahoffman
+bioinformatics
 Bootstap
 cheatsheet
 Clovis
@@ -30,6 +31,8 @@ Humphries
 knitr
 lightblue
 lightgreen
+NMDA
+NMDAR
 nvcc
 NVCC
 OTTR
