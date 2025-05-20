@@ -57,8 +57,8 @@ jobs:
         
        # Custom for GEMs: render docx from qmd files
       - name: Run render docx
-        id: dox
-        run: quarto render --to docx
+        id: docx
+        run: quarto render --to docx --output-dir docx     
         
        # Custom for GEMs: Copy over data dir
       - name: Copy data
