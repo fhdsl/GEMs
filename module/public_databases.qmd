@@ -1,14 +1,74 @@
 ---
 title: "Using Public Genomic Databases"
-format: html
-editor: visual
+format:
+    html: default
 ---
 
-## The suspected genes
+MODULE COLD OPENING
 
-Six fruit fly genes: scarlet, plum, mustard, white, green body, and bluestreak
+## Learning Objectives
 
-## The databases
+1. Explore commonly-used public genomic databases to become familiar with the biological information on them.
 
-FlyBase, Mouse Genome Informatics, ??
+2. Identify gene IDs, locations, expression, and homologs for six different _Drosophila_ genes.
 
+3. Compare how gene location and expression differs between species for homologous genes.
+
+4. Determine the associations between _Drosophila_ gene homologs and human diseases. 
+
+## Materials
+
+## Materials
+
+You will need an internet connection for this activity as written. Students can use a local installation of R or RStudio if the data is downloaded ahead of time.
+
+Download this module as:
+
+-   Quarto (qmd)
+-   Rmarkdown (Rmd)
+-   Word (docx)
+
+Download the R student activity as:
+
+-   Quarto (qmd)
+-   Rmarkdown (Rmd)
+-   Word (docx)
+
+Borrow images from [Google Slides](https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?usp=sharing).
+
+
+## Module Overview
+
+You are a genetic detective! 
+
+### The suspected genes
+
+You suspect six fruit fly genes could be the culprit: scarlet, plum, mustard, white, green body, and bluestreak. Each of these genes has been characterized in the _Drosophila_ genome and you know their FlyBase gene IDs, but not much else. You'll need to figure out where they're located in the _Drosophila_ genome, in what tissues they're expressed, and what species share homologous genes. Finally, you'll need to track down what possible human diseases their human homologs might be involved in.
+
+### The databases
+
+For this activity, you'll explore a variety of databases. It's important to remember that these aren't the only databases that exist! There are many more databases out there, each with its own focus. Luckily, most databases are organized in similar ways, so once you learn how to navigate one database, you'll be able to easily figure out how to navigate new ones.
+
+You should also keep in mind that some information can be found in multiple databases. For example, many databases that focus on the genome of a particular model organism will also have information about the human diseases associated with that particular gene. This information can also be found in databases that focus specifically on human genetic diseases (like OMIM or MalaCards). Just like there are many ways to cook an egg, there's many ways to find the genomic information you might need in public databases. As long as you are careful and using a curated database, you can use the one you're most comfortable with.
+
+**Curated databases** are simply databases where information is screened, validated, and organized by experts to ensure the data are accurate and reliable. Information has undergone rigorous quality control checks and includes sources and contextual information to help users understand the data. The data is generally standardized and organized in a way to be easily accessible and searchable.
+
+
+_FlyBase_
+
+_Mouse Genome Informatics_
+
+_ZFIN_
+
+_The Human Protein Atlas_
+
+_STRING_
+
+_KEGG_
+
+_GeneCards_
+
+
+
+
+## Activity
