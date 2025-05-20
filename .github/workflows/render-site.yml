@@ -29,14 +29,6 @@ jobs:
         uses: doughepi/yaml-env-action@v1.0.0
         with:
             files: config_automation.yml # Pass a space-separated list of configuration files. Rightmost files take precedence.
-            
-        # Establish GitHub config
-      - name: Git config
-        run: |
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        shell: bash
 
     outputs:
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
