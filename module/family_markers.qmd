@@ -10,7 +10,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 
 ## Learning Objectives
 
-1. Interpret pedigree information to determine the suitability of a DNA marker for tracking a disease trait in a family [GSA](https://genetics-gsa.org/education/genetics-learning-framework/).
+1. Interpret pedigree information to determine the suitability of a DNA marker for tracking a disease trait in a family (see [GSA](https://genetics-gsa.org/education/genetics-learning-framework/) learning objectives).
 
 2. Build a pedigree using bioinformatics tools (R).
 
@@ -156,16 +156,16 @@ Take a look at the column names. Compare these to the data dictionary below to i
 ::: {.callout-tip}
 ## Pedigree Data Dictionary
 
-**ped**: Pedigree identifier for family relationships. 
-**id**: Unique individual identifier. 
-**father**: Identifier of the father in the pedigree. 
-**mother**: Identifier of the mother in the pedigree. 
-**sex**: Sex of the individual (assume sex assigned at birth, not gender identity). 
-**bipolar**: Bipolar disorder status (1 = yes, 0 = no, NA = missing). 
-**depression**: Depression status (1 = yes, 0 = no, NA = missing). 
+**ped**: Pedigree identifier for family relationships.  
+**id**: Unique individual identifier.  
+**father**: Identifier of the father in the pedigree.  
+**mother**: Identifier of the mother in the pedigree.  
+**sex**: Sex of the individual (assume sex assigned at birth, not gender identity).  
+**bipolar**: Bipolar disorder status (1 = yes, 0 = no, NA = missing).  
+**depression**: Depression status (1 = yes, 0 = no, NA = missing).  
 **diagnosis_available**: ???  
-**DAO**: DAO genotype. 
-**available_color**: Pedigree color variable corresponding to diagnosis_available. 
+**DAO**: DAO genotype.  
+**available_color**: Pedigree color variable corresponding to diagnosis_available.  
 :::
 
 ## Part 1 Questions 
