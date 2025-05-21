@@ -18,20 +18,10 @@ MODULE COLD OPENING
 
 ## Materials
 
-## Materials
-
-You will need an internet connection for this activity as written. Students can use a local installation of R or RStudio if the data is downloaded ahead of time.
+You will need an internet connection for this activity as written. 
 
 Download this module as:
 
--   Quarto (qmd)
--   Rmarkdown (Rmd)
--   Word (docx)
-
-Download the R student activity as:
-
--   Quarto (qmd)
--   Rmarkdown (Rmd)
 -   Word (docx)
 
 Borrow images from [Google Slides](https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?usp=sharing).
@@ -47,18 +37,19 @@ You suspect six fruit fly genes could be the culprit: scarlet, plum, mustard, wh
 
 ### The databases
 
-For this activity, you'll explore a variety of databases. It's important to remember that these aren't the only databases that exist! There are many more databases out there, each with its own focus. Luckily, most databases are organized in similar ways, so once you learn how to navigate one database, you'll be able to easily figure out how to navigate new ones.
-
-You should also keep in mind that some information can be found in multiple databases. For example, many databases that focus on the genome of a particular model organism will also have information about the human diseases associated with that particular gene. This information can also be found in databases that focus specifically on human genetic diseases (like OMIM or MalaCards). Just like there are many ways to cook an egg, there's many ways to find the genomic information you might need in public databases. As long as you are careful and using a curated database, you can use the one you're most comfortable with.
+For this activity, you'll explore a variety of _curated genomic databases_. Many of these databases are available to the public at little or no cost and are supported by grants to the researchers and organizations that maintain them.
 
 **Curated databases** are simply databases where information is screened, validated, and organized by experts to ensure the data are accurate and reliable. Information has undergone rigorous quality control checks and includes sources and contextual information to help users understand the data. The data is generally standardized and organized in a way to be easily accessible and searchable.
 
+It's important to remember that the databases in this activity aren't the only databases that exist! There are many more databases out there, each with its own focus. Luckily, most databases are organized in similar ways, so once you learn how to navigate one database, you'll be able to easily figure out how to navigate new ones.
 
-_FlyBase_
+You should also keep in mind that some information can be found in multiple databases. For example, many databases that focus on the genome of a particular model organism will also have information about the human diseases associated with that particular gene. This information can also be found in databases that focus specifically on human genetic diseases (like OMIM or MalaCards). Just like there are many ways to cook an egg, there's many ways to find the genomic information you might need in public databases. As long as you are careful and using a curated database, you can use the one you're most comfortable with.
 
-_Mouse Genome Informatics_
+[_FlyBase_]() is a database focused on _Drosphila_ genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico
 
-_ZFIN_
+The [_Mouse Genome Informatics_](https://informatics.jax.org/) database is the international database for the laboratory mouse, integrating genetic, genomic, and biological data as part of an effort to use the mouse to study human health and disease. It is maintained by the Jackson Laboratory.
+
+The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database of genetic and genomic data for the zebrafish as a model organism. It was formed by a group of zebrafish researchers at Cold Spring Harbor and is maintained by the ZFIN Database Team at the University of Oregon.
 
 _The Human Protein Atlas_
 
