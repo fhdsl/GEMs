@@ -84,7 +84,7 @@ We will need to install the `kinship2` package for this activity.
 
 Type the following into your console and press return to run the code. You will see a lot of red text, but usually that's a good thing!
 
-```{r eval=F}
+```{r message=FALSE}
 install.packages("kinship2")
 ```
 
@@ -94,7 +94,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 
 Next, we will load the package so it's ready to use:
 
-```{r eval=F}
+```{r}
 library(kinship2)
 ```
 
@@ -163,6 +163,7 @@ Take a look at the column names. Compare these to the data dictionary below to i
 **depression**: Depression status (1 = yes, 0 = no, NA = missing).  
 **diagnosis_available**: ???  
 **DAO**: DAO genotype.  
+**IL6**: IL6 genotype.  
 **available_color**: Pedigree color variable corresponding to diagnosis_available.  
 :::
 
@@ -181,4 +182,34 @@ Take a look at the column names. Compare these to the data dictionary below to i
 ## Part 2
 
 Now, we'll run R code that generates a pedigree!
+
+### Assemble the Pedigree
+
+Paste the following code into your console and hit enter. You should not see any output.
+
+```{r}
+bipolar_pedigree <- pedigree(
+  id = ped_data$id,
+  dadid = ped_data$father,
+  momid = ped_data$mother,
+  sex = ped_data$sex,
+  famid = ped_data$ped,
+  affected = as.matrix(ped_data[, c("bipolar", "depression")])
+)
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_16#slide=id.g35ad481b335_0_16")
+```
+
+::: {.callout-tip}
+You'll know the "bipolar_pedigree" object is ready to use because it is visible in the "Environment" pane on the top right.
+:::
+
+Type the name of the pedigree object in the console and observe the output.
+
+```{r}
+bipolar_pedigree
+```
+
 
