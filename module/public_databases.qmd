@@ -33,7 +33,7 @@ You are a genetic detective!
 
 ### The suspected genes
 
-You suspect six fruit fly genes could be the culprit: scarlet, plum, mustard, white
+You suspect five fruit fly genes could be the culprit: scarlet, plum, mustard, white, and green body.
 
 Each of these genes has been characterized in the _Drosophila_ genome and you know their FlyBase gene IDs, but not much else. You'll need to figure out where they're located in the _Drosophila_ genome, in what tissues they're expressed, and what species share homologous genes. Finally, you'll need to track down what possible human diseases their human homologs might be involved in.
 
@@ -58,3 +58,4 @@ The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database 
 [_MalaCards_]() is a searchable database offering information on human diseases, medical conditions, and disorders. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.
 
 ## Activity
+
