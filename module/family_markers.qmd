@@ -261,3 +261,20 @@ Paste the following code into the console and hit enter.
 ```{r}
 plot(bipolar_pedigree['1'])
 ```
+
+We can now see some information about diagnosis but a key might be helpful. Add it by running the following:
+
+```{r}
+plot(bipolar_pedigree['1'])
+pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
+```
+
+## Part 3 Questions 
+ 
+::: {.callout-note}
+## Check Your Knowledge
+
+1. What is the diagnosis for individual 9? Individual 10?
+
+2. What is the diagnosis for individual 12?
+:::
