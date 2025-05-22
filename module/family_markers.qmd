@@ -293,3 +293,36 @@ plot(bipolar_pedigree['1'],
 pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
 ```
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_48#slide=id.g35ad481b335_0_48")
+```
+
+::: {.callout-tip}
+the "+/+" genotype means the individual is **homozygous** for the "wild type" allele (remember that an allele is just a particular version of a gene sequence). "+/V" means that the individual is **heterozygous** and has both a wild type allele and a variant!
+:::
+
+Modify Your code so that it shows the genotype for the IL6 gene. 
+
+```{r}
+plot(bipolar_pedigree['1'],
+     id = ped_data$IL6)
+pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_55#slide=id.g35ad481b335_0_55")
+```
+
+## Part 4 Questions 
+
+::: {.callout-note}
+## Check Your Knowledge
+
+1. We already know that DAO is the gene of interest. Why is DAO a better match for the diagnosis based on the pedigree?
+
+2. How many copies of the DAO variant do you think are necessary to cause bipolar disorder?
+
+3. Many individuals are missing diagnoses, genotypes, or both. Why do you think that might be the case?
+
+4. What could be done to add more certainty to our conclusions? More genotyping, more diagnostics, or more genes collected?
+:::
