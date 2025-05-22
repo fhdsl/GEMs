@@ -278,3 +278,18 @@ pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
 
 2. What is the diagnosis for individual 12?
 :::
+
+## Part 4
+
+Now that we know individual diagnoses, let's map genotypes onto our individuals.
+
+### Adding Genotypes
+
+Let's add the genotype for the DAO gene to our pedigree. It will replace the numeric labels for individuals. 
+
+```{r}
+plot(bipolar_pedigree['1'],
+     id = ped_data$DAO)
+pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
+```
+
