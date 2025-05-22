@@ -3,6 +3,7 @@ Alcazar
 AOU
 automations
 avahoffman
+bioinformatics
 Bootstap
 cheatsheet
 Clovis
@@ -30,6 +31,8 @@ Humphries
 knitr
 lightblue
 lightgreen
+NMDA
+NMDAR
 nvcc
 NVCC
 OTTR
@@ -45,3 +48,15 @@ subdir
 th
 thon
 www
+aspartic
+callout
+DAO
+docx
+glutamate
+glycine
+ketamine
+neuropsychiatric
+Neuropsychiatric
+nitrous
+ped
+qmd

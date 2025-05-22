@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -121,18 +155,18 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#materials" id="toc-materials" class="nav-link active" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#activity-1---literature-review" id="toc-activity-1---literature-review" class="nav-link" data-scroll-target="#activity-1---literature-review">Activity 1 - Literature Review</a>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a>
   <ul class="collapse">
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  </ul></li>
-  <li><a href="#activity-2---pedigree-construction-in-r" id="toc-activity-2---pedigree-construction-in-r" class="nav-link" data-scroll-target="#activity-2---pedigree-construction-in-r">Activity 2 - Pedigree Construction in R</a>
-  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
   <li><a href="#start-posit-cloud" id="toc-start-posit-cloud" class="nav-link" data-scroll-target="#start-posit-cloud">Start Posit Cloud</a></li>
-  <li><a href="#get-the-data" id="toc-get-the-data" class="nav-link" data-scroll-target="#get-the-data">Get the data</a></li>
-  <li><a href="#questions-1" id="toc-questions-1" class="nav-link" data-scroll-target="#questions-1">Questions</a></li>
+  <li><a href="#package-install-and-load" id="toc-package-install-and-load" class="nav-link" data-scroll-target="#package-install-and-load">Package Install and Load</a></li>
+  <li><a href="#get-pedigree-data" id="toc-get-pedigree-data" class="nav-link" data-scroll-target="#get-pedigree-data">Get Pedigree Data</a></li>
+  <li><a href="#data-dictionaries" id="toc-data-dictionaries" class="nav-link" data-scroll-target="#data-dictionaries">Data Dictionaries</a></li>
   </ul></li>
+  <li><a href="#part-1-questions" id="toc-part-1-questions" class="nav-link" data-scroll-target="#part-1-questions">Part 1 Questions</a></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a></li>
   </ul>
 </nav>
     </div>
@@ -158,39 +192,71 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </header>
 
 
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g35ad481b335_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<ol type="1">
+<li><p>Interpret pedigree information to determine the suitability of a DNA marker for tracking a disease trait in a family (see <a href="https://genetics-gsa.org/education/genetics-learning-framework/">GSA</a> learning objectives).</p></li>
+<li><p>Build a pedigree using bioinformatics tools (R).</p></li>
+</ol>
+</section>
 <section id="materials" class="level2">
 <h2 class="anchored" data-anchor-id="materials">Materials</h2>
+<p>You will need an internet connection for this activity as written. Students can use a local installation of R or RStudio if the data is downloaded ahead of time.</p>
 <p>Download this module as:</p>
 <ul>
-<li>Quarto (qmd)</li>
-<li>Rmarkdown (Rmd)</li>
+<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/family_markers.qmd">Quarto (qmd)</a></li>
 <li>Word (docx)</li>
 </ul>
 <p>Download the R student activity as:</p>
 <ul>
 <li>Quarto (qmd)</li>
-<li>Rmarkdown (Rmd)</li>
 <li>Word (docx)</li>
 </ul>
+<p>Borrow images from <a href="https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?usp=sharing">Google Slides</a>.</p>
 </section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>Coming soon!</p>
+<section id="part-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
+<p>In Part 1, we’ll go over some background context for this activity. Then, we’ll get set up on Posit Cloud for the next steps.</p>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<p>First, let’s read the “plain language” summary from a publication entitled “Rare variants implicate NMDA receptor signaling and cerebellar gene networks in risk for bipolar disorder”.</p>
+<blockquote class="blockquote">
+<p>This research explores the genetic basis of bipolar disorder, a serious mental health condition where people experience extreme mood swings between mania and depression. The researchers studied DNA from 41 families with multiple members affected by bipolar disorder. They identified 741 genes potentially linked to bipolar disorder, which overlapped with genes known to be involved in other brain development disorders. Their most significant finding was a specific variant in a gene called DAO (D-amino acid oxidase). When they tested this variant in human cells, it reduced the amount and activity of the DAO protein. In mice with the equivalent genetic change, they observed: (1) less DAO protein in certain brain regions, (2) greater susceptibility to stress, (3) altered responses to drugs affecting NMDAR (a type of brain receptor), and (4) changes in gene activity patterns in the cerebellum (a brain region). The team also found similar gene expression patterns in the cerebellum of human bipolar disorder patients. The study suggests bipolar disorder may involve disruptions to NMDAR signaling and gene expression in the cerebellum, providing new insights into how this condition develops at the molecular level.</p>
+</blockquote>
+<p>As the researchers mentioned in their summary, <strong>bipolar disorder</strong> is neuropsychiatric disorder that affects moods. “Neuropsychiatric” means that it involves both the structure of the brain and mental health. People with bipolar disorder may experience “low” periods of intense sadness, low energy, low motivation, and loss of interest in daily activities, as well as “high periods” of increased energy, decreased need for sleep, and potentially hallucinations or an altered sense of reality. While everyone will experience mood swings, in people with bipolar disorder these swings are more extreme and may last for weeks. Bipolar disorder is triggered by a combination of genetic and environmental factors, and the risk of developing bipolar disorder is about 1% for the general public. For someone who has a parent with bipolar disorder, this risk is between 10% and 25%. Interestingly, people who have a parent with schizophrenia also have an increased risk of developing bipolar disorder compared to the general population, which suggests there may be a shared genetic basis to both disorders (as well as with major depression).</p>
+<p>The <strong>cerebellum</strong> is the region of the brain located just above the spinal cord. Size-wise, it’s about 10% of the brain, but it contains roughly 50% of the neurons. Scientists started noticing more than 200 years ago that people with cerebellum injuries frequently had difficulty maintaining their balance (either while standing or while walking), as well as difficulty with judging how far to reach when picking up objects. People with these types of injuries may also have difficulty judging how far objects are, learning new motor skills, or keeping consistent timing when tapping their fingers. The cerebellum essentially coordinates motor movement and gait, maintains posture and balance, and controls muscle tone (the amount of tension in the muscle) and voluntary muscle activity. More recently, scientists have discovered that the cerebellum also plays a role in attention, language, and regulating emotional responses like fear and pleasure, though the specific details on <em>how</em> are still under investigation.</p>
+<p><strong>NMDA receptors (NMDAR)</strong>, or N-methyl-D-aspartic acid receptors, are a type of glutamate receptor in the brain. When an NMDAR binds both glutamate and glycine, it opens a channel that allows positively charged ions (like calcium ions) to flow into the neuron. The movement of calcium ions through NMDARs is thought to be particularly important for memory and learning. Drugs such as alcohol, PCP, ketamine, and nitrous oxide block NMDAR activity.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>What does the DAO gene do?</p></li>
+<li><p>How did researchers identify DAO and other possible genes linked to bipolar disorder?</p></li>
+</ol>
+</div>
+</div>
 </section>
-<section id="activity-1---literature-review" class="level2">
-<h2 class="anchored" data-anchor-id="activity-1---literature-review">Activity 1 - Literature Review</h2>
-<p>Coming soon!</p>
-<section id="questions" class="level3">
-<h3 class="anchored" data-anchor-id="questions">Questions</h3>
-</section>
-</section>
-<section id="activity-2---pedigree-construction-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="activity-2---pedigree-construction-in-r">Activity 2 - Pedigree Construction in R</h2>
-<p>In this activity. you will ..</p>
 <section id="start-posit-cloud" class="level3">
 <h3 class="anchored" data-anchor-id="start-posit-cloud">Start Posit Cloud</h3>
-<p>We will use Posit Cloud for this activity. Go to <a href="https://posit.cloud/plans/free">https://posit.cloud/plans/free</a> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.</p>
-<!-- Callout about what cloud computing is -->
+<p>In the next steps, we will construct a pedigree from the publication described above.</p>
+<p>We will use Posit Cloud for this activity. Go to <a href="https://posit.cloud/plans/free" class="uri">https://posit.cloud/plans/free</a> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.</p>
+<!-- callout about what cloud computing is ? -->
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -210,15 +276,204 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
+<p>Rename your project “Family Markers” by clicking on “Untitled Project”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g357ffc10808_0_12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="get-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="get-the-data">Get the data</h3>
+<section id="package-install-and-load" class="level3">
+<h3 class="anchored" data-anchor-id="package-install-and-load">Package Install and Load</h3>
+<p>We will need to install the <code>kinship2</code> package for this activity.</p>
+<p>Type the following into your console and press return to run the code. You will see a lot of red text, but usually that’s a good thing!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"kinship2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g357ffc10808_0_30.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, we will load the package so it’s ready to use:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kinship2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g357ffc10808_0_61.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What are R Packages?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like “expansion packs” on top of your basic R software.</p>
+<p>Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!</p>
+<p>We use the <code>library</code> command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.</p>
+</div>
+</div>
 </section>
-<section id="questions-1" class="level3">
-<h3 class="anchored" data-anchor-id="questions-1">Questions</h3>
+<section id="get-pedigree-data" class="level3">
+<h3 class="anchored" data-anchor-id="get-pedigree-data">Get Pedigree Data</h3>
+<p>We’ll read in some data from the GEMs website. Run the following code in your console:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ped_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://genomicseducation.org/data/pedigree_data.csv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ped_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   ped id father mother sex bipolar depression diagnosis_available DAO
+1    1  1      0      0   1      NA         NA                   0    
+2    1  2      0      0   2      NA         NA                   0    
+3    1  3      0      0   2      NA         NA                   0    
+4    1  4      1      2   1       1          0                   1 +/V
+5    1  5      1      2   2      NA         NA                   0    
+6    1  6      1      2   1      NA         NA                   0    
+7    1  7      0      0   2      NA         NA                   0    
+8    1  8      0      0   2      NA         NA                   0    
+9    1  9      4      3   1       1          0                   1 +/V
+10   1 10      4      3   1       0          0                   1 +/+
+11   1 11      4      3   1       0          1                   1    
+12   1 12      4      3   2      NA         NA                   0    
+13   1 13      0      0   1       0          0                   1    
+14   1 14      6      7   1       1          0                   1 +/V
+15   1 15      9      8   2      NA         NA                   0    
+16   1 16      9      8   1       0          1                   1    
+17   1 17      9      8   1       0          0                   1 +/+
+18   1 18     13     12   2       0          1                   1    
+19   1 19     13     12   2       1          0                   1 +/V
+20   1 20     13     12   2       0          1                   1    
+   available_color
+1        lightgray
+2        lightgray
+3        lightgray
+4            black
+5        lightgray
+6        lightgray
+7        lightgray
+8        lightgray
+9            black
+10           black
+11           black
+12       lightgray
+13           black
+14           black
+15       lightgray
+16           black
+17           black
+18           black
+19           black
+20           black</code></pre>
+</div>
+</div>
+<p>If everything went correctly, you should see both an object called <code>ped_data</code> in the Environment Pane (top right) and the data printed to the console.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g357ffc10808_0_47.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is an R object?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An object is something stored in a programming language, such as data. Think of it like a “noun”.</p>
+<p>In R, we assign objects using the <code>&lt;-</code> symbol, with the name of your choice on the left, and the contents of the object on the right.</p>
+<p>Objects will show up in your Environment Pane. It’s a good idea to check the Environment Pane regularly.</p>
+</div>
+</div>
+<p>Enter the following code in the console to view the data in tabular format:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(ped_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g357ffc10808_0_74.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-dictionaries" class="level3">
+<h3 class="anchored" data-anchor-id="data-dictionaries">Data Dictionaries</h3>
+<p>Take a look at the column names. Compare these to the data dictionary below to interpret what the columns represent.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pedigree Data Dictionary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>ped</strong>: Pedigree identifier for family relationships.<br>
+<strong>id</strong>: Unique individual identifier.<br>
+<strong>father</strong>: Identifier of the father in the pedigree.<br>
+<strong>mother</strong>: Identifier of the mother in the pedigree.<br>
+<strong>sex</strong>: Sex of the individual (assume sex assigned at birth, not gender identity).<br>
+<strong>bipolar</strong>: Bipolar disorder status (1 = yes, 0 = no, NA = missing).<br>
+<strong>depression</strong>: Depression status (1 = yes, 0 = no, NA = missing).<br>
+<strong>diagnosis_available</strong>: ???<br>
+<strong>DAO</strong>: DAO genotype.<br>
+<strong>available_color</strong>: Pedigree color variable corresponding to diagnosis_available.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="part-1-questions" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-questions">Part 1 Questions</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Why might we want to install add-on packages in R?</p></li>
+<li><p>How can we confirm that our data loaded correctly?</p></li>
+<li><p>Looking at the description and contents of the <code>bipolar</code> and <code>depression</code> columns, what do you think the column <code>diagnosis_available</code> represents?</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="part-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
+<p>Now, we’ll run R code that generates a pedigree!</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
