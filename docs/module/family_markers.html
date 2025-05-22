@@ -166,7 +166,23 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#data-dictionaries" id="toc-data-dictionaries" class="nav-link" data-scroll-target="#data-dictionaries">Data Dictionaries</a></li>
   </ul></li>
   <li><a href="#part-1-questions" id="toc-part-1-questions" class="nav-link" data-scroll-target="#part-1-questions">Part 1 Questions</a></li>
-  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
+  <ul class="collapse">
+  <li><a href="#assemble-the-pedigree" id="toc-assemble-the-pedigree" class="nav-link" data-scroll-target="#assemble-the-pedigree">Assemble the Pedigree</a></li>
+  <li><a href="#plot-the-pedigree" id="toc-plot-the-pedigree" class="nav-link" data-scroll-target="#plot-the-pedigree">Plot the Pedigree</a></li>
+  </ul></li>
+  <li><a href="#part-2-questions" id="toc-part-2-questions" class="nav-link" data-scroll-target="#part-2-questions">Part 2 Questions</a></li>
+  <li><a href="#part-3" id="toc-part-3" class="nav-link" data-scroll-target="#part-3">Part 3</a>
+  <ul class="collapse">
+  <li><a href="#adding-diagnosis" id="toc-adding-diagnosis" class="nav-link" data-scroll-target="#adding-diagnosis">Adding Diagnosis</a></li>
+  <li><a href="#mapping-diagnosis" id="toc-mapping-diagnosis" class="nav-link" data-scroll-target="#mapping-diagnosis">Mapping Diagnosis</a></li>
+  </ul></li>
+  <li><a href="#part-3-questions" id="toc-part-3-questions" class="nav-link" data-scroll-target="#part-3-questions">Part 3 Questions</a></li>
+  <li><a href="#part-4" id="toc-part-4" class="nav-link" data-scroll-target="#part-4">Part 4</a>
+  <ul class="collapse">
+  <li><a href="#adding-genotypes" id="toc-adding-genotypes" class="nav-link" data-scroll-target="#adding-genotypes">Adding Genotypes</a></li>
+  </ul></li>
+  <li><a href="#part-4-questions" id="toc-part-4-questions" class="nav-link" data-scroll-target="#part-4-questions">Part 4 Questions</a></li>
   </ul>
 </nav>
     </div>
@@ -214,14 +230,12 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>Download this module as:</p>
 <ul>
 <li><a href="https://github.com/fhdsl/GEMs/blob/main/module/family_markers.qmd">Quarto (qmd)</a></li>
-<li>Word (docx)</li>
+<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/family_markers.docx">Word (docx)</a></li>
 </ul>
-<p>Download the R student activity as:</p>
-<ul>
-<li>Quarto (qmd)</li>
-<li>Word (docx)</li>
-</ul>
+<p><!-- Download the R student activity as: --></p>
+<p><!-- -   Quarto (qmd) --> <!-- -   Word (docx) --></p>
 <p>Borrow images from <a href="https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?usp=sharing">Google Slides</a>.</p>
+<p>Answer key available <a href="">here</a>.</p>
 </section>
 <section id="part-1" class="level2">
 <h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
@@ -339,48 +353,27 @@ What are R Packages?
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ped_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://genomicseducation.org/data/pedigree_data.csv"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ped_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   ped id father mother sex bipolar depression diagnosis_available DAO
-1    1  1      0      0   1      NA         NA                   0    
-2    1  2      0      0   2      NA         NA                   0    
-3    1  3      0      0   2      NA         NA                   0    
-4    1  4      1      2   1       1          0                   1 +/V
-5    1  5      1      2   2      NA         NA                   0    
-6    1  6      1      2   1      NA         NA                   0    
-7    1  7      0      0   2      NA         NA                   0    
-8    1  8      0      0   2      NA         NA                   0    
-9    1  9      4      3   1       1          0                   1 +/V
-10   1 10      4      3   1       0          0                   1 +/+
-11   1 11      4      3   1       0          1                   1    
-12   1 12      4      3   2      NA         NA                   0    
-13   1 13      0      0   1       0          0                   1    
-14   1 14      6      7   1       1          0                   1 +/V
-15   1 15      9      8   2      NA         NA                   0    
-16   1 16      9      8   1       0          1                   1    
-17   1 17      9      8   1       0          0                   1 +/+
-18   1 18     13     12   2       0          1                   1    
-19   1 19     13     12   2       1          0                   1 +/V
-20   1 20     13     12   2       0          1                   1    
-   available_color
-1        lightgray
-2        lightgray
-3        lightgray
-4            black
-5        lightgray
-6        lightgray
-7        lightgray
-8        lightgray
-9            black
-10           black
-11           black
-12       lightgray
-13           black
-14           black
-15       lightgray
-16           black
-17           black
-18           black
-19           black
-20           black</code></pre>
+<pre><code>   ped id father mother sex bipolar depression diagnosis_available DAO IL6
+1    1  1      0      0   1      NA         NA                   0        
+2    1  2      0      0   2      NA         NA                   0        
+3    1  3      0      0   2      NA         NA                   0        
+4    1  4      1      2   1       1          0                   1 +/V +/V
+5    1  5      1      2   2      NA         NA                   0        
+6    1  6      1      2   1      NA         NA                   0        
+7    1  7      0      0   2      NA         NA                   0        
+8    1  8      0      0   2      NA         NA                   0        
+9    1  9      4      3   1       1          0                   1 +/V +/+
+10   1 10      4      3   1       0          0                   1 +/+ +/V
+11   1 11      4      3   1       0          1                   1        
+12   1 12      4      3   2      NA         NA                   0        
+13   1 13      0      0   1       0          0                   1        
+14   1 14      6      7   1       1          0                   1 +/V +/+
+15   1 15      9      8   2      NA         NA                   0        
+16   1 16      9      8   1       0          1                   1        
+17   1 17      9      8   1       0          0                   1 +/+ +/+
+18   1 18     13     12   2       0          1                   1        
+19   1 19     13     12   2       1          0                   1 +/V +/V
+20   1 20     13     12   2       0          1                   1        </code></pre>
 </div>
 </div>
 <p>If everything went correctly, you should see both an object called <code>ped_data</code> in the Environment Pane (top right) and the data printed to the console.</p>
@@ -439,11 +432,12 @@ Pedigree Data Dictionary
 <strong>id</strong>: Unique individual identifier.<br>
 <strong>father</strong>: Identifier of the father in the pedigree.<br>
 <strong>mother</strong>: Identifier of the mother in the pedigree.<br>
-<strong>sex</strong>: Sex of the individual (assume sex assigned at birth, not gender identity).<br>
+<strong>sex</strong>: Phenotypic sex of the individual (assume sex assigned at birth, not gender identity).<br>
 <strong>bipolar</strong>: Bipolar disorder status (1 = yes, 0 = no, NA = missing).<br>
 <strong>depression</strong>: Depression status (1 = yes, 0 = no, NA = missing).<br>
 <strong>diagnosis_available</strong>: ???<br>
 <strong>DAO</strong>: DAO genotype.<br>
+<strong>IL6</strong>: IL6 genotype.<br>
 <strong>available_color</strong>: Pedigree color variable corresponding to diagnosis_available.</p>
 </div>
 </div>
@@ -472,6 +466,238 @@ Check Your Knowledge
 <section id="part-2" class="level2">
 <h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
 <p>Now, we’ll run R code that generates a pedigree!</p>
+<section id="assemble-the-pedigree" class="level3">
+<h3 class="anchored" data-anchor-id="assemble-the-pedigree">Assemble the Pedigree</h3>
+<p>Paste the following code into your console and hit enter. You should not see any output.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree <span class="ot">&lt;-</span> <span class="fu">pedigree</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> ped_data<span class="sc">$</span>id,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">dadid =</span> ped_data<span class="sc">$</span>father,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">momid =</span> ped_data<span class="sc">$</span>mother,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> ped_data<span class="sc">$</span>sex,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">famid =</span> ped_data<span class="sc">$</span>ped</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g35ad481b335_0_16.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’ll know the “bipolar_pedigree” object is ready to use because it is visible in the “Environment” pane on the top right.</p>
+</div>
+</div>
+<p>Type the name of the pedigree object in the console and observe the output.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Pedigree list with 20 total subjects in 1 families</code></pre>
+</div>
+</div>
+</section>
+<section id="plot-the-pedigree" class="level3">
+<h3 class="anchored" data-anchor-id="plot-the-pedigree">Plot the Pedigree</h3>
+<p>Paste the following code into the console and hit enter.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="family_markers_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g35ad481b335_0_30.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2-questions" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-questions">Part 2 Questions</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>How many generations were assessed in this pedigree?</p></li>
+<li><p>How many male individuals and how many female individuals are present?</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="part-3" class="level2">
+<h2 class="anchored" data-anchor-id="part-3">Part 3</h2>
+<p>Now, we’ll map the diagnoses on our individuals.</p>
+<section id="adding-diagnosis" class="level3">
+<h3 class="anchored" data-anchor-id="adding-diagnosis">Adding Diagnosis</h3>
+<p>Modify your code from above to add “affected” to the pedigree information. Run the code in the console by pasting the following and hitting enter.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree <span class="ot">&lt;-</span> <span class="fu">pedigree</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> ped_data<span class="sc">$</span>id,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">dadid =</span> ped_data<span class="sc">$</span>father,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">momid =</span> ped_data<span class="sc">$</span>mother,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> ped_data<span class="sc">$</span>sex,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">famid =</span> ped_data<span class="sc">$</span>ped,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">affected =</span> <span class="fu">as.matrix</span>(ped_data[, <span class="fu">c</span>(<span class="st">"bipolar"</span>, <span class="st">"depression"</span>)])</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="mapping-diagnosis" class="level3">
+<h3 class="anchored" data-anchor-id="mapping-diagnosis">Mapping Diagnosis</h3>
+<p>Paste the following code into the console and hit enter.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="family_markers_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can now see some information about diagnosis but a key might be helpful. Add it by running the following:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="family_markers_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-3-questions" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>What is the diagnosis for individual 9? Individual 10?</p></li>
+<li><p>What is the diagnosis for individual 12?</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="part-4" class="level2">
+<h2 class="anchored" data-anchor-id="part-4">Part 4</h2>
+<p>Now that we know individual diagnoses, let’s map genotypes onto our individuals.</p>
+<section id="adding-genotypes" class="level3">
+<h3 class="anchored" data-anchor-id="adding-genotypes">Adding Genotypes</h3>
+<p>Let’s add the genotype for the DAO gene to our pedigree. It will replace the numeric labels for individuals.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>],</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">id =</span> ped_data<span class="sc">$</span>DAO)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="family_markers_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g35ad481b335_0_48.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>the “+/+” genotype means the individual is <strong>homozygous</strong> for the “wild type” allele (remember that an allele is just a particular version of a gene sequence). “+/V” means that the individual is <strong>heterozygous</strong> and has both a wild type allele and a variant!</p>
+</div>
+</div>
+<p>Modify Your code so that it shows the genotype for the IL6 gene.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>],</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">id =</span> ped_data<span class="sc">$</span>IL6)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="family_markers_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="family_markers_files/figure-html//1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII_g35ad481b335_0_55.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-4-questions" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-questions">Part 4 Questions</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>We already know that DAO is the gene of interest. Why is DAO a better match for the diagnosis based on the pedigree?</p></li>
+<li><p>How many copies of the DAO variant do you think are necessary to cause bipolar disorder?</p></li>
+<li><p>Many individuals are missing diagnoses, genotypes, or both. Why do you think that might be the case?</p></li>
+<li><p>What could be done to add more certainty to our conclusions? More genotyping, more diagnostics, or more genes collected?</p></li>
+</ol>
+</div>
+</div>
 
 
 </section>

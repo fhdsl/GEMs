@@ -1,0 +1,17 @@
+{
+  "modules.qmd": {
+    "modules.html": "c255bfbd"
+  },
+  "module/AOU_methods.qmd": {
+    "AOU_methods.html": "dc43f4c0"
+  },
+  "module/family_markers.qmd": {
+    "family_markers.html": "80640a37"
+  },
+  "module/Recount3.qmd": {
+    "Recount3.html": "3f3d10a4"
+  },
+  "index.qmd": {
+    "index.html": "bddfcfa4"
+  }
+}
