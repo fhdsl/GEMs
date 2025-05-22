@@ -30,6 +30,8 @@ Download the R student activity as:
 
 Borrow images from [Google Slides](https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?usp=sharing).
 
+Answer key available [here]().
+
 ## Part 1
 
 In Part 1, we'll go over some background context for this activity. Then, we'll get set up on Posit Cloud for the next steps.
@@ -94,7 +96,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 
 Next, we will load the package so it's ready to use:
 
-```{r}
+```{r message=FALSE}
 library(kinship2)
 ```
 
@@ -193,8 +195,7 @@ bipolar_pedigree <- pedigree(
   dadid = ped_data$father,
   momid = ped_data$mother,
   sex = ped_data$sex,
-  famid = ped_data$ped,
-  affected = as.matrix(ped_data[, c("bipolar", "depression")])
+  famid = ped_data$ped
 )
 ```
 
@@ -212,4 +213,51 @@ Type the name of the pedigree object in the console and observe the output.
 bipolar_pedigree
 ```
 
+### Plot the Pedigree
 
+Paste the following code into the console and hit enter.
+
+```{r}
+plot(bipolar_pedigree['1'])
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_30#slide=id.g35ad481b335_0_30")
+```
+
+## Part 2 Questions 
+ 
+::: {.callout-note}
+## Check Your Knowledge
+
+1. How many generations were assessed in this pedigree?
+
+2. How many male individuals and how many female individuals are present?
+:::
+
+## Part 3
+
+Now, we'll map the diagnoses on our individuals.
+
+### Adding Diagnosis
+
+Modify your code from above to add "affected" to the pedigree information. Run the code in the console by pasting the following and hitting enter.
+
+```{r}
+bipolar_pedigree <- pedigree(
+  id = ped_data$id,
+  dadid = ped_data$father,
+  momid = ped_data$mother,
+  sex = ped_data$sex,
+  famid = ped_data$ped,
+  affected = as.matrix(ped_data[, c("bipolar", "depression")])
+)
+```
+
+### Mapping Diagnosis
+
+Paste the following code into the console and hit enter.
+
+```{r}
+plot(bipolar_pedigree['1'])
+```
