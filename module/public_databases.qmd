@@ -10,7 +10,7 @@ MODULE COLD OPENING
 
 1. Explore commonly-used public genomic databases to become familiar with the biological information on them.
 
-2. Identify gene IDs, locations, expression, and homologs for six different _Drosophila_ genes.
+2. Identify genomic information for three different _Drosophila_ genes.
 
 3. Compare how gene location and expression differs between species for homologous genes.
 
@@ -33,7 +33,9 @@ You are a genetic detective!
 
 ### The suspected genes
 
-You suspect six fruit fly genes could be the culprit: scarlet, plum, mustard, white, green body, and bluestreak. Each of these genes has been characterized in the _Drosophila_ genome and you know their FlyBase gene IDs, but not much else. You'll need to figure out where they're located in the _Drosophila_ genome, in what tissues they're expressed, and what species share homologous genes. Finally, you'll need to track down what possible human diseases their human homologs might be involved in.
+You suspect six fruit fly genes could be the culprit: scarlet, plum, mustard, white
+
+Each of these genes has been characterized in the _Drosophila_ genome and you know their FlyBase gene IDs, but not much else. You'll need to figure out where they're located in the _Drosophila_ genome, in what tissues they're expressed, and what species share homologous genes. Finally, you'll need to track down what possible human diseases their human homologs might be involved in.
 
 ### The databases
 
@@ -51,15 +53,8 @@ The [_Mouse Genome Informatics_](https://informatics.jax.org/) database is the i
 
 The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database of genetic and genomic data for the zebrafish as a model organism. It was formed by a group of zebrafish researchers at Cold Spring Harbor and is maintained by the ZFIN Database Team at the University of Oregon.
 
-[_WormBase_](https://wormbase.org/) is a database focused on the genetics, genomics and biology of C. elegans and related nematodes. It is maintained by an international consortium of biologists and computer scientists, led by researchers at CalTech, the Wellcome Trust Sanger Institute, the European Bioinformatics Institute, and the Ontario Institute for Cancer Research.
+[_NCBI_](https://www.ncbi.nlm.nih.gov/datasets/gene/) maintains a database of genetic, genomic, and expression data for a variety of taxa, including humans. This database is maintained and funded through the National Library of Medicine at the NIH.
 
 [_MalaCards_]() is a searchable database offering information on human diseases, medical conditions, and disorders. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.
-
-[_Human Protein Database_]()
-
-[_STRING_]()
-
-[_KEGG_]()
-
 
 ## Activity
