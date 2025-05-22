@@ -6,6 +6,7 @@ ASD
 automations
 avahoffman
 Bioinformatics
+bioinformatics
 Bootstap
 cheatsheet
 Clovis
@@ -58,6 +59,8 @@ NIH's
 nihms
 nlm
 nucleotides
+NMDA
+NMDAR
 nvcc
 NVCC
 OTTR
