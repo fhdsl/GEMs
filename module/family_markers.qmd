@@ -327,3 +327,4 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 4. What could be done to add more certainty to our conclusions? More genotyping, more diagnostics, or more genes collected?
 :::
 
+note note note
