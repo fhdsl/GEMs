@@ -10,7 +10,7 @@ MODULE COLD OPENING
 
 1. Explore commonly-used public genomic databases to become familiar with the biological information on them.
 
-2. Identify genomic information for three different _Drosophila_ genes.
+2. Identify genomic information for five different _Drosophila_ genes.
 
 3. Compare how gene location and expression differs between species for homologous genes.
 
@@ -29,11 +29,11 @@ Borrow images from [Google Slides](https://docs.google.com/presentation/d/1fy3Fw
 
 ## Module Overview
 
-You are a genetic detective! 
+You are a genetic detective! Your lab group has been running experiments for a variety of _Drosophila_ genes. Unfortunately, there was an accident with a broken pipe and the computer, and all the stored data is gone! You have copies of the experimental results, but you haven't been able to find the key that tells you which set of experiments corresponds to which gene. Your job is to find the background information on each gene using online databases, then match the fruit fly gene to the correct set of experimental results.
 
 ### The suspected genes
 
-You suspect five fruit fly genes could be the culprit: scarlet, plum, mustard, white, and green body.
+Each mystery experiment belongs to one of five _Drosophila_ genes: scarlet, plum, mustard, white, and green body.
 
 Each of these genes has been characterized in the _Drosophila_ genome and you know their FlyBase gene IDs, but not much else. You'll need to figure out where they're located in the _Drosophila_ genome, in what tissues they're expressed, and what species share homologous genes. Finally, you'll need to track down what possible human diseases their human homologs might be involved in.
 
