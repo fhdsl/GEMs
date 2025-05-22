@@ -160,7 +160,7 @@ Take a look at the column names. Compare these to the data dictionary below to i
 **id**: Unique individual identifier.  
 **father**: Identifier of the father in the pedigree.  
 **mother**: Identifier of the mother in the pedigree.  
-**sex**: Sex of the individual (assume sex assigned at birth, not gender identity).  
+**sex**: Phenotypic sex of the individual (assume sex assigned at birth, not gender identity).  
 **bipolar**: Bipolar disorder status (1 = yes, 0 = no, NA = missing).  
 **depression**: Depression status (1 = yes, 0 = no, NA = missing).  
 **diagnosis_available**: ???  
@@ -326,3 +326,4 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 
 4. What could be done to add more certainty to our conclusions? More genotyping, more diagnostics, or more genes collected?
 :::
+
