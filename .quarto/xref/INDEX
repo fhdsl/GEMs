@@ -1,0 +1,23 @@
+{
+  "modules.qmd": {
+    "modules.html": "d8313c76"
+  },
+  "module/rnaseq_de_student-guide.qmd": {
+    "rnaseq_de_student-guide.html": "4c48c430"
+  },
+  "module/AOU_methods.qmd": {
+    "AOU_methods.html": "4ea8251e"
+  },
+  "module/rnaseq_de_student_use.Rmd": {
+    "rnaseq_de_student_use.html": "83981292"
+  },
+  "module/family_markers.qmd": {
+    "family_markers.html": "791e27e2"
+  },
+  "module/rnaseq_de.qmd": {
+    "rnaseq_de.html": "b90b4f5e"
+  },
+  "index.qmd": {
+    "index.html": "ab480e9e"
+  }
+}
