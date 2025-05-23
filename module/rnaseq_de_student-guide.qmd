@@ -124,23 +124,23 @@ You'll first want to decide which dataset(s) you'll use for your exploration.
 
 ### Gut-brain axis: Autism Spectrum Disorder in mice
 
-[Full gene expression data; no comparisons, just counts](https://drive.google.com/file/d/1RoDiq_D1YHVinmbuLRHCoGQ2wS8eWbB2/view?usp=sharing)
+[Full gene expression data; no comparisons, just counts](https://genomicseducation.org/data/mouse_autism_counts.csv)
 
 **Comparing gene expression between ASD and control mice**
 
-[Both brain regions](https://drive.google.com/file/d/1IdtpRUcTpqCD41plaz9ddcow6V8ZtmEd/view?usp=sharing)
+[Both brain regions](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
 
-[Prefrontal cortex only](https://drive.google.com/file/d/1IdtpRUcTpqCD41plaz9ddcow6V8ZtmEd/view?usp=sharing)
+[Prefrontal cortex only](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
 
-[Striatum only](https://drive.google.com/file/d/12yDb3-XvR49Gva-_s0jKN1Zdw5G7uRe-/view?usp=sharing)
+[Striatum only](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
 
 **Comparing gene expression between prefrontal cortex and striatum**
 
-[All mice](https://drive.google.com/file/d/1A4eHpoarGjlGNC0mij-wrx9TAcFHmXn9/view?usp=sharing)
+[All mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
 
-[Only ASD mice](https://drive.google.com/file/d/1I4g5jEsHL1UnYkudcESWuvoF-DV-eO3s/view?usp=sharing)
+[Only ASD mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
 
-[Only control mice](https://drive.google.com/file/d/1dAzC4tOIRMqy9z749rh-hNEv3nV-6YpK/view?usp=sharing)
+[Only control mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
 
 
 ## Analysis
