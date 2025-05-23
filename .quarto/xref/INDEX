@@ -1,0 +1,20 @@
+{
+  "modules.qmd": {
+    "modules.html": "1eddd6f4"
+  },
+  "module/AOU_methods.qmd": {
+    "AOU_methods.html": "64c48773"
+  },
+  "module/genomic_med_prs.qmd": {
+    "genomic_med_prs.html": "56740e60"
+  },
+  "module/family_markers.qmd": {
+    "family_markers.html": "f22ca4a5"
+  },
+  "module/Recount3.qmd": {
+    "Recount3.html": "a0d151d2"
+  },
+  "index.qmd": {
+    "index.html": "e8999c97"
+  }
+}
