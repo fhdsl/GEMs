@@ -33,10 +33,13 @@ lightblue
 lightgreen
 NMDA
 NMDAR
+noncoding
 nvcc
 NVCC
 OTTR
 ottrproject
+phenotype
+phenotypes
 png
 PRS
 polygenic
@@ -48,6 +51,7 @@ Rmd
 RStudio
 scalable
 subdir
+Tay
 th
 thon
 www
