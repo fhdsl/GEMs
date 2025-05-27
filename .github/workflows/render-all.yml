@@ -48,6 +48,16 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
+          
+      # Custom for GEMs: render docx from qmd files
+      - name: Run render docx
+        id: docx
+        run: quarto render --to docx --output-dir docs/docx     
+        
+      # Custom for GEMs: Copy over data dir
+      - name: Copy data
+        id: data
+        run: cp -r data docs
 
       - name: Run render
         id: render
