@@ -43,4 +43,6 @@ A PRS is just a rough estimate based on what we know at the moment about the gen
 
 At its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.
 
+Being able to calculate a PRS requires that scientists have an understanding of all the genes and noncoding regions of DNA that might contribute to developing (or not developing) a disease. **A PRS is only as good as the reference database for a particular disease or trait.**
+
 ### Genomic Ancestry
