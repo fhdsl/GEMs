@@ -24,3 +24,17 @@ Borrow images from [Google Slides](https://docs.google.com/presentation/d/1fy3Fw
 
 ## Background
 
+### Polygenic Inheritance
+
+### Polygenic Risk Scores
+Most human diseases develop as a result of a combination of multiple genetic and environmental factors. Researchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.
+
+::: reflection
+It’s always important to remember that **having a higher PRS does not guarantee someone will get a disease.**  Likewise, having a lower PRS does not guarantee someone is protected from a disease. 
+
+A PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person's overall risk for a disease by less than 5%.
+:::
+
+At its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.
+
+### Genomic Ancestry

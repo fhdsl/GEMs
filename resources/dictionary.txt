@@ -38,6 +38,9 @@ NVCC
 OTTR
 ottrproject
 png
+PRS
+polygenic
+Polygenic
 qmd 
 quarto 
 repo
