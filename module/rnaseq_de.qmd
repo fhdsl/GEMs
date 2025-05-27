@@ -8,7 +8,9 @@ output:
 ottrpal::set_knitr_image_path()
 ```
 
-This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. The original C-MOOR RNA-seq miniCURE explores gene expression in a _Drosophila_ midgut dataset. This module adds additional RNA-seq datasets that students can use in their independent analysis projects. 
+This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can be used as an independent activity or as part of a broader miniCURE experience. The original C-MOOR RNA-seq miniCURE explores gene expression in a _Drosophila_ midgut dataset. This module adds additional RNA-seq datasets that students can use in their independent analysis projects. 
+
+TODO: Add flowchart
 
 You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the [C-MOOR website](https://www.c-moor.org/). An online guide to the miniCURE is [here](https://science.c-moor.org/miniCURE-RNA-seq/index.html).
 
