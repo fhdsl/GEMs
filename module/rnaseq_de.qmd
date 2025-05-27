@@ -52,31 +52,30 @@ Students may not be familiar with why the mouse is used as a model organism. Thi
 
 This section of the student guide includes information on how to navigate the [Mouse Genome Informatics](https://informatics.jax.org/) database maintained by The Jackson Laboratory. It also has a brief description on interpreting a mouse gene ID code and non-genes that have associated IDs.
 
-
-## Datasets
+## Student Guide
 A separate student guide and Rmd file (with example code) has been created for this activity. The student guide can be accessed as either a webpage or as a downloadable pdf. The Rmd file should be downloaded. Once it is downloaded, students can open Rmd file with RStudio. This Rmd file can also be used in any cloud-based R environment, such as AnVIL or PositCloud.
 
-[Student guide](rnaseq_de_student-guide.html)
-<br>
-[Student Rmd file](rnaseq_de_student_-guide_use.html)
+You can find the student guide for working through this activity and dataset [here](rnaseq_de_student-guide.html)
 
-[Full gene expression data; no comparisons, just counts](https://genomicseducation.org/data/mouse_autism_counts.csv)
+## Datasets
+Full gene expression data; no comparisons, just counts:  [https://genomicseducation.org/data/mouse_autism_counts.csv](https://genomicseducation.org/data/mouse_autism_counts.csv)
 
 **Comparing gene expression between ASD and control mice**
 
-[Both brain regions](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
+Both brain regions: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
 
-[Prefrontal cortex only](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
+Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
 
-[Striatum only](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
+Striatum only: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
 
 **Comparing gene expression between prefrontal cortex and striatum**
 
-[All mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
+All mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
 
-[Only ASD mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
+Only ASD mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
 
-[Only control mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
+Only control mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
+
 
 
 
