@@ -20,6 +20,7 @@ cwrigh
 dat
 Dockerfile
 Dockerhub
+dotplot
 Drosophila
 edu
 Ensembl
@@ -30,12 +31,15 @@ FlyBase
 frameshift
 fredhutch
 GEMs
+GenBank
 GH
 Github
 GitHub
 glyphicons
 guttman
 Guttman
+homolog
+homologs
 HTTPS
 https
 Humphries
@@ -65,10 +69,12 @@ nvcc
 NVCC
 OTTR
 ottrproject
+padj
 Phineas
 PMC
 PositCloud
 png
+pseudogene
 pseudogenes
 PubMed
 qmd 
