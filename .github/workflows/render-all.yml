@@ -66,18 +66,10 @@ jobs:
           rm -rf docs/*
         shell: bash
             
-      # Run rendering
-      - name: Render Special
-        id: render
-        run: |
-          curl -OL https://github.com/ottrproject/ottr-preview/raw/refs/heads/main/entrypoint.sh
-          if [ '${{ inputs.root_path }}' != '.' ]; then
-            mv entrypoint.sh ${{ inputs.root_path }}/entrypoint.sh
-          fi
-          docker run -v ${{ github.workspace }}/${{ inputs.root_path }}:/home \
-            ${{ inputs.docker_image }} bash /home/entrypoint.sh ${{ inputs.toggle_website }} || exit_code=$?
-          rm ${{ inputs.root_path }}/entrypoint.sh
-        shell: bash
+       # Now we want to render all the html files from the qmd files
+      - name: Run render html
+        id: site
+        run: quarto render
         
       # Custom for GEMs: render docx from qmd files
       - name: Run render docx
