@@ -1,0 +1,33 @@
+---
+title: "Genomic Medicine and PRS"
+format:
+    html: default
+---
+
+<!-- image and this activity will.. -->
+
+## Background
+
+Many human diseases are caused by a combination of genetic and environmental factors. For most of these diseases, it can be difficult to predict what combination will lead to a person developing disease. Instead, physicians and researchers talk about the increased risk - essentially, we know what factors increase the likelihood of developing diseases, even if we can't predict with 100% certainty whether someone might get sick. 
+
+### Polygenic Inheritance
+
+When we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or Huntington's, are passed along via _Mendelian inheritance_. A mutation in a single gene is enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick. 
+
+However, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn't enough to cause problems, but when all of them show up together, the cellular processes aren't able to function normally.  This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called _polygenic inheritance_. Polygenic traits are quite common, and they aren't always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.
+
+### Polygenic Risk Scores
+
+Researchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.
+
+::: {.callout-tip}
+It’s always important to remember that **having a higher PRS does not guarantee someone will get a disease.**  Likewise, having a lower PRS does not guarantee someone is protected from a disease. 
+
+A PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person's overall risk for a disease by less than 5%.
+:::
+
+At its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.
+
+Being able to calculate a PRS requires that scientists have an understanding of all the genes and noncoding regions of DNA that might contribute to developing (or not developing) a disease. **A PRS is only as good as the reference database for a particular disease or trait.**
+
+### Genomic Ancestry
