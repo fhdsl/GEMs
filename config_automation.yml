@@ -3,6 +3,7 @@
 render-preview: true
 
 ##### Checks run at pull request #####
+##### Checks run at pull request #####
 # Check quiz formatting
 check-quizzes: false
 quiz_error_min: 0
@@ -13,7 +14,6 @@ url_error_min: 0
 spell-check: true
 spell_error_min: 0
 
-#### Other options
 # Style any R code
 style-code: true
 # Would you like your markdown files to be checked for formatting
