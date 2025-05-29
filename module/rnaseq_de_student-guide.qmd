@@ -1,12 +1,18 @@
 ---
 title: "**Gut-brain axis: Autism Spectrum Disorder: Student Guide**"
-output:
-  html_document
+format:
+    html: default
 ---
 
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
+
+This module introduces students to differential expression analyses using the R programming language.
+
+This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment to understand how researchers explore how human disorders might be impacted by gut-brain axis using model organisms.
+
+# Background
 
 This dataset includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with Autism Spectrum Disorder (ASD), while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. Researchers then bred the mice and looked for differences in gene expression in the brains of the offspring.
 
@@ -59,7 +65,7 @@ You will need all four of these parts together to search for information about y
 
 ### Mouse Genome Database
 
-Just like FlyBase, there is a database that tracks mouse genes. This database is called [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml). A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We’ll reproduce some of it below.
+The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We’ll reproduce some of it below.
 
 To look up information on a particular gene of interest, choose the “Genes” button.
 
