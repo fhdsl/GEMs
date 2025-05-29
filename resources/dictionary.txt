@@ -98,6 +98,8 @@ DAO
 docx
 glutamate
 glycine
+heterozygous
+homozygous
 ketamine
 neuropsychiatric
 Neuropsychiatric
