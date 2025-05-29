@@ -1,7 +1,7 @@
 # Candace Savonen 2021
 # Updated April 2025
 
-name: Render all output courses
+name: Render Website and Modules
 
 on:
   workflow_dispatch:
@@ -10,8 +10,10 @@ on:
     paths:
       - '*.qmd'
       - '*.Rmd'
+      - module/*
       - assets/*
       - quizzes/*
+      - data/*
 
 jobs:
 
