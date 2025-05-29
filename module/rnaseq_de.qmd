@@ -8,13 +8,14 @@ output:
 ottrpal::set_knitr_image_path()
 ```
 
-This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can be used as an independent activity or as part of a broader miniCURE experience. The original C-MOOR RNA-seq miniCURE explores gene expression in a _Drosophila_ midgut dataset. This module adds additional RNA-seq datasets that students can use in their independent analysis projects. 
+This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Each section introduces an RNA-seq dataset from a published research paper. The datasets have been formatted for student use. All the formatting and qc of the raw data has been done previously, so students can focus on hypothesis testing.
+
+This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can be used as an independent activity or as part of a broader miniCURE experience. The original C-MOOR RNA-seq miniCURE explores gene expression in a _Drosophila_ midgut dataset. This module adds additional RNA-seq datasets that students can use, either as the primary activity or as an independent research project. 
 
 TODO: Add flowchart
 
 You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the [C-MOOR website](https://www.c-moor.org/). An online guide to the miniCURE is [here](https://science.c-moor.org/miniCURE-RNA-seq/index.html).
 
-Each section introduces an RNA-seq dataset from a published research paper. The datasets have been formatted for student use.
 
 # Gut-brain axis: Autism Spectrum Disorder
 
@@ -38,7 +39,7 @@ Additionally, students can look at gene expression in striatum vs prefrontal cor
 
 ## What does the student guide include?
 
-The student guide includes some background information that may help your students understand the sorts of questions they may want to ask with this dataset. 
+The student guide includes some background information that may help your students understand the kinds of questions they may want to ask with this dataset. 
 
 ### Study overview and definitions
 
@@ -56,6 +57,8 @@ This section of the student guide includes information on how to navigate the [M
 A separate student guide and Rmd file (with example code) has been created for this activity. The student guide can be accessed as either a webpage or as a downloadable pdf. The Rmd file should be downloaded. Once it is downloaded, students can open Rmd file with RStudio. This Rmd file can also be used in any cloud-based R environment, such as AnVIL or PositCloud.
 
 You can find the student guide for working through this activity and dataset [here](rnaseq_de_student-guide.html)
+
+A separate version of the student guide has been provided if you are using this module as an extension of the C-MOOR miniCURE. In this version, students are given examples of the coding tasks they did in the miniCURE activities, but have been provided empty code blocks for writing their own code. This modified guise is [here]()
 
 ## Datasets
 Full gene expression data; no comparisons, just counts:  [https://genomicseducation.org/data/mouse_autism_counts.csv](https://genomicseducation.org/data/mouse_autism_counts.csv)
