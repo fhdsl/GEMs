@@ -269,7 +269,7 @@ dotplot(asd_vs_c_clusters, showCategory=34, title="a1 vs p1", font.size=10, labe
 EXTRA UNNEEDED CODE (possibly needed to replace a bespoke function to create a plot across regions):
 Since we're working with two separate datasets, let's add a column to each dataset so we know whether we're looking at expression data in prefrontal cortex or striatum. 
 
-```{r}
+```{r, eval = F}
 asd_vs_c_prefrontal$region <- "prefrontal_cortex"
 
 asd_vs_c_striatum$region <- "striatum"
@@ -277,14 +277,14 @@ asd_vs_c_striatum$region <- "striatum"
 
 If you take a look at both `asd_vs_c_prefrontal` and `asd_vs_c_striatum`, you'll see that the new column has been added on the rightmost side of the data.
 
-```{r}
+```{r, eval = F}
 head(asd_vs_c_prefrontal)
 head(asd_vs_c_striatum)
 ```
 
 Next, we'll combine our two filtered datasets to make one single dataset that only contains expression of the reg3a gene. We'll combine the datasets with the `bind_rows`. This command essentially "glues" the two datasets together, one on top of the other.
 
-```{r}
+```{r, eval = F}
 reg3a <- bind_rows(reg3a_prefrontal, reg3a_striatum)
 head(reg3a)
 ```
