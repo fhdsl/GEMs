@@ -4,9 +4,6 @@ format:
     html: default
 ---
 
-
-## Module Overview
-
 You are a genetic detective! Your lab group has been running experiments for a variety of _Drosophila_ genes. Unfortunately, there was an accident with a broken pipe and the computer, and all the stored data is gone! You have copies of the experimental results, but you haven't been able to find the key that tells you which set of experiments corresponds to which gene. Your job is to find the background information on each gene using online databases, then match the fruit fly gene to the correct set of experimental results.
 
 ### The suspected genes
