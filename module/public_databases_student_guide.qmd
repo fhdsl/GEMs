@@ -24,11 +24,19 @@ You should also keep in mind that some information can be found in multiple data
 
 ## Part 1
 
-Let's start with exploring FlyBase to get some basic information about each of the four genes.
+Start with exploring FlyBase to get some basic information about each of the four genes.
 
 [_FlyBase_](https://flybase.org/) is a database focused on _Drosophila_ genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico.
 
+::: {.callout-note}
+## TASK ONE
 
+For each gene (scarlet, plum, mustard, and white), find the following information:
+
+- FlyBase geneID
+- chromosomal location
+
+:::
 
 ## Part 2
 
