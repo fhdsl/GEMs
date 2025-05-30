@@ -148,7 +148,7 @@ Next, you might want to create a list of all the genes that are differentially e
 This step requires some thought as to what you want to set as your padj threshold! Remember, you want to make sure you have a minimal number of false positive results, while also still keeping enough genes for future analyses.
 
 ```{r}
-asd_vs_c_sig <- filter(asd_vs_c, padj > 0.05)
+asd_vs_c_sig <- filter(asd_vs_c, padj < 0.05)
 head(asd_vs_c_sig)
 dim(asd_vs_c_sig)
 ```
