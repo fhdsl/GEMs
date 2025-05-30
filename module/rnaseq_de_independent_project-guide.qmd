@@ -117,70 +117,6 @@ In this dataset, you have the option to look at gene expression in control vs AS
 
 Additionally, you can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, you also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.
 
-[Full gene expression data; no comparisons, just counts](https://genomicseducation.org/data/mouse_autism_counts.csv)
-
-**Comparing gene expression between ASD and control mice**
-
-[Both brain regions](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
-
-[Prefrontal cortex only](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
-
-[Striatum only](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
-
-**Comparing gene expression between prefrontal cortex and striatum**
-
-[All mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
-
-[Only ASD mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
-
-[Only control mice](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
-
-
-## Analysis
-
-Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
-Remember, the basic steps of your analysis are:
-
-1. Examine expression of your  gene of interest expressed in this dataset.
-1. Explore whether your gene of interest is differentially expressed in different experimental groups.
-1. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
-
-### Loading the tidyverse package and the data
-
-All the datasets for this activity can be loaded into R from their URL. In order to do this, we will use some code that has been saved in an R package called `tidyverse`. In order to use this code, we will need to install and open `tidyverse` using the R code chunk below.
-
-`install.packages` retrieves and installs the package
-
-`library` opens the package and makes the stored code available for you to use
-
-```{r, eval = F}
-install.packages("tidyverse")
-
-library(tidyverse)
-```
-
-Once you have installed and opened `tidyverse`, you should be ready to load the experimental data. You can do this using the `read_csv` command.
-
-Let's say you want to open one of the differential expression datasets and call it `dat`. The command would be:
-
-```{r, eval = F}
-dat <- read_csv("URL where the dataset is stored")
-```
-
-### Code cheatsheet
-
-Here's a quick overview of some of the code you used in the lab exercises!
-
-###   Exploring the dataframe
-
-This lets you explore how the dataset is formatted and how big it is
-
-```{r, eval = F}
-head(readCounts)
-dim(readCounts)
-```
-
-
 ## Learning about mouse genes
 
 In this dataset, genes are identified using their Ensembl Gene ID code. Every gene will have an ID that looks something like this:
@@ -257,6 +193,51 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 ```
 
 
+## Analysis
+
+Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
+Remember, the basic steps of your analysis are:
+
+1. Examine expression of your  gene of interest expressed in this dataset.
+1. Explore whether your gene of interest is differentially expressed in different experimental groups.
+1. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
+
+Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
+
+### Loading the tidyverse package and the data
+
+All the datasets for this activity can be loaded into R from their URL. In order to do this, we will use some code that has been saved in an R package called `tidyverse`. In order to use this code, we will need to install and open `tidyverse` using the R code chunk below.
+
+`install.packages` retrieves and installs the package
+
+```{r, eval = F}
+install.packages("tidyverse")
+```
+
+`library` opens the package and makes the stored code available for you to use
+
+```{r}
+library(tidyverse)
+```
+
+Once you have installed and opened `tidyverse`, you should be ready to load the experimental data. You can do this using the `read_csv` command.
+
+Let's say you want to open the dataset that has all the gene expression data (with no comparisons) and call it  `readCounts`. The command would be:
+
+```{r}
+readCounts <- read_csv("https://genomicseducation.org/data/mouse_autism_counts.csv")
+```
+
+
+###   Exploring the dataframe
+
+This lets you explore how the dataset is formatted and how big it is, as well as what the various columns are named.
+
+```{r}
+head(readCounts)
+dim(readCounts)
+```
+
 
 ### Summarizing count data
 
@@ -289,8 +270,35 @@ hist(log10(readCounts$V2 + 0.1), main="Log10 Read Counts for Drosophila RNA-seq 
 You might want to look at the expression of a specific gene
 
 ```{r, eval = F}
-filter(readCounts_Cu, V1=="FBgn0002522")
+filter(readCounts, `..1`=="	
+ENSMUSG00000089657")
 ```
+
+### Exploring differential expression of genes
+
+Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. The command would be:
+
+```{r}
+readCounts <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv")
+```
+
+Here are the URLs for all the possible comparisons you can examine with this dataset:
+
+**Comparing gene expression between ASD and control mice**
+
+Both brain regions: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
+
+Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
+
+Striatum only: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
+
+**Comparing gene expression between prefrontal cortex and striatum**
+
+All mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
+
+Only ASD mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
+
+Only control mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
 
 ### Creating a gene list
 
