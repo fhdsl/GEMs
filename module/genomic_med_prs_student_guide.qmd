@@ -44,11 +44,47 @@ In the next steps, we'll be looking at how PRS can help patients be more informe
 
 We're going to take gene screening data from an imaginary patient, Mr. J, to understand his risk. Mr. J has African ancestry, which will be important later.
 
-### Loading Data and Calculating Risk
+### Polygenic Data
+
+Get the data at https://genomicseducation.org/data/prs_ind_1.txt. It should look like:
+
+```
+rs7463326:G
+rs58235267:G
+rs74001374:C
+...
+```
+
+::: {.callout-tip}
+## What does the data mean?
+
+Each line of the data represents a variant location in the genome and individual person's version of that gene (allele). 
+
+For example, **rs7463326** is the variant. Mr. J has a "G" here. Other patients might have "A" or "C".
+:::
+
+### Exploring Variants
+
+Let's explore the **rs7463326** variant a bit more. Go to https://www.ebi.ac.uk/gwas/variants and type "rs7463326" in the search bar.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_6#slide=id.g35f43ab35e5_0_6")
+```
+
+Select the first result.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_11#slide=id.g35f43ab35e5_0_11")
+```
+
+
+ is a genome variant that lies in an [intergenic region](https://www.genome.gov/genetics-glossary/Intergenic-Regions#:~:text=Definition,Medical%20Genetics%20Branch), or a sequence between protein coding genes. Mr. J has a "G" here. Other patients might have "A" or "C".
+
+
+### Calculating Risk
 
 Go to https://prs.byu.edu/calculate_score.html - this is the website we'll use to calculate a PRS for Mr. J's data.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_0#slide=id.g35f43ab35e5_0_0")
 ```
-
