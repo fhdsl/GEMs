@@ -266,7 +266,7 @@ asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
 dotplot(asd_vs_c_clusters, showCategory=34, title="a1 vs p1", font.size=10, label_format = 50)
 ```
 
-EXTRA UNNEEDED CODE:
+EXTRA UNNEEDED CODE (possibly needed to replace a bespoke function to create a plot across regions):
 Since we're working with two separate datasets, let's add a column to each dataset so we know whether we're looking at expression data in prefrontal cortex or striatum. 
 
 ```{r}
