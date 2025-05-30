@@ -53,14 +53,16 @@ Students may not be familiar with why the mouse is used as a model organism. Thi
 
 This section of the student guide includes information on how to navigate the [Mouse Genome Informatics](https://informatics.jax.org/) database maintained by The Jackson Laboratory. It also has a brief description on interpreting a mouse gene ID code and non-genes that have associated IDs.
 
-## Student Guide
+## Downloads
+
+### Student Guides
 A separate student guide and Rmd file (with example code) has been created for this activity. The student guide can be accessed as either a webpage or as a downloadable pdf. The Rmd file should be downloaded. Once it is downloaded, students can open Rmd file with RStudio. This Rmd file can also be used in any cloud-based R environment, such as AnVIL or PositCloud.
 
 You can find the student guide for working through this activity and dataset [here](rnaseq_de_student-guide.qmd)
 
-A separate version of the student guide has been provided if you are using this module as an extension of the C-MOOR miniCURE. In this version, students are given examples of the coding tasks they did in the miniCURE activities, but have been provided empty code blocks for writing their own code. This modified guise is [here]()
+A separate version of the student guide has been provided if you are using this module as an extension of the C-MOOR miniCURE. In this version, students are given examples of the coding tasks they did in the miniCURE activities, but have been provided empty code blocks for writing their own code. This modified guise is [here](rnaseq_de_independent_project-guide.qmd)
 
-## Datasets
+### Datasets
 Full gene expression data with no comparisons, just counts:  [https://genomicseducation.org/data/mouse_autism_counts.csv](https://genomicseducation.org/data/mouse_autism_counts.csv)
 
 **Comparing gene expression between ASD and control mice**
