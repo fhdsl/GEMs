@@ -5,6 +5,7 @@ AOU
 ASD
 automations
 avahoffman
+baseMean
 Bioinformatics
 bioinformatics
 Bootstap
@@ -23,15 +24,19 @@ Dockerhub
 dotplot
 Drosophila
 edu
+else's
 Ensembl
 ENSMUSG
 favicon
 FBgn
 FlyBase
+FoldChange
 frameshift
 fredhutch
 GEMs
 GenBank
+geneID
+geneIDs
 GH
 Github
 GitHub
@@ -46,6 +51,7 @@ Humphries
 IntroMouse
 introns
 knitr
+lfcSE
 lightblue
 lightgreen
 lncRNA
@@ -68,6 +74,7 @@ NMDA
 NMDAR
 nvcc
 NVCC
+ORF
 OTTR
 ottrproject
 padj
@@ -78,6 +85,7 @@ png
 pseudogene
 pseudogenes
 PubMed
+pvalue
 qmd 
 quarto 
 repo
