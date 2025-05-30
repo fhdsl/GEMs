@@ -212,7 +212,7 @@ Directly underneath the “ontology” section is information about when the gen
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
 
-### Plotting a single gene across regions
+### Compare differential gene expression across regions
 
 It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
 
@@ -222,30 +222,67 @@ asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_autism
 asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv")
 ```
 
-Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000059921, which is the unc-5 netrin receptor C gene.
-“ENSMUSG00000079516”
+
+Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.
 
 ```{r}
-unc_prefrontal <- filter(asd_vs_c_prefrontal, gene == "ENSMUSG00000059921")
+reg3a_prefrontal <- filter(asd_vs_c_prefrontal, gene == "ENSMUSG00000079516")
 
-unc_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000059921")
+reg3a_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000079516")
 ```
 
-Next, we'll combine our two filtered datasets to make one single dataset that only contains expression of the unc-5 netrin receptor C gene. We'll first add a column to each dataset so we know whether we're looking at expression data in prefrontal cortex or striatum. Then we'll combine the datasets with the `bind_rows`. This command essentially "glues" the two datasets together, one on top of the other.
+Finally, take a look at the differential expression of reg3a in each region.
 
+In the prefrontal cortex:
 ```{r}
+reg3a_prefrontal
+```
 
+In the striatum:
+```{r}
+reg3a_striatum
+```
+
+### Plotting a single gene across regions
+
+```{r, eval = F}
+TODO: Figure out the bespoke function `PlotAcrossRegions`
+plotAcrossRegions("FBgn0000003")
+ENSMUSG00000079516
 ```
 
 ### Running a gene set analysis
 
-TODO: Verify if `runClusterProfiler` is a bespoke function
 
 You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
 
 ```{r, eval = F}
+TODO: Verify if `runClusterProfiler` is a bespoke function
+
 asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
 
 dotplot(asd_vs_c_clusters, showCategory=34, title="a1 vs p1", font.size=10, label_format = 50)
 ```
 
+EXTRA UNNEEDED CODE:
+Since we're working with two separate datasets, let's add a column to each dataset so we know whether we're looking at expression data in prefrontal cortex or striatum. 
+
+```{r}
+asd_vs_c_prefrontal$region <- "prefrontal_cortex"
+
+asd_vs_c_striatum$region <- "striatum"
+```
+
+If you take a look at both `asd_vs_c_prefrontal` and `asd_vs_c_striatum`, you'll see that the new column has been added on the rightmost side of the data.
+
+```{r}
+head(asd_vs_c_prefrontal)
+head(asd_vs_c_striatum)
+```
+
+Next, we'll combine our two filtered datasets to make one single dataset that only contains expression of the reg3a gene. We'll combine the datasets with the `bind_rows`. This command essentially "glues" the two datasets together, one on top of the other.
+
+```{r}
+reg3a <- bind_rows(reg3a_prefrontal, reg3a_striatum)
+head(reg3a)
+```
