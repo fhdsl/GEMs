@@ -93,7 +93,7 @@ Scroll down to see the risk allele associated with the variant. For **rs7463326*
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_42#slide=id.g35f4636d8f5_0_42")
 ```
 
-Mr. J has a "G" here. Other patients might have "A" or "C". This means he might be more at risk than other patients. However, we know risk is often dictated by mutliple genes. In the next steps we'll explore how to assess risk with multiple variants.
+Mr. J has a "G" here. Other patients might have "A" or "C". This means he might be more at risk than other patients. However, we know risk is often dictated by multiple genes. In the next steps we'll explore how to assess risk with multiple variants.
 
 ::: {.callout-note}
 ## Check Your Knowledge
