@@ -8,9 +8,9 @@ You are a genetic detective! Your lab group has been running experiments for a v
 
 ### The suspected genes
 
-Each mystery experiment belongs to one of five _Drosophila_ genes: scarlet, plum, mustard, white, and green body.
+Each mystery experiment is associated with one of four _Drosophila_ genes: **scarlet**, **plum**, **mustard**, and **white**.
 
-Each of these genes has been characterized in the _Drosophila_ genome and you know their FlyBase gene IDs, but not much else. You'll need to figure out where they're located in the _Drosophila_ genome, in what tissues they're expressed, and what species share homologous genes. Finally, you'll need to track down what possible human diseases their human homologs might be involved in.
+Each of these genes has been characterized in the _Drosophila_ genome and you know their common name, but not much else. You'll need to figure out where they're located in the _Drosophila_ genome, in what tissues they're expressed, and what species share homologous genes. Finally, you'll need to track down what possible human diseases their human homologs might be involved in.
 
 ### The databases
 
@@ -22,7 +22,17 @@ It's important to remember that the databases in this activity aren't the only d
 
 You should also keep in mind that some information can be found in multiple databases. For example, many databases that focus on the genome of a particular model organism will also have information about the human diseases associated with that particular gene. This information can also be found in databases that focus specifically on human genetic diseases (like OMIM or MalaCards). Just like there are many ways to cook an egg, there's many ways to find the genomic information you might need in public databases. As long as you are careful and using a curated database, you can use the one you're most comfortable with.
 
-[_FlyBase_](https://flybase.org/) is a database focused on _Drosophila_ genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico
+## Part 1
+
+Let's start with exploring FlyBase to get some basic information about each of the four genes.
+
+[_FlyBase_](https://flybase.org/) is a database focused on _Drosophila_ genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico.
+
+
+
+## Part 2
+
+Next, let's explore additional genomic databases beyond FlyBase to characterize the homologs to the four _Drosophila_ genes.
 
 The [_Mouse Genome Informatics_](https://informatics.jax.org/) database is the international database for the laboratory mouse, integrating genetic, genomic, and biological data as part of an effort to use the mouse to study human health and disease. It is maintained by the Jackson Laboratory.
 
@@ -30,6 +40,21 @@ The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database 
 
 [_NCBI_](https://www.ncbi.nlm.nih.gov/datasets/gene/) maintains a database of genetic, genomic, and expression data for a variety of taxa, including humans. This database is maintained and funded through the National Library of Medicine at the NIH.
 
-[_MalaCards_]() is a searchable database offering information on human diseases, medical conditions, and disorders. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.
+## Part 3
 
-## Activity
+HUMAN DISEASES OR HEALTH STUFF ASSOCIATED WITH THE HUMAN HOMOLOG
+
+[_OMIM_](https://omim.org/), short for Online Mendelian Inheritance in Man, is a comprehensive database of human genes and genetic phenotypes. It is maintained by the McKusick-Nathans Institute of Genetic Medicine at Johns Hopkins University.
+
+[_MalaCards_](https://www.malacards.org/) is a searchable database offering information on human diseases, medical conditions, and disorders. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.
+
+## Part 4
+
+Finally, it's time for you to report back to your supervisor. 
+
+::: {.callout-note}
+
+1. Which _Drosophila_ genes are associated with each experiment?
+
+2. Which background research on human disease belongs with each experiment?
+:::
