@@ -270,17 +270,27 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 
 ### Plotting a single gene across regions
 
-It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will filter out 
+It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
 
 ```{r, eval = F}
-plotAcrossRegions("FBgn0000003")
+asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv")
+
+asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv")
 ```
 
-If you're interested in plotting the genes with the lowest p-values, you can use the `arrange` command to sort the results first.
+Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000059921, which is the unc-5 netrin receptor C gene.
+“ENSMUSG00000079516”
 
-```{r, eval = F}
-a1_vs_p1_sorted <- arrange(a1_vs_p1, padj)
-head(a1_vs_p1_sorted)
+```{r}
+unc_prefrontal <- filter(asd_vs_c_prefrontal, gene == "ENSMUSG00000059921")
+
+unc_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000059921")
+```
+
+Next, we'll combine our two filtered datasets to make one single dataset that only contains expression of the unc-5 netrin receptor C gene. We'll first add a column to each dataset so we know whether we're looking at expression data in prefrontal cortex or striatum. Then we'll combine the datasets with the `bind_rows`. This command essentially "glues" the two datasets together, one on top of the other.
+
+```{r}
+
 ```
 
 ### Running a gene set analysis
