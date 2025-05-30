@@ -218,7 +218,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 
 It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
 
-```{r, eval = F}
+```{r}
 asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv")
 
 asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv")
