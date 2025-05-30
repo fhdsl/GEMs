@@ -108,10 +108,10 @@ You have just loaded differential expression data comparing ASD-transplant mice 
 
 ## Part 2
 
-Let's take a look at the data you loaded into R. Type the following code into the console (this will open a new window):
+Let's take a look at the data you loaded into R. Type the following code into the console:
 
 ```{r}
-View(prefrontal)
+head(prefrontal)
 ```
 
 ::: callout-tip
