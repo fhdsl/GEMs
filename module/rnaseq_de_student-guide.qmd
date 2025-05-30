@@ -103,7 +103,13 @@ We'll read in some data from the GEMs website. Run the following code in your co
 ```{r}
 prefrontal <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv")
 ```
-You have just loaded differential expression data comparing the expression of 
+You have just loaded differential expression data comparing ASD-transplant mice and control-transplant mice for the prefrontal cortex region of the brain.
+
+We will run similar code to load differential expression data for the striatum
+
+```{r}
+striatum <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv")
+```
 
 ## Part 2
 
@@ -186,3 +192,33 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 
 [Striatum only](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
 
+### Compare differential gene expression across regions
+
+It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
+
+```{r, eval = F}
+asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv")
+
+asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv")
+```
+
+
+Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.
+
+```{r}
+reg3a_prefrontal <- filter(asd_vs_c_prefrontal, gene == "ENSMUSG00000079516")
+
+reg3a_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000079516")
+```
+
+Finally, take a look at the differential expression of reg3a in each region.
+
+In the prefrontal cortex:
+```{r}
+reg3a_prefrontal
+```
+
+In the striatum:
+```{r}
+reg3a_striatum
+```
