@@ -1,0 +1,38 @@
+---
+title: "Using Public Genomic Databases - Student Guide"
+format:
+    html: default
+---
+
+
+## Module Overview
+
+You are a genetic detective! Your lab group has been running experiments for a variety of _Drosophila_ genes. Unfortunately, there was an accident with a broken pipe and the computer, and all the stored data is gone! You have copies of the experimental results, but you haven't been able to find the key that tells you which set of experiments corresponds to which gene. Your job is to find the background information on each gene using online databases, then match the fruit fly gene to the correct set of experimental results.
+
+### The suspected genes
+
+Each mystery experiment belongs to one of five _Drosophila_ genes: scarlet, plum, mustard, white, and green body.
+
+Each of these genes has been characterized in the _Drosophila_ genome and you know their FlyBase gene IDs, but not much else. You'll need to figure out where they're located in the _Drosophila_ genome, in what tissues they're expressed, and what species share homologous genes. Finally, you'll need to track down what possible human diseases their human homologs might be involved in.
+
+### The databases
+
+For this activity, you'll explore a variety of _curated genomic databases_. Many of these databases are available to the public at little or no cost and are supported by grants to the researchers and organizations that maintain them.
+
+**Curated databases** are simply databases where information is screened, validated, and organized by experts to ensure the data are accurate and reliable. Information has undergone rigorous quality control checks and includes sources and contextual information to help users understand the data. The data is generally standardized and organized in a way to be easily accessible and searchable.
+
+It's important to remember that the databases in this activity aren't the only databases that exist! There are many more databases out there, each with its own focus. Luckily, most databases are organized in similar ways, so once you learn how to navigate one database, you'll be able to easily figure out how to navigate new ones.
+
+You should also keep in mind that some information can be found in multiple databases. For example, many databases that focus on the genome of a particular model organism will also have information about the human diseases associated with that particular gene. This information can also be found in databases that focus specifically on human genetic diseases (like OMIM or MalaCards). Just like there are many ways to cook an egg, there's many ways to find the genomic information you might need in public databases. As long as you are careful and using a curated database, you can use the one you're most comfortable with.
+
+[_FlyBase_](https://flybase.org/) is a database focused on _Drosophila_ genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico
+
+The [_Mouse Genome Informatics_](https://informatics.jax.org/) database is the international database for the laboratory mouse, integrating genetic, genomic, and biological data as part of an effort to use the mouse to study human health and disease. It is maintained by the Jackson Laboratory.
+
+The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database of genetic and genomic data for the zebrafish as a model organism. It was formed by a group of zebrafish researchers at Cold Spring Harbor and is maintained by the ZFIN Database Team at the University of Oregon.
+
+[_NCBI_](https://www.ncbi.nlm.nih.gov/datasets/gene/) maintains a database of genetic, genomic, and expression data for a variety of taxa, including humans. This database is maintained and funded through the National Library of Medicine at the NIH.
+
+[_MalaCards_]() is a searchable database offering information on human diseases, medical conditions, and disorders. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.
+
+## Activity
