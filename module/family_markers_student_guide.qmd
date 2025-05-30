@@ -5,7 +5,7 @@ format:
 ---
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_0#slide=id.g35ad481b335_0_0")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_0#slide=id.g35ad481b335_0_0")
 ```
 
 This activity will walk through interpretation of pedigree information and use bioinformatics tools (R) to build pedigrees for tracking disease traits in families. You will work with real data from a bipolar disorder genetics study to understand how researchers understand risk genes using pedigrees.
@@ -43,19 +43,19 @@ We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free
 <!-- callout about what cloud computing is ? -->
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+ottrpal::include_slide(https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
 ```
 
 Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
 ```
 
 Rename your project "Family Markers" by clicking on "Untitled Project".
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
 ```
 
 ### Package Install and Load
@@ -69,7 +69,7 @@ install.packages("kinship2")
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30")
 ```
 
 Next, we will load the package so it's ready to use:
@@ -79,7 +79,7 @@ library(kinship2)
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_61#slide=id.g357ffc10808_0_61")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_61#slide=id.g357ffc10808_0_61")
 ```
 
 ::: {.callout-tip}
@@ -104,7 +104,7 @@ ped_data
 If everything went correctly, you should see both an object called `ped_data` in the Environment Pane (top right) and the data printed to the console.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_47#slide=id.g357ffc10808_0_47")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_47#slide=id.g357ffc10808_0_47")
 ```
 
 ::: {.callout-tip}
@@ -124,7 +124,7 @@ View(ped_data)
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_74#slide=id.g357ffc10808_0_74")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_74#slide=id.g357ffc10808_0_74")
 ```
 
 ### Data Dictionaries
@@ -178,7 +178,7 @@ bipolar_pedigree <- pedigree(
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_16#slide=id.g35ad481b335_0_16")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_16#slide=id.g35ad481b335_0_16")
 ```
 
 ::: {.callout-tip}
@@ -200,7 +200,7 @@ plot(bipolar_pedigree['1'])
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_30#slide=id.g35ad481b335_0_30")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_30#slide=id.g35ad481b335_0_30")
 ```
 
 ## Part 2 Questions 
@@ -272,7 +272,7 @@ pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_48#slide=id.g35ad481b335_0_48")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_48#slide=id.g35ad481b335_0_48")
 ```
 
 ::: {.callout-tip}
@@ -288,7 +288,7 @@ pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35ad481b335_0_55#slide=id.g35ad481b335_0_55")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_55#slide=id.g35ad481b335_0_55")
 ```
 
 ## Part 4 Questions 
