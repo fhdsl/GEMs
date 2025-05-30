@@ -1,12 +1,16 @@
 ---
-title: "Genomic Medicine and PRS"
+title: "Genomic Medicine and Polygenic Risk Scores"
 format:
     html: default
 ---
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_6#slide=id.g35f4636d8f5_0_6")
+```
+
 ## Overview
 
-This activity will walk through how to use a polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will also compare calculations using different superpopulations, demonstrating the importance of diverse ancestry in PRS interpretation. 
+This activity will walk through how to use an online polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will also compare calculations using different superpopulations, demonstrating the importance of diverse ancestry in PRS interpretation. 
 
 **Duration:** Approximately 2-3 hours
 
@@ -22,7 +26,7 @@ This activity will walk through how to use a polygenic risk score (PRS) calculat
 
 -   Students will need:
 
-    -   An internet connection for this activity. Students will use this website: https://prs.byu.edu/calculate_score.html. 
+    -   An internet connection for this activity. Students will use this website: [https://prs.byu.edu/calculate_score.html](https://prs.byu.edu/calculate_score.html). 
 
 -   Data hosting: LINK
 
