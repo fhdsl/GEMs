@@ -119,13 +119,12 @@ View(prefrontal)
 
 When working with someone else's data, it can be difficult to figure out what a particular column or variable name means. A **data dictionary** is a key to decode these!
 
-**gene**: the geneID (see below for more detail)
-**baseMean**: 
-**log2FoldChange**: 
-**lfcSE**:
-**stat**: 
-**pvalue**: 
-**padj**:
+**gene**: the geneID (see below for more detail). **baseMean**: the average of the normalized count values for this gene, taken over all samples.
+**log2FoldChange**: a measure of the change in gene expression for this gene between the ASD and control mice. A positive value indicates upregulation (increased expression), while a negative Log2FC indicates downregulation (decreased expression).
+**lfcSE**: the standard error calculated for log2FoldChange.
+**stat**: t-value calculated to determine if the log2FoldChange is significantly different from zero.
+**pvalue**: the p-value for the log2FoldChange.
+**padj**: the p-value, adjusted for multiple testing.
 :::
 
 In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:
@@ -149,7 +148,7 @@ prefrontal_ascending <- arrange(prefrontal, log2FoldChange)
 head(prefrontal_ascending)
 ```
 
-We can use a similar command to look at the genes with the largest positive log2FoldChange. 
+We can use a similar command to look at the genes with the largest positive log2FoldChange.
 
 ```{r}
 prefrontal_descending <- arrange(prefrontal, desc(log2FoldChange))
@@ -204,7 +203,7 @@ Once this section is expanded, you can find information about possible human hom
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_8#slide=id.g346083d4dc0_0_8")
 ```
 
-If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the "gene ontology" section. 
+If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the "gene ontology" section.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_11#slide=id.g346083d4dc0_0_11")
@@ -224,9 +223,9 @@ In part 3, we'll create a list of genes that are differentially expressed in the
 
 ### Creating a gene list
 
-TODO: add information about padj and why it's a  better measure than log2FoldChange
+TODO: add information about padj and why it's a better measure than log2FoldChange
 
-Next, you might want to create a list of all the genes that are differentially expressed between ASD and control mice using the `filter` command.  
+Next, you might want to create a list of all the genes that are differentially expressed between ASD and control mice using the `filter` command.
 
 TODO: add threshold information
 
