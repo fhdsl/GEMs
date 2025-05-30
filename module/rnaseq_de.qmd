@@ -76,8 +76,6 @@ A separate version of the student guide has been provided if you are using this 
 
 ### Datasets
 
-Full gene expression data with no comparisons, just counts (*NOTE:* This dataset is only used in the independent project guide): <https://genomicseducation.org/data/mouse_autism_counts.csv>
-
 **Comparing gene expression between ASD and control mice**
 
 Both brain regions: <https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv>
