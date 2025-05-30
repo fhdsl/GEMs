@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://genomicseducation.org/index.html</loc>
-    <lastmod>2025-05-30T01:36:32.527Z</lastmod>
+    <lastmod>2025-05-30T16:00:58.262Z</lastmod>
   </url>
   <url>
     <loc>https://genomicseducation.org/module/family_markers.html</loc>
-    <lastmod>2025-05-30T01:36:32.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/AOU_methods.html</loc>
-    <lastmod>2025-05-30T01:36:32.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/modules.html</loc>
-    <lastmod>2025-05-30T01:36:32.527Z</lastmod>
+    <lastmod>2025-05-30T16:00:58.262Z</lastmod>
   </url>
   <url>
     <loc>https://genomicseducation.org/module/family_markers_student_guide.html</loc>
-    <lastmod>2025-05-30T01:36:32.527Z</lastmod>
+    <lastmod>2025-05-30T16:00:58.262Z</lastmod>
   </url>
   <url>
-    <loc>https://genomicseducation.org/module/Recount3.html</loc>
-    <lastmod>2025-05-30T01:36:32.527Z</lastmod>
+    <loc>https://genomicseducation.org/module/rnaseq_de_student-guide.html</loc>
+    <lastmod>2025-05-30T16:00:58.263Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/modules.html</loc>
+    <lastmod>2025-05-30T16:00:58.263Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/AOU_methods.html</loc>
+    <lastmod>2025-05-30T16:00:58.262Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/rnaseq_de_independent_project-guide.html</loc>
+    <lastmod>2025-05-30T16:00:58.263Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/rnaseq_de.html</loc>
+    <lastmod>2025-05-30T16:00:58.263Z</lastmod>
   </url>
 </urlset>
