@@ -6,21 +6,23 @@ format:
 
 ## Overview
 
-FILL IN HERE
+This activity will walk through how to use a polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will also compare calculations using different superpopulations, demonstrating the importance of diverse ancestry in PRS interpretation. 
 
-**Duration:**
+**Duration:** Approximately 2-3 hours
 
 ## Learning Objectives
 
-1.
+1. Calculate and interpret polygenic risk scores.
 
-2. 
+2. Compare risk percentiles using different ancestral superpopulations.
+
+3. Identify and critique scientific issues relating to society or ethics (see [GSA](https://genetics-gsa.org/education/genetics-learning-framework/) core competencies).
 
 ## Materials and Setup
 
 -   Students will need:
 
-    -   An internet connection for this activity.
+    -   An internet connection for this activity. Students will use this website: https://prs.byu.edu/calculate_score.html. 
 
 -   Data hosting: LINK
 
@@ -37,6 +39,9 @@ FILL IN HERE
 
 ## Scientific Topics
 
+Coming soon!
+
 ## Outline
 
+Coming soon!
 
