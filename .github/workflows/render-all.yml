@@ -1,7 +1,7 @@
 # Candace Savonen 2021
 # Updated April 2025
 
-name: Render all output courses
+name: Render Website and Modules
 
 on:
   workflow_dispatch:
@@ -10,8 +10,10 @@ on:
     paths:
       - '*.qmd'
       - '*.Rmd'
+      - module/*
       - assets/*
       - quizzes/*
+      - data/*
 
 jobs:
 
@@ -43,19 +45,62 @@ jobs:
       image: ${{needs.yaml-check.outputs.rendering_docker_image}}
 
     steps:
-      - name: checkout
+      - name: Checkout files
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
+  
+      # Set up git checkout
+      - name: Set up git checkout
+        run: |
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        shell: bash
 
-      - name: Run render
-        id: render
-        uses: ottrproject/ottr-preview@main
-        with:
-          toggle_website: ${{needs.yaml-check.outputs.toggle_website}}
-          preview: false
-          token: ${{ secrets.GH_PAT }}
+      # We want a fresh run of the renders each time
+      - name: Delete old docs/*
+        run: |
+          git remote set-url origin https://${{ secrets.GH_PAT }}@github.com/$GITHUB_REPOSITORY
+          git fetch origin
+          git pull --rebase --allow-unrelated-histories --strategy-option=ours
+          rm -rf docs/*
+        shell: bash
+            
+       # Now we want to render all the html files from the qmd files
+      - name: Run render html
+        id: site
+        run: quarto render
+        
+      # Custom for GEMs: render docx from qmd files
+      - name: Run render docx
+        id: docx
+        run: quarto render --to docx --output-dir docs/docx     
+        
+      # Custom for GEMs: Copy over data dir
+      - name: Copy data
+        id: data
+        run: cp -r data docs
+  
+      # This checks on the steps before it and makes sure that they completed.
+      # If the renders didn't complete we don't want to commit the file changes
+      - name: Check on render steps
+        run: |
+          echo Rendering status ${{steps.render.outcome}}
+          if [ '${{steps.render.outcome}}' != 'success']; then
+            exit 1
+          fi
+        shell: bash
+  
+      # Commit the rendered course files
+      - name: Commit rendered course files
+        run: |
+          git add --force docs/*
+          git commit -m 'Render course' || echo "No changes to commit"
+          git status docs/*
+          git push --force -u origin main  || echo "No changes to push"
+        shell: bash
 
   render-tocless:
     name: Render TOC-less version for Leanpub or Coursera
