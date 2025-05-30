@@ -8,7 +8,7 @@ format:
 ottrpal::set_knitr_image_path()
 ```
 
-This module introduces students to differential expression analyses using the R programming language.
+This module introduces you to differential expression analyses using the R programming language.
 
 This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment to understand how researchers explore how human disorders might be impacted by gut-brain axis using model organisms.
 

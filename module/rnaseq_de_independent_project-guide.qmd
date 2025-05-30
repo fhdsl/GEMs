@@ -1,5 +1,5 @@
 ---
-title: "**Gut-brain axis: Autism Spectrum Disorder: Student Guide**"
+title: "**Gut-brain axis: Autism Spectrum Disorder: Independent Project Guide**"
 format:
     html: default
 ---
@@ -8,9 +8,9 @@ format:
 ottrpal::set_knitr_image_path()
 ```
 
-This module introduces students to differential expression analyses using the R programming language.
+This module provides data for an independent project exploring differential expression in RNA-seq data.
 
-This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment to understand how researchers explore how human disorders might be impacted by gut-brain axis using model organisms.
+This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment.
 
 ### Background
 _Autism spectrum disorder (ASD)_ is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it’s considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
