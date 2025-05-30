@@ -43,7 +43,7 @@ We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free
 <!-- callout about what cloud computing is ? -->
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide(https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
 ```
 
 Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
