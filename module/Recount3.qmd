@@ -1,7 +1,0 @@
----
-title: "**Recount3: Understanding Gene Expression**"
-output:
-  html_document
----
-
-Details coming soon!
