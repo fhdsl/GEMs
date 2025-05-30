@@ -74,11 +74,18 @@ nlm
 nucleotides
 NMDA
 NMDAR
+noncoding
 nvcc
 NVCC
 ORF
 OTTR
 ottrproject
+phenotype
+phenotypes
+png
+PRS
+polygenic
+Polygenic
 padj
 Phineas
 PMC
@@ -98,6 +105,7 @@ scalable
 striatum
 Striatum
 subdir
+Tay
 th
 thon
 tidyverse
@@ -118,3 +126,4 @@ Neuropsychiatric
 nitrous
 ped
 qmd
+superpopulations
