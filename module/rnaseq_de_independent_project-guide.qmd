@@ -1,14 +1,4 @@
 ---
-title: "**Gut-brain axis: Autism Spectrum Disorder: Student Guide for Independent Projects**"
-format:
-    html: default
----
-
-```{r, include = FALSE}
-ottrpal::set_knitr_image_path()
-```
-
----
 title: "**Gut-brain axis: Autism Spectrum Disorder: Student Guide**"
 format:
     html: default
