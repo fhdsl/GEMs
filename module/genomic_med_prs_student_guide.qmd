@@ -1,14 +1,16 @@
 ---
-title: "Genomic Medicine and PRS"
+title: "Genomic Medicine and Polygenic Risk Scores"
 format:
     html: default
 ---
 
-<!-- image and this activity will.. -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_6#slide=id.g35f4636d8f5_0_6")
+```
 
 ## Part 1
 
-In Part 1, we'll go over the background for this activity.
+In Part 1, we'll go over the background and data for this activity.
 
 Many human diseases are caused by a combination of genetic and environmental factors. For most of these diseases, it can be difficult to predict what combination will lead to a person developing disease. Instead, physicians and researchers talk about the increased risk - essentially, we know what factors increase the likelihood of developing diseases, even if we can't predict with 100% certainty whether someone might get sick. 
 
@@ -38,15 +40,17 @@ Being able to calculate a PRS requires that scientists have an understanding of 
 
 <!-- More here? -->
 
-## Part 2
+### Exploring Variant Data
 
-In the next steps, we'll be looking at how PRS can help patients be more informed about disease risk. This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness (see https://www.ncbi.nlm.nih.gov/books/NBK470550/). This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes. 
+In the next steps, we'll be looking at how PRS can help patients be more informed about disease risk. 
+
+This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness (see [https://www.ncbi.nlm.nih.gov/books/NBK470550/ ]( https://www.ncbi.nlm.nih.gov/books/NBK470550/ )). This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes. 
+
+### Mr. J's Data
 
 We're going to take gene screening data from an imaginary patient, Mr. J, to understand his risk. Mr. J has African ancestry, which will be important later.
 
-### Polygenic Data
-
-Get the data at https://genomicseducation.org/data/prs_ind_1.txt. It should look like:
+Get the data at [https://genomicseducation.org/data/prs_ind_1.txt](https://genomicseducation.org/data/prs_ind_1.txt). It should look like:
 
 ```
 rs7463326:G
@@ -65,7 +69,7 @@ For example, **rs7463326** is the variant. Mr. J has a "G" here. Other patients 
 
 ### Exploring Variants
 
-Let's explore the **rs7463326** variant a bit more. Go to https://www.ebi.ac.uk/gwas/variants and type "rs7463326" in the search bar.
+Let's explore the **rs7463326** variant a bit more. Go to [https://www.ebi.ac.uk/gwas/variants](https://www.ebi.ac.uk/gwas/variants) and type "rs7463326" in the search bar.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_6#slide=id.g35f43ab35e5_0_6")
@@ -77,9 +81,30 @@ Select the first result.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_11#slide=id.g35f43ab35e5_0_11")
 ```
 
+Notice the variant information. The most severe **rs7463326** variant lies in an [intergenic region](https://www.genome.gov/genetics-glossary/Intergenic-Regions#:~:text=Definition,Medical%20Genetics%20Branch), or between protein coding genes. 
 
- is a genome variant that lies in an [intergenic region](https://www.genome.gov/genetics-glossary/Intergenic-Regions#:~:text=Definition,Medical%20Genetics%20Branch), or a sequence between protein coding genes. Mr. J has a "G" here. Other patients might have "A" or "C".
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_37#slide=id.g35f4636d8f5_0_37")
+```
 
+Scroll down to see the risk allele associated with the variant. For **rs7463326**, the risk allele is "G" and it's associated with prostate carcinoma.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_42#slide=id.g35f4636d8f5_0_42")
+```
+
+Mr. J has a "G" here. Other patients might have "A" or "C". This means he might be more at risk than other patients. However, we know risk is often dictated by mutliple genes. In the next steps we'll explore how to assess risk with multiple variants.
+
+::: {.callout-note}
+## Check Your Knowledge
+
+1. Try looking up another variant at [https://www.ebi.ac.uk/gwas/variants](https://www.ebi.ac.uk/gwas/variants). Look up "rs2075650". What kind of variant is listed under "Most severe consequence"? Are there any diseases associated with this variant?
+
+:::
+
+## Part 2
+
+In Part 2, we'll calculate our first PRS score.
 
 ### Calculating Risk
 
@@ -88,3 +113,7 @@ Go to https://prs.byu.edu/calculate_score.html - this is the website we'll use t
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_0#slide=id.g35f43ab35e5_0_0")
 ```
+
+Return to the data at [https://genomicseducation.org/data/prs_ind_1.txt](https://genomicseducation.org/data/prs_ind_1.txt). Copy this data into the top part of the PRS calculator website.
+
+
