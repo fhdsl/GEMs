@@ -133,7 +133,83 @@ In this dataset, genes are identified using their Ensembl Gene ID code. Every ge
 
 You will need all four of these parts together to search for information about your mouse gene.
 
-### Using the Mouse Genome Database
+## Analysis
+
+Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
+Remember, the basic steps of your analysis are:
+
+1. Examine expression of your  gene of interest expressed in this dataset.
+1. Explore whether your gene of interest is differentially expressed in different experimental groups.
+1. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
+
+Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
+
+### Loading and opening packages
+
+All the datasets for this activity can be loaded into R from their URL. In order to do this, we will use some code that has been saved in an R package called `tidyverse`. In order to use this code, we will need to install and open `tidyverse` using the R code chunk below.
+
+`install.packages` retrieves and installs the package
+
+```{r, eval = F}
+install.packages("tidyverse")
+```
+
+`library` opens the package and makes the stored code available for you to use
+
+```{r}
+library(tidyverse)
+```
+
+Once you have installed and opened `tidyverse`, you should be ready to load the experimental data. You can do this using the `read_csv` command.
+
+### Loading the data
+
+Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. The command would be:
+
+```{r}
+asd_vs_c <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv")
+```
+
+Here are the URLs for all the possible comparisons you can examine with this dataset:
+
+**Comparing gene expression between ASD and control mice**
+
+Both brain regions: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
+
+Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
+
+Striatum only: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
+
+**Comparing gene expression between prefrontal cortex and striatum**
+
+All mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
+
+Only ASD mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
+
+Only control mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
+
+### Arranging dataset based on padj 
+
+You're mostly interested in identifying the genes that have been differentially expressed between your two groups (in this case, ASD mouse brains and control mouse brains). You can use the `arrange` command to sort the results to put the smallest padj values first.
+
+```{r}
+asd_vs_c_sorted <- arrange(asd_vs_c, padj)
+head(asd_vs_c_sorted)
+```
+
+### Creating a gene list
+
+Next, you might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
+
+This step requires some thought as to what you want to set as your padj threshold! Remember, you want to make sure you have a minimal number of false positive results, while also still keeping enough genes for future analyses.
+
+```{r}
+asd_vs_c_sig <- filter(asd_vs_c, padj > 0.05)
+head(asd_vs_c_sig)
+dim(asd_vs_c_sig)
+```
+
+### Exploring genes of interest with the Mouse Genome Informatics database
 
 The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We’ll reproduce some of it below.
 
@@ -192,136 +268,9 @@ Directly underneath the “ontology” section is information about when the gen
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
 
-
-## Analysis
-
-Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
-Remember, the basic steps of your analysis are:
-
-1. Examine expression of your  gene of interest expressed in this dataset.
-1. Explore whether your gene of interest is differentially expressed in different experimental groups.
-1. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
-
-Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
-
-### Loading the tidyverse package and the data
-
-All the datasets for this activity can be loaded into R from their URL. In order to do this, we will use some code that has been saved in an R package called `tidyverse`. In order to use this code, we will need to install and open `tidyverse` using the R code chunk below.
-
-`install.packages` retrieves and installs the package
-
-```{r, eval = F}
-install.packages("tidyverse")
-```
-
-`library` opens the package and makes the stored code available for you to use
-
-```{r}
-library(tidyverse)
-```
-
-Once you have installed and opened `tidyverse`, you should be ready to load the experimental data. You can do this using the `read_csv` command.
-
-Let's say you want to open the dataset that has all the gene expression data (with no comparisons) and call it  `readCounts`. The command would be:
-
-```{r}
-readCounts <- read_csv("https://genomicseducation.org/data/mouse_autism_counts.csv")
-```
-
-
-###   Exploring the dataframe
-
-This lets you explore how the dataset is formatted and how big it is, as well as what the various columns are named.
-
-```{r}
-head(readCounts)
-dim(readCounts)
-```
-
-
-### Summarizing count data
-
-These commands allow you to run basic statistics on a variable (column) in the dataset
-
-```{r, eval = F}
-summary(readCounts$V2)
-sum(readCounts$V2)
-```
-
-### Plotting a histogram
-
-A general histogram:
-```{r, eval = F}
-hist(readCounts$V2, main="Read Counts for Drosophila RNA-seq sample")
-```
-
-A histogram with a log-transformed x-axis:
-```{r, eval = F}
-hist(log10(readCounts$V2), main="Log10 Read Counts for Drosophila RNA-seq sample")
-```
-
-A histogram with a log-transformed x-axis and corrected zeros:
-```{r, eval = F}
-hist(log10(readCounts$V2 + 0.1), main="Log10 Read Counts for Drosophila RNA-seq sample with Zero Correction")
-```
-
-### Filtering out a specific gene
-
-You might want to look at the expression of a specific gene
-
-```{r, eval = F}
-filter(readCounts, `..1`=="	
-ENSMUSG00000089657")
-```
-
-### Exploring differential expression of genes
-
-Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. The command would be:
-
-```{r}
-readCounts <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv")
-```
-
-Here are the URLs for all the possible comparisons you can examine with this dataset:
-
-**Comparing gene expression between ASD and control mice**
-
-Both brain regions: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
-
-Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
-
-Striatum only: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
-
-**Comparing gene expression between prefrontal cortex and striatum**
-
-All mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
-
-Only ASD mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
-
-Only control mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
-
-### Creating a gene list
-
-In order to run gene set analyses, you will need to create a list of genes to look at. You can use the `filter` command to choose a p-value cut off. Make sure to check that your gene list has enough genes on it (and that you have a good ratio of "real" positive versus false positive results).
-
-```{r, eval = F}
-sig_genes <- filter(a1_vs_p1, padj <= 0.05)
-dim(sig_genes)
-```
-
-### Running a gene set analysis
-
-You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
-
-```{r, eval = F}
-a1_vs_p1_clusters <- runClusterProfiler(sig_genes)
-
-dotplot(a1_vs_p1_clusters, showCategory=34, title="a1 vs p1", font.size=10, label_format = 50)
-```
-
 ### Plotting a single gene across regions
 
-Finally, it might be interesting to look at the expression of a gene across all the possible regions. This is another special command that has been written for you.
+It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will filter out 
 
 ```{r, eval = F}
 plotAcrossRegions("FBgn0000003")
@@ -332,5 +281,17 @@ If you're interested in plotting the genes with the lowest p-values, you can use
 ```{r, eval = F}
 a1_vs_p1_sorted <- arrange(a1_vs_p1, padj)
 head(a1_vs_p1_sorted)
+```
+
+### Running a gene set analysis
+
+TODO: Verify if `runClusterProfiler` is a bespoke function
+
+You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
+
+```{r, eval = F}
+asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
+
+dotplot(asd_vs_c_clusters, showCategory=34, title="a1 vs p1", font.size=10, label_format = 50)
 ```
 
