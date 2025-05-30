@@ -12,4 +12,4 @@ Here you can find a list of modules we developed.
 
 3. [Family Markers: Using Multiply-Affected Families to Identify Risk Genes](module/family_markers.html)
 
-4. [Genomic Medicine: PRS Calculation](module/genomic_med_prs.html)
+4. [Genomic Medicine: Polygenic Risk Score Calculation](module/genomic_med_prs.html)
