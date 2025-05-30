@@ -155,6 +155,8 @@ dim(asd_vs_c_sig)
 
 ### Exploring genes of interest with the Mouse Genome Informatics database
 
+TODO: Change this so they look up geneIDs for their genes of interest??
+
 The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We’ll reproduce some of it below.
 
 To look up information on a particular gene of interest, choose the “Genes” button.
