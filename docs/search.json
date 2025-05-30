@@ -144,68 +144,54 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Here you can find a list of modules we developed.\n\nDifferential Expression with RNA-seq\nAll of Us: Ethics in choosing methods\nFamily Markers: Using Multiply-Affected Families to Identify Risk Genes"
-  },
-  {
-    "objectID": "module/genomic_med_prs_student_guide.html",
-    "href": "module/genomic_med_prs_student_guide.html",
-    "title": "Genomic Medicine and PRS",
-    "section": "",
-    "text": "In Part 1, we’ll go over the background for this activity.\nMany human diseases are caused by a combination of genetic and environmental factors. For most of these diseases, it can be difficult to predict what combination will lead to a person developing disease. Instead, physicians and researchers talk about the increased risk - essentially, we know what factors increase the likelihood of developing diseases, even if we can’t predict with 100% certainty whether someone might get sick.\n\n\nWhen we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or Huntington’s, are passed along via Mendelian inheritance. A mutation in a single gene is enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick.\n\nHowever, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn’t enough to cause problems, but when all of them show up together, the cellular processes aren’t able to function normally. This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called polygenic inheritance. Polygenic traits are quite common, and they aren’t always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.\n\n\n\nResearchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.\n\n\n\n\n\n\nTip\n\n\n\nIt’s always important to remember that having a higher PRS does not guarantee someone will get a disease. Likewise, having a lower PRS does not guarantee someone is protected from a disease.\nA PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person’s overall risk for a disease by less than 5%.\n\n\nAt its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.\nBeing able to calculate a PRS requires that scientists have an understanding of all the genes and noncoding regions of DNA that might contribute to developing (or not developing) a disease. A PRS is only as good as the reference database for a particular disease or trait."
+    "text": "Here you can find a list of modules we developed.\n\nDifferential Expression with RNA-seq\nAll of Us: Ethics in choosing methods\nFamily Markers: Using Multiply-Affected Families to Identify Risk Genes\nGenomic Medicine: Polygenic Risk Score Calculation"
   },
   {
     "objectID": "module/genomic_med_prs_student_guide.html#part-1",
     "href": "module/genomic_med_prs_student_guide.html#part-1",
-    "title": "Genomic Medicine and PRS",
-    "section": "",
-    "text": "In Part 1, we’ll go over the background for this activity.\nMany human diseases are caused by a combination of genetic and environmental factors. For most of these diseases, it can be difficult to predict what combination will lead to a person developing disease. Instead, physicians and researchers talk about the increased risk - essentially, we know what factors increase the likelihood of developing diseases, even if we can’t predict with 100% certainty whether someone might get sick.\n\n\nWhen we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or Huntington’s, are passed along via Mendelian inheritance. A mutation in a single gene is enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick.\n\nHowever, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn’t enough to cause problems, but when all of them show up together, the cellular processes aren’t able to function normally. This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called polygenic inheritance. Polygenic traits are quite common, and they aren’t always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.\n\n\n\nResearchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.\n\n\n\n\n\n\nTip\n\n\n\nIt’s always important to remember that having a higher PRS does not guarantee someone will get a disease. Likewise, having a lower PRS does not guarantee someone is protected from a disease.\nA PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person’s overall risk for a disease by less than 5%.\n\n\nAt its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.\nBeing able to calculate a PRS requires that scientists have an understanding of all the genes and noncoding regions of DNA that might contribute to developing (or not developing) a disease. A PRS is only as good as the reference database for a particular disease or trait."
+    "title": "Genomic Medicine and Polygenic Risk Scores",
+    "section": "Part 1",
+    "text": "Part 1\nIn Part 1, we’ll go over the background and data for this activity.\nMany human diseases are caused by a combination of genetic and environmental factors. For most of these diseases, it can be difficult to predict what combination will lead to a person developing disease. Instead, physicians and researchers talk about the increased risk - essentially, we know what factors increase the likelihood of developing diseases, even if we can’t predict with 100% certainty whether someone might get sick.\n\nPolygenic Inheritance\nWhen we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or Huntington’s, are passed along via Mendelian inheritance. A mutation in a single gene is enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick.\n\nHowever, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn’t enough to cause problems, but when all of them show up together, the cellular processes aren’t able to function normally. This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called polygenic inheritance. Polygenic traits are quite common, and they aren’t always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.\n\n\nPolygenic Risk Scores\nResearchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.\n\n\n\n\n\n\nTip\n\n\n\nIt’s always important to remember that having a higher PRS does not guarantee someone will get a disease. Likewise, having a lower PRS does not guarantee someone is protected from a disease.\nA PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person’s overall risk for a disease by less than 5%.\n\n\nAt its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.\nBeing able to calculate a PRS requires that scientists have an understanding of all the genes and noncoding regions of DNA that might contribute to developing (or not developing) a disease. A PRS is only as good as the reference database for a particular disease or trait.\n\n\nGenomic Ancestry\n\n\n\nExploring Variant Data\nIn the next steps, we’ll be looking at how PRS can help patients be more informed about disease risk.\nThis example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness (see https://www.ncbi.nlm.nih.gov/books/NBK470550/). This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes.\n\n\nMr. J’s Data\nWe’re going to take gene screening data from an imaginary patient, Mr. J, to understand his risk. Mr. J has African ancestry, which will be important later.\nGet the data at https://genomicseducation.org/data/prs_ind_1.txt. It should look like:\nrs7463326:G\nrs58235267:G\nrs74001374:C\n...\n\n\n\n\n\n\nWhat does the data mean?\n\n\n\nEach line of the data represents a variant location in the genome and individual person’s version of that gene (allele).\nFor example, rs7463326 is the variant. Mr. J has a “G” here. Other patients might have “A” or “C”.\n\n\n\n\nExploring Variants\nLet’s explore the rs7463326 variant a bit more. Go to https://www.ebi.ac.uk/gwas/variants and type “rs7463326” in the search bar.\n\n\n\n\n\n\n\n\n\nSelect the first result.\n\n\n\n\n\n\n\n\n\nNotice the variant information. The most severe rs7463326 variant lies in an intergenic region, or between protein coding genes.\n\n\n\n\n\n\n\n\n\nScroll down to see the risk allele associated with the variant. For rs7463326, the risk allele is “G” and it’s associated with prostate carcinoma.\n\n\n\n\n\n\n\n\n\nMr. J has a “G” here. Other patients might have “A” or “C”. This means he might be more at risk than other patients. However, we know risk is often dictated by multiple genes. In the next steps we’ll explore how to assess risk with multiple variants.\n\n\n\n\n\n\nCheck Your Knowledge\n\n\n\n\nTry looking up another variant at https://www.ebi.ac.uk/gwas/variants. Look up “rs2075650”. What kind of variant is listed under “Most severe consequence”? Are there any diseases associated with this variant?"
   },
   {
     "objectID": "module/genomic_med_prs_student_guide.html#part-2",
     "href": "module/genomic_med_prs_student_guide.html#part-2",
-    "title": "Genomic Medicine and PRS",
+    "title": "Genomic Medicine and Polygenic Risk Scores",
     "section": "Part 2",
-    "text": "Part 2"
-  },
-  {
-    "objectID": "module/genomic_med_prs.html",
-    "href": "module/genomic_med_prs.html",
-    "title": "Genomic Medicine and PRS",
-    "section": "",
-    "text": "This activity will walk through how to use a polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will also compare calculations using different superpopulations, demonstrating the importance of diverse ancestry in PRS interpretation.\nDuration: Approximately 2-3 hours"
+    "text": "Part 2\nIn Part 2, we’ll calculate our first PRS score.\n\nCalculating Risk\nGo to https://prs.byu.edu/calculate_score.html - this is the website we’ll use to calculate a PRS for Mr. J’s data.\n\n\n\n\n\n\n\n\n\nReturn to the data at https://genomicseducation.org/data/prs_ind_1.txt. Copy this data into the top part of the PRS calculator website."
   },
   {
     "objectID": "module/genomic_med_prs.html#overview",
     "href": "module/genomic_med_prs.html#overview",
-    "title": "Genomic Medicine and PRS",
-    "section": "",
-    "text": "This activity will walk through how to use a polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will also compare calculations using different superpopulations, demonstrating the importance of diverse ancestry in PRS interpretation.\nDuration: Approximately 2-3 hours"
+    "title": "Genomic Medicine and Polygenic Risk Scores",
+    "section": "Overview",
+    "text": "Overview\nThis activity will walk through how to use an online polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will also compare calculations using different superpopulations, demonstrating the importance of diverse ancestry in PRS interpretation.\nDuration: Approximately 2-3 hours"
   },
   {
     "objectID": "module/genomic_med_prs.html#learning-objectives",
     "href": "module/genomic_med_prs.html#learning-objectives",
-    "title": "Genomic Medicine and PRS",
+    "title": "Genomic Medicine and Polygenic Risk Scores",
     "section": "Learning Objectives",
     "text": "Learning Objectives\n\nCalculate and interpret polygenic risk scores.\nCompare risk percentiles using different ancestral superpopulations.\nIdentify and critique scientific issues relating to society or ethics (see GSA core competencies)."
   },
   {
     "objectID": "module/genomic_med_prs.html#materials-and-setup",
     "href": "module/genomic_med_prs.html#materials-and-setup",
-    "title": "Genomic Medicine and PRS",
+    "title": "Genomic Medicine and Polygenic Risk Scores",
     "section": "Materials and Setup",
     "text": "Materials and Setup\n\nStudents will need:\n\nAn internet connection for this activity. Students will use this website: https://prs.byu.edu/calculate_score.html.\n\nData hosting: LINK\nDownload the R student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc - coming soon!\n\nGoogle Slides presentation available for borrowing images here.\nAnswer key available here."
   },
   {
     "objectID": "module/genomic_med_prs.html#scientific-topics",
     "href": "module/genomic_med_prs.html#scientific-topics",
-    "title": "Genomic Medicine and PRS",
+    "title": "Genomic Medicine and Polygenic Risk Scores",
     "section": "Scientific Topics",
     "text": "Scientific Topics\nComing soon!"
   },
   {
     "objectID": "module/genomic_med_prs.html#outline",
     "href": "module/genomic_med_prs.html#outline",
-    "title": "Genomic Medicine and PRS",
+    "title": "Genomic Medicine and Polygenic Risk Scores",
     "section": "Outline",
     "text": "Outline\nComing soon!"
   },
