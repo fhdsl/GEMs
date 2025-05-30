@@ -12,14 +12,10 @@ This module introduces students to differential expression analyses using the R 
 
 This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment to understand how researchers explore how human disorders might be impacted by gut-brain axis using model organisms.
 
-## Part 1
-
-In Part 1, we'll go over some background context for this activity. Then, we'll get set up on Posit Cloud for the next steps.
-
-The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with Autism Spectrum Disorder (ASD), while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. Researchers then bred the mice and looked for differences in gene expression in the brains of the offspring.
-
 ### Background
 _Autism spectrum disorder (ASD)_ is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it’s considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
+
+The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with ASD, while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. Researchers then bred the mice and looked for differences in gene expression in the brains of the offspring.
 
 The _striatum_ is part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions (often called executive functions). It lies deep within the center of the brain and is composed of both gray matter (which can be thought of as the “processing” part of brain tissue) and white matter (which is the brain structure involved in transporting messages); the combination of the gray and white matter give this region of the brain a striped appearance, resulting in the name “striatum”. The striatum is involved in both reflexive movement - that is, involuntary movement that happens as an immediate response to a stimulus - and slower, planned movement like walking. In Parkinson’s disease, some patients experience degeneration of parts of the striatum, resulting in spastic, uncontrollable movement.
 
@@ -44,6 +40,17 @@ The mouse is the most commonly-used model organism in laboratory work. In fact, 
 So what makes mice such good model organisms for biomedical research? Well, first, they’re economical and relatively easy to keep. Since mice are small, they don’t require a huge amount of space or food. They also have fast reproductive cycles, so researchers can study multiple generations within only a few years. Most importantly, though, mice and humans are both mammals and have about 85% of their protein-coding genome in common. As a result, mouse physiology is quite similar to human physiology. The mouse circulatory, reproductive, digestive, hormonal, and nervous systems are frequently used as models to study how humans grow, age, and develop chronic diseases. They are particularly important model organisms for cancer research and neuroscience. 
 
 You can find additional information about how the mouse is used in research [here!](https://www.google.com/url?q=https://www.informatics.jax.org/mgihome/other/homepage_IntroMouse.shtml)
+
+## Analysis
+
+Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
+Remember, the basic steps of your analysis are:
+
+1. Examine expression of your  gene of interest expressed in this dataset.
+1. Explore whether your gene of interest is differentially expressed in different experimental groups.
+1. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
+
+Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
 
 ### Start Posit Cloud
 
@@ -95,76 +102,13 @@ We use the `library` command to load and attach packages to the R environment. T
 The "tidyverse" package that you loaded is useful for loading, wrangling, and exploring data.
 :::
 
-### Get Differential Expression Data
+### Loading the data
 
-We'll read in some data from the GEMs website. Run the following code in your console
-
-```{r}
-dat <- read_csv("URL where the dataset is stored")
-```
-
-
-
-
-
-### Load your data
-
-You'll first want to decide which dataset(s) you'll use for your exploration. 
-
-
-### What comparisons can I make?
-In this dataset, you have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).
+You have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).
 
 Additionally, you can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, you also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.
 
-## Learning about mouse genes
-
-In this dataset, genes are identified using their Ensembl Gene ID code. Every gene will have an ID that looks something like this:
-
-> ENSMUSG00000000001
-
-**ENS** stands for “Ensembl”. Ensembl is a [genome database project](https://ensemblgenomes.org/) managed by the European Bioinformatics Institute. It’s one of several databases like this. Others include NIH’s National Center for Biotechnology Information (NCBI; the organization that manages GenBank and PubMed) and the University of California, Santa Cruz (UCSC) Genome Browser. When a gene code starts with “ENS”, it means you should look up the gene code in the Ensembl database.
-
-**MUS** stands for “Mus”, which is the genus for the mouse.
-
-**G** stands for “Gene”. When you see “G” in the ID name, you know you are working with a gene. There are also codes for transcripts (“T”), exons (“E”), and proteins (“P”).
-
-**00000000001** is the numerical code associated with the gene. 
-
-You will need all four of these parts together to search for information about your mouse gene.
-
-## Analysis
-
-Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
-Remember, the basic steps of your analysis are:
-
-1. Examine expression of your  gene of interest expressed in this dataset.
-1. Explore whether your gene of interest is differentially expressed in different experimental groups.
-1. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
-
-Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
-
-### Loading and opening packages
-
-All the datasets for this activity can be loaded into R from their URL. In order to do this, we will use some code that has been saved in an R package called `tidyverse`. In order to use this code, we will need to install and open `tidyverse` using the R code chunk below.
-
-`install.packages` retrieves and installs the package
-
-```{r, eval = F}
-install.packages("tidyverse")
-```
-
-`library` opens the package and makes the stored code available for you to use
-
-```{r}
-library(tidyverse)
-```
-
-Once you have installed and opened `tidyverse`, you should be ready to load the experimental data. You can do this using the `read_csv` command.
-
-### Loading the data
-
-Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. The command would be:
+Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. We will do this using `read_csv`. Copy and paste this command into your console:
 
 ```{r}
 asd_vs_c <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv")
