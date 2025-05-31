@@ -26,6 +26,8 @@ downregulation
 Drosophila
 edu
 else's
+endomembrane
+endopeptidase
 Ensembl
 ENSMUSG
 favicon
@@ -62,6 +64,7 @@ lfcSE
 lightblue
 lightgreen
 lncRNA
+McKusick
 MGI
 mgihome
 microbiome
