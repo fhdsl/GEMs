@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modules – GEMs</title>
+<title>Genomic Medicine and Polygenic Risk Scores – GEMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,7 +77,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -87,7 +87,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">GEMs</span>
     </a>
   </div>
@@ -98,11 +98,11 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text"><strong>About</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./modules.html" aria-current="page"> 
+    <a class="nav-link" href="../modules.html"> 
 <span class="menu-text">Modules</span></a>
   </li>  
 </ul>
@@ -116,15 +116,33 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-1" id="toc-part-1" class="nav-link active" data-scroll-target="#part-1">Part 1</a>
+  <ul class="collapse">
+  <li><a href="#polygenic-inheritance" id="toc-polygenic-inheritance" class="nav-link" data-scroll-target="#polygenic-inheritance">Polygenic Inheritance</a></li>
+  <li><a href="#polygenic-risk-scores" id="toc-polygenic-risk-scores" class="nav-link" data-scroll-target="#polygenic-risk-scores">Polygenic Risk Scores</a></li>
+  <li><a href="#genomic-ancestry" id="toc-genomic-ancestry" class="nav-link" data-scroll-target="#genomic-ancestry">Genomic Ancestry</a></li>
+  <li><a href="#exploring-variant-data" id="toc-exploring-variant-data" class="nav-link" data-scroll-target="#exploring-variant-data">Exploring Variant Data</a></li>
+  <li><a href="#mr.-js-data" id="toc-mr.-js-data" class="nav-link" data-scroll-target="#mr.-js-data">Mr.&nbsp;J’s Data</a></li>
+  <li><a href="#exploring-variants" id="toc-exploring-variants" class="nav-link" data-scroll-target="#exploring-variants">Exploring Variants</a></li>
+  </ul></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
+  <ul class="collapse">
+  <li><a href="#calculating-risk" id="toc-calculating-risk" class="nav-link" data-scroll-target="#calculating-risk">Calculating Risk</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Modules</strong></h1>
+<h1 class="title">Genomic Medicine and Polygenic Risk Scores</h1>
 </div>
 
 
@@ -141,15 +159,157 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </header>
 
 
-<p>Here you can find a list of modules we developed.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="part-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
+<p>In Part 1, we’ll go over the background and data for this activity.</p>
+<p>Many human diseases are caused by a combination of genetic and environmental factors. For most of these diseases, it can be difficult to predict what combination will lead to a person developing disease. Instead, physicians and researchers talk about the increased risk - essentially, we know what factors increase the likelihood of developing diseases, even if we can’t predict with 100% certainty whether someone might get sick.</p>
+<section id="polygenic-inheritance" class="level3">
+<h3 class="anchored" data-anchor-id="polygenic-inheritance">Polygenic Inheritance</h3>
+<p>When we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or Huntington’s, are passed along via <em>Mendelian inheritance</em>. A mutation in a single gene is enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick.</p>
+<!-- Image of one allele being different -->
+<p>However, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn’t enough to cause problems, but when all of them show up together, the cellular processes aren’t able to function normally. This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called <em>polygenic inheritance</em>. Polygenic traits are quite common, and they aren’t always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.</p>
+</section>
+<section id="polygenic-risk-scores" class="level3">
+<h3 class="anchored" data-anchor-id="polygenic-risk-scores">Polygenic Risk Scores</h3>
+<p>Researchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s always important to remember that <strong>having a higher PRS does not guarantee someone will get a disease.</strong> Likewise, having a lower PRS does not guarantee someone is protected from a disease.</p>
+<p>A PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person’s overall risk for a disease by less than 5%.</p>
+</div>
+</div>
+<p>At its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.</p>
+<p>Being able to calculate a PRS requires that scientists have an understanding of all the genes and noncoding regions of DNA that might contribute to developing (or not developing) a disease. <strong>A PRS is only as good as the reference database for a particular disease or trait.</strong></p>
+</section>
+<section id="genomic-ancestry" class="level3">
+<h3 class="anchored" data-anchor-id="genomic-ancestry">Genomic Ancestry</h3>
+<!-- More here? -->
+</section>
+<section id="exploring-variant-data" class="level3">
+<h3 class="anchored" data-anchor-id="exploring-variant-data">Exploring Variant Data</h3>
+<p>In the next steps, we’ll be looking at how PRS can help patients be more informed about disease risk.</p>
+<p>This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness (see <a href="https://www.ncbi.nlm.nih.gov/books/NBK470550/">https://www.ncbi.nlm.nih.gov/books/NBK470550/</a>). This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes.</p>
+</section>
+<section id="mr.-js-data" class="level3">
+<h3 class="anchored" data-anchor-id="mr.-js-data">Mr.&nbsp;J’s Data</h3>
+<p>We’re going to take gene screening data from an imaginary patient, Mr.&nbsp;J, to understand his risk. Mr.&nbsp;J has African ancestry, which will be important later.</p>
+<p>Get the data at <a href="https://genomicseducation.org/data/prs_ind_1.txt">https://genomicseducation.org/data/prs_ind_1.txt</a>. It should look like:</p>
+<pre><code>rs7463326:G
+rs58235267:G
+rs74001374:C
+...</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What does the data mean?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Each line of the data represents a variant location in the genome and individual person’s version of that gene (allele).</p>
+<p>For example, <strong>rs7463326</strong> is the variant. Mr.&nbsp;J has a “G” here. Other patients might have “A” or “C”.</p>
+</div>
+</div>
+</section>
+<section id="exploring-variants" class="level3">
+<h3 class="anchored" data-anchor-id="exploring-variants">Exploring Variants</h3>
+<p>Let’s explore the <strong>rs7463326</strong> variant a bit more. Go to <a href="https://www.ebi.ac.uk/gwas/variants">https://www.ebi.ac.uk/gwas/variants</a> and type “rs7463326” in the search bar.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f43ab35e5_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Select the first result.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f43ab35e5_0_11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Notice the variant information. The most severe <strong>rs7463326</strong> variant lies in an <a href="https://www.genome.gov/genetics-glossary/Intergenic-Regions#:~:text=Definition,Medical%20Genetics%20Branch">intergenic region</a>, or between protein coding genes.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_37.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Scroll down to see the risk allele associated with the variant. For <strong>rs7463326</strong>, the risk allele is “G” and it’s associated with prostate carcinoma.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_42.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Mr.&nbsp;J has a “G” here. Other patients might have “A” or “C”. This means he might be more at risk than other patients. However, we know risk is often dictated by multiple genes. In the next steps we’ll explore how to assess risk with multiple variants.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li><p><a href="module/rnaseq_de.html">Differential Expression with RNA-seq</a></p></li>
-<li><p><a href="module/AOU_methods.html">All of Us: Ethics in choosing methods</a></p></li>
-<li><p><a href="module/family_markers.html">Family Markers: Using Multiply-Affected Families to Identify Risk Genes</a></p></li>
-<li><p><a href="module/genomic_med_prs.html">Genomic Medicine: Polygenic Risk Score Calculation</a></p></li>
+<li>Try looking up another variant at <a href="https://www.ebi.ac.uk/gwas/variants">https://www.ebi.ac.uk/gwas/variants</a>. Look up “rs2075650”. What kind of variant is listed under “Most severe consequence”? Are there any diseases associated with this variant?</li>
 </ol>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
+<p>In Part 2, we’ll calculate our first PRS score.</p>
+<section id="calculating-risk" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-risk">Calculating Risk</h3>
+<p>Go to https://prs.byu.edu/calculate_score.html - this is the website we’ll use to calculate a PRS for Mr.&nbsp;J’s data.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f43ab35e5_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Return to the data at <a href="https://genomicseducation.org/data/prs_ind_1.txt">https://genomicseducation.org/data/prs_ind_1.txt</a>. Copy this data into the top part of the PRS calculator website.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
