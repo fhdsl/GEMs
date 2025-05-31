@@ -29,7 +29,6 @@ This activity teaches students to ...
 -   Download the student activity as:
 
     -   [Web page](https://genomicseducation.org/module/public_databases_student_guide.html)
-    -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/public_databases_student_guide.qmd)
     -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/public_databases_student_guide.docx)
     -   [Google Doc]() - coming soon!
 

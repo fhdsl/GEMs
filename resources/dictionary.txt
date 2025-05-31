@@ -20,6 +20,7 @@ csv
 cuny
 custimization
 cwrigh
+Danio
 dat
 Dockerfile
 Dockerhub
@@ -74,6 +75,7 @@ microbiota
 Microbiota
 midgut
 miniCURE
+musculus
 ncbi
 neuroanatomy
 neurodevelopmental
@@ -109,6 +111,7 @@ pvalue
 qmd 
 quarto 
 repo
+rerio
 Rmd
 rnaseq
 RStudio
@@ -122,6 +125,8 @@ thon
 tidyverse
 UCSC
 upregulation
+usta
+Ust
 UST
 www
 zebrafish
