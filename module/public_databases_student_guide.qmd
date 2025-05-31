@@ -77,15 +77,81 @@ The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database 
 
 ## Part 3
 
-HUMAN DISEASES OR HEALTH STUFF ASSOCIATED WITH THE HUMAN HOMOLOG
+In addition to the experimental data you're sorting through, you notice that someone has collected literature on different human diseases. You assume these diseases are thought to be caused in part by some of the human homologs of the genes your lab is studying, so you decide to look up the information using a pair of human disease databases.
 
 [_OMIM_](https://omim.org/), short for Online Mendelian Inheritance in Man, is a comprehensive database of human genes and genetic phenotypes. It is maintained by the McKusick-Nathans Institute of Genetic Medicine at Johns Hopkins University.
 
 [_MalaCards_](https://www.malacards.org/) is a searchable database offering information on human diseases, medical conditions, and disorders. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.
 
+Both databases will give you the information you need. We'll go through how to use both, but you only need to use one for this activity.
+
+Let's start with [_OMIM_](https://omim.org/). Click on the link or type "https://omim.org" into your browser. On the landing page, you can type either a disease or a gene name into the search bar. (Just remember to use the human gene name or gene ID!)
+
+Earlier, we discovered the human homolog of pipe is UST. Let's look this gene up and see what (if any) diseases it might be associated with.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35f41619954_0_23#slide=id.g35f41619954_0_23")
+```
+
+Our search pulls up a list of entries associated with our search term. For UST, there's only one. Click on it.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35f41619954_0_36#slide=id.g35f41619954_0_36")
+```
+
+Each entry in OMIM will have a table of contents on the left hand side of the page. In the case of UST, there's not much there. In fact, there doesn't seem to be any subsection focusing on disease state or phenotype.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35f41619954_0_51#slide=id.g35f41619954_0_51")
+```
+
+As a comparison, we can search for the known disease risk gene BRCA1, which is associated with an increased risk of breast and ovarian cancer. When we look at the top OMIM hit for BRCA1, we can see a section in the table of contents called "Gene-Phenotype Relationships". This is the section where OMIM displays any possible disease phenotype associated with the gene.
+
+Since we don't see this section for UST, we can conclude that UST doesn't appear to cause any human diseases that we know of at this time.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g3367b17b963_0_3#slide=id.g3367b17b963_0_3")
+```
+
+
+You can find similar information on the [_MalaCards_](https://www.malacards.org/) website. Click the link or type "https://www.malacards.org" into your browser to open the webpage. Then type UST into the bottom search bar. (Although you can look up genes on MalaCards, most of the time you look up a a disease to find out what genes are associated with it instead of the other way around.)
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35f41619954_0_55#slide=id.g35f41619954_0_55")
+```
+
+Since we used the "search any term" search bar, MalaCards will look for the term "UST" on all the disease pages in the database. The results are ordered with the best-matching page on top. Click "Crohn's Disease" to see why "UST" matched this entry.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35f41619954_0_59#slide=id.g35f41619954_0_59")
+```
+
+One nice thing about MalaCards is that the search term is highlighted in yellow when you open the page. In this case, we can see that "UST" actually matched part of drug that was investigated as a treatment for Crohn's disease. This suggests that the gene UST is not found in any of the MalaCards disease entry.
+
+Let's search MalaCards with the term BRCA1 to see what it looks like when the gene name _is_ found in an entry. In the top hit entry ("Hereditary Breast Ovarian Cancer Syndrome), we can see the actual gene name BRCA1 shows up in the overview, as well as in the section about associated genes and the alternate name for the disease.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g3367b17b963_0_13#slide=id.g3367b17b963_0_13")
+```
+
+::: {.callout-note}
+## TASK THREE
+
+What human disease or disorder (if any) are the homologs of scarlet, plum, mustard, and white associated with?
+
+:::
+
 ## Part 4
 
-Finally, it's time for you to report back to your supervisor. 
+Finally, it's time for you to report back to your supervisor. Here's what you know about the experiments:
+
+**Experiment 1**
+
+**Experiment 2**
+
+**Experiment 3**
+
+**Experiment 4**
 
 ::: {.callout-note}
 
