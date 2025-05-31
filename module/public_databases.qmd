@@ -26,9 +26,7 @@ This activity teaches students to ...
 
     -   An internet connection for this activity. Students will use these websites: [_FlyBase_](https://flybase.org/), [_Mouse Genome Informatics_](https://informatics.jax.org/), [_ZFIN (Zebrafish Information Network _](https://zfin.org/), [_NCBI_](https://www.ncbi.nlm.nih.gov/datasets/gene/), [_OMIM_](https://omim.org/), and [_MalaCards_](https://www.malacards.org/)
 
--   Data hosting: LINK
-
--   Download the R student activity as:
+-   Download the student activity as:
 
     -   [Web page](https://genomicseducation.org/module/public_databases_student_guide.html)
     -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/public_databases_student_guide.qmd)
