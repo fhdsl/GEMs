@@ -92,13 +92,8 @@ The [_Mouse Genome Informatics_](https://informatics.jax.org/) database is the i
 
 Open the MGI database and search for the name of the mouse homolog, Ust.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("")
-```
+TODO: add MGI slides
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("")
-```
 
 
 In order to look up information about the zebrafish homolog, we need to switch databases again.
@@ -107,25 +102,13 @@ The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database 
 
 Open ZFIN and search for the zebrafish homolog, usta.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("")
-```
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("")
-```
+TODO: add ZFIN slides
 
 Finally, we can turn to the human homolog, UST. There are several databases with information about human genes. [_NCBI_](https://www.ncbi.nlm.nih.gov/datasets/gene/) maintains a database of genetic, genomic, and expression data for a variety of taxa, including humans. This database is maintained and funded through the National Library of Medicine at the NIH.
 
 Open the NCBI gene page and search for the human homolog UST.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("")
-```
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("")
-```
+TODO: add NCBI slides
 
 Now it's your turn to look up information about the homologs of your four _Drosophila_ genes.
 
