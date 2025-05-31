@@ -28,13 +28,40 @@ Start with exploring FlyBase to get some basic information about each of the fou
 
 [_FlyBase_](https://flybase.org/) is a database focused on _Drosophila_ genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico.
 
+First, open the [_FlyBase_](https://flybase.org/) website by clicking the link or typing "https://flybase.org" into your browser. Then, type the name of the gene into the "J2G" bar in the upper right hand corner. (J2G stands for "Jump to Gene".) As an example, try typing the gene name "pipe" and click enter.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+```
+
+The gene page for "pipe" will load. On the top of the page, you will see the general information about this gene, including the **FlyBase gene ID** and a brief description of what this gene does.
+
+Below this general information section, the genomic location data will appear. There are several different ways gene locations might be recorded; for our purposes, we're interested in the **sequence location**. The pipe gene is located. "3L" means this gene is on the left arm of the third chromosome. The numbers after 3L refer to the nucleotide location.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
+```
+
+You can scroll down the page or click the menu on the right-hand side to move to additional sections. The next section we're interested in is the function section. Here, we can see what the general **molecular function** of the gene is, what sorts of **biological processes** the gene product (the protein) is involved in, and where the protein is found in the cell, or the **cellular component**. In the case of pipe, we can see that it's an enzyme involved in development, gene expression, protein metabolism. We also see that the pipe protein is found in the membrane and endomembrane system, as well as in the nucleus around the chromosomes.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
+```
+
+Scrolling down further takes us to a section with more details about the gene function. You may need to click on the small plus sign to view the details (or click on the minus sign to hide the details). In the case of pipe, it appears to code for an enzyme that is enables endopeptidase activator activity and protein binding.
+
+Now it's your turn to look up your four genes in FlyBase.
+
 ::: {.callout-note}
 ## TASK ONE
 
 For each gene (scarlet, plum, mustard, and white), find the following information:
 
-- FlyBase geneID
+- FlyBase gene ID
 - chromosomal location
+- molecular function
+- the biological processes the gene product is involved in
+- where in the cell the gene product can be found
 
 :::
 
