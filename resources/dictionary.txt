@@ -9,10 +9,12 @@ baseMean
 Bioinformatics
 bioinformatics
 Bootstap
+BRCA
 cheatsheet
 Clovis
 cloviscollege
 Coffman
+Crohn's
 css
 csv
 cuny
@@ -120,6 +122,7 @@ thon
 tidyverse
 UCSC
 upregulation
+UST
 www
 zebrafish
 Zebrafish
