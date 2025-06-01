@@ -114,6 +114,24 @@ Go to https://prs.byu.edu/calculate_score.html - this is the website we'll use t
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_0#slide=id.g35f43ab35e5_0_0")
 ```
 
-Return to the data at [https://genomicseducation.org/data/prs_ind_1.txt](https://genomicseducation.org/data/prs_ind_1.txt). Copy this data into the top part of the PRS calculator website.
+Return to the data [here](https://genomicseducation.org/data/prs_ind_1.txt). Copy this data into the top part of the PRS calculator website.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_57#slide=id.g35f4636d8f5_0_57")
+```
+
+Next, scroll down to "GWAS Summary Statistics". For item #1, "Select Disease(s) or Trait(s) of Interest", type in "prostate carcinoma" and select the checkbox. You might need to type slowly as the dropdown list has a lot of options! Then, click on "Apply Filters" to update the studies that can be used to calculate the PRS.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_63#slide=id.g35f4636d8f5_0_63")
+```
+
+Under "Select from Filtered Studies", type in the study number, "GCST011047", or find it from the dropdown menu.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_70#slide=id.g35f4636d8f5_0_70")
+```
+
+
 
 
