@@ -132,6 +132,24 @@ Under "Select from Filtered Studies", type in the study number, "GCST011047", or
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_70#slide=id.g35f4636d8f5_0_70")
 ```
 
+Select "African" as the "Preferred Super Population" and "1000 Genomes - AFR population" under "MAF Population".
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_70#slide=id.g35f4636d8f5_0_70")
+```
 
+Finally, click "Calculate Risk Scores".
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_84#slide=id.g35f4636d8f5_0_84")
+```
+
+::: {.callout-note}
+## Check Your Knowledge
+
+In order to be accurate, PRS scores must be calculated based on variants collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk.
+
+Mr. J's variant data was carefully collected based on the variants identified in the GCST011047 study (Conti et al. 2021). Go to the [study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". 
+
+Given that Mr. J has African ancestry, is this study an appropriate match to assess his risk? Why or why not?
+:::
