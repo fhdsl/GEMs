@@ -48,7 +48,7 @@ This activity will walk through how to use an online polygenic risk score (PRS) 
 
 ## Scientific Topics
 
-This activity focuses on accurate genetic risk assessment. Students will gain exposure to the following:
+This activity focuses on understanding genetic risk in human disease. Students will gain exposure to the following:
 
 - Polygenic Risk Scores (PRS): This method estimates disease risk based on the cumulative effect of many genetic variants, each contributing a small amount. Students will use an online calculator.
 
