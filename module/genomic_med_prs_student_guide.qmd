@@ -109,7 +109,7 @@ Mr. J has a "G" here. Other patients might have "A" or "C". This means he might 
     a. Having certain gene variants can mean increased risk of disease.  
     b. Higher PRS scores guarantee development of disease.
     c. PRS must be based on an appropriate database of gene variants.
-    d. All variants come from protien-coding genes.
+    d. All variants come from protein-coding genes.
 
 1. Try looking up another variant at [https://www.ebi.ac.uk/gwas/variants](https://www.ebi.ac.uk/gwas/variants). Look up "rs2075650". What kind of variant is listed under "Most severe consequence"? Are there any diseases associated with this variant?
 
