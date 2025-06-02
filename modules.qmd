@@ -8,7 +8,7 @@ output:
 
 These materials are under 1 hour.
 
-- [All of Us: Ethics in choosing methods](module/AOU_methods.html)
+- [All of Us: Understanding Ethics](module/AOU_ethics.html)
 
 ## Lab-Period Modules
 
