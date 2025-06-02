@@ -48,7 +48,15 @@ This activity will walk through how to use an online polygenic risk score (PRS) 
 
 ## Scientific Topics
 
-Coming soon!
+This activity focuses on accurate genetic risk assessment. Students will gain exposure to the following:
+
+- Polygenic Risk Scores (PRS): This method estimates disease risk based on the cumulative effect of many genetic variants, each contributing a small amount. Students will use an online calculator.
+
+- Genomic Medicine: Discipline that uses genome-wide variant data to guide diagnosis and help determine treatment plans, especially for common diseases like diabetes or heart disease.
+
+- Genomic Databases: Students will look up variants linked to disease traits in EMBL-EBI, which are used to calculate PRS.
+
+- Ethics & Equity in Genomics: Current PRS tools are more accurate in individuals of European ancestry, which can facilitate discussion about health disparities and life saving treatment (e.g., early screening).
 
 ## Outline
 
