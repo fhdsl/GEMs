@@ -27,6 +27,8 @@ However, most diseases, particularly common diseases, are not the result of a mu
 Researchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.
 
 ::: {.callout-tip}
+## Understanding Risk
+
 It’s always important to remember that **having a higher PRS does not guarantee someone will get a disease.**  Likewise, having a lower PRS does not guarantee someone is protected from a disease. 
 
 A PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person's overall risk for a disease by less than 5%.
@@ -145,6 +147,14 @@ Under "Select from Filtered Studies", type in the study number, "GCST011047", or
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_70#slide=id.g35f4636d8f5_0_70")
 ```
 
+::: callout-tip
+## Why a Specific Research Study?
+
+In order to be accurate, PRS scores must be calculated based on the right variants. Variants should be collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk.
+
+Mr. J's variant data was carefully collected based on the variants identified in the GCST011047 study (Conti et al. 2021).
+:::
+
 ### Selecting the Population
 
 Select "African" as the "Preferred Super Population" and "1000 Genomes - AFR population" under "MAF Population".
@@ -173,14 +183,14 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 It might be easier to view the results if you (1) download the results and (2) open the results in a tabular data program like Microsoft Excel or Google Sheets.
 :::
 
-Let's review a few important results. 
+Let's review a few important values in the results. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_99#slide=id.g35f4636d8f5_0_99")
 ```
 
-- **SNP Overlap**: How many variants in the patient's data were also present in the study.
-- **Included SNPs**: How many variants were in the study overall. Combined with "SNP Overlap", this tells us Mr. J's data was comprehensive and included all of the 19 variants described in this study.
+- **SNP Overlap**: This tells us how many variants in the patient's data were also present in the study. 19 of Mr. J's variants matched the GCST011047 study.
+- **Included SNPs**: This tells us how many variants were in the study overall. Mr. J's data was comprehensive and included all of the 19 variants described in the GCST011047 study.
 - **Polygenic Risk Score**: Risk estimate based on all of Mr. J's variants. Because the score is greater than 1, generally that means some increased risk.
 - **Percentile**: Risk described relative to others in the population. A percentile of 100 means that Mr. J has greater risk than almost everyone else! He has more of the disease causing variants compared to others in the population.
 
@@ -189,11 +199,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ::: {.callout-note}
 ## Check Your Knowledge
 
-1. In order to be accurate, PRS scores must be calculated based on variants collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk.
-
-    Mr. J's variant data was carefully collected based on the variants identified in the GCST011047 study (Conti et al. 2021). Go to the [study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". 
-
-    Given that Mr. J has African ancestry, is this study an appropriate match to assess his risk? Why or why not?
+1. Go to the [GCST011047 study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". Given that Mr. J has African ancestry, is this study an appropriate match to assess his risk? Why or why not?
     
 2. Imagine you were helping Mr. J's providers craft a care plan. Based on Mr. J's results, would you recommend more frequent screening? Why or why not?
 :::
