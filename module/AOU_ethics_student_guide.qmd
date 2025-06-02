@@ -13,7 +13,7 @@ These questions focus on ethical concepts having to do with the [All of Us Data 
 ::: {.callout-note}
 ## Check Your Knowledge
 
-1. Locate the descriptor underneath The All of Us Data Browser header (https://databrowser.researchallofus.org/). Why does the Data Browser aggregate data to counts of 20?
+1. Locate the descriptor underneath The [All of Us Data Browser header](https://databrowser.researchallofus.org/). Why does the Data Browser aggregate data to counts of 20?
 
 2. Explore some of the survey questions and possible responses in [Social Determinants of Health](https://databrowser.researchallofus.org/survey/social-determinants-of-health). Find three questions that could lead to negative judgments about communities. How would knowing survey responses by ZIP code increase the risk of community stigmatization?
 
