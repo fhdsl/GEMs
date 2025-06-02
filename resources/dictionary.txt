@@ -111,6 +111,8 @@ nvcc
 NVCC
 OMIM
 ORF
+ortholog
+orthologs
 OTTR
 ottrproject
 padj

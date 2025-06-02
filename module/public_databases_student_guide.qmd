@@ -134,7 +134,7 @@ Now it's your turn to look up information about the homologs of your four _Droso
 ::: {.callout-note}
 ## TASK TWO
 
-For each of the _Drosophila_ genes (**scarlet**, **plum**, **mustard**, and **white**), find the following information _for the mouse, zebrafish, and human homologs_:
+For each of the _Drosophila_ genes (**scarlet**, **plum**, **mustard**, and **white**), find the following information for the _mouse, zebrafish, and human homologs_:
 
 - name
 - chromosomal location
