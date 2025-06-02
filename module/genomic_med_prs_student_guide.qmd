@@ -95,8 +95,19 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 
 Mr. J has a "G" here. Other patients might have "A" or "C". This means he might be more at risk than other patients. However, we know risk is often dictated by multiple genes. In the next steps we'll explore how to assess risk with multiple variants.
 
+## Part 1 Questions
+
 ::: {.callout-note}
 ## Check Your Knowledge
+
+1. When treating genetic disease, why is it important to examine multiple genes, rather than examine one gene at a time?
+
+1. Which of these are accurate statements?
+
+    a. Having certain gene variants can mean increased risk of disease.  
+    b. Higher PRS scores guarantee development of disease.
+    c. PRS must be based on an appropriate database of gene variants.
+    d. All variants come from protien-coding genes.
 
 1. Try looking up another variant at [https://www.ebi.ac.uk/gwas/variants](https://www.ebi.ac.uk/gwas/variants). Look up "rs2075650". What kind of variant is listed under "Most severe consequence"? Are there any diseases associated with this variant?
 
@@ -106,7 +117,7 @@ Mr. J has a "G" here. Other patients might have "A" or "C". This means he might 
 
 In Part 2, we'll calculate our first PRS score.
 
-### Calculating Risk
+### Entering Data
 
 Go to https://prs.byu.edu/calculate_score.html - this is the website we'll use to calculate a PRS for Mr. J's data.
 
@@ -120,6 +131,8 @@ Return to the data [here](https://genomicseducation.org/data/prs_ind_1.txt). Cop
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_57#slide=id.g35f4636d8f5_0_57")
 ```
 
+### Selecting the Study
+
 Next, scroll down to "GWAS Summary Statistics". For item #1, "Select Disease(s) or Trait(s) of Interest", type in "prostate carcinoma" and select the checkbox. You might need to type slowly as the dropdown list has a lot of options! Then, click on "Apply Filters" to update the studies that can be used to calculate the PRS.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
@@ -131,6 +144,8 @@ Under "Select from Filtered Studies", type in the study number, "GCST011047", or
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_70#slide=id.g35f4636d8f5_0_70")
 ```
+
+### Selecting the Population
 
 Select "African" as the "Preferred Super Population" and "1000 Genomes - AFR population" under "MAF Population".
 
@@ -144,12 +159,51 @@ Finally, click "Calculate Risk Scores".
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_84#slide=id.g35f4636d8f5_0_84")
 ```
 
+### Interpreting the Score
+
+The calculated score for this study will appear in the box at the bottom. You will have to scroll over.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_84#slide=id.g35f4636d8f5_0_84")
+```
+
+::: callout-tip
+## Viewing Results
+
+It might be easier to view the results if you (1) download the results and (2) open the results in a tabular data program like Microsoft Excel or Google Sheets.
+:::
+
+Let's review a few important results. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_99#slide=id.g35f4636d8f5_0_99")
+```
+
+- **SNP Overlap**: How many variants in the patient's data were also present in the study.
+- **Included SNPs**: How many variants were in the study overall. Combined with "SNP Overlap", this tells us Mr. J's data was comprehensive and included all of the 19 variants described in this study.
+- **Polygenic Risk Score**: Risk estimate based on all of Mr. J's variants. Because the score is greater than 1, generally that means some increased risk.
+- **Percentile**: Risk described relative to others in the population. A percentile of 100 means that Mr. J has greater risk than almost everyone else! He has more of the disease causing variants compared to others in the population.
+
+## Part 2 Questions
+
 ::: {.callout-note}
 ## Check Your Knowledge
 
-In order to be accurate, PRS scores must be calculated based on variants collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk.
+1. In order to be accurate, PRS scores must be calculated based on variants collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk.
 
-Mr. J's variant data was carefully collected based on the variants identified in the GCST011047 study (Conti et al. 2021). Go to the [study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". 
+    Mr. J's variant data was carefully collected based on the variants identified in the GCST011047 study (Conti et al. 2021). Go to the [study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". 
 
-Given that Mr. J has African ancestry, is this study an appropriate match to assess his risk? Why or why not?
+    Given that Mr. J has African ancestry, is this study an appropriate match to assess his risk? Why or why not?
+    
+2. Imagine you were helping Mr. J's providers craft a care plan. Based on Mr. J's results, would you recommend more frequent screening? Why or why not?
 :::
+
+## Part 3
+
+In Part 3, we'll compare the previous PRS score to one calculated using a different study.
+
+### Adding a Study
+
+
+
+
