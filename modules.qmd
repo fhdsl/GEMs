@@ -4,16 +4,26 @@ output:
   html_document
 ---
 
-Here you can find a list of modules we developed.
+## Short Modules
 
-1. [Differential Expression with RNA-seq](module/rnaseq_de.html)
+These materials are under 1 hour.
 
-2. [All of Us: Ethics in choosing methods](module/AOU_methods.html)
+- [All of Us: Ethics in choosing methods](module/AOU_methods.html)
 
-3. [Family Markers: Using Multiply-Affected Families to Identify Risk Genes](module/family_markers.html)
+## Lab-Period Modules
 
-4. [Genomic Medicine: Polygenic Risk Score Calculation](module/genomic_med_prs.html)
+These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
-5. [Using Public Genomic Databases](module/public_databases.html)
+- [Family Markers: Using Multiply-Affected Families to Identify Risk Genes](module/family_markers.html)
+
+- [Genomic Medicine: Polygenic Risk Score Calculation](module/genomic_med_prs.html)
+
+## Research Modules
+
+These modules span multiple class/lab periods.
+
+- [Differential Expression with RNA-seq](module/rnaseq_de.html)
+
+- [Using Public Genomic Databases](module/public_databases.html)
 
 
