@@ -128,3 +128,10 @@ ped
 qmd
 superpopulations
 intergenic
+al
+Conti
+dropdown
+et
+GCST
+GWAS
+MAF
