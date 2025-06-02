@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Genomic Medicine: Polygenic Risk Score Calculation – GEMs</title>
+<title>All of Us: Understanding Ethics – GEMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,8 +124,6 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#materials-and-setup" id="toc-materials-and-setup" class="nav-link" data-scroll-target="#materials-and-setup">Materials and Setup</a></li>
-  <li><a href="#scientific-topics" id="toc-scientific-topics" class="nav-link" data-scroll-target="#scientific-topics">Scientific Topics</a></li>
-  <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
   </ul>
 </nav>
     </div>
@@ -134,7 +132,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Genomic Medicine: Polygenic Risk Score Calculation</h1>
+<h1 class="title"><strong>All of Us: Understanding Ethics</strong></h1>
 </div>
 
 
@@ -151,66 +149,29 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </header>
 
 
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="genomic_med_prs_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This activity will walk through how to use an online polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will compare calculations using different studies, demonstrating the importance of study selection and ancestry in PRS interpretation.</p>
-<p><strong>Duration:</strong> Approximately 1.5-2 hours</p>
+<p>These ethics-related questions can be added on to any activity that leverages the <a href="https://databrowser.researchallofus.org/">All of Us Data Browser</a>.</p>
+<p><strong>Duration:</strong> Approximately 1 hour.</p>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <ol type="1">
-<li><p>Differentiate between Mendelian and polygenic traits.</p></li>
-<li><p>Explore variants and studies through an online database (EMBL-EBI).</p></li>
-<li><p>Calculate and interpret polygenic risk scores.</p></li>
-<li><p>Compare risk percentiles using studies that were conducted using cases and controls from different ancestral populations.</p></li>
 <li><p>Identify and critique scientific issues relating to society or ethics (see <a href="https://genetics-gsa.org/education/genetics-learning-framework/">GSA</a> core competencies).</p></li>
+<li><p>Interpret the ethical, legal, medical, and social implications of biological data (see <a href="https://qubeshub.org/community/groups/niblse/core_competencies">NIBLSE</a> core competencies).</p></li>
 </ol>
 </section>
 <section id="materials-and-setup" class="level2">
 <h2 class="anchored" data-anchor-id="materials-and-setup">Materials and Setup</h2>
 <ul>
-<li><p>Students will need:</p>
-<ul>
-<li>A web browser and an internet connection for this activity. Students will use this website: <a href="https://prs.byu.edu/calculate_score.html" class="uri">https://prs.byu.edu/calculate_score.html</a>.</li>
-<li>Access to Microsoft Excel or Google Sheets may be helpful.</li>
-</ul></li>
-<li><p>Toy data is hosted at: <a href="https://genomicseducation.org/data/prs_ind_1.txt" class="uri">https://genomicseducation.org/data/prs_ind_1.txt</a></p></li>
 <li><p>Download the R student activity as:</p>
 <ul>
-<li><a href="https://genomicseducation.org/module/genomic_med_prs_student_guide.html">Web page</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/genomic_med_prs_student_guide.qmd">Quarto (qmd)</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/genomic_med_prs_student_guide.docx">Word (docx)</a></li>
+<li><a href="https://genomicseducation.org/module/AOU_ethics_student_guide.html">Web page</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/AOU_ethics_student_guide.qmd">Quarto (qmd)</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/AOU_ethics_student_guide.docx">Word (docx)</a></li>
 <li><a href="">Google Doc</a> - coming soon!</li>
 </ul></li>
-<li><p>Google Slides presentation available for borrowing images <a href="https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?usp=sharing">here</a>.</p></li>
-<li><p>Answer key available <a href="">here</a>.</p></li>
-</ul>
-</section>
-<section id="scientific-topics" class="level2">
-<h2 class="anchored" data-anchor-id="scientific-topics">Scientific Topics</h2>
-<p>This activity focuses on understanding genetic risk in human disease. Students will gain exposure to the following:</p>
-<ul>
-<li><p>Polygenic Risk Scores (PRS): This method estimates disease risk based on the cumulative effect of many genetic variants, each contributing a small amount. Students will use an online calculator.</p></li>
-<li><p>Genomic Medicine: Discipline that uses genome-wide variant data to guide diagnosis and help determine treatment plans, especially for common diseases like diabetes or heart disease.</p></li>
-<li><p>Genomic Databases: Students will look up variants linked to disease traits in EMBL-EBI, which are used to calculate PRS.</p></li>
-<li><p>Ethics &amp; Equity in Genomics: Current PRS tools are more accurate in individuals of European ancestry, which can facilitate discussion about health disparities and life saving treatment (e.g., early screening).</p></li>
-</ul>
-</section>
-<section id="outline" class="level2">
-<h2 class="anchored" data-anchor-id="outline">Outline</h2>
-<ul>
-<li><p>Part 1: Background and Data (30-40 minutes)</p></li>
-<li><p>Part 2: Calculating PRS Score (45 minutes)</p></li>
-<li><p>Part 3: Comparing Studies for PRS (20-30 minutes)</p></li>
+<li><p>Answer key available <a href="https://docs.google.com/document/d/16GiVCWKhVxkKzOUr6XlQ_vdj-tyxBYlIa3lmstzf38Y/edit?usp=sharing">here</a>.</p></li>
 </ul>
 
 
