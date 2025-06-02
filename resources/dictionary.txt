@@ -34,9 +34,11 @@ dotplot
 downregulation
 dropdown
 Drosophila
+EBI
 edu
 Eeles
 else's
+EMBL
 endomembrane
 endopeptidase
 Ensembl
