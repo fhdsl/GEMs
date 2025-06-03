@@ -63,6 +63,7 @@ GitHub
 glutamate
 glycine
 glyphicons
+GutBrain
 guttman
 Guttman
 GWAS
