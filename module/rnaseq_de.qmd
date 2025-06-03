@@ -16,7 +16,7 @@ This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can 
 
 - Here is the student guide if you want to run this activity as a [stand-alone activity](rnaseq_de_student-guide.qmd)
 
-- Here is the student guide if you want to use this as an [extension of the C-MOOR miniCure]((rnaseq_de_independent_project-guide.qmd))
+- Here is the student guide if you want to use this as an [extension of the C-MOOR miniCURE]((rnaseq_de_independent_project-guide.qmd))
 
 TODO: Add flowchart
 
