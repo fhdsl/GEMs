@@ -10,7 +10,7 @@ ottrpal::set_knitr_image_path()
 
 ## Overview
 
-This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might work in Autism Spectrum Disorder.
+This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.
 
 This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. **It can be used as a stand-alone activity or as part of a broader miniCURE experience.** Students do not have to have completed the miniCURE in order to use the stand-alone guide. If you are using the RNA-seq miniCURE in your class, this module adds an additional RNA-seq dataset that is suitable for an independent research project.
 
@@ -20,6 +20,11 @@ You can find out more about the RNA-seq miniCURE and other C-MOOR activities at 
 
 ## Learning Objectives
 
+1.  Explore differential expression data in mice.
+
+2.  Identify genes that are differentially expressed in an RNA-seq dataset.
+
+3. (Optional) Formulate and test a hypothesis about differential expression of genes as a result of the gut-brain axis.
 
 ## Materials and Setup
 
