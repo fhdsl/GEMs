@@ -28,7 +28,7 @@ The *prefrontal cortex* is the part of the brain that is primarily in charge of 
 
 #### The original study
 
-The original study, *Gut Microbiota from Human Autism Spectrum Disorder Induces Behavioral Deficits in Mice*, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the *gut-brain axis.*
+The original study, *Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice*, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the *gut-brain axis.*
 
 In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. They transplanted stool from either humans with ASD or controls into germ-free mice and discovered that colonization with gut microbiota was enough to induce ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.
 
@@ -102,6 +102,8 @@ The "tidyverse" package that you loaded is useful for loading, wrangling, and ex
 
 ### Load Differential Expression Data
 
+**Differential expression** refers to the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or "turned on", while others are "turned off". This expression difference is the basis of cell type diversity in multicellular organisms (like mice and humans). Because some diseases are thought to be the result of improper gene expression, researchers will use differential gene expression experiments to pinpoint the genes responsible for the disease symptoms.
+
 We'll read in some data from the GEMs website. Run the following code in your console:
 
 ```{r}
@@ -155,7 +157,7 @@ prefrontal_ascending <- arrange(prefrontal, log2FoldChange)
 head(prefrontal_ascending)
 ```
 
-The genes at the top of this table have the mose negative log2FoldChange values
+The genes at the top of this table have the most negative log2FoldChange values.
 
 We can use a similar command to look at the genes with the largest positive log2FoldChange.
 
