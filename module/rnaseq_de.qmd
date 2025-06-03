@@ -38,27 +38,3 @@ This dataset includes gene expression data from two different brain regions (str
 
  [*Gut Microbiota from Human Autism Spectrum Disorder Induces Behavioral Deficits in Mice*] (https://pmc.ncbi.nlm.nih.gov/articles/PMC6993574/pdf/nihms-1528786.pdf).
 
-## What comparisons can students make?
-
-In this dataset, students have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).
-
-Additionally, students can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, students also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.
-
-
-## Download the Datasets
-
-**Comparing gene expression between ASD and control mice**
-
-Both brain regions: <https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv>
-
-Prefrontal cortex only: <https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv>
-
-Striatum only: <https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv>
-
-**Comparing gene expression between prefrontal cortex and striatum**
-
-All mice: <https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv>
-
-Only ASD mice: <https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv>
-
-Only control mice: <https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv>
