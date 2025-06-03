@@ -6,7 +6,9 @@ format:
 
 ## Overview
 
-This activity teaches students to ...
+This activity guides students through using publicly-available genomics databases. Students start with four _Drosophila_ genes and learn how to find information about these genes, as well as information about homologous genes in mice, zebrafish, and humans. Finally, they use human disease databases to identify the human health consequences of mutations to the _Drosophila_ homologs.
+
+This activity is loosely based on the game Clue. Students need to match four _Drosophila_ genes to the correct experimental data and background research.
 
 **Duration:** 
 
@@ -14,7 +16,7 @@ This activity teaches students to ...
 
 1. Explore commonly-used public genomic databases to become familiar with the biological information on them.
 
-2. Identify genomic information for five different _Drosophila_ genes.
+2. Identify genomic information for four different _Drosophila_ genes.
 
 3. Compare how gene location and expression differs between species for homologous genes.
 
@@ -38,4 +40,24 @@ This activity teaches students to ...
 
 ## Scientific Topics
 
+In addition to working with public genomic databases, students are exposed to the following concepts:
+
+- curated databases
+
+- homologs and orthologs
+
+- model organisms
+
+- gene ontology and GO terms
+
+- genome assembly
+
 ## Outline
+
+- Part 1: Using FlyBase 
+
+- Part 2: Identifying Homologs; Using Mouse Genome Informations, ZFIN, and GeneCards
+
+- Part 3: Usings OMIM and MalaCards
+
+- Part 4: Solving the Data Mystery
