@@ -31,7 +31,7 @@ In this study, researchers explored whether they could induce ASD-like behaviors
 It is important to note that researchers are **not** suggesting that ASD is entirely induced by gut bacteria. There is a strong genetic component to ASD. Scientists have known for years that there are **both genetic and environmental components** to the development or severity of **some** ASD symptoms. This research explores one possible environmental component.
 :::
 
-You can read the original research paper [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC6993574/pdf/nihms-1528786.pdf).
+You can read the original research paper [here](https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1).
 
 #### The mouse as a model organism
 
