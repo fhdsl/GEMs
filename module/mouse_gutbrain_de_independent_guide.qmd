@@ -245,6 +245,7 @@ In the striatum:
 reg3a_striatum
 ```
 
+
 ### Plotting a single gene across regions
 
 ```{r, eval = F}
@@ -254,7 +255,6 @@ ENSMUSG00000079516
 ```
 
 ### Running a gene set analysis
-
 
 You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
 

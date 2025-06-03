@@ -231,16 +231,15 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 7. What biological processes is this gene involved in?
 :::
 
-
-TODO: Add questions that have students look information up on MGI. Add more MGI information on reg3a
-
 ## Part 3
 
 In part 3, we'll create a list of genes that are differentially expressed in the prefrontal cortex, then examine whether they show the same differential expression pattern in the striatum.
 
 ### Creating a gene list
 
-TODO: add information about padj and why it's a better measure than log2FoldChange
+In the previous section, we identified genes with the highest and lowest log2FoldChange. However, this metric isn't always the best indicator of differential expression. It can be 
+
+In differential gene expression analysis, padj (adjusted p-value) is preferred over log2FoldChange (log2 fold change) for identifying statistically significant changes in gene expression because padj accounts for multiple testing, which is crucial when analyzing a large number of genes simultaneously. log2FoldChange provides information about the magnitude of expression change, while padj indicates its statistical significance
 
 Next, you might want to create a list of all the genes that are differentially expressed between ASD and control mice using the `filter` command.
 

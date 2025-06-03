@@ -88,10 +88,10 @@ The activity uses data from a [published research study](https://www.cell.com/ce
 
 ## Outline for RNA-seq miniCURE Extension 
 
--   Part 1: Background and Setup
+-   Background and Setup
 
--   Part 2: Exploring Differential Expression Data
+-   Exploring Differential Expression Data
 
--   Part 3: Creating Lists of Differentially Expressed Genes
+-   Creating Lists of Differentially Expressed Genes
 
--   Part 4: Cluster Analysis of Gene Lists
+-   Cluster Analysis of Gene Lists
