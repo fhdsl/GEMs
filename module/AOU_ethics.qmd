@@ -23,6 +23,6 @@ These ethics-related questions can be added on to any activity that leverages th
     -   [Web page](https://genomicseducation.org/module/AOU_ethics_student_guide.html)
     -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/AOU_ethics_student_guide.qmd)
     -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/AOU_ethics_student_guide.docx)
-    -   [Google Doc]() - coming soon!
+    -   [Google Doc](https://docs.google.com/document/d/1Xi1M9icJUJ2pfxp5pOV4yzQUHfQCM8zo/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
 
--   Answer key available [here](https://docs.google.com/document/d/16GiVCWKhVxkKzOUr6XlQ_vdj-tyxBYlIa3lmstzf38Y/edit?usp=sharing).
+-   Answer key available [here](https://docs.google.com/document/d/16GiVCWKhVxkKzOUr6XlQ_vdj-tyxBYlIa3lmstzf38Y/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.

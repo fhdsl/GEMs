@@ -40,11 +40,11 @@ This activity will walk through how to use an online polygenic risk score (PRS) 
     -   [Web page](https://genomicseducation.org/module/genomic_med_prs_student_guide.html)
     -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/genomic_med_prs_student_guide.qmd)
     -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/genomic_med_prs_student_guide.docx)
-    -   [Google Doc]() - coming soon!
+    -   [Google Doc](https://docs.google.com/document/d/1qHzUEttKBJYxmcg7bnjQBMBSF_fKeVOz/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
 
 -   Google Slides presentation available for borrowing images [here](https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?usp=sharing).
 
--   Answer key available [here]().
+-   Answer key available [here](https://docs.google.com/document/d/1m2-NKdFEEZDr39LCyr6GD7raf6T-ENs1GuHM74XxDZw/edit?usp=drive_link). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
 
 ## Scientific Topics
 
