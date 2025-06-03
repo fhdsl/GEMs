@@ -1,5 +1,5 @@
 ---
-title: "**Gut-brain axis: Autism Spectrum Disorder: Independent Project Guide**"
+title: "**Differential Expression and the Mouse Gut-Brain Axis**"
 format:
     html: default
 ---
@@ -111,26 +111,26 @@ Additionally, you can look at gene expression in striatum vs prefrontal cortex i
 Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. We will do this using `read_csv`. Copy and paste this command into your console:
 
 ```{r}
-asd_vs_c <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv")
+asd_vs_c <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv")
 ```
 
 Here are the URLs for all the possible comparisons you can examine with this dataset:
 
 **Comparing gene expression between ASD and control mice**
 
-Both brain regions: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
+Both brain regions: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv)
 
-Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
+Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv)
 
-Striatum only: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
+Striatum only: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv)
 
 **Comparing gene expression between prefrontal cortex and striatum**
 
-All mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
+All mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv)
 
-Only ASD mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
+Only ASD mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv)
 
-Only control mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
+Only control mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv)
 
 ### Arranging dataset based on padj 
 

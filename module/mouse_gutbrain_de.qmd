@@ -1,5 +1,5 @@
 ---
-title: "**Differential Expression with RNA-seq**"
+title: "**Differential Expression and the Mouse Gut-Brain Axis**"
 output:
   html_document
 ---

@@ -22,7 +22,7 @@ These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
 These modules span multiple class/lab periods.
 
-- [Differential Expression with RNA-seq](module/mouse_gutbrain_de.html)
+- [Differential Expression and the Mouse Gut-Brain Axis](module/mouse_gutbrain_de.html)
 
 - [Using Public Genomic Databases](module/public_databases.html)
 

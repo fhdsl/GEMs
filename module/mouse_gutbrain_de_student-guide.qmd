@@ -1,5 +1,5 @@
 ---
-title: "**Differential Expression: Autism Spectrum Disorder and the Gut-Brain Axis: Student Guide**"
+title: "**Differential Expression and the Mouse Gut-Brain Axis**"
 format:
     html: default
 ---
@@ -52,7 +52,11 @@ In the next steps, we will explore the data from the publication described above
 
 We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
 
-<!-- callout about what cloud computing is ? -->
+:::callout-tip
+What is cloud computing?
+
+
+:::
 
 TODO: Add figure
 
@@ -101,7 +105,7 @@ The "tidyverse" package that you loaded is useful for loading, wrangling, and ex
 We'll read in some data from the GEMs website. Run the following code in your console:
 
 ```{r}
-prefrontal <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv")
+prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv")
 ```
 
 You have just loaded differential expression data comparing ASD-transplant mice and control-transplant mice for the prefrontal cortex region of the brain.
@@ -119,7 +123,8 @@ head(prefrontal)
 
 When working with someone else's data, it can be difficult to figure out what a particular column or variable name means. A **data dictionary** is a key to decode these!
 
-**gene**: the geneID (see below for more detail). **baseMean**: the average of the normalized count values for this gene, taken over all samples.
+**gene**: the geneID (see below for more detail). 
+**baseMean**: the average of the normalized count values for this gene, taken over all samples.
 **log2FoldChange**: a measure of the change in gene expression for this gene between the ASD and control mice. A positive value indicates upregulation (increased expression), while a negative Log2FC indicates downregulation (decreased expression).
 **lfcSE**: the standard error calculated for log2FoldChange.
 **stat**: t-value calculated to determine if the log2FoldChange is significantly different from zero.
@@ -141,12 +146,16 @@ In this dataset, genes are identified using their Ensembl Gene ID code. Every ge
 
 ### Ranking the genes by log2FoldChange
 
-The log2FoldChange value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:
+The log2FoldChange value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. 
+
+We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:
 
 ```{r}
 prefrontal_ascending <- arrange(prefrontal, log2FoldChange)
 head(prefrontal_ascending)
 ```
+
+The genes at the top of this table have the mose negative log2FoldChange values
 
 We can use a similar command to look at the genes with the largest positive log2FoldChange.
 
