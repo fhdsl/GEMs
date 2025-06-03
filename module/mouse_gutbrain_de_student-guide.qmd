@@ -1,5 +1,5 @@
 ---
-title: "**Gut-brain axis: Autism Spectrum Disorder: Student Guide**"
+title: "**Differential Expression: Autism Spectrum Disorder and the Gut-Brain Axis: Student Guide**"
 format:
     html: default
 ---
