@@ -224,11 +224,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 
 4.  What gene shows the greatest upregulation (increase in gene expression) in ASD-type mice compared to control mice? Give both the gene ID and the gene name.
 
-5. What molecular functions does this gene do?
+5.  What molecular functions does this gene do?
 
 6.  What gene shows the greatest downregulation (decrease in gene expression) in ASD-type mice compared to control mice? Give both the gene ID and the gene name.
 
-7. What biological processes is this gene involved in?
+7.  What biological processes is this gene involved in?
 :::
 
 ## Part 3
@@ -237,23 +237,15 @@ In part 3, we'll create a list of genes that are differentially expressed in the
 
 ### Creating a gene list
 
-In the previous section, we identified genes with the highest and lowest log2FoldChange. However, this metric isn't always the best indicator of differential expression. It can be 
+In the previous section, we identified genes with the highest and lowest log2FoldChange. However, this metric isn't always the best indicator of differential expression. The adjusted p-value, or padj, is preferred over log2FoldChange for identifying statistically significant changes in gene expression because padj accounts for multiple testing. This is crucial when analyzing a large number of genes simultaneously, as each additional statistical test increases the risk of identifying a false positive. The adjusted p-value provides a statistical correction that minimizes this risk. log2FoldChange provides information about the magnitude of expression change, while padj indicates its statistical significance.
 
-In differential gene expression analysis, padj (adjusted p-value) is preferred over log2FoldChange (log2 fold change) for identifying statistically significant changes in gene expression because padj accounts for multiple testing, which is crucial when analyzing a large number of genes simultaneously. log2FoldChange provides information about the magnitude of expression change, while padj indicates its statistical significance
-
-Next, you might want to create a list of all the genes that are differentially expressed between ASD and control mice using the `filter` command.
-
-TODO: add threshold information
+Let's create a list of all the genes that are differentially expressed between ASD and control mice using the `filter` command. We'll set the padj threshold to 0.05.
 
 ```{r}
 prefrontal_sig <- filter(prefrontal, padj < 0.05)
 head(prefrontal_sig)
 dim(prefrontal_sig)
 ```
-
-TODO: Add question about the number of genes that pass this threshold, as well as how many are positive vs negative wrt log2FoldChange
-
-TODO: Add question about whether the genes identified in part 2 pass this threshold
 
 ### Compare differential gene expression across regions
 
@@ -285,6 +277,16 @@ In the striatum:
 reg3a_striatum
 ```
 
-TODO: add question about whether the expression pattern is the same in both tissues
+::: callout-note
+## Check Your Knowledge
 
-TODO: add code/question where they look up the expression of the genes from part 2
+8.  How many genes did you keep after filtering out any genes with a padj > 0.05?
+
+9.  How many genes in #8 show increased expression in ASD-type mice?
+
+10.  Did the genes you identified in part 2 (the one with the greatest positive log2FoldChange, as well as the one with the greatest negative log2FoldChange) meet the padj threshold? That is, did you keep these genes in your dataset after filtering?
+
+11.  Is the differential expression pattern of Reg3a the same in the striatum as in the prefrontal cortex? 
+:::
+
+POSSIBLE ADDITION: add code/question where they look up the expression of the genes from part 2?
