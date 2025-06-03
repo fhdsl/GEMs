@@ -277,7 +277,7 @@
     "href": "module/genomic_med_prs.html#materials-and-setup",
     "title": "Genomic Medicine: Polygenic Risk Score Calculation",
     "section": "Materials and Setup",
-    "text": "Materials and Setup\n\nStudents will need:\n\nA web browser and an internet connection for this activity. Students will use this website: https://prs.byu.edu/calculate_score.html.\nAccess to Microsoft Excel or Google Sheets may be helpful.\n\nToy data is hosted at: https://genomicseducation.org/data/prs_ind_1.txt\nDownload the R student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc - coming soon!\n\nGoogle Slides presentation available for borrowing images here.\nAnswer key available here."
+    "text": "Materials and Setup\n\nStudents will need:\n\nA web browser and an internet connection for this activity. Students will use this website: https://prs.byu.edu/calculate_score.html.\nAccess to Microsoft Excel or Google Sheets may be helpful.\n\nToy data is hosted at: https://genomicseducation.org/data/prs_ind_1.txt\nDownload the student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc\n\nGoogle Slides presentation available for borrowing images here.\nAnswer key available here. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access."
   },
   {
     "objectID": "module/genomic_med_prs.html#scientific-topics",
@@ -319,7 +319,7 @@
     "href": "module/AOU_ethics.html#materials-and-setup",
     "title": "All of Us: Understanding Ethics",
     "section": "Materials and Setup",
-    "text": "Materials and Setup\n\nDownload the R student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc - coming soon!\n\nAnswer key available here."
+    "text": "Materials and Setup\n\nDownload the student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc\n\nAnswer key available here. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access."
   },
   {
     "objectID": "module/mouse_gutbrain_de_student-guide.html",
@@ -368,7 +368,7 @@
     "href": "module/family_markers.html#materials-and-setup",
     "title": "Family Markers: Using Multiply-Affected Families to Identify Risk Genes",
     "section": "Materials and Setup",
-    "text": "Materials and Setup\n\nStudents will need either:\n\nAn internet connection for this activity as written (using Posit Cloud)\nA local installation of R or RStudio (with data downloaded and kinship2 package installed ahead of time)\n\nRequired R package: kinship2\nData hosting: https://genomicseducation.org/data/pedigree_data.csv\nDownload the R student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc - coming soon!\n\nGoogle Slides presentation available for borrowing images here.\nAnswer key available here."
+    "text": "Materials and Setup\n\nStudents will need either:\n\nAn internet connection for this activity as written (using Posit Cloud)\nA local installation of R or RStudio (with data downloaded and kinship2 package installed ahead of time)\n\nRequired R package: kinship2\nData hosting: https://genomicseducation.org/data/pedigree_data.csv\nDownload the R student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc\n\nGoogle Slides presentation available for borrowing images here.\nAnswer key available here. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access."
   },
   {
     "objectID": "module/family_markers.html#scientific-topics",
