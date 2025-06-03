@@ -58,6 +58,6 @@ In addition to working with public genomic databases, students are exposed to th
 
 - Part 2: Identifying Homologs; Using Mouse Genome Informations, ZFIN, and GeneCards
 
-- Part 3: Usings OMIM and MalaCards
+- Part 3: Using OMIM and MalaCards
 
 - Part 4: Solving the Data Mystery

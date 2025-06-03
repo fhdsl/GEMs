@@ -54,6 +54,7 @@ fredhutch
 GCST
 GEMs
 GenBank
+GeneCards
 geneID
 geneIDs
 GH
@@ -113,6 +114,7 @@ OMIM
 ORF
 ortholog
 orthologs
+orthologous
 OTTR
 ottrproject
 padj
@@ -126,6 +128,7 @@ png
 polygenic
 Polygenic
 PositCloud
+promotors
 PRS
 pseudogene
 pseudogenes
@@ -143,15 +146,18 @@ scalable
 striatum
 Striatum
 subdir
+sulfotransferase
 superpopulations
 Tay
 th
 thon
 tidyverse
+tranferase
 UCSC
 upregulation
 Ust
 UST
+UST's
 usta
 www
 zebrafish
