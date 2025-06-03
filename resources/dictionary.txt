@@ -63,6 +63,7 @@ GitHub
 glutamate
 glycine
 glyphicons
+GutBrain
 guttman
 Guttman
 GWAS
@@ -93,6 +94,7 @@ microbiota
 Microbiota
 midgut
 miniCURE
+multicellular
 musculus
 ncbi
 neuroanatomy
@@ -154,6 +156,7 @@ thon
 tidyverse
 tranferase
 UCSC
+upregulated
 upregulation
 Ust
 UST

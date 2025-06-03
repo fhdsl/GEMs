@@ -1,5 +1,5 @@
 ---
-title: "**Gut-brain axis: Autism Spectrum Disorder: Independent Project Guide**"
+title: "**Differential Expression and the Mouse Gut-Brain Axis**"
 format:
     html: default
 ---
@@ -23,7 +23,7 @@ The _prefrontal cortex_ is the part of the brain that is primarily in charge of 
 
 #### The original study
 
-The original study, _Gut Microbiota from Human Autism Spectrum Disorder Induces Behavioral Deficits in Mice_, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the _gut-brain axis._
+The original study, _Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice_, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the _gut-brain axis._
 
 In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. They transplanted stool from either humans with ASD or controls into germ-free mice and discovered that colonization with gut microbiota was enough to induce ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.
 
@@ -31,7 +31,7 @@ In this study, researchers explored whether they could induce ASD-like behaviors
 It is important to note that researchers are **not** suggesting that ASD is entirely induced by gut bacteria. There is a strong genetic component to ASD. Scientists have known for years that there are **both genetic and environmental components** to the development or severity of **some** ASD symptoms. This research explores one possible environmental component.
 :::
 
-You can read the original research paper [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC6993574/pdf/nihms-1528786.pdf).
+You can read the original research paper [here](https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1).
 
 #### The mouse as a model organism
 
@@ -47,8 +47,10 @@ Before starting this activity, you should have completed the miniCURE activities
 Remember, the basic steps of your analysis are:
 
 1. Examine expression of your  gene of interest expressed in this dataset.
-1. Explore whether your gene of interest is differentially expressed in different experimental groups.
-1. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
+
+2. Explore whether your gene of interest is differentially expressed between the experimental groups.
+
+3. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
 
 Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
 
@@ -66,7 +68,7 @@ Once logged in, select "New Project" and "New RStudio Project". It will take a f
 
 TODO: Add figure
 
-Rename your project "Differential Expression ASD" by clicking on "Untitled Project".
+Rename your project "Differential Expression Mouse GutBrain" by clicking on "Untitled Project".
 
 TODO: Add figure
 
@@ -111,26 +113,26 @@ Additionally, you can look at gene expression in striatum vs prefrontal cortex i
 Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. We will do this using `read_csv`. Copy and paste this command into your console:
 
 ```{r}
-asd_vs_c <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv")
+asd_vs_c <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv")
 ```
 
 Here are the URLs for all the possible comparisons you can examine with this dataset:
 
 **Comparing gene expression between ASD and control mice**
 
-Both brain regions: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv)
+Both brain regions: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv)
 
-Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv)
+Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv)
 
-Striatum only: [https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv)
+Striatum only: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv)
 
 **Comparing gene expression between prefrontal cortex and striatum**
 
-All mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv)
+All mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv)
 
-Only ASD mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv)
+Only ASD mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv)
 
-Only control mice: [https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv)
+Only control mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv)
 
 ### Arranging dataset based on padj 
 
@@ -219,9 +221,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
 
 ```{r}
-asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv")
+asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv")
 
-asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv")
+asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
 ```
 
 
@@ -245,6 +247,7 @@ In the striatum:
 reg3a_striatum
 ```
 
+
 ### Plotting a single gene across regions
 
 ```{r, eval = F}
@@ -254,7 +257,6 @@ ENSMUSG00000079516
 ```
 
 ### Running a gene set analysis
-
 
 You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
 
