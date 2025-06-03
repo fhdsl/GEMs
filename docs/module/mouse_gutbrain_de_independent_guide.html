@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gut-brain axis: Autism Spectrum Disorder: Independent Project Guide – GEMs</title>
+<title>Differential Expression and the Mouse Gut-Brain Axis – GEMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -176,7 +176,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Gut-brain axis: Autism Spectrum Disorder: Independent Project Guide</strong></h1>
+<h1 class="title"><strong>Differential Expression and the Mouse Gut-Brain Axis</strong></h1>
 </div>
 
 
@@ -203,7 +203,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>The <em>prefrontal cortex</em> is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/">here</a>.</p>
 <section id="the-original-study" class="level4">
 <h4 class="anchored" data-anchor-id="the-original-study">The original study</h4>
-<p>The original study, <em>Gut Microbiota from Human Autism Spectrum Disorder Induces Behavioral Deficits in Mice</em>, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the <em>gut-brain axis.</em></p>
+<p>The original study, <em>Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice</em>, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the <em>gut-brain axis.</em></p>
 <p>In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. They transplanted stool from either humans with ASD or controls into germ-free mice and discovered that colonization with gut microbiota was enough to induce ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -218,7 +218,7 @@ Note
 <p>It is important to note that researchers are <strong>not</strong> suggesting that ASD is entirely induced by gut bacteria. There is a strong genetic component to ASD. Scientists have known for years that there are <strong>both genetic and environmental components</strong> to the development or severity of <strong>some</strong> ASD symptoms. This research explores one possible environmental component.</p>
 </div>
 </div>
-<p>You can read the original research paper <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6993574/pdf/nihms-1528786.pdf">here</a>.</p>
+<p>You can read the original research paper <a href="https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1">here</a>.</p>
 </section>
 <section id="the-mouse-as-a-model-organism" class="level4">
 <h4 class="anchored" data-anchor-id="the-mouse-as-a-model-organism">The mouse as a model organism</h4>
@@ -231,9 +231,9 @@ Note
 <h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
 <p>Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project. Remember, the basic steps of your analysis are:</p>
 <ol type="1">
-<li>Examine expression of your gene of interest expressed in this dataset.</li>
-<li>Explore whether your gene of interest is differentially expressed in different experimental groups.</li>
-<li>Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.</li>
+<li><p>Examine expression of your gene of interest expressed in this dataset.</p></li>
+<li><p>Explore whether your gene of interest is differentially expressed between the experimental groups.</p></li>
+<li><p>Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.</p></li>
 </ol>
 <p>Below, we’ve included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.</p>
 <section id="start-posit-cloud" class="level3">
@@ -244,7 +244,7 @@ Note
 <p>TODO: Add figure</p>
 <p>Once logged in, select “New Project” and “New RStudio Project”. It will take a few seconds to deploy and load.</p>
 <p>TODO: Add figure</p>
-<p>Rename your project “Differential Expression ASD” by clicking on “Untitled Project”.</p>
+<p>Rename your project “Differential Expression Mouse GutBrain” by clicking on “Untitled Project”.</p>
 <p>TODO: Add figure</p>
 </section>
 <section id="package-install-and-load" class="level3">
@@ -283,7 +283,7 @@ What are R Packages?
 <p>Additionally, you can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, you also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.</p>
 <p>Let’s say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it <code>asd_vs_c</code>. We will do this using <code>read_csv</code>. Copy and paste this command into your console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -297,13 +297,13 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <p>Here are the URLs for all the possible comparisons you can examine with this dataset:</p>
 <p><strong>Comparing gene expression between ASD and control mice</strong></p>
-<p>Both brain regions: <a href="https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv">https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv</a></p>
-<p>Prefrontal cortex only: <a href="https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv">https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv</a></p>
-<p>Striatum only: <a href="https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv">https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv</a></p>
+<p>Both brain regions: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv">https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv</a></p>
+<p>Prefrontal cortex only: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv">https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv</a></p>
+<p>Striatum only: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv">https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv</a></p>
 <p><strong>Comparing gene expression between prefrontal cortex and striatum</strong></p>
-<p>All mice: <a href="https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv">https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv</a></p>
-<p>Only ASD mice: <a href="https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv">https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv</a></p>
-<p>Only control mice: <a href="https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv">https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv</a></p>
+<p>All mice: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv">https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv</a></p>
+<p>Only ASD mice: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv">https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv</a></p>
+<p>Only control mice: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv">https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv</a></p>
 </section>
 <section id="arranging-dataset-based-on-padj" class="level3">
 <h3 class="anchored" data-anchor-id="arranging-dataset-based-on-padj">Arranging dataset based on padj</h3>
@@ -433,7 +433,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <h3 class="anchored" data-anchor-id="compare-differential-gene-expression-across-regions">Compare differential gene expression across regions</h3>
 <p>It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -444,7 +444,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────

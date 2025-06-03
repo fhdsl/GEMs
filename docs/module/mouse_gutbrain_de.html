@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Differential Expression with RNA-seq – GEMs</title>
+<title>Differential Expression and the Mouse Gut-Brain Axis – GEMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,23 +125,8 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#materials-and-setup" id="toc-materials-and-setup" class="nav-link" data-scroll-target="#materials-and-setup">Materials and Setup</a></li>
   <li><a href="#scientific-topics" id="toc-scientific-topics" class="nav-link" data-scroll-target="#scientific-topics">Scientific Topics</a></li>
-  <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
-  <li><a href="#gut-brain-axis-autism-spectrum-disorder" id="toc-gut-brain-axis-autism-spectrum-disorder" class="nav-link" data-scroll-target="#gut-brain-axis-autism-spectrum-disorder">Gut-brain axis: Autism Spectrum Disorder</a>
-  <ul class="collapse">
-  <li><a href="#the-original-study" id="toc-the-original-study" class="nav-link" data-scroll-target="#the-original-study">The original study</a></li>
-  <li><a href="#what-comparisons-can-students-make" id="toc-what-comparisons-can-students-make" class="nav-link" data-scroll-target="#what-comparisons-can-students-make">What comparisons can students make?</a></li>
-  <li><a href="#what-does-the-student-guide-include" id="toc-what-does-the-student-guide-include" class="nav-link" data-scroll-target="#what-does-the-student-guide-include">What does the student guide include?</a>
-  <ul class="collapse">
-  <li><a href="#study-overview-and-definitions" id="toc-study-overview-and-definitions" class="nav-link" data-scroll-target="#study-overview-and-definitions">Study overview and definitions</a></li>
-  <li><a href="#the-mouse-as-a-model-organism" id="toc-the-mouse-as-a-model-organism" class="nav-link" data-scroll-target="#the-mouse-as-a-model-organism">The mouse as a model organism</a></li>
-  <li><a href="#learning-about-mouse-genes" id="toc-learning-about-mouse-genes" class="nav-link" data-scroll-target="#learning-about-mouse-genes">Learning about mouse genes</a></li>
-  </ul></li>
-  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a>
-  <ul class="collapse">
-  <li><a href="#student-guides" id="toc-student-guides" class="nav-link" data-scroll-target="#student-guides">Student Guides</a></li>
-  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#outline-for-stand-alone-activity" id="toc-outline-for-stand-alone-activity" class="nav-link" data-scroll-target="#outline-for-stand-alone-activity">Outline for Stand-Alone Activity</a></li>
+  <li><a href="#outline-for-rna-seq-minicure-extension" id="toc-outline-for-rna-seq-minicure-extension" class="nav-link" data-scroll-target="#outline-for-rna-seq-minicure-extension">Outline for RNA-seq miniCURE Extension</a></li>
   </ul>
 </nav>
     </div>
@@ -150,7 +135,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Differential Expression with RNA-seq</strong></h1>
+<h1 class="title"><strong>Differential Expression and the Mouse Gut-Brain Axis</strong></h1>
 </div>
 
 
@@ -169,77 +154,84 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Each section introduces an RNA-seq dataset from a published research paper. The datasets have been formatted for student use. All the formatting and processing of the raw data has been done, so students can focus on hypothesis testing.</p>
-<p>This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can be used as an independent activity or as part of a broader miniCURE experience. The original C-MOOR RNA-seq miniCURE explores gene expression in a <em>Drosophila</em> midgut dataset. This module adds additional RNA-seq datasets that students can use, either as the primary activity or as an independent research project.</p>
-<p>TODO: Add flowchart</p>
+<p>This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.</p>
+<p>This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. <strong>It can be used as a stand-alone activity or as part of a broader miniCURE experience.</strong> Students do not have to have completed the miniCURE in order to use the stand-alone guide. If you are using the RNA-seq miniCURE in your class, this module adds an additional RNA-seq dataset that is suitable for an independent research project.</p>
 <p>You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the <a href="https://www.c-moor.org/">C-MOOR website</a>. An online guide to the miniCURE is <a href="https://science.c-moor.org/miniCURE-RNA-seq/index.html">here</a>.</p>
 <p><strong>Duration:</strong></p>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<ol type="1">
+<li><p>Explore differential expression data in mice.</p></li>
+<li><p>Identify genes that are differentially expressed in an RNA-seq dataset.</p></li>
+<li><p>(Optional) Formulate and test a hypothesis about differential expression of genes as a result of the gut-brain axis.</p></li>
+</ol>
 </section>
 <section id="materials-and-setup" class="level2">
 <h2 class="anchored" data-anchor-id="materials-and-setup">Materials and Setup</h2>
+<ul>
+<li><p>Students will need either:</p>
+<ul>
+<li>An internet connection for this activity as written (using Posit Cloud)</li>
+<li>A local installation of R or RStudio (with data downloaded and <code>tidyverse</code> package installed ahead of time)</li>
+</ul></li>
+<li><p>Required R package: <code>tidyverse</code></p></li>
+<li><p>Data hosting:</p>
+<ul>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv">Comparing gene expression between ASD and control mice, both brain regions</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv">Comparing gene expression between ASD and control mice, prefrontal cortex only</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv">Comparing gene expression between ASD and control mice, striatum only</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv">Comparing gene expression between prefrontal cortex and striatum, all mice</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv">Comparing gene expression between prefrontal cortex and striatum, only ASD mice</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv">Comparing gene expression between prefrontal cortex and striatum, only control mice</a></li>
+</ul></li>
+<li><p><strong>If you are using this as a stand-alone activity</strong>: download the R student activity as:</p>
+<ul>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_student-guide.html">Web page</a></li>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_student-guide.qmd">Quarto (qmd)</a></li>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_student-guide.docx">Word (docx)</a></li>
+<li><a href="">Google Doc</a> - coming soon!</li>
+</ul></li>
+<li><p><strong>If you are using this as an extension of the C-MOOR miniCURE</strong>: download the R student activity as:</p>
+<ul>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_independent_guide.html">Web page</a></li>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_independent_guide.qmd">Quarto (qmd)</a></li>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_independent_guide.docx">Word (docx)</a></li>
+<li><a href="">Google Doc</a> - coming soon!</li>
+</ul></li>
+<li><p>Google Slides presentation available for borrowing images <a href="https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing">here</a>.</p></li>
+<li><p>Answer key available <a href="">here</a>.</p></li>
+</ul>
 </section>
 <section id="scientific-topics" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-topics">Scientific Topics</h2>
+<p>The activity uses data from a <a href="https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1">published research study</a> “Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice.” Students will gain exposure to the following:</p>
+<ul>
+<li><p>Differential expression: the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or “turned on”, while others are “turned off”</p></li>
+<li><p>Gut-brain axis: the proposed connection between the gut microbiome and gene expression in the brain</p></li>
+<li><p>Autism Spectrum Disorder: a neurological disorder that affects behavioral and social interactions</p></li>
+<li><p>Prefrontal cortex: the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions</p></li>
+<li><p>Striatum: the part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions</p></li>
+</ul>
 </section>
-<section id="outline" class="level2">
-<h2 class="anchored" data-anchor-id="outline">Outline</h2>
+<section id="outline-for-stand-alone-activity" class="level2">
+<h2 class="anchored" data-anchor-id="outline-for-stand-alone-activity">Outline for Stand-Alone Activity</h2>
+<ul>
+<li><p>Part 1: Background and Setup</p></li>
+<li><p>Part 2: Exploring Differential Expression Data</p></li>
+<li><p>Part 3: Exploring Differential Expression of Individual Genes</p></li>
+</ul>
 </section>
-<section id="gut-brain-axis-autism-spectrum-disorder" class="level1">
-<h1>Gut-brain axis: Autism Spectrum Disorder</h1>
-<p>This dataset includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with Autism Spectrum Disorder (ASD), while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. Researchers then bred the mice and looked for differences in gene expression in the brains of the offspring.</p>
-<section id="the-original-study" class="level2">
-<h2 class="anchored" data-anchor-id="the-original-study">The original study</h2>
-<p>The original study, <em>Gut Microbiota from Human Autism Spectrum Disorder Induces Behavioral Deficits in Mice</em>, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the <em>gut-brain axis.</em></p>
-<p>In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. They transplanted stool from either humans with ASD or controls into germ-free mice and discovered that colonization with gut microbiota was enough to induce ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.</p>
-<p>It is important to note that researchers are <strong>not</strong> suggesting that ASD is entirely induced by gut bacteria. There is a strong genetic component to ASD. Scientists have known for years that there are <strong>both genetic and environmental components</strong> to the development or severity of <strong>some</strong> ASD symptoms. This research explores one possible environmental component.</p>
-<p>You can read the original research paper <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6993574/pdf/nihms-1528786.pdf">here</a>.</p>
-</section>
-<section id="what-comparisons-can-students-make" class="level2">
-<h2 class="anchored" data-anchor-id="what-comparisons-can-students-make">What comparisons can students make?</h2>
-<p>In this dataset, students have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).</p>
-<p>Additionally, students can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, students also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.</p>
-</section>
-<section id="what-does-the-student-guide-include" class="level2">
-<h2 class="anchored" data-anchor-id="what-does-the-student-guide-include">What does the student guide include?</h2>
-<p>The student guide includes some background information that may help your students understand the kinds of questions they may want to ask with this dataset.</p>
-<section id="study-overview-and-definitions" class="level3">
-<h3 class="anchored" data-anchor-id="study-overview-and-definitions">Study overview and definitions</h3>
-<p>In addition to the basic overview of the study above, the student guide also includes definitions of Autism Spectrum Disorder and explanations of the parts of the brain sampled in this study. It also includes a link to the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/">story of Phineas Gage</a>, a railroad worker who survived an iron rod through his forehead, and whose injury led to breakthroughs in our understanding of neuroanatomy.</p>
-</section>
-<section id="the-mouse-as-a-model-organism" class="level3">
-<h3 class="anchored" data-anchor-id="the-mouse-as-a-model-organism">The mouse as a model organism</h3>
-<p>Students may not be familiar with why the mouse is used as a model organism. This section provides a very general explanation of the role of mice in laboratory research, as well as why mice can be used as models for human disease.</p>
-</section>
-<section id="learning-about-mouse-genes" class="level3">
-<h3 class="anchored" data-anchor-id="learning-about-mouse-genes">Learning about mouse genes</h3>
-<p>This section of the student guide includes information on how to navigate the <a href="https://informatics.jax.org/">Mouse Genome Informatics</a> database maintained by The Jackson Laboratory. It also has a brief description on interpreting a mouse gene ID code and non-genes that have associated IDs.</p>
-</section>
-</section>
-<section id="downloads" class="level2">
-<h2 class="anchored" data-anchor-id="downloads">Downloads</h2>
-<section id="student-guides" class="level3">
-<h3 class="anchored" data-anchor-id="student-guides">Student Guides</h3>
-<p>A student guide (with step-by-step instructions) has been created for this activity. The student guide can be accessed as either a webpage or as a downloadable pdf. The Rmd file should be downloaded. Once it is downloaded, students can open Rmd file with RStudio. This Rmd file can also be used in any cloud-based R environment, such as AnVIL or PositCloud.</p>
-<p>You can find the student guide for working through this activity and dataset <a href="rnaseq_de_student-guide.qmd">here</a></p>
-<p>A separate version of the student guide has been provided if you are using this module as an extension of the C-MOOR miniCURE. In this version, students are given examples of the coding tasks they did in the miniCURE activities, but have been provided empty code blocks for writing their own code. This modified guise is <a href="rnaseq_de_independent_project-guide.qmd">here</a></p>
-</section>
-<section id="datasets" class="level3">
-<h3 class="anchored" data-anchor-id="datasets">Datasets</h3>
-<p><strong>Comparing gene expression between ASD and control mice</strong></p>
-<p>Both brain regions: <a href="https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv" class="uri">https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol.csv</a></p>
-<p>Prefrontal cortex only: <a href="https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv" class="uri">https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv</a></p>
-<p>Striatum only: <a href="https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv" class="uri">https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv</a></p>
-<p><strong>Comparing gene expression between prefrontal cortex and striatum</strong></p>
-<p>All mice: <a href="https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv" class="uri">https://genomicseducation.org/data/mouse_autism_deseq_tissuetype.csv</a></p>
-<p>Only ASD mice: <a href="https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv" class="uri">https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_ASDmice.csv</a></p>
-<p>Only control mice: <a href="https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv" class="uri">https://genomicseducation.org/data/mouse_autism_deseq_tissuetype_in_controlmice.csv</a></p>
+<section id="outline-for-rna-seq-minicure-extension" class="level2">
+<h2 class="anchored" data-anchor-id="outline-for-rna-seq-minicure-extension">Outline for RNA-seq miniCURE Extension</h2>
+<ul>
+<li><p>Background and Setup</p></li>
+<li><p>Exploring Differential Expression Data</p></li>
+<li><p>Creating Lists of Differentially Expressed Genes</p></li>
+<li><p>Cluster Analysis of Gene Lists</p></li>
+</ul>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
