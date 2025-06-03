@@ -47,8 +47,10 @@ Before starting this activity, you should have completed the miniCURE activities
 Remember, the basic steps of your analysis are:
 
 1. Examine expression of your  gene of interest expressed in this dataset.
-1. Explore whether your gene of interest is differentially expressed in different experimental groups.
-1. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
+
+2. Explore whether your gene of interest is differentially expressed between the experimental groups.
+
+3. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
 
 Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
 
@@ -66,7 +68,7 @@ Once logged in, select "New Project" and "New RStudio Project". It will take a f
 
 TODO: Add figure
 
-Rename your project "Differential Expression ASD" by clicking on "Untitled Project".
+Rename your project "Differential Expression Mouse GutBrain" by clicking on "Untitled Project".
 
 TODO: Add figure
 
@@ -219,9 +221,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
 
 ```{r}
-asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_prefrontalcortex.csv")
+asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv")
 
-asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv")
+asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
 ```
 
 

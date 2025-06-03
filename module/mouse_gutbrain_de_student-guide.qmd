@@ -74,7 +74,7 @@ Once logged in, select "New Project" and "New RStudio Project". It will take a f
 
 TODO: Add figure
 
-Rename your project "Differential Expression ASD" by clicking on "Untitled Project".
+Rename your project "Differential Expression Mouse GutBrain" by clicking on "Untitled Project".
 
 TODO: Add figure
 
@@ -252,7 +252,7 @@ dim(prefrontal_sig)
 It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will need to load the differential expression data for the striatum.
 
 ```{r}
-striatum <- read_csv("https://genomicseducation.org/data/mouse_autism_deseq_autismVcontrol_in_striatum.csv")
+striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
 ```
 
 Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.
