@@ -14,10 +14,6 @@ This module introduces students to differential expression analyses using the R 
 
 This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can be used as an independent activity or as part of a broader miniCURE experience. The original C-MOOR RNA-seq miniCURE explores gene expression in a *Drosophila* midgut dataset. This module adds additional RNA-seq datasets that students can use, either as the primary activity or as an independent research project.
 
-- Here is the student guide if you want to run this activity as a [stand-alone activity](rnaseq_de_student-guide.qmd)
-
-- Here is the student guide if you want to use this as an [extension of the C-MOOR miniCURE]((rnaseq_de_independent_project-guide.qmd))
-
 TODO: Add flowchart
 
 You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the [C-MOOR website](https://www.c-moor.org/). An online guide to the miniCURE is [here](https://science.c-moor.org/miniCURE-RNA-seq/index.html).
@@ -35,6 +31,4 @@ You can find out more about the RNA-seq miniCURE and other C-MOOR activities at 
 # Gut-brain axis: Autism Spectrum Disorder
 
 This dataset includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with Autism Spectrum Disorder (ASD), while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. Researchers then bred the mice and looked for differences in gene expression in the brains of the offspring.
-
- [*Gut Microbiota from Human Autism Spectrum Disorder Induces Behavioral Deficits in Mice*] (https://pmc.ncbi.nlm.nih.gov/articles/PMC6993574/pdf/nihms-1528786.pdf).
 
