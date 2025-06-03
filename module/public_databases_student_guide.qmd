@@ -104,19 +104,31 @@ The mouse is the most commonly-used model organism in laboratory work. In fact, 
 So what makes mice such good model organisms for biomedical research? One reason is that mice and humans are both mammals and have about 85% of their protein-coding genome in common. As a result, mouse physiology is quite similar to human physiology. The mouse circulatory, reproductive, digestive, hormonal, and nervous systems are frequently used as models to study how humans grow, age, and develop chronic diseases. 
 :::
 
-Open the MGI database and search for the name of the mouse homolog **Ust**.
+Open the MGI database and search for the name of the mouse homolog **Ust**. You can do this either by typing **Ust** into the search bar and clicking "Quick Search" or by doing a topic specific search with the "Genes" toolbar.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35f41619954_0_41#slide=id.g35f41619954_0_41")
 ```
 
+A "Genome Features" summary table should open up with information about **Ust**. MGI tells us that **Ust** is a protein-coding gene on chromosome 10. Clicking on the highlighted gene symbol will take us to a page with more detail.
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35f41619954_0_46#slide=id.g35f41619954_0_46")
 ```
 
+The kinds of information you found in FlyBase will also be present on the detailed gene page in MGI. The information is organized into sections, similar to what you've already experienced with FlyBase. The fourth section down includes information about the human ortholog to **Ust** - it turns out to be **UST**, which we already knew from FlyBase.
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_34#slide=id.g35e6d9f15b7_13_34")
 ```
+
+Farther down the page is a section called "Gene Ontology (GO) Classifications". This is the section that has information about the molecular functions, biological processes, and cellular components for **Ust**. 
+
+::: {.callout-note}
+"Gene ontology" is a bioinformatics initiative focused on standardizing the vocabulary and annotations researchers use to describe genes, proteins, and data about gene and protein function. This effort allows us to more easily make comparisons about homologous and orthologous genes and proteins across species.
+:::
+
+In mice, **Ust** is a tranferase (an enzyme!) involved in carbohydrate derivative binding. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_40#slide=id.g35e6d9f15b7_13_40")
@@ -134,15 +146,19 @@ Zebrafish are a popular model organism for researchers who focus on developmenta
 Zebrafish share a high degree of genetic homology with humans!
 :::
 
-Open ZFIN and search for the zebrafish homolog **usta**.
+Open ZFIN and search for the zebrafish homolog **usta**. The ZFIN search bar will offer some options to refine your search. Choose "Gene/Transcript" from the drop down menu.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_13#slide=id.g35e6d9f15b7_13_13")
 ```
 
+ZFIN takes you directly to the gene page for **usta**. A summary of basic information about **usta** is at the top, with more detailed sections as you scroll down. Without much searching, we discover that **usta** is located on chromosome 20 and is predicted to enable sulfotransferase activity. 
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_8#slide=id.g35e6d9f15b7_13_8")
 ```
+
+Clicking on "Gene Ontology" in the menu on the left takes you to a more detailed list of the molecular functions associated with **usta**. The summary on top just mentioned the words "sulfotransferase activity"; in the Gene Ontology section, we learn that **usta** is involved in catalytic activity and enzyme regulator activity as well.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_51#slide=id.g35e6d9f15b7_13_51")
@@ -151,19 +167,29 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 
 Finally, we can turn to the human homolog **UST**. There are several databases with information about human genes. [_GeneCards_](https://www.genecards.org/) is a user-friendly database that collects and displays information about human genes from multiple research databases. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.
 
-Open the GeneCards page and search for the human homolog **UST**.
+Open the GeneCards page and search for the human homolog **UST** in the "Explore a Gene" search bar.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_22#slide=id.g35e6d9f15b7_13_22")
 ```
 
+Unlike MGI or ZFIN, the GeneCards page on our searched gene doesn't have the information about location at the top. Instead, we will need to click on "Genomics" in the header menu.
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_64#slide=id.g35e6d9f15b7_13_64")
 ```
 
+The genomics section of the GeneCards page includes location information for multiple assemblies, as well as a map of the chromosome. **UST** is located on chromosome 6.
+
+::: {.callout-note}
+A genome assembly is just a version of the genome map. As scientists unlock more detail about genomes, they periodically publish an updated "reference genome", with everything we have discovered about where genes, enhancers, promotors, and non-coding regions are located in the genome. Think of an updated genome assembly as a better map.
+:::
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_73#slide=id.g35e6d9f15b7_13_73")
 ```
+
+We can also find information about **UST's** molecular function. Choosing "Function" from the menu takes us to a list of gene ontology terms (commonly called GO terms) associated with **UST**. There are a lot of words you might recognize, including sulfotransferase activity.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g35e6d9f15b7_13_27#slide=id.g35e6d9f15b7_13_27")
