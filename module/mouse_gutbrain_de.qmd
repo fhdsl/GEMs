@@ -10,25 +10,83 @@ ottrpal::set_knitr_image_path()
 
 ## Overview
 
-This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Each section introduces an RNA-seq dataset from a published research paper. The datasets have been formatted for student use. All the formatting and processing of the raw data has been done, so students can focus on hypothesis testing.
+This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might work in Autism Spectrum Disorder.
 
-This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can be used as an independent activity or as part of a broader miniCURE experience. The original C-MOOR RNA-seq miniCURE explores gene expression in a *Drosophila* midgut dataset. This module adds additional RNA-seq datasets that students can use, either as the primary activity or as an independent research project.
-
-TODO: Add flowchart
+This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. **It can be used as a stand-alone activity or as part of a broader miniCURE experience.** Students do not have to have completed the miniCURE in order to use the stand-alone guide. If you are using the RNA-seq miniCURE in your class, this module adds an additional RNA-seq dataset that is suitable for an independent research project.
 
 You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the [C-MOOR website](https://www.c-moor.org/). An online guide to the miniCURE is [here](https://science.c-moor.org/miniCURE-RNA-seq/index.html).
 
-**Duration:**
+**Duration:** 
 
 ## Learning Objectives
 
+
 ## Materials and Setup
+
+-   Students will need either:
+
+    -   An internet connection for this activity as written (using Posit Cloud)
+    -   A local installation of R or RStudio (with data downloaded and `tidyverse` package installed ahead of time)
+
+-   Required R package: `tidyverse`
+ 
+-   Data hosting:
+
+    -   [Comparing gene expression between ASD and control mice, both brain regions](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv)
+    -   [Comparing gene expression between ASD and control mice, prefrontal cortex only](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv)
+     -   [Comparing gene expression between ASD and control mice, striatum only](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv)
+     -   [Comparing gene expression between prefrontal cortex and striatum, all mice](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv)
+     -   [Comparing gene expression between prefrontal cortex and striatum, only ASD mice](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv)
+     -   [Comparing gene expression between prefrontal cortex and striatum, only control mice](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv)
+
+
+-   **If you are using this as a stand-alone activity**: download the R student activity as:
+
+    -   [Web page](https://genomicseducation.org/module/mouse_gutbrain_de_student-guide.html)
+    -   [Quarto (qmd)](https://genomicseducation.org/module/mouse_gutbrain_de_student-guide.qmd)
+    -   [Word (docx)](https://genomicseducation.org/module/mouse_gutbrain_de_student-guide.docx)
+    -   [Google Doc]() - coming soon!
+
+-   **If you are using this as an extension of the C-MOOR miniCURE**: download the R student activity as:
+
+    -   [Web page](https://genomicseducation.org/module/mouse_gutbrain_de_independent_guide.html)
+    -   [Quarto (qmd)](https://genomicseducation.org/module/mouse_gutbrain_de_independent_guide.qmd)
+    -   [Word (docx)](https://genomicseducation.org/module/mouse_gutbrain_de_independent_guide.docx)
+    -   [Google Doc]() - coming soon!
+
+
+-   Google Slides presentation available for borrowing images [here](https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing).
+
+-   Answer key available [here]().
 
 ## Scientific Topics
 
-## Outline
+The activity uses data from a [published research study](https://pmc.ncbi.nlm.nih.gov/articles/PMC6993574/pdf/nihms-1528786.pdf) "Gut Microbiota from Human Autism Spectrum Disorder Induces Behavioral Deficits in Mice." Students will gain exposure to the following:
 
-# Gut-brain axis: Autism Spectrum Disorder
+-   Differential expression: the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or "turned on", while others are "turned off"
 
-This dataset includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with Autism Spectrum Disorder (ASD), while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. Researchers then bred the mice and looked for differences in gene expression in the brains of the offspring.
+-   Gut-brain axis: the proposed connection between the gut microbiome and gene expression in the brain
 
+-   Autism Spectrum Disorder: a neurological disorder that affects behavioral and social interactions
+
+-   Prefrontal cortex: the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions
+
+-   Striatum: the part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions
+
+## Outline for Stand-Alone Activity
+
+-   Part 1: Background and Setup
+
+-   Part 2: Exploring Differential Expression Data
+
+-   Part 3: Exploring Differential Expression of Individual Genes
+
+## Outline for RNA-seq miniCURE Extension 
+
+-   Part 1: Background and Setup
+
+-   Part 2: Exploring Differential Expression Data
+
+-   Part 3: Creating Lists of Differentially Expressed Genes
+
+-   Part 4: Cluster Analysis of Gene Lists
