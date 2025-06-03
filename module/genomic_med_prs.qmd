@@ -1,5 +1,5 @@
 ---
-title: "Genomic Medicine and Polygenic Risk Scores"
+title: "Genomic Medicine: Polygenic Risk Score Calculation"
 format:
     html: default
 ---

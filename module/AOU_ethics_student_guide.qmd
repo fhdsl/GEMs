@@ -1,0 +1,23 @@
+---
+title: "**All of Us: Understanding Ethics**"
+output:
+  html_document
+---
+
+## Overview
+
+These questions focus on ethical concepts having to do with the [All of Us Data Browser](https://databrowser.researchallofus.org/).
+
+## Questions
+
+::: {.callout-note}
+## Check Your Knowledge
+
+1. Locate the descriptor underneath The [All of Us Data Browser header](https://databrowser.researchallofus.org/). Why does the Data Browser aggregate data to counts of 20?
+
+2. Explore some of the survey questions and possible responses in [Social Determinants of Health](https://databrowser.researchallofus.org/survey/social-determinants-of-health). Find three questions that could lead to negative judgments about communities. How would knowing survey responses by ZIP code increase the risk of community stigmatization?
+
+3. Most researchers agree that collecting health data requires consent from participants. In other words, anyone who gives their data to the research, should be okay with it. Explore the following article describing the [consent process for All of Us](https://pmc.ncbi.nlm.nih.gov/articles/PMC6417826/#S9). Find some evidence that states in the United States have different consent procedures. What are some risks participants might face because of different consent procedures across states?
+
+4.  In early 2024, NPR [published an article](https://www.npr.org/sections/health-shots/2024/03/07/1235213141/all-of-us-genome-diversity-nih) that discusses the need for participants from diverse populations and points to All of Us as a solution to limited data sets. Only a few months later, All of Us [announced they would no longer report genetic ancestry data](https://www.genomeweb.com/research-funding/all-us-program-delete-genetic-ancestry-trait-health-info-participant-accounts). According to the article, what will no longer be possible without ancestry data? What is one challenge of placing too much emphasis on genetic ancestry?
+:::
