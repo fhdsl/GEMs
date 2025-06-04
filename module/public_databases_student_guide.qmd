@@ -282,15 +282,15 @@ What human disease or disorder (if any) are the homologs of **scarlet**, **plum*
 
 Finally, it's time for you to report back to your supervisor. Here's what you know about the experiments:
 
-TODO: Add experiment information, as well as what diseases were being researched in the literature.
+**Experiment 1**: the data seems to be from the 3R chromosome in _Drosophila_ and measures whether motor neurons are being pruned at the same rate in the experimental group (versus the control group)
 
-**Experiment 1**
+**Experiment 2**: this data includes measurements on transmembrane transport in the zebrafish, specifically in intestinal cells
 
-**Experiment 2**
+**Experiment 3**: this data looks at mouse cells in culture and tracks the damage caused by exposure to reactive oxygen species (ROS) and oxidative stress
 
-**Experiment 3**
+**Experiment 4**: this data includes sequences from the _Drosophila_ X chromosome and appears to be a genome annotation project
 
-**Experiment 4**
+There is also extensive background research about cerebellar atrophy, gallbladder disease, and hyperuricemia (high uric acid concentration in the urine). You also find a some initial research looking at neuronal cell adhesion.
 
 ::: {.callout-note}
 ## TASK FOUR

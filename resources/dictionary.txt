@@ -74,6 +74,7 @@ homozygous
 HTTPS
 https
 Humphries
+hyperuricemia
 intergenic
 IntroMouse
 introns
@@ -143,6 +144,7 @@ repo
 rerio
 Rmd
 rnaseq
+ROS
 RStudio
 scalable
 striatum
@@ -155,6 +157,7 @@ th
 thon
 tidyverse
 tranferase
+transmembrane
 UCSC
 upregulated
 upregulation
