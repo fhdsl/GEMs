@@ -130,13 +130,19 @@ head(prefrontal)
 
 When working with someone else's data, it can be difficult to figure out what a particular column or variable name means. A **data dictionary** is a key to decode these!
 
-**gene**: the geneID (see below for more detail). 
-**baseMean**: the average of the normalized count values for this gene, taken over all samples.
-**log2FoldChange**: a measure of the change in gene expression for this gene between the ASD and control mice. A positive value indicates upregulation (increased expression), while a negative Log2FC indicates downregulation (decreased expression).
-**lfcSE**: the standard error calculated for log2FoldChange.
-**stat**: t-value calculated to determine if the log2FoldChange is significantly different from zero.
-**pvalue**: the p-value for the log2FoldChange.
-**padj**: the p-value, adjusted for multiple testing.
+- **gene**: the geneID (see below for more detail). 
+
+- **baseMean**: the average of the normalized count values for this gene, taken over all samples.
+
+- **log2FoldChange**: a measure of the change in gene expression for this gene between the ASD and control mice. A positive value indicates upregulation (increased expression), while a negative Log2FC indicates downregulation (decreased expression).
+
+- **lfcSE**: the standard error calculated for log2FoldChange.
+
+- **stat**: t-value calculated to determine if the log2FoldChange is significantly different from zero.
+
+-**pvalue**: the p-value for the log2FoldChange.
+
+-**padj**: the p-value, adjusted for multiple testing.
 :::
 
 In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:
