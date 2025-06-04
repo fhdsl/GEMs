@@ -32,6 +32,7 @@ Dockerhub
 docx
 dotplot
 downregulation
+dplyr
 dropdown
 Drosophila
 EBI
@@ -140,6 +141,7 @@ pvalue
 qmd
 qmd 
 quarto 
+readr
 repo
 rerio
 Rmd
