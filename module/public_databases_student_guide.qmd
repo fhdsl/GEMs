@@ -290,7 +290,7 @@ Finally, it's time for you to report back to your supervisor. Here's what you kn
 
 **Experiment 4**: this data includes sequences from the _Drosophila_ X chromosome and appears to be a genome annotation project
 
-There is also extensive background research about cerebellar atrophy, gallbladder disease, and hyperuricemia (high uric acide concentration in the urine). You also find a some inital research looking at neuronal cell adhesion.
+There is also extensive background research about cerebellar atrophy, gallbladder disease, and hyperuricemia (high uric acid concentration in the urine). You also find a some initial research looking at neuronal cell adhesion.
 
 ::: {.callout-note}
 ## TASK FOUR
