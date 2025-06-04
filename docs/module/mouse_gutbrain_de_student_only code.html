@@ -158,7 +158,6 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#part-1" id="toc-part-1" class="nav-link active" data-scroll-target="#part-1">Part 1</a>
   <ul class="collapse">
   <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#start-posit-cloud" id="toc-start-posit-cloud" class="nav-link" data-scroll-target="#start-posit-cloud">Start Posit Cloud</a></li>
   <li><a href="#package-install-and-load" id="toc-package-install-and-load" class="nav-link" data-scroll-target="#package-install-and-load">Package Install and Load</a></li>
   <li><a href="#load-differential-expression-data" id="toc-load-differential-expression-data" class="nav-link" data-scroll-target="#load-differential-expression-data">Load Differential Expression Data</a></li>
   </ul></li>
@@ -251,29 +250,27 @@ Check Your Knowledge
 </div>
 </section>
 </section>
-<section id="start-posit-cloud" class="level3">
-<h3 class="anchored" data-anchor-id="start-posit-cloud">Start Posit Cloud</h3>
-<p>In the next steps, we will explore the data from the publication described above.</p>
-<p>We will use Posit Cloud for this activity. Go to <a href="https://posit.cloud/plans/free" class="uri">https://posit.cloud/plans/free</a> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.</p>
-<p>TODO: Add figure</p>
-<p>Once logged in, select “New Project” and “New RStudio Project”. It will take a few seconds to deploy and load.</p>
-<p>TODO: Add figure</p>
-<p>Rename your project “Differential Expression Mouse GutBrain” by clicking on “Untitled Project”.</p>
-<p>TODO: Add figure</p>
-</section>
 <section id="package-install-and-load" class="level3">
 <h3 class="anchored" data-anchor-id="package-install-and-load">Package Install and Load</h3>
 <p>We will need to install the <code>tidyverse</code> package for this activity.</p>
 <p>Type the following into your console and press return to run the code. You will see a lot of red text, but usually that’s a good thing!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installing package into '/usr/local/lib/R/site-library'
+(as 'lib' is unspecified)</code></pre>
 </div>
-<p>TODO: Add figure</p>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installing package into '/usr/local/lib/R/site-library'
+(as 'lib' is unspecified)</code></pre>
+</div>
+</div>
 <p>Next, we will load the package so it’s ready to use:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>TODO: Add figure</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -287,7 +284,7 @@ What are R Packages?
 <p>Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like “expansion packs” on top of your basic R software.</p>
 <p>Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!</p>
 <p>We use the <code>library</code> command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.</p>
-<p>The “tidyverse” package that you loaded is useful for loading, wrangling, and exploring data.</p>
+<p>The “readr” package is helpful for loading data, and the “dplyr” package that you loaded is useful wrangling and exploring data.</p>
 </div>
 </div>
 </section>
@@ -296,7 +293,7 @@ What are R Packages?
 <p><strong>Differential expression</strong> refers to the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or “turned on”, while others are “turned off”. This expression difference is the basis of cell type diversity in multicellular organisms (like mice and humans). Because some diseases are thought to be the result of improper gene expression, researchers will use differential gene expression experiments to pinpoint the genes responsible for the disease symptoms.</p>
 <p>We’ll read in some data from the GEMs website. Run the following code in your console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -315,7 +312,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
 <p>Let’s take a look at the data you loaded into R. Type the following code into the console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -345,9 +342,9 @@ What do the column names mean?
 <li><p><strong>log2FoldChange</strong>: a measure of the change in gene expression for this gene between the ASD and control mice. A positive value indicates upregulation (increased expression), while a negative Log2FC indicates downregulation (decreased expression).</p></li>
 <li><p><strong>lfcSE</strong>: the standard error calculated for log2FoldChange.</p></li>
 <li><p><strong>stat</strong>: t-value calculated to determine if the log2FoldChange is significantly different from zero.</p></li>
+<li><p><strong>pvalue</strong>: the p-value for the log2FoldChange.</p></li>
+<li><p><strong>padj</strong>: the p-value, adjusted for multiple testing.</p></li>
 </ul>
-<p>-<strong>pvalue</strong>: the p-value for the log2FoldChange.</p>
-<p>-<strong>padj</strong>: the p-value, adjusted for multiple testing.</p>
 </div>
 </div>
 <p>In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:</p>
@@ -363,8 +360,8 @@ What do the column names mean?
 <p>The log2FoldChange value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice.</p>
 <p>We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>prefrontal_ascending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(prefrontal, log2FoldChange)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal_ascending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>prefrontal_ascending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(prefrontal, log2FoldChange)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal_ascending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   gene               baseMean log2FoldChange lfcSE   stat   pvalue     padj
@@ -380,8 +377,8 @@ What do the column names mean?
 <p>The genes at the top of this table have the most negative log2FoldChange values. Negative log2FoldChange values means a <strong>decreased expression</strong> (or, a downregulation in gene expression) in the experimental group versus the control group.</p>
 <p>We can use a similar command to look at the genes with the largest positive log2FoldChange. Positive log2FoldChange values indicate genes that are upregulated, or have <strong>increased expression</strong> in the experimental group versus the control group.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>prefrontal_descending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(prefrontal, <span class="fu">desc</span>(log2FoldChange))</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal_descending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>prefrontal_descending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(prefrontal, <span class="fu">desc</span>(log2FoldChange))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal_descending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -400,35 +397,8 @@ What do the column names mean?
 <p>We have identified the genes (by their geneID) that show the greatest differential expression between ASD and control mice. Now let’s find out what those genes do!</p>
 <p>The <a href="https://www.informatics.jax.org">Mouse Genome Informatics</a> database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found <a href="https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml">here</a>. We’ll reproduce some of it below.</p>
 <p>To look up information on a particular gene of interest, choose the “Genes” button.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_student-guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g357f7ed062e_9_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="To look up information on a particular gene of interest, choose the “Genes” button."></p>
-</figure>
-</div>
-</div>
-</div>
 <p>Next, type the gene ID into the “Search” bar up top. We’ll look up “ENSMUSG00000079516”.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_student-guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g3412c9eee7c_0_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Type the gene ID into the “Search” bar up top."></p>
-</figure>
-</div>
-</div>
-</div>
 <p>After you type the gene ID into the Search bar and hit enter, you should see a new page with basic information about the gene. Click on the gene symbol (in this example, Reg3a) to get more detailed information.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_student-guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g346083d4dc0_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Click on the gene symbol (in this example, Reg3a) to get more detailed information."></p>
-</figure>
-</div>
-</div>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -447,15 +417,6 @@ Tip
 </div>
 <p>On the new page that you open, details about the gene are organized into categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more.</p>
 <p>If you scroll down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section. Gene ontology refers to a common, controlled set of vocabulary and terms that researchers use when categorizing gene and protein function, biological processes, and location within the cell. Reg3a is categorized as a protein involved in carbohydrate derivative binding, signaling receptor activity, and signaling receptor binding. Biologically, the Reg3a protein helps with cell differentiation, cell population proliferation, the immune system, and responding to stimuli.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_student-guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g346083d4dc0_0_11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section."></p>
-</figure>
-</div>
-</div>
-</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -484,8 +445,8 @@ Check Your Knowledge
 <p>In the previous section, we identified genes with the highest and lowest log2FoldChange. However, this metric isn’t always the best indicator of differential expression. The adjusted p-value, or padj, is preferred over log2FoldChange for identifying statistically significant changes in gene expression because padj accounts for multiple testing. This is crucial when analyzing a large number of genes simultaneously, as each additional statistical test increases the risk of identifying a false positive. The adjusted p-value provides a statistical correction that minimizes this risk. log2FoldChange provides information about the magnitude of expression change, while padj indicates its statistical significance.</p>
 <p>Let’s create a list of all the genes that are differentially expressed between ASD and control mice using the <code>filter</code> command. We’ll set the padj threshold to 0.05.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>prefrontal_sig <span class="ot">&lt;-</span> <span class="fu">filter</span>(prefrontal, padj <span class="sc">&lt;</span> <span class="fl">0.05</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal_sig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>prefrontal_sig <span class="ot">&lt;-</span> <span class="fu">filter</span>(prefrontal, padj <span class="sc">&lt;</span> <span class="fl">0.05</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal_sig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -497,7 +458,7 @@ Check Your Knowledge
 5 ENSMUSG00000111968     25.0          -25.2  2.18 -11.6 5.79e-31 3.64e-27
 6 ENSMUSG00000080716     25.4          -25.2  2.18 -11.6 6.05e-31 3.64e-27</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(prefrontal_sig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(prefrontal_sig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 103   7</code></pre>
 </div>
@@ -507,7 +468,7 @@ Check Your Knowledge
 <h3 class="anchored" data-anchor-id="compare-differential-gene-expression-across-regions">Compare differential gene expression across regions</h3>
 <p>It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will need to load the differential expression data for the striatum.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -521,14 +482,14 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <p>Then we’ll filter out the gene in which we’re interested from each object. Let’s take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal <span class="ot">&lt;-</span> <span class="fu">filter</span>(prefrontal, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>reg3a_striatum <span class="ot">&lt;-</span> <span class="fu">filter</span>(striatum, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal <span class="ot">&lt;-</span> <span class="fu">filter</span>(prefrontal, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>reg3a_striatum <span class="ot">&lt;-</span> <span class="fu">filter</span>(striatum, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Finally, take a look at the differential expression of reg3a in each region.</p>
 <p>In the prefrontal cortex:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -538,7 +499,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <p>In the striatum:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>reg3a_striatum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>reg3a_striatum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   gene               baseMean log2FoldChange lfcSE  stat pvalue  padj
