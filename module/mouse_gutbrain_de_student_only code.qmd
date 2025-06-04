@@ -1,12 +1,6 @@
 ---
 title: "**Differential Expression and the Mouse Gut-Brain Axis**"
-format:
-    html: default
 ---
-
-```{r, include = FALSE}
-ottrpal::set_knitr_image_path()
-```
 
 This module introduces you to differential expression analyses using the R programming language.
 
@@ -56,22 +50,6 @@ You can find additional information about how the mouse is used in research [her
 3.  Why are mice useful as model organisms for human disease studies?
 :::
 
-### Start Posit Cloud
-
-In the next steps, we will explore the data from the publication described above.
-
-We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
-
-
-TODO: Add figure
-
-Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
-
-TODO: Add figure
-
-Rename your project "Differential Expression Mouse GutBrain" by clicking on "Untitled Project".
-
-TODO: Add figure
 
 ### Package Install and Load
 
@@ -79,19 +57,18 @@ We will need to install the `tidyverse` package for this activity.
 
 Type the following into your console and press return to run the code. You will see a lot of red text, but usually that's a good thing!
 
-```{r message=FALSE}
-install.packages("tidyverse")
+```{r}
+install.packages("readr")
+install.packages("dplyr")
 ```
-
-TODO: Add figure
 
 Next, we will load the package so it's ready to use:
 
 ```{r message=FALSE}
-library(tidyverse)
+library(readr)
+library(dplyr)
 ```
 
-TODO: Add figure
 
 ::: callout-tip
 ## What are R Packages?
@@ -102,7 +79,7 @@ Packages are developed by the R community and made available through repositorie
 
 We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
 
-The "tidyverse" package that you loaded is useful for loading, wrangling, and exploring data.
+The "readr" package is helpful for loading data, and the "dplyr" package that you loaded is useful wrangling and exploring data.
 :::
 
 ### Load Differential Expression Data
@@ -140,9 +117,9 @@ When working with someone else's data, it can be difficult to figure out what a 
 
 - **stat**: t-value calculated to determine if the log2FoldChange is significantly different from zero.
 
--**pvalue**: the p-value for the log2FoldChange.
+- **pvalue**: the p-value for the log2FoldChange.
 
--**padj**: the p-value, adjusted for multiple testing.
+- **padj**: the p-value, adjusted for multiple testing.
 :::
 
 In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:
@@ -185,21 +162,9 @@ The [Mouse Genome Informatics](https://www.informatics.jax.org) database that tr
 
 To look up information on a particular gene of interest, choose the "Genes" button.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "To look up information on a particular gene of interest, choose the “Genes” button.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g357f7ed062e_9_0#slide=id.g357f7ed062e_9_0")
-```
-
 Next, type the gene ID into the "Search" bar up top. We'll look up "ENSMUSG00000079516".
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Type the gene ID into the “Search” bar up top.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3412c9eee7c_0_1#slide=id.g3412c9eee7c_0_1")
-```
-
 After you type the gene ID into the Search bar and hit enter, you should see a new page with basic information about the gene. Click on the gene symbol (in this example, Reg3a) to get more detailed information.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Click on the gene symbol (in this example, Reg3a) to get more detailed information.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_0#slide=id.g346083d4dc0_0_0")
-```
 
 ::: callout-tip
 You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to "pseudogenes", "putative genes", and "lncRNA".
@@ -214,11 +179,6 @@ You might come across some unexpected terms when you search the MGI for your gen
 On the new page that you open, details about the gene are organized into categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. 
 
 If you scroll down the page, you can also examine the pathways and processes the gene product is involved in under the "gene ontology" section. Gene ontology refers to a common, controlled set of vocabulary and terms that researchers use when categorizing gene and protein function, biological processes, and location within the cell. Reg3a is categorized as a protein involved in carbohydrate derivative binding, signaling receptor activity, and signaling receptor binding. Biologically, the Reg3a protein helps with cell differentiation, cell population proliferation, the immune system, and responding to stimuli.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_11#slide=id.g346083d4dc0_0_11")
-```
-
 
 ::: callout-note
 ## Check Your Knowledge
