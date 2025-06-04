@@ -62,11 +62,6 @@ In the next steps, we will explore the data from the publication described above
 
 We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
 
-:::callout-tip
-What is cloud computing?
-
-
-:::
 
 TODO: Add figure
 
