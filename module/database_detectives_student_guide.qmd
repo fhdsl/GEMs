@@ -1,5 +1,5 @@
 ---
-title: "Using Public Genomic Databases - Student Guide"
+title: "Database Detectives: Exploring Public Genomic Databases Student Guide"
 format:
     html: default
 ---

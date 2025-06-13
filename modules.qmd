@@ -24,6 +24,6 @@ These modules span multiple class/lab periods.
 
 - [Differential Expression and the Mouse Gut-Brain Axis](module/mouse_gutbrain_de.html)
 
-- [Using Public Genomic Databases](module/public_databases.html)
+- [Database Detectives: Exploring Public Genomic Databases](module/database_detectives.html)
 
 
