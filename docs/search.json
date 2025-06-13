@@ -18,14 +18,14 @@
     "href": "modules.html#lab-period-modules",
     "title": "Modules",
     "section": "Lab-Period Modules",
-    "text": "Lab-Period Modules\nThese modules are intended to fill a lab period, about 1.5 - 3 hours.\n\nFamily Markers: Using Multiply-Affected Families to Identify Risk Genes\nGenomic Medicine: Polygenic Risk Score Calculation"
+    "text": "Lab-Period Modules\nThese modules are intended to fill a lab period, about 1.5 - 3 hours.\n\nDatabase Detectives: Exploring Public Genomic Databases\nFamily Markers: Using Multiply-Affected Families to Identify Risk Genes\nGenomic Medicine: Polygenic Risk Score Calculation"
   },
   {
     "objectID": "modules.html#research-modules",
     "href": "modules.html#research-modules",
     "title": "Modules",
     "section": "Research Modules",
-    "text": "Research Modules\nThese modules span multiple class/lab periods.\n\nDifferential Expression and the Mouse Gut-Brain Axis\nDatabase Detectives: Exploring Public Genomic Databases"
+    "text": "Research Modules\nThese modules span multiple class/lab periods.\n\nDifferential Expression and the Mouse Gut-Brain Axis"
   },
   {
     "objectID": "module/genomic_med_prs_student_guide.html#part-1",
@@ -291,7 +291,7 @@
     "href": "module/database_detectives.html#scientific-topics",
     "title": "Database Detectives: Exploring Public Genomic Databases",
     "section": "Scientific Topics",
-    "text": "Scientific Topics\nIn addition to working with public genomic databases, students are exposed to the following concepts:\n\nCurated Databases: databases where information is screened, validated, and organized by experts to ensure the data are accurate and reliable. Information from these databases is typically standardized and organized in a consistent way so it is easily accessible and searchable.\nHomologs and Orthologs: genes or proteins across species that are similar to each other due to having a common evolutionary origin. An ortholog is a special type of homolog, in which both genes also have similar functions within different species.\nModel Organisms: species used by researchers to study specific biological processes and diseases in an effort to understand how how the processes and diseases work in humans.\nGene Ontology: a bioinformatics initiative focused on standardizing the vocabulary and annotations researchers use to describe genes, proteins, and data about gene and protein function."
+    "text": "Scientific Topics\nIn addition to working with public genomic databases, students are exposed to the following concepts:\n\nCurated Databases: databases where information is screened, validated, and organized by experts to ensure the data are accurate and reliable. Information from these databases is typically standardized and organized in a consistent way so it is easily accessible and searchable.\nHomologs and Orthologs: genes or proteins across species that are similar to each other due to having a common evolutionary origin. An ortholog is a special type of homolog, in which both genes also have similar functions within different species.\nModel Organisms: species used by researchers to study specific biological processes and diseases in an effort to understand how how the processes and diseases work in humans.\nGene Ontology: a bioinformatics initiative focused on standardizing the vocabulary and annotations researchers use to describe genes, proteins, and data about gene and protein function.\nGenome Assembly: a version of the genome map."
   },
   {
     "objectID": "module/database_detectives.html#outline",
