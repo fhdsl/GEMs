@@ -232,7 +232,7 @@ Only ASD mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_
 
 Only control mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv)
 
-### Arranging dataset based on padj 
+#### Arranging dataset based on padj 
 
 You may be interested in identifying the genes that have been differentially expressed between your two groups (in this case, ASD mouse brains and control mouse brains). You can use the `arrange` command to sort the results to put the smallest padj values first.
 
@@ -241,7 +241,52 @@ asd_vs_c_sorted <- arrange(asd_vs_c, padj)
 head(asd_vs_c_sorted)
 ```
 
-### Creating a gene list
+
+#### Creating a volcano plot
+
+A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis. 
+
+We will first need to do a log transformation of the `padj` variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together.
+
+```{r}
+asd_vs_c$padj_trans <- -log10(asd_vs_c$padj)
+```
+
+Now, we just create a scatterplot. The code for this is kind of complicated, so you will want to paste the code below into your console.
+
+Here's the code for your basic volcano plot. `data` tells R what data to use, `x` tells R what the x-axis values should be, and `y` tells R what the y-axis values should be. Notice that we can just use the column names for `x` and `y`!
+
+```{r}
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans)) +
+         geom_point()
+```
+
+We can also colorcode the genes (points) which are significantly upregulated or downregulated. In order to do this, we will need to create a new column in our dataset that identifies whether a gene is upregulated in ASD-type mice, downregulated in ASD-type mice, or has the same regulation in ASD-type mice compared to control-type mice.
+
+```{r}
+
+```
+
+ADD CODE FOR PLOTTING AND EXPLAIN WHAT WAS ADDED ON TOP
+
+```{r}
+
+```
+
+Finally, we can label genes of interest in our plot.
+
+```{r}
+
+```
+
+Here's all the code we used to build a volcano plot in one place so that you can easily run it again.
+
+```{r}
+
+```
+
+
+#### Creating a gene list
 
 Next, you might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
 
@@ -253,8 +298,24 @@ head(asd_vs_c_sig)
 dim(asd_vs_c_sig)
 ```
 
+#### Plotting a single gene across regions
 
-### Compare differential gene expression across regions
+```{r, eval = F}
+plotAcrossRegions("ENSMUSG00000079516")
+```
+
+#### Running a gene set analysis
+
+You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
+
+```{r, eval = F}
+asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
+
+dotplot(asd_vs_c_clusters, showCategory=34, title="asd vs control in prefrontal cortex", font.size=10, label_format = 50)
+```
+
+
+#### Compare differential gene expression across regions
 
 It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
 
@@ -285,19 +346,4 @@ reg3a_striatum
 ```
 
 
-### Plotting a single gene across regions
-
-```{r, eval = F}
-plotAcrossRegions("ENSMUSG00000079516")
-```
-
-### Running a gene set analysis
-
-You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
-
-```{r, eval = F}
-asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
-
-dotplot(asd_vs_c_clusters, showCategory=34, title="a1 vs p1", font.size=10, label_format = 50)
-```
 
