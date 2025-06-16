@@ -198,7 +198,7 @@ hist(log10(gutbrain_genes$total_counts_trans), main="Transformed Log10 Read Coun
 
 You may want to look at the read count for a specific gene in your dataset. This can be done with the `filter` command. Let's look at the read counts for the reg3a gene, which we looked up earlier in the MGI database. The MGI gene ID is "ENSMUSG00000079516".
 
-```{r}
+```{r, eval=FALSE}
 filter(gutbrain_genes, gene == "ENSMUSG00000079516")
 ```
 
