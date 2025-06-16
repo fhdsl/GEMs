@@ -12,7 +12,7 @@ This module provides data for an independent project exploring differential expr
 
 This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment.
 
-### Background
+## Background
 _Autism spectrum disorder (ASD)_ is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it’s considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
 
 The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with ASD, while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. Researchers then bred the mice and looked for differences in gene expression in the brains of the offspring.
@@ -21,7 +21,7 @@ The _striatum_ is part of the brain involved in motor control and cognitive task
 
 The _prefrontal cortex_ is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
 
-#### The original study
+### The original study
 
 The original study, _Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice_, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the _gut-brain axis._
 
@@ -33,7 +33,7 @@ It is important to note that researchers are **not** suggesting that ASD is enti
 
 You can read the original research paper [here](https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1).
 
-#### The mouse as a model organism
+### The mouse as a model organism
 
 The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models (https://www.cshl.edu/of-mice-and-model-organisms/, https://fbresearch.org/medical-advances/nobel-prizes). 
 
@@ -41,123 +41,7 @@ So what makes mice such good model organisms for biomedical research? Well, firs
 
 You can find additional information about how the mouse is used in research [here!](https://www.google.com/url?q=https://www.informatics.jax.org/mgihome/other/homepage_IntroMouse.shtml)
 
-## Analysis
-
-Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
-Remember, the basic steps of your analysis are:
-
-1. Examine expression of your  gene of interest expressed in this dataset.
-
-2. Explore whether your gene of interest is differentially expressed between the experimental groups.
-
-3. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
-
-Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
-
-### Start Posit Cloud
-
-In the next steps, we will explore the data from the publication described above.
-
-We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
-
-<!-- callout about what cloud computing is ? -->
-
-TODO: Add figure
-
-Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
-
-TODO: Add figure
-
-Rename your project "Differential Expression Mouse GutBrain" by clicking on "Untitled Project".
-
-TODO: Add figure
-
-### Package Install and Load
-
-We will need to install the `tidyverse` package for this activity.
-
-Type the following into your console and press return to run the code. You will see a lot of red text, but usually that's a good thing!
-
-```{r message=FALSE}
-install.packages("tidyverse")
-```
-
-TODO: Add figure
-
-Next, we will load the package so it's ready to use:
-
-```{r message=FALSE}
-library(tidyverse)
-```
-
-TODO: Add figure
-
-::: {.callout-tip}
-## What are R Packages?
-
-Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like "expansion packs" on top of your basic R software.
-
-Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!
-
-We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
-
-The "tidyverse" package that you loaded is useful for loading, wrangling, and exploring data.
-:::
-
-### Loading the data
-
-You have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).
-
-Additionally, you can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, you also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.
-
-Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. We will do this using `read_csv`. Copy and paste this command into your console:
-
-```{r}
-asd_vs_c <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv")
-```
-
-Here are the URLs for all the possible comparisons you can examine with this dataset:
-
-**Comparing gene expression between ASD and control mice**
-
-Both brain regions: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv)
-
-Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv)
-
-Striatum only: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv)
-
-**Comparing gene expression between prefrontal cortex and striatum**
-
-All mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv)
-
-Only ASD mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv)
-
-Only control mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv)
-
-### Arranging dataset based on padj 
-
-You're mostly interested in identifying the genes that have been differentially expressed between your two groups (in this case, ASD mouse brains and control mouse brains). You can use the `arrange` command to sort the results to put the smallest padj values first.
-
-```{r}
-asd_vs_c_sorted <- arrange(asd_vs_c, padj)
-head(asd_vs_c_sorted)
-```
-
-### Creating a gene list
-
-Next, you might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
-
-This step requires some thought as to what you want to set as your padj threshold! Remember, you want to make sure you have a minimal number of false positive results, while also still keeping enough genes for future analyses.
-
-```{r}
-asd_vs_c_sig <- filter(asd_vs_c, padj < 0.05)
-head(asd_vs_c_sig)
-dim(asd_vs_c_sig)
-```
-
 ### Exploring genes of interest with the Mouse Genome Informatics database
-
-TODO: Change this so they look up geneIDs for their genes of interest??
 
 The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We’ll reproduce some of it below.
 
@@ -216,6 +100,113 @@ Directly underneath the “ontology” section is information about when the gen
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
 
+
+## Analysis
+
+Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
+Remember, the basic steps of your analysis are:
+
+1. Examine expression of your  gene of interest in this dataset.
+
+2. Explore whether your gene of interest is differentially expressed between the experimental groups.
+
+3. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
+
+Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
+
+### Package Install and Load
+
+We will need to install the `tidyverse` package for this activity.
+
+Type the following into the SciServer console and press return to run the code.
+
+```{r message=FALSE}
+install.packages("tidyverse")
+```
+
+Next, we will load the package so it's ready to use:
+
+```{r message=FALSE}
+library(tidyverse)
+```
+
+
+::: {.callout-tip}
+## What are R Packages?
+
+Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like "expansion packs" on top of your basic R software.
+
+Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!
+
+We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
+
+The "tidyverse" package that you loaded is useful for loading, wrangling, and exploring data.
+:::
+
+### Loading the gene expression count data 
+
+The first analyses you might want to do involve exploring dataset that shows how much each gene is expressed overall. This is the gene expression count dataset. 
+
+You can load this dataset into R using the following code:
+
+```{r}
+gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_total_counts.csv")
+```
+
+This dataset has two columns: the first one is called `GeneID` and has the MGI gene IDs, while the second one is called `total_counts` and contains the total number of times each gene was expressed across all the samples.
+
+### Loading the differential expression data
+
+You have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).
+
+Additionally, you can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, you also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.
+
+Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. We will do this using `read_csv`. Copy and paste this command into your console:
+
+```{r}
+asd_vs_c <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv")
+```
+
+Here are the URLs for all the possible comparisons you can examine with this dataset:
+
+**Comparing gene expression between ASD and control mice**
+
+Both brain regions: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv)
+
+Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv)
+
+Striatum only: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv)
+
+**Comparing gene expression between prefrontal cortex and striatum**
+
+All mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv)
+
+Only ASD mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv)
+
+Only control mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv)
+
+### Arranging dataset based on padj 
+
+You may be interested in identifying the genes that have been differentially expressed between your two groups (in this case, ASD mouse brains and control mouse brains). You can use the `arrange` command to sort the results to put the smallest padj values first.
+
+```{r}
+asd_vs_c_sorted <- arrange(asd_vs_c, padj)
+head(asd_vs_c_sorted)
+```
+
+### Creating a gene list
+
+Next, you might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
+
+This step requires some thought as to what you want to set as your padj threshold! Remember, you want to make sure you have a minimal number of false positive results, while also still keeping enough genes for future analyses.
+
+```{r}
+asd_vs_c_sig <- filter(asd_vs_c, padj < 0.05)
+head(asd_vs_c_sig)
+dim(asd_vs_c_sig)
+```
+
+
 ### Compare differential gene expression across regions
 
 It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
@@ -225,7 +216,6 @@ asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbra
 
 asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
 ```
-
 
 Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.
 
@@ -251,9 +241,7 @@ reg3a_striatum
 ### Plotting a single gene across regions
 
 ```{r, eval = F}
-TODO: Figure out the bespoke function `PlotAcrossRegions`
-plotAcrossRegions("FBgn0000003")
-ENSMUSG00000079516
+plotAcrossRegions("ENSMUSG00000079516")
 ```
 
 ### Running a gene set analysis
@@ -261,32 +249,8 @@ ENSMUSG00000079516
 You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
 
 ```{r, eval = F}
-TODO: Verify if `runClusterProfiler` is a bespoke function
-
 asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
 
 dotplot(asd_vs_c_clusters, showCategory=34, title="a1 vs p1", font.size=10, label_format = 50)
 ```
 
-EXTRA UNNEEDED CODE (possibly needed to replace a bespoke function to create a plot across regions):
-Since we're working with two separate datasets, let's add a column to each dataset so we know whether we're looking at expression data in prefrontal cortex or striatum. 
-
-```{r, eval = F}
-asd_vs_c_prefrontal$region <- "prefrontal_cortex"
-
-asd_vs_c_striatum$region <- "striatum"
-```
-
-If you take a look at both `asd_vs_c_prefrontal` and `asd_vs_c_striatum`, you'll see that the new column has been added on the rightmost side of the data.
-
-```{r, eval = F}
-head(asd_vs_c_prefrontal)
-head(asd_vs_c_striatum)
-```
-
-Next, we'll combine our two filtered datasets to make one single dataset that only contains expression of the reg3a gene. We'll combine the datasets with the `bind_rows`. This command essentially "glues" the two datasets together, one on top of the other.
-
-```{r, eval = F}
-reg3a <- bind_rows(reg3a_prefrontal, reg3a_striatum)
-head(reg3a)
-```
