@@ -149,6 +149,7 @@ rnaseq
 ROS
 RStudio
 scalable
+SciServer
 striatum
 Striatum
 subdir
