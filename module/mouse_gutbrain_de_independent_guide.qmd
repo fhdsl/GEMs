@@ -155,6 +155,53 @@ gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de
 
 This dataset has two columns: the first one is called `GeneID` and has the MGI gene IDs, while the second one is called `total_counts` and contains the total number of times each gene was expressed across all the samples.
 
+#### Examining count data
+
+When you first open the gene expression data, you want to verify that the data has loaded correctly. You can do this with the `head` and `tail` commands. Remember, `head` prints the first 6 rows of a dataset, while `tail` prints the last 6 rows.
+
+```{r}
+head(gutbrain_genes)
+tail(gutbrain_genes)
+```
+
+#### Summarizing data
+
+You may want to explore the distribution of your count data using `summary`. This command lets you see the mean, median, minimum, and maximum for each numeric column.
+
+```{r}
+summary(gutbrain_genes)
+```
+
+You can also find the total number of reads in the dataset.
+
+```{r}
+sum(gutbrain_genes$total_counts)
+```
+
+#### Plotting histograms and dealing with zero counts
+
+A histogram is a good way to visually explore the distribution of the read counts, as well as get an idea of how many genes have few or no reads. Use a log10 scale on the x-axis.
+
+```{r}
+hist(log10(gutbrain_genes$total_counts), main="Log10 Read Counts for Mouse RNA-seq sample")
+```
+
+You may choose to deal with zero-count genes by adding 0.1 to each count before the log10 transformation.
+
+```{r}
+gutbrain_genes$total_counts_trans <- gutbrain_genes$total_counts + 0.1
+
+hist(log10(gutbrain_genes$total_counts_trans), main="Transformed Log10 Read Counts for Mouse RNA-seq sample")
+```
+
+#### Looking at read count for a single gene
+
+You may want to look at the read count for a specific gene in your dataset. This can be done with the `filter` command. Let's look at the read counts for the reg3a gene, which we looked up earlier in the MGI database. The MGI gene ID is "ENSMUSG00000079516".
+
+```{r}
+filter(gutbrain_genes, gene == "ENSMUSG00000079516")
+```
+
 ### Loading the differential expression data
 
 You have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).
