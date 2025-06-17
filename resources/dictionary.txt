@@ -17,6 +17,7 @@ cheatsheet
 Clovis
 cloviscollege
 Coffman
+colorcode
 Conti
 Crohn's
 css
@@ -31,6 +32,7 @@ Dockerfile
 Dockerhub
 docx
 dotplot
+downregulated
 downregulation
 dplyr
 dropdown
