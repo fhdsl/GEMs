@@ -64,24 +64,11 @@ This example will look at prostate carcinoma, or prostate cancer. While prostate
 
 ### Mr. J's Data
 
-We're going to take gene screening data from an imaginary patient, Mr. J, to understand his risk. Mr. J has African ancestry, which will be important later.
+Mr. J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher in Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr. J know he won't make it to practice on Friday because he's getting a cancer screening. Curious, Mr. J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results. 
 
-Get the data at <https://genomicseducation.org/data/prs_ind_1.txt>. It should look like:
+The next time Mr. J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he's not sure if it has a genetic link.
 
-```
-rs7463326:G
-rs58235267:G
-rs74001374:C
-...
-```
-
-::: {.callout-tip}
-## What does the data mean?
-
-Each line of the data represents a variant location in the genome and individual person's version of that gene (allele). 
-
-For example, **rs7463326** is the variant. Mr. J has a "G" here. Other patients might have "A" or "C".
-:::
+We're going to take gene screening data for Mr. J, to understand his risk. Mr. J has African ancestry, which will be important later. First, let's explore a variant to learn more.
 
 ### Exploring Variants
 
@@ -141,7 +128,24 @@ Go to <https://prs.byu.edu/calculate_score.html> - this is the website we'll use
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_0#slide=id.g35f43ab35e5_0_0")
 ```
 
-Return to the data [here](https://genomicseducation.org/data/prs_ind_1.txt). Copy this data into the top part of the PRS calculator website.
+Get the data at <https://genomicseducation.org/data/prs_ind_1.txt>. It should look like:
+
+```
+rs7463326:G
+rs58235267:G
+rs74001374:C
+...
+```
+
+::: {.callout-tip}
+## What does the data mean?
+
+Each line of the data represents a variant location in the genome and individual person's version of that gene (allele). 
+
+For example, **rs7463326** is the variant. Mr. J has a "G" here. Other patients might have "A" or "C".
+:::
+
+Copy this data into the top part of the PRS calculator website.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_57#slide=id.g35f4636d8f5_0_57")
