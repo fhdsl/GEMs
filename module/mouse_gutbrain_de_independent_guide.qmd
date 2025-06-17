@@ -158,10 +158,10 @@ The first analyses you might want to do involve exploring dataset that shows how
 You can load this dataset into R using the following code:
 
 ```{r}
-gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_total_counts.csv")
+gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_counts.csv")
 ```
 
-This dataset has two columns: the first one is called `GeneID` and has the MGI gene IDs, while the second one is called `total_counts` and contains the total number of times each gene was expressed across all the samples.
+This dataset has 140 columns. The first one is called `GeneID` and has the MGI gene IDs. The next 138 have gene counts for each individual sample, while the last column is called `total_counts` and contains the total number of times each gene was expressed across all the samples.
 
 #### Examining count data
 
@@ -174,10 +174,10 @@ tail(gutbrain_genes)
 
 #### Summarizing data
 
-You may want to explore the distribution of your count data using `summary`. This command lets you see the mean, median, minimum, and maximum for each numeric column.
+You may want to explore the distribution of your count data using `summary`. This command lets you see the mean, median, minimum, and maximum for each numeric column. You can specify which column you'd like to get summary data for, or look at summary data for all the columns.
 
 ```{r}
-summary(gutbrain_genes)
+summary(gutbrain_genes$total_counts)
 ```
 
 You can also find the total number of reads in the dataset.
@@ -207,7 +207,7 @@ hist(log10(gutbrain_genes$total_counts_trans), main="Transformed Log10 Read Coun
 You may want to look at the read count for a specific gene in your dataset. This can be done with the `filter` command. Let's look at the read counts for the reg3a gene, which we looked up earlier in the MGI database. The MGI gene ID is "ENSMUSG00000079516".
 
 ```{r, eval=FALSE}
-filter(gutbrain_genes, gene == "ENSMUSG00000079516")
+filter(gutbrain_genes, GeneID == "ENSMUSG00000079516")
 ```
 
 ### Loading the differential expression data
