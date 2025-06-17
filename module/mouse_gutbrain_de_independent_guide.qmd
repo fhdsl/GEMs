@@ -268,15 +268,33 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans)) +
          geom_point()
 ```
 
-We can also colorcode the genes (points) which are significantly upregulated or downregulated. In order to do this, we will need to create a new column in our dataset that identifies whether a gene is upregulated in ASD-type mice, downregulated in ASD-type mice, or has the same regulation in ASD-type mice compared to control-type mice.
+We can also color code the genes (points) which are significantly upregulated or downregulated. In order to do this, we will need to create a new column in our dataset that identifies whether a gene is upregulated in ASD-type mice, downregulated in ASD-type mice, or has the same regulation in ASD-type mice compared to control-type mice.
+
+In this new column, we can decide the thresholds that a `log2FoldChange` value must meet in order to be considered upregulated or downregulated. We will consider genes to be upregulated if the log2fold change is greater than 0.6 and downregulated if it is less than -0.6. **You can change these thresholds to whatever makes sense for you.**
+
+We are also setting a significant p-value as less than 0.05 (but you can also change this based on your best judgment).
+
+We start by creating a new column called `diffexpressed` and setting everything to "NO" (as in "no expression differences between ASD-type and control-type mice"). We then specify the genes for which this column should be changed to "UP" or "DOWN" (based on `log2FoldChange` and `padj`).
 
 ```{r}
+
+asd_vs_c$diffexpressed <- "NO"
+
+asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange > 0.6 & asd_vs_c$padj < 0.05] <- "UP"
+
+asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange < -0.6 & asd_vs_c$padj < 0.05] <- "DOWN"
+
+head(asd_vs_c)
 
 ```
 
-ADD CODE FOR PLOTTING AND EXPLAIN WHAT WAS ADDED ON TOP
+Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the `diffexpressed` column (`col = diffexpressed`). We also add a line about the colors we want to use (`scale_color_manual`). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/).
 
 ```{r}
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed)) +
+  geom_point() +
+  scale_color_manual(values = c("turquoise", "grey", "gold"), 
+  labels = c("Downregulated", "Not significant", "Upregulated")) 
 
 ```
 
@@ -286,7 +304,7 @@ Finally, we can label genes of interest in our plot.
 
 ```
 
-Here's all the code we used to build a volcano plot in one place so that you can easily run it again.
+Here's all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).
 
 ```{r}
 
