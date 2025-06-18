@@ -288,7 +288,9 @@ head(asd_vs_c)
 
 ```
 
-Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the `diffexpressed` column (`col = diffexpressed`). We also add a line about the colors we want to use (`scale_color_manual`). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/).
+Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the `diffexpressed` column (`col = diffexpressed`). We also add a line about the colors we want to use (`scale_color_manual`). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command `labels` just creates the labels on the legend.
+
+You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/).
 
 ```{r}
 ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed)) +
@@ -298,10 +300,22 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
 
 ```
 
-Finally, we can label genes of interest in our plot.
+We can also label genes of interest in our plot. Let's label the Reg3a gene (the same one we looked up in the MGI database), as well as Pcdh12 (or protocadherin 12). The two gene IDs we need to know are ENSMUSG00000079516 and ENSMUSG00000024440.
+
+We will create another new column in our dataset. We will then tell R  In this new column, he genes in our list (Reg3a and Pchdh12) 
+
+```{r}
+df$delabel <- ifelse(df$gene_symbol %in% head(df[order(df$padj), "gene_symbol"], 30), df$gene_symbol, NA)
+```
+
+You may want to add a title to your plot, or change the axis titles. 
 
 ```{r}
 
+
+labs(color = 'Gene Expression', 
+       x = expression("log"[2]*"FC"), y = expression("-log"[10]*"p-value")) +
+  ggtitle("Differential Expression in Mouse Prefrontal Cortex")
 ```
 
 Here's all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).
