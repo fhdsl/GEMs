@@ -16,15 +16,31 @@ Many human diseases are caused by a combination of genetic and environmental fac
 
 ### Polygenic Inheritance
 
-When we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or Huntington's, are passed along via _Mendelian inheritance_. A mutation in a single gene is enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick. 
+When we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or cystic fibrosis, are passed along via _Mendelian inheritance_. A mutation in a single gene is sometimes enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick. For example, the large "V" in the image below indicate disease-causing variants for cystic fibrosis.
 
-<!-- Image of one allele being different -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g33d1509000c_54_4#slide=id.g33d1509000c_54_4")
+```
 
-However, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn't enough to cause problems, but when all of them show up together, the cellular processes aren't able to function normally.  This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called _polygenic inheritance_. Polygenic traits are quite common, and they aren't always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.
+However, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn't enough to cause problems, but when all of them show up together, the cellular processes aren't able to function normally. This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called _polygenic inheritance_. For example, coronary artery disease is complex. There are about 60 genomic variants across the genome that are more common in people with coronary artery disease.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g33d1509000c_54_14#slide=id.g33d1509000c_54_14")
+```
+
+Polygenic traits are quite common, and they aren't always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.
 
 ### Polygenic Risk Scores
 
-Researchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.
+Researchers have developed something called a “polygenic risk score” (PRS) to estimate **relative** risk for a disease based on genetics. First, researchers gather genomic data from many people, dividing them into two groups: those with versus those without the disease. They compare these groups to find genetic differences. These differences are used in the PRS calculation.
+
+We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have. 
+
+Typically, values greater than 1 mean that variant is more common in the disease group. Let's imagine we are helping a patient determine their risk for coronary artery disease. Their score is **1.0234**. We have to look at the score relative to others to determine the risk. This patient is in the 33rd percentile, meaning that they have higher risk than 33% of the people in the study population.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g33d1509000c_54_22#slide=id.g33d1509000c_54_22")
+```
 
 ::: {.callout-tip}
 ## Understanding Risk
@@ -32,11 +48,9 @@ Researchers have developed something called a “polygenic risk score” (PRS) t
 It’s always important to remember that **having a higher PRS does not guarantee someone will get a disease.**  Likewise, having a lower PRS does not guarantee someone is protected from a disease. 
 
 A PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person's overall risk for a disease by less than 5%.
+
+**A PRS is only as good as the reference database for a particular disease or trait.**
 :::
-
-At its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.
-
-Being able to calculate a PRS requires that scientists have an understanding of all the genes and noncoding regions of DNA that might contribute to developing (or not developing) a disease. **A PRS is only as good as the reference database for a particular disease or trait.**
 
 ### Genomic Ancestry
 
@@ -50,24 +64,11 @@ This example will look at prostate carcinoma, or prostate cancer. While prostate
 
 ### Mr. J's Data
 
-We're going to take gene screening data from an imaginary patient, Mr. J, to understand his risk. Mr. J has African ancestry, which will be important later.
+Mr. J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher in Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr. J know he won't make it to practice on Friday because he's getting a cancer screening. Curious, Mr. J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results. 
 
-Get the data at <https://genomicseducation.org/data/prs_ind_1.txt>. It should look like:
+The next time Mr. J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he's not sure if it has a genetic link.
 
-```
-rs7463326:G
-rs58235267:G
-rs74001374:C
-...
-```
-
-::: {.callout-tip}
-## What does the data mean?
-
-Each line of the data represents a variant location in the genome and individual person's version of that gene (allele). 
-
-For example, **rs7463326** is the variant. Mr. J has a "G" here. Other patients might have "A" or "C".
-:::
+We're going to take gene screening data for Mr. J, to understand his risk. Mr. J has African ancestry, which will be important later. First, let's explore a variant to learn more.
 
 ### Exploring Variants
 
@@ -127,7 +128,24 @@ Go to <https://prs.byu.edu/calculate_score.html> - this is the website we'll use
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_0#slide=id.g35f43ab35e5_0_0")
 ```
 
-Return to the data [here](https://genomicseducation.org/data/prs_ind_1.txt). Copy this data into the top part of the PRS calculator website.
+Get the data at <https://genomicseducation.org/data/prs_ind_1.txt>. It should look like:
+
+```
+rs7463326:G
+rs58235267:G
+rs74001374:C
+...
+```
+
+::: {.callout-tip}
+## What does the data mean?
+
+Each line of the data represents a variant location in the genome and individual person's version of that gene (allele). 
+
+For example, **rs7463326** is the variant. Mr. J has a "G" here. Other patients might have "A" or "C".
+:::
+
+Copy this data into the top part of the PRS calculator website.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_57#slide=id.g35f4636d8f5_0_57")

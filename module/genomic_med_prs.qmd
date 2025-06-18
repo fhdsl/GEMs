@@ -46,6 +46,8 @@ This activity will walk through how to use an online polygenic risk score (PRS) 
 
 -   Answer key available [here](https://docs.google.com/document/d/1m2-NKdFEEZDr39LCyr6GD7raf6T-ENs1GuHM74XxDZw/edit?usp=drive_link). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
 
+-   Additional Background on [PRS Scores](https://drive.google.com/file/d/1iIf2Ju3FQ-G6jltcZwaQ5uK8wdcifHy2/view?usp=sharing) and [Prostate Cancer](https://drive.google.com/file/d/1JRhhsvLnt3agfExkF59ay4fqExVCaYcR/view?usp=sharing).
+
 ## Scientific Topics
 
 This activity focuses on understanding genetic risk in human disease. Students will gain exposure to the following:
