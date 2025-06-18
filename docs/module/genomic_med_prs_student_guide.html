@@ -184,13 +184,42 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>Many human diseases are caused by a combination of genetic and environmental factors. For most of these diseases, it can be difficult to predict what combination will lead to a person developing disease. Instead, physicians and researchers talk about the increased risk - essentially, we know what factors increase the likelihood of developing diseases, even if we can’t predict with 100% certainty whether someone might get sick.</p>
 <section id="polygenic-inheritance" class="level3">
 <h3 class="anchored" data-anchor-id="polygenic-inheritance">Polygenic Inheritance</h3>
-<p>When we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or Huntington’s, are passed along via <em>Mendelian inheritance</em>. A mutation in a single gene is enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick.</p>
-<!-- Image of one allele being different -->
-<p>However, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn’t enough to cause problems, but when all of them show up together, the cellular processes aren’t able to function normally. This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called <em>polygenic inheritance</em>. Polygenic traits are quite common, and they aren’t always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.</p>
+<p>When we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or cystic fibrosis, are passed along via <em>Mendelian inheritance</em>. A mutation in a single gene is sometimes enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick. For example, the large “V” in the image below indicate disease-causing variants for cystic fibrosis.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g33d1509000c_54_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>However, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn’t enough to cause problems, but when all of them show up together, the cellular processes aren’t able to function normally. This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called <em>polygenic inheritance</em>. For example, coronary artery disease is complex. There are about 60 genomic variants across the genome that are more common in people with coronary artery disease.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g33d1509000c_54_14.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Polygenic traits are quite common, and they aren’t always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.</p>
 </section>
 <section id="polygenic-risk-scores" class="level3">
 <h3 class="anchored" data-anchor-id="polygenic-risk-scores">Polygenic Risk Scores</h3>
-<p>Researchers have developed something called a “polygenic risk score” (PRS) to estimate how likely a person might be to develop a disease based on their genetics.</p>
+<p>Researchers have developed something called a “polygenic risk score” (PRS) to estimate <strong>relative</strong> risk for a disease based on genetics. First, researchers gather genomic data from many people, dividing them into two groups: those with versus those without the disease. They compare these groups to find genetic differences. These differences are used in the PRS calculation.</p>
+<p>We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.</p>
+<p>Typically, values greater than 1 mean that variant is more common in the disease group. Let’s imagine we are helping a patient determine their risk for coronary artery disease. Their score is <strong>1.0234</strong>. We have to look at the score relative to others to determine the risk. This patient is in the 33rd percentile, meaning that they have higher risk than 33% of the people in the study population.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g33d1509000c_54_22.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -203,10 +232,9 @@ Understanding Risk
 <div class="callout-body-container callout-body">
 <p>It’s always important to remember that <strong>having a higher PRS does not guarantee someone will get a disease.</strong> Likewise, having a lower PRS does not guarantee someone is protected from a disease.</p>
 <p>A PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person’s overall risk for a disease by less than 5%.</p>
+<p><strong>A PRS is only as good as the reference database for a particular disease or trait.</strong></p>
 </div>
 </div>
-<p>At its core, the polygenic risk score is a simple idea. If multiple variants can contribute to the development of a disease, other variants might also provide protection from a disease. We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.</p>
-<p>Being able to calculate a PRS requires that scientists have an understanding of all the genes and noncoding regions of DNA that might contribute to developing (or not developing) a disease. <strong>A PRS is only as good as the reference database for a particular disease or trait.</strong></p>
 </section>
 <section id="genomic-ancestry" class="level3">
 <h3 class="anchored" data-anchor-id="genomic-ancestry">Genomic Ancestry</h3>
@@ -219,26 +247,9 @@ Understanding Risk
 </section>
 <section id="mr.-js-data" class="level3">
 <h3 class="anchored" data-anchor-id="mr.-js-data">Mr.&nbsp;J’s Data</h3>
-<p>We’re going to take gene screening data from an imaginary patient, Mr.&nbsp;J, to understand his risk. Mr.&nbsp;J has African ancestry, which will be important later.</p>
-<p>Get the data at <a href="https://genomicseducation.org/data/prs_ind_1.txt" class="uri">https://genomicseducation.org/data/prs_ind_1.txt</a>. It should look like:</p>
-<pre><code>rs7463326:G
-rs58235267:G
-rs74001374:C
-...</code></pre>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-What does the data mean?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Each line of the data represents a variant location in the genome and individual person’s version of that gene (allele).</p>
-<p>For example, <strong>rs7463326</strong> is the variant. Mr.&nbsp;J has a “G” here. Other patients might have “A” or “C”.</p>
-</div>
-</div>
+<p>Mr.&nbsp;J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher in Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr.&nbsp;J know he won’t make it to practice on Friday because he’s getting a cancer screening. Curious, Mr.&nbsp;J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results.</p>
+<p>The next time Mr.&nbsp;J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he’s not sure if it has a genetic link.</p>
+<p>We’re going to take gene screening data for Mr.&nbsp;J, to understand his risk. Mr.&nbsp;J has African ancestry, which will be important later. First, let’s explore a variant to learn more.</p>
 </section>
 <section id="exploring-variants" class="level3">
 <h3 class="anchored" data-anchor-id="exploring-variants">Exploring Variants</h3>
@@ -327,7 +338,26 @@ Check Your Knowledge
 </div>
 </div>
 </div>
-<p>Return to the data <a href="https://genomicseducation.org/data/prs_ind_1.txt">here</a>. Copy this data into the top part of the PRS calculator website.</p>
+<p>Get the data at <a href="https://genomicseducation.org/data/prs_ind_1.txt" class="uri">https://genomicseducation.org/data/prs_ind_1.txt</a>. It should look like:</p>
+<pre><code>rs7463326:G
+rs58235267:G
+rs74001374:C
+...</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What does the data mean?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Each line of the data represents a variant location in the genome and individual person’s version of that gene (allele).</p>
+<p>For example, <strong>rs7463326</strong> is the variant. Mr.&nbsp;J has a “G” here. Other patients might have “A” or “C”.</p>
+</div>
+</div>
+<p>Copy this data into the top part of the PRS calculator website.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -648,6 +678,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

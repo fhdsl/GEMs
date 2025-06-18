@@ -193,6 +193,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </ul></li>
 <li><p>Google Slides presentation available for borrowing images <a href="https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?usp=sharing">here</a>.</p></li>
 <li><p>Answer key available <a href="https://docs.google.com/document/d/1m2-NKdFEEZDr39LCyr6GD7raf6T-ENs1GuHM74XxDZw/edit?usp=drive_link">here</a>. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.</p></li>
+<li><p>Additional Background on <a href="https://drive.google.com/file/d/1iIf2Ju3FQ-G6jltcZwaQ5uK8wdcifHy2/view?usp=sharing">PRS Scores</a> and <a href="https://drive.google.com/file/d/1JRhhsvLnt3agfExkF59ay4fqExVCaYcR/view?usp=sharing">Prostate Cancer</a>.</p></li>
 </ul>
 </section>
 <section id="scientific-topics" class="level2">
@@ -323,6 +324,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
