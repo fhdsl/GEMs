@@ -395,7 +395,7 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
 
 #### Creating a gene list
 
-Next, you might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
+You might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
 
 This step requires some thought as to what you want to set as your padj threshold! Remember, you want to make sure you have a minimal number of false positive results, while also still keeping enough genes for future analyses.
 
@@ -405,15 +405,9 @@ head(asd_vs_c_sig)
 dim(asd_vs_c_sig)
 ```
 
-#### Plotting a single gene across regions
-
-```{r, eval = F}
-plotAcrossRegions("ENSMUSG00000079516")
-```
-
 #### Running a gene set analysis
 
-You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
+You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)
 
 ```{r, eval = F}
 asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
@@ -421,7 +415,7 @@ asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
 dotplot(asd_vs_c_clusters, showCategory=34, title="asd vs control in prefrontal cortex", font.size=10, label_format = 50)
 ```
 
-#### Compare differential gene expression across regions
+#### Compare differential gene expression of a SINGLE GENE across regions
 
 It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets.
 
@@ -452,3 +446,11 @@ In the striatum:
 ```{r}
 reg3a_striatum
 ```
+
+You can create a histogram of the gene expression counts for this gene using the special `plotAcrossRegions` command. (NOTE: this is only available in SciServer. Please see below for alternate code to create this in other R environments.)
+
+```{r, eval = F}
+plotAcrossRegions("ENSMUSG00000079516")
+```
+
+#### Compare differential gene expression of a GENE SET across regions
