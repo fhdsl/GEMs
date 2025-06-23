@@ -276,6 +276,11 @@ We are also setting a significant p-value as less than 0.05 (but you can also ch
 
 We start by creating a new column called `diffexpressed` and setting everything to "NO" (as in "no expression differences between ASD-type and control-type mice"). We then specify the genes for which this column should be changed to "UP" or "DOWN" (based on `log2FoldChange` and `padj`).
 
+To recap:
+A gene is labeled "UP" if its log2FoldChange value is greater than 0.6 _and_ its adjusted p-value is less than 0.05.
+
+A gene is labeled "DOWN" if its log2FoldChange value is less than -0.6 _and_ its adjusted p-value is less than 0.05.
+
 ```{r}
 
 asd_vs_c$diffexpressed <- "NO"
@@ -297,24 +302,64 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
   geom_point() +
   scale_color_manual(values = c("turquoise", "grey", "gold"), 
   labels = c("Downregulated", "Not significant", "Upregulated")) 
-
 ```
 
 We can also label genes of interest in our plot. Let's label the Reg3a gene (the same one we looked up in the MGI database), as well as Pcdh12 (or protocadherin 12). The two gene IDs we need to know are ENSMUSG00000079516 and ENSMUSG00000024440.
 
-We will create another new column in our dataset. We will then tell R  In this new column, he genes in our list (Reg3a and Pchdh12) 
+We will create another new column in our dataset. We will then tell R  In this new column, the genes in our list (Reg3a and Pcdh12) are named, which everything else will have a missing name. When we remake the volcano plot, R will _only_ label those points that do not have missing names in the `gene_label` column.
+
+This is going to require a little bit of R trickery and something called an "ifelse" statement.
+
+In R, an "ifelse" statement tells R to do one of two things. If the condition stated right after `ifelse(` is true, then R should do the second thing in the statement. If the condition is not true, then R should do the third thing.
+
+In our command, R is going through the `asd_vs_c` row by row. For each row, we are telling R to first check whether the geneID of that row is "ENSMUSG00000079516". If it is, then R will fill in the `gene_label` column with the gene symbol "Reg3a". If it is not, R moves onto the next part of our command.
+
+We nested an "ifelse" loop. When R moves onto this part of the command, it's now checking to see if the geneID for the row is "ENSMUSG00000024440". If it is, then R fills in the `gene_label` column with the gene symbol "Pcdh12". If it is not, R fills in the `gene_label` column with "NA", which basically means the information for this column is missing.
 
 ```{r}
-df$delabel <- ifelse(df$gene_symbol %in% head(df[order(df$padj), "gene_symbol"], 30), df$gene_symbol, NA)
+asd_vs_c$gene_label <- ifelse(
+  asd_vs_c$gene == "ENSMUSG00000079516", "Reg3a",
+  
+  ifelse(
+  asd_vs_c$gene == "ENSMUSG00000024440", "Pcdh12", NA 
+  ))
 ```
 
-You may want to add a title to your plot, or change the axis titles. 
+Great! You can check to see what the new column `gene_label` looks like by using the `head` command.
 
 ```{r}
+head(asd_vs_c)
+```
 
+Now we just need to remake our volcano plot and add some to code that tells R to label the points we're interested in. The command `label = gene_label` goes right after the code that tells R how to color the points. We also need to add something at the end of our code that tells R to put the labels on top of the plot that we've made. That's the `+
+  geom_text_repel(max.overlaps = Inf)` command.
+  
+In order for this command to work, we do need to install and load a new library called `ggrepel`.
 
-labs(color = 'Gene Expression', 
-       x = expression("log"[2]*"FC"), y = expression("-log"[10]*"p-value")) +
+```{r}
+install.packages('ggrepel')
+library(ggrepel)
+```
+
+Excellent. Now that we have installed and loaded this package (which you only need to do once for each R session!), we can run the code to create the volcano plot. Remember, we added `label = gene_label` to tell R to add labels to the points, and `geom_text_repel(max.overlaps = Inf)` to tell R to put the labels on top of the plot so we can see them.
+
+```{r}
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed, label = gene_label)) +
+  geom_point() +
+  scale_color_manual(values = c("turquoise", "grey", "gold"), 
+  labels = c("Downregulated", "Not significant", "Upregulated")) +
+  geom_text_repel(max.overlaps = Inf)
+
+```
+
+You may want to add a title to your plot. This can be done  with the `ggtitle` command.
+
+```{r}
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed, label = gene_label)) +
+  geom_point() +
+  scale_color_manual(values = c("turquoise", "grey", "gold"), 
+  labels = c("Downregulated", "Not significant", "Upregulated")) +
+  geom_text_repel(max.overlaps = Inf) +
   ggtitle("Differential Expression in Mouse Prefrontal Cortex")
 ```
 
