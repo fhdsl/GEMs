@@ -366,7 +366,31 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
 Here's all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).
 
 ```{r}
+#log transform the padj values so the y-axis is formatted for plotting
+asd_vs_c$padj_trans <- -log10(asd_vs_c$padj)
 
+#Create the diffexpressed column so that we can color the upregulated and downregulated genes on the plot
+asd_vs_c$diffexpressed <- "NO"
+
+asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange > 0.6 & asd_vs_c$padj < 0.05] <- "UP"
+
+asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange < -0.6 & asd_vs_c$padj < 0.05] <- "DOWN"
+
+#Create the gene_label column so that we can label individual points
+asd_vs_c$gene_label <- ifelse(
+  asd_vs_c$gene == "ENSMUSG00000079516", "Reg3a",
+  
+  ifelse(
+  asd_vs_c$gene == "ENSMUSG00000024440", "Pcdh12", NA 
+  ))
+
+#Make the final plot
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed, label = gene_label)) +
+  geom_point() +
+  scale_color_manual(values = c("turquoise", "grey", "gold"), 
+  labels = c("Downregulated", "Not significant", "Upregulated")) +
+  geom_text_repel(max.overlaps = Inf) +
+  ggtitle("Differential Expression in Mouse Prefrontal Cortex")
 ```
 
 #### Creating a gene list
