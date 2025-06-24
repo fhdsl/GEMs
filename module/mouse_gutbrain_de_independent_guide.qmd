@@ -253,6 +253,11 @@ head(asd_vs_c_sorted)
 
 A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "Example of a volcano plot.", out.width = '100%'}
+ottrpal::include_slide("
+https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36a8fbcc346_0_0#slide=id.g36a8fbcc346_0_0")
+```
+
 We will first need to do a log transformation of the `padj` variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together.
 
 ```{r}
@@ -447,10 +452,19 @@ In the striatum:
 reg3a_striatum
 ```
 
-You can create a histogram of the gene expression counts for this gene using the special `plotAcrossRegions` command. (NOTE: this is only available in SciServer. Please see below for alternate code to create this in other R environments.)
+You can create a histogram of the gene expression counts for this gene using the special `plotAcrossRegions` command. (NOTE: this is only available in SciServer.)
 
 ```{r, eval = F}
 plotAcrossRegions("ENSMUSG00000079516")
 ```
 
+
 #### Compare differential gene expression of a GENE SET across regions
+
+We can also look at the differential gene expression of a set of genes at once! This is usually done by creating a **heatmap**.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Example of a heatmap.", out.width = '100%'}
+ottrpal::include_slide("
+https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36a8fbcc346_0_0#slide=id.g36a8fbcc346_0_0")
+```
+
