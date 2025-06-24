@@ -459,12 +459,13 @@ plotAcrossRegions("ENSMUSG00000079516")
 ```
 
 
-#### Compare differential gene expression of a GENE SET across regions
+#### Visualize differential gene expression of MULTIPLE GENES across regions
 
-We can also look at the differential gene expression of a set of genes at once! This is usually done by creating a **heatmap**.
+We can also look at the differential gene expression of a set of genes at once! This is usually done by creating a **heatmap**. In RNA-seq analyses, we usually put individual samples on the x-axis and normalized gene counts on the y-axis.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Example of a heatmap.", out.width = '100%'}
 ottrpal::include_slide("
-https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36a8fbcc346_0_0#slide=id.g36a8fbcc346_0_0")
+https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d40c657bf_0_4#slide=id.g33d40c657bf_0_4")
 ```
+
 
