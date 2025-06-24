@@ -312,9 +312,9 @@ This is going to require a little bit of R trickery and something called an "ife
 
 In R, an "ifelse" statement tells R to do one of two things. If the condition stated right after `ifelse(` is true, then R should do the second thing in the statement. If the condition is not true, then R should do the third thing.
 
-In our command, R is going through the `asd_vs_c` row by row. For each row, we are telling R to first check whether the geneID of that row is "ENSMUSG00000079516". If it is, then R will fill in the `gene_label` column with the gene symbol "Reg3a". If it is not, R moves onto the next part of our command.
+In our command, R is going through the `asd_vs_c` row by row. For each row, we are telling R to first check whether the geneID of that row is "ENSMUSG00000079516". If it is, then R will fill in the `gene_label` column with the gene symbol "Reg3a". If it is not, R moves onto the next part of our command, which is a second (or nested) ifelse loop.
 
-We nested an "ifelse" loop. When R moves onto this part of the command, it's now checking to see if the geneID for the row is "ENSMUSG00000024440". If it is, then R fills in the `gene_label` column with the gene symbol "Pcdh12". If it is not, R fills in the `gene_label` column with "NA", which basically means the information for this column is missing.
+When R moves onto this second ifelse loop, it's now checking to see if the geneID for the row is "ENSMUSG00000024440". If it is, then R fills in the `gene_label` column with the gene symbol "Pcdh12". If it is not, R fills in the `gene_label` column with "NA", which basically means the information for this column is missing.
 
 ```{r}
 asd_vs_c$gene_label <- ifelse(
