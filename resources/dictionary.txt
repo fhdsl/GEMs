@@ -19,6 +19,7 @@ cloviscollege
 Coffman
 colorcode
 Conti
+Creb
 Crohn's
 css
 csv
@@ -28,6 +29,7 @@ cwrigh
 Danio
 DAO
 dat
+Dlg
 Dockerfile
 Dockerhub
 docx
@@ -51,6 +53,7 @@ favicon
 FBgn
 FC
 FlyBase
+foldchange
 FoldChange
 frameshift
 fredhutch
@@ -59,6 +62,7 @@ GEMs
 GenBank
 GeneCards
 geneID
+GeneID
 geneIDs
 GH
 Github
@@ -91,6 +95,7 @@ lightgreen
 lncRNA
 MAF
 MalaCards
+Mapk
 McKusick
 MGI
 mgihome
@@ -114,6 +119,7 @@ nlm
 NMDA
 NMDAR
 noncoding
+Nrcam
 nucleotides
 nvcc
 NVCC
@@ -155,6 +161,7 @@ ROS
 RStudio
 scalable
 SciServer
+Sema
 striatum
 Striatum
 subdir
