@@ -77,7 +77,7 @@ After you type the gene ID into the Search bar and hit enter, you should see a n
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_0#slide=id.g346083d4dc0_0_0")
 ```
 
-::: {dictionary}
+::: {tip}
 You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to "pseudogenes", "putative genes", and "lncRNA".
 
 **pseudogene**: This is a stretch of DNA that looks like a gene but doesn't actually code for any protein products. It's essentially a copy of a gene that contains mutations that prevent translation into a protein product. The mutations can include partial deletions, missing promoters, missing start codons, premature stop codons, frameshift mutations, or missing introns. Any of these are enough to result in a pseudogene.
@@ -161,7 +161,7 @@ You can load this dataset into R using the following code:
 gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_counts.csv")
 ```
 
-This dataset has 140 columns. The first one is called `GeneID` and has the MGI gene IDs. The next 138 have gene counts for each individual sample, while the last column is called `total_counts` and contains the total number of times each gene was expressed across all the samples.
+This dataset has 140 columns. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs) and the last column ("total_counts", which is the sum across all mice). 
 
 #### Examining count data
 
@@ -204,7 +204,7 @@ hist(log10(gutbrain_genes$total_counts_trans), main="Transformed Log10 Read Coun
 
 #### Looking at read count for a single gene
 
-You may want to look at the read count for a specific gene in your dataset. This can be done with the `filter` command. Let's look at the read counts for the reg3a gene, which we looked up earlier in the MGI database. The MGI gene ID is "ENSMUSG00000079516".
+You may want to look at the read count for a specific gene in your dataset. This can be done with the `filter` command. Let's look at the read counts for the reg3a gene, across all mice. Remember, this is the gene we looked up earlier in the MGI database. The Ensembl gene ID is "ENSMUSG00000079516".
 
 ```{r, eval=FALSE}
 filter(gutbrain_genes, GeneID == "ENSMUSG00000079516")
@@ -275,7 +275,17 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans)) +
 
 We can also color code the genes (points) which are significantly upregulated or downregulated. In order to do this, we will need to create a new column in our dataset that identifies whether a gene is upregulated in ASD-type mice, downregulated in ASD-type mice, or has the same regulation in ASD-type mice compared to control-type mice.
 
-In this new column, we can decide the thresholds that a `log2FoldChange` value must meet in order to be considered upregulated or downregulated. We will consider genes to be upregulated if the log2fold change is greater than 0.6 and downregulated if it is less than -0.6. **You can change these thresholds to whatever makes sense for you.**
+In this new column, we can decide the thresholds that a `log2FoldChange` value must meet in order to be considered upregulated or downregulated. We will consider genes to be upregulated if the log2fold change is greater than 0.6 and downregulated if it is less than -0.6. **You can change these thresholds to whatever makes sense for you.** 
+
+::: {tip}
+log2foldchange is just a representation of a ratio, so the sign indicates the direction of regulation. It's important to remember which group is your comparison group! 
+
+For example, if you are look at regulation in group A compared to group B, you might have a log2foldchange value of 1 (indicating the gene is expressed twice as much in A as it is in B).
+
+However, if you are looking at regulation in group B compared to group A, the log2foldchange value will be -1 (because the gene is expressed half as much in B as it is in A).
+
+The comparison group matters with ratios!
+:::
 
 We are also setting a significant p-value as less than 0.05 (but you can also change this based on your best judgment).
 
