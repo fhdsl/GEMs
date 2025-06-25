@@ -13,21 +13,31 @@ This module provides data for an independent project exploring differential expr
 This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment.
 
 ## Background
-_Autism spectrum disorder (ASD)_ is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it’s considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
+
+*Autism spectrum disorder (ASD)* is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it's considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
 
 The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice.
 
-The _striatum_ is part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions (often called executive functions). It lies deep within the center of the brain and is composed of both gray matter (which can be thought of as the “processing” part of brain tissue) and white matter (which is the brain structure involved in transporting messages); the combination of the gray and white matter give this region of the brain a striped appearance, resulting in the name “striatum”. The striatum is involved in both reflexive movement - that is, involuntary movement that happens as an immediate response to a stimulus - and slower, planned movement like walking. In Parkinson’s disease, some patients experience degeneration of parts of the striatum, resulting in spastic, uncontrollable movement.
+```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the striatum in the human brain.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d1434cdd1_12_0#slide=id.g33d1434cdd1_12_0")
+```
 
-The _prefrontal cortex_ is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
+The *striatum* is part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions (often called executive functions). It lies deep within the center of the brain and is composed of both gray matter (which can be thought of as the "processing" part of brain tissue) and white matter (which is the brain structure involved in transporting messages); the combination of the gray and white matter give this region of the brain a striped appearance, resulting in the name "striatum". The striatum is involved in both reflexive movement - that is, involuntary movement that happens as an immediate response to a stimulus - and slower, planned movement like walking. In Parkinson's disease, some patients experience degeneration of parts of the striatum, resulting in spastic, uncontrollable movement.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the prefrontal cortex in the human brain.", out.width = '100%'}
+ottrpal::include_slide("
+https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d1434cdd1_12_10#slide=id.g33d1434cdd1_12_10")
+```
+
+The *prefrontal cortex* is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
 
 ### The original study
 
-The original study, _Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice_, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the _gut-brain axis._
+The original study, *Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice*, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the *gut-brain axis.*
 
 In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with ASD, while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. They discovered that colonization with gut microbiota was enough to induce ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.
 
-:::{.callout-note}
+::: callout-note
 It is important to note that researchers are **not** suggesting that ASD is entirely induced by gut bacteria. There is a strong genetic component to ASD. Scientists have known for years that there are **both genetic and environmental components** to the development or severity of **some** ASD symptoms. This research explores one possible environmental component.
 :::
 
@@ -35,23 +45,27 @@ You can read the original research paper [here](https://www.cell.com/cell/fullte
 
 ### The mouse as a model organism
 
-The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models (https://www.cshl.edu/of-mice-and-model-organisms/, https://fbresearch.org/medical-advances/nobel-prizes). 
+The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models (https://www.cshl.edu/of-mice-and-model-organisms/, https://fbresearch.org/medical-advances/nobel-prizes).
 
-So what makes mice such good model organisms for biomedical research? Well, first, they’re economical and relatively easy to keep. Since mice are small, they don’t require a huge amount of space or food. They also have fast reproductive cycles, so researchers can study multiple generations within only a few years. Most importantly, though, mice and humans are both mammals and have about 85% of their protein-coding genome in common. As a result, mouse physiology is quite similar to human physiology. The mouse circulatory, reproductive, digestive, hormonal, and nervous systems are frequently used as models to study how humans grow, age, and develop chronic diseases. They are particularly important model organisms for cancer research and neuroscience. 
+```{r, fig.align='center', echo = FALSE, fig.alt= "The mouse is the most commonly-used model organism in labs.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d1434cdd1_12_19#slide=id.g33d1434cdd1_12_19")
+```
+
+So what makes mice such good model organisms for biomedical research? Well, first, they're economical and relatively easy to keep. Since mice are small, they don't require a huge amount of space or food. They also have fast reproductive cycles, so researchers can study multiple generations within only a few years. Most importantly, though, mice and humans are both mammals and have about 85% of their protein-coding genome in common. As a result, mouse physiology is quite similar to human physiology. The mouse circulatory, reproductive, digestive, hormonal, and nervous systems are frequently used as models to study how humans grow, age, and develop chronic diseases. They are particularly important model organisms for cancer research and neuroscience.
 
 You can find additional information about how the mouse is used in research [here!](https://www.google.com/url?q=https://www.informatics.jax.org/mgihome/other/homepage_IntroMouse.shtml)
 
 ### Exploring genes of interest with the Mouse Genome Informatics database
 
-The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We’ll reproduce some of it below.
+The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We'll reproduce some of it below.
 
-To look up information on a particular gene of interest, choose the “Genes” button.
+To look up information on a particular gene of interest, choose the "Genes" button.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "To look up information on a particular gene of interest, choose the “Genes” button.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g357f7ed062e_9_0#slide=id.g357f7ed062e_9_0")
 ```
 
-Next, type the gene ID into the “Search” bar up top. We’ll look up “ENSMUSG00000079516”.
+Next, type the gene ID into the "Search" bar up top. We'll look up "ENSMUSG00000079516".
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Type the gene ID into the “Search” bar up top.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3412c9eee7c_0_1#slide=id.g3412c9eee7c_0_1")
@@ -63,17 +77,17 @@ After you type the gene ID into the Search bar and hit enter, you should see a n
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_0#slide=id.g346083d4dc0_0_0")
 ```
 
-:::{dictionary}
-You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to “pseudogenes”, “putative genes”, and “lncRNA”.
+::: {tip}
+You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to "pseudogenes", "putative genes", and "lncRNA".
 
-**pseudogene**: This is a stretch of DNA that looks like a gene but doesn’t actually code for any protein products. It’s essentially a copy of a gene that contains mutations that prevent translation into a protein product. The mutations can include partial deletions, missing promoters, missing start codons, premature stop codons, frameshift mutations, or missing introns. Any of these are enough to result in a pseudogene.
+**pseudogene**: This is a stretch of DNA that looks like a gene but doesn't actually code for any protein products. It's essentially a copy of a gene that contains mutations that prevent translation into a protein product. The mutations can include partial deletions, missing promoters, missing start codons, premature stop codons, frameshift mutations, or missing introns. Any of these are enough to result in a pseudogene.
 
 **putative gene**: This is a DNA segment that is believed to be a gene, but its function and protein product has not been confirmed. They are frequently identified based on the presence of an Open Reading Frame. Putative genes are not given names until they become confirmed genes.
 
-**lncRNA**: This stands for “long non-coding RNA”. lncRNA is a type of RNA molecule that is transcribed from DNA but does not code for proteins. These RNA molecules are at least 200-500 nucleotides long and play roles in various biological processes, like gene regulation.
+**lncRNA**: This stands for "long non-coding RNA". lncRNA is a type of RNA molecule that is transcribed from DNA but does not code for proteins. These RNA molecules are at least 200-500 nucleotides long and play roles in various biological processes, like gene regulation.
 :::
 
-On the new page that you open, details about the gene are organized into familiar categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you’ll need to expand the “homology” section yourself.
+On the new page that you open, details about the gene are organized into familiar categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you'll need to expand the "homology" section yourself.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "To look at gene homology, you’ll need to expand the “homology” section yourself.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_5#slide=id.g346083d4dc0_0_5")
@@ -85,32 +99,27 @@ Once this section is expanded, you can find information about possible human hom
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_8#slide=id.g346083d4dc0_0_8")
 ```
 
-
-If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section. Clicking on the blue squares takes you to a page with more information about how that particular gene was assigned to a pathway or molecular process.
+If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the "gene ontology" section. Clicking on the blue squares takes you to a page with more information about how that particular gene was assigned to a pathway or molecular process.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_11#slide=id.g346083d4dc0_0_11")
 ```
 
-
-Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.
-
+Directly underneath the "ontology" section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
 
-
 ## Analysis
 
-Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project.
-Remember, the basic steps of your analysis are:
+Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project. Remember, the basic steps of your analysis are:
 
-1. Examine expression of your  gene of interest in this dataset.
+1.  Examine expression of your gene of interest in this dataset.
 
-2. Explore whether your gene of interest is differentially expressed between the experimental groups.
+2.  Explore whether your gene of interest is differentially expressed between the experimental groups.
 
-3. Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
+3.  Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
 
 Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
 
@@ -130,8 +139,7 @@ Next, we will load the package so it's ready to use:
 library(tidyverse)
 ```
 
-
-::: {.callout-tip}
+::: callout-tip
 ## What are R Packages?
 
 Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like "expansion packs" on top of your basic R software.
@@ -143,17 +151,17 @@ We use the `library` command to load and attach packages to the R environment. T
 The "tidyverse" package that you loaded is useful for loading, wrangling, and exploring data.
 :::
 
-### Loading the gene expression count data 
+### Loading the gene expression count data
 
-The first analyses you might want to do involve exploring dataset that shows how much each gene is expressed overall. This is the gene expression count dataset. 
+The first analyses you might want to do involve exploring dataset that shows how much each gene is expressed overall. This is the gene expression count dataset.
 
 You can load this dataset into R using the following code:
 
 ```{r}
-gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_total_counts.csv")
+gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_counts.csv")
 ```
 
-This dataset has two columns: the first one is called `GeneID` and has the MGI gene IDs, while the second one is called `total_counts` and contains the total number of times each gene was expressed across all the samples.
+This dataset has 140 columns. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs) and the last column ("total_counts", which is the sum across all mice). 
 
 #### Examining count data
 
@@ -166,10 +174,10 @@ tail(gutbrain_genes)
 
 #### Summarizing data
 
-You may want to explore the distribution of your count data using `summary`. This command lets you see the mean, median, minimum, and maximum for each numeric column.
+You may want to explore the distribution of your count data using `summary`. This command lets you see the mean, median, minimum, and maximum for each numeric column. You can specify which column you'd like to get summary data for, or look at summary data for all the columns.
 
 ```{r}
-summary(gutbrain_genes)
+summary(gutbrain_genes$total_counts)
 ```
 
 You can also find the total number of reads in the dataset.
@@ -196,10 +204,10 @@ hist(log10(gutbrain_genes$total_counts_trans), main="Transformed Log10 Read Coun
 
 #### Looking at read count for a single gene
 
-You may want to look at the read count for a specific gene in your dataset. This can be done with the `filter` command. Let's look at the read counts for the reg3a gene, which we looked up earlier in the MGI database. The MGI gene ID is "ENSMUSG00000079516".
+You may want to look at the read count for a specific gene in your dataset. This can be done with the `filter` command. Let's look at the read counts for the reg3a gene, across all mice. Remember, this is the gene we looked up earlier in the MGI database. The Ensembl gene ID is "ENSMUSG00000079516".
 
 ```{r, eval=FALSE}
-filter(gutbrain_genes, gene == "ENSMUSG00000079516")
+filter(gutbrain_genes, GeneID == "ENSMUSG00000079516")
 ```
 
 ### Loading the differential expression data
@@ -218,21 +226,21 @@ Here are the URLs for all the possible comparisons you can examine with this dat
 
 **Comparing gene expression between ASD and control mice**
 
-Both brain regions: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv)
+Both brain regions: <https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv>
 
-Prefrontal cortex only:  [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv)
+Prefrontal cortex only: <https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv>
 
-Striatum only: [https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv)
+Striatum only: <https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv>
 
 **Comparing gene expression between prefrontal cortex and striatum**
 
-All mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv)
+All mice: <https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv>
 
-Only ASD mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv)
+Only ASD mice: <https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv>
 
-Only control mice: [https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv)
+Only control mice: <https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv>
 
-#### Arranging dataset based on padj 
+#### Arranging dataset based on padj
 
 You may be interested in identifying the genes that have been differentially expressed between your two groups (in this case, ASD mouse brains and control mouse brains). You can use the `arrange` command to sort the results to put the smallest padj values first.
 
@@ -241,10 +249,14 @@ asd_vs_c_sorted <- arrange(asd_vs_c, padj)
 head(asd_vs_c_sorted)
 ```
 
-
 #### Creating a volcano plot
 
-A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis. 
+A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Example of a volcano plot.", out.width = '100%'}
+ottrpal::include_slide("
+https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36a8fbcc346_0_0#slide=id.g36a8fbcc346_0_0")
+```
 
 We will first need to do a log transformation of the `padj` variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together.
 
@@ -261,34 +273,144 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans)) +
          geom_point()
 ```
 
-We can also colorcode the genes (points) which are significantly upregulated or downregulated. In order to do this, we will need to create a new column in our dataset that identifies whether a gene is upregulated in ASD-type mice, downregulated in ASD-type mice, or has the same regulation in ASD-type mice compared to control-type mice.
+We can also color code the genes (points) which are significantly upregulated or downregulated. In order to do this, we will need to create a new column in our dataset that identifies whether a gene is upregulated in ASD-type mice, downregulated in ASD-type mice, or has the same regulation in ASD-type mice compared to control-type mice.
+
+In this new column, we can decide the thresholds that a `log2FoldChange` value must meet in order to be considered upregulated or downregulated. We will consider genes to be upregulated if the log2fold change is greater than 0.6 and downregulated if it is less than -0.6. **You can change these thresholds to whatever makes sense for you.** 
+
+::: {tip}
+log2foldchange is just a representation of a ratio, so the sign indicates the direction of regulation. It's important to remember which group is your comparison group! 
+
+For example, if you are look at regulation in group A compared to group B, you might have a log2foldchange value of 1 (indicating the gene is expressed twice as much in A as it is in B).
+
+However, if you are looking at regulation in group B compared to group A, the log2foldchange value will be -1 (because the gene is expressed half as much in B as it is in A).
+
+The comparison group matters with ratios!
+:::
+
+We are also setting a significant p-value as less than 0.05 (but you can also change this based on your best judgment).
+
+We start by creating a new column called `diffexpressed` and setting everything to "NO" (as in "no expression differences between ASD-type and control-type mice"). We then specify the genes for which this column should be changed to "UP" or "DOWN" (based on `log2FoldChange` and `padj`).
+
+To recap:
+A gene is labeled "UP" if its log2FoldChange value is greater than 0.6 _and_ its adjusted p-value is less than 0.05.
+
+A gene is labeled "DOWN" if its log2FoldChange value is less than -0.6 _and_ its adjusted p-value is less than 0.05.
 
 ```{r}
 
+asd_vs_c$diffexpressed <- "NO"
+
+asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange > 0.6 & asd_vs_c$padj < 0.05] <- "UP"
+
+asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange < -0.6 & asd_vs_c$padj < 0.05] <- "DOWN"
+
+head(asd_vs_c)
+
 ```
 
-ADD CODE FOR PLOTTING AND EXPLAIN WHAT WAS ADDED ON TOP
+Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the `diffexpressed` column (`col = diffexpressed`). We also add a line about the colors we want to use (`scale_color_manual`). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command `labels` just creates the labels on the legend.
+
+You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/).
 
 ```{r}
-
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed)) +
+  geom_point() +
+  scale_color_manual(values = c("turquoise", "grey", "gold"), 
+  labels = c("Downregulated", "Not significant", "Upregulated")) 
 ```
 
-Finally, we can label genes of interest in our plot.
+We can also label genes of interest in our plot. Let's label the Reg3a gene (the same one we looked up in the MGI database), as well as Pcdh12 (or protocadherin 12). The two gene IDs we need to know are ENSMUSG00000079516 and ENSMUSG00000024440.
+
+We will create another new column in our dataset. We will then tell R  In this new column, the genes in our list (Reg3a and Pcdh12) are named, which everything else will have a missing name. When we remake the volcano plot, R will _only_ label those points that do not have missing names in the `gene_label` column.
+
+This is going to require a little bit of R trickery and something called an "ifelse" statement.
+
+In R, an "ifelse" statement tells R to do one of two things. If the condition stated right after `ifelse(` is true, then R should do the second thing in the statement. If the condition is not true, then R should do the third thing.
+
+In our command, R is going through the `asd_vs_c` row by row. For each row, we are telling R to first check whether the geneID of that row is "ENSMUSG00000079516". If it is, then R will fill in the `gene_label` column with the gene symbol "Reg3a". If it is not, R moves onto the next part of our command, which is a second (or nested) ifelse loop.
+
+When R moves onto this second ifelse loop, it's now checking to see if the geneID for the row is "ENSMUSG00000024440". If it is, then R fills in the `gene_label` column with the gene symbol "Pcdh12". If it is not, R fills in the `gene_label` column with "NA", which basically means the information for this column is missing.
 
 ```{r}
-
+asd_vs_c$gene_label <- ifelse(
+  asd_vs_c$gene == "ENSMUSG00000079516", "Reg3a",
+  
+  ifelse(
+  asd_vs_c$gene == "ENSMUSG00000024440", "Pcdh12", NA 
+  ))
 ```
 
-Here's all the code we used to build a volcano plot in one place so that you can easily run it again.
+Great! You can check to see what the new column `gene_label` looks like by using the `head` command.
 
 ```{r}
+head(asd_vs_c)
+```
+
+Now we just need to remake our volcano plot and add some to code that tells R to label the points we're interested in. The command `label = gene_label` goes right after the code that tells R how to color the points. We also need to add something at the end of our code that tells R to put the labels on top of the plot that we've made. That's the `+
+  geom_text_repel(max.overlaps = Inf)` command.
+  
+In order for this command to work, we do need to install and load a new library called `ggrepel`.
+
+```{r}
+install.packages('ggrepel')
+library(ggrepel)
+```
+
+Excellent. Now that we have installed and loaded this package (which you only need to do once for each R session!), we can run the code to create the volcano plot. Remember, we added `label = gene_label` to tell R to add labels to the points, and `geom_text_repel(max.overlaps = Inf)` to tell R to put the labels on top of the plot so we can see them.
+
+```{r}
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed, label = gene_label)) +
+  geom_point() +
+  scale_color_manual(values = c("turquoise", "grey", "gold"), 
+  labels = c("Downregulated", "Not significant", "Upregulated")) +
+  geom_text_repel(max.overlaps = Inf)
 
 ```
 
+You may want to add a title to your plot. This can be done  with the `ggtitle` command.
+
+```{r}
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed, label = gene_label)) +
+  geom_point() +
+  scale_color_manual(values = c("turquoise", "grey", "gold"), 
+  labels = c("Downregulated", "Not significant", "Upregulated")) +
+  geom_text_repel(max.overlaps = Inf) +
+  ggtitle("Differential Expression in Mouse Prefrontal Cortex")
+```
+
+Here's all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).
+
+```{r}
+#log transform the padj values so the y-axis is formatted for plotting
+asd_vs_c$padj_trans <- -log10(asd_vs_c$padj)
+
+#Create the diffexpressed column so that we can color the upregulated and downregulated genes on the plot
+asd_vs_c$diffexpressed <- "NO"
+
+asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange > 0.6 & asd_vs_c$padj < 0.05] <- "UP"
+
+asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange < -0.6 & asd_vs_c$padj < 0.05] <- "DOWN"
+
+#Create the gene_label column so that we can label individual points
+asd_vs_c$gene_label <- ifelse(
+  asd_vs_c$gene == "ENSMUSG00000079516", "Reg3a",
+  
+  ifelse(
+  asd_vs_c$gene == "ENSMUSG00000024440", "Pcdh12", NA 
+  ))
+
+#Make the final plot
+ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed, label = gene_label)) +
+  geom_point() +
+  scale_color_manual(values = c("turquoise", "grey", "gold"), 
+  labels = c("Downregulated", "Not significant", "Upregulated")) +
+  geom_text_repel(max.overlaps = Inf) +
+  ggtitle("Differential Expression in Mouse Prefrontal Cortex")
+```
 
 #### Creating a gene list
 
-Next, you might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
+You might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
 
 This step requires some thought as to what you want to set as your padj threshold! Remember, you want to make sure you have a minimal number of false positive results, while also still keeping enough genes for future analyses.
 
@@ -298,15 +420,9 @@ head(asd_vs_c_sig)
 dim(asd_vs_c_sig)
 ```
 
-#### Plotting a single gene across regions
-
-```{r, eval = F}
-plotAcrossRegions("ENSMUSG00000079516")
-```
-
 #### Running a gene set analysis
 
-You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results.
+You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)
 
 ```{r, eval = F}
 asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
@@ -314,10 +430,9 @@ asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
 dotplot(asd_vs_c_clusters, showCategory=34, title="asd vs control in prefrontal cortex", font.size=10, label_format = 50)
 ```
 
+#### Compare differential gene expression of a SINGLE GENE across regions
 
-#### Compare differential gene expression across regions
-
-It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets. 
+It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets.
 
 ```{r}
 asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv")
@@ -336,14 +451,61 @@ reg3a_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000079516")
 Finally, take a look at the differential expression of reg3a in each region.
 
 In the prefrontal cortex:
+
 ```{r}
 reg3a_prefrontal
 ```
 
 In the striatum:
+
 ```{r}
 reg3a_striatum
 ```
 
+You can create a histogram of the gene expression counts for this gene using the special `plotAcrossRegions` command. (NOTE: this is only available in SciServer.)
+
+```{r, eval = F}
+plotAcrossRegions("ENSMUSG00000079516")
+```
 
 
+#### Visualize differential gene expression of MULTIPLE GENES across regions
+
+We can also look at the differential gene expression of a set of genes at once! This is usually done by creating a **heatmap**. In RNA-seq analyses, we usually put individual samples on the x-axis and normalized gene counts on the y-axis.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Example of a heatmap.", out.width = '100%'}
+ottrpal::include_slide("
+https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d40c657bf_0_4#slide=id.g33d40c657bf_0_4")
+```
+
+When creating heatmaps, we want to work with a dataset that includes normalized gene expression data for each gene. We loaded a dataset like this above that we called `gutbrain_genes`. If you don't have an object in your environment called this, scroll back up to the "**Loading the gene expression count data**" section and run the code again.
+
+The dataset you loaded has expression data for 55,421 different genes, which is too many to visualize. (You can try, but R will usually throw an error if you do.) In general, though, we are mostly interested in looking at the visualization of a particular group of genes, or a gene set. 
+
+Let's say we have identified 6 mouse genes () that have been linked to the development of motor neurons. We're interested in whether these genes show differential gene expression between the striatum and the prefrontal cortex. We can use the `filter` command to pull out normalized gene expression data for just these six genes.
+
+These are the genes (with gene IDs) that we're including in our gene set:
+
+Sema3a: ENSMUSG00000028883
+Mapk8: ENSMUSG00000021936
+Nrcam: ENSMUSG00000020598
+Dlg4: ENSMUSG00000020886
+Slit1: ENSMUSG00000025020
+Creb1: ENSMUSG00000025958
+
+First, create a vector that contains these gene IDs. (You can replace the gene IDs with the ones for your genes of interest, but make sure you use Ensembl gene IDs! They should all start with "ENSMUSG".)
+
+```{r}
+gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", "ENSMUSG00000020886", "ENSMUSG00000025020", "ENSMUSG00000025958")
+```
+
+Now we simply filter the `gutbrain_genes` dataset so that we only keep the rows for the gene IDs in our gene set. Remember, we want to use the `filter` command.
+
+```{r}
+gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$...1 %in% gene_set)
+
+head(gutbrain_motor)
+
+```
+
+We also want to filter out some of the samples. Because we are interested in the gene expression of these six genes in the striatum compared to the prefrontal cortex, we want to control for any possible differences caused by the sample coming from an ASD-type mouse vs a control-type mouse. 
