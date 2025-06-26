@@ -12,6 +12,14 @@ This module provides data for an independent project exploring differential expr
 
 This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment.
 
+The basic steps of your analysis are:
+
+1.  Identify mouse genes of interest for your project.
+
+2.  Characterize the gene expression of your genes of interest in the dataset.
+
+3.  Explore differential gene expression in the control vs experimental group.
+
 ## What sorts of questions can I investigate?
 
 The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Additionally, there are two different types of mice. Some of the mice are an Autism Spectrum Disorder-type (see below for details), while others are control-type.
@@ -33,7 +41,7 @@ The *prefrontal cortex* is the part of the brain that is primarily in charge of 
 
 *Autism spectrum disorder (ASD)* is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it's considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
 
-::: {tip}
+::: callout-tip
 # Deciding on your research question
 
 Even though this dataset is from a single study, there are still lots of options for independent research questions. If you're not sure where to start, let's start broadly and think about the types of questions that are suitable for this data.
@@ -71,9 +79,17 @@ So what makes mice such good model organisms for biomedical research? Well, firs
 
 You can find additional information about how the mouse is used in research [here!](https://www.google.com/url?q=https://www.informatics.jax.org/mgihome/other/homepage_IntroMouse.shtml)
 
-### Exploring genes of interest with the Mouse Genome Informatics database
+## Identifying genes of interest with the Mouse Genome Informatics database
 
 The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We'll reproduce some of it below.
+
+::: callout-tip
+# Picking your genes
+
+The MGI allows you to look up information about genes you're interested in but don't know much about. This is particularly helpful if you are interested in genes that were identified in other research organisms or in previous studies. You could also start by looking up a human disease and associated human risk genes, then identify the homologous mouse genes.
+:::
+
+### Looking up a mouse gene
 
 To look up information on a particular gene of interest, choose the "Genes" button.
 
@@ -93,7 +109,7 @@ After you type the gene ID into the Search bar and hit enter, you should see a n
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_0#slide=id.g346083d4dc0_0_0")
 ```
 
-::: {tip}
+::: callout-note
 You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to "pseudogenes", "putative genes", and "lncRNA".
 
 **pseudogene**: This is a stretch of DNA that looks like a gene but doesn't actually code for any protein products. It's essentially a copy of a gene that contains mutations that prevent translation into a protein product. The mutations can include partial deletions, missing promoters, missing start codons, premature stop codons, frameshift mutations, or missing introns. Any of these are enough to result in a pseudogene.
@@ -127,17 +143,11 @@ Directly underneath the "ontology" section is information about when the gene is
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
 
+#### Looking up a human disease
+TODO: add details and screenshots!
+
 ## Analysis
 
-Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project. Remember, the basic steps of your analysis are:
-
-1.  Examine expression of your gene of interest in this dataset.
-
-2.  Explore whether your gene of interest is differentially expressed between the experimental groups.
-
-3.  Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.
-
-Below, we've included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.
 
 ### Package Install and Load
 
