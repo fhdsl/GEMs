@@ -250,7 +250,7 @@ gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de
 
 This dataset has 140 columns. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs) and the last column ("total_counts", which is the sum across all mice). 
 
-#### Examining count data
+#### Exploring and summarizing count data
 
 When you first open the gene expression data, you want to verify that the data has loaded correctly. You can do this with the `head` and `tail` commands. Remember, `head` prints the first 6 rows of a dataset, while `tail` prints the last 6 rows.
 
@@ -258,8 +258,6 @@ When you first open the gene expression data, you want to verify that the data h
 head(gutbrain_genes)
 tail(gutbrain_genes)
 ```
-
-#### Summarizing data
 
 You may want to explore the distribution of your count data using `summary`. This command lets you see the mean, median, minimum, and maximum for each numeric column. You can specify which column you'd like to get summary data for, or look at summary data for all the columns.
 
