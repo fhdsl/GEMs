@@ -52,6 +52,7 @@ et
 favicon
 FBgn
 FC
+fibromyalgia
 FlyBase
 foldchange
 FoldChange
