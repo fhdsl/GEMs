@@ -385,9 +385,36 @@ Are you mostly interested in how gene expression differs between the two brain r
 Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental genes? These questions and others can be explored using the **ASD-type mice and control-type mice** comparisons.
 :::
 
+#### Ranking the genes by log2FoldChange
+
+The `log2FoldChange` value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. Genes with no difference in expression between groups have `log2FoldChange` values close to zero. Negative log2FoldChange values means a **decreased expression** (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have **increased expression** in the experimental group versus the control group.
+
+We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:
+
+```{r}
+asd_v_c_ascending <- arrange(asd_v_c, log2FoldChange)
+head(asd_v_c_ascending)
+```
+
+The genes at the top of this table have the most negative log2FoldChange values and are downregulated in ASD-type mice. 
+
+We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in ASD-type mice.
+
+```{r}
+asd_v_c_descending <- arrange(asd_v_c, desc(log2FoldChange))
+head(asd_v_c_descending)
+```
+
+When we're interpreting the `log2FoldChange`, remember that you'll need to do a little bit of math. A `log2FoldChange` value of 1 is a fold change value of 2 (2^1 = 2). Similarly, a `log2FoldChange` value of 4 is a fold change value of 8 (2^4 = 8)
+
+If there is a two fold **increase** (fold change = 2, `log2FoldChange` = 1) between groups A and B, then the expression in group A is twice as big as the expression in group B.
+
+If there is a two fold **decrease** (fold change = 0.5, `log2FoldChange` = -1) between groups A and B, then the expression in group A is half as big as the expression in group B (or B is twice as big as A).
+
 #### Arranging dataset based on padj
 
-You may be interested in identifying the genes that have been differentially expressed between your two groups (in this case, ASD mouse brains and control mouse brains). You can use the `arrange` command to sort the results to put the smallest padj values first.
+Maybe you also want to arrange the genes by whether the estimated differential expression is significant. Instead of `log2FoldChange`, you will want to look at `padj`. You can use the `arrange` command to sort the results to put the smallest padj values first.
+
 
 ```{r}
 asd_vs_c_sorted <- arrange(asd_vs_c, padj)
