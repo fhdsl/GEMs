@@ -392,8 +392,8 @@ The `log2FoldChange` value gives us an idea of which genes show the greatest dif
 We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:
 
 ```{r}
-asd_v_c_ascending <- arrange(asd_v_c, log2FoldChange)
-head(asd_v_c_ascending)
+asd_vs_c_ascending <- arrange(asd_vs_c, log2FoldChange)
+head(asd_vs_c_ascending)
 ```
 
 The genes at the top of this table have the most negative log2FoldChange values and are downregulated in ASD-type mice. 
@@ -401,8 +401,8 @@ The genes at the top of this table have the most negative log2FoldChange values 
 We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in ASD-type mice.
 
 ```{r}
-asd_v_c_descending <- arrange(asd_v_c, desc(log2FoldChange))
-head(asd_v_c_descending)
+asd_vs_c_descending <- arrange(asd_vs_c, desc(log2FoldChange))
+head(asd_vs_c_descending)
 ```
 
 When we're interpreting the `log2FoldChange`, remember that you'll need to do a little bit of math. A `log2FoldChange` value of 1 is a fold change value of 2 (2^1 = 2). Similarly, a `log2FoldChange` value of 4 is a fold change value of 8 (2^4 = 8)
@@ -495,21 +495,18 @@ We can also label genes of interest in our plot. Let's label the Reg3a gene (the
 
 We will create another new column in our dataset. We will then tell R  In this new column, the genes in our list (Reg3a and Pcdh12) are named, which everything else will have a missing name. When we remake the volcano plot, R will _only_ label those points that do not have missing names in the `gene_label` column.
 
-This is going to require a little bit of R trickery and something called an "ifelse" statement.
+This is going to require a little bit of R trickery and something called a "case_when" statement.
 
-In R, an "ifelse" statement tells R to do one of two things. If the condition stated right after `ifelse(` is true, then R should do the second thing in the statement. If the condition is not true, then R should do the third thing.
+In R, an "case_when" statement tells R to do something only when a condition is true. In our command, R is going through the `asd_vs_c` row by row. For each row, we are telling R to first check whether the geneID of that row is "ENSMUSG00000079516". If it is, then R will fill in the `gene_label` column with the gene symbol "Reg3a". If it is not, R moves onto the next part of our command.
 
-In our command, R is going through the `asd_vs_c` row by row. For each row, we are telling R to first check whether the geneID of that row is "ENSMUSG00000079516". If it is, then R will fill in the `gene_label` column with the gene symbol "Reg3a". If it is not, R moves onto the next part of our command, which is a second (or nested) ifelse loop.
-
-When R moves onto this second ifelse loop, it's now checking to see if the geneID for the row is "ENSMUSG00000024440". If it is, then R fills in the `gene_label` column with the gene symbol "Pcdh12". If it is not, R fills in the `gene_label` column with "NA", which basically means the information for this column is missing.
+When R moves onto this second command, it's now checking to see if the geneID for the row is "ENSMUSG00000024440". If it is, then R fills in the `gene_label` column with the gene symbol "Pcdh12". If it is not, R moves to the third command in the `case_when` statement. The final line tells R to fill in the `gene_label` column with "NA" for any row that didn't match the previous commands. This will tell R in the future that the information for this column is missing.
 
 ```{r}
-asd_vs_c$gene_label <- ifelse(
-  asd_vs_c$gene == "ENSMUSG00000079516", "Reg3a",
-  
-  ifelse(
-  asd_vs_c$gene == "ENSMUSG00000024440", "Pcdh12", NA 
-  ))
+asd_vs_c$gene_label <- case_when(
+  asd_vs_c$gene == "ENSMUSG00000079516" ~ "Reg3a",
+  asd_vs_c$gene == "ENSMUSG00000024440" ~ "Pcdh12",
+  TRUE ~ NA_character_
+)
 ```
 
 Great! You can check to see what the new column `gene_label` looks like by using the `head` command.
@@ -564,12 +561,11 @@ asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange > 0.6 & asd_vs_c$padj < 0.05] <- 
 asd_vs_c$diffexpressed[asd_vs_c$log2FoldChange < -0.6 & asd_vs_c$padj < 0.05] <- "DOWN"
 
 #Create the gene_label column so that we can label individual points
-asd_vs_c$gene_label <- ifelse(
-  asd_vs_c$gene == "ENSMUSG00000079516", "Reg3a",
-  
-  ifelse(
-  asd_vs_c$gene == "ENSMUSG00000024440", "Pcdh12", NA 
-  ))
+asd_vs_c$gene_label <- case_when(
+  asd_vs_c$gene == "ENSMUSG00000079516" ~ "Reg3a",
+  asd_vs_c$gene == "ENSMUSG00000024440" ~ "Pcdh12",
+  TRUE ~ NA_character_
+)
 
 #Make the final plot
 ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpressed, label = gene_label)) +
