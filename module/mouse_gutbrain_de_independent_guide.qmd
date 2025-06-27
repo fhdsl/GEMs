@@ -297,7 +297,7 @@ You may want to look at the read count for a specific gene in your dataset. This
 filter(gutbrain_genes, GeneID == "ENSMUSG00000079516")
 ```
 
-#### Visualize gene counts of MULTIPLE GENES across regions
+#### Visualize gene counts of multiple genes across groups
 
 We can also look at the differential gene expression of a set of genes at once! This is usually done by creating a **heatmap**. In RNA-seq analyses, we usually put individual samples on the x-axis and normalized gene counts on the y-axis.
 
@@ -335,7 +335,6 @@ Now we simply filter the `gutbrain_genes` dataset so that we only keep the rows 
 gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
 
 head(gutbrain_motor)
-
 ```
  
 we're not quite ready to make our heat map yet. Because we are interested in the gene expression of these six genes in the striatum compared to the prefrontal cortex, we want to control for any possible differences caused by the sample coming from an ASD-type mouse vs a control-type mouse. So we also want to select a subset of the samples so that we're only using those samples from control-type mice.
@@ -421,7 +420,40 @@ asd_vs_c_sorted <- arrange(asd_vs_c, padj)
 head(asd_vs_c_sorted)
 ```
 
-#### Creating a volcano plot
+#### Compare differential gene expression of a single across groups
+
+It might be interesting to look at the expression of a gene across our two brain regions. To do this, we will first load the region-specific datasets.
+
+```{r}
+asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv")
+
+asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
+```
+
+Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the Reg3a gene we previously looked up on MGI.
+
+```{r}
+reg3a_prefrontal <- filter(asd_vs_c_prefrontal, gene == "ENSMUSG00000079516")
+
+reg3a_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000079516")
+```
+
+Finally, take a look at the differential expression of reg3a in each region.
+
+In the prefrontal cortex:
+
+```{r}
+reg3a_prefrontal
+```
+
+In the striatum:
+
+```{r}
+reg3a_striatum
+```
+
+
+#### Creating a volcano plot to visualize differential expression of multiple genes
 
 A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
 
@@ -576,57 +608,27 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
   ggtitle("Differential Expression in Mouse Prefrontal Cortex")
 ```
 
-#### Creating a gene list
-
-You might want to create a list of all the genes that are differentially expressed between your two groups using the `filter` command. Make sure to check that your gene list has enough genes on it using `head` and `dim` (and that you have a good ratio of "real" positive versus false positive results).
-
-This step requires some thought as to what you want to set as your padj threshold! Remember, you want to make sure you have a minimal number of false positive results, while also still keeping enough genes for future analyses.
-
-```{r}
-asd_vs_c_sig <- filter(asd_vs_c, padj < 0.05)
-head(asd_vs_c_sig)
-dim(asd_vs_c_sig)
-```
-
 #### Running a gene set analysis
 
 You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)
+
+You created a gene list in the **Visualize gene counts of multiple genes across groups** section above. The code from this section is repeated below in case you need to run it again.
+
+```{r}
+gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", "ENSMUSG00000020886", "ENSMUSG00000025020", "ENSMUSG00000025958")
+```
+
+Then we can create a subset of the `asd_vs_c` dataset by filtering out any genes that aren't on our gene list. Remember, we do this using `filter` and `%in%`.
+
+```{r}
+asd_vs_c_motor <- filter(asd_vs_c, asd_vs_c$gene %in% gene_set)
+```
+
+Finally, create your cluster profile with the `runClusterProfiler` and `dotplot` commands.
 
 ```{r, eval = F}
 asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
 
 dotplot(asd_vs_c_clusters, showCategory=34, title="asd vs control in prefrontal cortex", font.size=10, label_format = 50)
-```
-
-#### Compare differential gene expression of a SINGLE GENE across regions
-
-It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets.
-
-```{r}
-asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv")
-
-asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
-```
-
-Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.
-
-```{r}
-reg3a_prefrontal <- filter(asd_vs_c_prefrontal, gene == "ENSMUSG00000079516")
-
-reg3a_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000079516")
-```
-
-Finally, take a look at the differential expression of reg3a in each region.
-
-In the prefrontal cortex:
-
-```{r}
-reg3a_prefrontal
-```
-
-In the striatum:
-
-```{r}
-reg3a_striatum
 ```
 
