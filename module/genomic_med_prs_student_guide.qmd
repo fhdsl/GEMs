@@ -177,7 +177,7 @@ Mr. J's variant data was carefully collected based on the variants identified in
 Select "African" as the "Preferred Super Population" and "1000 Genomes - AFR population" under "MAF Population".
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_70#slide=id.g35f4636d8f5_0_70")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_77#slide=id.g35f4636d8f5_0_77")
 ```
 
 Finally, click "Calculate Risk Scores".
@@ -191,7 +191,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 The calculated score for this study will appear in the box at the bottom. You will have to scroll over.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_84#slide=id.g35f4636d8f5_0_84")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_92#slide=id.g35f4636d8f5_0_92")
 ```
 
 ::: callout-tip
