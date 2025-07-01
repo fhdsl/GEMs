@@ -1,6 +1,6 @@
 ---
 title: "Genomic Medicine: Polygenic Risk Score Calculation"
-bibliography: book.bib
+bibliography: ../book.bib
 format:
     html: default
 ---
