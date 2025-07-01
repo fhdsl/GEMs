@@ -502,7 +502,7 @@ gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", 
 Now we simply filter the `gutbrain_genes` dataset so that we only keep the rows for the gene IDs in our gene set. Remember, we want to use the `filter` command.
 
 ```{r}
-gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$...1 %in% gene_set)
+gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
 
 head(gutbrain_motor)
 
