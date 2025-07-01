@@ -54,7 +54,7 @@ A PRS is just a rough estimate based on what we know at the moment about the gen
 
 ### Genomic Ancestry
 
-<!-- More here? -->
+The human genome contains a huge amount of variation. Different geographic regions have different frequencies of variants. By comparing individuals to others, an individual person's variants can be used to determine the geographic region of their most likely ancestors. There are several commercial companies that do this, such as Ancestry.com. Variants in the mitochondrial DNA are maternally inherited, variants in the Y chromosome are paternally inherited, and autosomal variants can come from either parent [@jorde2020].
 
 ### Exploring Variant Data
 
