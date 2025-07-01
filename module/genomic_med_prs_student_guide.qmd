@@ -1,7 +1,7 @@
 ---
 title: "Genomic Medicine: Polygenic Risk Score Calculation"
 bibliography: ../book.bib
-csl: plainnat.csl
+csl: ../plainnat.csl
 format:
     html: default
 ---
