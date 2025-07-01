@@ -266,6 +266,8 @@ A mismatch between the study population and the patient's ancestry can create ga
 Scientists realized recently that this was a problem. Programs like [All of Us](https://allofus.nih.gov/) aim to collect better data on people from diverse backgrounds to improve PRS. Technology improvements have also made it more affordable to screen for more variants.
 :::
 
+## Part 3 Questions
+
 ::: {.callout-note}
 ## Check Your Knowledge
 
