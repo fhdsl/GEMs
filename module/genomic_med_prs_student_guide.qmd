@@ -1,7 +1,7 @@
 ---
 title: "Genomic Medicine: Polygenic Risk Score Calculation"
 bibliography: ../book.bib
-csl: ../ieee-with-url.csl
+csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
@@ -62,7 +62,7 @@ The human genome contains a huge amount of variation. Different geographic regio
 
 In the next steps, we'll be looking at how PRS can help patients be more informed about disease risk. 
 
-This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness (see @leslie2025 ). This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes. 
+This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness [@leslie2024]. This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes. 
 
 ### Mr. J's Data
 
