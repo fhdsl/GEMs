@@ -429,8 +429,19 @@ head(gutbrain_motor)
  
 we're not quite ready to make our heatmap yet. Because we are interested in the gene expression of these six genes in the striatum compared to the prefrontal cortex, we want to control for any possible differences caused by the sample coming from an ASD-type mouse vs a control-type mouse. So we also want to select a subset of the samples so that we're only using those samples from control-type mice.
 
-TODO: actually create heatmap
+TODO: FILTER OUT MICE?
 
+In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in "tibble" format, but we want it in "matrix" format. So we will first 
+
+```{r}
+install.packages("tidyHeatmap")
+
+load(tidyHeatmap)
+```
+
+```{r}
+heatmap(gutbrain_motor, `Car name`, Property, Value,    scale = "row"   ) 
+```
 
 ### Exploring the differential expression data
 
