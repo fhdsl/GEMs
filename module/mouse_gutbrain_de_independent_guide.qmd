@@ -24,6 +24,16 @@ The basic steps of your analysis are:
 
 The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Additionally, there are two different types of mice. Some of the mice are an Autism Spectrum Disorder-type (see below for details), while others are control-type.
 
+Questions that could be answered with this dataset include:
+
+- Are genes for motor neurons differentially expressed between the striatum and prefrontal cortex?
+
+- Are autism risk genes differentially expressed in the prefrontal cortex ASD-type mice compared to prefrontal cortex of control-type mice?
+
+- Are immune-related genes differentially expressed between ASD-type mice and control-type mice?
+
+- Are there differences in gene expression of gut-associated genes in the brain?
+
 ### The Striatum, the Prefrontal Cortex, and Autism Spectrum Disorder
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the striatum in the human brain.", out.width = '100%'}
@@ -109,7 +119,7 @@ Make sure you are recording the name and gene ID for the mouse! Gene names are o
 
 ### Looking up details on a mouse gene when you have the Ensembl gene ID
 
-To look up information on a particular gene of interest, choose the "Genes" button.
+Open the [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) website. To look up information on a particular gene of interest, choose the "Genes" button.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "To look up information on a particular gene of interest, choose the “Genes” button.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g357f7ed062e_9_0#slide=id.g357f7ed062e_9_0")
@@ -163,7 +173,23 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 
 ### Looking up genes based on human gene name
 
-TODO: add instructions and screenshots for this - also add how to find the Ensembl geneID
+You may have identified a human gene that you're interested in for your project, so you need to figure out what the mouse ortholog is and (more importantly) what the mouse Ensembl ID is. Luckily, the MGI allows you to search based on the human gene name.
+
+Let's say you're interested in the human gene REG3A, pancreatic secretory protein that may be involved in cell proliferation or differentiation. It also is upregulated as a result of pancreatic inflammation. 
+
+Open the [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) website. To look up information on this human gene, type "REG3A" into the "Quick Search" bar and press enter.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the name of the human gene REG3A into the search bar.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_0#slide=id.g33d632640e3_0_0")
+```
+
+You'll notice that MGI returns 3 possible mouse genes that are orthologs to the human gene REG3A. This is totally normal! Remember, orthologs are gene that shares the same ancestry. In this case, there was likely a gene duplication event in the mouse ancestor after it split off from the human ancestor.
+
+You can pick whichever ortholog you like (or even pick all of them). For this example, we'll choose the mouse gene "Reg3a". Click on the gene symbol (in this example, Reg3a) to get more detailed information.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "There are multiple mouse orthologs for the human gene REG3A.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_6#slide=id.g33d632640e3_0_6")
+```
 
 ::: callout-note
 You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to "pseudogenes", "putative genes", and "lncRNA".
@@ -175,7 +201,19 @@ You might come across some unexpected terms when you search the MGI for your gen
 **lncRNA**: This stands for "long non-coding RNA". lncRNA is a type of RNA molecule that is transcribed from DNA but does not code for proteins. These RNA molecules are at least 200-500 nucleotides long and play roles in various biological processes, like gene regulation.
 :::
 
-On the new page that you open, details about the gene are organized into familiar categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you'll need to expand the "homology" section yourself.
+On the new page that you open, details about the gene are organized into familiar categories. But first, let's take a look at the IDs on the right-hand side of the "summary" section. In particular, we're interested in the NCBI link. Click this link.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Click the link for the NCBI page in the summary section.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_12#slide=id.g33d632640e3_0_12")
+```
+
+We're now on the NCBI page for the mouse gene Reg3a, which has the Ensembl ID for this gene. Copy this so you can later use it to look through the dataset!
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "You can get the Ensembl ID for the mouse gene on the NCBI page.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_15#slide=id.g33d632640e3_0_15")
+```
+
+Return back to the MGI page on the Reg3a gene. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you'll need to expand the "homology" section yourself.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "To look at gene homology, you’ll need to expand the “homology” section yourself.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_5#slide=id.g346083d4dc0_0_5")
@@ -199,9 +237,63 @@ Directly underneath the "ontology" section is information about when the gene is
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
 
-
 ### Looking up genes associated with a human disease
-TODO: add details and screenshots!
+
+You may not know a particular gene that you want to explore in this dataset, but maybe you do have a human disease or condition that you're interested in. You can look up mouse genes that might be associated with this disease in the MGI as your starting point. 
+
+Open the [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) website. Choose the tab that says "Human-Mouse: Disease Connection".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "To look up genes associated with a particular disease, choose the Human-Mouse: Disease Connection tab.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_18#slide=id.g33d632640e3_0_18")
+```
+
+You'll then want to choose "Disease or Phenotype Name" from the drop-down menu on the left and type the disease of interest into the search bar on the right. For this example, let's look up "pancreatic inflammation". 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "To look up genes associated with a particular disease, choose the Human-Mouse: Disease Connection tab.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_21#slide=id.g33d632640e3_0_21")
+```
+
+After a brief pause (in which you may see graphics of a human and mouse running on wheels), a new page will open that lists human genes associated with pancreatic inflammation, as well as the mouse orthologs for those genes. This graphic will also indicate the molecular function these genes are associated with. You can click on any of the mouse genes to explore further. Let's click on the top hit, Abcb1a.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Human genes associated with pancreatic inflammation and their mouse orthologs are listed on this page. Clicking on Abcb1a will take you to a page with more details on this gene.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_21#slide=id.g33d632640e3_0_21")
+```
+
+You should now be on a page that contains all sorts of information about the mouse gene Abcb1a. In the "summary" section up top, you can click on the NCBI ID to get the Ensembl mouse ID for this gene.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The summary section of the Abcb1a gene has a link to the NCBI page about this gene.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_27#slide=id.g33d632640e3_0_27")
+```
+
+Specifically, you will find the Ensemble ID for the mouse gene Abcb1a under the "See Related" section. Copy this so you can later use it to look through the dataset!
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "You can get the Ensembl ID for the mouse gene on the NCBI page.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_38#slide=id.g33d632640e3_0_38")
+```
+
+Return back to the MGI page on the Abcb1a gene. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you'll need to expand the "homology" section yourself.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "To look at gene homology, you’ll need to expand the “homology” section yourself.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_43#slide=id.g33d632640e3_0_43")
+```
+
+Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "You can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_49#slide=id.g33d632640e3_0_49")
+```
+
+If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the "gene ontology" section. Clicking on the blue squares takes you to a page with more information about how that particular gene was assigned to a pathway or molecular process.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_54#slide=id.g33d632640e3_0_54")
+```
+
+Directly underneath the "ontology" section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_59#slide=id.g33d632640e3_0_59")
+```
 
 ## Analysis
 
