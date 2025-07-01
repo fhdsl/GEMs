@@ -429,7 +429,32 @@ head(gutbrain_motor)
  
 we're not quite ready to make our heatmap yet. Because we are interested in the gene expression of these six genes in the striatum compared to the prefrontal cortex, we want to control for any possible differences caused by the sample coming from an ASD-type mouse vs a control-type mouse. So we also want to select a subset of the samples so that we're only using those samples from control-type mice.
 
-TODO: FILTER OUT MICE?
+The metadata about the samples (basically, a dataset that has information on whether the sample is from an ASD-type mouse or a control-type mouse, as well as whether it is a striatum sample or a prefrontal cortex sample) can be found at the link <https://genomicseducation.org/data/mouse_gutbrain_metadata.csv>
+
+We can load the data into R.
+
+```{r}
+gutbrain_metadata <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_metadata.csv")
+
+head(gutbrain_metadata)
+```
+Since we want to make sure we're only looking at samples from control-type mice, we will use `filter`  to create a vector from `gutbrain_metadata`. In this case, we will filter based on the "mouse_status" column.
+
+```{r}
+gutbrain_controls <- filter(gutbrain_metadata, mouse_status == "Control")
+
+control_sample <- gutbrain_controls$sample_id
+
+dim(gutbrain_controls)
+```
+
+Excellent. We now have a vector (called `control_sample`) that contains the sample IDs for the 58 control-type mice samples in the dataset. We next use this to subset `gutbrain_motor` (our dataset that has gene expression counts for the motor neuron genes). We will use a combination of the `select` function and `all_of` to tell R to keep only those columns that belong to samples found in `control_sample`, as well. 
+
+```{r}
+gutbrain_motor_controls <- select(gutbrain_motor, GeneID, all_of(control_sample))
+
+head(gutbrain_motor_controls)
+```
 
 In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in "tibble" format, but we want it in "matrix" format. So we will first 
 
