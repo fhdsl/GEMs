@@ -448,7 +448,7 @@ control_sample <- gutbrain_controls$sample_id
 dim(gutbrain_controls)
 ```
 
-Excellent. We now have a vector (called `control_sample`) that contains the sample IDs for the 58 control-type mice samples in the dataset. We next use this to subset `gutbrain_motor` (our dataset that has gene expression counts for the motor neuron genes). We will use a combination of the `select` function and `all_of` to tell R to keep only those columns that belong to samples found in `control_sample`, as well. 
+Excellent. We now have a vector (called `control_sample`) that contains the sample IDs for the 58 control-type mice samples in the dataset. We next use this to subset `gutbrain_motor` (our dataset that has gene expression counts for the motor neuron genes). We will use a combination of the `select` function and `all_of` to tell R to keep only those columns that belong to samples found in `control_sample`, as well the "GeneID" column. 
 
 ```{r}
 gutbrain_motor_controls <- select(gutbrain_motor, GeneID, all_of(control_sample))
@@ -456,16 +456,28 @@ gutbrain_motor_controls <- select(gutbrain_motor, GeneID, all_of(control_sample)
 head(gutbrain_motor_controls)
 ```
 
-In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in "tibble" format, but we want it in "matrix" format. So we will first 
+Now we have our data subsetted the way we want, but we aren't quite ready for the heatmap yet. In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in "tibble" format, but we want it in a numerical "matrix" format. We can't switch directly from "tibble" to "matrix" (because the GeneID column is character data, not numerical data). Instead, let's first convert from "tibble" to a format called "dataframe".
 
 ```{r}
-install.packages("tidyHeatmap")
+gutbrain_motor_controls <- as.data.frame(gutbrain_motor_controls)
 
-load(tidyHeatmap)
+head(gutbrain_motor_controls)
 ```
+To our eyes, not much has changed in the format, but it's  very different to R. Now we're going to tell R to name the rows based on the "GeneID" column, and then delete the current "GeneID" column.
 
 ```{r}
-heatmap(gutbrain_motor, `Car name`, Property, Value,    scale = "row"   ) 
+rownames(gutbrain_motor_controls) <- gutbrain_motor_controls$GeneID
+
+gutbrain_motor_controls$GeneID <- NULL
+
+head(gutbrain_motor_controls)
+```
+Great! Now we can change the format of `gutbrain_motor_controls` dataset to "matrix" format in order to make our heatmap using the `heatmap` function. 
+
+```{r}
+gutbrain_motor_controls <- as.matrix(gutbrain_motor_controls)
+
+heatmap(gutbrain_motor_controls)
 ```
 
 ### Exploring the differential expression data
