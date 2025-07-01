@@ -419,7 +419,7 @@ Each gene ID should have quotation marks around it, and the different IDs should
 gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", "ENSMUSG00000020886", "ENSMUSG00000025020", "ENSMUSG00000025958")
 ```
 
-Now we simply filter the `gutbrain_genes` dataset so that we only keep the rows for the gene IDs in our gene set. Remember, we want to use the `filter` command. The combination of `filter` and %in%` tells R to only keep those rows in the `gutbrain_genes` dataset if the gene ID is also found in our gene list we made earlier.
+Now we simply filter the `gutbrain_genes` dataset so that we only keep the rows for the gene IDs in our gene set. Remember, we want to use the `filter` command. The combination of `filter` and `%in%` tells R to only keep those rows in the `gutbrain_genes` dataset if the gene ID is also found in our gene list we made earlier.
 
 ```{r}
 gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
