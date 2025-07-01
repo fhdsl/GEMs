@@ -155,17 +155,24 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a>
+  <li><a href="#what-sorts-of-questions-can-i-investigate" id="toc-what-sorts-of-questions-can-i-investigate" class="nav-link active" data-scroll-target="#what-sorts-of-questions-can-i-investigate">What sorts of questions can I investigate?</a>
   <ul class="collapse">
+  <li><a href="#the-striatum-the-prefrontal-cortex-and-autism-spectrum-disorder" id="toc-the-striatum-the-prefrontal-cortex-and-autism-spectrum-disorder" class="nav-link" data-scroll-target="#the-striatum-the-prefrontal-cortex-and-autism-spectrum-disorder">The Striatum, the Prefrontal Cortex, and Autism Spectrum Disorder</a></li>
   <li><a href="#the-original-study" id="toc-the-original-study" class="nav-link" data-scroll-target="#the-original-study">The original study</a></li>
   <li><a href="#the-mouse-as-a-model-organism" id="toc-the-mouse-as-a-model-organism" class="nav-link" data-scroll-target="#the-mouse-as-a-model-organism">The mouse as a model organism</a></li>
-  <li><a href="#exploring-genes-of-interest-with-the-mouse-genome-informatics-database" id="toc-exploring-genes-of-interest-with-the-mouse-genome-informatics-database" class="nav-link" data-scroll-target="#exploring-genes-of-interest-with-the-mouse-genome-informatics-database">Exploring genes of interest with the Mouse Genome Informatics database</a></li>
+  </ul></li>
+  <li><a href="#identifying-genes-of-interest-with-the-mouse-genome-informatics-database" id="toc-identifying-genes-of-interest-with-the-mouse-genome-informatics-database" class="nav-link" data-scroll-target="#identifying-genes-of-interest-with-the-mouse-genome-informatics-database">Identifying genes of interest with the Mouse Genome Informatics database</a>
+  <ul class="collapse">
+  <li><a href="#mouse-gene-ids" id="toc-mouse-gene-ids" class="nav-link" data-scroll-target="#mouse-gene-ids">Mouse gene IDs</a></li>
+  <li><a href="#looking-up-details-on-a-mouse-gene-when-you-have-the-ensembl-gene-id" id="toc-looking-up-details-on-a-mouse-gene-when-you-have-the-ensembl-gene-id" class="nav-link" data-scroll-target="#looking-up-details-on-a-mouse-gene-when-you-have-the-ensembl-gene-id">Looking up details on a mouse gene when you have the Ensembl gene ID</a></li>
+  <li><a href="#looking-up-genes-based-on-human-gene-name" id="toc-looking-up-genes-based-on-human-gene-name" class="nav-link" data-scroll-target="#looking-up-genes-based-on-human-gene-name">Looking up genes based on human gene name</a></li>
+  <li><a href="#looking-up-genes-associated-with-a-human-disease" id="toc-looking-up-genes-associated-with-a-human-disease" class="nav-link" data-scroll-target="#looking-up-genes-associated-with-a-human-disease">Looking up genes associated with a human disease</a></li>
   </ul></li>
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a>
   <ul class="collapse">
   <li><a href="#package-install-and-load" id="toc-package-install-and-load" class="nav-link" data-scroll-target="#package-install-and-load">Package Install and Load</a></li>
-  <li><a href="#loading-the-gene-expression-count-data" id="toc-loading-the-gene-expression-count-data" class="nav-link" data-scroll-target="#loading-the-gene-expression-count-data">Loading the gene expression count data</a></li>
-  <li><a href="#loading-the-differential-expression-data" id="toc-loading-the-differential-expression-data" class="nav-link" data-scroll-target="#loading-the-differential-expression-data">Loading the differential expression data</a></li>
+  <li><a href="#exploring-the-gene-expression-count-data" id="toc-exploring-the-gene-expression-count-data" class="nav-link" data-scroll-target="#exploring-the-gene-expression-count-data">Exploring the gene expression count data</a></li>
+  <li><a href="#exploring-the-differential-expression-data" id="toc-exploring-the-differential-expression-data" class="nav-link" data-scroll-target="#exploring-the-differential-expression-data">Exploring the differential expression data</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -194,10 +201,24 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <p>This module provides data for an independent project exploring differential expression in RNA-seq data.</p>
 <p>This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment.</p>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p><em>Autism spectrum disorder (ASD)</em> is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it’s considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.</p>
-<p>The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice.</p>
+<p>The basic steps of your analysis are:</p>
+<ol type="1">
+<li><p>Identify mouse genes of interest for your project.</p></li>
+<li><p>Characterize the gene expression of your genes of interest in the dataset.</p></li>
+<li><p>Explore differential gene expression in the control vs experimental group.</p></li>
+</ol>
+<section id="what-sorts-of-questions-can-i-investigate" class="level2">
+<h2 class="anchored" data-anchor-id="what-sorts-of-questions-can-i-investigate">What sorts of questions can I investigate?</h2>
+<p>The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Additionally, there are two different types of mice. Some of the mice are an Autism Spectrum Disorder-type (see below for details), while others are control-type.</p>
+<p>Questions that could be answered with this dataset include:</p>
+<ul>
+<li><p>Are genes for motor neurons differentially expressed between the striatum and prefrontal cortex?</p></li>
+<li><p>Are autism risk genes differentially expressed in the prefrontal cortex ASD-type mice compared to prefrontal cortex of control-type mice?</p></li>
+<li><p>Are immune-related genes differentially expressed between ASD-type mice and control-type mice?</p></li>
+<li><p>Are there differences in gene expression of gut-associated genes in the brain?</p></li>
+</ul>
+<section id="the-striatum-the-prefrontal-cortex-and-autism-spectrum-disorder" class="level3">
+<h3 class="anchored" data-anchor-id="the-striatum-the-prefrontal-cortex-and-autism-spectrum-disorder">The Striatum, the Prefrontal Cortex, and Autism Spectrum Disorder</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -218,6 +239,28 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 <p>The <em>prefrontal cortex</em> is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/">here</a>.</p>
+<p><em>Autism spectrum disorder (ASD)</em> is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it’s considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.</p>
+<p>The <strong>gut-brain axis</strong> is the term used for the proposed connection between the gut microbiome and the brain. In recent years, studies have identified links between immune-related neurological symptoms and the presence of intestinal inflammation. There are around 100 million neurons in the human gut, and around 70% of the serotonin (an important neurotransmitter) in the human body is made in the gut. One proposed mechanism for how the gut-brain axis works is that inflamed intestinal tissue triggers the synthesis of cytokines and other proteins involved in the immune response; these proteins may attack nervous system cells. A possible link between the gut microbiome and increased symptom severity is actively being studied for Major Depressive Disorder, Autism Spectrum Disorder, fibromyalgia, migraines, Parkinson’s disease, Alzheimer’s disease, and more.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Deciding on your research question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you start working with the dataset, you should decide what you want to explore.</p>
+<ol type="1">
+<li><p>Is there a gene or set of genes linked to a biological process you’re particularly interested in? This could include things like “cytokines”, “anti-inflammatory genes”, “genes involved in building neurons”, or any biological process you find interesting!</p></li>
+<li><p>Is there a disease or disorder you’d like to focus on? You can explore known risk genes for this disorder (or genes that are protective against this disorder). You don’t have to limit yourself to Autism Spectrum Disorder, either; there are many disorders that have a shared genetic and biological basis!</p></li>
+<li><p>Are you curious about the standard “housekeeping” genes that are broadly expressed across cell types and involved in common biological processes, like DNA replication, metabolism, and cell cycle regulation? These processes are vitally important for proper cellular function, so disruption in them can cause problems for the organism.</p></li>
+</ol>
+<p>Once you’ve picked a disorder or cellular process that interests you, start looking up research papers to find genes! You can use sites like PubMed and Google Scholar to look up studies. Skim through at least 4-5 different papers that contain some type of gene name or a biological process. <strong>DO NOT GET TOO LOST INTO THE PAPERS!</strong> Make sure you skim through them for important information, but be willing to set a paper aside if you’re struggling to find what you need.</p>
+</div>
+</div>
+</section>
 <section id="the-original-study" class="level3">
 <h3 class="anchored" data-anchor-id="the-original-study">The original study</h3>
 <p>The original study, <em>Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice</em>, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the <em>gut-brain axis.</em></p>
@@ -252,10 +295,38 @@ Note
 <p>So what makes mice such good model organisms for biomedical research? Well, first, they’re economical and relatively easy to keep. Since mice are small, they don’t require a huge amount of space or food. They also have fast reproductive cycles, so researchers can study multiple generations within only a few years. Most importantly, though, mice and humans are both mammals and have about 85% of their protein-coding genome in common. As a result, mouse physiology is quite similar to human physiology. The mouse circulatory, reproductive, digestive, hormonal, and nervous systems are frequently used as models to study how humans grow, age, and develop chronic diseases. They are particularly important model organisms for cancer research and neuroscience.</p>
 <p>You can find additional information about how the mouse is used in research <a href="https://www.google.com/url?q=https://www.informatics.jax.org/mgihome/other/homepage_IntroMouse.shtml">here!</a></p>
 </section>
-<section id="exploring-genes-of-interest-with-the-mouse-genome-informatics-database" class="level3">
-<h3 class="anchored" data-anchor-id="exploring-genes-of-interest-with-the-mouse-genome-informatics-database">Exploring genes of interest with the Mouse Genome Informatics database</h3>
+</section>
+<section id="identifying-genes-of-interest-with-the-mouse-genome-informatics-database" class="level2">
+<h2 class="anchored" data-anchor-id="identifying-genes-of-interest-with-the-mouse-genome-informatics-database">Identifying genes of interest with the Mouse Genome Informatics database</h2>
 <p>The <a href="https://www.informatics.jax.org/genes.shtml">Mouse Genome Informatics</a> database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found <a href="https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml">here</a>. We’ll reproduce some of it below.</p>
-<p>To look up information on a particular gene of interest, choose the “Genes” button.</p>
+<section id="mouse-gene-ids" class="level3">
+<h3 class="anchored" data-anchor-id="mouse-gene-ids">Mouse gene IDs</h3>
+<p>In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:</p>
+<blockquote class="blockquote">
+<p>ENSMUSG00000000001</p>
+</blockquote>
+<p><strong>ENS</strong> stands for “Ensembl”. Ensembl is a <a href="https://ensemblgenomes.org/">genome database project</a> managed by the European Bioinformatics Institute. It’s one of several databases like this. Others include NIH’s National Center for Biotechnology Information (NCBI; the organization that manages GenBank and PubMed) and the University of California, Santa Cruz (UCSC) Genome Browser. When a gene code starts with “ENS”, it means you should look up the gene code in the Ensembl database.</p>
+<p><strong>MUS</strong> stands for “Mus”, which is the genus for the mouse.</p>
+<p><strong>G</strong> stands for “Gene”. When you see “G” in the ID name, you know you are working with a gene. There are also codes for transcripts (“T”), exons (“E”), and proteins (“P”).</p>
+<p><strong>00000000001</strong> is the numerical code associated with the gene.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Picking your genes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The MGI allows you to look up information about genes you’re interested in but don’t know much about. This is particularly helpful if you are interested in genes that were identified in other research organisms or in previous studies. You could also start by looking up a human disease and associated human risk genes, then identify the homologous mouse genes.</p>
+<p>Make sure you are recording the name and gene ID for the mouse! Gene names are often similar between mice and humans, but the gene IDs will be very different. If you don’t use the correct gene ID when exploring this dataset, you won’t get very far.</p>
+</div>
+</div>
+</section>
+<section id="looking-up-details-on-a-mouse-gene-when-you-have-the-ensembl-gene-id" class="level3">
+<h3 class="anchored" data-anchor-id="looking-up-details-on-a-mouse-gene-when-you-have-the-ensembl-gene-id">Looking up details on a mouse gene when you have the Ensembl gene ID</h3>
+<p>Open the <a href="https://www.informatics.jax.org/genes.shtml">Mouse Genome Informatics</a> website. To look up information on a particular gene of interest, choose the “Genes” button.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -285,11 +356,21 @@ Note
 </div>
 </div>
 </div>
-<div class="{tip}">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to “pseudogenes”, “putative genes”, and “lncRNA”.</p>
 <p><strong>pseudogene</strong>: This is a stretch of DNA that looks like a gene but doesn’t actually code for any protein products. It’s essentially a copy of a gene that contains mutations that prevent translation into a protein product. The mutations can include partial deletions, missing promoters, missing start codons, premature stop codons, frameshift mutations, or missing introns. Any of these are enough to result in a pseudogene.</p>
 <p><strong>putative gene</strong>: This is a DNA segment that is believed to be a gene, but its function and protein product has not been confirmed. They are frequently identified based on the presence of an Open Reading Frame. Putative genes are not given names until they become confirmed genes.</p>
 <p><strong>lncRNA</strong>: This stands for “long non-coding RNA”. lncRNA is a type of RNA molecule that is transcribed from DNA but does not code for proteins. These RNA molecules are at least 200-500 nucleotides long and play roles in various biological processes, like gene regulation.</p>
+</div>
 </div>
 <p>On the new page that you open, details about the gene are organized into familiar categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you’ll need to expand the “homology” section yourself.</p>
 <div class="cell" data-layout-align="center">
@@ -332,16 +413,206 @@ Note
 </div>
 </div>
 </section>
+<section id="looking-up-genes-based-on-human-gene-name" class="level3">
+<h3 class="anchored" data-anchor-id="looking-up-genes-based-on-human-gene-name">Looking up genes based on human gene name</h3>
+<p>You may have identified a human gene that you’re interested in for your project, so you need to figure out what the mouse ortholog is and (more importantly) what the mouse Ensembl ID is. Luckily, the MGI allows you to search based on the human gene name.</p>
+<p>Let’s say you’re interested in the human gene REG3A, pancreatic secretory protein that may be involved in cell proliferation or differentiation. It also is upregulated as a result of pancreatic inflammation.</p>
+<p>Open the <a href="https://www.informatics.jax.org/genes.shtml">Mouse Genome Informatics</a> website. To look up information on this human gene, type “REG3A” into the “Quick Search” bar and press enter.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Type the name of the human gene REG3A into the search bar."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>You’ll notice that MGI returns 3 possible mouse genes that are orthologs to the human gene REG3A. This is totally normal! Remember, orthologs are gene that shares the same ancestry. In this case, there was likely a gene duplication event in the mouse ancestor after it split off from the human ancestor.</p>
+<p>You can pick whichever ortholog you like (or even pick all of them). For this example, we’ll choose the mouse gene “Reg3a”. Click on the gene symbol (in this example, Reg3a) to get more detailed information.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="There are multiple mouse orthologs for the human gene REG3A."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to “pseudogenes”, “putative genes”, and “lncRNA”.</p>
+<p><strong>pseudogene</strong>: This is a stretch of DNA that looks like a gene but doesn’t actually code for any protein products. It’s essentially a copy of a gene that contains mutations that prevent translation into a protein product. The mutations can include partial deletions, missing promoters, missing start codons, premature stop codons, frameshift mutations, or missing introns. Any of these are enough to result in a pseudogene.</p>
+<p><strong>putative gene</strong>: This is a DNA segment that is believed to be a gene, but its function and protein product has not been confirmed. They are frequently identified based on the presence of an Open Reading Frame. Putative genes are not given names until they become confirmed genes.</p>
+<p><strong>lncRNA</strong>: This stands for “long non-coding RNA”. lncRNA is a type of RNA molecule that is transcribed from DNA but does not code for proteins. These RNA molecules are at least 200-500 nucleotides long and play roles in various biological processes, like gene regulation.</p>
+</div>
+</div>
+<p>On the new page that you open, details about the gene are organized into familiar categories. But first, let’s take a look at the IDs on the right-hand side of the “summary” section. In particular, we’re interested in the NCBI link. Click this link.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Click the link for the NCBI page in the summary section."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We’re now on the NCBI page for the mouse gene Reg3a, which has the Ensembl ID for this gene. Copy this so you can later use it to look through the dataset!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_15.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="You can get the Ensembl ID for the mouse gene on the NCBI page."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Return back to the MGI page on the Reg3a gene. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you’ll need to expand the “homology” section yourself.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g346083d4dc0_0_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="To look at gene homology, you’ll need to expand the “homology” section yourself."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g346083d4dc0_0_8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="You can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section. Clicking on the blue squares takes you to a page with more information about how that particular gene was assigned to a pathway or molecular process.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g346083d4dc0_0_11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g346083d4dc0_0_18.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="looking-up-genes-associated-with-a-human-disease" class="level3">
+<h3 class="anchored" data-anchor-id="looking-up-genes-associated-with-a-human-disease">Looking up genes associated with a human disease</h3>
+<p>You may not know a particular gene that you want to explore in this dataset, but maybe you do have a human disease or condition that you’re interested in. You can look up mouse genes that might be associated with this disease in the MGI as your starting point.</p>
+<p>Open the <a href="https://www.informatics.jax.org/genes.shtml">Mouse Genome Informatics</a> website. Choose the tab that says “Human-Mouse: Disease Connection”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_18.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="To look up genes associated with a particular disease, choose the Human-Mouse: Disease Connection tab."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>You’ll then want to choose “Disease or Phenotype Name” from the drop-down menu on the left and type the disease of interest into the search bar on the right. For this example, let’s look up “pancreatic inflammation”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_21.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="To look up genes associated with a particular disease, choose the Human-Mouse: Disease Connection tab."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>After a brief pause (in which you may see graphics of a human and mouse running on wheels), a new page will open that lists human genes associated with pancreatic inflammation, as well as the mouse orthologs for those genes. This graphic will also indicate the molecular function these genes are associated with. You can click on any of the mouse genes to explore further. Let’s click on the top hit, Abcb1a.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_21.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Human genes associated with pancreatic inflammation and their mouse orthologs are listed on this page. Clicking on Abcb1a will take you to a page with more details on this gene."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>You should now be on a page that contains all sorts of information about the mouse gene Abcb1a. In the “summary” section up top, you can click on the NCBI ID to get the Ensembl mouse ID for this gene.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_27.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The summary section of the Abcb1a gene has a link to the NCBI page about this gene."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Specifically, you will find the Ensemble ID for the mouse gene Abcb1a under the “See Related” section. Copy this so you can later use it to look through the dataset!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_38.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="You can get the Ensembl ID for the mouse gene on the NCBI page."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Return back to the MGI page on the Abcb1a gene. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you’ll need to expand the “homology” section yourself.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_43.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="To look at gene homology, you’ll need to expand the “homology” section yourself."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_49.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="You can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section. Clicking on the blue squares takes you to a page with more information about how that particular gene was assigned to a pathway or molecular process.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_54.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d632640e3_0_59.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="analysis" class="level2">
 <h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
-<p>Before starting this activity, you should have completed the miniCURE activities and identified genes of interest for your individual project. Remember, the basic steps of your analysis are:</p>
-<ol type="1">
-<li><p>Examine expression of your gene of interest in this dataset.</p></li>
-<li><p>Explore whether your gene of interest is differentially expressed between the experimental groups.</p></li>
-<li><p>Characterize the genes that are differentially expressed between the experimental groups based on their molecular activity.</p></li>
-</ol>
-<p>Below, we’ve included a cheatsheet of some of the analysis steps you might want to do and the R code that helps you do it.</p>
+<p>Now that you have your genes of interest, you’re ready to start working with the dataset.</p>
 <section id="package-install-and-load" class="level3">
 <h3 class="anchored" data-anchor-id="package-install-and-load">Package Install and Load</h3>
 <p>We will need to install the <code>tidyverse</code> package for this activity.</p>
@@ -353,13 +624,13 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-What are R Packages?
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -370,33 +641,36 @@ What are R Packages?
 </div>
 </div>
 </section>
-<section id="loading-the-gene-expression-count-data" class="level3">
-<h3 class="anchored" data-anchor-id="loading-the-gene-expression-count-data">Loading the gene expression count data</h3>
-<p>The first analyses you might want to do involve exploring dataset that shows how much each gene is expressed overall. This is the gene expression count dataset.</p>
+<section id="exploring-the-gene-expression-count-data" class="level3">
+<h3 class="anchored" data-anchor-id="exploring-the-gene-expression-count-data">Exploring the gene expression count data</h3>
+<p>Let’s start by looking at a dataset that includes information on how many times each gene was expressed in a sample. This is the gene expression count dataset.</p>
+<p>This dataset gives us an idea of the scale of gene expression - for example, which genes are expressed the most? Which genes are expressed the least? This is particularly useful when you want to know if a gene is usually turned on or off in a sample.</p>
+<section id="loading-the-gene-expression-count-data" class="level4">
+<h4 class="anchored" data-anchor-id="loading-the-gene-expression-count-data">Loading the gene expression count data</h4>
 <p>You can load this dataset into R using the following code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gutbrain_genes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_counts.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>New names:
-Rows: 55421 Columns: 140
-── Column specification
-──────────────────────────────────────────────────────── Delimiter: "," chr
-(1): ...1 dbl (139): SRR6652436, SRR6652443, SRR6652469, SRR6652471,
-SRR6652505, SRR66...
-ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-Specify the column types or set `show_col_types = FALSE` to quiet this message.
-• `` -&gt; `...1`</code></pre>
+<pre><code>Rows: 55421 Columns: 140
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr   (1): GeneID
+dbl (139): SRR6652436, SRR6652443, SRR6652469, SRR6652471, SRR6652505, SRR66...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
 <p>This dataset has 140 columns. Each row represents a gene. Each column is an individual mouse (sample), except for the first column (“GeneID”, which is the Ensembl gene IDs) and the last column (“total_counts”, which is the sum across all mice).</p>
-<section id="examining-count-data" class="level4">
-<h4 class="anchored" data-anchor-id="examining-count-data">Examining count data</h4>
+</section>
+<section id="exploring-and-summarizing-count-data" class="level4">
+<h4 class="anchored" data-anchor-id="exploring-and-summarizing-count-data">Exploring and summarizing count data</h4>
 <p>When you first open the gene expression data, you want to verify that the data has loaded correctly. You can do this with the <code>head</code> and <code>tail</code> commands. Remember, <code>head</code> prints the first 6 rows of a dataset, while <code>tail</code> prints the last 6 rows.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_genes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 140
-  ...1         SRR6652436 SRR6652443 SRR6652469 SRR6652471 SRR6652505 SRR6652506
+  GeneID       SRR6652436 SRR6652443 SRR6652469 SRR6652471 SRR6652505 SRR6652506
   &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
 1 ENSMUSG0000…          0          0          0          0          0          0
 2 ENSMUSG0000…          0          0          0          0          0          0
@@ -415,7 +689,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(gutbrain_genes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 140
-  ...1         SRR6652436 SRR6652443 SRR6652469 SRR6652471 SRR6652505 SRR6652506
+  GeneID       SRR6652436 SRR6652443 SRR6652469 SRR6652471 SRR6652505 SRR6652506
   &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
 1 ENSMUSG0000…          0          0          0          0          0          0
 2 ENSMUSG0000…      18605      12561      14910      17809       6377      14750
@@ -432,9 +706,6 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 #   SRR6652401 &lt;dbl&gt;, SRR6652402 &lt;dbl&gt;, SRR6652403 &lt;dbl&gt;, SRR6652404 &lt;dbl&gt;, …</code></pre>
 </div>
 </div>
-</section>
-<section id="summarizing-data" class="level4">
-<h4 class="anchored" data-anchor-id="summarizing-data">Summarizing data</h4>
 <p>You may want to explore the distribution of your count data using <code>summary</code>. This command lets you see the mean, median, minimum, and maximum for each numeric column. You can specify which column you’d like to get summary data for, or look at summary data for all the columns.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gutbrain_genes<span class="sc">$</span>total_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -459,7 +730,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -472,7 +743,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -480,19 +751,69 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </section>
 <section id="looking-at-read-count-for-a-single-gene" class="level4">
 <h4 class="anchored" data-anchor-id="looking-at-read-count-for-a-single-gene">Looking at read count for a single gene</h4>
-<p>You may want to look at the read count for a specific gene in your dataset. This can be done with the <code>filter</code> command. Let’s look at the read counts for the reg3a gene, across all mice. Remember, this is the gene we looked up earlier in the MGI database. The Ensembl gene ID is “ENSMUSG00000079516”.</p>
+<p>You may want to look at the read count for a specific gene in your dataset. This can be done with the <code>filter</code> command. Let’s look at the read counts for the Reg3a gene, across all mice. Remember, this is the gene we looked up earlier in the MGI database. The Ensembl gene ID is “ENSMUSG00000079516”.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(gutbrain_genes, GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="visualize-gene-counts-of-multiple-genes-across-groups" class="level4">
+<h4 class="anchored" data-anchor-id="visualize-gene-counts-of-multiple-genes-across-groups">Visualize gene counts of multiple genes across groups</h4>
+<p>We can also look at the differential gene expression of a set of genes at once! This is usually done by creating a <strong>heatmap</strong>. In RNA-seq analyses, we usually put individual samples on the x-axis and normalized gene counts on the y-axis.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d40c657bf_0_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Example of a heatmap."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>When creating heatmaps, we want to work with a dataset that includes normalized gene expression data for each gene. We loaded a dataset like this above that we called <code>gutbrain_genes</code>. If you don’t have an object in your environment called this, scroll back up to the “<strong>Loading the gene expression count data</strong>” section and run the code again.</p>
+<p>The dataset you loaded has expression data for 55,421 different genes, which is too many to visualize. (You can try, but R will usually throw an error if you do.) In general, though, we are mostly interested in looking at the visualization of a particular group of genes, or a gene set.</p>
+<p>Let’s say we have identified 6 mouse genes that have been linked to the development of motor neurons. We’re interested in whether these genes show differential gene expression between the striatum and the prefrontal cortex. We can use the <code>filter</code> command to pull out normalized gene expression data for just these six genes.</p>
+<p>These are the genes (with gene IDs) that we’re including in our gene set:</p>
+<p>Sema3a: ENSMUSG00000028883 Mapk8: ENSMUSG00000021936 Nrcam: ENSMUSG00000020598 Dlg4: ENSMUSG00000020886 Slit1: ENSMUSG00000025020 Creb1: ENSMUSG00000025958</p>
+<p>First, create a vector that contains these gene IDs. (You can replace the gene IDs with the ones for your genes of interest, but make sure you use Ensembl gene IDs! They should all start with “ENSMUSG”.)</p>
+<p>Each gene ID should have quotation marks around it, and the different IDs should be separated using a comma.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now we simply filter the <code>gutbrain_genes</code> dataset so that we only keep the rows for the gene IDs in our gene set. Remember, we want to use the <code>filter</code> command. The combination of <code>filter</code> and <code>%in%</code> tells R to only keep those rows in the <code>gutbrain_genes</code> dataset if the gene ID is also found in our gene list we made earlier.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(gutbrain_genes, gutbrain_genes<span class="sc">$</span>GeneID <span class="sc">%in%</span> gene_set)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_motor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 141
+  GeneID       SRR6652436 SRR6652443 SRR6652469 SRR6652471 SRR6652505 SRR6652506
+  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
+1 ENSMUSG0000…      86704      93818      62879     116582      50148      93087
+2 ENSMUSG0000…    2220069    1537477    1521896    1355721     945194    1790682
+3 ENSMUSG0000…     462615     362226     557979     714703     396624     750340
+4 ENSMUSG0000…     113380     104242     156926     223405     111427     211342
+5 ENSMUSG0000…      26284      19265      74037      56337      49613      93139
+6 ENSMUSG0000…      44034      30884      26225      45861      26901      46580
+# ℹ 134 more variables: SRR6652507 &lt;dbl&gt;, SRR6652508 &lt;dbl&gt;, SRR6652509 &lt;dbl&gt;,
+#   SRR6652510 &lt;dbl&gt;, SRR6652511 &lt;dbl&gt;, SRR6652512 &lt;dbl&gt;, SRR6652513 &lt;dbl&gt;,
+#   SRR6652514 &lt;dbl&gt;, SRR6652515 &lt;dbl&gt;, SRR6652521 &lt;dbl&gt;, SRR6652522 &lt;dbl&gt;,
+#   SRR6652389 &lt;dbl&gt;, SRR6652390 &lt;dbl&gt;, SRR6652391 &lt;dbl&gt;, SRR6652392 &lt;dbl&gt;,
+#   SRR6652393 &lt;dbl&gt;, SRR6652394 &lt;dbl&gt;, SRR6652395 &lt;dbl&gt;, SRR6652396 &lt;dbl&gt;,
+#   SRR6652397 &lt;dbl&gt;, SRR6652398 &lt;dbl&gt;, SRR6652399 &lt;dbl&gt;, SRR6652400 &lt;dbl&gt;,
+#   SRR6652401 &lt;dbl&gt;, SRR6652402 &lt;dbl&gt;, SRR6652403 &lt;dbl&gt;, SRR6652404 &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<p>we’re not quite ready to make our heatmap yet. Because we are interested in the gene expression of these six genes in the striatum compared to the prefrontal cortex, we want to control for any possible differences caused by the sample coming from an ASD-type mouse vs a control-type mouse. So we also want to select a subset of the samples so that we’re only using those samples from control-type mice.</p>
+<p>TODO: actually create heatmap</p>
 </section>
-<section id="loading-the-differential-expression-data" class="level3">
-<h3 class="anchored" data-anchor-id="loading-the-differential-expression-data">Loading the differential expression data</h3>
-<p>You have the option to look at gene expression in control vs ASD mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).</p>
-<p>Additionally, you can look at gene expression in striatum vs prefrontal cortex in only ASD mice or only control mice. Likewise, you also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.</p>
+</section>
+<section id="exploring-the-differential-expression-data" class="level3">
+<h3 class="anchored" data-anchor-id="exploring-the-differential-expression-data">Exploring the differential expression data</h3>
+<p>Now let’s look a differential expression dataset, which compares gene expression counts between two groups. This dataset gives us an idea how the change in a gene’s expression might be associated with a disorder or a cell type. This is particularly useful for beginning to map the genetic drivers of a particular phenotype.</p>
+<section id="loading-the-differential-expression-data" class="level4">
+<h4 class="anchored" data-anchor-id="loading-the-differential-expression-data">Loading the differential expression data</h4>
 <p>Let’s say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it <code>asd_vs_c</code>. We will do this using <code>read_csv</code>. Copy and paste this command into your console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -513,12 +834,69 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <p>All mice: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv" class="uri">https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv</a></p>
 <p>Only ASD mice: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv" class="uri">https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv</a></p>
 <p>Only control mice: <a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv" class="uri">https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv</a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Which differential expression dataset should I use?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Even though this dataset is from a single study, there are still lots of options for independent research questions. You have the option to look at gene expression in control-type vs ASD-type mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).</p>
+<p>Additionally, you can look at gene expression in striatum vs prefrontal cortex in only ASD-type mice or only control-type mice. Likewise, you also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.</p>
+<p>Are you mostly interested in how gene expression differs between the two brain regions? Are you interested in how neurons develop, or how groups of genes involved in movement might be expressed differently in two different regions? These sorts of questions are best to explore using <strong>striatum and prefrontal cortex</strong> comparisons.</p>
+<p>Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental genes? These questions and others can be explored using the <strong>ASD-type mice and control-type mice</strong> comparisons.</p>
+</div>
+</div>
+</section>
+<section id="ranking-the-genes-by-log2foldchange" class="level4">
+<h4 class="anchored" data-anchor-id="ranking-the-genes-by-log2foldchange">Ranking the genes by log2FoldChange</h4>
+<p>The <code>log2FoldChange</code> value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. Genes with no difference in expression between groups have <code>log2FoldChange</code> values close to zero. Negative log2FoldChange values means a <strong>decreased expression</strong> (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have <strong>increased expression</strong> in the experimental group versus the control group.</p>
+<p>We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_ascending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, log2FoldChange)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_ascending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+  gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
+  &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 ENSMUSG00000089657     16.9          -25.5  1.81 -14.1 2.18e-45 7.29e-41
+2 ENSMUSG00000102414     14.9          -25.4  1.89 -13.4 4.00e-41 3.81e-37
+3 ENSMUSG00000083812     14.6          -25.4  1.80 -14.1 3.82e-45 7.29e-41
+4 ENSMUSG00000074445     11.5          -25.0  1.89 -13.3 3.44e-40 2.62e-36
+5 ENSMUSG00000094151     11.2          -25.0  1.79 -14.0 2.97e-44 3.77e-40
+6 ENSMUSG00000053773     10.6          -24.9  1.99 -12.5 6.66e-36 4.23e-32</code></pre>
+</div>
+</div>
+<p>The genes at the top of this table have the most negative log2FoldChange values and are downregulated in ASD-type mice.</p>
+<p>We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in ASD-type mice.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_descending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, <span class="fu">desc</span>(log2FoldChange))</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_descending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+  gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
+  &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 ENSMUSG00000102375     7.19          24.1   2.29 10.5  6.88e-26 2.91e-22
+2 ENSMUSG00000104583     5.77          24.0   2.31 10.4  2.48e-25 9.47e-22
+3 ENSMUSG00000042414     6.81           6.42  2.93  2.19 2.85e- 2 1.00e+ 0
+4 ENSMUSG00000048763     6.33           6.32  2.30  2.75 6.04e- 3 1.00e+ 0
+5 ENSMUSG00000117911     5.18           6.03  2.77  2.18 2.93e- 2 1.00e+ 0
+6 ENSMUSG00000085421     4.74           5.90  2.93  2.01 4.42e- 2 1.00e+ 0</code></pre>
+</div>
+</div>
+<p>When we’re interpreting the <code>log2FoldChange</code>, remember that you’ll need to do a little bit of math. A <code>log2FoldChange</code> value of 1 is a fold change value of 2 (2^1 = 2). Similarly, a <code>log2FoldChange</code> value of 4 is a fold change value of 8 (2^4 = 8)</p>
+<p>If there is a two fold <strong>increase</strong> (fold change = 2, <code>log2FoldChange</code> = 1) between groups A and B, then the expression in group A is twice as big as the expression in group B.</p>
+<p>If there is a two fold <strong>decrease</strong> (fold change = 0.5, <code>log2FoldChange</code> = -1) between groups A and B, then the expression in group A is half as big as the expression in group B (or B is twice as big as A).</p>
+</section>
 <section id="arranging-dataset-based-on-padj" class="level4">
 <h4 class="anchored" data-anchor-id="arranging-dataset-based-on-padj">Arranging dataset based on padj</h4>
-<p>You may be interested in identifying the genes that have been differentially expressed between your two groups (in this case, ASD mouse brains and control mouse brains). You can use the <code>arrange</code> command to sort the results to put the smallest padj values first.</p>
+<p>Maybe you also want to arrange the genes by whether the estimated differential expression is significant. Instead of <code>log2FoldChange</code>, you will want to look at <code>padj</code>. You can use the <code>arrange</code> command to sort the results to put the smallest padj values first.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_sorted <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, padj)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_sorted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_sorted <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, padj)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_sorted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -532,8 +910,63 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 </div>
 </section>
-<section id="creating-a-volcano-plot" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-volcano-plot">Creating a volcano plot</h4>
+<section id="compare-differential-gene-expression-of-a-single-across-groups" class="level4">
+<h4 class="anchored" data-anchor-id="compare-differential-gene-expression-of-a-single-across-groups">Compare differential gene expression of a single across groups</h4>
+<p>It might be interesting to look at the expression of a gene across our two brain regions. To do this, we will first load the region-specific datasets.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 55421 Columns: 7
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 55421 Columns: 7
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<p>Then we’ll filter out the gene in which we’re interested from each object. Let’s take a look at gene ENSMUSG00000079516, which is the Reg3a gene we previously looked up on MGI.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c_prefrontal, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>reg3a_striatum <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c_striatum, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, take a look at the differential expression of reg3a in each region.</p>
+<p>In the prefrontal cortex:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 7
+  gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
+  &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 ENSMUSG00000079516     10.6          -22.6  2.11 -10.7 7.30e-27 2.63e-23</code></pre>
+</div>
+</div>
+<p>In the striatum:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>reg3a_striatum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 7
+  gene               baseMean log2FoldChange lfcSE  stat pvalue  padj
+  &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+1 ENSMUSG00000079516    0.371           2.27  2.96 0.765  0.444    NA</code></pre>
+</div>
+</div>
+</section>
+<section id="creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes">Creating a volcano plot to visualize differential expression of multiple genes</h4>
 <p>A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have <code>log2FoldChange</code> on the x-axis and a log transformed <code>padj</code> on the y-axis.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -546,13 +979,13 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <p>We will first need to do a log transformation of the <code>padj</code> variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, we just create a scatterplot. The code for this is kind of complicated, so you will want to paste the code below into your console.</p>
 <p>Here’s the code for your basic volcano plot. <code>data</code> tells R what data to use, <code>x</code> tells R what the x-axis values should be, and <code>y</code> tells R what the y-axis values should be. Notice that we can just use the column names for <code>x</code> and <code>y</code>!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans)) <span class="sc">+</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans)) <span class="sc">+</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -560,7 +993,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -578,13 +1011,13 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <p>To recap: A gene is labeled “UP” if its log2FoldChange value is greater than 0.6 <em>and</em> its adjusted p-value is less than 0.05.</p>
 <p>A gene is labeled “DOWN” if its log2FoldChange value is less than -0.6 <em>and</em> its adjusted p-value is less than 0.05.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 9
   gene          baseMean log2FoldChange lfcSE  stat   pvalue     padj padj_trans
@@ -601,10 +1034,10 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <p>Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the <code>diffexpressed</code> column (<code>col = diffexpressed</code>). We also add a line about the colors we want to use (<code>scale_color_manual</code>). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command <code>labels</code> just creates the labels on the legend.</p>
 <p>You can find an extensive list of all the colors available in R at <a href="https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/">https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -612,28 +1045,26 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>We can also label genes of interest in our plot. Let’s label the Reg3a gene (the same one we looked up in the MGI database), as well as Pcdh12 (or protocadherin 12). The two gene IDs we need to know are ENSMUSG00000079516 and ENSMUSG00000024440.</p>
 <p>We will create another new column in our dataset. We will then tell R In this new column, the genes in our list (Reg3a and Pcdh12) are named, which everything else will have a missing name. When we remake the volcano plot, R will <em>only</em> label those points that do not have missing names in the <code>gene_label</code> column.</p>
-<p>This is going to require a little bit of R trickery and something called an “ifelse” statement.</p>
-<p>In R, an “ifelse” statement tells R to do one of two things. If the condition stated right after <code>ifelse(</code> is true, then R should do the second thing in the statement. If the condition is not true, then R should do the third thing.</p>
-<p>In our command, R is going through the <code>asd_vs_c</code> row by row. For each row, we are telling R to first check whether the geneID of that row is “ENSMUSG00000079516”. If it is, then R will fill in the <code>gene_label</code> column with the gene symbol “Reg3a”. If it is not, R moves onto the next part of our command, which is a second (or nested) ifelse loop.</p>
-<p>When R moves onto this second ifelse loop, it’s now checking to see if the geneID for the row is “ENSMUSG00000024440”. If it is, then R fills in the <code>gene_label</code> column with the gene symbol “Pcdh12”. If it is not, R fills in the <code>gene_label</code> column with “NA”, which basically means the information for this column is missing.</p>
+<p>This is going to require a little bit of R trickery and something called a “case_when” statement.</p>
+<p>In R, an “case_when” statement tells R to do something only when a condition is true. In our command, R is going through the <code>asd_vs_c</code> row by row. For each row, we are telling R to first check whether the geneID of that row is “ENSMUSG00000079516”. If it is, then R will fill in the <code>gene_label</code> column with the gene symbol “Reg3a”. If it is not, R moves onto the next part of our command.</p>
+<p>When R moves onto this second command, it’s now checking to see if the geneID for the row is “ENSMUSG00000024440”. If it is, then R fills in the <code>gene_label</code> column with the gene symbol “Pcdh12”. If it is not, R moves to the third command in the <code>case_when</code> statement. The final line tells R to fill in the <code>gene_label</code> column with “NA” for any row that didn’t match the previous commands. This will tell R in the future that the information for this column is missing.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>, <span class="st">"Reg3a"</span>,</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span>, <span class="st">"Pcdh12"</span>, <span class="cn">NA</span> </span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span> <span class="sc">~</span> <span class="st">"Reg3a"</span>,</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span> <span class="sc">~</span> <span class="st">"Pcdh12"</span>,</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Great! You can check to see what the new column <code>gene_label</code> looks like by using the <code>head</code> command.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 10
   gene          baseMean log2FoldChange lfcSE  stat   pvalue     padj padj_trans
@@ -650,20 +1081,20 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <p>Now we just need to remake our volcano plot and add some to code that tells R to label the points we’re interested in. The command <code>label = gene_label</code> goes right after the code that tells R how to color the points. We also need to add something at the end of our code that tells R to put the labels on top of the plot that we’ve made. That’s the <code>+   geom_text_repel(max.overlaps = Inf)</code> command.</p>
 <p>In order for this command to work, we do need to install and load a new library called <code>ggrepel</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'ggrepel'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'ggrepel'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Installing package into '/usr/local/lib/R/site-library'
 (as 'lib' is unspecified)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Excellent. Now that we have installed and loaded this package (which you only need to do once for each R session!), we can run the code to create the volcano plot. Remember, we added <code>label = gene_label</code> to tell R to add labels to the points, and <code>geom_text_repel(max.overlaps = Inf)</code> to tell R to put the labels on top of the plot so we can see them.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -675,19 +1106,19 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>You may want to add a title to your plot. This can be done with the <code>ggtitle</code> command.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -699,38 +1130,37 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-58-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Here’s all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">#log transform the padj values so the y-axis is formatted for plotting</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the diffexpressed column so that we can color the upregulated and downregulated genes on the plot</span></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the gene_label column so that we can label individual points</span></span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(</span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>, <span class="st">"Reg3a"</span>,</span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(</span>
-<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span>, <span class="st">"Pcdh12"</span>, <span class="cn">NA</span> </span>
-<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Make the final plot</span></span>
-<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
-<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
-<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co">#log transform the padj values so the y-axis is formatted for plotting</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the diffexpressed column so that we can color the upregulated and downregulated genes on the plot</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the gene_label column so that we can label individual points</span></span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span> <span class="sc">~</span> <span class="st">"Reg3a"</span>,</span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span> <span class="sc">~</span> <span class="st">"Pcdh12"</span>,</span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a><span class="co">#Make the final plot</span></span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
+<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
+<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
+<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
+<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -742,151 +1172,29 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-59-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
-</div>
-</div>
-</section>
-<section id="creating-a-gene-list" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-gene-list">Creating a gene list</h4>
-<p>You might want to create a list of all the genes that are differentially expressed between your two groups using the <code>filter</code> command. Make sure to check that your gene list has enough genes on it using <code>head</code> and <code>dim</code> (and that you have a good ratio of “real” positive versus false positive results).</p>
-<p>This step requires some thought as to what you want to set as your padj threshold! Remember, you want to make sure you have a minimal number of false positive results, while also still keeping enough genes for future analyses.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_sig <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c, padj <span class="sc">&lt;</span> <span class="fl">0.05</span>)</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_sig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 10
-  gene          baseMean log2FoldChange lfcSE  stat   pvalue     padj padj_trans
-  &lt;chr&gt;            &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;
-1 ENSMUSG00000…     16.9          -25.5  1.81 -14.1 2.18e-45 7.29e-41       40.1
-2 ENSMUSG00000…     14.6          -25.4  1.80 -14.1 3.82e-45 7.29e-41       40.1
-3 ENSMUSG00000…     11.2          -25.0  1.79 -14.0 2.97e-44 3.77e-40       39.4
-4 ENSMUSG00000…     14.9          -25.4  1.89 -13.4 4.00e-41 3.81e-37       36.4
-5 ENSMUSG00000…     11.5          -25.0  1.89 -13.3 3.44e-40 2.62e-36       35.6
-6 ENSMUSG00000…     10.6          -24.9  1.99 -12.5 6.66e-36 4.23e-32       31.4
-# ℹ 2 more variables: diffexpressed &lt;chr&gt;, gene_label &lt;chr&gt;</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(asd_vs_c_sig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 10 10</code></pre>
 </div>
 </div>
 </section>
 <section id="running-a-gene-set-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="running-a-gene-set-analysis">Running a gene set analysis</h4>
 <p>You can use the special command <code>runClusterProfiler</code> to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)</p>
+<p>You created a gene list in the <strong>Visualize gene counts of multiple genes across groups</strong> section above. The code from this section is repeated below in case you need to run it again.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_clusters <span class="ot">&lt;-</span> <span class="fu">runClusterProfiler</span>(asd_vs_c_sig)</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dotplot</span>(asd_vs_c_clusters, <span class="at">showCategory=</span><span class="dv">34</span>, <span class="at">title=</span><span class="st">"asd vs control in prefrontal cortex"</span>, <span class="at">font.size=</span><span class="dv">10</span>, <span class="at">label_format =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="compare-differential-gene-expression-of-a-single-gene-across-regions" class="level4">
-<h4 class="anchored" data-anchor-id="compare-differential-gene-expression-of-a-single-gene-across-regions">Compare differential gene expression of a SINGLE GENE across regions</h4>
-<p>It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will first load the region-specific datasets.</p>
+<p>Then we can create a subset of the <code>asd_vs_c</code> dataset by filtering out any genes that aren’t on our gene list. Remember, we do this using <code>filter</code> and <code>%in%</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 55421 Columns: 7
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): gene
-dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c, asd_vs_c<span class="sc">$</span>gene <span class="sc">%in%</span> gene_set)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 55421 Columns: 7
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): gene
-dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-</div>
-<p>Then we’ll filter out the gene in which we’re interested from each object. Let’s take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.</p>
+<p>Finally, create your cluster profile with the <code>runClusterProfiler</code> and <code>dotplot</code> commands.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c_prefrontal, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>reg3a_striatum <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c_striatum, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_clusters <span class="ot">&lt;-</span> <span class="fu">runClusterProfiler</span>(asd_vs_c_sig)</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dotplot</span>(asd_vs_c_clusters, <span class="at">showCategory=</span><span class="dv">34</span>, <span class="at">title=</span><span class="st">"asd vs control in prefrontal cortex"</span>, <span class="at">font.size=</span><span class="dv">10</span>, <span class="at">label_format =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Finally, take a look at the differential expression of reg3a in each region.</p>
-<p>In the prefrontal cortex:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 7
-  gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
-  &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-1 ENSMUSG00000079516     10.6          -22.6  2.11 -10.7 7.30e-27 2.63e-23</code></pre>
-</div>
-</div>
-<p>In the striatum:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>reg3a_striatum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 7
-  gene               baseMean log2FoldChange lfcSE  stat pvalue  padj
-  &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
-1 ENSMUSG00000079516    0.371           2.27  2.96 0.765  0.444    NA</code></pre>
-</div>
-</div>
-<p>You can create a histogram of the gene expression counts for this gene using the special <code>plotAcrossRegions</code> command. (NOTE: this is only available in SciServer.)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAcrossRegions</span>(<span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="visualize-differential-gene-expression-of-multiple-genes-across-regions" class="level4">
-<h4 class="anchored" data-anchor-id="visualize-differential-gene-expression-of-multiple-genes-across-regions">Visualize differential gene expression of MULTIPLE GENES across regions</h4>
-<p>We can also look at the differential gene expression of a set of genes at once! This is usually done by creating a <strong>heatmap</strong>. In RNA-seq analyses, we usually put individual samples on the x-axis and normalized gene counts on the y-axis.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html//1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY_g33d40c657bf_0_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Example of a heatmap."></p>
-</figure>
-</div>
-</div>
-</div>
-<p>When creating heatmaps, we want to work with a dataset that includes normalized gene expression data for each gene. We loaded a dataset like this above that we called <code>gutbrain_genes</code>. If you don’t have an object in your environment called this, scroll back up to the “<strong>Loading the gene expression count data</strong>” section and run the code again.</p>
-<p>The dataset you loaded has expression data for 55,421 different genes, which is too many to visualize. (You can try, but R will usually throw an error if you do.) In general, though, we are mostly interested in looking at the visualization of a particular group of genes, or a gene set.</p>
-<p>Let’s say we have identified 6 mouse genes () that have been linked to the development of motor neurons. We’re interested in whether these genes show differential gene expression between the striatum and the prefrontal cortex. We can use the <code>filter</code> command to pull out normalized gene expression data for just these six genes.</p>
-<p>These are the genes (with gene IDs) that we’re including in our gene set:</p>
-<p>Sema3a: ENSMUSG00000028883 Mapk8: ENSMUSG00000021936 Nrcam: ENSMUSG00000020598 Dlg4: ENSMUSG00000020886 Slit1: ENSMUSG00000025020 Creb1: ENSMUSG00000025958</p>
-<p>First, create a vector that contains these gene IDs. (You can replace the gene IDs with the ones for your genes of interest, but make sure you use Ensembl gene IDs! They should all start with “ENSMUSG”.)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Now we simply filter the <code>gutbrain_genes</code> dataset so that we only keep the rows for the gene IDs in our gene set. Remember, we want to use the <code>filter</code> command.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(gutbrain_genes, gutbrain_genes<span class="sc">$</span>...<span class="dv">1</span> <span class="sc">%in%</span> gene_set)</span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_motor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 141
-  ...1         SRR6652436 SRR6652443 SRR6652469 SRR6652471 SRR6652505 SRR6652506
-  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
-1 ENSMUSG0000…      86704      93818      62879     116582      50148      93087
-2 ENSMUSG0000…    2220069    1537477    1521896    1355721     945194    1790682
-3 ENSMUSG0000…     462615     362226     557979     714703     396624     750340
-4 ENSMUSG0000…     113380     104242     156926     223405     111427     211342
-5 ENSMUSG0000…      26284      19265      74037      56337      49613      93139
-6 ENSMUSG0000…      44034      30884      26225      45861      26901      46580
-# ℹ 134 more variables: SRR6652507 &lt;dbl&gt;, SRR6652508 &lt;dbl&gt;, SRR6652509 &lt;dbl&gt;,
-#   SRR6652510 &lt;dbl&gt;, SRR6652511 &lt;dbl&gt;, SRR6652512 &lt;dbl&gt;, SRR6652513 &lt;dbl&gt;,
-#   SRR6652514 &lt;dbl&gt;, SRR6652515 &lt;dbl&gt;, SRR6652521 &lt;dbl&gt;, SRR6652522 &lt;dbl&gt;,
-#   SRR6652389 &lt;dbl&gt;, SRR6652390 &lt;dbl&gt;, SRR6652391 &lt;dbl&gt;, SRR6652392 &lt;dbl&gt;,
-#   SRR6652393 &lt;dbl&gt;, SRR6652394 &lt;dbl&gt;, SRR6652395 &lt;dbl&gt;, SRR6652396 &lt;dbl&gt;,
-#   SRR6652397 &lt;dbl&gt;, SRR6652398 &lt;dbl&gt;, SRR6652399 &lt;dbl&gt;, SRR6652400 &lt;dbl&gt;,
-#   SRR6652401 &lt;dbl&gt;, SRR6652402 &lt;dbl&gt;, SRR6652403 &lt;dbl&gt;, SRR6652404 &lt;dbl&gt;, …</code></pre>
-</div>
-</div>
-<p>We also want to filter out some of the samples. Because we are interested in the gene expression of these six genes in the striatum compared to the prefrontal cortex, we want to control for any possible differences caused by the sample coming from an ASD-type mouse vs a control-type mouse.</p>
 
 
 </section>
