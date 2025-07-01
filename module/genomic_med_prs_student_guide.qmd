@@ -217,9 +217,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ::: {.callout-note}
 ## Check Your Knowledge
 
-1. Go to the [_Conti_ (GCST011047) study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". What ancestries are included?
+1. Based on the PRS and percentile you calculated, will Mr. J develop prostate cancer? Why or why not? 
+
+2. Go to the [_Conti_ (GCST011047) study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". What ancestries are included?
     
-2. How many people were used to identify these variants in the _Conti_ study? Hint: add up the cases (has cancer) and controls (no cancer) under "Discovery sample description".
+3. How many people were used to identify these variants in the _Conti_ study? Hint: add up the cases (has cancer) and controls (no cancer) under "Discovery sample description".
 :::
 
 ## Part 3
