@@ -501,6 +501,33 @@ You can find an extensive list of all the colors available in R at [https://www.
 heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
 ```
 
+Finally, here's all the code you just ran to create your heatmap in one place, in case you want to run it again.
+
+```{r}
+#define your geneset and make a vector
+gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", "ENSMUSG00000020886", "ENSMUSG00000025020", "ENSMUSG00000025958")
+
+#create new dataset that only include expression data for your geneset
+gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
+
+#load sample metadata
+gutbrain_metadata <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_metadata.csv")
+
+#filter out non-controls and order columns by tissue type
+gutbrain_controls <- filter(gutbrain_metadata, mouse_status == "Control")
+gutbrain_controls <- arrange(gutbrain_controls, tissue)
+gutbrain_motor_controls <- select(gutbrain_motor, GeneID, all_of(gutbrain_controls$sample_id))
+
+#change format of dataset from "tibble" to "matrix"
+gutbrain_motor_controls <- as.data.frame(gutbrain_motor_controls)
+rownames(gutbrain_motor_controls) <- gutbrain_motor_controls$GeneID
+gutbrain_motor_controls$GeneID <- NULL
+gutbrain_motor_controls <- as.matrix(gutbrain_motor_controls)
+
+#create heatmap with custom colors and title
+heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
+```
+
 ## Exploring the differential expression data
 
 Now let's look a differential expression dataset, which compares gene expression counts between two groups. This dataset gives us an idea how the change in a gene's expression might be associated with a disorder or a cell type. This is particularly useful for beginning to map the genetic drivers of a particular phenotype.
