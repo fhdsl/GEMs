@@ -480,6 +480,18 @@ gutbrain_motor_controls <- as.matrix(gutbrain_motor_controls)
 heatmap(gutbrain_motor_controls)
 ```
 
+Congratulations, you have just created a heatmap! The map itself is a series of stacked boxes. Each square within the heatmap represents the gene count for a particular gene in a particular sample. By default squares with the high gene counts are colored dark red. Squares with the lowest gene counts are colored pale yellow. 
+
+By default, R will order the samples (what we have on the x-axis across the bottom) in a way that clusters similar samples together. This is why we see columns of lighter yellow in the center of the heatmap, with darker orange and red columns on the edges. This suggests that there are groups of samples that have higher gene expression, but it's hard to tell right now if these groups correspond to the prefrontal cortex vs striatum (which is what we're interested in). It would be helpful if we could tell R to group based on prefrontal cortex vs striatum instead.
+
+Luckily, this is possible! Remember above when we ordered our samples so that the prefrontal cortex samples were first? This means our dataset is already in the order we want. We can just tell R to use the default ordering of the dataset instead of clustering and rearranging the x-axis.
+
+```{r}
+heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA)
+```
+
+Finally, we can customize the heatmap by changing the color scheme and adding a title.
+
 ### Exploring the differential expression data
 
 Now let's look a differential expression dataset, which compares gene expression counts between two groups. This dataset gives us an idea how the change in a gene's expression might be associated with a disorder or a cell type. This is particularly useful for beginning to map the genetic drivers of a particular phenotype.
