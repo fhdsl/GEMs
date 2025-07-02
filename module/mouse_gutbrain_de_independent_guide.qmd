@@ -491,7 +491,15 @@ heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA)
 ```
 Perfect! Now we can easily see that four of our six genes seem to be expressed in lower levels by the samples on the right side of the heatmap (the striatum samples), while one gene is expressed in higher levels by the striatum. This is definitely intriguing!
 
-Finally, we can customize the heatmap by changing the color scheme and adding a title. 
+Notice that not all the striatum samples have the same expression for each gene. This is normal variation and could be due to actual difference in gene expression levels or be the result of laboratory methods.
+
+Finally, we can customize the heatmap by changing the color scheme and adding a title. As as example, we're going to tell R to make a spectrum of colors between white and blue, with white indicating the lowest expression and blue indicating the highest expression, and 16 possible color categories. 
+
+You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/). **The general convention in biology is that the lightest colors on a heatmap indicate the lowest values.**
+
+```{r}
+heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
+```
 
 ### Exploring the differential expression data
 
