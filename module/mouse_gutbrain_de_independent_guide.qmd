@@ -438,20 +438,20 @@ gutbrain_metadata <- read_csv("https://genomicseducation.org/data/mouse_gutbrain
 
 head(gutbrain_metadata)
 ```
-Since we want to make sure we're only looking at samples from control-type mice, we will use `filter`  to create a vector from `gutbrain_metadata`. In this case, we will filter based on the "mouse_status" column.
+Since we want to make sure we're only looking at samples from control-type mice, we will use `filter`  to create a vector from `gutbrain_metadata`. In this case, we will filter based on the "mouse_status" column. At the same time, we're going to order our samples so that all the prefrontal cortex samples are listed first. (This will be helpful for a later step.) We can do this using the `arrange` function and telling R to arrange based on the "tissue" column.
 
 ```{r}
 gutbrain_controls <- filter(gutbrain_metadata, mouse_status == "Control")
 
-control_sample <- gutbrain_controls$sample_id
+gutbrain_controls <- arrange(gutbrain_controls, tissue)
 
-dim(gutbrain_controls)
+head(gutbrain_controls)
 ```
 
-Excellent. We now have a vector (called `control_sample`) that contains the sample IDs for the 58 control-type mice samples in the dataset. We next use this to subset `gutbrain_motor` (our dataset that has gene expression counts for the motor neuron genes). We will use a combination of the `select` function and `all_of` to tell R to keep only those columns that belong to samples found in `control_sample`, as well the "GeneID" column. 
+Excellent. We now have a dataset that contains a subset in the order we want. We next use the "sample_id" column to subset `gutbrain_motor` (our dataset that has gene expression counts for the motor neuron genes). We will use a combination of the `select` function and `all_of` to tell R to keep only those columns that belong to samples found in `gutbrain_controls$sample_id`, as well the "GeneID" column. 
 
 ```{r}
-gutbrain_motor_controls <- select(gutbrain_motor, GeneID, all_of(control_sample))
+gutbrain_motor_controls <- select(gutbrain_motor, GeneID, all_of(gutbrain_controls$sample_id))
 
 head(gutbrain_motor_controls)
 ```
@@ -489,8 +489,9 @@ Luckily, this is possible! Remember above when we ordered our samples so that th
 ```{r}
 heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA)
 ```
+Perfect! Now we can easily see that four of our six genes seem to be expressed in lower levels by the samples on the right side of the heatmap (the striatum samples), while one gene is expressed in higher levels by the striatum. This is definitely intriguing!
 
-Finally, we can customize the heatmap by changing the color scheme and adding a title.
+Finally, we can customize the heatmap by changing the color scheme and adding a title. 
 
 ### Exploring the differential expression data
 
