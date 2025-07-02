@@ -1,5 +1,7 @@
 ---
-title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
+title: "Family Markers: Using Multiply-Affected Families to Identify Risk Genes"
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
@@ -16,7 +18,7 @@ In Part 1, we'll go over some background context for this activity. Then, we'll 
 
 ### Background
 
-First, let's read the "plain language" summary from a publication entitled "Rare variants implicate NMDA receptor signaling and cerebellar gene networks in risk for bipolar disorder".
+First, let's read the "plain language" summary from a publication entitled "Rare variants implicate NMDA receptor signaling and cerebellar gene networks in risk for bipolar disorder" [@hasin2022].
 
 > This research explores the genetic basis of bipolar disorder, a serious mental health condition where people experience extreme mood swings between mania and depression. The researchers studied DNA from 41 families with multiple members affected by bipolar disorder. They identified 741 genes potentially linked to bipolar disorder, which overlapped with genes known to be involved in other brain development disorders. Their most significant finding was a specific variant in a gene called DAO (D-amino acid oxidase). When they tested this variant in human cells, it reduced the amount and activity of the DAO protein. In mice with the equivalent genetic change, they observed: (1) less DAO protein in certain brain regions, (2) greater susceptibility to stress, (3) altered responses to drugs affecting NMDAR (a type of brain receptor), and (4) changes in gene activity patterns in the cerebellum (a brain region). The team also found similar gene expression patterns in the cerebellum of human bipolar disorder patients. The study suggests bipolar disorder may involve disruptions to NMDAR signaling and gene expression in the cerebellum, providing new insights into how this condition develops at the molecular level.
 

@@ -1,5 +1,7 @@
 ---
 title: "Genomic Medicine: Polygenic Risk Score Calculation"
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
@@ -54,17 +56,17 @@ A PRS is just a rough estimate based on what we know at the moment about the gen
 
 ### Genomic Ancestry
 
-<!-- More here? -->
+The human genome contains a huge amount of variation. Different geographic regions have different frequencies of variants. By comparing individuals to others, an individual person's variants can be used to determine the geographic region of their most likely ancestors. Several commercial companies perform these comparisons. Variants in the mitochondrial DNA are maternally inherited, variants in the Y chromosome are paternally inherited, and autosomal variants can come from either parent [@jorde2020].
 
 ### Exploring Variant Data
 
 In the next steps, we'll be looking at how PRS can help patients be more informed about disease risk. 
 
-This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness (see [this source]( https://www.ncbi.nlm.nih.gov/books/NBK470550/ )). This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes. 
+This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness [@leslie2024]. This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes. 
 
 ### Mr. J's Data
 
-Mr. J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher in Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr. J know he won't make it to practice on Friday because he's getting a cancer screening. Curious, Mr. J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results. 
+Mr. J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher with Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr. J know he won't make it to practice on Friday because he's getting a cancer screening. Curious, Mr. J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results. 
 
 The next time Mr. J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he's not sure if it has a genetic link.
 
@@ -105,12 +107,11 @@ Mr. J has a "G" here. Other patients might have "A" or "C". This means he might 
 
 1. When treating genetic disease, why is it important to examine multiple genes, rather than examine one gene at a time?
 
-1. Which of these are accurate statements?
-
+1. Which of these are accurate statements?  
     a. Having certain gene variants can mean increased risk of disease.  
-    b. Higher PRS scores guarantee development of disease.
-    c. PRS must be based on an appropriate database of gene variants.
-    d. All variants come from protein-coding genes.
+    b. Higher PRS scores guarantee development of disease.  
+    c. PRS must be based on an appropriate database of gene variants.  
+    d. All variants come from protein-coding genes.  
 
 1. Try looking up another variant at <https://www.ebi.ac.uk/gwas/variants>. Look up "rs2075650". What kind of variant is listed under "Most severe consequence"? Are there any diseases associated with this variant?
 
@@ -168,7 +169,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ::: callout-tip
 ## Why a Specific Research Study?
 
-In order to be accurate, PRS scores must be calculated based on the right variants. Variants should be collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk / protection.
+In order to be accurate, PRS scores must be calculated based on the right variants. Variants should be collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk / protection. Mr. J has African ancestry, so we should use a study whose participants also have African ancestry.
 
 Mr. J's variant data was carefully collected based on the variants identified in the _Conti_ study (GCST011047).
 :::
@@ -178,7 +179,7 @@ Mr. J's variant data was carefully collected based on the variants identified in
 Select "African" as the "Preferred Super Population" and "1000 Genomes - AFR population" under "MAF Population".
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_70#slide=id.g35f4636d8f5_0_70")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_77#slide=id.g35f4636d8f5_0_77")
 ```
 
 Finally, click "Calculate Risk Scores".
@@ -192,7 +193,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 The calculated score for this study will appear in the box at the bottom. You will have to scroll over.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_84#slide=id.g35f4636d8f5_0_84")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_92#slide=id.g35f4636d8f5_0_92")
 ```
 
 ::: callout-tip
@@ -217,9 +218,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ::: {.callout-note}
 ## Check Your Knowledge
 
-1. Go to the [_Conti_ (GCST011047) study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". What ancestries are included?
+1. Based on the PRS and percentile you calculated, will Mr. J develop prostate cancer? Why or why not? 
+
+2. Go to the [_Conti_ (GCST011047) study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". What ancestries are included?
     
-2. How many people were used to identify these variants in the _Conti_ study? Hint: add up the cases (has cancer) and controls (no cancer) under "Discovery sample description".
+3. How many people were used to identify these variants in the _Conti_ study? Hint: add up the cases (has cancer) and controls (no cancer) under "Discovery sample description".
 :::
 
 ## Part 3
@@ -262,6 +265,8 @@ A mismatch between the study population and the patient's ancestry can create ga
 
 Scientists realized recently that this was a problem. Programs like [All of Us](https://allofus.nih.gov/) aim to collect better data on people from diverse backgrounds to improve PRS. Technology improvements have also made it more affordable to screen for more variants.
 :::
+
+## Part 3 Questions
 
 ::: {.callout-note}
 ## Check Your Knowledge
