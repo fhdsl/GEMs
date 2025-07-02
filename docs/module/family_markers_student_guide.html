@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -189,7 +209,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Family Markers: Using Multiply-Affected Families to Identify Risk Genes</strong></h1>
+<h1 class="title">Family Markers: Using Multiply-Affected Families to Identify Risk Genes</h1>
 </div>
 
 
@@ -221,7 +241,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>In Part 1, we’ll go over some background context for this activity. Then, we’ll get set up on Posit Cloud for the next steps.</p>
 <section id="background" class="level3">
 <h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>First, let’s read the “plain language” summary from a publication entitled “Rare variants implicate NMDA receptor signaling and cerebellar gene networks in risk for bipolar disorder”.</p>
+<p>First, let’s read the “plain language” summary from a publication entitled “Rare variants implicate NMDA receptor signaling and cerebellar gene networks in risk for bipolar disorder” <span class="citation" data-cites="hasin2022"><a href="#ref-hasin2022" role="doc-biblioref">[1]</a></span>.</p>
 <blockquote class="blockquote">
 <p>This research explores the genetic basis of bipolar disorder, a serious mental health condition where people experience extreme mood swings between mania and depression. The researchers studied DNA from 41 families with multiple members affected by bipolar disorder. They identified 741 genes potentially linked to bipolar disorder, which overlapped with genes known to be involved in other brain development disorders. Their most significant finding was a specific variant in a gene called DAO (D-amino acid oxidase). When they tested this variant in human cells, it reduced the amount and activity of the DAO protein. In mice with the equivalent genetic change, they observed: (1) less DAO protein in certain brain regions, (2) greater susceptibility to stress, (3) altered responses to drugs affecting NMDAR (a type of brain receptor), and (4) changes in gene activity patterns in the cerebellum (a brain region). The team also found similar gene expression patterns in the cerebellum of human bipolar disorder patients. The study suggests bipolar disorder may involve disruptions to NMDAR signaling and gene expression in the cerebellum, providing new insights into how this condition develops at the molecular level.</p>
 </blockquote>
@@ -679,9 +699,14 @@ Check Your Knowledge
 </div>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-hasin2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">N. Hasin <em>et al.</em>, <span>“Rare variants implicate NMDA receptor signaling and cerebellar gene networks in risk for bipolar disorder,”</span> <em>Molecular psychiatry</em>, vol. 27, no. 9, pp. 3842–3856, 2022, Available: <a href="https://drive.google.com/file/d/1sX5EZ6BErqS3UFaN3rK7YUjIhNyPOSqc/view">https://drive.google.com/file/d/1sX5EZ6BErqS3UFaN3rK7YUjIhNyPOSqc/view</a></div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

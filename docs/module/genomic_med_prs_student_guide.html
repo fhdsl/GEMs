@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -144,6 +164,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#adding-a-study" id="toc-adding-a-study" class="nav-link" data-scroll-target="#adding-a-study">Adding a Study</a></li>
   <li><a href="#comparing-results" id="toc-comparing-results" class="nav-link" data-scroll-target="#comparing-results">Comparing Results</a></li>
   </ul></li>
+  <li><a href="#part-3-questions" id="toc-part-3-questions" class="nav-link" data-scroll-target="#part-3-questions">Part 3 Questions</a></li>
   </ul>
 </nav>
     </div>
@@ -238,16 +259,16 @@ Understanding Risk
 </section>
 <section id="genomic-ancestry" class="level3">
 <h3 class="anchored" data-anchor-id="genomic-ancestry">Genomic Ancestry</h3>
-<!-- More here? -->
+<p>The human genome contains a huge amount of variation. Different geographic regions have different frequencies of variants. By comparing individuals to others, an individual person’s variants can be used to determine the geographic region of their most likely ancestors. Several commercial companies perform these comparisons. Variants in the mitochondrial DNA are maternally inherited, variants in the Y chromosome are paternally inherited, and autosomal variants can come from either parent <span class="citation" data-cites="jorde2020"><a href="#ref-jorde2020" role="doc-biblioref">[1]</a></span>.</p>
 </section>
 <section id="exploring-variant-data" class="level3">
 <h3 class="anchored" data-anchor-id="exploring-variant-data">Exploring Variant Data</h3>
 <p>In the next steps, we’ll be looking at how PRS can help patients be more informed about disease risk.</p>
-<p>This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness (see <a href="https://www.ncbi.nlm.nih.gov/books/NBK470550/">this source</a>). This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes.</p>
+<p>This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness <span class="citation" data-cites="leslie2024"><a href="#ref-leslie2024" role="doc-biblioref">[2]</a></span>. This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes.</p>
 </section>
 <section id="mr.-js-data" class="level3">
 <h3 class="anchored" data-anchor-id="mr.-js-data">Mr.&nbsp;J’s Data</h3>
-<p>Mr.&nbsp;J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher in Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr.&nbsp;J know he won’t make it to practice on Friday because he’s getting a cancer screening. Curious, Mr.&nbsp;J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results.</p>
+<p>Mr.&nbsp;J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher with Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr.&nbsp;J know he won’t make it to practice on Friday because he’s getting a cancer screening. Curious, Mr.&nbsp;J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results.</p>
 <p>The next time Mr.&nbsp;J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he’s not sure if it has a genetic link.</p>
 <p>We’re going to take gene screening data for Mr.&nbsp;J, to understand his risk. Mr.&nbsp;J has African ancestry, which will be important later. First, let’s explore a variant to learn more.</p>
 </section>
@@ -314,8 +335,10 @@ Check Your Knowledge
 <ol type="a">
 <li>Having certain gene variants can mean increased risk of disease.<br>
 </li>
-<li>Higher PRS scores guarantee development of disease.</li>
-<li>PRS must be based on an appropriate database of gene variants.</li>
+<li>Higher PRS scores guarantee development of disease.<br>
+</li>
+<li>PRS must be based on an appropriate database of gene variants.<br>
+</li>
 <li>All variants come from protein-coding genes.</li>
 </ol></li>
 <li><p>Try looking up another variant at <a href="https://www.ebi.ac.uk/gwas/variants" class="uri">https://www.ebi.ac.uk/gwas/variants</a>. Look up “rs2075650”. What kind of variant is listed under “Most severe consequence”? Are there any diseases associated with this variant?</p></li>
@@ -400,7 +423,7 @@ Why a Specific Research Study?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In order to be accurate, PRS scores must be calculated based on the right variants. Variants should be collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk / protection.</p>
+<p>In order to be accurate, PRS scores must be calculated based on the right variants. Variants should be collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk / protection. Mr.&nbsp;J has African ancestry, so we should use a study whose participants also have African ancestry.</p>
 <p>Mr.&nbsp;J’s variant data was carefully collected based on the variants identified in the <em>Conti</em> study (GCST011047).</p>
 </div>
 </div>
@@ -412,7 +435,7 @@ Why a Specific Research Study?
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_70.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_77.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
 </figure>
 </div>
 </div>
@@ -435,7 +458,7 @@ Why a Specific Research Study?
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_84.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+<p><img src="genomic_med_prs_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_92.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
 </figure>
 </div>
 </div>
@@ -484,6 +507,7 @@ Check Your Knowledge
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
+<li><p>Based on the PRS and percentile you calculated, will Mr.&nbsp;J develop prostate cancer? Why or why not?</p></li>
 <li><p>Go to the <a href="https://www.ebi.ac.uk/gwas/studies/GCST011047"><em>Conti</em> (GCST011047) study page</a> and look at the description under “Discovery ancestry label”. What ancestries are included?</p></li>
 <li><p>How many people were used to identify these variants in the <em>Conti</em> study? Hint: add up the cases (has cancer) and controls (no cancer) under “Discovery sample description”.</p></li>
 </ol>
@@ -549,6 +573,10 @@ Capturing More Variants
 <p>Scientists realized recently that this was a problem. Programs like <a href="https://allofus.nih.gov/">All of Us</a> aim to collect better data on people from diverse backgrounds to improve PRS. Technology improvements have also made it more affordable to screen for more variants.</p>
 </div>
 </div>
+</section>
+</section>
+<section id="part-3-questions" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -568,10 +596,17 @@ Check Your Knowledge
 </div>
 
 
-</section>
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-jorde2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">L. B. Jorde and M. J. Bamshad, <span>“Genetic ancestry testing: What is it and why is it important?”</span> <em>Jama</em>, vol. 323, no. 11, pp. 1089–1090, 2020, Available: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8202415/">https://pmc.ncbi.nlm.nih.gov/articles/PMC8202415/</a></div>
+</div>
+<div id="ref-leslie2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. Leslie, T. Soon-Sutton, and W. Skelton, <span>“Prostate cancer,”</span> in <em>StatPearls [internet]</em>, Treasure Island (FL): StatPearls Publishing, 2024. Available: <a href="https://www.ncbi.nlm.nih.gov/books/NBK470550/">https://www.ncbi.nlm.nih.gov/books/NBK470550/</a></div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
