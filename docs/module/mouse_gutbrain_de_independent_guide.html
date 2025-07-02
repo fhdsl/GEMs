@@ -168,11 +168,24 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#looking-up-genes-based-on-human-gene-name" id="toc-looking-up-genes-based-on-human-gene-name" class="nav-link" data-scroll-target="#looking-up-genes-based-on-human-gene-name">Looking up genes based on human gene name</a></li>
   <li><a href="#looking-up-genes-associated-with-a-human-disease" id="toc-looking-up-genes-associated-with-a-human-disease" class="nav-link" data-scroll-target="#looking-up-genes-associated-with-a-human-disease">Looking up genes associated with a human disease</a></li>
   </ul></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a>
+  <li><a href="#exploring-the-gene-expression-count-data" id="toc-exploring-the-gene-expression-count-data" class="nav-link" data-scroll-target="#exploring-the-gene-expression-count-data">Exploring the gene expression count data</a>
   <ul class="collapse">
   <li><a href="#package-install-and-load" id="toc-package-install-and-load" class="nav-link" data-scroll-target="#package-install-and-load">Package Install and Load</a></li>
-  <li><a href="#exploring-the-gene-expression-count-data" id="toc-exploring-the-gene-expression-count-data" class="nav-link" data-scroll-target="#exploring-the-gene-expression-count-data">Exploring the gene expression count data</a></li>
-  <li><a href="#exploring-the-differential-expression-data" id="toc-exploring-the-differential-expression-data" class="nav-link" data-scroll-target="#exploring-the-differential-expression-data">Exploring the differential expression data</a></li>
+  <li><a href="#loading-the-gene-expression-count-data" id="toc-loading-the-gene-expression-count-data" class="nav-link" data-scroll-target="#loading-the-gene-expression-count-data">Loading the gene expression count data</a></li>
+  <li><a href="#exploring-and-summarizing-count-data" id="toc-exploring-and-summarizing-count-data" class="nav-link" data-scroll-target="#exploring-and-summarizing-count-data">Exploring and summarizing count data</a></li>
+  <li><a href="#plotting-histograms-and-dealing-with-zero-counts" id="toc-plotting-histograms-and-dealing-with-zero-counts" class="nav-link" data-scroll-target="#plotting-histograms-and-dealing-with-zero-counts">Plotting histograms and dealing with zero counts</a></li>
+  <li><a href="#looking-at-read-count-for-a-single-gene" id="toc-looking-at-read-count-for-a-single-gene" class="nav-link" data-scroll-target="#looking-at-read-count-for-a-single-gene">Looking at read count for a single gene</a></li>
+  <li><a href="#visualize-gene-counts-of-multiple-genes-across-groups" id="toc-visualize-gene-counts-of-multiple-genes-across-groups" class="nav-link" data-scroll-target="#visualize-gene-counts-of-multiple-genes-across-groups">Visualize gene counts of multiple genes across groups</a></li>
+  </ul></li>
+  <li><a href="#exploring-the-differential-expression-data" id="toc-exploring-the-differential-expression-data" class="nav-link" data-scroll-target="#exploring-the-differential-expression-data">Exploring the differential expression data</a>
+  <ul class="collapse">
+  <li><a href="#package-install-and-load-1" id="toc-package-install-and-load-1" class="nav-link" data-scroll-target="#package-install-and-load-1">Package Install and Load</a></li>
+  <li><a href="#loading-the-differential-expression-data" id="toc-loading-the-differential-expression-data" class="nav-link" data-scroll-target="#loading-the-differential-expression-data">Loading the differential expression data</a></li>
+  <li><a href="#ranking-the-genes-by-log2foldchange" id="toc-ranking-the-genes-by-log2foldchange" class="nav-link" data-scroll-target="#ranking-the-genes-by-log2foldchange">Ranking the genes by log2FoldChange</a></li>
+  <li><a href="#arranging-dataset-based-on-padj" id="toc-arranging-dataset-based-on-padj" class="nav-link" data-scroll-target="#arranging-dataset-based-on-padj">Arranging dataset based on padj</a></li>
+  <li><a href="#compare-differential-gene-expression-of-a-single-across-groups" id="toc-compare-differential-gene-expression-of-a-single-across-groups" class="nav-link" data-scroll-target="#compare-differential-gene-expression-of-a-single-across-groups">Compare differential gene expression of a single across groups</a></li>
+  <li><a href="#creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes" id="toc-creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes" class="nav-link" data-scroll-target="#creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes">Creating a volcano plot to visualize differential expression of multiple genes</a></li>
+  <li><a href="#running-a-gene-set-analysis" id="toc-running-a-gene-set-analysis" class="nav-link" data-scroll-target="#running-a-gene-set-analysis">Running a gene set analysis</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -608,11 +621,13 @@ Note
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="analysis" class="level2">
-<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
 <p>Now that you have your genes of interest, you’re ready to start working with the dataset.</p>
+</section>
+</section>
+<section id="exploring-the-gene-expression-count-data" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-the-gene-expression-count-data">Exploring the gene expression count data</h2>
+<p>Let’s start by looking at a dataset that includes information on how many times each gene was expressed in a sample. This is the gene expression count dataset.</p>
+<p>This dataset gives us an idea of the scale of gene expression - for example, which genes are expressed the most? Which genes are expressed the least? This is particularly useful when you want to know if a gene is usually turned on or off in a sample.</p>
 <section id="package-install-and-load" class="level3">
 <h3 class="anchored" data-anchor-id="package-install-and-load">Package Install and Load</h3>
 <p>We will need to install the <code>tidyverse</code> package for this activity.</p>
@@ -641,12 +656,8 @@ Note
 </div>
 </div>
 </section>
-<section id="exploring-the-gene-expression-count-data" class="level3">
-<h3 class="anchored" data-anchor-id="exploring-the-gene-expression-count-data">Exploring the gene expression count data</h3>
-<p>Let’s start by looking at a dataset that includes information on how many times each gene was expressed in a sample. This is the gene expression count dataset.</p>
-<p>This dataset gives us an idea of the scale of gene expression - for example, which genes are expressed the most? Which genes are expressed the least? This is particularly useful when you want to know if a gene is usually turned on or off in a sample.</p>
-<section id="loading-the-gene-expression-count-data" class="level4">
-<h4 class="anchored" data-anchor-id="loading-the-gene-expression-count-data">Loading the gene expression count data</h4>
+<section id="loading-the-gene-expression-count-data" class="level3">
+<h3 class="anchored" data-anchor-id="loading-the-gene-expression-count-data">Loading the gene expression count data</h3>
 <p>You can load this dataset into R using the following code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gutbrain_genes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_counts.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -663,8 +674,8 @@ dbl (139): SRR6652436, SRR6652443, SRR6652469, SRR6652471, SRR6652505, SRR66...
 </div>
 <p>This dataset has 140 columns. Each row represents a gene. Each column is an individual mouse (sample), except for the first column (“GeneID”, which is the Ensembl gene IDs) and the last column (“total_counts”, which is the sum across all mice).</p>
 </section>
-<section id="exploring-and-summarizing-count-data" class="level4">
-<h4 class="anchored" data-anchor-id="exploring-and-summarizing-count-data">Exploring and summarizing count data</h4>
+<section id="exploring-and-summarizing-count-data" class="level3">
+<h3 class="anchored" data-anchor-id="exploring-and-summarizing-count-data">Exploring and summarizing count data</h3>
 <p>When you first open the gene expression data, you want to verify that the data has loaded correctly. You can do this with the <code>head</code> and <code>tail</code> commands. Remember, <code>head</code> prints the first 6 rows of a dataset, while <code>tail</code> prints the last 6 rows.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_genes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -722,8 +733,8 @@ dbl (139): SRR6652436, SRR6652443, SRR6652469, SRR6652471, SRR6652505, SRR66...
 </div>
 </div>
 </section>
-<section id="plotting-histograms-and-dealing-with-zero-counts" class="level4">
-<h4 class="anchored" data-anchor-id="plotting-histograms-and-dealing-with-zero-counts">Plotting histograms and dealing with zero counts</h4>
+<section id="plotting-histograms-and-dealing-with-zero-counts" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-histograms-and-dealing-with-zero-counts">Plotting histograms and dealing with zero counts</h3>
 <p>A histogram is a good way to visually explore the distribution of the read counts, as well as get an idea of how many genes have few or no reads. Use a log10 scale on the x-axis.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log10</span>(gutbrain_genes<span class="sc">$</span>total_counts), <span class="at">main=</span><span class="st">"Log10 Read Counts for Mouse RNA-seq sample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -749,15 +760,15 @@ dbl (139): SRR6652436, SRR6652443, SRR6652469, SRR6652471, SRR6652505, SRR66...
 </div>
 </div>
 </section>
-<section id="looking-at-read-count-for-a-single-gene" class="level4">
-<h4 class="anchored" data-anchor-id="looking-at-read-count-for-a-single-gene">Looking at read count for a single gene</h4>
+<section id="looking-at-read-count-for-a-single-gene" class="level3">
+<h3 class="anchored" data-anchor-id="looking-at-read-count-for-a-single-gene">Looking at read count for a single gene</h3>
 <p>You may want to look at the read count for a specific gene in your dataset. This can be done with the <code>filter</code> command. Let’s look at the read counts for the Reg3a gene, across all mice. Remember, this is the gene we looked up earlier in the MGI database. The Ensembl gene ID is “ENSMUSG00000079516”.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(gutbrain_genes, GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="visualize-gene-counts-of-multiple-genes-across-groups" class="level4">
-<h4 class="anchored" data-anchor-id="visualize-gene-counts-of-multiple-genes-across-groups">Visualize gene counts of multiple genes across groups</h4>
+<section id="visualize-gene-counts-of-multiple-genes-across-groups" class="level3">
+<h3 class="anchored" data-anchor-id="visualize-gene-counts-of-multiple-genes-across-groups">Visualize gene counts of multiple genes across groups</h3>
 <p>We can also look at the differential gene expression of a set of genes at once! This is usually done by creating a <strong>heatmap</strong>. In RNA-seq analyses, we usually put individual samples on the x-axis and normalized gene counts on the y-axis.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -803,17 +814,339 @@ dbl (139): SRR6652436, SRR6652443, SRR6652469, SRR6652471, SRR6652505, SRR66...
 </div>
 </div>
 <p>we’re not quite ready to make our heatmap yet. Because we are interested in the gene expression of these six genes in the striatum compared to the prefrontal cortex, we want to control for any possible differences caused by the sample coming from an ASD-type mouse vs a control-type mouse. So we also want to select a subset of the samples so that we’re only using those samples from control-type mice.</p>
-<p>TODO: actually create heatmap</p>
+<p>The metadata about the samples (basically, a dataset that has information on whether the sample is from an ASD-type mouse or a control-type mouse, as well as whether it is a striatum sample or a prefrontal cortex sample) can be found at the link <a href="https://genomicseducation.org/data/mouse_gutbrain_metadata.csv" class="uri">https://genomicseducation.org/data/mouse_gutbrain_metadata.csv</a></p>
+<p>We can load the data into R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>gutbrain_metadata <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_metadata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 138 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (5): sample_id, age, mouse_status, sex, tissue
+dbl (1): source_name
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_metadata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  sample_id  age   mouse_status sex   source_name tissue           
+  &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;            
+1 SRR6652436 P45   ASD          male            3 striatum         
+2 SRR6652443 P45   Control      male            4 striatum         
+3 SRR6652469 P45   ASD          male            3 prefrontal_cortex
+4 SRR6652471 P45   Control      male            5 prefrontal_cortex
+5 SRR6652505 P45   ASD          male            3 prefrontal_cortex
+6 SRR6652506 P45   ASD          male            3 prefrontal_cortex</code></pre>
+</div>
+</div>
+<p>Since we want to make sure we’re only looking at samples from control-type mice, we will use <code>filter</code> to create a vector from <code>gutbrain_metadata</code>. In this case, we will filter based on the “mouse_status” column. At the same time, we’re going to order our samples so that all the prefrontal cortex samples are listed first. (This will be helpful for a later step.) We can do this using the <code>arrange</code> function and telling R to arrange based on the “tissue” column.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>gutbrain_controls <span class="ot">&lt;-</span> <span class="fu">filter</span>(gutbrain_metadata, mouse_status <span class="sc">==</span> <span class="st">"Control"</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>gutbrain_controls <span class="ot">&lt;-</span> <span class="fu">arrange</span>(gutbrain_controls, tissue)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_controls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  sample_id  age   mouse_status sex   source_name tissue           
+  &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;            
+1 SRR6652471 P45   Control      male            5 prefrontal_cortex
+2 SRR6652507 P45   Control      male            5 prefrontal_cortex
+3 SRR6652508 P45   Control      male            5 prefrontal_cortex
+4 SRR6652511 P45   Control      male            5 prefrontal_cortex
+5 SRR6652512 P45   Control      male            5 prefrontal_cortex
+6 SRR6652513 P45   Control      male            4 prefrontal_cortex</code></pre>
+</div>
+</div>
+<p>Excellent. We now have a dataset that contains a subset in the order we want. We next use the “sample_id” column to subset <code>gutbrain_motor</code> (our dataset that has gene expression counts for the motor neuron genes). We will use a combination of the <code>select</code> function and <code>all_of</code> to tell R to keep only those columns that belong to samples found in <code>gutbrain_controls$sample_id</code>, as well the “GeneID” column.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor_controls <span class="ot">&lt;-</span> <span class="fu">select</span>(gutbrain_motor, GeneID, <span class="fu">all_of</span>(gutbrain_controls<span class="sc">$</span>sample_id))</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_motor_controls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 59
+  GeneID       SRR6652471 SRR6652507 SRR6652508 SRR6652511 SRR6652512 SRR6652513
+  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
+1 ENSMUSG0000…     116582      71492     119670     109645     119984     113530
+2 ENSMUSG0000…    1355721    1064719    2031278    1341461    1356546    1005090
+3 ENSMUSG0000…     714703     494635     889211     773767     814278     583819
+4 ENSMUSG0000…     223405     141912     253795     210291     226774     177495
+5 ENSMUSG0000…      56337      51485     100228      77037      81906      38079
+6 ENSMUSG0000…      45861      25904      41466      46340      54418      34669
+# ℹ 52 more variables: SRR6652514 &lt;dbl&gt;, SRR6652457 &lt;dbl&gt;, SRR6652458 &lt;dbl&gt;,
+#   SRR6652459 &lt;dbl&gt;, SRR6652460 &lt;dbl&gt;, SRR6652465 &lt;dbl&gt;, SRR6652466 &lt;dbl&gt;,
+#   SRR6652472 &lt;dbl&gt;, SRR6652475 &lt;dbl&gt;, SRR6652476 &lt;dbl&gt;, SRR6652477 &lt;dbl&gt;,
+#   SRR6652478 &lt;dbl&gt;, SRR6652483 &lt;dbl&gt;, SRR6652484 &lt;dbl&gt;, SRR6652489 &lt;dbl&gt;,
+#   SRR6652490 &lt;dbl&gt;, SRR6652493 &lt;dbl&gt;, SRR6652494 &lt;dbl&gt;, SRR6652495 &lt;dbl&gt;,
+#   SRR6652496 &lt;dbl&gt;, SRR6652501 &lt;dbl&gt;, SRR6652502 &lt;dbl&gt;, SRR6652519 &lt;dbl&gt;,
+#   SRR6652520 &lt;dbl&gt;, SRR6652443 &lt;dbl&gt;, SRR6652389 &lt;dbl&gt;, SRR6652390 &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<p>Now we have our data subsetted the way we want, but we aren’t quite ready for the heatmap yet. In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in “tibble” format, but we want it in a numerical “matrix” format. We can’t switch directly from “tibble” to “matrix” (because the GeneID column is character data, not numerical data). Instead, let’s first convert from “tibble” to a format called “dataframe”.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor_controls <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(gutbrain_motor_controls)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_motor_controls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              GeneID SRR6652471 SRR6652507 SRR6652508 SRR6652511 SRR6652512
+1 ENSMUSG00000025958     116582      71492     119670     109645     119984
+2 ENSMUSG00000020886    1355721    1064719    2031278    1341461    1356546
+3 ENSMUSG00000020598     714703     494635     889211     773767     814278
+4 ENSMUSG00000021936     223405     141912     253795     210291     226774
+5 ENSMUSG00000025020      56337      51485     100228      77037      81906
+6 ENSMUSG00000028883      45861      25904      41466      46340      54418
+  SRR6652513 SRR6652514 SRR6652457 SRR6652458 SRR6652459 SRR6652460 SRR6652465
+1     113530     103332      97001     102345      95957     102735      91552
+2    1005090    1048193    1724172    1740717    1180717    1215738    1470279
+3     583819     616193     866479     855316     648777     689727     675686
+4     177495     188878     228870     234134     199520     198973     212941
+5      38079      44127      89716      94047      46329      39766      86907
+6      34669      38678      52139      49261      36656      39818      56182
+  SRR6652466 SRR6652472 SRR6652475 SRR6652476 SRR6652477 SRR6652478 SRR6652483
+1     106272     121799     139247     143758      90735     110299      92550
+2    1582988    1382227    1291877    1348795    1882275    1992514    1720010
+3     730392     735427     853555     882525     698591     719681     734655
+4     223477     243645     279805     293647     209353     209296     199190
+5      89217      59269      56943      59246      98441     105691     106731
+6      57736      52268      63440      64033      36808      38518      46545
+  SRR6652484 SRR6652489 SRR6652490 SRR6652493 SRR6652494 SRR6652495 SRR6652496
+1     101187      56178      96878      76161      82375      57183      96266
+2    1838079    1069673    2134086    1402804    1473418     833637    1606493
+3     742310     428069     839438     517242     549512     347943     612757
+4     212808     122740     237635     142300     139392     113434     206582
+5     106937     101082     222597      75660      69781      41369      78852
+6      43841      19872      37920      29039      30838      18093      31774
+  SRR6652501 SRR6652502 SRR6652519 SRR6652520 SRR6652443 SRR6652389 SRR6652390
+1      89445      83469      97820     107506      93818      75942     164607
+2    1491160    1510525    1572772    1582930    1537477    1183211    2364182
+3     582848     590091     908733     909608     362226     461405     943571
+4     172073     179061     244597     245101     104242     129530     250165
+5      77077      78557     150917     158140      19265      43151      82912
+6      41634      37675      46005      42929      30884      40286      75771
+  SRR6652391 SRR6652392 SRR6652397 SRR6652398 SRR6652403 SRR6652404 SRR6652407
+1      71331      83351      86402     100776     107338     104393      80385
+2    1798921    1898285    2397127    2557990    1963347    1983775    1734175
+3     431257     447223     509484     539029     594979     604746     452410
+4     112141     110775     121799     125800     149214     163027     123876
+5      32935      35484      36535      41582      51356      55516      30743
+6      37673      37695      49459      43989      43901      46640      31946
+  SRR6652408 SRR6652413 SRR6652414 SRR6652419 SRR6652420 SRR6652423 SRR6652424
+1      78272      79346      82069      94752      98507     102752     104552
+2    1773670    1669356    1710965    2015588    2149437    1826044    1922684
+3     474278     431907     460830     522158     532731     510297     537442
+4     128700     121063     112793     126807     140541     134052     140735
+5      34579      56836      51167      35019      43596      56521      55887
+6      35804      35609      33758      44273      46344      38209      41549
+  SRR6652425 SRR6652426 SRR6652431 SRR6652432 SRR6652437 SRR6652438 SRR6652441
+1      54485      96788      75146      81598      51747      89820      90296
+2    1000300    1901457    1634528    1684465    1241480    2367922    1791891
+3     236447     435257     397567     402768     277348     503300     492277
+4      68783     124188     105408     110590      70804     147601     124186
+5      15075      36151      31525      31085      22569      41819      48781
+6      18552      31218      31626      41290      22399      44607      28133
+  SRR6652442 SRR6652444 SRR6652449 SRR6652450
+1      93716      87282      58614     115790
+2    1863046    1566800    1031393    2065353
+3     515563     368329     290373     538539
+4     130502     102475      71073     151330
+5      51419      21835      27843      63967
+6      32918      27939      36914      63364</code></pre>
+</div>
+</div>
+<p>To our eyes, not much has changed in the format, but it’s very different to R. Now we’re going to tell R to name the rows based on the “GeneID” column, and then delete the current “GeneID” column.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(gutbrain_motor_controls) <span class="ot">&lt;-</span> gutbrain_motor_controls<span class="sc">$</span>GeneID</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>gutbrain_motor_controls<span class="sc">$</span>GeneID <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_motor_controls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   SRR6652471 SRR6652507 SRR6652508 SRR6652511 SRR6652512
+ENSMUSG00000025958     116582      71492     119670     109645     119984
+ENSMUSG00000020886    1355721    1064719    2031278    1341461    1356546
+ENSMUSG00000020598     714703     494635     889211     773767     814278
+ENSMUSG00000021936     223405     141912     253795     210291     226774
+ENSMUSG00000025020      56337      51485     100228      77037      81906
+ENSMUSG00000028883      45861      25904      41466      46340      54418
+                   SRR6652513 SRR6652514 SRR6652457 SRR6652458 SRR6652459
+ENSMUSG00000025958     113530     103332      97001     102345      95957
+ENSMUSG00000020886    1005090    1048193    1724172    1740717    1180717
+ENSMUSG00000020598     583819     616193     866479     855316     648777
+ENSMUSG00000021936     177495     188878     228870     234134     199520
+ENSMUSG00000025020      38079      44127      89716      94047      46329
+ENSMUSG00000028883      34669      38678      52139      49261      36656
+                   SRR6652460 SRR6652465 SRR6652466 SRR6652472 SRR6652475
+ENSMUSG00000025958     102735      91552     106272     121799     139247
+ENSMUSG00000020886    1215738    1470279    1582988    1382227    1291877
+ENSMUSG00000020598     689727     675686     730392     735427     853555
+ENSMUSG00000021936     198973     212941     223477     243645     279805
+ENSMUSG00000025020      39766      86907      89217      59269      56943
+ENSMUSG00000028883      39818      56182      57736      52268      63440
+                   SRR6652476 SRR6652477 SRR6652478 SRR6652483 SRR6652484
+ENSMUSG00000025958     143758      90735     110299      92550     101187
+ENSMUSG00000020886    1348795    1882275    1992514    1720010    1838079
+ENSMUSG00000020598     882525     698591     719681     734655     742310
+ENSMUSG00000021936     293647     209353     209296     199190     212808
+ENSMUSG00000025020      59246      98441     105691     106731     106937
+ENSMUSG00000028883      64033      36808      38518      46545      43841
+                   SRR6652489 SRR6652490 SRR6652493 SRR6652494 SRR6652495
+ENSMUSG00000025958      56178      96878      76161      82375      57183
+ENSMUSG00000020886    1069673    2134086    1402804    1473418     833637
+ENSMUSG00000020598     428069     839438     517242     549512     347943
+ENSMUSG00000021936     122740     237635     142300     139392     113434
+ENSMUSG00000025020     101082     222597      75660      69781      41369
+ENSMUSG00000028883      19872      37920      29039      30838      18093
+                   SRR6652496 SRR6652501 SRR6652502 SRR6652519 SRR6652520
+ENSMUSG00000025958      96266      89445      83469      97820     107506
+ENSMUSG00000020886    1606493    1491160    1510525    1572772    1582930
+ENSMUSG00000020598     612757     582848     590091     908733     909608
+ENSMUSG00000021936     206582     172073     179061     244597     245101
+ENSMUSG00000025020      78852      77077      78557     150917     158140
+ENSMUSG00000028883      31774      41634      37675      46005      42929
+                   SRR6652443 SRR6652389 SRR6652390 SRR6652391 SRR6652392
+ENSMUSG00000025958      93818      75942     164607      71331      83351
+ENSMUSG00000020886    1537477    1183211    2364182    1798921    1898285
+ENSMUSG00000020598     362226     461405     943571     431257     447223
+ENSMUSG00000021936     104242     129530     250165     112141     110775
+ENSMUSG00000025020      19265      43151      82912      32935      35484
+ENSMUSG00000028883      30884      40286      75771      37673      37695
+                   SRR6652397 SRR6652398 SRR6652403 SRR6652404 SRR6652407
+ENSMUSG00000025958      86402     100776     107338     104393      80385
+ENSMUSG00000020886    2397127    2557990    1963347    1983775    1734175
+ENSMUSG00000020598     509484     539029     594979     604746     452410
+ENSMUSG00000021936     121799     125800     149214     163027     123876
+ENSMUSG00000025020      36535      41582      51356      55516      30743
+ENSMUSG00000028883      49459      43989      43901      46640      31946
+                   SRR6652408 SRR6652413 SRR6652414 SRR6652419 SRR6652420
+ENSMUSG00000025958      78272      79346      82069      94752      98507
+ENSMUSG00000020886    1773670    1669356    1710965    2015588    2149437
+ENSMUSG00000020598     474278     431907     460830     522158     532731
+ENSMUSG00000021936     128700     121063     112793     126807     140541
+ENSMUSG00000025020      34579      56836      51167      35019      43596
+ENSMUSG00000028883      35804      35609      33758      44273      46344
+                   SRR6652423 SRR6652424 SRR6652425 SRR6652426 SRR6652431
+ENSMUSG00000025958     102752     104552      54485      96788      75146
+ENSMUSG00000020886    1826044    1922684    1000300    1901457    1634528
+ENSMUSG00000020598     510297     537442     236447     435257     397567
+ENSMUSG00000021936     134052     140735      68783     124188     105408
+ENSMUSG00000025020      56521      55887      15075      36151      31525
+ENSMUSG00000028883      38209      41549      18552      31218      31626
+                   SRR6652432 SRR6652437 SRR6652438 SRR6652441 SRR6652442
+ENSMUSG00000025958      81598      51747      89820      90296      93716
+ENSMUSG00000020886    1684465    1241480    2367922    1791891    1863046
+ENSMUSG00000020598     402768     277348     503300     492277     515563
+ENSMUSG00000021936     110590      70804     147601     124186     130502
+ENSMUSG00000025020      31085      22569      41819      48781      51419
+ENSMUSG00000028883      41290      22399      44607      28133      32918
+                   SRR6652444 SRR6652449 SRR6652450
+ENSMUSG00000025958      87282      58614     115790
+ENSMUSG00000020886    1566800    1031393    2065353
+ENSMUSG00000020598     368329     290373     538539
+ENSMUSG00000021936     102475      71073     151330
+ENSMUSG00000025020      21835      27843      63967
+ENSMUSG00000028883      27939      36914      63364</code></pre>
+</div>
+</div>
+<p>Great! Now we can change the format of <code>gutbrain_motor_controls</code> dataset to “matrix” format in order to make our heatmap using the <code>heatmap</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor_controls <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(gutbrain_motor_controls)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor_controls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Congratulations, you have just created a heatmap! The map itself is a series of stacked boxes. Each square within the heatmap represents the gene count for a particular gene in a particular sample. By default squares with the high gene counts are colored dark red. Squares with the lowest gene counts are colored pale yellow.</p>
+<p>By default, R will order the samples (what we have on the x-axis across the bottom) in a way that clusters similar samples together. This is why we see columns of lighter yellow in the center of the heatmap, with darker orange and red columns on the edges. This suggests that there are groups of samples that have higher gene expression, but it’s hard to tell right now if these groups correspond to the prefrontal cortex vs striatum (which is what we’re interested in). It would be helpful if we could tell R to group based on prefrontal cortex vs striatum instead.</p>
+<p>Luckily, this is possible! Remember above when we ordered our samples so that the prefrontal cortex samples were first? This means our dataset is already in the order we want. We can just tell R to use the default ordering of the dataset instead of clustering and rearranging the x-axis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor_controls,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Perfect! Now we can easily see that four of our six genes seem to be expressed in lower levels by the samples on the right side of the heatmap (the striatum samples), while one gene is expressed in higher levels by the striatum. This is definitely intriguing!</p>
+<p>Notice that not all the striatum samples have the same expression for each gene. This is normal variation and could be due to actual difference in gene expression levels or be the result of laboratory methods.</p>
+<p>Finally, we can customize the heatmap by changing the color scheme and adding a title. As as example, we’re going to tell R to make a spectrum of colors between white and blue, with white indicating the lowest expression and blue indicating the highest expression, and 16 possible color categories.</p>
+<p>You can find an extensive list of all the colors available in R at <a href="https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/">https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/</a>. <strong>The general convention in biology is that the lightest colors on a heatmap indicate the lowest values.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor_controls,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"darkblue"</span>))(<span class="dv">16</span>), <span class="at">main =</span> <span class="st">" Motor Neuron Gene List Expression"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Finally, here’s all the code you just ran to create your heatmap in one place, in case you want to run it again.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#define your geneset and make a vector</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co">#create new dataset that only include expression data for your geneset</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(gutbrain_genes, gutbrain_genes<span class="sc">$</span>GeneID <span class="sc">%in%</span> gene_set)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co">#load sample metadata</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>gutbrain_metadata <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_metadata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 138 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (5): sample_id, age, mouse_status, sex, tissue
+dbl (1): source_name
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter out non-controls and order columns by tissue type</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>gutbrain_controls <span class="ot">&lt;-</span> <span class="fu">filter</span>(gutbrain_metadata, mouse_status <span class="sc">==</span> <span class="st">"Control"</span>)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>gutbrain_controls <span class="ot">&lt;-</span> <span class="fu">arrange</span>(gutbrain_controls, tissue)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>gutbrain_motor_controls <span class="ot">&lt;-</span> <span class="fu">select</span>(gutbrain_motor, GeneID, <span class="fu">all_of</span>(gutbrain_controls<span class="sc">$</span>sample_id))</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="co">#change format of dataset from "tibble" to "matrix"</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>gutbrain_motor_controls <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(gutbrain_motor_controls)</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(gutbrain_motor_controls) <span class="ot">&lt;-</span> gutbrain_motor_controls<span class="sc">$</span>GeneID</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>gutbrain_motor_controls<span class="sc">$</span>GeneID <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>gutbrain_motor_controls <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(gutbrain_motor_controls)</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a><span class="co">#create heatmap with custom colors and title</span></span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor_controls,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"darkblue"</span>))(<span class="dv">16</span>), <span class="at">main =</span> <span class="st">" Motor Neuron Gene List Expression"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="exploring-the-differential-expression-data" class="level3">
-<h3 class="anchored" data-anchor-id="exploring-the-differential-expression-data">Exploring the differential expression data</h3>
+<section id="exploring-the-differential-expression-data" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-the-differential-expression-data">Exploring the differential expression data</h2>
 <p>Now let’s look a differential expression dataset, which compares gene expression counts between two groups. This dataset gives us an idea how the change in a gene’s expression might be associated with a disorder or a cell type. This is particularly useful for beginning to map the genetic drivers of a particular phenotype.</p>
-<section id="loading-the-differential-expression-data" class="level4">
-<h4 class="anchored" data-anchor-id="loading-the-differential-expression-data">Loading the differential expression data</h4>
+<section id="package-install-and-load-1" class="level3">
+<h3 class="anchored" data-anchor-id="package-install-and-load-1">Package Install and Load</h3>
+<p>Before you start, make sure to load the <code>tidyverse</code> package! You should still have it installed from last time.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="loading-the-differential-expression-data" class="level3">
+<h3 class="anchored" data-anchor-id="loading-the-differential-expression-data">Loading the differential expression data</h3>
 <p>Let’s say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it <code>asd_vs_c</code>. We will do this using <code>read_csv</code>. Copy and paste this command into your console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -851,13 +1184,13 @@ Which differential expression dataset should I use?
 </div>
 </div>
 </section>
-<section id="ranking-the-genes-by-log2foldchange" class="level4">
-<h4 class="anchored" data-anchor-id="ranking-the-genes-by-log2foldchange">Ranking the genes by log2FoldChange</h4>
+<section id="ranking-the-genes-by-log2foldchange" class="level3">
+<h3 class="anchored" data-anchor-id="ranking-the-genes-by-log2foldchange">Ranking the genes by log2FoldChange</h3>
 <p>The <code>log2FoldChange</code> value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. Genes with no difference in expression between groups have <code>log2FoldChange</code> values close to zero. Negative log2FoldChange values means a <strong>decreased expression</strong> (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have <strong>increased expression</strong> in the experimental group versus the control group.</p>
 <p>We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_ascending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, log2FoldChange)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_ascending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_ascending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, log2FoldChange)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_ascending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -873,8 +1206,8 @@ Which differential expression dataset should I use?
 <p>The genes at the top of this table have the most negative log2FoldChange values and are downregulated in ASD-type mice.</p>
 <p>We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in ASD-type mice.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_descending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, <span class="fu">desc</span>(log2FoldChange))</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_descending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_descending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, <span class="fu">desc</span>(log2FoldChange))</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_descending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -891,12 +1224,12 @@ Which differential expression dataset should I use?
 <p>If there is a two fold <strong>increase</strong> (fold change = 2, <code>log2FoldChange</code> = 1) between groups A and B, then the expression in group A is twice as big as the expression in group B.</p>
 <p>If there is a two fold <strong>decrease</strong> (fold change = 0.5, <code>log2FoldChange</code> = -1) between groups A and B, then the expression in group A is half as big as the expression in group B (or B is twice as big as A).</p>
 </section>
-<section id="arranging-dataset-based-on-padj" class="level4">
-<h4 class="anchored" data-anchor-id="arranging-dataset-based-on-padj">Arranging dataset based on padj</h4>
+<section id="arranging-dataset-based-on-padj" class="level3">
+<h3 class="anchored" data-anchor-id="arranging-dataset-based-on-padj">Arranging dataset based on padj</h3>
 <p>Maybe you also want to arrange the genes by whether the estimated differential expression is significant. Instead of <code>log2FoldChange</code>, you will want to look at <code>padj</code>. You can use the <code>arrange</code> command to sort the results to put the smallest padj values first.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_sorted <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, padj)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_sorted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_sorted <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, padj)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_sorted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -910,11 +1243,11 @@ Which differential expression dataset should I use?
 </div>
 </div>
 </section>
-<section id="compare-differential-gene-expression-of-a-single-across-groups" class="level4">
-<h4 class="anchored" data-anchor-id="compare-differential-gene-expression-of-a-single-across-groups">Compare differential gene expression of a single across groups</h4>
+<section id="compare-differential-gene-expression-of-a-single-across-groups" class="level3">
+<h3 class="anchored" data-anchor-id="compare-differential-gene-expression-of-a-single-across-groups">Compare differential gene expression of a single across groups</h3>
 <p>It might be interesting to look at the expression of a gene across our two brain regions. To do this, we will first load the region-specific datasets.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -925,7 +1258,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -939,14 +1272,14 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <p>Then we’ll filter out the gene in which we’re interested from each object. Let’s take a look at gene ENSMUSG00000079516, which is the Reg3a gene we previously looked up on MGI.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c_prefrontal, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>reg3a_striatum <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c_striatum, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c_prefrontal, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>reg3a_striatum <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c_striatum, gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Finally, take a look at the differential expression of reg3a in each region.</p>
 <p>In the prefrontal cortex:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   gene               baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -956,7 +1289,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <p>In the striatum:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>reg3a_striatum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>reg3a_striatum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   gene               baseMean log2FoldChange lfcSE  stat pvalue  padj
@@ -965,8 +1298,8 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 </div>
 </section>
-<section id="creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes">Creating a volcano plot to visualize differential expression of multiple genes</h4>
+<section id="creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes">Creating a volcano plot to visualize differential expression of multiple genes</h3>
 <p>A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have <code>log2FoldChange</code> on the x-axis and a log transformed <code>padj</code> on the y-axis.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -979,13 +1312,13 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <p>We will first need to do a log transformation of the <code>padj</code> variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, we just create a scatterplot. The code for this is kind of complicated, so you will want to paste the code below into your console.</p>
 <p>Here’s the code for your basic volcano plot. <code>data</code> tells R what data to use, <code>x</code> tells R what the x-axis values should be, and <code>y</code> tells R what the y-axis values should be. Notice that we can just use the column names for <code>x</code> and <code>y</code>!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans)) <span class="sc">+</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans)) <span class="sc">+</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -993,7 +1326,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1011,13 +1344,13 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <p>To recap: A gene is labeled “UP” if its log2FoldChange value is greater than 0.6 <em>and</em> its adjusted p-value is less than 0.05.</p>
 <p>A gene is labeled “DOWN” if its log2FoldChange value is less than -0.6 <em>and</em> its adjusted p-value is less than 0.05.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 9
   gene          baseMean log2FoldChange lfcSE  stat   pvalue     padj padj_trans
@@ -1034,10 +1367,10 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <p>Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the <code>diffexpressed</code> column (<code>col = diffexpressed</code>). We also add a line about the colors we want to use (<code>scale_color_manual</code>). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command <code>labels</code> just creates the labels on the legend.</p>
 <p>You can find an extensive list of all the colors available in R at <a href="https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/">https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -1045,7 +1378,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1056,15 +1389,15 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <p>In R, an “case_when” statement tells R to do something only when a condition is true. In our command, R is going through the <code>asd_vs_c</code> row by row. For each row, we are telling R to first check whether the geneID of that row is “ENSMUSG00000079516”. If it is, then R will fill in the <code>gene_label</code> column with the gene symbol “Reg3a”. If it is not, R moves onto the next part of our command.</p>
 <p>When R moves onto this second command, it’s now checking to see if the geneID for the row is “ENSMUSG00000024440”. If it is, then R fills in the <code>gene_label</code> column with the gene symbol “Pcdh12”. If it is not, R moves to the third command in the <code>case_when</code> statement. The final line tells R to fill in the <code>gene_label</code> column with “NA” for any row that didn’t match the previous commands. This will tell R in the future that the information for this column is missing.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span> <span class="sc">~</span> <span class="st">"Reg3a"</span>,</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span> <span class="sc">~</span> <span class="st">"Pcdh12"</span>,</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span> <span class="sc">~</span> <span class="st">"Reg3a"</span>,</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span> <span class="sc">~</span> <span class="st">"Pcdh12"</span>,</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Great! You can check to see what the new column <code>gene_label</code> looks like by using the <code>head</code> command.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 10
   gene          baseMean log2FoldChange lfcSE  stat   pvalue     padj padj_trans
@@ -1081,20 +1414,20 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <p>Now we just need to remake our volcano plot and add some to code that tells R to label the points we’re interested in. The command <code>label = gene_label</code> goes right after the code that tells R how to color the points. We also need to add something at the end of our code that tells R to put the labels on top of the plot that we’ve made. That’s the <code>+   geom_text_repel(max.overlaps = Inf)</code> command.</p>
 <p>In order for this command to work, we do need to install and load a new library called <code>ggrepel</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'ggrepel'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'ggrepel'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Installing package into '/usr/local/lib/R/site-library'
 (as 'lib' is unspecified)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Excellent. Now that we have installed and loaded this package (which you only need to do once for each R session!), we can run the code to create the volcano plot. Remember, we added <code>label = gene_label</code> to tell R to add labels to the points, and <code>geom_text_repel(max.overlaps = Inf)</code> to tell R to put the labels on top of the plot so we can see them.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -1106,19 +1439,19 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-67-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>You may want to add a title to your plot. This can be done with the <code>ggtitle</code> command.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
-<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -1130,37 +1463,37 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-58-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-68-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Here’s all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co">#log transform the padj values so the y-axis is formatted for plotting</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the diffexpressed column so that we can color the upregulated and downregulated genes on the plot</span></span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
-<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
-<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the gene_label column so that we can label individual points</span></span>
-<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
-<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span> <span class="sc">~</span> <span class="st">"Reg3a"</span>,</span>
-<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span> <span class="sc">~</span> <span class="st">"Pcdh12"</span>,</span>
-<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
-<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a><span class="co">#Make the final plot</span></span>
-<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
-<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
-<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co">#log transform the padj values so the y-axis is formatted for plotting</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the diffexpressed column so that we can color the upregulated and downregulated genes on the plot</span></span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
+<span id="cb74-8"><a href="#cb74-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-9"><a href="#cb74-9" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
+<span id="cb74-10"><a href="#cb74-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-11"><a href="#cb74-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the gene_label column so that we can label individual points</span></span>
+<span id="cb74-12"><a href="#cb74-12" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<span id="cb74-13"><a href="#cb74-13" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span> <span class="sc">~</span> <span class="st">"Reg3a"</span>,</span>
+<span id="cb74-14"><a href="#cb74-14" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>gene <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span> <span class="sc">~</span> <span class="st">"Pcdh12"</span>,</span>
+<span id="cb74-15"><a href="#cb74-15" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
+<span id="cb74-16"><a href="#cb74-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb74-17"><a href="#cb74-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-18"><a href="#cb74-18" aria-hidden="true" tabindex="-1"></a><span class="co">#Make the final plot</span></span>
+<span id="cb74-19"><a href="#cb74-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
+<span id="cb74-20"><a href="#cb74-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb74-21"><a href="#cb74-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
+<span id="cb74-22"><a href="#cb74-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
+<span id="cb74-23"><a href="#cb74-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
+<span id="cb74-24"><a href="#cb74-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -1172,32 +1505,31 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-59-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="resources/images/mouse_gutbrain_de_independent_guide_files/figure-html/unnamed-chunk-69-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="running-a-gene-set-analysis" class="level4">
-<h4 class="anchored" data-anchor-id="running-a-gene-set-analysis">Running a gene set analysis</h4>
+<section id="running-a-gene-set-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="running-a-gene-set-analysis">Running a gene set analysis</h3>
 <p>You can use the special command <code>runClusterProfiler</code> to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)</p>
 <p>You created a gene list in the <strong>Visualize gene counts of multiple genes across groups</strong> section above. The code from this section is repeated below in case you need to run it again.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we can create a subset of the <code>asd_vs_c</code> dataset by filtering out any genes that aren’t on our gene list. Remember, we do this using <code>filter</code> and <code>%in%</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c, asd_vs_c<span class="sc">$</span>gene <span class="sc">%in%</span> gene_set)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c, asd_vs_c<span class="sc">$</span>gene <span class="sc">%in%</span> gene_set)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Finally, create your cluster profile with the <code>runClusterProfiler</code> and <code>dotplot</code> commands.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_clusters <span class="ot">&lt;-</span> <span class="fu">runClusterProfiler</span>(asd_vs_c_sig)</span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dotplot</span>(asd_vs_c_clusters, <span class="at">showCategory=</span><span class="dv">34</span>, <span class="at">title=</span><span class="st">"asd vs control in prefrontal cortex"</span>, <span class="at">font.size=</span><span class="dv">10</span>, <span class="at">label_format =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_clusters <span class="ot">&lt;-</span> <span class="fu">runClusterProfiler</span>(asd_vs_c_sig)</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dotplot</span>(asd_vs_c_clusters, <span class="at">showCategory=</span><span class="dv">34</span>, <span class="at">title=</span><span class="st">"asd vs control in prefrontal cortex"</span>, <span class="at">font.size=</span><span class="dv">10</span>, <span class="at">label_format =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
-</section>
 </section>
 </section>
 
