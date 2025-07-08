@@ -1,5 +1,5 @@
 ---
-title: "**Differential Expression and the Mouse Gut-Brain Axis**"
+title: "Differential Expression and the Mouse Gut-Brain Axis"
 ---
 
 This module introduces you to differential expression analyses using the R programming language.
