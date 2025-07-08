@@ -1,5 +1,7 @@
 ---
 title: "Database Detectives: Exploring Public Genomic Databases Student Guide"
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
@@ -26,7 +28,7 @@ You should also keep in mind that some information can be found in multiple data
 
 Start with exploring FlyBase to get some basic information about each of the four genes.
 
-[_FlyBase_](https://flybase.org/) is a database focused on _Drosophila_ genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico.
+[_FlyBase_](https://flybase.org/) is a database focused on _Drosophila_ genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico [@ozturk2024].
 
 First, open the [_FlyBase_](https://flybase.org/) website by clicking the link or typing "https://flybase.org" into your browser. Then, type the name of the gene into the "J2G" bar in the upper right hand corner. (J2G stands for "Jump to Gene".) As an example, try typing the gene name **pipe** and click enter.
 
@@ -94,7 +96,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 
 To find out more information about these homologs, we're going to need to look at additional species-specific databases. Let's start with the mouse.
 
-The [_Mouse Genome Informatics_](https://informatics.jax.org/) database is the international database for the laboratory mouse, integrating genetic, genomic, and biological data as part of an effort to use the mouse to study human health and disease. It is maintained by the Jackson Laboratory.
+The [_Mouse Genome Informatics_](https://informatics.jax.org/) database is the international database for the laboratory mouse, integrating genetic, genomic, and biological data as part of an effort to use the mouse to study human health and disease. It is maintained by the Jackson Laboratory [@baldarelli2024].
 
 ::: {.callout-note}
 Why do we have a database devoted to the mouse?
@@ -136,7 +138,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 
 In order to look up information about the zebrafish homolog, we need to switch databases again.
 
-The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database of genetic and genomic data for the zebrafish as a model organism. It was formed by a group of zebrafish researchers at Cold Spring Harbor and is maintained by the ZFIN Database Team at the University of Oregon.
+The [_ZFIN (Zebrafish Information Network _](https://zfin.org/) is the database of genetic and genomic data for the zebrafish as a model organism. It was formed by a group of zebrafish researchers at Cold Spring Harbor and is maintained by the ZFIN Database Team at the University of Oregon [@bradford2022].
 
 ::: {.callout-note}
 Why do we have a database devoted to the zebrafish?
@@ -165,7 +167,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8
 ```
 
 
-Finally, we can turn to the human homolog **UST**. There are several databases with information about human genes. [_GeneCards_](https://www.genecards.org/) is a user-friendly database that collects and displays information about human genes from multiple research databases. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.
+Finally, we can turn to the human homolog **UST**. There are several databases with information about human genes. [_GeneCards_](https://www.genecards.org/) is a user-friendly database that collects and displays information about human genes from multiple research databases. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences [@stelzer2016].
 
 Open the GeneCards page and search for the human homolog **UST** in the "Explore a Gene" search bar.
 
