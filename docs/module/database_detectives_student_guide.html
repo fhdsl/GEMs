@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -168,7 +188,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <section id="part-1" class="level2">
 <h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
 <p>Start with exploring FlyBase to get some basic information about each of the four genes.</p>
-<p><a href="https://flybase.org/"><em>FlyBase</em></a> is a database focused on <em>Drosophila</em> genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico.</p>
+<p><a href="https://flybase.org/"><em>FlyBase</em></a> is a database focused on <em>Drosophila</em> genetics, genomics, and functional data. It is maintained by a consortium of Drosophila researchers and computer scientists at Harvard University, University of Cambridge (UK), Indiana University, and the University of New Mexico <span class="citation" data-cites="ozturk2024"><a href="#ref-ozturk2024" role="doc-biblioref">[1]</a></span>.</p>
 <p>First, open the <a href="https://flybase.org/"><em>FlyBase</em></a> website by clicking the link or typing “https://flybase.org” into your browser. Then, type the name of the gene into the “J2G” bar in the upper right hand corner. (J2G stands for “Jump to Gene”.) As an example, try typing the gene name <strong>pipe</strong> and click enter.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -263,7 +283,7 @@ Note
 </div>
 </div>
 <p>To find out more information about these homologs, we’re going to need to look at additional species-specific databases. Let’s start with the mouse.</p>
-<p>The <a href="https://informatics.jax.org/"><em>Mouse Genome Informatics</em></a> database is the international database for the laboratory mouse, integrating genetic, genomic, and biological data as part of an effort to use the mouse to study human health and disease. It is maintained by the Jackson Laboratory.</p>
+<p>The <a href="https://informatics.jax.org/"><em>Mouse Genome Informatics</em></a> database is the international database for the laboratory mouse, integrating genetic, genomic, and biological data as part of an effort to use the mouse to study human health and disease. It is maintained by the Jackson Laboratory <span class="citation" data-cites="baldarelli2024"><a href="#ref-baldarelli2024" role="doc-biblioref">[2]</a></span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -334,7 +354,7 @@ Note
 </div>
 </div>
 <p>In order to look up information about the zebrafish homolog, we need to switch databases again.</p>
-<p>The <a href="https://zfin.org/"><em>ZFIN (Zebrafish Information Network </em></a> is the database of genetic and genomic data for the zebrafish as a model organism. It was formed by a group of zebrafish researchers at Cold Spring Harbor and is maintained by the ZFIN Database Team at the University of Oregon.</p>
+<p>The <a href="https://zfin.org/"><em>ZFIN (Zebrafish Information Network </em></a> is the database of genetic and genomic data for the zebrafish as a model organism. It was formed by a group of zebrafish researchers at Cold Spring Harbor and is maintained by the ZFIN Database Team at the University of Oregon <span class="citation" data-cites="bradford2022"><a href="#ref-bradford2022" role="doc-biblioref">[3]</a></span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -380,7 +400,7 @@ Note
 </div>
 </div>
 </div>
-<p>Finally, we can turn to the human homolog <strong>UST</strong>. There are several databases with information about human genes. <a href="https://www.genecards.org/"><em>GeneCards</em></a> is a user-friendly database that collects and displays information about human genes from multiple research databases. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences.</p>
+<p>Finally, we can turn to the human homolog <strong>UST</strong>. There are several databases with information about human genes. <a href="https://www.genecards.org/"><em>GeneCards</em></a> is a user-friendly database that collects and displays information about human genes from multiple research databases. It is maintained as a joint effort between the Weizmann Institute of Science and LifeMap Sciences <span class="citation" data-cites="stelzer2016"><a href="#ref-stelzer2016" role="doc-biblioref">[4]</a></span>.</p>
 <p>Open the GeneCards page and search for the human homolog <strong>UST</strong> in the “Explore a Gene” search bar.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -575,9 +595,23 @@ TASK FOUR
 </div>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-ozturk2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">A. Öztürk-Çolak <em>et al.</em>, <span>“FlyBase: Updates to the drosophila genes and genomes database,”</span> <em>Genetics</em>, vol. 227, no. 1, Feb. 2024, Available: <a href="https://doi.org/10.1093/genetics/iyad211">https://doi.org/10.1093/genetics/iyad211</a></div>
+</div>
+<div id="ref-baldarelli2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">R. M. Baldarelli, C. L. Smith, M. Ringwald, J. E. Richardson, C. J. Bult, and M. G. I. Group, <span>“Mouse genome informatics: An integrated knowledgebase system for the laboratory mouse,”</span> <em>Genetics</em>, vol. 227, no. 1, Mar. 2024, Available: <a href="https://doi.org/10.1093/genetics/iyae031">https://doi.org/10.1093/genetics/iyae031</a></div>
+</div>
+<div id="ref-bradford2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Y. M. Bradford <em>et al.</em>, <span>“Zebrafish information network, the knowledgebase for danio rerio research,”</span> <em>Genetics</em>, vol. 220, no. 4, Feb. 2022, Available: <a href="https://doi.org/10.1093/genetics/iyac016">https://doi.org/10.1093/genetics/iyac016</a></div>
+</div>
+<div id="ref-stelzer2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">G. Stelzer <em>et al.</em>, <span>“The GeneCards suite: From gene data mining to disease genome sequence analyses,”</span> <em>Current Protocols in Bioinformatics</em>, vol. 54, no. 1, pp. 1.30.1–1.30.33, 2016, Available: <a href="https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/cpbi.5">https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/cpbi.5</a></div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

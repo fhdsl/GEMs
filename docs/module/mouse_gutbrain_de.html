@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -135,7 +155,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Differential Expression and the Mouse Gut-Brain Axis</strong></h1>
+<h1 class="title">Differential Expression and the Mouse Gut-Brain Axis</h1>
 </div>
 
 
@@ -187,16 +207,16 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </ul></li>
 <li><p><strong>If you are using this as a stand-alone activity</strong>: download the R student activity as:</p>
 <ul>
-<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_student-guide.html">Web page</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_student-guide.qmd">Quarto (qmd)</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_student-guide.docx">Word (docx)</a></li>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_student_guide.html">Web page</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_student_guide.qmd">Quarto (qmd)</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_student_guide.docx">Word (docx)</a></li>
 <li><a href="">Google Doc</a> - coming soon!</li>
 </ul></li>
 <li><p><strong>If you are using this as an extension of the C-MOOR miniCURE</strong>: download the R student activity as:</p>
 <ul>
-<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_independent_guide.html">Web page</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_independent_guide.qmd">Quarto (qmd)</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_independent_guide.docx">Word (docx)</a></li>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_miniCURE_guide.html">Web page</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_miniCURE_guide.qmd">Quarto (qmd)</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_miniCURE_guide.docx">Word (docx)</a></li>
 <li><a href="">Google Doc</a> - coming soon!</li>
 </ul></li>
 <li><p>Google Slides presentation available for borrowing images <a href="https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing">here</a>.</p></li>
@@ -205,7 +225,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </section>
 <section id="scientific-topics" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-topics">Scientific Topics</h2>
-<p>The activity uses data from a <a href="https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1">published research study</a> “Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice.” Students will gain exposure to the following:</p>
+<p>The activity uses data from a <a href="https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1">published research study</a> “Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice” <span class="citation" data-cites="sharon2019"><a href="#ref-sharon2019" role="doc-biblioref">[1]</a></span>. Students will gain exposure to the following:</p>
 <ul>
 <li><p>Differential expression: the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or “turned on”, while others are “turned off”</p></li>
 <li><p>Gut-brain axis: the proposed connection between the gut microbiome and gene expression in the brain</p></li>
@@ -232,9 +252,14 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </ul>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-sharon2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">G. Sharon <em>et al.</em>, <span>“Human gut microbiota from autism spectrum disorder promote behavioral symptoms in mice,”</span> <em>Cell</em>, vol. 177, no. 6, pp. 1600–1618, 2019, Available: <a href="https://pubmed.ncbi.nlm.nih.gov/31150625/">https://pubmed.ncbi.nlm.nih.gov/31150625/</a></div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
