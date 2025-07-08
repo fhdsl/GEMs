@@ -83,7 +83,7 @@ You can read the original research paper [here](https://www.cell.com/cell/fullte
 
 ### The mouse as a model organism
 
-The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models [@hu2024, @FBR2025].
+The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models [@hu2024; @FBR2025].
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "The mouse is the most commonly-used model organism in labs.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d1434cdd1_12_19#slide=id.g33d1434cdd1_12_19")
