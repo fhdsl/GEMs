@@ -14,11 +14,11 @@ ottrpal::set_knitr_image_path()
 
 This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.
 
-This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. **It can be used as a stand-alone activity or as part of a broader miniCURE experience.** Students do not have to have completed the miniCURE in order to use the stand-alone guide. If you are using the RNA-seq miniCURE in your class, this module adds an additional RNA-seq dataset that is suitable for an independent research project.
+This module is a companion and expansion to the C-MOOR RNA-seq miniCURE. This module adds an additional RNA-seq dataset that is suitable for an independent research project.
 
 You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the [C-MOOR website](https://www.c-moor.org/). An online guide to the miniCURE is [here](https://science.c-moor.org/miniCURE-RNA-seq/index.html).
 
-**Duration:** 
+**Duration:** Three lab periods
 
 ## Learning Objectives
 
@@ -47,14 +47,8 @@ You can find out more about the RNA-seq miniCURE and other C-MOOR activities at 
      -   [Comparing gene expression between prefrontal cortex and striatum, only control mice](https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv)
 
 
--   **If you are using this as a stand-alone activity**: download the R student activity as:
 
-    -   [Web page](https://genomicseducation.org/module/mouse_gutbrain_de_student_guide.html)
-    -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_student_guide.qmd)
-    -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_student_guide.docx)
-    -   [Google Doc]() - coming soon!
-
--   **If you are using this as an extension of the C-MOOR miniCURE**: download the R student activity as:
+-   Download the R student activity as:
 
     -   [Web page](https://genomicseducation.org/module/mouse_gutbrain_de_miniCURE_guide.html)
     -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_miniCURE_guide.qmd)
@@ -80,20 +74,14 @@ The activity uses data from a [published research study](https://www.cell.com/ce
 
 -   Striatum: the part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions
 
-## Outline for Stand-Alone Activity
 
--   Part 1: Background and Setup
-
--   Part 2: Exploring Differential Expression Data
-
--   Part 3: Exploring Differential Expression of Individual Genes
 
 ## Outline for RNA-seq miniCURE Extension 
 
 -   Background and Setup
 
--   Exploring Differential Expression Data
+-   Developing a Hypothesis; Identifying Genes of Interest
 
--   Creating Lists of Differentially Expressed Genes
+-   Exploring Gene Expression Data
 
--   Cluster Analysis of Gene Lists
+-   Analyzing Differential Expression Data
