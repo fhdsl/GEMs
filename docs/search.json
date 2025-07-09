@@ -382,14 +382,14 @@
     "href": "module/mouse_gutbrain_de.html",
     "title": "Differential Expression and the Mouse Gut-Brain Axis",
     "section": "",
-    "text": "This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.\nThis module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can be used as a stand-alone activity or as part of a broader miniCURE experience. Students do not have to have completed the miniCURE in order to use the stand-alone guide. If you are using the RNA-seq miniCURE in your class, this module adds an additional RNA-seq dataset that is suitable for an independent research project.\nYou can find out more about the RNA-seq miniCURE and other C-MOOR activities at the C-MOOR website. An online guide to the miniCURE is here.\nDuration:"
+    "text": "This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.\nThis module is a companion and expansion to the C-MOOR RNA-seq miniCURE. This module adds an additional RNA-seq dataset that is suitable for an independent research project.\nYou can find out more about the RNA-seq miniCURE and other C-MOOR activities at the C-MOOR website. An online guide to the miniCURE is here.\nDuration: Three lab periods"
   },
   {
     "objectID": "module/mouse_gutbrain_de.html#overview",
     "href": "module/mouse_gutbrain_de.html#overview",
     "title": "Differential Expression and the Mouse Gut-Brain Axis",
     "section": "",
-    "text": "This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.\nThis module is a companion and expansion to the C-MOOR RNA-seq miniCURE. It can be used as a stand-alone activity or as part of a broader miniCURE experience. Students do not have to have completed the miniCURE in order to use the stand-alone guide. If you are using the RNA-seq miniCURE in your class, this module adds an additional RNA-seq dataset that is suitable for an independent research project.\nYou can find out more about the RNA-seq miniCURE and other C-MOOR activities at the C-MOOR website. An online guide to the miniCURE is here.\nDuration:"
+    "text": "This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.\nThis module is a companion and expansion to the C-MOOR RNA-seq miniCURE. This module adds an additional RNA-seq dataset that is suitable for an independent research project.\nYou can find out more about the RNA-seq miniCURE and other C-MOOR activities at the C-MOOR website. An online guide to the miniCURE is here.\nDuration: Three lab periods"
   },
   {
     "objectID": "module/mouse_gutbrain_de.html#learning-objectives",
@@ -403,7 +403,7 @@
     "href": "module/mouse_gutbrain_de.html#materials-and-setup",
     "title": "Differential Expression and the Mouse Gut-Brain Axis",
     "section": "Materials and Setup",
-    "text": "Materials and Setup\n\nStudents will need either:\n\nAn internet connection for this activity as written (using Posit Cloud)\nA local installation of R or RStudio (with data downloaded and tidyverse package installed ahead of time)\n\nRequired R package: tidyverse\nData hosting:\n\nComparing gene expression between ASD and control mice, both brain regions\nComparing gene expression between ASD and control mice, prefrontal cortex only\nComparing gene expression between ASD and control mice, striatum only\nComparing gene expression between prefrontal cortex and striatum, all mice\nComparing gene expression between prefrontal cortex and striatum, only ASD mice\nComparing gene expression between prefrontal cortex and striatum, only control mice\n\nIf you are using this as a stand-alone activity: download the R student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc - coming soon!\n\nIf you are using this as an extension of the C-MOOR miniCURE: download the R student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc - coming soon!\n\nGoogle Slides presentation available for borrowing images here.\nAnswer key coming soon!"
+    "text": "Materials and Setup\n\nStudents will need either:\n\nAn internet connection for this activity as written (using Posit Cloud)\nA local installation of R or RStudio (with data downloaded and tidyverse package installed ahead of time)\n\nRequired R package: tidyverse\nData hosting:\n\nComparing gene expression between ASD and control mice, both brain regions\nComparing gene expression between ASD and control mice, prefrontal cortex only\nComparing gene expression between ASD and control mice, striatum only\nComparing gene expression between prefrontal cortex and striatum, all mice\nComparing gene expression between prefrontal cortex and striatum, only ASD mice\nComparing gene expression between prefrontal cortex and striatum, only control mice\n\nDownload the R student activity as:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc - coming soon!\n\nGoogle Slides presentation available for borrowing images here.\nAnswer key coming soon!"
   },
   {
     "objectID": "module/mouse_gutbrain_de.html#scientific-topics",
@@ -413,18 +413,11 @@
     "text": "Scientific Topics\nThe activity uses data from a published research study “Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice” [1]. Students will gain exposure to the following:\n\nDifferential expression: the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or “turned on”, while others are “turned off”\nGut-brain axis: the proposed connection between the gut microbiome and gene expression in the brain\nAutism Spectrum Disorder: a neurological disorder that affects behavioral and social interactions\nPrefrontal cortex: the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions\nStriatum: the part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions"
   },
   {
-    "objectID": "module/mouse_gutbrain_de.html#outline-for-stand-alone-activity",
-    "href": "module/mouse_gutbrain_de.html#outline-for-stand-alone-activity",
-    "title": "Differential Expression and the Mouse Gut-Brain Axis",
-    "section": "Outline for Stand-Alone Activity",
-    "text": "Outline for Stand-Alone Activity\n\nPart 1: Background and Setup\nPart 2: Exploring Differential Expression Data\nPart 3: Exploring Differential Expression of Individual Genes"
-  },
-  {
     "objectID": "module/mouse_gutbrain_de.html#outline-for-rna-seq-minicure-extension",
     "href": "module/mouse_gutbrain_de.html#outline-for-rna-seq-minicure-extension",
     "title": "Differential Expression and the Mouse Gut-Brain Axis",
     "section": "Outline for RNA-seq miniCURE Extension",
-    "text": "Outline for RNA-seq miniCURE Extension\n\nBackground and Setup\nExploring Differential Expression Data\nCreating Lists of Differentially Expressed Genes\nCluster Analysis of Gene Lists"
+    "text": "Outline for RNA-seq miniCURE Extension\n\nBackground and Setup\nDeveloping a Hypothesis; Identifying Genes of Interest\nExploring Gene Expression Data\nAnalyzing Differential Expression Data"
   },
   {
     "objectID": "module/genomic_med_prs_student_guide.html#part-1",
