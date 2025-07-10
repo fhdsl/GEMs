@@ -38,13 +38,40 @@ Questions that could be answered with this dataset include:
 
 ### The Gut-Brain Axis 
 
-The _gut-brain axis_ is the term used for the proposed connection between the gut microbiome and the brain. In recent years, studies have identified links between immune-related neurological symptoms and the presence of intestinal inflammation. There are around 100 million neurons in the human gut, and around 70% of the serotonin (an important neurotransmitter) in the human body is made in the gut. A possible link between the gut microbiome and increased symptom severity is actively being studied for Major Depressive Disorder, Autism Spectrum Disorder, fibromyalgia, migraines, Parkinson’s disease, Alzheimer’s disease, and more. 
+The _gut-brain axis_ is the term used for the proposed connection between the gut microbiome and the brain. In recent years, studies have identified links between immune-related neurological symptoms and the presence of intestinal inflammation. There are around 100 million neurons in the human gut, and around 70% of the serotonin (an important neurotransmitter) in the human body is made in the gut. Communication between the microbes in the gut and the brain happens through multiple routes, including immune signaling, stimulation of the vagus nerve, and activation of the enteric nervous system (a system of neurons in the intestinal that are often called the "second brain") through formation of microbial-derived metabolites like tryptophan, short-chain fatty acids, or secondary bile acids.
 
-One proposed mechanism for how the gut-brain axis works is that inflamed intestinal tissue triggers the synthesis of cytokines and other proteins involved in the immune response; these proteins may attack nervous system cells.
+```{r, fig.align='center', echo = FALSE, fig.alt= "How the gut might alter the nervous system in mice.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36e8af3aaa8_34_0#slide=id.g36e8af3aaa8_34_0")
+```
 
-The samples in this dataset are from mice that _do not_ carry genes associated with disease. Instead, any symptoms or changes in the brain they show are the result of microbes introduced to their gut via fecal transplant. **This dataset gives you the opportunity to study possible effects of the gut-brain axis firsthand.**
+Researchers have identified multiple ways the intestinal microbiota in the gut might remodel the structure of the nervous system. This includes changes in myelination, neurogenesis, neurotransmitters and synaptic plasticity, growth of dendrites, activation of microglia, and changes in the permeability of the blood-brain-barrier. The exact mechanism for these changes is still unknown. 
+
+::: callout-note
+Why are the neural processes mentioned above important?
+
+
+:::
+
+Remodeling of the nervous system via the gut microbiome is suspected to be responsible for the development or severity of some symptoms associated with neurodevelopmental and neurodegenerative disorders. A possible link between the gut microbiome and increased symptom severity is actively being studied for Major Depressive Disorder, Autism Spectrum Disorder, fibromyalgia, migraines, Parkinson’s disease, Alzheimer’s disease, and more. 
+
+The samples in this dataset are from mice that _do not_ carry genes associated with either neurodevelopmental or neurodegenerative diseases. Instead, any symptoms or changes in the brain they show are the result of microbes introduced to their gut via fecal transplant. **This dataset gives you the opportunity to study possible effects of the gut-brain axis firsthand.**
+
+### Brain Disorders
+
+While this dataset includes samples from mice in which Autism Spectrum Disorder symptoms were induced (which we call "ASD-type" mice), you are't limited to only exploring expression of genes that are associated with Autism Spectrum Disorder. Many neurological disorders have shared symptoms and may have a shared biological basis.
+
+Many brain disorders fall into two broad categories: neurodevelopmental disorders (disorders that are the result of altered brain development) and neurodegenerative disorders (disorders that occur when brain structures and systems experience degradation).
+
+#### Neurodevelopmental Disorders
+
+*Autism spectrum disorder (ASD)* is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it's considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
+
+
+#### Neurodegenerative Disorders
 
 ### The Striatum and the Prefrontal Cortex
+
+This dataset includes gene expression data from two different regions in the brain: the striatum and the prefrontal cortex. Another option for your research question might be looking at differences in expression between these two regions.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the striatum in the human brain.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d1434cdd1_12_0#slide=id.g33d1434cdd1_12_0")
@@ -59,17 +86,6 @@ https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42
 
 The *prefrontal cortex* is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
 
-### Brain Disorders
-
-
-
-#### Neurodevelopmental Disorders
-
-*Autism spectrum disorder (ASD)* is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it's considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
-
-
-#### Neurodegenerative Disorders
-
 
 ::: callout-tip
 # Deciding on your research question
@@ -81,6 +97,8 @@ Before you start working with the dataset, you should decide what you want to ex
 2) Is there a disease or disorder you'd like to focus on? You can explore known risk genes for this disorder (or genes that are protective against this disorder). You don't have to limit yourself to Autism Spectrum Disorder, either; there are many disorders that have a shared genetic and biological basis!
 
 3) Are you curious about the standard "housekeeping" genes that are broadly expressed across cell types and involved in common biological processes, like DNA replication, metabolism, and cell cycle regulation? These processes are vitally important for proper cellular function, so disruption in them can cause problems for the organism.
+
+4) Are you interested in general brain structure?
 
 Once you've picked a disorder or cellular process that interests you, start looking up research papers to find genes! You can use sites like PubMed and Google Scholar to look up studies. Skim through at least 4-5 different papers that contain some type of gene name or a biological process. **DO NOT GET TOO LOST INTO THE PAPERS!** Make sure you skim through them for important information, but be willing to set a paper aside if you're struggling to find what you need.
 :::
