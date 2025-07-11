@@ -1,0 +1,44 @@
+{
+  "module/mouse_gutbrain_de_student_guide.qmd": {
+    "mouse_gutbrain_de_student_guide.html": "81b53106"
+  },
+  "module/database_detectives_student_guide.qmd": {
+    "database_detectives_student_guide.html": "2ec07c8d"
+  },
+  "module/mouse_gutbrain_de_miniCURE_guide.qmd": {
+    "mouse_gutbrain_de_miniCURE_guide.html": "32fd033d"
+  },
+  "module/AOU_ethics_student_guide.qmd": {
+    "AOU_ethics_student_guide.html": "0f840c05"
+  },
+  "module/family_markers_student_guide.qmd": {
+    "family_markers_student_guide.html": "160f7c46"
+  },
+  "module/database_detectives.qmd": {
+    "database_detectives.html": "c4197268"
+  },
+  "module/genomic_med_prs.qmd": {
+    "genomic_med_prs.html": "a0e8bfea"
+  },
+  "module/mouse_gutbrain_de_student_only_code.qmd": {
+    "mouse_gutbrain_de_student_only_code.html": "078c28ab"
+  },
+  "module/mouse_gutbrain_de.qmd": {
+    "mouse_gutbrain_de.html": "a2ce46f0"
+  },
+  "module/AOU_ethics.qmd": {
+    "AOU_ethics.html": "de3d8d78"
+  },
+  "module/genomic_med_prs_student_guide.qmd": {
+    "genomic_med_prs_student_guide.html": "212044ac"
+  },
+  "module/family_markers.qmd": {
+    "family_markers.html": "49773f7b"
+  },
+  "index.qmd": {
+    "index.html": "b6ce475f"
+  },
+  "modules.qmd": {
+    "modules.html": "bb54f961"
+  }
+}
