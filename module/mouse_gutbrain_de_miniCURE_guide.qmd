@@ -49,7 +49,17 @@ Researchers have identified multiple ways the intestinal microbiota in the gut m
 ::: callout-note
 Why are the neural processes mentioned above important?
 
+**myelination**: the process of forming protein sheaths (called myelin) around the long axons of nerves. This insulates the axon and improves the speed and efficiency of transmission of neural signals. 
 
+**neurogenesis**: the formation of new neurons, particularly in the adult central nervous system. This is important for memory and learning.`
+
+**synaptic plasticity**: the process of strengthening or weakening connections at the synapse of nerves (where the signal is transferred from one nerve to another). This sort of adaptive change is fundamental for memory and learning.
+
+**dendritic growth**: the process by which neurons form new branches (dendrites) and spines (small protrusions on the dendrites). This is a key aspect of neuroplasticity and is essential for brain development, learning, and memory formation.
+
+**microglia**: immune cells found in the central nervous system. They support central nervous system development and synaptogenesis, maintain homeostasis, contribute to an immune response against infectious agents, and are associated with adult neurogenesis, neuroinflammation, degenerative diseases, stroke, trauma and regeneration.
+
+**blood-brain-barrier**: a highly selective semi-permeable barrier located in the central nervous system that separates the bloodstream from the brain's extracellular fluid. It maintains a  stable environment for neuronal function and regulates passage of molecules between the brain and the rest of the body.
 :::
 
 Remodeling of the nervous system via the gut microbiome is suspected to be responsible for the development or severity of some symptoms associated with neurodevelopmental and neurodegenerative disorders. A possible link between the gut microbiome and increased symptom severity is actively being studied for Major Depressive Disorder, Autism Spectrum Disorder, fibromyalgia, migraines, Parkinson’s disease, Alzheimer’s disease, and more. 
@@ -58,13 +68,15 @@ The samples in this dataset are from mice that _do not_ carry genes associated w
 
 ### Brain Disorders
 
-While this dataset includes samples from mice in which Autism Spectrum Disorder symptoms were induced (which we call "ASD-type" mice), you are't limited to only exploring expression of genes that are associated with Autism Spectrum Disorder. Many neurological disorders have shared symptoms and may have a shared biological basis.
+While this dataset includes samples from mice in which Autism Spectrum Disorder symptoms were induced (which we call "ASD-type" mice), you aren't limited to only exploring expression of genes that are associated with Autism Spectrum Disorder. Many neurological disorders have shared symptoms and may have a shared biological basis.
 
 Many brain disorders fall into two broad categories: neurodevelopmental disorders (disorders that are the result of altered brain development) and neurodegenerative disorders (disorders that occur when brain structures and systems experience degradation).
 
 #### Neurodevelopmental Disorders
 
-*Autism spectrum disorder (ASD)* is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it's considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
+Although the following disorders can be diagnosed at any age, they are considered neurodevelopmental disorders because symptoms usually show up within the first two years of life.
+
+*Autism spectrum disorder (ASD)* is a neurological disorder that affects behavioral and social interactions, among other things. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.
 
 
 #### Neurodegenerative Disorders
