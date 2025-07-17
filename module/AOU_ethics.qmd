@@ -34,4 +34,6 @@ tt <- function(x, y) {
 }
 ```
 
-This is some random text with a tooltip `r tt("here","This is great")` and a tooltip `r tt("there","Fantastic")`.
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">SECRET TIP</span>
+</div>
