@@ -26,3 +26,12 @@ These ethics-related questions can be added on to any activity that leverages th
     -   [Google Doc](https://docs.google.com/document/d/1Xi1M9icJUJ2pfxp5pOV4yzQUHfQCM8zo/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
 
 -   Answer key available [here](https://docs.google.com/document/d/16GiVCWKhVxkKzOUr6XlQ_vdj-tyxBYlIa3lmstzf38Y/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+
+```{r}
+#| echo: false
+tt <- function(x, y) {
+    paste0('<a href="#" data-toggle="tooltip" title="',y,'">',x,'</a>')
+}
+```
+
+This is some random text with a tooltip `r tt("here","This is great")` and a tooltip `r tt("there","Fantastic")`.
