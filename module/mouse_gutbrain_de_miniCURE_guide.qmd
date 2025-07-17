@@ -74,7 +74,7 @@ Many brain disorders fall into two broad categories: neurodevelopmental disorder
 
 #### Neurodevelopmental Disorders
 
-Although the following disorders can be diagnosed at any age, they are considered neurodevelopmental disorders because symptoms usually show up within the first two years of life. Many of these disorders have overlapping symptoms, including difficulty managing emotions, experiencing intense emotional outbursts, a dysregulated stress response system, difficulty with executive functions (like attention regulation, organization, and planning), and issues with social communication and unspoken social norms. Many of these disorders have similar biological roots, such as impaired connections between regions of the brain (called white matter connectivity), neuroinflammation, genetic variantion, and disruptions in systems that rely on dopamine, norepinephrine, and serotonin. People with these disorders also show differences in brain regions like the prefrontal cortex and the amygdala compared to people without neurodevelopmental disorders. For example, malfunctioning of the hypothalamic-pituitary-adrenal (HPA) axis is common in neurodevelopmental disorders. The HPA axis regulates the brain and body's response to stress. Many people with neurodevelopmental disorders show an unusually strong reaction to stress and can have difficulty recovering from it.
+Although the following disorders can be diagnosed at any age, they are considered neurodevelopmental disorders because symptoms usually show up within the first two years of life. Many of these disorders have overlapping symptoms, including difficulty managing emotions, experiencing intense emotional outbursts, a dysregulated stress response system, difficulty with executive functions (like attention regulation, organization, and planning), and issues with social communication and unspoken social norms. Many of these disorders have similar biological roots, such as neuroinflammation, genetic variation, and disruptions in systems that rely on dopamine, norepinephrine, and serotonin (which can cause impaired connections between regions of the brain, called white matter connectivity). People with these disorders also show differences in brain regions like the prefrontal cortex and the amygdala compared to people without neurodevelopmental disorders. For example, malfunctioning of the hypothalamic-pituitary-adrenal (HPA) axis is common in neurodevelopmental disorders. The HPA axis regulates the brain and body's response to stress. Many people with neurodevelopmental disorders show an unusually strong reaction to stress and can have difficulty recovering from it.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Researchers have identified three major factors that may contribute to neurodevelopmental disorders.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g344ce1a0afa_0_0#slide=id.g344ce1a0afa_0_0")
@@ -108,7 +108,9 @@ If you'd like to read more about the biology of neurodevelopmental disorders, (B
 
 #### Neurodegenerative Disorders
 
+Neurodegenerative disorders are usually considered diseases of aging because a person's risk of developing one these disorders increases as they age. These disorders are the result of the breakdown and eventual loss of neurons and synaptic connections.
 
+If you're interested in reading more about the biology of neurodegenerative disorders, (Gadhave et al. 2021)[https://www.sciencedirect.com/science/article/pii/S1568163724001752] is a good place to start!
 
 ### The Striatum and the Prefrontal Cortex
 
