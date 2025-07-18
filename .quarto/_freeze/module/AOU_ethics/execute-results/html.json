@@ -1,0 +1,15 @@
+{
+  "hash": "c17fa50ff0deca7612d77a557060c84a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"**All of Us: Understanding Ethics**\"\noutput:\n  html_document\n---\n\n\n\n## Overview\n\nThese ethics-related questions can be added on to any activity that leverages the [All of Us Data Browser](https://databrowser.researchallofus.org/).\n\n**Duration:** Approximately 1 hour.\n\n## Learning Objectives\n\n1.  Identify and critique scientific issues relating to society or ethics (see [GSA](https://genetics-gsa.org/education/genetics-learning-framework/) core competencies).\n\n2. Interpret the ethical, legal, medical, and social implications of biological data (see [NIBLSE](https://qubeshub.org/community/groups/niblse/core_competencies) core competencies).\n\n## Materials and Setup\n\n-   Download the student activity as:\n\n    -   [Web page](https://genomicseducation.org/module/AOU_ethics_student_guide.html)\n    -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/AOU_ethics_student_guide.qmd)\n    -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/AOU_ethics_student_guide.docx)\n    -   [Google Doc](https://docs.google.com/document/d/1Xi1M9icJUJ2pfxp5pOV4yzQUHfQCM8zo/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)\n\n-   Answer key available [here](https://docs.google.com/document/d/16GiVCWKhVxkKzOUr6XlQ_vdj-tyxBYlIa3lmstzf38Y/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n<div class=\"tooltip\">Hover over me\n  <span class=\"tooltiptext\">SECRET TIP</span>\n</div>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
