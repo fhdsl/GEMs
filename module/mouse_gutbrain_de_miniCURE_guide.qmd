@@ -74,7 +74,7 @@ Before you start working with the dataset, you will need to make some decisions 
 
 Are you interested in exploring gene expression differences between two regions of the mouse brain, without focusing on the gut-brain axis? Expand this section to read more.
 
-::: callout-tip collapse="true"
+::: {.callout-caution collapse="true"}
 # Brain Structure: The Striatum and the Prefrontal Cortex
 
 This dataset includes gene expression data from two different regions in the brain: the striatum and the prefrontal cortex. 
@@ -97,7 +97,7 @@ Are you interested in exploring neurodevelopmental disorders? These are disorder
 
 Expand this section to read more.
 
-::: callout-tip collapse="true"
+::: {.callout-caution collapse="true"}
 # Brain Disorders: Neurodevelopmental Disorders
 
 Although the following disorders can be diagnosed at any age, they are considered neurodevelopmental disorders because symptoms usually show up within the first two years of life. Many of these disorders have overlapping symptoms, including difficulty managing emotions, experiencing intense emotional outbursts, a dysregulated stress response system, difficulty with executive functions (like attention regulation, organization, and planning), and issues with social communication and unspoken social norms. Many of these disorders have similar biological roots, such as neuroinflammation, genetic variation, and disruptions in systems that rely on dopamine, norepinephrine, and serotonin (which can cause impaired connections between regions of the brain, called white matter connectivity). People with these disorders also show differences in brain regions like the prefrontal cortex and the amygdala compared to people without neurodevelopmental disorders. For example, malfunctioning of the hypothalamic-pituitary-adrenal (HPA) axis is common in neurodevelopmental disorders. The HPA axis regulates the brain and body's response to stress. Many people with neurodevelopmental disorders show an unusually strong reaction to stress and can have difficulty recovering from it.
@@ -126,12 +126,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g344d4a4b906_0_6#slide=id.g344d4a4b906_0_6")
 ```
 
-
-::: callout-note
-Mood disorders like depression, bipolar, and schizophrenia are not currently listed as neurodevelopmental disorders in the American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5). This is the official handbook of psychiatric disorders used for diagnosis in the field. However, researchers have suggested that mood disorders should be considered neurodevelopmental disorders due to growing evidence that neurodevelopmental pathways play a role in their development and manifestation. For the purposes of this module, we have included them in the "Neurodevelopmental Disorder" section.
-:::
-
 **Mood Disorders** are a group of disorders in which affected individuals exhibit emotional state changes, which can include episodes of deep sadness (dysphoria), lack of feeling anything (anhedonia), and extreme happiness or euphoria (hypomania or mania). The most well-known of these disorders are Major Depressive Disorder (MDD) and Bipolar Disorder (BD). Some individuals with Schizoaffective Disorder (SAD) or Schizophrenia (SCZ) also experience hallucinations and psychosis. Variation in serotonin transporter genes and dopamine receptor genes have been associated with Mood Disorders, as well as neurotransmitter alterations and brain circuit dysfunction, particularly within the prefrontal cortex and the limbic system (where the amygdala is).
+
+Mood disorders like depression, bipolar, and schizophrenia are not currently listed as neurodevelopmental disorders in the American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5). This is the official handbook of psychiatric disorders used for diagnosis in the field. However, researchers have suggested that mood disorders should be considered neurodevelopmental disorders due to growing evidence that neurodevelopmental pathways play a role in their development and manifestation. For the purposes of this module, we have included them in the "Neurodevelopmental Disorder" section.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3707230d9af_0_7#slide=id.g3707230d9af_0_7")
@@ -142,7 +139,7 @@ If you'd like to read more about the biology of neurodevelopmental disorders, (B
 
 Are you interested in exploring neurodegenerative disorders? These are disorders that that occur when brain structures and systems experience degradation and may be the result of similar biological processes that cause neurodevelopmental disorders. Expand this section to read more.
 
-::: callout-tip collapse="true"
+::: {.callout-caution collapse="true"}
 # Brain Disorders: Neurodegenerative Disorders
 
 Neurodegenerative disorders are usually considered diseases of aging because a person's risk of developing one these disorders increases as they age. These disorders are the result of the breakdown and eventual loss of neurons and synaptic connections. An individual's specific symptoms and diagnosis are the result of where in the brain or central nervous system the breakdown of neurons and synapses occur.
