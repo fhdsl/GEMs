@@ -66,13 +66,29 @@ Remodeling of the nervous system via the gut microbiome is suspected to be respo
 
 The samples in this dataset are from mice that _do not_ carry genes associated with either neurodevelopmental or neurodegenerative diseases. Instead, any symptoms or changes in the brain they show are the result of microbes introduced to their gut via fecal transplant. **This dataset gives you the opportunity to study possible effects of the gut-brain axis firsthand.**
 
+# Deciding on your research question
+
+Before you start working with the dataset, you should decide what you want to explore.
+
+1) Is there a gene or set of genes linked to a biological process you're particularly interested in? This could include things like "cytokines", "anti-inflammatory genes", "genes involved in building neurons", or any biological process you find interesting!
+
+2) Is there a disease or disorder you'd like to focus on? You can explore known risk genes for this disorder (or genes that are protective against this disorder). You don't have to limit yourself to Autism Spectrum Disorder, either; there are many disorders that have a shared genetic and biological basis!
+
+3) Are you curious about the standard "housekeeping" genes that are broadly expressed across cell types and involved in common biological processes, like DNA replication, metabolism, and cell cycle regulation? These processes are vitally important for proper cellular function, so disruption in them can cause problems for the organism.
+
+4) Are you interested in general brain structure?
+
+Once you've picked a disorder or cellular process that interests you, start looking up research papers to find genes! You can use sites like PubMed and Google Scholar to look up studies. Skim through at least 4-5 different papers that contain some type of gene name or a biological process. **DO NOT GET TOO LOST INTO THE PAPERS!** Make sure you skim through them for important information, but be willing to set a paper aside if you're struggling to find what you need.
+
+
 ### Brain Disorders
 
 While this dataset includes samples from mice in which Autism Spectrum Disorder symptoms were induced (which we call "ASD-type" mice), you aren't limited to only exploring expression of genes that are associated with Autism Spectrum Disorder. Many neurological disorders have shared symptoms and may have a shared biological basis.
 
 Many brain disorders fall into two broad categories: neurodevelopmental disorders (disorders that are the result of altered brain development) and neurodegenerative disorders (disorders that occur when brain structures and systems experience degradation).
 
-#### Neurodevelopmental Disorders
+::: callout-tip collapse="true"
+# Neurodevelopmental Disorders
 
 Although the following disorders can be diagnosed at any age, they are considered neurodevelopmental disorders because symptoms usually show up within the first two years of life. Many of these disorders have overlapping symptoms, including difficulty managing emotions, experiencing intense emotional outbursts, a dysregulated stress response system, difficulty with executive functions (like attention regulation, organization, and planning), and issues with social communication and unspoken social norms. Many of these disorders have similar biological roots, such as neuroinflammation, genetic variation, and disruptions in systems that rely on dopamine, norepinephrine, and serotonin (which can cause impaired connections between regions of the brain, called white matter connectivity). People with these disorders also show differences in brain regions like the prefrontal cortex and the amygdala compared to people without neurodevelopmental disorders. For example, malfunctioning of the hypothalamic-pituitary-adrenal (HPA) axis is common in neurodevelopmental disorders. The HPA axis regulates the brain and body's response to stress. Many people with neurodevelopmental disorders show an unusually strong reaction to stress and can have difficulty recovering from it.
 
@@ -104,8 +120,10 @@ Mood disorders like depression, bipolar, and schizophrenia are not currently lis
 
 
 If you'd like to read more about the biology of neurodevelopmental disorders, (Bertollo et al. 2025)[https://www.mdpi.com/2076-3425/15/3/307] is a great starting point!
+:::
 
-#### Neurodegenerative Disorders
+::: callout-tip collapse="true"
+# Neurodegenerative Disorders
 
 Neurodegenerative disorders are usually considered diseases of aging because a person's risk of developing one these disorders increases as they age. These disorders are the result of the breakdown and eventual loss of neurons and synaptic connections. An individual's specific symptoms and diagnosis are the result of where in the brain or central nervous system the breakdown of neurons and synapses occur.
 
@@ -120,8 +138,10 @@ This is not a comprehensive list of all neurodegenerative disorders - you may kn
 **Amyotrophic Lateral Sclerosis (ALS*)**, also known as Lou Gehrig's Disease, is caused by progressive degeneration of motor neurons in the brain and spinal cord. The exact mechanisms that trigger this degeneration are not known, but research has suggested that oxidative stress and mitochondrial dysfunction might contribute to the development of ALS. Additionally, the genes C9orf72, SOD1, TARDBP, and FUS have been identified as risk factors for developing an inherited form of the disease.
 
 If you're interested in reading more about the biology of neurodegenerative disorders, [Gadhave et al. 2021](https://www.sciencedirect.com/science/article/pii/S1568163724001752) is a good place to start!
+:::
 
-### The Striatum and the Prefrontal Cortex
+::: callout-tip collapse="true"
+# The Striatum and the Prefrontal Cortex
 
 This dataset includes gene expression data from two different regions in the brain: the striatum and the prefrontal cortex. Another option for your research question might be looking at differences in expression between these two regions.
 
@@ -137,23 +157,8 @@ https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42
 ```
 
 The *prefrontal cortex* is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
-
-
-::: callout-tip
-# Deciding on your research question
-
-Before you start working with the dataset, you should decide what you want to explore.
-
-1) Is there a gene or set of genes linked to a biological process you're particularly interested in? This could include things like "cytokines", "anti-inflammatory genes", "genes involved in building neurons", or any biological process you find interesting!
-
-2) Is there a disease or disorder you'd like to focus on? You can explore known risk genes for this disorder (or genes that are protective against this disorder). You don't have to limit yourself to Autism Spectrum Disorder, either; there are many disorders that have a shared genetic and biological basis!
-
-3) Are you curious about the standard "housekeeping" genes that are broadly expressed across cell types and involved in common biological processes, like DNA replication, metabolism, and cell cycle regulation? These processes are vitally important for proper cellular function, so disruption in them can cause problems for the organism.
-
-4) Are you interested in general brain structure?
-
-Once you've picked a disorder or cellular process that interests you, start looking up research papers to find genes! You can use sites like PubMed and Google Scholar to look up studies. Skim through at least 4-5 different papers that contain some type of gene name or a biological process. **DO NOT GET TOO LOST INTO THE PAPERS!** Make sure you skim through them for important information, but be willing to set a paper aside if you're struggling to find what you need.
 :::
+
 
 ### The original study
 
