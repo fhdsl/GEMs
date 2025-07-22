@@ -42,6 +42,7 @@ The _gut-brain axis_ is the term used for the proposed connection between the gu
 ```{r, fig.align='center', echo = FALSE, fig.alt= "How the gut might alter the nervous system in mice.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36e8af3aaa8_34_0#slide=id.g36e8af3aaa8_34_0")
 ```
+In the figure above, the "up" arrow indicates an increase; this could be increased production of a protein, increased activity of a biological pathway, or a general increase in the presence of a structure. The "down" arrow indicates a decrease.
 
 Researchers have identified multiple ways the intestinal microbiota in the gut might remodel the structure of the nervous system. This includes changes in myelination, neurogenesis, neurotransmitters and synaptic plasticity, growth of dendrites, activation of microglia, and changes in the permeability of the blood-brain-barrier. The exact mechanism for these changes is still unknown. 
 
@@ -104,7 +105,6 @@ Although the following disorders can be diagnosed at any age, they are considere
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Researchers have identified three major factors that may contribute to neurodevelopmental disorders.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g344ce1a0afa_0_0#slide=id.g344ce1a0afa_0_0")
 ```
-In the figure above, the "up" arrow indicates increased activity in a pathway or increased production of a protein. The "down" arrow indicates decreased activity or production.
 
 This is not a comprehensive list of all neurodevelopmental disorders - you may know of others that are not included! Any of these could be a good starting point for your research question. 
 
