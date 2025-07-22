@@ -104,22 +104,24 @@ Although the following disorders can be diagnosed at any age, they are considere
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Researchers have identified three major factors that may contribute to neurodevelopmental disorders.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g344ce1a0afa_0_0#slide=id.g344ce1a0afa_0_0")
 ```
+In the figure above, the "up" arrow indicates increased activity in a pathway or increased production of a protein. The "down" arrow indicates decreased activity or production.
 
 This is not a comprehensive list of all neurodevelopmental disorders - you may know of others that are not included! Any of these could be a good starting point for your research question. 
 
 *Autism spectrum disorder (ASD)* is a neurological disorder that affects behavioral and social interactions, among other things. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems. Some genes that have been suggested as ASD risk genes include SHANK3, NRXN1, CHD8, ARIH2 and ZDHHC15, and TRPC6. Individuals with ASD also show changes in both white and gray matter volume, as well as an imbalance in connectivity of neural circuits (there are more connections and stronger connections than typical within local regions of the brain, and both fewer and weaker connections between distant regions of the brain). The neural circuits that are imbalanced connect brain regions like the prefrontal cortex and the amygdala.
 
+**Attention-Deficit/Hyperactivity Disorder (ADHD)** is characterized by difficulties with inattention, hyperactivity, and impulsivity. Individuals may show predominantly inattention symptoms (predominantly inattentive ADHD), predominantly hyperactivity and impulsivity symptoms (predominantly hyperactive ADHD), or a combination of all (combined type ADHD). Some proposed ADHD risk genes are SKI, ZNF544, ST3GAL3, and PEX2. Additionally, researchers believe alterations to the prefrontal cortex and the dopaminergic system are major contributing factors for ADHD.
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "People with ADHD show changes in the prefrontal cortex and the dopaminergic systems.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g344d4a4b906_0_0#slide=id.g344d4a4b906_0_0")
 ```
 
-**Attention-Deficit/Hyperactivity Disorder (ADHD)** is characterized by difficulties with inattention, hyperactivity, and impulsivity. Individuals may show predominantly inattention symptoms (predominantly inattentive ADHD), predominantly hyperactivity and impulsivity symptoms (predominantly hyperactive ADHD), or a combination of all (combined type ADHD). Some proposed ADHD risk genes are SKI, ZNF544, ST3GAL3, and PEX2. Additionally, researchers believe alterations to the prefrontal cortex and the dopaminergic system are major contributing factors for ADHD.
+**Learning Disorders (LDs)** include disorders such as dyslexia, dyscalculia, and dysgraphia. Each of these is characterized by difficulty developing a fundamental academic skill, including reading (dyslexia), math and working with numbers (dyscalculia), writing (dysgraphia), listening (auditory processing disorder), speaking (language processing disorder), or non-verbal reasoning (nonverbal learning disorder). Individuals with LDs frequently show differences neural connectivity within brain regions like the prefrontal cortex, hippocampus, and parietal lobes, which may contribute to decreased brain processing speed and executive functioning. Research also suggests that altered tryptophan metabolism is associated with LDs.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "People with LDs show changes in the neural connectivity of the parietal lobes, prefrontal cortex, and hippocampus, as well as dysregulation of the HPA axis.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g344d4a4b906_0_6#slide=id.g344d4a4b906_0_6")
 ```
 
-**Learning Disorders (LDs)** include disorders such as dyslexia, dyscalculia, and dysgraphia. Each of these is characterized by difficulty developing a fundamental academic skill, including reading (dyslexia), math and working with numbers (dyscalculia), writing (dysgraphia), listening (auditory processing disorder), speaking (language processing disorder), or non-verbal reasoning (nonverbal learning disorder). Individuals with LDs frequently show differences neural connectivity within brain regions like the prefrontal cortex, hippocampus, and parietal lobes, which may contribute to decreased brain processing speed and executive functioning. Research also suggests that altered tryptophan metabolism is associated with LDs.
 
 ::: callout-note
 Mood disorders like depression, bipolar, and schizophrenia are not currently listed as neurodevelopmental disorders in the American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5). This is the official handbook of psychiatric disorders used for diagnosis in the field. However, researchers have suggested that mood disorders should be considered neurodevelopmental disorders due to growing evidence that neurodevelopmental pathways play a role in their development and manifestation. For the purposes of this module, we have included them in the "Neurodevelopmental Disorder" section.
@@ -131,7 +133,7 @@ Mood disorders like depression, bipolar, and schizophrenia are not currently lis
 If you'd like to read more about the biology of neurodevelopmental disorders, (Bertollo et al. 2025)[https://www.mdpi.com/2076-3425/15/3/307] is a great starting point!
 :::
 
-Are you interested in exploring neurodegenerative disorders? These are disorders that that occur when brain structures and systems experience degradation and may be the result of similiar biological processes that cause neurodevelopmental disorders. Expand this section to read more.
+Are you interested in exploring neurodegenerative disorders? These are disorders that that occur when brain structures and systems experience degradation and may be the result of similar biological processes that cause neurodevelopmental disorders. Expand this section to read more.
 
 ::: callout-tip collapse="true"
 # Brain Disorders: Neurodegenerative Disorders
