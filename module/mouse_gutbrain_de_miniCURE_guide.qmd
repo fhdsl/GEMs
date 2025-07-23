@@ -10,6 +10,8 @@ format:
 ottrpal::set_knitr_image_path()
 ```
 
+##Introduction
+
 This module provides data for an independent project exploring differential expression in RNA-seq data.
 
 This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment.
@@ -22,7 +24,7 @@ The basic steps of your analysis are:
 
 3.  Explore differential gene expression in the control vs experimental group.
 
-## The original study
+### The original study
 
 The original study, *Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice*, was published in 2019 [@sharon2019]. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the *gut-brain axis.*
 
@@ -35,7 +37,7 @@ It is important to note that researchers are **not** suggesting that ASD is enti
 You can read the original research paper [here](https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1).
 
 
-## The Gut-Brain Axis 
+### The Gut-Brain Axis 
 
 The _gut-brain axis_ is the term used for the proposed connection between the gut microbiome and the brain. In recent years, studies have identified links between neurological symptoms and the presence of intestinal inflammation. There are around 100 million neurons in the human gut, and around 70% of the serotonin (an important neurotransmitter) in the human body is made in the gut. Communication between the microbes in the gut and the brain happens through multiple routes, including immune signaling (signals sent to the brain by immune cells), stimulation of the vagus nerve, and activation of the enteric nervous system (a system of neurons in the intestinal that are often called the "second brain") through formation of microbial-derived metabolites like tryptophan, short-chain fatty acids, or secondary bile acids.
 
@@ -66,7 +68,7 @@ Remodeling of the nervous system via the gut microbiome is suspected to be respo
 
 The samples in this dataset are from mice that _do not_ carry genes associated with either neurodevelopmental or neurodegenerative diseases. Instead, any symptoms or changes in the brain they show are the result of microbes introduced to their gut via fecal transplant. **This dataset gives you the opportunity to study possible effects of the gut-brain axis firsthand.**
 
-## Deciding on your research question
+### Deciding on your research question
 
 The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Additionally, there are two different types of mice. Some of the mice are an Autism Spectrum Disorder-type (see below for details), while others are control-type.
 
