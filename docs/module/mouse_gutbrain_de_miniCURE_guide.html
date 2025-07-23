@@ -177,10 +177,8 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <ul>
   <li><a href="#the-original-study" id="toc-the-original-study" class="nav-link active" data-scroll-target="#the-original-study">The original study</a></li>
   <li><a href="#the-gut-brain-axis" id="toc-the-gut-brain-axis" class="nav-link" data-scroll-target="#the-gut-brain-axis">The Gut-Brain Axis</a></li>
-  <li><a href="#deciding-on-your-research-question" id="toc-deciding-on-your-research-question" class="nav-link" data-scroll-target="#deciding-on-your-research-question">Deciding on your research question</a>
-  <ul class="collapse">
+  <li><a href="#deciding-on-your-research-question" id="toc-deciding-on-your-research-question" class="nav-link" data-scroll-target="#deciding-on-your-research-question">Deciding on your research question</a></li>
   <li><a href="#refining-your-research-question" id="toc-refining-your-research-question" class="nav-link" data-scroll-target="#refining-your-research-question">Refining your research question</a></li>
-  </ul></li>
   <li><a href="#identifying-genes-of-interest-with-the-mouse-genome-informatics-database" id="toc-identifying-genes-of-interest-with-the-mouse-genome-informatics-database" class="nav-link" data-scroll-target="#identifying-genes-of-interest-with-the-mouse-genome-informatics-database">Identifying genes of interest with the Mouse Genome Informatics database</a>
   <ul class="collapse">
   <li><a href="#the-mouse-as-a-model-organism" id="toc-the-mouse-as-a-model-organism" class="nav-link" data-scroll-target="#the-mouse-as-a-model-organism">The mouse as a model organism</a></li>
@@ -233,6 +231,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </header>
 
 
+<p>##Introduction</p>
 <p>This module provides data for an independent project exploring differential expression in RNA-seq data.</p>
 <p>This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment.</p>
 <p>The basic steps of your analysis are:</p>
@@ -241,8 +240,8 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <li><p>Characterize the gene expression of your genes of interest in the dataset.</p></li>
 <li><p>Explore differential gene expression in the control vs experimental group.</p></li>
 </ol>
-<section id="the-original-study" class="level2">
-<h2 class="anchored" data-anchor-id="the-original-study">The original study</h2>
+<section id="the-original-study" class="level3">
+<h3 class="anchored" data-anchor-id="the-original-study">The original study</h3>
 <p>The original study, <em>Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice</em>, was published in 2019 <span class="citation" data-cites="sharon2019"><a href="#ref-sharon2019" role="doc-biblioref">[1]</a></span>. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the <em>gut-brain axis.</em></p>
 <p>In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with ASD, while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. They discovered that colonization with gut microbiota was enough to induce ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -260,8 +259,8 @@ Note
 </div>
 <p>You can read the original research paper <a href="https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1">here</a>.</p>
 </section>
-<section id="the-gut-brain-axis" class="level2">
-<h2 class="anchored" data-anchor-id="the-gut-brain-axis">The Gut-Brain Axis</h2>
+<section id="the-gut-brain-axis" class="level3">
+<h3 class="anchored" data-anchor-id="the-gut-brain-axis">The Gut-Brain Axis</h3>
 <p>The <em>gut-brain axis</em> is the term used for the proposed connection between the gut microbiome and the brain. In recent years, studies have identified links between neurological symptoms and the presence of intestinal inflammation. There are around 100 million neurons in the human gut, and around 70% of the serotonin (an important neurotransmitter) in the human body is made in the gut. Communication between the microbes in the gut and the brain happens through multiple routes, including immune signaling (signals sent to the brain by immune cells), stimulation of the vagus nerve, and activation of the enteric nervous system (a system of neurons in the intestinal that are often called the “second brain”) through formation of microbial-derived metabolites like tryptophan, short-chain fatty acids, or secondary bile acids.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -296,8 +295,8 @@ Note
 <p>Remodeling of the nervous system via the gut microbiome is suspected to be responsible for the severity of some symptoms associated with neurodevelopmental and neurodegenerative disorders. A possible link between the gut microbiome and increased symptom severity is actively being studied for Major Depressive Disorder, Autism Spectrum Disorder, fibromyalgia, migraines, Parkinson’s disease, Alzheimer’s disease, and more.</p>
 <p>The samples in this dataset are from mice that <em>do not</em> carry genes associated with either neurodevelopmental or neurodegenerative diseases. Instead, any symptoms or changes in the brain they show are the result of microbes introduced to their gut via fecal transplant. <strong>This dataset gives you the opportunity to study possible effects of the gut-brain axis firsthand.</strong></p>
 </section>
-<section id="deciding-on-your-research-question" class="level2">
-<h2 class="anchored" data-anchor-id="deciding-on-your-research-question">Deciding on your research question</h2>
+<section id="deciding-on-your-research-question" class="level3">
+<h3 class="anchored" data-anchor-id="deciding-on-your-research-question">Deciding on your research question</h3>
 <p>The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Additionally, there are two different types of mice. Some of the mice are an Autism Spectrum Disorder-type (see below for details), while others are control-type.</p>
 <p>Before you start working with the dataset, you will need to make some decisions about the questions you want to answer.</p>
 <p>Are you interested in exploring gene expression differences between two regions of the mouse brain, without focusing on the gut-brain axis? Expand this section to read more.</p>
@@ -475,6 +474,7 @@ Brain Disorders: Neurodegenerative Disorders
 </div>
 </div>
 </div>
+</section>
 <section id="refining-your-research-question" class="level3">
 <h3 class="anchored" data-anchor-id="refining-your-research-question">Refining your research question</h3>
 <p>Once you’ve picked brain structure, a neurodevelopmental disorder, or a neurodegenerative disorder to focus on, you’ll want to start identifying specific genes for your research project. The following questions could be a good starting point.</p>
@@ -484,7 +484,6 @@ Brain Disorders: Neurodegenerative Disorders
 <li><p>Are you curious about the standard “housekeeping” genes that are broadly expressed across cell types and involved in common biological processes, like DNA replication, metabolism, and cell cycle regulation? These processes are vitally important for proper cellular function, so disruption in them can cause problems for the organism.</p></li>
 </ol>
 <p>Once you’ve picked a disorder or cellular process that interests you, start looking up research papers to find genes! You can use sites like PubMed and Google Scholar to look up studies. Skim through at least 4-5 different papers that contain some type of gene name or a biological process. <strong>DO NOT GET TOO LOST INTO THE PAPERS!</strong> Make sure you skim through them for important information, but be willing to set a paper aside if you’re struggling to find what you need.</p>
-</section>
 </section>
 <section id="identifying-genes-of-interest-with-the-mouse-genome-informatics-database" class="level2">
 <h2 class="anchored" data-anchor-id="identifying-genes-of-interest-with-the-mouse-genome-informatics-database">Identifying genes of interest with the Mouse Genome Informatics database</h2>
