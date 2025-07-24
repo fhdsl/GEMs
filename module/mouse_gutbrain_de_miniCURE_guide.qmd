@@ -10,7 +10,7 @@ format:
 ottrpal::set_knitr_image_path()
 ```
 
-##Introduction
+## Introduction
 
 This module provides data for an independent project exploring differential expression in RNA-seq data.
 
@@ -74,8 +74,7 @@ The data for this activity includes gene expression data from two different brai
 
 Before you start working with the dataset, you will need to make some decisions about the questions you want to answer. 
 
-Are you interested in exploring gene expression differences between two regions of the mouse brain, without focusing on the gut-brain axis? Expand this section to read more.
-
+**Are you interested in exploring gene expression differences between two regions of the mouse brain, without focusing on the gut-brain axis? Expand this section to read more.**
 ::: {.callout-caution collapse="true"}
 # Brain Structure: The Striatum and the Prefrontal Cortex
 
@@ -95,10 +94,7 @@ https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42
 The *prefrontal cortex* is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
 :::
 
-Are you interested in exploring neurodevelopmental disorders? These are disorders that are the result of altered brain development. Although this dataset was created using "ASD-type" mice, many neurological disorders have shared symptoms and probably share a biological basis.
-
-Expand this section to read more.
-
+**Are you interested in exploring neurodevelopmental disorders?** These are disorders that are the result of altered brain development. Although this dataset was created using "ASD-type" mice, many neurological disorders have shared symptoms and probably share a biological basis. **Expand this section to read more.**
 ::: {.callout-caution collapse="true"}
 # Brain Disorders: Neurodevelopmental Disorders
 
@@ -139,8 +135,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 If you'd like to read more about the biology of neurodevelopmental disorders, (Bertollo et al. 2025)[https://www.mdpi.com/2076-3425/15/3/307] is a great starting point!
 :::
 
-Are you interested in exploring neurodegenerative disorders? These are disorders that that occur when brain structures and systems experience degradation and may be the result of similar biological processes that cause neurodevelopmental disorders. Expand this section to read more.
-
+**Are you interested in exploring neurodegenerative disorders?** These are disorders that that occur when brain structures and systems experience degradation and may be the result of similar biological processes that cause neurodevelopmental disorders. **Expand this section to read more.**
 ::: {.callout-caution collapse="true"}
 # Brain Disorders: Neurodegenerative Disorders
 
@@ -170,7 +165,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3707230d9af_0_25#slide=id.g3707230d9af_0_25")
 ```
 
-**Amyotrophic Lateral Sclerosis (ALS*)**, also known as Lou Gehrig's Disease, is caused by progressive degeneration of motor neurons in the brain and spinal cord. The exact mechanisms that trigger this degeneration are not known, but research has suggested that oxidative stress and mitochondrial dysfunction might contribute to the development of ALS. Additionally, the genes C9orf72, SOD1, TARDBP, and FUS have been identified as risk factors for developing an inherited form of the disease.
+**Amyotrophic Lateral Sclerosis (ALS)**, also known as Lou Gehrig's Disease, is caused by progressive degeneration of motor neurons in the brain and spinal cord. The exact mechanisms that trigger this degeneration are not known, but research has suggested that oxidative stress and mitochondrial dysfunction might contribute to the development of ALS. Additionally, the genes C9orf72, SOD1, TARDBP, and FUS have been identified as risk factors for developing an inherited form of the disease.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3707230d9af_0_29#slide=id.g3707230d9af_0_29")
@@ -229,7 +224,10 @@ The MGI allows you to look up information about genes you're interested in but d
 Make sure you are recording the name and gene ID for the mouse! Gene names are often similar between mice and humans, but the gene IDs will be very different. If you don't use the correct gene ID when exploring this dataset, you won't get very far.
 :::
 
-### Looking up details on a mouse gene when you have the Ensembl gene ID
+There are multiple ways to use MGI to find information about your mouse genes. Expand each section to learn more.
+
+::: {.callout-caution collapse="true"}
+# Looking up details on a mouse gene when you have the Ensembl gene ID
 
 Open the [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) website. To look up information on a particular gene of interest, choose the "Genes" button.
 
@@ -282,8 +280,10 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
+:::
 
-### Looking up genes based on human gene name
+::: {.callout-caution collapse="true"}
+# Looking up genes based on human gene name
 
 You may have identified a human gene that you're interested in for your project, so you need to figure out what the mouse ortholog is and (more importantly) what the mouse Ensembl ID is. Luckily, the MGI allows you to search based on the human gene name.
 
@@ -348,8 +348,10 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
+:::
 
-### Looking up genes associated with a human disease
+::: {.callout-caution collapse="true"}
+# Looking up genes associated with a human disease
 
 You may not know a particular gene that you want to explore in this dataset, but maybe you do have a human disease or condition that you're interested in. You can look up mouse genes that might be associated with this disease in the MGI as your starting point. 
 
@@ -406,7 +408,7 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_59#slide=id.g33d632640e3_0_59")
 ```
-
+:::
 
 Now that you have your genes of interest, you're ready to start working with the dataset. 
 
