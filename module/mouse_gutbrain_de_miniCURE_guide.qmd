@@ -460,7 +460,7 @@ Remember, R code always follows the same basic format! In this case, you are tel
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36f913be5dc_0_0#slide=id.g36f913be5dc_0_0")
 ```
 
-This dataset has 140 columns. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs) and the last column ("total_counts", which is the sum across all mice). 
+When we load this dataset, we see it has 140 columns and 55,421 rows. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs) and the last column ("total_counts", which is the sum across all mice). 
 
 ### Exploring and summarizing count data
 
@@ -623,7 +623,7 @@ heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c
 
 Finally, here's all the code you just ran to create your heatmap in one place, in case you want to run it again.
 
-```{r}
+```{r, eval=FALSE}
 #define your geneset and make a vector
 gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", "ENSMUSG00000020886", "ENSMUSG00000025020", "ENSMUSG00000025958")
 
@@ -648,11 +648,15 @@ gutbrain_motor_controls <- as.matrix(gutbrain_motor_controls)
 heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
 ```
 
-## Exploring the differential expression data
+```{r, fig.align='center', echo = FALSE, fig.alt= "Breakdown of the parts of the code used to make a heatmap with custom colors and title.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36f913be5dc_0_6#slide=id.g36f913be5dc_0_6")
+```
+
+# Exploring the differential expression data
 
 Now let's look a differential expression dataset, which compares gene expression counts between two groups. This dataset gives us an idea how the change in a gene's expression might be associated with a disorder or a cell type. This is particularly useful for beginning to map the genetic drivers of a particular phenotype.
 
-### Package Install and Load
+## Package Install and Load
 
 Before you start, make sure to load the `tidyverse` package! You should still have it installed from last time.
 
@@ -661,7 +665,7 @@ library(tidyverse)
 ```
 
 
-### Loading the differential expression data
+## Loading the differential expression data
 
 Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. We will do this using `read_csv`. Copy and paste this command into your console:
 
@@ -699,7 +703,7 @@ Are you mostly interested in how gene expression differs between the two brain r
 Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental genes? These questions and others can be explored using the **ASD-type mice and control-type mice** comparisons.
 :::
 
-### Ranking the genes by log2FoldChange
+## Ranking the genes by log2FoldChange
 
 The `log2FoldChange` value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. Genes with no difference in expression between groups have `log2FoldChange` values close to zero. Negative log2FoldChange values means a **decreased expression** (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have **increased expression** in the experimental group versus the control group.
 
@@ -725,7 +729,7 @@ If there is a two fold **increase** (fold change = 2, `log2FoldChange` = 1) betw
 
 If there is a two fold **decrease** (fold change = 0.5, `log2FoldChange` = -1) between groups A and B, then the expression in group A is half as big as the expression in group B (or B is twice as big as A).
 
-### Arranging dataset based on padj
+## Arranging dataset based on padj
 
 Maybe you also want to arrange the genes by whether the estimated differential expression is significant. Instead of `log2FoldChange`, you will want to look at `padj`. You can use the `arrange` command to sort the results to put the smallest padj values first.
 
@@ -735,7 +739,7 @@ asd_vs_c_sorted <- arrange(asd_vs_c, padj)
 head(asd_vs_c_sorted)
 ```
 
-### Compare differential gene expression of a single across groups
+## Compare differential gene expression of a single across groups
 
 It might be interesting to look at the expression of a gene across our two brain regions. To do this, we will first load the region-specific datasets.
 
@@ -768,7 +772,7 @@ reg3a_striatum
 ```
 
 
-### Creating a volcano plot to visualize differential expression of multiple genes
+## Creating a volcano plot to visualize differential expression of multiple genes
 
 A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
 
@@ -923,7 +927,7 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
   ggtitle("Differential Expression in Mouse Prefrontal Cortex")
 ```
 
-### Running a gene set analysis
+## Running a gene set analysis
 
 You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)
 
