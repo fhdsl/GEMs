@@ -186,11 +186,11 @@ Once you've picked brain structure, a neurodevelopmental disorder, or a neurodeg
 
 Once you've picked a disorder or cellular process that interests you, start looking up research papers to find genes! You can use sites like PubMed and Google Scholar to look up studies. Skim through at least 4-5 different papers that contain some type of gene name or a biological process. **DO NOT GET TOO LOST INTO THE PAPERS!** Make sure you skim through them for important information, but be willing to set a paper aside if you're struggling to find what you need.
 
-## Identifying genes of interest with the Mouse Genome Informatics database
+# Identifying genes of interest with the Mouse Genome Informatics database
 
 The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We'll reproduce some of it below.
 
-### The mouse as a model organism
+## The mouse as a model organism
 
 The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models [@hu2024; @FBR2025].
 
@@ -202,7 +202,7 @@ So what makes mice such good model organisms for biomedical research? Well, firs
 
 You can find additional information about how the mouse is used in research [here!](https://www.google.com/url?q=https://www.informatics.jax.org/mgihome/other/homepage_IntroMouse.shtml)
 
-### Mouse gene IDs
+## Mouse gene IDs
 
 In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:
 
@@ -216,13 +216,13 @@ In this dataset, genes are identified using their Ensembl Gene ID code. Every ge
 
 **00000000001** is the numerical code associated with the gene.
 
-::: callout-tip
-# Picking your genes
+
+## Picking your genes
 
 The MGI allows you to look up information about genes you're interested in but don't know much about. This is particularly helpful if you are interested in genes that were identified in other research organisms or in previous studies. You could also start by looking up a human disease and associated human risk genes, then identify the homologous mouse genes.
 
 Make sure you are recording the name and gene ID for the mouse! Gene names are often similar between mice and humans, but the gene IDs will be very different. If you don't use the correct gene ID when exploring this dataset, you won't get very far.
-:::
+
 
 There are multiple ways to use MGI to find information about your mouse genes. Expand each section to learn more.
 
