@@ -224,10 +224,9 @@ The MGI allows you to look up information about genes you're interested in but d
 Make sure you are recording the name and gene ID for the mouse! Gene names are often similar between mice and humans, but the gene IDs will be very different. If you don't use the correct gene ID when exploring this dataset, you won't get very far.
 
 
-There are multiple ways to use MGI to find information about your mouse genes. Expand each section to learn more.
+There are multiple ways to use MGI to find information about your mouse genes.
 
-::: {.callout-caution collapse="true"}
-# Looking up details on a mouse gene when you have the Ensembl gene ID
+### Looking up details on a mouse gene when you have the Ensembl gene ID
 
 Open the [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) website. To look up information on a particular gene of interest, choose the "Genes" button.
 
@@ -280,10 +279,8 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
-:::
 
-::: {.callout-caution collapse="true"}
-# Looking up genes based on human gene name
+### Looking up genes based on human gene name
 
 You may have identified a human gene that you're interested in for your project, so you need to figure out what the mouse ortholog is and (more importantly) what the mouse Ensembl ID is. Luckily, the MGI allows you to search based on the human gene name.
 
@@ -348,10 +345,8 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
-:::
 
-::: {.callout-caution collapse="true"}
-# Looking up genes associated with a human disease
+### Looking up genes associated with a human disease
 
 You may not know a particular gene that you want to explore in this dataset, but maybe you do have a human disease or condition that you're interested in. You can look up mouse genes that might be associated with this disease in the MGI as your starting point. 
 
@@ -408,7 +403,6 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_59#slide=id.g33d632640e3_0_59")
 ```
-:::
 
 Now that you have your genes of interest, you're ready to start working with the dataset. 
 
