@@ -413,13 +413,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 Now that you have your genes of interest, you're ready to start working with the dataset. 
 
 
-## Exploring the gene expression count data
+# Exploring the gene expression count data
 
 Let's start by looking at a dataset that includes information on how many times each gene was expressed in a sample. This is the gene expression count dataset.
 
 This dataset gives us an idea of the scale of gene expression  - for example, which genes are expressed the most? Which genes are expressed the least? This is particularly useful when you want to know if a gene is usually turned on or off in a sample.
 
-### Package Install and Load
+## Package Install and Load
 
 We will need to install the `tidyverse` package for this activity.
 
@@ -446,12 +446,18 @@ We use the `library` command to load and attach packages to the R environment. T
 The "tidyverse" package that you loaded is useful for loading, wrangling, and exploring data.
 :::
 
-### Loading the gene expression count data
+## Loading the gene expression count data
 
 You can load this dataset into R using the following code:
 
 ```{r}
 gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_counts.csv")
+```
+
+Remember, R code always follows the same basic format! In this case, you are telling R to open the csv file that exists at a URL and save it as an object called "gutbrain_genes".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This R command tells R to open the csv file that exists at a URL and save it as an object called gutbrain_genes.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36f913be5dc_0_0#slide=id.g36f913be5dc_0_0")
 ```
 
 This dataset has 140 columns. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs) and the last column ("total_counts", which is the sum across all mice). 
