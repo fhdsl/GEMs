@@ -92,6 +92,7 @@ glutamate
 glycine
 glyphicons
 GutBrain
+gutbrain
 guttman
 Guttman
 GWAS

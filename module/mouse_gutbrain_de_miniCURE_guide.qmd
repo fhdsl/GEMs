@@ -10,7 +10,7 @@ format:
 ottrpal::set_knitr_image_path()
 ```
 
-##Introduction
+## Introduction
 
 This module provides data for an independent project exploring differential expression in RNA-seq data.
 
@@ -74,8 +74,7 @@ The data for this activity includes gene expression data from two different brai
 
 Before you start working with the dataset, you will need to make some decisions about the questions you want to answer. 
 
-Are you interested in exploring gene expression differences between two regions of the mouse brain, without focusing on the gut-brain axis? Expand this section to read more.
-
+**Are you interested in exploring gene expression differences between two regions of the mouse brain, without focusing on the gut-brain axis? Expand this section to read more.**
 ::: {.callout-caution collapse="true"}
 # Brain Structure: The Striatum and the Prefrontal Cortex
 
@@ -95,10 +94,7 @@ https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42
 The *prefrontal cortex* is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
 :::
 
-Are you interested in exploring neurodevelopmental disorders? These are disorders that are the result of altered brain development. Although this dataset was created using "ASD-type" mice, many neurological disorders have shared symptoms and probably share a biological basis.
-
-Expand this section to read more.
-
+**Are you interested in exploring neurodevelopmental disorders?** These are disorders that are the result of altered brain development. Although this dataset was created using "ASD-type" mice, many neurological disorders have shared symptoms and probably share a biological basis. **Expand this section to read more.**
 ::: {.callout-caution collapse="true"}
 # Brain Disorders: Neurodevelopmental Disorders
 
@@ -139,8 +135,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 If you'd like to read more about the biology of neurodevelopmental disorders, (Bertollo et al. 2025)[https://www.mdpi.com/2076-3425/15/3/307] is a great starting point!
 :::
 
-Are you interested in exploring neurodegenerative disorders? These are disorders that that occur when brain structures and systems experience degradation and may be the result of similar biological processes that cause neurodevelopmental disorders. Expand this section to read more.
-
+**Are you interested in exploring neurodegenerative disorders?** These are disorders that that occur when brain structures and systems experience degradation and may be the result of similar biological processes that cause neurodevelopmental disorders. **Expand this section to read more.**
 ::: {.callout-caution collapse="true"}
 # Brain Disorders: Neurodegenerative Disorders
 
@@ -170,7 +165,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3707230d9af_0_25#slide=id.g3707230d9af_0_25")
 ```
 
-**Amyotrophic Lateral Sclerosis (ALS*)**, also known as Lou Gehrig's Disease, is caused by progressive degeneration of motor neurons in the brain and spinal cord. The exact mechanisms that trigger this degeneration are not known, but research has suggested that oxidative stress and mitochondrial dysfunction might contribute to the development of ALS. Additionally, the genes C9orf72, SOD1, TARDBP, and FUS have been identified as risk factors for developing an inherited form of the disease.
+**Amyotrophic Lateral Sclerosis (ALS)**, also known as Lou Gehrig's Disease, is caused by progressive degeneration of motor neurons in the brain and spinal cord. The exact mechanisms that trigger this degeneration are not known, but research has suggested that oxidative stress and mitochondrial dysfunction might contribute to the development of ALS. Additionally, the genes C9orf72, SOD1, TARDBP, and FUS have been identified as risk factors for developing an inherited form of the disease.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3707230d9af_0_29#slide=id.g3707230d9af_0_29")
@@ -191,11 +186,11 @@ Once you've picked brain structure, a neurodevelopmental disorder, or a neurodeg
 
 Once you've picked a disorder or cellular process that interests you, start looking up research papers to find genes! You can use sites like PubMed and Google Scholar to look up studies. Skim through at least 4-5 different papers that contain some type of gene name or a biological process. **DO NOT GET TOO LOST INTO THE PAPERS!** Make sure you skim through them for important information, but be willing to set a paper aside if you're struggling to find what you need.
 
-## Identifying genes of interest with the Mouse Genome Informatics database
+# Identifying genes of interest with the Mouse Genome Informatics database
 
 The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We'll reproduce some of it below.
 
-### The mouse as a model organism
+## The mouse as a model organism
 
 The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models [@hu2024; @FBR2025].
 
@@ -207,7 +202,7 @@ So what makes mice such good model organisms for biomedical research? Well, firs
 
 You can find additional information about how the mouse is used in research [here!](https://www.google.com/url?q=https://www.informatics.jax.org/mgihome/other/homepage_IntroMouse.shtml)
 
-### Mouse gene IDs
+## Mouse gene IDs
 
 In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:
 
@@ -221,15 +216,18 @@ In this dataset, genes are identified using their Ensembl Gene ID code. Every ge
 
 **00000000001** is the numerical code associated with the gene.
 
-::: callout-tip
-# Picking your genes
+
+## Picking your genes
 
 The MGI allows you to look up information about genes you're interested in but don't know much about. This is particularly helpful if you are interested in genes that were identified in other research organisms or in previous studies. You could also start by looking up a human disease and associated human risk genes, then identify the homologous mouse genes.
 
 Make sure you are recording the name and gene ID for the mouse! Gene names are often similar between mice and humans, but the gene IDs will be very different. If you don't use the correct gene ID when exploring this dataset, you won't get very far.
-:::
 
-### Looking up details on a mouse gene when you have the Ensembl gene ID
+
+There are multiple ways to use MGI to find information about your mouse genes. Expand each section to learn more.
+
+::: {.callout-caution collapse="true"}
+# Looking up details on a mouse gene when you have the Ensembl gene ID
 
 Open the [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) website. To look up information on a particular gene of interest, choose the "Genes" button.
 
@@ -282,8 +280,10 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
+:::
 
-### Looking up genes based on human gene name
+::: {.callout-caution collapse="true"}
+# Looking up genes based on human gene name
 
 You may have identified a human gene that you're interested in for your project, so you need to figure out what the mouse ortholog is and (more importantly) what the mouse Ensembl ID is. Luckily, the MGI allows you to search based on the human gene name.
 
@@ -348,8 +348,10 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
+:::
 
-### Looking up genes associated with a human disease
+::: {.callout-caution collapse="true"}
+# Looking up genes associated with a human disease
 
 You may not know a particular gene that you want to explore in this dataset, but maybe you do have a human disease or condition that you're interested in. You can look up mouse genes that might be associated with this disease in the MGI as your starting point. 
 
@@ -406,18 +408,18 @@ Directly underneath the "ontology" section is information about when the gene is
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_59#slide=id.g33d632640e3_0_59")
 ```
-
+:::
 
 Now that you have your genes of interest, you're ready to start working with the dataset. 
 
 
-## Exploring the gene expression count data
+# Exploring the gene expression count data
 
 Let's start by looking at a dataset that includes information on how many times each gene was expressed in a sample. This is the gene expression count dataset.
 
 This dataset gives us an idea of the scale of gene expression  - for example, which genes are expressed the most? Which genes are expressed the least? This is particularly useful when you want to know if a gene is usually turned on or off in a sample.
 
-### Package Install and Load
+## Package Install and Load
 
 We will need to install the `tidyverse` package for this activity.
 
@@ -444,7 +446,7 @@ We use the `library` command to load and attach packages to the R environment. T
 The "tidyverse" package that you loaded is useful for loading, wrangling, and exploring data.
 :::
 
-### Loading the gene expression count data
+## Loading the gene expression count data
 
 You can load this dataset into R using the following code:
 
@@ -452,7 +454,13 @@ You can load this dataset into R using the following code:
 gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_counts.csv")
 ```
 
-This dataset has 140 columns. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs) and the last column ("total_counts", which is the sum across all mice). 
+Remember, R code always follows the same basic format! In this case, you are telling R to open the csv file that exists at a URL and save it as an object called "gutbrain_genes".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This R command tells R to open the csv file that exists at a URL and save it as an object called gutbrain_genes.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36f913be5dc_0_0#slide=id.g36f913be5dc_0_0")
+```
+
+When we load this dataset, we see it has 140 columns and 55,421 rows. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs) and the last column ("total_counts", which is the sum across all mice). 
 
 ### Exploring and summarizing count data
 
@@ -615,7 +623,7 @@ heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c
 
 Finally, here's all the code you just ran to create your heatmap in one place, in case you want to run it again.
 
-```{r}
+```{r, eval=FALSE}
 #define your geneset and make a vector
 gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", "ENSMUSG00000020886", "ENSMUSG00000025020", "ENSMUSG00000025958")
 
@@ -640,11 +648,15 @@ gutbrain_motor_controls <- as.matrix(gutbrain_motor_controls)
 heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
 ```
 
-## Exploring the differential expression data
+```{r, fig.align='center', echo = FALSE, fig.alt= "Breakdown of the parts of the code used to make a heatmap with custom colors and title.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36f913be5dc_0_6#slide=id.g36f913be5dc_0_6")
+```
+
+# Exploring the differential expression data
 
 Now let's look a differential expression dataset, which compares gene expression counts between two groups. This dataset gives us an idea how the change in a gene's expression might be associated with a disorder or a cell type. This is particularly useful for beginning to map the genetic drivers of a particular phenotype.
 
-### Package Install and Load
+## Package Install and Load
 
 Before you start, make sure to load the `tidyverse` package! You should still have it installed from last time.
 
@@ -653,7 +665,7 @@ library(tidyverse)
 ```
 
 
-### Loading the differential expression data
+## Loading the differential expression data
 
 Let's say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it `asd_vs_c`. We will do this using `read_csv`. Copy and paste this command into your console:
 
@@ -691,7 +703,7 @@ Are you mostly interested in how gene expression differs between the two brain r
 Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental genes? These questions and others can be explored using the **ASD-type mice and control-type mice** comparisons.
 :::
 
-### Ranking the genes by log2FoldChange
+## Ranking the genes by log2FoldChange
 
 The `log2FoldChange` value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. Genes with no difference in expression between groups have `log2FoldChange` values close to zero. Negative log2FoldChange values means a **decreased expression** (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have **increased expression** in the experimental group versus the control group.
 
@@ -717,7 +729,7 @@ If there is a two fold **increase** (fold change = 2, `log2FoldChange` = 1) betw
 
 If there is a two fold **decrease** (fold change = 0.5, `log2FoldChange` = -1) between groups A and B, then the expression in group A is half as big as the expression in group B (or B is twice as big as A).
 
-### Arranging dataset based on padj
+## Arranging dataset based on padj
 
 Maybe you also want to arrange the genes by whether the estimated differential expression is significant. Instead of `log2FoldChange`, you will want to look at `padj`. You can use the `arrange` command to sort the results to put the smallest padj values first.
 
@@ -727,7 +739,7 @@ asd_vs_c_sorted <- arrange(asd_vs_c, padj)
 head(asd_vs_c_sorted)
 ```
 
-### Compare differential gene expression of a single across groups
+## Compare differential gene expression of a single across groups
 
 It might be interesting to look at the expression of a gene across our two brain regions. To do this, we will first load the region-specific datasets.
 
@@ -760,7 +772,7 @@ reg3a_striatum
 ```
 
 
-### Creating a volcano plot to visualize differential expression of multiple genes
+## Creating a volcano plot to visualize differential expression of multiple genes
 
 A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
 
@@ -915,7 +927,7 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
   ggtitle("Differential Expression in Mouse Prefrontal Cortex")
 ```
 
-### Running a gene set analysis
+## Running a gene set analysis
 
 You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)
 
