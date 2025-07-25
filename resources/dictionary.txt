@@ -66,6 +66,7 @@ endopeptidase
 Ensembl
 ENSMUSG
 et
+excitotoxicity
 favicon
 FBgn
 FC
@@ -135,6 +136,7 @@ microglia
 microtubules
 midgut
 miniCURE
+misfolded
 multicellular
 musculus
 myelin
@@ -172,6 +174,7 @@ orthologs
 orthologous
 OTTR
 ottrproject
+overstimulation
 padj
 Pcdh
 ped
@@ -201,6 +204,7 @@ repo
 rerio
 reticulata
 Rmd
+RNAs
 rnaseq
 ROS
 RStudio
