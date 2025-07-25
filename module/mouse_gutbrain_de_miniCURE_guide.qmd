@@ -543,32 +543,7 @@ gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
 
 ```
  
-we're not quite ready to make our heatmap yet. Because we are interested in the gene expression of these six genes in the striatum compared to the prefrontal cortex, we want to control for any possible differences caused by the sample coming from an ASD-type mouse vs a control-type mouse. So we also want to select a subset of the samples so that we're only using those samples from control-type mice.
-
-The metadata about the samples (basically, a dataset that has information on whether the sample is from an ASD-type mouse or a control-type mouse, as well as whether it is a striatum sample or a prefrontal cortex sample) can be found at the link <https://genomicseducation.org/data/mouse_gutbrain_metadata.csv>
-
-We can load the data into R.
-
-```{r}
-gutbrain_metadata <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_metadata.csv")
-
-```
-Since we want to make sure we're only looking at samples from control-type mice, we will use `filter`  to create a vector from `gutbrain_metadata`. In this case, we will filter based on the "mouse_status" column. At the same time, we're going to order our samples so that all the prefrontal cortex samples are listed first. (This will be helpful for a later step.) We can do this using the `arrange` function and telling R to arrange based on the "tissue" column.
-
-```{r}
-gutbrain_controls <- filter(gutbrain_metadata, mouse_status == "Control")
-
-gutbrain_controls <- arrange(gutbrain_controls, tissue)
-
-```
-
-Excellent. We now have a dataset that contains a subset in the order we want. We next use the "sample_id" column to subset `gutbrain_motor` (our dataset that has gene expression counts for the motor neuron genes). We will use a combination of the `select` function and `all_of` to tell R to keep only those columns that belong to samples found in `gutbrain_controls$sample_id`, as well the "GeneID" column. 
-
-```{r}
-gutbrain_motor_controls <- select(gutbrain_motor, GeneID, all_of(gutbrain_controls$sample_id))
-
-head(gutbrain_motor_controls)
-```
+TODO: ADD LANGUAGE ABOUT SPECIFIC DATASETS
 
 Now we have our data subsetted the way we want, but we aren't quite ready for the heatmap yet. In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in "tibble" format, but we want it in a numerical "matrix" format. We can't switch directly from "tibble" to "matrix" (because the GeneID column is character data, not numerical data). Instead, let's first convert from "tibble" to a format called "dataframe".
 
