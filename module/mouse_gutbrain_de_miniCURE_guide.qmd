@@ -574,7 +574,7 @@ gutbrain_motor <- as.data.frame(gutbrain_motor)
 
 ```
 
-To our eyes, not much has changed in the format, but it's  very different to R. Now we're going to tell R to name the rows based on the "GeneID" column, and then delete the current "GeneID" column. We are also going to delete the "total_counts" column we created earlier.
+To our eyes, not much has changed in the format, but it's  very different to R. Now we're going to tell R to name the rows based on the "GeneID" column, and then delete the current "GeneID" column. We are also going to delete two columns we created earlier, "total_counts" and "total_counts_trans".
 
 ```{r}
 rownames(gutbrain_motor) <- gutbrain_motor$GeneID
@@ -582,6 +582,8 @@ rownames(gutbrain_motor) <- gutbrain_motor$GeneID
 gutbrain_motor$GeneID <- NULL
 
 gutbrain_motor$total_counts <- NULL
+
+gutbrain_motor$total_counts_trans <- NULL
 ```
 
 Great! Now we can change the format of `gutbrain_motor_controls` dataset to "matrix" format in order to make our heatmap using the `heatmap` function. 
