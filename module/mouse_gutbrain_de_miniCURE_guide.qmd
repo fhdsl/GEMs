@@ -561,26 +561,26 @@ gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
 Now we have our data subsetted the way we want, but we aren't quite ready for the heatmap yet. In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in "tibble" format, but we want it in a numerical "matrix" format. We can't switch directly from "tibble" to "matrix" (because the GeneID column is character data, not numerical data). Instead, let's first convert from "tibble" to a format called "dataframe".
 
 ```{r}
-gutbrain_motor_controls <- as.data.frame(gutbrain_motor_controls)
+gutbrain_motor <- as.data.frame(gutbrain_motor)
 
 ```
 
 To our eyes, not much has changed in the format, but it's  very different to R. Now we're going to tell R to name the rows based on the "GeneID" column, and then delete the current "GeneID" column.
 
 ```{r}
-rownames(gutbrain_motor_controls) <- gutbrain_motor_controls$GeneID
+rownames(gutbrain_motor) <- gutbrain_motor$GeneID
 
-gutbrain_motor_controls$GeneID <- NULL
+gutbrain_motor$GeneID <- NULL
 
-head(gutbrain_motor_controls)
+head(gutbrain_motor)
 ```
 
 Great! Now we can change the format of `gutbrain_motor_controls` dataset to "matrix" format in order to make our heatmap using the `heatmap` function. 
 
 ```{r}
-gutbrain_motor_controls <- as.matrix(gutbrain_motor_controls)
+gutbrain_motor <- as.matrix(gutbrain_motor)
 
-heatmap(gutbrain_motor_controls)
+heatmap(gutbrain_motor)
 ```
 
 Congratulations, you have just created a heatmap! The map itself is a series of stacked boxes. Each square within the heatmap represents the gene count for a particular gene in a particular sample. By default squares with the high gene counts are colored dark red. Squares with the lowest gene counts are colored pale yellow. 
@@ -606,7 +606,7 @@ But if you ever want to verify the details for a particular sample, you can chec
 :::
 
 ```{r}
-heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA)
+heatmap(gutbrain_motor,  Colv = NA, Rowv = NA)
 ```
 
 Perfect! Now we can easily see that four of our six genes seem to be expressed in lower levels by the samples on the right side of the heatmap (the striatum samples), while one gene is expressed in higher levels by the striatum. This is definitely intriguing!
@@ -618,7 +618,7 @@ Finally, we can customize the heatmap by changing the color scheme and adding a 
 You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/). **The general convention in biology is that the lightest colors on a heatmap indicate the lowest values.**
 
 ```{r}
-heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
+heatmap(gutbrain_motor,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
 ```
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Breakdown of the parts of the code used to make a heatmap with custom colors and title.", out.width = '100%'}
@@ -634,22 +634,14 @@ gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", 
 #create new dataset that only include expression data for your geneset
 gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
 
-#load sample metadata
-gutbrain_metadata <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_metadata.csv")
-
-#filter out non-controls and order columns by tissue type
-gutbrain_controls <- filter(gutbrain_metadata, mouse_status == "Control")
-gutbrain_controls <- arrange(gutbrain_controls, tissue)
-gutbrain_motor_controls <- select(gutbrain_motor, GeneID, all_of(gutbrain_controls$sample_id))
-
 #change format of dataset from "tibble" to "matrix"
-gutbrain_motor_controls <- as.data.frame(gutbrain_motor_controls)
-rownames(gutbrain_motor_controls) <- gutbrain_motor_controls$GeneID
-gutbrain_motor_controls$GeneID <- NULL
-gutbrain_motor_controls <- as.matrix(gutbrain_motor_controls)
+gutbrain_motor <- as.data.frame(gutbrain_motor)
+rownames(gutbrain_motor) <- gutbrain_motor$GeneID
+gutbrain_motor$GeneID <- NULL
+gutbrain_motor <- as.matrix(gutbrain_motor)
 
 #create heatmap with custom colors and title
-heatmap(gutbrain_motor_controls,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
+heatmap(gutbrain_motor,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
 ```
 
 
