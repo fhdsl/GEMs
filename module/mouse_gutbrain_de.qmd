@@ -39,6 +39,11 @@ You can find out more about the RNA-seq miniCURE and other C-MOOR activities at 
  
 -   Data hosting:
 
+    -   [Gene expression count data for all control-type mice](https://genomicseducation.org/data/mouse_gutbrain_de_counts_controls.csv)
+    -   [Gene expression count data for all ASD-type mice](https://genomicseducation.org/data/mouse_gutbrain_de_counts_asd.csv)
+    -   [Gene expression count data for all prefrontal cortex samples](https://genomicseducation.org/data/mouse_gutbrain_de_counts_prefrontalcortex.csv)
+    -   [Gene expression count data for all striatum samples](https://genomicseducation.org/data/mouse_gutbrain_de_counts_striatum.csv)
+
     -   [Comparing gene expression between ASD and control mice, both brain regions](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv)
     -   [Comparing gene expression between ASD and control mice, prefrontal cortex only](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv)
      -   [Comparing gene expression between ASD and control mice, striatum only](https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv)
