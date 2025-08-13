@@ -35,7 +35,7 @@ You can find out more about the RNA-seq miniCURE and other C-MOOR activities at 
     -   An internet connection for this activity as written (using Posit Cloud)
     -   A local installation of R or RStudio (with data downloaded and `tidyverse` package installed ahead of time)
 
--   Required R package: `tidyverse`
+-   Required R package: `tidyverse`, `ggrepel`
  
 -   Data hosting:
 
@@ -65,7 +65,7 @@ You can find out more about the RNA-seq miniCURE and other C-MOOR activities at 
 
 -   Google Slides presentation available for borrowing images [here](https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing).
 
--   Answer key coming soon!
+
 
 ## Scientific Topics
 
@@ -76,6 +76,10 @@ The activity uses data from a [published research study](https://www.cell.com/ce
 -   Gut-brain axis: the proposed connection between the gut microbiome and gene expression in the brain
 
 -   Autism Spectrum Disorder: a neurological disorder that affects behavioral and social interactions
+
+-   Neurodevelopmental disorders: disorders that are the result of altered brain development
+
+-   Neurodegenerative disorders: disorders that that occur when brain structures and systems experience degradation
 
 -   Prefrontal cortex: the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions
 
