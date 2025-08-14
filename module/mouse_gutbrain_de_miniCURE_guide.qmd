@@ -230,61 +230,11 @@ Make sure you are recording the name and gene ID for the mouse! Gene names are o
 There are multiple ways to use MGI to find information about your mouse genes. **Expand each box for detailed instructions.**
 
 ::: {.callout-caution collapse="true"}
-# Looking up details on a mouse gene when you have the Ensembl gene ID
-
-Open the [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) website. To look up information on a particular gene of interest, choose the "Genes" button.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "To look up information on a particular gene of interest, choose the “Genes” button.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g357f7ed062e_9_0#slide=id.g357f7ed062e_9_0")
-```
-
-Next, type the gene ID into the "Search" bar up top. We'll look up "ENSMUSG00000079516".
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Type the gene ID into the “Search” bar up top.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3412c9eee7c_0_1#slide=id.g3412c9eee7c_0_1")
-```
-
-After you type the gene ID into the Search bar and hit enter, you should see a new page with basic information about the gene. Click on the gene symbol (in this example, Reg3a) to get more detailed information.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Click on the gene symbol (in this example, Reg3a) to get more detailed information.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_0#slide=id.g346083d4dc0_0_0")
-```
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "You might see genes listed as lncRNA, pseudogenes, or putative genes.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g37384057e97_0_0#slide=id.g37384057e97_0_0")
-```
-
-On the new page that you open, details about the gene are organized into familiar categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more. Most sections are expanded by default, but you'll need to expand the "homology" section yourself.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "To look at gene homology, you’ll need to expand the “homology” section yourself.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_5#slide=id.g346083d4dc0_0_5")
-```
-
-Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "You can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_8#slide=id.g346083d4dc0_0_8")
-```
-
-If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the "gene ontology" section. Clicking on the blue squares takes you to a page with more information about how that particular gene was assigned to a pathway or molecular process.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "If you continue scrolling down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_11#slide=id.g346083d4dc0_0_11")
-```
-
-Directly underneath the "ontology" section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
-```
-:::
-
-::: {.callout-caution collapse="true"}
 # Looking up genes based on human gene name
 
 You may have identified a human gene that you're interested in for your project, so you need to figure out what the mouse ortholog is and (more importantly) what the mouse Ensembl ID is. Luckily, the MGI allows you to search based on the human gene name.
 
-Let's say you're interested in the human gene REG3A, pancreatic secretory protein that may be involved in cell proliferation or differentiation. It also is upregulated as a result of pancreatic inflammation. 
+Let's say you're interested in the human gene REG3A, pancreatic secretory protein that may be involved in cell proliferation or differentiation. We know from research papers that it also is upregulated as a result of pancreatic inflammation. 
 
 Open the [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) website. To look up information on this human gene, type "REG3A" into the "Quick Search" bar and press enter.
 
@@ -454,13 +404,7 @@ You can load this dataset into R using this code.
 gutbrain_genes <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_counts_controls.csv")
 ```
 
-Remember, R code always follows the same basic format! In this case, you are telling R to open the csv file that exists at a URL and save it as an object called "gutbrain_genes".
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "This R command tells R to open the csv file that exists at a URL and save it as an object called gutbrain_genes.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g344f6fbf234_0_28#slide=id.g344f6fbf234_0_28")
-```
-
-When we load this dataset, we see it has 59 columns and 55,421 rows. Each row represents a gene. Each column is an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene IDs). 
+When we load this dataset, we see it has 59 columns and 55,421 rows. Each row should represent a gene, and each column should be the counts for an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene ID). 
 
 Here are the URLs for the other gene expression count datasets for this project: 
 
@@ -470,6 +414,7 @@ _Only prefrontal cortex samples_ (contains both ASD-type and control-type mice; 
 
 _Only striatum samples_ (contains both ASD-type and control-type mice; two mice types, only one brain region): <https://genomicseducation.org/data/mouse_gutbrain_de_counts_striatum.csv>
 
+If you load multiple datasets, **make sure to assign them to different object names**. If you load one dataset and save it as `gutbrain_genes`, loading a second dataset and assigning it to `gutbrain_genes` will overwrite your first dataset. You need to manually change the object name you're saving each dataset.
 
 ### Exploring and summarizing count data
 
@@ -480,11 +425,13 @@ head(gutbrain_genes)
 tail(gutbrain_genes)
 ```
 
-You may want to explore the distribution of your count data using `summary`. This command lets you see the mean, median, minimum, and maximum for each numeric column. You can specify which column you'd like to get summary data for, or look at summary data for all the columns.
+You should see rows with data in your R environment. Previously you found out that:
 
-```{r}
-summary(gutbrain_genes)
-```
+> Each row should represent a gene, and each column should be the counts for an individual mouse (sample), except for the first column ("GeneID", which is the Ensembl gene ID). 
+
+Can you verify that your first column is called "GeneID" and each following column is named something that starts with "SRR"? (This is how each of the samples was named.) If so, great! The dataset loaded correctly. If not, check that you haven't mistyped or incorrectly copied the code. 
+
+You always want to check that your columns and rows are loaded and displaying as expected.
 
 ### Plotting histograms and dealing with zero counts
 
@@ -496,31 +443,87 @@ Before we make the histogram, we actually need to sum up the total reads for eac
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36f913be5dc_0_0#slide=id.g36f913be5dc_0_0")
 ```
 
+Because we're saving the results of our calculation as a new column, we have to use a `$` to tell R to make a new column. In this case, R interprets `gutbrain_genes$total_counts` as the `total_counts` column in the `gutbrain_genes` dataset (object).
+
 ```{r}
 gutbrain_genes$total_counts <- rowSums(gutbrain_genes[2:59])
 ```
 
-Now we can make the histogram using the `histogram` command. Use a log10 scale on the x-axis to plot "total_counts".
+Let's look at the mean, median, maximum, and minimum values (called descriptive statistics) of the new `total_counts` column we made. This lets us know what sort of scale we might need to use when making a graph of the data. We can do this using the `summary` command.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This R command tells R to calculate certain summary statistics for the total_counts column.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_66#slide=id.g374e005048b_0_66")
+```
+
+```{r}
+summary(gutbrain_genes$total_counts)
+```
+
+Notice that we didn't use the `<-` to save the summary data to an object! You can, but we're just curious to check out the descriptive statistics and won't be using them again.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "You can also save the output of the summary command as a new object.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_104#slide=id.g374e005048b_0_104")
+```
+
+Let's try saving the output of the summary statement with the `<-`.
+
+```{r}
+summary_stats <- summary(gutbrain_genes$total_counts)
+```
+
+When you save the output as `summary_stats`, R doesn't automatically print the output into your console. You'll have to use a second command to tell R to print.
+
+```{r}
+summary_stats
+```
+
+No matter whether you print the summary statistics directly to the console, or save it first as a new object, the results are the same. We can see that some genes are not expressed at all in this dataset ("total_genes" is 0), while other genes are expressed a lot. We'll want to take this into account when we make a histogram to explore the distribution of counts visually.
+
+We can make the histogram using the `histogram` command. Use a log10 scale on the x-axis to plot "total_counts". We're nesting a log transform within the histogram command, as well as adding an argument that lets us add a title.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This R command tells R to make a histogram of the log-transformed counts in the total_counts column.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_117#slide=id.g374e005048b_0_117")
+```
 
 ```{r}
 hist(log10(gutbrain_genes$total_counts), main="Log10 Read Counts for Mouse RNA-seq sample")
 ```
 
-You may choose to deal with zero-count genes by adding 0.1 to each count before the log10 transformation.
+You may choose to deal with zero-count genes by adding 0.1 to each count before the log10 transformation. We can do this by creating a new column in the `gutbrain_genes` dataset.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This R command tells R to make a new column that is the sum of total expression counts and 0.1", out.width = '100%'}
+ottrpal::include_slide("")
+```
+
+Remember you did this a couple steps ago when you make the "total_counts" column! You'll do essentially the same thing, except you'll tell R to add 0.1 to the "total_counts" column and save that value in a new column called "total_counts_01".
 
 ```{r}
-gutbrain_genes$total_counts_trans <- gutbrain_genes$total_counts + 0.1
-
-hist(log10(gutbrain_genes$total_counts_trans), main="Transformed Log10 Read Counts for Mouse RNA-seq sample")
+gutbrain_genes$total_counts_01 <- gutbrain_genes$total_counts + 0.1
 ```
+
+Now just recreate your histogram using "total_count_01" instead of "total_counts".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This R command tells R to make a histogram of the log-transformed counts in the total_counts_01 column.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_137#slide=id.g374e005048b_0_137")
+```
+
+```{r}
+hist(log10(gutbrain_genes$total_counts_01), main="Transformed Log10 Read Counts for Mouse RNA-seq sample")
+```
+
+There's obviously a lot of variation in expression among genes!
 
 ### Looking at read count for a single gene
 
 You may want to look at the read count for a specific gene in your dataset. This can be done with the `filter` command. Let's look at the read counts for the Reg3a gene, across all mice. Remember, this is the gene we looked up earlier in the MGI database. The Ensembl gene ID is "ENSMUSG00000079516".
 
+For `filter`, we need to tell R which dataset to use, and which column to search in. 
+
 ```{r, eval=FALSE}
 filter(gutbrain_genes, GeneID == "ENSMUSG00000079516")
 ```
+
+Luckily, we chose a gene that is indeed expressed in the dataset! Making sure yours chosen genes are expressed will be important for our next step.
 
 ### Visualize gene counts of multiple genes across groups
 
