@@ -551,6 +551,10 @@ These are the genes (with gene IDs) that we're including in our gene set:
 
 First, create a vector that contains these gene IDs. (You can replace the gene IDs with the ones for your genes of interest, but make sure you use Ensembl gene IDs! They should all start with "ENSMUSG".)
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "This code creates a vector called gene_set that includes the GeneIDs of the genes whose expression we want to visualize as a heatmap.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_200#slide=id.g374e005048b_0_200")
+```
+
 Each gene ID should have quotation marks around it, and the different IDs should be separated using a comma.
 
 ```{r}
@@ -559,6 +563,10 @@ gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", 
 
 Now we simply filter the `gutbrain_genes` dataset so that we only keep the rows for the gene IDs in our gene set. Remember, we want to use the `filter` command. The combination of `filter` and `%in%` tells R to only keep those rows in the `gutbrain_genes` dataset if the gene ID is also found in our gene list we made earlier.
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "This code creates a smaller dataset that only includes the expression counts for our selected genes.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_213#slide=id.g374e005048b_0_213")
+```
+
 ```{r}
 gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
 
@@ -566,12 +574,26 @@ gutbrain_motor <- filter(gutbrain_genes, gutbrain_genes$GeneID %in% gene_set)
 
 Now we have our data subsetted the way we want, but we aren't quite ready for the heatmap yet. In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in "tibble" format, but we want it in a numerical "matrix" format. We can't switch directly from "tibble" to "matrix" (because the GeneID column is character data, not numerical data). Instead, let's first convert from "tibble" to a format called "dataframe".
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "This code changes the format of the object gutbrain_motor.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_226#slide=id.g374e005048b_0_226")
+```
+
 ```{r}
 gutbrain_motor <- as.data.frame(gutbrain_motor)
 
 ```
 
-To our eyes, not much has changed in the format, but it's  very different to R. Now we're going to tell R to name the rows based on the "GeneID" column, and then delete the current "GeneID" column. We are also going to delete two columns we created earlier, "total_counts" and "total_counts_trans".
+To our eyes, not much has changed in the format, but it's  very different to R. Now we're going to tell R to name the rows based on the "GeneID" column.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This code changes the row names to the GeneIDs.", out.width = '100%'}
+ottrpal::include_slide("")
+```
+
+We are also going to delete the current "GeneID" column because we no longer need it, as well as the two columns we created earlier, "total_counts" and "total_counts_01".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This code deletes a column we no longer need.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_254#slide=id.g374e005048b_0_254")
+```
 
 ```{r}
 rownames(gutbrain_motor) <- gutbrain_motor$GeneID
@@ -580,7 +602,7 @@ gutbrain_motor$GeneID <- NULL
 
 gutbrain_motor$total_counts <- NULL
 
-gutbrain_motor$total_counts_trans <- NULL
+gutbrain_motor$total_counts_01 <- NULL
 ```
 
 Great! Now we can change the format of `gutbrain_motor_controls` dataset to "matrix" format in order to make our heatmap using the `heatmap` function. 
