@@ -491,6 +491,8 @@ Brain Disorders: Neurodegenerative Disorders
 </section>
 <section id="identifying-genes-of-interest-with-the-mouse-genome-informatics-database" class="level2">
 <h2 class="anchored" data-anchor-id="identifying-genes-of-interest-with-the-mouse-genome-informatics-database">Identifying genes of interest with the Mouse Genome Informatics database</h2>
+<p>When you started developing your research question, you likely identified a human diseases or human genes that you’re interested in. However, the dataset you will be using contains gene expression data for <em>mouse</em> samples. Before you can actually begin the data analysis, you’ll need to figure out the mouse gene orthologs for the human genes you identified.</p>
+<p>(If you haven’t yet identified human genes of interest, don’t worry - you can also start with a human disease for this part.)</p>
 <p>The <a href="https://www.informatics.jax.org/genes.shtml">Mouse Genome Informatics</a> database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found <a href="https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml">here</a>. We’ll reproduce some of it below.</p>
 <section id="the-mouse-as-a-model-organism" class="level3">
 <h3 class="anchored" data-anchor-id="the-mouse-as-a-model-organism">The mouse as a model organism</h3>
@@ -597,7 +599,7 @@ Looking up genes based on human gene name
 </div>
 </div>
 </div>
-<p>Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.</p>
+<p>Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome. Check this section to make sure the human gene symbol (name) you originally looked up is listed - it’s always good to verify you haven’t ended up on the page for the wrong mouse gene!</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -617,6 +619,7 @@ Looking up genes based on human gene name
 </div>
 </div>
 </div>
+<p>In the gene ontology section, check whether the associated GO terms make sense for the question you want to explore. For example, maybe we are looking at the REG3A gene because we’re interested in neuroinflammation. We can see that the term “immune system process” (under Biological Process) is associated with the REG3A gene. That tells us that we can indeed use this gene to explore neuroinflammation.</p>
 <p>Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -627,6 +630,7 @@ Looking up genes based on human gene name
 </div>
 </div>
 </div>
+<p>Remember, the dataset you’re working with includes samples from the mouse brain. It’s important that you choose genes that are actually expressed in the nervous system. It looks like REG3A isn’t known for its expression in the nervous system, which is a bit troubling. <strong>However, this doesn’t mean it <em>isn’t</em> expressed in the brain.</strong> We’ll keep this gene on our gene list for now and check that it’s in our actual dataset. Just be aware that we may have to drop this gene from our analysis later.</p>
 </div>
 </div>
 </div>
@@ -703,7 +707,7 @@ Looking up genes associated with a human disease
 </div>
 </div>
 </div>
-<p>Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.</p>
+<p>Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome. Keep a note of what the possible human homolog gene symbols (names) are - this will come in handy for additional research!</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -723,6 +727,7 @@ Looking up genes associated with a human disease
 </div>
 </div>
 </div>
+<p>Interestingly, this particular gene doesn’t seem to be associate with the Biological Process GO term “immune system process.” This might seem kind of strange since we found it by looking for genes associated with inflammation. However, all is not lost. This gene <em>is</em> associated with GO terms like “signaling” and “stimulus response”. We know that one possible mechanism for how the gut-brain axis works is through altered cellular signaling. So, this gene still seems promising.</p>
 <p>Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -733,6 +738,8 @@ Looking up genes associated with a human disease
 </div>
 </div>
 </div>
+<p>Remember, the dataset you’re working with includes samples from the mouse brain. It’s important that you choose genes that are actually expressed in the nervous system. Luckily, the Abcb1a gene fits.</p>
+<p>Don’t panic if one of your genes isn’t known to be expressed in the brain according to MGI! <strong>This doesn’t mean it <em>isn’t</em> expressed in the brain.</strong> Keep the gene on your gene list for now. You can check that it’s in the actual dataset during the first steps of your analysis. Just be aware that you may have to drop this gene from your analysis later.</p>
 </div>
 </div>
 </div>
