@@ -191,6 +191,10 @@ Once you've picked a disorder or cellular process that interests you, start look
 
 ## Identifying genes of interest with the Mouse Genome Informatics database
 
+When you started developing your research question, you likely identified a human diseases or human genes that you're interested in. However, the dataset you will be using contains gene expression data for _mouse_ samples. Before you can actually begin the data analysis, you'll need to figure out the mouse gene orthologs for the human genes you identified.
+
+(If you haven't yet identified human genes of interest, don't worry - you can also start with a human disease for this part.)
+
 The [Mouse Genome Informatics](https://www.informatics.jax.org/genes.shtml) database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found [here](https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml). We'll reproduce some of it below.
 
 ### The mouse as a model organism
@@ -272,7 +276,7 @@ Return back to the MGI page on the Reg3a gene. Down the left-hand side of the pa
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_5#slide=id.g346083d4dc0_0_5")
 ```
 
-Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.
+Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome. Check this section to make sure the human gene symbol (name) you originally looked up is listed - it's always good to verify you haven't ended up on the page for the wrong mouse gene!
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "You can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_8#slide=id.g346083d4dc0_0_8")
@@ -284,11 +288,15 @@ If you continue scrolling down the page, you can also examine the pathways and p
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_11#slide=id.g346083d4dc0_0_11")
 ```
 
+In the gene ontology section, check whether the associated GO terms make sense for the question you want to explore. For example, maybe we are looking at the REG3A gene because we're interested in neuroinflammation. We can see that the term "immune system process" (under Biological Process) is associated with the REG3A gene. That tells us that we can indeed use this gene to explore neuroinflammation.
+
 Directly underneath the "ontology" section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g346083d4dc0_0_18#slide=id.g346083d4dc0_0_18")
 ```
+
+Remember, the dataset you're working with includes samples from the mouse brain. It's important that you choose genes that are actually expressed in the nervous system. It looks like REG3A isn't known for its expression in the nervous system, which is a bit troubling. **However, this doesn't mean it _isn't_ expressed in the brain.** We'll keep this gene on our gene list for now and check that it's in our actual dataset. Just be aware that we may have to drop this gene from our analysis later.
 :::
 
 ::: {.callout-caution collapse="true"}
@@ -332,7 +340,7 @@ Return back to the MGI page on the Abcb1a gene. Down the left-hand side of the p
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_43#slide=id.g33d632640e3_0_43")
 ```
 
-Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.
+Once this section is expanded, you can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome. Keep a note of what the possible human homolog gene symbols (names) are - this will come in handy for additional research!
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "You can find information about possible human homologs to the mouse gene, including alternate names and where the human homolog is located in the human genome.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_49#slide=id.g33d632640e3_0_49")
@@ -344,11 +352,17 @@ If you continue scrolling down the page, you can also examine the pathways and p
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_54#slide=id.g33d632640e3_0_54")
 ```
 
+Interestingly, this particular gene doesn't seem to be associate with the Biological Process GO term "immune system process." This might seem kind of strange since we found it by looking for genes associated with inflammation. However, all is not lost. This gene _is_ associated with GO terms like "signaling" and "stimulus response". We know that one possible mechanism for how the gut-brain axis works is through altered cellular signalling. So, this gene still seems promising.
+
 Directly underneath the "ontology" section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Directly underneath the “ontology” section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_59#slide=id.g33d632640e3_0_59")
 ```
+
+Remember, the dataset you're working with includes samples from the mouse brain. It's important that you choose genes that are actually expressed in the nervous system. Luckily, the Abcb1a gene fits.
+
+Don't panic if one of your genes isn't known to be expressed in the brain according to MGI! **This doesn't mean it _isn't_ expressed in the brain.** Keep the gene on your gene list for now. You can check that it's in the actual dataset during the first steps of your analysis. Just be aware that you may have to drop this gene from your analysis later.
 :::
 
 Now that you have your genes of interest, you're ready to start working with the dataset. 
