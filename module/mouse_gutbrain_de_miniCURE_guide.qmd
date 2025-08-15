@@ -352,7 +352,7 @@ If you continue scrolling down the page, you can also examine the pathways and p
 ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d632640e3_0_54#slide=id.g33d632640e3_0_54")
 ```
 
-Interestingly, this particular gene doesn't seem to be associate with the Biological Process GO term "immune system process." This might seem kind of strange since we found it by looking for genes associated with inflammation. However, all is not lost. This gene _is_ associated with GO terms like "signaling" and "stimulus response". We know that one possible mechanism for how the gut-brain axis works is through altered cellular signalling. So, this gene still seems promising.
+Interestingly, this particular gene doesn't seem to be associate with the Biological Process GO term "immune system process." This might seem kind of strange since we found it by looking for genes associated with inflammation. However, all is not lost. This gene _is_ associated with GO terms like "signaling" and "stimulus response". We know that one possible mechanism for how the gut-brain axis works is through altered cellular signaling. So, this gene still seems promising.
 
 Directly underneath the "ontology" section is information about when the gene is expressed during development. You can learn more information by clicking on the blue squares, or by clicking on the links in the upper right-hand corner. These links will take you to other websites.
 
