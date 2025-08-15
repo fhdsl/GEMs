@@ -585,6 +585,10 @@ gutbrain_motor$total_counts_trans <- NULL
 
 Great! Now we can change the format of `gutbrain_motor_controls` dataset to "matrix" format in order to make our heatmap using the `heatmap` function. 
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "This code changes the format of our object to a matrix and then makes a simple heatmap.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_3#slide=id.g374e005048b_0_3")
+```
+
 ```{r}
 gutbrain_motor <- as.matrix(gutbrain_motor)
 
@@ -596,6 +600,10 @@ Congratulations, you have just created a heatmap! The map itself is a series of 
 By default, R will order the samples (what we have on the x-axis across the bottom) in a way that clusters similar samples together. This is why we see columns of lighter yellow in the center of the heatmap, with darker orange and red columns on the edges. This suggests that there are groups of samples that have higher gene expression, but it's hard to tell right now if these groups correspond to the prefrontal cortex vs striatum (which is what we're interested in). It would be helpful if we could tell R to group based on prefrontal cortex vs striatum instead.
 
 Luckily, this is possible! Our dataset is already in the order we want (with all the prefrontal cortex samples first). We can just tell R to use the default ordering of the dataset instead of clustering and rearranging the x-axis.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This code will make a heatmap where the samples are ordered as they are in the dataset.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g374e005048b_0_24#slide=id.g374e005048b_0_24")
+```
 
 ::: callout-tip
 # How are the samples in my dataset ordered?
@@ -621,7 +629,11 @@ Perfect! Now we can easily see that four of our six genes seem to be expressed i
 
 Notice that not all the striatum samples have the same expression for each gene. This is normal variation and could be due to actual difference in gene expression levels or be the result of laboratory methods.
 
-Finally, we can customize the heatmap by changing the color scheme and adding a title. As as example, we're going to tell R to make a spectrum of colors between white and blue, with white indicating the lowest expression and blue indicating the highest expression, and 16 possible color categories. 
+Finally, we can customize the heatmap by changing the color scheme and adding a title. As as example, we're going to tell R to make a spectrum of colors between white and blue, with white indicating the lowest expression and blue indicating the highest expression, and 16 possible color categories. (We are also adding a title to the heatmap.)
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Breakdown of the parts of the code used to make a heatmap with custom colors.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36f913be5dc_0_6#slide=id.g36f913be5dc_0_6")
+```
 
 You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/). **The general convention in biology is that the lightest colors on a heatmap indicate the lowest values.**
 
@@ -629,9 +641,6 @@ You can find an extensive list of all the colors available in R at [https://www.
 heatmap(gutbrain_motor,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
 ```
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Breakdown of the parts of the code used to make a heatmap with custom colors and title.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36f913be5dc_0_6#slide=id.g36f913be5dc_0_6")
-```
 
 Finally, here's all the code you just ran to create your heatmap in one place, in case you want to run it again.
 
