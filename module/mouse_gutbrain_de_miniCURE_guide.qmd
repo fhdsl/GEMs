@@ -823,10 +823,10 @@ asd_vs_c$padj_trans <- -log10(asd_vs_c$padj)
 Now, we just create a scatterplot. The code for this is kind of complicated, but we'll walk through it.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Code to create a basic volcano plot in R.", out.width = '100%'}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3768ce87575_0_5#slide=id.g3768ce87575_0_5")
 ```
 
-Here's the code for your basic volcano plot. `data` tells R what data to use, `x` tells R what the x-axis values should be, and `y` tells R what the y-axis values should be. Notice that we can just use the column names for `x` and `y`!
+Here's the code for your basic volcano plot. Notice that we can just use the column names for `x` and `y`! There's no need to use the `dataset$column_name` syntax. The `ggplot` command already knows to look for these column names in the `asd_vs_c` dataset.
 
 ```{r}
 ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans)) +
@@ -847,7 +847,7 @@ However, if you are looking at regulation in group B compared to group A, the lo
 The comparison group matters with ratios!
 :::
 
-We are also setting a significant p-value as less than 0.05 (but you can also change this based on your best judgment).
+We are also setting a significant p-value (`padj`) as less than 0.05 (but you can also change this based on your best judgment). 
 
 We start by creating a new column called `diffexpressed` and setting everything to "NO" (as in "no expression differences between ASD-type and control-type mice"). We then specify the genes for which this column should be changed to "UP" or "DOWN" (based on `log2FoldChange` and `padj`).
 
@@ -868,7 +868,9 @@ head(asd_vs_c)
 
 ```
 
-Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the `diffexpressed` column (`col = diffexpressed`). We also add a line about the colors we want to use (`scale_color_manual`). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command `labels` just creates the labels on the legend.
+Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the `diffexpressed` column (`col = diffexpressed`). This will be added in the `aes` section of our code.
+
+We also add a line about the colors we want to use (`scale_color_manual`). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command `labels` just creates the labels on the legend.
 
 You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/).
 
@@ -879,7 +881,9 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
   labels = c("Downregulated", "Not significant", "Upregulated")) 
 ```
 
-We can also label genes of interest in our plot. Let's label the Reg3a gene (the same one we looked up in the MGI database), as well as Pcdh12 (or protocadherin 12). The two gene IDs we need to know are ENSMUSG00000079516 and ENSMUSG00000024440.
+This is all well and good, but maybe we want to see where the genes from our gene list fall on this plot. Luckily, we can also label genes of interest in our plot. 
+
+As an example, let's label the Reg3a gene (the same one we looked up in the MGI database), as well as Pcdh12 (or protocadherin 12). The two gene IDs we need to know are ENSMUSG00000079516 and ENSMUSG00000024440.
 
 We will create another new column in our dataset. We will then tell R  In this new column, the genes in our list (Reg3a and Pcdh12) are named, which everything else will have a missing name. When we remake the volcano plot, R will _only_ label those points that do not have missing names in the `gene_label` column.
 
@@ -937,7 +941,7 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
 
 Here's all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).
 
-```{r}
+```{r, eval=F}
 #log transform the padj values so the y-axis is formatted for plotting
 asd_vs_c$padj_trans <- -log10(asd_vs_c$padj)
 
