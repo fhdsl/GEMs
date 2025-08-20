@@ -752,18 +752,28 @@ Are you really curious about differential expression in Autism Spectrum Disorder
 
 ### Ranking the genes by log2FoldChange
 
-The `log2FoldChange` value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. Genes with no difference in expression between groups have `log2FoldChange` values close to zero. Negative log2FoldChange values means a **decreased expression** (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have **increased expression** in the experimental group versus the control group.
+The `log2FoldChange` value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. 
 
-We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:
+```{r, fig.align='center', echo = FALSE, fig.alt= "How to interpret the log2foldchange.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3768ce87575_0_0#slide=id.g3768ce87575_0_0")
+```
+
+Genes with no difference in expression between groups have `log2FoldChange` values close to zero. Negative log2FoldChange values means a **decreased expression** (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have **increased expression** in the experimental group versus the control group.
+
+We can arrange the table based on these values (going from smallest to large using the `arrange` command.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The arrange command allows us to change the order of the rows from smallest to largest based on a particular column.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3768ce87575_0_23#slide=id.g3768ce87575_0_23")
+```
 
 ```{r}
 asd_vs_c_ascending <- arrange(asd_vs_c, log2FoldChange)
 head(asd_vs_c_ascending)
 ```
 
-The genes at the top of this table have the most negative log2FoldChange values and are downregulated in ASD-type mice. 
+The genes at the top of this table have the most negative log2FoldChange values and are downregulated in the experimental mice. 
 
-We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in ASD-type mice.
+We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in experimental mice.
 
 ```{r}
 asd_vs_c_descending <- arrange(asd_vs_c, desc(log2FoldChange))
@@ -784,38 +794,6 @@ Maybe you also want to arrange the genes by whether the estimated differential e
 ```{r}
 asd_vs_c_sorted <- arrange(asd_vs_c, padj)
 head(asd_vs_c_sorted)
-```
-
-### Compare differential gene expression of a single across groups
-
-It might be interesting to look at the expression of a gene across our two brain regions. To do this, we will first load the region-specific datasets.
-
-```{r}
-asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv")
-
-asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
-```
-
-Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the Reg3a gene we previously looked up on MGI.
-
-```{r}
-reg3a_prefrontal <- filter(asd_vs_c_prefrontal, gene == "ENSMUSG00000079516")
-
-reg3a_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000079516")
-```
-
-Finally, take a look at the differential expression of reg3a in each region.
-
-In the prefrontal cortex:
-
-```{r}
-reg3a_prefrontal
-```
-
-In the striatum:
-
-```{r}
-reg3a_striatum
 ```
 
 
