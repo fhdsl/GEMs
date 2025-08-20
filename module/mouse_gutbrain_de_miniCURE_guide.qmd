@@ -677,6 +677,28 @@ You can find an extensive list of all the colors available in R at [https://www.
 heatmap(gutbrain_motor,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
 ```
 
+Right now we have all the genes identified by the Ensembl gene IDs. Most people have trouble looking at these gene IDs and knowing exactly what gene it represents. We can change the  in our dataset using the `case_when` command in R. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "case_when lets us change the Ensembl gene IDs to more recognizable gene symbols.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3768ce87575_0_66#slide=id.g3768ce87575_0_66")
+```
+
+```{r}
+rownames(gutbrain_motor) <- case_when(
+  rownames(gutbrain_motor) == "ENSMUSG00000028883" ~ "Sema3a",
+  rownames(gutbrain_motor) == "ENSMUSG00000021936" ~ "Mapk8",
+  rownames(gutbrain_motor) == "ENSMUSG00000020598" ~ "Nrcam",
+  rownames(gutbrain_motor) == "ENSMUSG00000020886" ~ "Dlg4",
+  rownames(gutbrain_motor) == "ENSMUSG00000025020" ~ "Slit1",
+  rownames(gutbrain_motor) == "ENSMUSG00000025958" ~ "Creb1"
+)
+```
+
+Now we can run our heatmap code again.
+
+```{r}
+heatmap(gutbrain_motor,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
+```
 
 Finally, here's all the code you just ran to create your heatmap in one place, in case you want to run it again.
 
@@ -741,29 +763,46 @@ Only control mice: <https://genomicseducation.org/data/mouse_gutbrain_de_tissuet
 ::: callout-tip
 # Which differential expression dataset should I use?
 
-Even though this dataset is from a single study, there are still lots of options for independent research questions. You have the option to look at gene expression in control-type vs ASD-type mice, as well as gene expression in both striatum and prefrontal cortex. All the mice were male and sacrificed at the same age (45 days).
-
-Additionally, you can look at gene expression in striatum vs prefrontal cortex in only ASD-type mice or only control-type mice. Likewise, you also have the option of looking at gene expression in ASD and control mice, focusing only on striatum or only on prefrontal cortex.
-
 Are you mostly interested in how gene expression differs between the two brain regions? Are you interested in how neurons develop, or how groups of genes involved in movement might be expressed differently in two different regions? These sorts of questions are best to explore using **striatum and prefrontal cortex** comparisons.
 
-Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental genes? These questions and others can be explored using the **ASD-type mice and control-type mice** comparisons.
+Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental or neurodegenerative genes? These questions and others can be explored using the **ASD-type mice and control-type mice** comparisons.
 :::
+
+When you open the differential expression dataset, you'll notice some new column names. The ones you want to pay attention to are **gene**. **log2FoldChange**, and **padj**.
+
+```{r}
+head(asd_vs_c)
+```
+**gene** is the Ensembl gene ID. Each row contains differential expression data for a single gene.
+
+**log2FoldChange** is a measure that tells us whether a gene is upregulated or downregulated in experimental mice versus the control mice. We'll discuss this in more depth in the next section. 
+
+**padj** is a measure of whether the difference in gene expression between the experimental and control mice is statistically significant. It stands for "p-adjusted". A p-value was calculated for each gene and then a correction was added to account for the fact that many statistical tests were being performed. 
 
 ### Ranking the genes by log2FoldChange
 
-The `log2FoldChange` value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. Genes with no difference in expression between groups have `log2FoldChange` values close to zero. Negative log2FoldChange values means a **decreased expression** (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have **increased expression** in the experimental group versus the control group.
+The `log2FoldChange` value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. 
 
-We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:
+```{r, fig.align='center', echo = FALSE, fig.alt= "How to interpret the log2foldchange.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3768ce87575_0_0#slide=id.g3768ce87575_0_0")
+```
+
+Genes with no difference in expression between groups have `log2FoldChange` values close to zero. Negative log2FoldChange values means a **decreased expression** (or, a downregulation in gene expression) in the experimental group versus the control group. Positive log2FoldChange values indicate genes that are upregulated, or have **increased expression** in the experimental group versus the control group.
+
+We can arrange the table based on these values (going from smallest to large using the `arrange` command.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The arrange command allows us to change the order of the rows from smallest to largest based on a particular column.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3768ce87575_0_23#slide=id.g3768ce87575_0_23")
+```
 
 ```{r}
 asd_vs_c_ascending <- arrange(asd_vs_c, log2FoldChange)
 head(asd_vs_c_ascending)
 ```
 
-The genes at the top of this table have the most negative log2FoldChange values and are downregulated in ASD-type mice. 
+The genes at the top of this table have the most negative log2FoldChange values and are downregulated in the experimental mice. 
 
-We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in ASD-type mice.
+We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in experimental mice.
 
 ```{r}
 asd_vs_c_descending <- arrange(asd_vs_c, desc(log2FoldChange))
@@ -778,7 +817,7 @@ If there is a two fold **decrease** (fold change = 0.5, `log2FoldChange` = -1) b
 
 ### Arranging dataset based on padj
 
-Maybe you also want to arrange the genes by whether the estimated differential expression is significant. Instead of `log2FoldChange`, you will want to look at `padj`. You can use the `arrange` command to sort the results to put the smallest padj values first.
+Maybe you also want to arrange the genes by whether the estimated differential expression is statistically significant. Instead of `log2FoldChange`, you will want to look at `padj`. You can use the `arrange` command to sort the results to put the smallest padj values first.
 
 
 ```{r}
@@ -786,57 +825,30 @@ asd_vs_c_sorted <- arrange(asd_vs_c, padj)
 head(asd_vs_c_sorted)
 ```
 
-### Compare differential gene expression of a single across groups
-
-It might be interesting to look at the expression of a gene across our two brain regions. To do this, we will first load the region-specific datasets.
-
-```{r}
-asd_vs_c_prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv")
-
-asd_vs_c_striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
-```
-
-Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the Reg3a gene we previously looked up on MGI.
-
-```{r}
-reg3a_prefrontal <- filter(asd_vs_c_prefrontal, gene == "ENSMUSG00000079516")
-
-reg3a_striatum <- filter(asd_vs_c_striatum, gene == "ENSMUSG00000079516")
-```
-
-Finally, take a look at the differential expression of reg3a in each region.
-
-In the prefrontal cortex:
-
-```{r}
-reg3a_prefrontal
-```
-
-In the striatum:
-
-```{r}
-reg3a_striatum
-```
-
+Doing this is a useful way to check how many (or if any!) genes have statistically significant expression changes between groups.
 
 ### Creating a volcano plot to visualize differential expression of multiple genes
 
-A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
+A volcano plot is a great way to visualize differential gene expression between two groups. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Example of a volcano plot.", out.width = '100%'}
 ottrpal::include_slide("
 https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36a8fbcc346_0_0#slide=id.g36a8fbcc346_0_0")
 ```
 
-We will first need to do a log transformation of the `padj` variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together.
+We will first need to do a log transformation of the `padj` variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together. Remember, we did this earlier when we made our histograms!
 
 ```{r}
 asd_vs_c$padj_trans <- -log10(asd_vs_c$padj)
 ```
 
-Now, we just create a scatterplot. The code for this is kind of complicated, so you will want to paste the code below into your console.
+Now, we just create a scatterplot. The code for this is kind of complicated, but we'll walk through it.
 
-Here's the code for your basic volcano plot. `data` tells R what data to use, `x` tells R what the x-axis values should be, and `y` tells R what the y-axis values should be. Notice that we can just use the column names for `x` and `y`!
+```{r, fig.align='center', echo = FALSE, fig.alt= "Code to create a basic volcano plot in R.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3768ce87575_0_5#slide=id.g3768ce87575_0_5")
+```
+
+Here's the code for your basic volcano plot. Notice that we can just use the column names for `x` and `y`! There's no need to use the `dataset$column_name` syntax. The `ggplot` command already knows to look for these column names in the `asd_vs_c` dataset.
 
 ```{r}
 ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans)) +
@@ -857,7 +869,7 @@ However, if you are looking at regulation in group B compared to group A, the lo
 The comparison group matters with ratios!
 :::
 
-We are also setting a significant p-value as less than 0.05 (but you can also change this based on your best judgment).
+We are also setting a significant p-value (`padj`) as less than 0.05 (but you can also change this based on your best judgment). 
 
 We start by creating a new column called `diffexpressed` and setting everything to "NO" (as in "no expression differences between ASD-type and control-type mice"). We then specify the genes for which this column should be changed to "UP" or "DOWN" (based on `log2FoldChange` and `padj`).
 
@@ -878,7 +890,9 @@ head(asd_vs_c)
 
 ```
 
-Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the `diffexpressed` column (`col = diffexpressed`). We also add a line about the colors we want to use (`scale_color_manual`). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command `labels` just creates the labels on the legend.
+Okay! We can now add some color to the volcano plot we made earlier. We do this by adding a line to our code that tells R to color the data points based on the `diffexpressed` column (`col = diffexpressed`). This will be added in the `aes` section of our code.
+
+We also add a line about the colors we want to use (`scale_color_manual`). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command `labels` just creates the labels on the legend.
 
 You can find an extensive list of all the colors available in R at [https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/).
 
@@ -889,7 +903,9 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
   labels = c("Downregulated", "Not significant", "Upregulated")) 
 ```
 
-We can also label genes of interest in our plot. Let's label the Reg3a gene (the same one we looked up in the MGI database), as well as Pcdh12 (or protocadherin 12). The two gene IDs we need to know are ENSMUSG00000079516 and ENSMUSG00000024440.
+This is all well and good, but maybe we want to see where the genes from our gene list fall on this plot. Luckily, we can also label genes of interest in our plot. 
+
+As an example, let's label the Reg3a gene (the same one we looked up in the MGI database), as well as Pcdh12 (or protocadherin 12). The two gene IDs we need to know are ENSMUSG00000079516 and ENSMUSG00000024440.
 
 We will create another new column in our dataset. We will then tell R  In this new column, the genes in our list (Reg3a and Pcdh12) are named, which everything else will have a missing name. When we remake the volcano plot, R will _only_ label those points that do not have missing names in the `gene_label` column.
 
@@ -947,7 +963,7 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
 
 Here's all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).
 
-```{r}
+```{r, eval=F}
 #log transform the padj values so the y-axis is formatted for plotting
 asd_vs_c$padj_trans <- -log10(asd_vs_c$padj)
 
