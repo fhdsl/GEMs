@@ -677,6 +677,24 @@ You can find an extensive list of all the colors available in R at [https://www.
 heatmap(gutbrain_motor,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
 ```
 
+Right now we have all the genes identified by the Ensembl gene IDs. Most people have trouble looking at these gene IDs and knowing exactly what gene it represents. We can change the  in our dataset using the `case_when` command in R. 
+
+```{r}
+rownames(gutbrain_motor) <- case_when(
+  rownames(gutbrain_motor) == "ENSMUSG00000028883" ~ "Sema3a",
+  rownames(gutbrain_motor) == "ENSMUSG00000021936" ~ "Mapk8",
+  rownames(gutbrain_motor) == "ENSMUSG00000020598" ~ "Nrcam",
+  rownames(gutbrain_motor) == "ENSMUSG00000020886" ~ "Dlg4",
+  rownames(gutbrain_motor) == "ENSMUSG00000025020" ~ "Slit1",
+  rownames(gutbrain_motor) == "ENSMUSG00000025958" ~ "Creb1"
+)
+```
+
+Now we can run our heatmap code again.
+
+```{r}
+heatmap(gutbrain_motor,  Colv = NA, Rowv = NA, col = colorRampPalette(c("white", "darkblue"))(16), main = " Motor Neuron Gene List Expression")
+```
 
 Finally, here's all the code you just ran to create your heatmap in one place, in case you want to run it again.
 
