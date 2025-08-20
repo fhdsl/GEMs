@@ -746,6 +746,17 @@ Are you mostly interested in how gene expression differs between the two brain r
 Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental or neurodegenerative genes? These questions and others can be explored using the **ASD-type mice and control-type mice** comparisons.
 :::
 
+When you open the differential expression dataset, you'll notice some new column names. The ones you want to pay attention to are **gene**. **log2FoldChange**, and **padj**.
+
+```{r}
+head(asd_vs_c)
+```
+**gene** is the Ensembl gene ID. Each row contains differential expression data for a single gene.
+
+**log2FoldChange** is a measure that tells us whether a gene is upregulated or downregulated in experimental mice versus the control mice. We'll discuss this in more depth in the next section. 
+
+**padj** is a measure of whether the difference in gene expression between the experimental and control mice is statistically significant. It stands for "p-adjusted". A p-value was calculated for each gene and then a correction was added to account for the fact that many statistical tests were being performed. 
+
 ### Ranking the genes by log2FoldChange
 
 The `log2FoldChange` value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a log-transformed ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice. We take the log2 of this ratio (the fold change) because it makes interpretation easier. 
@@ -784,7 +795,7 @@ If there is a two fold **decrease** (fold change = 0.5, `log2FoldChange` = -1) b
 
 ### Arranging dataset based on padj
 
-Maybe you also want to arrange the genes by whether the estimated differential expression is significant. Instead of `log2FoldChange`, you will want to look at `padj`. You can use the `arrange` command to sort the results to put the smallest padj values first.
+Maybe you also want to arrange the genes by whether the estimated differential expression is statistically significant. Instead of `log2FoldChange`, you will want to look at `padj`. You can use the `arrange` command to sort the results to put the smallest padj values first.
 
 
 ```{r}
@@ -792,23 +803,28 @@ asd_vs_c_sorted <- arrange(asd_vs_c, padj)
 head(asd_vs_c_sorted)
 ```
 
+Doing this is a useful way to check how many (or if any!) genes have statistically significant expression changes between groups.
 
 ### Creating a volcano plot to visualize differential expression of multiple genes
 
-A volcano plot is a great way to visualize differential gene expression between two datasets. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
+A volcano plot is a great way to visualize differential gene expression between two groups. These types of plots have `log2FoldChange` on the x-axis and a log transformed `padj` on the y-axis.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Example of a volcano plot.", out.width = '100%'}
 ottrpal::include_slide("
 https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36a8fbcc346_0_0#slide=id.g36a8fbcc346_0_0")
 ```
 
-We will first need to do a log transformation of the `padj` variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together.
+We will first need to do a log transformation of the `padj` variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together. Remember, we did this earlier when we made our histograms!
 
 ```{r}
 asd_vs_c$padj_trans <- -log10(asd_vs_c$padj)
 ```
 
-Now, we just create a scatterplot. The code for this is kind of complicated, so you will want to paste the code below into your console.
+Now, we just create a scatterplot. The code for this is kind of complicated, but we'll walk through it.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Code to create a basic volcano plot in R.", out.width = '100%'}
+ottrpal::include_slide("")
+```
 
 Here's the code for your basic volcano plot. `data` tells R what data to use, `x` tells R what the x-axis values should be, and `y` tells R what the y-axis values should be. Notice that we can just use the column names for `x` and `y`!
 
