@@ -768,7 +768,7 @@ Are you mostly interested in how gene expression differs between the two brain r
 Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental or neurodegenerative genes? These questions and others can be explored using the **ASD-type mice and control-type mice** comparisons.
 :::
 
-When you open the differential expression dataset, you'll notice some new column names. The ones you want to pay attention to are **gene**. **log2FoldChange**, and **padj**.
+When you open the differential expression dataset, you'll notice some new column names. The ones you want to pay attention to are **gene**, **log2FoldChange**, and **padj**.
 
 ```{r}
 head(asd_vs_c)
