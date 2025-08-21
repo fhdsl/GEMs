@@ -768,7 +768,7 @@ Are you mostly interested in how gene expression differs between the two brain r
 Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental or neurodegenerative genes? These questions and others can be explored using the **ASD-type mice and control-type mice** comparisons.
 :::
 
-When you open the differential expression dataset, you'll notice some new column names. The ones you want to pay attention to are **gene**. **log2FoldChange**, and **padj**.
+When you open the differential expression dataset, you'll notice some new column names. The ones you want to pay attention to are **gene**, **log2FoldChange**, and **padj**.
 
 ```{r}
 head(asd_vs_c)
@@ -988,29 +988,5 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
   labels = c("Downregulated", "Not significant", "Upregulated")) +
   geom_text_repel(max.overlaps = Inf) +
   ggtitle("Differential Expression in Mouse Prefrontal Cortex")
-```
-
-### Running a gene set analysis
-
-You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)
-
-You created a gene list in the **Visualize gene counts of multiple genes across groups** section above. The code from this section is repeated below in case you need to run it again.
-
-```{r}
-gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", "ENSMUSG00000020886", "ENSMUSG00000025020", "ENSMUSG00000025958")
-```
-
-Then we can create a subset of the `asd_vs_c` dataset by filtering out any genes that aren't on our gene list. Remember, we do this using `filter` and `%in%`.
-
-```{r}
-asd_vs_c_motor <- filter(asd_vs_c, asd_vs_c$gene %in% gene_set)
-```
-
-Finally, create your cluster profile with the `runClusterProfiler` and `dotplot` commands.
-
-```{r, eval = F}
-asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
-
-dotplot(asd_vs_c_clusters, showCategory=34, title="asd vs control in prefrontal cortex", font.size=10, label_format = 50)
 ```
 
