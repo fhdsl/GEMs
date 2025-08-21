@@ -990,11 +990,65 @@ ggplot(data = asd_vs_c, aes(x = log2FoldChange, y = padj_trans, col = diffexpres
   ggtitle("Differential Expression in Mouse Prefrontal Cortex")
 ```
 
-### Running a gene set analysis
+## Running a gene set enrichment analysis
 
-You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)
+We can use a gene set enrichment analysis to explore WHAT???
+
+You can use the special command `runClusterProfiler` to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. 
+
+If you are using the SciServer environment, you can skip the **Creating the analysis functions** section below and go straight to the **INSERT NAME** section. The functions you need have already been created and are saved for your use on SciServer.
+
+### Creating the analysis functions
+
+Before we get started with the actual analysis, we'll need to run a couple of commands to create a special function to WHAT???
+
+```{r, eval=F}
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "3.21")
+
+BiocManager::install("clusterProfiler")
+BiocManager::install("org.Mm.eg.db")
+```
+
+You may have noticed that the installation commands for these two packages are different than the ones you used previously with the `tidyverse` and `ggrepel` packages. That's because the `clusterProfiler` and `org.Mm.eg.db` packages are saved in a different location (called a repository) than `tidyverse` and `ggrepel`. Both `clusterprofiler` and `org.Mm.eg.db` are part of the Bioconductor Project, which focuses on developing, maintaining, and distributing software specifically for biological and bioinformatics research.
+
+Once these two packages have been installed, make sure you load them.
+
+```{r}
+library("clusterProfiler")
+library("org.Mm.eg.db")
+```
+
+
+MAKE THE FUNCTION. WHAT IS A FUNCTION? WHAT DO THESE TWO FUNCTIONS DO? WHY HAVE WE MADE THEM?
+
+```{r}
+runClusterProfiler <- function (x) {
+  ids <- bitr( x$GeneID, "ENSEMBL", "ENTREZID", "org.Mm.eg.db" )
+  kegg <- enrichKEGG(ids$ENTREZID, "mmu", keyType="ncbi-geneid")
+  kegg@result$Description <- sub( " - Mus musculus \\(house mouse\\)", "", kegg@result$Description )
+  return(kegg)
+}
+
+getClusterProfilerGenes <- function (x, i) {
+  data.frame( x ) %>%
+  filter( str_detect( Description, i ) ) %>%
+  pull( geneID ) %>%
+  strsplit( "/" ) %>%
+  unlist() %>%
+  bitr( fromType="ENTREZID", toType="SYMBOL", OrgDb="org.Mm.eg.db") %>%
+  pull( SYMBOL )
+}
+```
+
+### Loading the data
+
+### Filtering the data based on a gene list
 
 You created a gene list in the **Visualize gene counts of multiple genes across groups** section above. The code from this section is repeated below in case you need to run it again.
+
+You might remember that these 7 genes were picked because they are all associated with the development of motor neurons.
 
 ```{r}
 gene_set <- c("ENSMUSG00000028883", "ENSMUSG00000021936", "ENSMUSG00000020598", "ENSMUSG00000020886", "ENSMUSG00000025020", "ENSMUSG00000025958")
@@ -1006,11 +1060,24 @@ Then we can create a subset of the `asd_vs_c` dataset by filtering out any genes
 asd_vs_c_motor <- filter(asd_vs_c, asd_vs_c$gene %in% gene_set)
 ```
 
-Finally, create your cluster profile with the `runClusterProfiler` and `dotplot` commands.
+
+### Visualizing the biological pathway GO terms in the gene set
+
+Do the analysis
 
 ```{r, eval = F}
-asd_vs_c_clusters <- runClusterProfiler(asd_vs_c_sig)
-
-dotplot(asd_vs_c_clusters, showCategory=34, title="asd vs control in prefrontal cortex", font.size=10, label_format = 50)
+test_clusters <- runClusterProfiler(gutbrain_motor)
+dim(test_clusters)
 ```
 
+Create the visualization
+
+```{r}
+dotplot(test_clusters, showCategory=34, title="test", font.size=10, label_format = 50)
+```
+
+Get the gene symbols for a group of genes
+
+```{r}
+getClusterProfilerGenes(test_clusters, "Pathways of neurodegeneration - multiple diseases")
+```
