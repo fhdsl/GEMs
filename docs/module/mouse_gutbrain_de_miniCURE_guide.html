@@ -206,7 +206,6 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#ranking-the-genes-by-log2foldchange" id="toc-ranking-the-genes-by-log2foldchange" class="nav-link" data-scroll-target="#ranking-the-genes-by-log2foldchange">Ranking the genes by log2FoldChange</a></li>
   <li><a href="#arranging-dataset-based-on-padj" id="toc-arranging-dataset-based-on-padj" class="nav-link" data-scroll-target="#arranging-dataset-based-on-padj">Arranging dataset based on padj</a></li>
   <li><a href="#creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes" id="toc-creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes" class="nav-link" data-scroll-target="#creating-a-volcano-plot-to-visualize-differential-expression-of-multiple-genes">Creating a volcano plot to visualize differential expression of multiple genes</a></li>
-  <li><a href="#running-a-gene-set-analysis" id="toc-running-a-gene-set-analysis" class="nav-link" data-scroll-target="#running-a-gene-set-analysis">Running a gene set analysis</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1261,7 +1260,7 @@ Which differential expression dataset should I use?
 <p>Are you really curious about differential expression in Autism Spectrum Disorder-type mice compared to control-type mice? Are you curious about potential associations between gene expression differences in known neurodevelopmental or neurodegenerative genes? These questions and others can be explored using the <strong>ASD-type mice and control-type mice</strong> comparisons.</p>
 </div>
 </div>
-<p>When you open the differential expression dataset, you’ll notice some new column names. The ones you want to pay attention to are <strong>gene</strong>. <strong>log2FoldChange</strong>, and <strong>padj</strong>.</p>
+<p>When you open the differential expression dataset, you’ll notice some new column names. The ones you want to pay attention to are <strong>gene</strong>, <strong>log2FoldChange</strong>, and <strong>padj</strong>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1566,24 +1565,6 @@ Which differential expression dataset should I use?
 <span id="cb59-22"><a href="#cb59-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
 <span id="cb59-23"><a href="#cb59-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
 <span id="cb59-24"><a href="#cb59-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="running-a-gene-set-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="running-a-gene-set-analysis">Running a gene set analysis</h3>
-<p>You can use the special command <code>runClusterProfiler</code> to figure out the types of processes genes on your gene list are involved in. You can also create a dotplot to visualize your results. (NOTE: this is only possible if you are using the C-MOOR environment in SciServer.)</p>
-<p>You created a gene list in the <strong>Visualize gene counts of multiple genes across groups</strong> section above. The code from this section is repeated below in case you need to run it again.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Then we can create a subset of the <code>asd_vs_c</code> dataset by filtering out any genes that aren’t on our gene list. Remember, we do this using <code>filter</code> and <code>%in%</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(asd_vs_c, asd_vs_c<span class="sc">$</span>gene <span class="sc">%in%</span> gene_set)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Finally, create your cluster profile with the <code>runClusterProfiler</code> and <code>dotplot</code> commands.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_clusters <span class="ot">&lt;-</span> <span class="fu">runClusterProfiler</span>(asd_vs_c_sig)</span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dotplot</span>(asd_vs_c_clusters, <span class="at">showCategory=</span><span class="dv">34</span>, <span class="at">title=</span><span class="st">"asd vs control in prefrontal cortex"</span>, <span class="at">font.size=</span><span class="dv">10</span>, <span class="at">label_format =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
