@@ -917,8 +917,8 @@ When R moves onto this second command, it's now checking to see if the geneID fo
 
 ```{r}
 asd_vs_c$gene_label <- case_when(
-  asd_vs_c$gene == "ENSMUSG00000079516" ~ "Reg3a",
-  asd_vs_c$gene == "ENSMUSG00000024440" ~ "Pcdh12",
+  asd_vs_c$GeneID == "ENSMUSG00000079516" ~ "Reg3a",
+  asd_vs_c$GeneID == "ENSMUSG00000024440" ~ "Pcdh12",
   TRUE ~ NA_character_
 )
 ```
