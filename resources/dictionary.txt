@@ -86,6 +86,7 @@ GeneCards
 geneID
 GeneID
 geneIDs
+GeneRatio
 GH
 Github
 GitHub
@@ -144,6 +145,7 @@ myelin
 myelination
 ncbi
 neuroanatomy
+neurodegeneration
 neurodegenerative
 Neurodegenerative
 neurodevelopmental
