@@ -1028,7 +1028,7 @@ If this sounds confusing, be patient - it should become more clear as you use th
 
 Just run the code below.
 
-```{r, eval=FALSE}
+```{r}
 runClusterProfiler <- function (x) {
   ids <- bitr( x$GeneID, "ENSEMBL", "ENTREZID", "org.Mm.eg.db" )
   kegg <- enrichKEGG(ids$ENTREZID, "mmu", keyType="ncbi-geneid")
