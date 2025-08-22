@@ -219,9 +219,9 @@ striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autis
 Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.
 
 ```{r}
-reg3a_prefrontal <- filter(prefrontal, gene == "ENSMUSG00000079516")
+reg3a_prefrontal <- filter(prefrontal, GeneID == "ENSMUSG00000079516")
 
-reg3a_striatum <- filter(striatum, gene == "ENSMUSG00000079516")
+reg3a_striatum <- filter(striatum, GeneID == "ENSMUSG00000079516")
 ```
 
 Finally, take a look at the differential expression of reg3a in each region.
