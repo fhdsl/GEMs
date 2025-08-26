@@ -24,6 +24,8 @@ The basic steps of your analysis are:
 
 3.  Explore differential gene expression in the control vs experimental group.
 
+**There are two directions you can go with your project: you can explore how gene expression in the brain differs between control mice and mice that have had their gut bacteria changed; or, you can explore how gene expression differs between two parts of the brain (the prefrontal cortex and the striatum).**
+
 ### The original study
 
 The original study, *Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice*, was published in 2019 [@sharon2019]. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the *gut-brain axis.*
