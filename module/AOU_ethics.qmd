@@ -26,3 +26,15 @@ These ethics-related questions can be added on to any activity that leverages th
     -   [Google Doc](https://docs.google.com/document/d/1Xi1M9icJUJ2pfxp5pOV4yzQUHfQCM8zo/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
 
 -   Answer key available [here](https://docs.google.com/document/d/16GiVCWKhVxkKzOUr6XlQ_vdj-tyxBYlIa3lmstzf38Y/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+
+## Evaluation
+
+::: {.callout-tip}
+## Help us improve!
+
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor. We also appreciate you distributing our survey to students after they participate in GEMs content.
+
+[Instructor survey](https://forms.gle/QExaV8pQ9tWpaiED9)
+
+Student survey
+:::
