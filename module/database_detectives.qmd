@@ -61,3 +61,16 @@ In addition to working with public genomic databases, students are exposed to th
 - Part 3: Using OMIM and MalaCards
 
 - Part 4: Solving the Data Mystery
+
+## Evaluation
+
+::: {.callout-tip}
+## Help us improve!
+
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor. We also appreciate you distributing our survey to students after they participate in GEMs content.
+
+[Instructor survey](https://forms.gle/jPppG3dSnEQneDEZA)
+
+Student survey
+:::
+
