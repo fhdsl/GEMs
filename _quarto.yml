@@ -6,12 +6,12 @@ website:
   title: "GEMs"
   navbar:
     left:
-    - text: ""
+    - text: Home
       href: index.qmd
     - text: Modules
       href: modules.qmd
-    - text: Needs Assessment
-      href: needs.qmd
+    - text: Share Your Input
+      href: input.qmd
   google-analytics: "G-XMR6CQ1L12"
   site-url: https://genomicseducation.org
   repo-url: https://github.com/fhdsl/GEMs

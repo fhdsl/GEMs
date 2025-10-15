@@ -1,5 +1,5 @@
 ---
-title: "**Needs Assessment**"
+title: "**Instrcutor Needs Assessment**"
 output:
   html_document
 ---
@@ -9,5 +9,3 @@ Are you a biology instructor, teaching at the high school or college level? We'd
 Please take our needs assessment here:
 
 [Link to the Needs Assessment (Google Form)](https://forms.gle/K94oz3FFAUpqDWX17)
-
-
