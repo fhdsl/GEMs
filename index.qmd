@@ -3,7 +3,7 @@ output:
   html_document
 ---
 
-### **About**  
+### **About**
 
 Welcome! This is the main website for the Genomics Education Modules (GEMs) Program, a collaborative project between [Fred Hutch Cancer Center](https://www.fredhutch.org/en.html), [Clovis Community College](https://www.cloviscollege.edu/), [Guttman Community College](https://guttman.cuny.edu/), [El Paso Community College](https://www.epcc.edu/), and [Georgetown University](https://www.georgetown.edu/).
 
