@@ -10,7 +10,7 @@ This activity guides students through using publicly-available genomics database
 
 This activity is loosely based on the game Clue. Students need to match four _Drosophila_ genes to the correct experimental data and background research.
 
-**Duration:** Coming soon!
+**Duration:** 1-3 hours
 
 ## Learning Objectives
 
