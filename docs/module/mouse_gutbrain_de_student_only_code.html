@@ -163,20 +163,10 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <ul>
   <li><a href="#part-1" id="toc-part-1" class="nav-link active" data-scroll-target="#part-1">Part 1</a>
   <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
   <li><a href="#package-install-and-load" id="toc-package-install-and-load" class="nav-link" data-scroll-target="#package-install-and-load">Package Install and Load</a></li>
-  <li><a href="#load-differential-expression-data" id="toc-load-differential-expression-data" class="nav-link" data-scroll-target="#load-differential-expression-data">Load Differential Expression Data</a></li>
   </ul></li>
-  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
-  <ul class="collapse">
-  <li><a href="#ranking-the-genes-by-log2foldchange" id="toc-ranking-the-genes-by-log2foldchange" class="nav-link" data-scroll-target="#ranking-the-genes-by-log2foldchange">Ranking the genes by log2FoldChange</a></li>
-  <li><a href="#using-the-mouse-genome-database" id="toc-using-the-mouse-genome-database" class="nav-link" data-scroll-target="#using-the-mouse-genome-database">Using the Mouse Genome Database</a></li>
-  </ul></li>
-  <li><a href="#part-3" id="toc-part-3" class="nav-link" data-scroll-target="#part-3">Part 3</a>
-  <ul class="collapse">
-  <li><a href="#creating-a-gene-list" id="toc-creating-a-gene-list" class="nav-link" data-scroll-target="#creating-a-gene-list">Creating a gene list</a></li>
-  <li><a href="#compare-differential-gene-expression-across-regions" id="toc-compare-differential-gene-expression-across-regions" class="nav-link" data-scroll-target="#compare-differential-gene-expression-across-regions">Compare differential gene expression across regions</a></li>
-  </ul></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a></li>
+  <li><a href="#part-3" id="toc-part-3" class="nav-link" data-scroll-target="#part-3">Part 3</a></li>
   </ul>
 </nav>
     </div>
@@ -206,37 +196,6 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>This activity will walk through differential expression analysis and use bioinformatics tools (R) to understand how gut bacteria can influence the expression of genes in the brain (the gut-brain axis). You will work with real data from a mouse RNA-seq experiment to understand how researchers explore how human disorders might be impacted by gut-brain axis using model organisms.</p>
 <section id="part-1" class="level2">
 <h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
-<p>In Part 1, we’ll go over some background context for this activity. Then, we’ll get set up on Posit Cloud for the next steps.</p>
-<p>The data for this activity includes gene expression data from two different brain regions (striatum and prefrontal cortex) in mice. Mice in this experiment received fecal transplants. Some mice received transplants from humans who have been diagnosed with Autism Spectrum Disorder (ASD), while other mice received transplants from humans who did not have any diagnosis (control). This allowed researchers to control the composition of the gut microbiome in each mouse. Researchers then bred the mice and looked for differences in gene expression in the brains of the offspring.</p>
-<section id="background" class="level3">
-<h3 class="anchored" data-anchor-id="background">Background</h3>
-<p><em>Autism spectrum disorder (ASD)</em> is a neurological disorder that affects behavioral and social interactions, among other things. Although ASD can be diagnosed at any age, it’s considered a neurodevelopmental disorder because symptoms usually show up within the first two years of life. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems.</p>
-<p>The <em>striatum</em> is part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions (often called executive functions). It lies deep within the center of the brain and is composed of both gray matter (which can be thought of as the “processing” part of brain tissue) and white matter (which is the brain structure involved in transporting messages); the combination of the gray and white matter give this region of the brain a striped appearance, resulting in the name “striatum”. The striatum is involved in both reflexive movement - that is, involuntary movement that happens as an immediate response to a stimulus - and slower, planned movement like walking. In Parkinson’s disease, some patients experience degeneration of parts of the striatum, resulting in spastic, uncontrollable movement.</p>
-<p>The <em>prefrontal cortex</em> is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/">here</a>.</p>
-<section id="the-original-study" class="level4">
-<h4 class="anchored" data-anchor-id="the-original-study">The original study</h4>
-<p>The original study, <em>Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice</em>, was published in 2019. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the <em>gut-brain axis.</em></p>
-<p>In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. They transplanted stool from either humans with ASD or controls into germ-free mice and discovered that colonization with gut microbiota was enough to induce ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>It is important to note that researchers are <strong>not</strong> suggesting that ASD is entirely induced by gut bacteria. There is a strong genetic component to ASD. Scientists have known for years that there are <strong>both genetic and environmental components</strong> to the development or severity of <strong>some</strong> ASD symptoms. This research explores one possible environmental component.</p>
-</div>
-</div>
-<p>You can read the original research paper <a href="https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1">here</a>.</p>
-</section>
-<section id="the-mouse-as-a-model-organism" class="level4">
-<h4 class="anchored" data-anchor-id="the-mouse-as-a-model-organism">The mouse as a model organism</h4>
-<p>The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models (https://www.cshl.edu/of-mice-and-model-organisms/, https://fbresearch.org/medical-advances/nobel-prizes).</p>
-<p>So what makes mice such good model organisms for biomedical research? Well, first, they’re economical and relatively easy to keep. Since mice are small, they don’t require a huge amount of space or food. They also have fast reproductive cycles, so researchers can study multiple generations within only a few years. Most importantly, though, mice and humans are both mammals and have about 85% of their protein-coding genome in common. As a result, mouse physiology is quite similar to human physiology. The mouse circulatory, reproductive, digestive, hormonal, and nervous systems are frequently used as models to study how humans grow, age, and develop chronic diseases. They are particularly important model organisms for cancer research and neuroscience.</p>
-<p>You can find additional information about how the mouse is used in research <a href="https://www.google.com/url?q=https://www.informatics.jax.org/mgihome/other/homepage_IntroMouse.shtml">here!</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -254,8 +213,6 @@ Check Your Knowledge
 </ol>
 </div>
 </div>
-</section>
-</section>
 <section id="package-install-and-load" class="level3">
 <h3 class="anchored" data-anchor-id="package-install-and-load">Package Install and Load</h3>
 <p>We will need to install the <code>tidyverse</code> package for this activity.</p>
@@ -277,26 +234,6 @@ Check Your Knowledge
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-What are R Packages?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like “expansion packs” on top of your basic R software.</p>
-<p>Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!</p>
-<p>We use the <code>library</code> command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.</p>
-<p>The “readr” package is helpful for loading data, and the “dplyr” package that you loaded is useful wrangling and exploring data.</p>
-</div>
-</div>
-</section>
-<section id="load-differential-expression-data" class="level3">
-<h3 class="anchored" data-anchor-id="load-differential-expression-data">Load Differential Expression Data</h3>
-<p><strong>Differential expression</strong> refers to the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or “turned on”, while others are “turned off”. This expression difference is the basis of cell type diversity in multicellular organisms (like mice and humans). Because some diseases are thought to be the result of improper gene expression, researchers will use differential gene expression experiments to pinpoint the genes responsible for the disease symptoms.</p>
 <p>We’ll read in some data from the GEMs website. Run the following code in your console:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>prefrontal <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -331,38 +268,6 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 6 ENSMUSG00000080716     25.4          -25.2  2.18 -11.6 6.05e-31 3.64e-27</code></pre>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-What do the column names mean?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When working with someone else’s data, it can be difficult to figure out what a particular column or variable name means. A <strong>data dictionary</strong> is a key to decode these!</p>
-<ul>
-<li><p><strong>gene</strong>: the geneID (see below for more detail).</p></li>
-<li><p><strong>baseMean</strong>: the average of the normalized count values for this gene, taken over all samples.</p></li>
-<li><p><strong>log2FoldChange</strong>: a measure of the change in gene expression for this gene between the ASD and control mice. A positive value indicates upregulation (increased expression), while a negative Log2FC indicates downregulation (decreased expression).</p></li>
-<li><p><strong>lfcSE</strong>: the standard error calculated for log2FoldChange.</p></li>
-<li><p><strong>stat</strong>: t-value calculated to determine if the log2FoldChange is significantly different from zero.</p></li>
-<li><p><strong>pvalue</strong>: the p-value for the log2FoldChange.</p></li>
-<li><p><strong>padj</strong>: the p-value, adjusted for multiple testing.</p></li>
-</ul>
-</div>
-</div>
-<p>In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:</p>
-<blockquote class="blockquote">
-<p>ENSMUSG00000000001</p>
-</blockquote>
-<p><strong>ENS</strong> stands for “Ensembl”. Ensembl is a <a href="https://ensemblgenomes.org/">genome database project</a> managed by the European Bioinformatics Institute. It’s one of several databases like this. Others include NIH’s National Center for Biotechnology Information (NCBI; the organization that manages GenBank and PubMed) and the University of California, Santa Cruz (UCSC) Genome Browser. When a gene code starts with “ENS”, it means you should look up the gene code in the Ensembl database.</p>
-<p><strong>MUS</strong> stands for “Mus”, which is the genus for the mouse.</p>
-<p><strong>G</strong> stands for “Gene”. When you see “G” in the ID name, you know you are working with a gene. There are also codes for transcripts (“T”), exons (“E”), and proteins (“P”).</p>
-<p><strong>00000000001</strong> is the numerical code associated with the gene.</p>
-<section id="ranking-the-genes-by-log2foldchange" class="level3">
-<h3 class="anchored" data-anchor-id="ranking-the-genes-by-log2foldchange">Ranking the genes by log2FoldChange</h3>
 <p>The log2FoldChange value gives us an idea of which genes show the greatest differential expression between the ASD mice and the control mice. It is a ratio of how many gene transcripts were found in ASD-type mice compared to control-type mice.</p>
 <p>We can arrange the table based on these values (going from smallest to largest) by copying the following code into your console:</p>
 <div class="cell">
@@ -397,32 +302,6 @@ What do the column names mean?
 6 ENSMUSG00000054136     11.9           24.1  2.50  9.61 7.22e-22 7.66e-19</code></pre>
 </div>
 </div>
-</section>
-<section id="using-the-mouse-genome-database" class="level3">
-<h3 class="anchored" data-anchor-id="using-the-mouse-genome-database">Using the Mouse Genome Database</h3>
-<p>We have identified the genes (by their geneID) that show the greatest differential expression between ASD and control mice. Now let’s find out what those genes do!</p>
-<p>The <a href="https://www.informatics.jax.org">Mouse Genome Informatics</a> database that tracks mouse genes and expression data. A full introduction to everything available through the MGI can be found <a href="https://www.informatics.jax.org/mgihome/other/homepage_usingMGI.shtml">here</a>. We’ll reproduce some of it below.</p>
-<p>To look up information on a particular gene of interest, choose the “Genes” button.</p>
-<p>Next, type the gene ID into the “Search” bar up top. We’ll look up “ENSMUSG00000079516”.</p>
-<p>After you type the gene ID into the Search bar and hit enter, you should see a new page with basic information about the gene. Click on the gene symbol (in this example, Reg3a) to get more detailed information.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You might come across some unexpected terms when you search the MGI for your gene ID. In addition to genes, Ensembl gene IDs are also given to “pseudogenes”, “putative genes”, and “lncRNA”.</p>
-<p><strong>pseudogene</strong>: This is a stretch of DNA that looks like a gene but doesn’t actually code for any protein products. It’s essentially a copy of a gene that contains mutations that prevent translation into a protein product. The mutations can include partial deletions, missing promoters, missing start codons, premature stop codons, frameshift mutations, or missing introns. Any of these are enough to result in a pseudogene.</p>
-<p><strong>putative gene</strong>: This is a DNA segment that is believed to be a gene, but its function and protein product has not been confirmed. They are frequently identified based on the presence of an Open Reading Frame. (An Open Reading Frame, or ORF, is a stretch of DNA between a start codon and a stop codon that can be translated into a protein.) Putative genes are not given names until they become confirmed genes.</p>
-<p><strong>lncRNA</strong>: This stands for “long non-coding RNA”. lncRNA is a type of RNA molecule that is transcribed from DNA but does not code for proteins. These RNA molecules are at least 200-500 nucleotides long and play roles in various biological processes, like gene regulation.</p>
-</div>
-</div>
-<p>On the new page that you open, details about the gene are organized into categories. Down the left-hand side of the page, you will see sections about the chromosomal location, homology, gene ontology, expression data, and more.</p>
-<p>If you scroll down the page, you can also examine the pathways and processes the gene product is involved in under the “gene ontology” section. Gene ontology refers to a common, controlled set of vocabulary and terms that researchers use when categorizing gene and protein function, biological processes, and location within the cell. Reg3a is categorized as a protein involved in carbohydrate derivative binding, signaling receptor activity, and signaling receptor binding. Biologically, the Reg3a protein helps with cell differentiation, cell population proliferation, the immune system, and responding to stimuli.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -442,12 +321,9 @@ Check Your Knowledge
 </div>
 </div>
 </section>
-</section>
 <section id="part-3" class="level2">
 <h2 class="anchored" data-anchor-id="part-3">Part 3</h2>
 <p>In part 3, we’ll create a list of genes that are differentially expressed in the prefrontal cortex, then examine whether they show the same differential expression pattern in the striatum.</p>
-<section id="creating-a-gene-list" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-gene-list">Creating a gene list</h3>
 <p>In the previous section, we identified genes with the highest and lowest log2FoldChange. However, this metric isn’t always the best indicator of differential expression. The adjusted p-value, or padj, is preferred over log2FoldChange for identifying statistically significant changes in gene expression because padj accounts for multiple testing. This is crucial when analyzing a large number of genes simultaneously, as each additional statistical test increases the risk of identifying a false positive. The adjusted p-value provides a statistical correction that minimizes this risk. log2FoldChange provides information about the magnitude of expression change, while padj indicates its statistical significance.</p>
 <p>Let’s create a list of all the genes that are differentially expressed between ASD and control mice using the <code>filter</code> command. We’ll set the padj threshold to 0.05.</p>
 <div class="cell">
@@ -469,9 +345,6 @@ Check Your Knowledge
 <pre><code>[1] 103   7</code></pre>
 </div>
 </div>
-</section>
-<section id="compare-differential-gene-expression-across-regions" class="level3">
-<h3 class="anchored" data-anchor-id="compare-differential-gene-expression-across-regions">Compare differential gene expression across regions</h3>
 <p>It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will need to load the differential expression data for the striatum.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -531,10 +404,8 @@ Check Your Knowledge
 </ol>
 </div>
 </div>
-<p>POSSIBLE ADDITION: add code/question where they look up the expression of the genes from part 2?</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
