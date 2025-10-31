@@ -64,16 +64,24 @@ In the next steps, we will explore the data from the publication described above
 
 We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
 
+<!-- callout about what cloud computing is ? -->
 
-TODO: Add figure
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+```
 
 Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
 
-TODO: Add figure
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
+```
+
 
 Rename your project "Differential Expression Mouse GutBrain" by clicking on "Untitled Project".
 
-TODO: Add figure
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
+```
 
 ### Package Install and Load
 
@@ -85,15 +93,12 @@ Type the following into your console and press return to run the code. You will 
 install.packages("tidyverse")
 ```
 
-TODO: Add figure
 
 Next, we will load the package so it's ready to use:
 
 ```{r message=FALSE}
 library(tidyverse)
 ```
-
-TODO: Add figure
 
 ::: callout-tip
 ## What are R Packages?
@@ -291,5 +296,3 @@ reg3a_striatum
 
 11.  Is the differential expression pattern of Reg3a the same in the striatum as in the prefrontal cortex? 
 :::
-
-POSSIBLE ADDITION: add code/question where they look up the expression of the genes from part 2?
