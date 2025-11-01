@@ -1,0 +1,15 @@
+---
+title: "**Other Resources**"
+output:
+  html_document
+---
+
+## R Programming
+
+- [Open Case Studies](https://www.opencasestudies.org/) walks learners through authentic datasets to learn R programming.
+
+## Community
+
+- The [Genomic Data Science Community Network (GDSCN)](https://www.gdscn.org/) brings together instructors and researchers at under-resourced institutions for developing new curriculum and likeminded projects.
+ 
+- [BioDIGS](https://biodigs.org/) is a research consortium focused on soil metagenomics, founded by the GDSCN.

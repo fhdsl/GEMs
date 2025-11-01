@@ -10,6 +10,8 @@ website:
       href: index.qmd
     - text: Modules
       href: modules.qmd
+   -  text: Resources
+      href: resources.qmd
     - text: Share Your Input
       href: input.qmd
   google-analytics: "G-XMR6CQ1L12"
