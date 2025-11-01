@@ -10,7 +10,7 @@ website:
       href: index.qmd
     - text: Modules
       href: modules.qmd
-   -  text: Resources
+    - text: Resources
       href: resources.qmd
     - text: Share Your Input
       href: input.qmd
