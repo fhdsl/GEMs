@@ -26,6 +26,22 @@ This activity will walk through how to use an online polygenic risk score (PRS) 
 
 5.  Identify and critique scientific issues relating to society or ethics (see [GSA](https://genetics-gsa.org/education/genetics-learning-framework/) core competencies).
 
+## Evaluation
+
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.
+
+::: {.callout-tip}
+## Help us improve!
+
+[Instructor survey](https://forms.gle/rYeVE9BAQ4GhhXtZ6)
+
+[Student pre-activity survey](https://genomicseducation.shinyapps.io/student_pre_survey/)
+
+[Student post-activity survey](https://genomicseducation.shinyapps.io/student_post_survey/)
+:::
+
+You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing). Feel free to contact the GEMs team with any questions (gems **at** fredhutch **dot** org).
+
 ## Materials and Setup
 
 -   Students will need:
@@ -67,16 +83,3 @@ This activity focuses on understanding genetic risk in human disease. Students w
 -   Part 2: Calculating PRS Score (45 minutes)
 
 -   Part 3: Comparing Studies for PRS (20-30 minutes)
-
-## Evaluation
-
-::: {.callout-tip}
-## Help us improve!
-
-GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor. We also appreciate you distributing our survey to students after they participate in GEMs content.
-
-[Instructor survey](https://forms.gle/rYeVE9BAQ4GhhXtZ6)
-
-Student survey
-:::
-

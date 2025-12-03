@@ -12,13 +12,34 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 
 This activity teaches students to interpret pedigree information and use bioinformatics tools (R) to build pedigrees for tracking disease traits in families. Students will work with real data from a bipolar disorder genetics study to understand how researchers understand risk genes using pedigrees.
 
-**Duration:** Approximately 2-3 hours (depending on student familiarity with R)
+**Duration:** Approximately 2-3 hours (depending on student familiarity with R). ([help us improve this estimate!](https://forms.gle/jPppG3dSnEQneDEZA))
 
 ## Learning Objectives
 
 1.  Interpret pedigree information to determine the suitability of a DNA marker for tracking a disease trait in a family (see [GSA](https://genetics-gsa.org/education/genetics-learning-framework/) learning objectives).
 
 2.  Build a pedigree using bioinformatics tools (R).
+
+## Prerequisites
+
+<!-- Example from AOU: -->
+<!-- Students will benefit from some awareness of genetically-based medical conditions and ethics in genomics. We suggest this activity could accompany lectures that discuss these topics. These ethics-related questions can also be added on to any activity that leverages the [All of Us Data Browser](https://databrowser.researchallofus.org/). -->
+
+## Evaluation
+
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.
+
+::: {.callout-tip}
+## Help us improve!
+
+[Instructor survey](https://forms.gle/pgvLDMChG19pGjCq7)
+
+[Student pre-activity survey](https://genomicseducation.shinyapps.io/student_pre_survey/)
+
+[Student post-activity survey](https://genomicseducation.shinyapps.io/student_post_survey/)
+:::
+
+You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing). Feel free to contact the GEMs team with any questions (gems **at** fredhutch **dot** org).
 
 ## Materials and Setup
 
@@ -63,15 +84,3 @@ The activity is based a [published research study](https://www.nature.com/articl
 -   Part 3: Adding Diagnostic Information (15-20 minutes)
 
 -   Part 4: Genotype Mapping and Analysis (30-40 minutes)
-
-## Evaluation
-
-::: {.callout-tip}
-## Help us improve!
-
-GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor. We also appreciate you distributing our survey to students after they participate in GEMs content.
-
-[Instructor survey](https://forms.gle/pgvLDMChG19pGjCq7)
-
-Student survey
-:::
