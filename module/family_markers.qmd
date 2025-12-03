@@ -12,7 +12,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 
 This activity teaches students to interpret pedigree information and use bioinformatics tools (R) to build pedigrees for tracking disease traits in families. Students will work with real data from a bipolar disorder genetics study to understand how researchers understand risk genes using pedigrees.
 
-**Duration:** Approximately 2-3 hours (depending on student familiarity with R). ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
+**Duration:** Approximately 2-3 hours (depending on student familiarity with R) ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
 
 ## Learning Objectives
 

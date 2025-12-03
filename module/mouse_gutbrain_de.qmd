@@ -22,7 +22,7 @@ There are two options for this module:
 
 You can find out more about the RNA-seq miniCURE and other C-MOOR activities at the [C-MOOR website](https://www.c-moor.org/). An online guide to the miniCURE is [here](https://science.c-moor.org/miniCURE-RNA-seq/index.html).
 
-**Duration:** miniCURE: Three lab periods; standalone activity: 1-2 hours 
+**Duration:** miniCURE: Three lab periods; standalone activity: 1-2 hours ([help us improve this estimate!](https://forms.gle/Qd9KLiDsUFY4s1LV8))
 
 ## Learning Objectives
 

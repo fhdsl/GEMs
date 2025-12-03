@@ -12,7 +12,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 
 This activity will walk through how to use an online polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will compare calculations using different studies, demonstrating the importance of study selection and ancestry in PRS interpretation.
 
-**Duration:** Approximately 1.5-2 hours
+**Duration:** Approximately 1.5-2 hours ([help us improve this estimate!](https://forms.gle/rYeVE9BAQ4GhhXtZ6))
 
 ## Learning Objectives
 
@@ -61,8 +61,8 @@ You can use this module in several formats. Feel free to adapt to your needs!
 Students will need: 
 
 - A device that accesses the internet. 
-- Students will use this website: <https://prs.byu.edu/calculate_score.html>. Access to Microsoft Excel or Google Sheets may be helpful.
-- Toy data hosted at: <https://genomicseducation.org/data/prs_ind_1.txt>
+- Access to this website: <https://prs.byu.edu/calculate_score.html>. Access to Microsoft Excel or Google Sheets may be helpful.
+- Ability to downlaod toy data hosted at: <https://genomicseducation.org/data/prs_ind_1.txt>
 
 ::: callout-warning
 ## This content contains URLs
