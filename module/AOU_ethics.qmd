@@ -52,9 +52,9 @@ Students will need a device that accesses the internet.
 ::: callout-warning
 ## This content contains URLs
 
-Many genomics websites change frequently. We suggest confirming links are still active prior to running this activity.
+We suggest confirming links are still active prior to running this activity.
 :::
 
 ### Instructor Materials
 
-- Answer key available [here](https://docs.google.com/document/d/16GiVCWKhVxkKzOUr6XlQ_vdj-tyxBYlIa3lmstzf38Y/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+An answer key is available [here](https://docs.google.com/document/d/16GiVCWKhVxkKzOUr6XlQ_vdj-tyxBYlIa3lmstzf38Y/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.

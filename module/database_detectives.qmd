@@ -58,15 +58,15 @@ Students will need a device that accesses the internet.
 ::: callout-warning
 ## This content contains URLs
 
-Many genomics websites change frequently. We suggest confirming links are still active prior to running this activity.
+We suggest confirming links are still active prior to running this activity.
 
 Students will use these websites: [_FlyBase_](https://flybase.org/), [_Mouse Genome Informatics_](https://informatics.jax.org/), [_ZFIN (Zebrafish Information Network _](https://zfin.org/), [_GeneCards_](https://www.genecards.org/), [_OMIM_](https://omim.org/), and [_MalaCards_](https://www.malacards.org/)
 
 ### Instructor Materials
 
--   Google Slides presentation available for borrowing images [here](https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g2c8182c8825_0_50#slide=id.g2c8182c8825_0_50).
+Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1fy3FwkSLETnRUdf8huddq2n4qcb6eOyzwVg05dbudII/edit?slide=id.g2c8182c8825_0_50#slide=id.g2c8182c8825_0_50).
 
--   Answer key available [here](https://docs.google.com/document/d/1QLoxy045YQydpZxQfaDCVLSRSi4fU00ceLBDNblAdsA/edit?tab=t.0). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+An answer key is available [here](https://docs.google.com/document/d/1QLoxy045YQydpZxQfaDCVLSRSi4fU00ceLBDNblAdsA/edit?tab=t.0). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
 
 ## Scientific Topics
 
