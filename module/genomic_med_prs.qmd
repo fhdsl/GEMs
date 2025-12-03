@@ -62,7 +62,7 @@ Students will need:
 
 - A device that accesses the internet. 
 - Access to this website: <https://prs.byu.edu/calculate_score.html>. Access to Microsoft Excel or Google Sheets may be helpful.
-- Ability to downlaod toy data hosted at: <https://genomicseducation.org/data/prs_ind_1.txt>
+- Ability to download toy data hosted at: <https://genomicseducation.org/data/prs_ind_1.txt>
 
 ::: callout-warning
 ## This content contains URLs
