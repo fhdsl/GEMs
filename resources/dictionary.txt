@@ -125,6 +125,7 @@ lightblue
 lightgreen
 likeminded
 limbic
+LMS
 lncRNA
 MAF
 MalaCards
@@ -142,6 +143,7 @@ microglia
 microtubules
 midgut
 miniCURE
+MiniCURE
 misfolded
 mistyped
 multicellular
