@@ -12,7 +12,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 
 This activity will walk through how to use an online polygenic risk score (PRS) calculator, as well as how to interpret the outcome. Students will compare calculations using different studies, demonstrating the importance of study selection and ancestry in PRS interpretation.
 
-**Duration:** Approximately 1.5-2 hours
+**Duration:** Approximately 1.5-2 hours ([help us improve this estimate!](https://forms.gle/rYeVE9BAQ4GhhXtZ6))
 
 ## Learning Objectives
 
@@ -26,27 +26,57 @@ This activity will walk through how to use an online polygenic risk score (PRS) 
 
 5.  Identify and critique scientific issues relating to society or ethics (see [GSA](https://genetics-gsa.org/education/genetics-learning-framework/) core competencies).
 
-## Materials and Setup
+## Prerequisites
 
--   Students will need:
+<!-- Example from AOU: -->
+<!-- Students will benefit from some awareness of genetically-based medical conditions and ethics in genomics. We suggest this activity could accompany lectures that discuss these topics. These ethics-related questions can also be added on to any activity that leverages the [All of Us Data Browser](https://databrowser.researchallofus.org/). -->
 
-    -   A web browser and an internet connection for this activity. Students will use this website: <https://prs.byu.edu/calculate_score.html>.
-    -   Access to Microsoft Excel or Google Sheets may be helpful.
+## Evaluation
 
--   Toy data is hosted at: <https://genomicseducation.org/data/prs_ind_1.txt>
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.
 
--   Download the student activity as:
+::: {.callout-tip}
+## Help us improve!
 
-    -   [Web page](https://genomicseducation.org/module/genomic_med_prs_student_guide.html)
-    -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/genomic_med_prs_student_guide.qmd)
-    -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/genomic_med_prs_student_guide.docx)
-    -   [Google Doc](https://docs.google.com/document/d/1qHzUEttKBJYxmcg7bnjQBMBSF_fKeVOz/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
+[Instructor survey](https://forms.gle/rYeVE9BAQ4GhhXtZ6)
 
--   Google Slides presentation available for borrowing images [here](https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?usp=sharing).
+[Student pre-activity survey](https://genomicseducation.shinyapps.io/student_pre_survey/)
 
--   Answer key available [here](https://docs.google.com/document/d/1m2-NKdFEEZDr39LCyr6GD7raf6T-ENs1GuHM74XxDZw/edit?usp=drive_link). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+[Student post-activity survey](https://genomicseducation.shinyapps.io/student_post_survey/)
+:::
 
--   Additional Background on [PRS Scores](https://drive.google.com/file/d/1iIf2Ju3FQ-G6jltcZwaQ5uK8wdcifHy2/view?usp=sharing) and [Prostate Cancer](https://drive.google.com/file/d/1JRhhsvLnt3agfExkF59ay4fqExVCaYcR/view?usp=sharing).
+You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing). Feel free to contact the GEMs team with any questions (gems **at** fredhutch **dot** org).
+
+## Materials
+
+### Student Activity
+
+You can use this module in several formats. Feel free to adapt to your needs!
+
+-   [Web page](https://genomicseducation.org/module/genomic_med_prs_student_guide.html)
+-   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/genomic_med_prs_student_guide.qmd)
+-   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/genomic_med_prs_student_guide.docx)
+-   [Google Doc](https://docs.google.com/document/d/1qHzUEttKBJYxmcg7bnjQBMBSF_fKeVOz/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
+
+Students will need: 
+
+- A device that accesses the internet. 
+- Access to this website: <https://prs.byu.edu/calculate_score.html>. Access to Microsoft Excel or Google Sheets may be helpful.
+- Ability to download toy data hosted at: <https://genomicseducation.org/data/prs_ind_1.txt>
+
+::: callout-warning
+## This content contains URLs
+
+We suggest confirming links are still active prior to running this activity. Students will use this website: <https://prs.byu.edu/calculate_score.html>.
+:::
+
+### Instructor Materials
+
+A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?usp=sharing).
+
+An answer key is available [here](https://docs.google.com/document/d/1m2-NKdFEEZDr39LCyr6GD7raf6T-ENs1GuHM74XxDZw/edit?usp=drive_link). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+
+You might wish to review additional background on [PRS Scores](https://drive.google.com/file/d/1iIf2Ju3FQ-G6jltcZwaQ5uK8wdcifHy2/view?usp=sharing) and [Prostate Cancer](https://drive.google.com/file/d/1JRhhsvLnt3agfExkF59ay4fqExVCaYcR/view?usp=sharing).
 
 ## Scientific Topics
 
@@ -67,16 +97,3 @@ This activity focuses on understanding genetic risk in human disease. Students w
 -   Part 2: Calculating PRS Score (45 minutes)
 
 -   Part 3: Comparing Studies for PRS (20-30 minutes)
-
-## Evaluation
-
-::: {.callout-tip}
-## Help us improve!
-
-GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor. We also appreciate you distributing our survey to students after they participate in GEMs content.
-
-[Instructor survey](https://forms.gle/rYeVE9BAQ4GhhXtZ6)
-
-Student survey
-:::
-

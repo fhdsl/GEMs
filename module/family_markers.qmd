@@ -12,7 +12,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 
 This activity teaches students to interpret pedigree information and use bioinformatics tools (R) to build pedigrees for tracking disease traits in families. Students will work with real data from a bipolar disorder genetics study to understand how researchers understand risk genes using pedigrees.
 
-**Duration:** Approximately 2-3 hours (depending on student familiarity with R)
+**Duration:** Approximately 2-3 hours (depending on student familiarity with R) ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
 
 ## Learning Objectives
 
@@ -20,27 +20,48 @@ This activity teaches students to interpret pedigree information and use bioinfo
 
 2.  Build a pedigree using bioinformatics tools (R).
 
-## Materials and Setup
+## Prerequisites
 
--   Students will need either:
+<!-- Example from AOU: -->
+<!-- Students will benefit from some awareness of genetically-based medical conditions and ethics in genomics. We suggest this activity could accompany lectures that discuss these topics. These ethics-related questions can also be added on to any activity that leverages the [All of Us Data Browser](https://databrowser.researchallofus.org/). -->
 
-    -   An internet connection for this activity as written (using Posit Cloud)
-    -   A local installation of R or RStudio (with data downloaded and `kinship2` package installed ahead of time)
+## Evaluation
 
--   Required R package: `kinship2`
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.
 
--   Data hosting: https://genomicseducation.org/data/pedigree_data.csv
+::: {.callout-tip}
+## Help us improve!
 
--   Download the R student activity as:
+[Instructor survey](https://forms.gle/pgvLDMChG19pGjCq7)
 
-    -   [Web page](https://genomicseducation.org/module/family_markers_student_guide.html)
-    -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/family_markers_student_guide.qmd)
-    -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/family_markers_student_guide.docx)
-    -   [Google Doc](https://docs.google.com/document/d/1PBGugINV2mOrq-knq5MXPOC-WcQSxnMA/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
+[Student pre-activity survey](https://genomicseducation.shinyapps.io/student_pre_survey/)
 
--   Google Slides presentation available for borrowing images [here](https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?usp=sharing).
+[Student post-activity survey](https://genomicseducation.shinyapps.io/student_post_survey/)
+:::
 
--   Answer key available [here](https://docs.google.com/document/d/1KcX30s2fYzFw16boGVO4MlhSAA2Pr3OzqwmndeO043U/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing). Feel free to contact the GEMs team with any questions (gems **at** fredhutch **dot** org).
+
+## Materials
+
+### Student Activity
+
+You can use this module in several formats. Feel free to adapt to your needs!
+
+-   [Web page](https://genomicseducation.org/module/family_markers_student_guide.html)
+-   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/family_markers_student_guide.qmd)
+-   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/family_markers_student_guide.docx)
+-   [Google Doc](https://docs.google.com/document/d/1PBGugINV2mOrq-knq5MXPOC-WcQSxnMA/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
+
+Students will need RStudio, data, and the R package: `kinship2`. This means either:
+
+-   A device with an internet connection for this activity as written (using Posit Cloud), access to the data hosted at https://genomicseducation.org/data/pedigree_data.csv.
+-   A local installation of R or RStudio, the ability to install the `kinship2` package, and downloaded data from https://genomicseducation.org/data/pedigree_data.csv. Instructors are welcome to download the data and provide it via email or an LMS system if desired.
+
+### Instructor Materials
+
+A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?usp=sharing).
+
+An answer key is available [here](https://docs.google.com/document/d/1KcX30s2fYzFw16boGVO4MlhSAA2Pr3OzqwmndeO043U/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
 
 ## Scientific Topics
 
@@ -63,15 +84,3 @@ The activity is based a [published research study](https://www.nature.com/articl
 -   Part 3: Adding Diagnostic Information (15-20 minutes)
 
 -   Part 4: Genotype Mapping and Analysis (30-40 minutes)
-
-## Evaluation
-
-::: {.callout-tip}
-## Help us improve!
-
-GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor. We also appreciate you distributing our survey to students after they participate in GEMs content.
-
-[Instructor survey](https://forms.gle/pgvLDMChG19pGjCq7)
-
-Student survey
-:::

@@ -15,6 +15,7 @@ avahoffman
 baseMean
 BD
 Bertollo
+BioDIGS
 Bioinformatics
 bioinformatics
 Bootstrap
@@ -80,6 +81,7 @@ FUS
 GABA
 Gadhave
 GCST
+GDSCN
 GEMs
 GenBank
 GeneCards
@@ -113,6 +115,7 @@ ifelse
 intergenic
 IntroMouse
 introns
+IRB
 ketamine
 knitr
 LDs
@@ -120,7 +123,9 @@ lfcSE
 LifeMap
 lightblue
 lightgreen
+likeminded
 limbic
+LMS
 lncRNA
 MAF
 MalaCards
@@ -128,6 +133,7 @@ Mapk
 McKusick
 MDD
 mdpi
+metagenomics
 MGI
 mgihome
 microbiome
@@ -137,6 +143,7 @@ microglia
 microtubules
 midgut
 miniCURE
+MiniCURE
 misfolded
 mistyped
 multicellular
@@ -192,6 +199,7 @@ png
 polygenic
 Polygenic
 PositCloud
+pre
 promotors
 protocadherin
 PRS
