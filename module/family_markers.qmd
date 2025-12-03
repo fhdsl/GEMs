@@ -59,9 +59,9 @@ Students will need RStudio, data, and the R package: `kinship2`. This means eith
 
 ### Instructor Materials
 
--   Google Slides presentation available for borrowing images [here](https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?usp=sharing).
+A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?usp=sharing).
 
--   Answer key available [here](https://docs.google.com/document/d/1KcX30s2fYzFw16boGVO4MlhSAA2Pr3OzqwmndeO043U/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+An answer key is available [here](https://docs.google.com/document/d/1KcX30s2fYzFw16boGVO4MlhSAA2Pr3OzqwmndeO043U/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
 
 ## Scientific Topics
 

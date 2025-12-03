@@ -98,7 +98,7 @@ Students can use any of the following datasets to compare gene expression:
 
 ### Instructor Materials
 
--   Google Slides presentation available for borrowing images [here](https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing).
+A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing).
 
 ## Scientific Topics
 
