@@ -60,7 +60,7 @@ Students will need a device that accesses the internet.
 
 We suggest confirming links are still active prior to running this activity.
 
-Students will use these websites: [_FlyBase_](https://flybase.org/), [_Mouse Genome Informatics_](https://informatics.jax.org/), [_ZFIN (Zebrafish Information Network _](https://zfin.org/), [_GeneCards_](https://www.genecards.org/), [_OMIM_](https://omim.org/), and [_MalaCards_](https://www.malacards.org/)
+Students will use these websites: [_FlyBase_](https://flybase.org/), [_Mouse Genome Informatics_](https://informatics.jax.org/), [_ZFIN (Zebrafish Information Network)_](https://zfin.org/), [_GeneCards_](https://www.genecards.org/), [_OMIM_](https://omim.org/), and [_MalaCards_](https://www.malacards.org/)
 :::
 
 ### Instructor Materials
