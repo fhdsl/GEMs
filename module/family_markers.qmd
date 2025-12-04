@@ -22,8 +22,7 @@ This activity teaches students to interpret pedigree information and use bioinfo
 
 ## Prerequisites
 
-<!-- Example from AOU: -->
-<!-- Students will benefit from some awareness of genetically-based medical conditions and ethics in genomics. We suggest this activity could accompany lectures that discuss these topics. These ethics-related questions can also be added on to any activity that leverages the [All of Us Data Browser](https://databrowser.researchallofus.org/). -->
+Students will benefit from some awareness of genetic inheritance models, pedigrees, and genetically-based medical conditions. We suggest this activity could accompany lectures that discuss these topics. 
 
 ## Evaluation
 
