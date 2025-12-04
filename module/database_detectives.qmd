@@ -24,7 +24,7 @@ This activity is loosely based on the game Clue. Students need to match four _Dr
 
 ## Prerequisites
 
-Students will benefit from some awareness of chromosome and genome organization and model organisms, as well as having a solid understanding of the Central Dogma.
+Students will benefit from some awareness of chromosome and genome organization and model organisms, as well as having a solid understanding of the Central Dogma. We suggest this activity could accompany lectures that discuss these topics. 
 
 ## Evaluation
 

@@ -34,9 +34,9 @@ You can find out more about the RNA-seq miniCURE and other C-MOOR activities at 
 
 ## Prerequisites
 
-Students will benefit from some understanding of the Central Dogma and genetically-based trait expression. They should be aware of mice as a model organism and be comfortable using online genomic databases.
+Students will benefit from some understanding of the Central Dogma and genetically-based trait expression. They should be aware of mice as a model organism and be comfortable using online genomic databases. We suggest this activity could accompany lectures that discuss these topics. 
 
-This activity requires plotting.
+This activity also requires plotting and an understanding of data visualization.
 
 ## Evaluation
 
