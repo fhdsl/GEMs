@@ -28,14 +28,81 @@ The *striatum* is part of the brain involved in motor control and cognitive task
 
 The *prefrontal cortex* is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
 
+#### The Gut-Brain Axis 
+
+The _gut-brain axis_ is the term used for the proposed connection between the gut microbiome and the brain. In recent years, studies have identified links between neurological symptoms and the presence of intestinal inflammation. There are around 100 million neurons in the human gut, and around 70% of the serotonin (an important neurotransmitter) in the human body is made in the gut. Communication between the microbes in the gut and the brain happens through multiple routes, including immune signaling (signals sent to the brain by immune cells), stimulation of the vagus nerve, and activation of the enteric nervous system (a system of neurons in the intestinal that are often called the "second brain") through formation of microbial-derived metabolites like tryptophan, short-chain fatty acids, or secondary bile acids.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "How the gut might alter the nervous system in mice.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g36e8af3aaa8_34_0#slide=id.g36e8af3aaa8_34_0")
+```
+
+In the figure above, the "up" arrow indicates an increase; this could be increased production of a protein, increased activity of a biological pathway, or a general increase in the presence of a structure. The "down" arrow indicates a decrease.
+
+Researchers have identified multiple ways the intestinal microbiota in the gut might remodel the structure of the nervous system. This includes changes in myelination, neurogenesis, neurotransmitters and synaptic plasticity, growth of dendrites, activation of microglia, and changes in the permeability of the blood-brain-barrier. The exact mechanism for these changes is still unknown. 
+
+::: callout-note
+Why are the neural processes mentioned above important?
+
+**myelination**: the process of forming protein sheaths (called myelin) around the long axons of nerves. This insulates the axon and improves the speed and efficiency of transmission of neural signals. 
+
+**neurogenesis**: the formation of new neurons, particularly in the adult central nervous system. This is important for memory and learning.`
+
+**synaptic plasticity**: the process of strengthening or weakening connections at the synapse of nerves (where the signal is transferred from one nerve to another). This sort of adaptive change is fundamental for memory and learning, but also helps with recovery after injury.
+
+**dendritic growth**: the process by which neurons form new branches (dendrites) and spines (small protrusions on the dendrites). This is a key aspect of synaptic plasticity and is essential for brain development, learning, and memory formation.
+
+**microglia**: immune cells found in the central nervous system. They support central nervous system development and synaptogenesis (formation of new synapses), maintain homeostasis, contribute to an immune response against infectious agents, and are associated with adult neurogenesis, neuroinflammation, degenerative diseases, stroke, trauma and regeneration.
+
+**blood-brain-barrier**: a highly selective semi-permeable barrier located in the central nervous system that separates the bloodstream from the fluid that surrounds the brain. It maintains a  stable environment for neuronal function and regulates passage of molecules between the brain and the rest of the body.
+:::
+
+Remodeling of the nervous system via the gut microbiome is suspected to be responsible for the severity of some symptoms associated with neurodevelopmental and neurodegenerative disorders. A possible link between the gut microbiome and increased symptom severity is actively being studied for Major Depressive Disorder, Autism Spectrum Disorder, fibromyalgia, migraines, Parkinson’s disease, Alzheimer’s disease, and more. 
+
+The samples in this dataset are from mice that _do not_ carry genes associated with either neurodevelopmental or neurodegenerative diseases. Instead, any symptoms or changes in the brain they show are the result of microbes introduced to their gut via fecal transplant. **This dataset gives you the opportunity to study possible effects of the gut-brain axis firsthand.**
+
+::: {.callout-caution collapse="true"}
+# Autism Spectrum Disorder: A Neurodevelopmental Disorder
+
+Although Autism Spectrum Disorder (ASD) can be diagnosed at any age, it is considered neurodevelopmental disorders because symptoms usually show up within the first two years of life. Many of these disorders have overlapping symptoms, including difficulty managing emotions, experiencing intense emotional outbursts, a dysregulated stress response system, difficulty with executive functions (like attention regulation, organization, and planning), and issues with social communication and unspoken social norms. Many of these disorders have similar biological roots, such as neuroinflammation, genetic variation, and disruptions in systems that rely on dopamine, norepinephrine, and serotonin (which can cause impaired connections between regions of the brain, called white matter connectivity). People with these disorders also show differences in brain regions like the prefrontal cortex and the amygdala compared to people without neurodevelopmental disorders. For example, malfunctioning of the hypothalamic-pituitary-adrenal (HPA) axis is common in neurodevelopmental disorders. The HPA axis regulates the brain and body's response to stress. Many people with neurodevelopmental disorders show an unusually strong reaction to stress and can have difficulty recovering from it.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Researchers have identified three major factors that may contribute to neurodevelopmental disorders.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g344ce1a0afa_0_0#slide=id.g344ce1a0afa_0_0")
+```
+
+*Autism spectrum disorder (ASD)* is a neurological disorder that affects behavioral and social interactions, among other things. Individuals diagnosed with ASD can experience a wide range of symptoms, including differences in social behaviors and communication styles, as well as intellectual disabilities and physical issues like sensory sensitivities or gastrointestinal problems. Some genes that have been suggested as ASD risk genes include SHANK3, NRXN1, CHD8, ARIH2, ZDHHC15, and TRPC6. Individuals with ASD also show changes in both white and gray matter volume, as well as an imbalance in connectivity of neural circuits (there are more connections and stronger connections than typical within local regions of the brain, and both fewer and weaker connections between distant regions of the brain). The neural circuits that are imbalanced connect brain regions like the prefrontal cortex and the amygdala.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3707230d9af_0_0#slide=id.g3707230d9af_0_0")
+```
+:::
+
+::: {.callout-caution collapse="true"}
+# Brain Structure: The Striatum and the Prefrontal Cortex
+
+This dataset includes gene expression data from two different regions in the brain: the striatum and the prefrontal cortex. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the striatum in the human brain.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d1434cdd1_12_0#slide=id.g33d1434cdd1_12_0")
+```
+
+The *striatum* is part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions (often called executive functions). It lies deep within the center of the brain and is composed of both gray matter (which can be thought of as the "processing" part of brain tissue) and white matter (which is the brain structure involved in transporting messages); the combination of the gray and white matter give this region of the brain a striped appearance, resulting in the name "striatum". The striatum is involved in both reflexive movement - that is, involuntary movement that happens as an immediate response to a stimulus - and slower, planned movement like walking. In Parkinson's disease, some patients experience degeneration of parts of the striatum, resulting in spastic, uncontrollable movement.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the prefrontal cortex in the human brain.", out.width = '100%'}
+ottrpal::include_slide("
+https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g33d1434cdd1_12_10#slide=id.g33d1434cdd1_12_10")
+```
+
+The *prefrontal cortex* is the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions. This can include planning, self-control, and working towards long-term goals. The prefrontal cortex is located in the very front of the brain, just behind your forehead. One of the most famous brain injury patients was Phineas Gage, a railroad worker who survived an iron rod through his forehead. His prefrontal cortex was destroyed in this accident, and doctors noted huge behavioral and personality changes. You can read more about his case [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC1114479/).
+:::
+
 #### The original study
 
 The original study, *Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice*, was published in 2019 [@sharon2019]. Gut microbiota are known to be different between individuals with ASD and individuals who are considered typically-developing. Additionally, some individuals with ASD also experience gastrointestinal symptoms, and their gut microbiota show the greatest difference when compared to the gut microbiota of typically-developing individuals. Some researchers have proposed that gut bacteria can influence some of the symptoms of ASD. The relationship between the intestinal microbiome and the development and function of the human brain is known as the *gut-brain axis.*
 
-In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. They transplanted stool from either humans with ASD or controls into germ-free mice and discovered that colonization with gut microbiota was enough to induce ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.
+In this study, researchers explored whether they could induce ASD-like behaviors in mice by changing their gut microbiome. They transplanted stool (which contains gut bacteria) from humans into germ-free mice. The mice received gut bacteria from either humuns diagnosed with ASD or humans with no diagnosis. The researchers discovered that colonization with gut microbiota was enough to induce _some_ ASD-like behaviors in the mice. They also let the mice breed and collected gene expression data from the brains of their offspring to explore whether changing the gut microbiota could result in changed gene expression. In particular, they discovered that the offspring of mice who received stool from ASD donors showed different gene splicing and expression profiles of certain ASD-relevant genes.
 
 ::: callout-note
-It is important to note that researchers are **not** suggesting that ASD is entirely induced by gut bacteria. There is a strong genetic component to ASD. Scientists have known for years that there are **both genetic and environmental components** to the development or severity of **some** ASD symptoms. This research explores one possible environmental component.
+It is important to note that researchers are **not** suggesting that ASD is entirely induced by gut bacteria. There is a **strong genetic component to ASD.** Scientists have known for years that there are **both genetic and environmental components** to the development or severity of **some** ASD symptoms. This research explores one possible environmental component.
 :::
 
 You can read the original research paper [here](https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1).
@@ -66,21 +133,21 @@ We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free
 
 <!-- callout about what cloud computing is ? -->
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+```{r, fig.align='center', echo = FALSE, fig.alt= "Sign up for a free Posit Cloud account before starting this lab.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3b501096c6b_1_0#slide=id.g3b501096c6b_1_0")
 ```
 
 Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
+```{r, fig.align='center', echo = FALSE, fig.alt= "Click on New Project and New RStudio Project to open your workspace.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3b501096c6b_1_6#slide=id.g3b501096c6b_1_6")
 ```
 
 
 Rename your project "Differential Expression Mouse GutBrain" by clicking on "Untitled Project".
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
+```{r, fig.align='center', echo = FALSE, fig.alt= "Change the name of your Posit Cloud workspace by clicking here.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3b501096c6b_1_13#slide=id.g3b501096c6b_1_13")
 ```
 
 ### Package Install and Load
@@ -88,6 +155,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 We will need to install the `tidyverse` package for this activity.
 
 Type the following into your console and press return to run the code. You will see a lot of red text, but usually that's a good thing!
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This is where you start typing in order to use the console in Posit Cloud", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?slide=id.g3b501096c6b_1_155#slide=id.g3b501096c6b_1_155")
+```
 
 ```{r message=FALSE}
 install.packages("tidyverse")
@@ -123,6 +194,12 @@ prefrontal <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_aut
 ```
 
 You have just loaded differential expression data comparing ASD-transplant mice and control-transplant mice for the prefrontal cortex region of the brain.
+
+::: callout-tip
+## Check yourself
+
+What does the prefrontal cortex region of the brain do?
+:::
 
 ## Part 2
 
