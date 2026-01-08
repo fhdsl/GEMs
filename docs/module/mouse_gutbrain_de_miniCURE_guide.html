@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -87,14 +87,15 @@ div.csl-indent {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9c4ded7fe67dcd3ed7c394c1ac0fd36b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1db3f541d99483cdc7a0d9cf38862b2c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -312,12 +313,12 @@ Note
 <p>Before you start working with the dataset, you will need to make some decisions about the questions you want to answer.</p>
 <p><strong>Are you interested in exploring gene expression differences between two regions of the mouse brain, without focusing on the gut-brain axis? Expand this section to read more.</strong></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Brain Structure: The Striatum and the Prefrontal Cortex
+<span class="screen-reader-only">Caution</span>Brain Structure: The Striatum and the Prefrontal Cortex
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -349,12 +350,12 @@ Brain Structure: The Striatum and the Prefrontal Cortex
 </div>
 <p><strong>Are you interested in exploring neurodevelopmental disorders?</strong> These are disorders that are the result of altered brain development. Although this dataset was created using “ASD-type” mice, many neurological disorders have shared symptoms and probably share a biological basis. <strong>Expand this section to read more.</strong></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Brain Disorders: Neurodevelopmental Disorders
+<span class="screen-reader-only">Caution</span>Brain Disorders: Neurodevelopmental Disorders
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -418,12 +419,12 @@ Brain Disorders: Neurodevelopmental Disorders
 </div>
 <p><strong>Are you interested in exploring neurodegenerative disorders?</strong> These are disorders that that occur when brain structures and systems experience degradation and may be the result of similar biological processes that cause neurodevelopmental disorders. <strong>Expand this section to read more.</strong></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Brain Disorders: Neurodegenerative Disorders
+<span class="screen-reader-only">Caution</span>Brain Disorders: Neurodegenerative Disorders
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -533,12 +534,12 @@ Brain Disorders: Neurodegenerative Disorders
 <p>Make sure you are recording the name and gene ID for the mouse! Gene names are often similar between mice and humans, but the gene IDs will be very different. If you don’t use the correct gene ID when exploring this dataset, you won’t get very far.</p>
 <p>There are multiple ways to use MGI to find information about your mouse genes. <strong>Expand each box for detailed instructions.</strong></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Looking up genes based on human gene name
+<span class="screen-reader-only">Caution</span>Looking up genes based on human gene name
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -642,12 +643,12 @@ Looking up genes based on human gene name
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Looking up genes associated with a human disease
+<span class="screen-reader-only">Caution</span>Looking up genes associated with a human disease
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -762,11 +763,11 @@ Looking up genes associated with a human disease
 <p>We will need to install the <code>tidyverse</code> package for this activity.</p>
 <p>Type the following into the SciServer console and press return to run the code.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, we will load the package so it’s ready to use:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -800,7 +801,7 @@ Note
 </div>
 <p>You can load this dataset into R using this code.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gutbrain_genes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_counts_controls.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gutbrain_genes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_counts_controls.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 59
 ── Column specification ────────────────────────────────────────────────────────
@@ -823,7 +824,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 <h3 class="anchored" data-anchor-id="exploring-and-summarizing-count-data">Exploring and summarizing count data</h3>
 <p>When you first open the gene expression data, you want to verify that the data has loaded correctly. You can do this with the <code>head</code> and <code>tail</code> commands. Remember, <code>head</code> prints the first 6 rows of a dataset, while <code>tail</code> prints the last 6 rows.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_genes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gutbrain_genes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 59
   GeneID       SRR6652471 SRR6652507 SRR6652508 SRR6652511 SRR6652512 SRR6652513
@@ -842,7 +843,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 #   SRR6652496 &lt;dbl&gt;, SRR6652501 &lt;dbl&gt;, SRR6652502 &lt;dbl&gt;, SRR6652519 &lt;dbl&gt;,
 #   SRR6652520 &lt;dbl&gt;, SRR6652443 &lt;dbl&gt;, SRR6652389 &lt;dbl&gt;, SRR6652390 &lt;dbl&gt;, …</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(gutbrain_genes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(gutbrain_genes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 59
   GeneID       SRR6652471 SRR6652507 SRR6652508 SRR6652511 SRR6652512 SRR6652513
@@ -884,7 +885,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 <p>Because we’re saving the results of our calculation as a new column, we have to use a <code>$</code> to tell R to make a new column. In this case, R interprets <code>gutbrain_genes$total_counts</code> as the <code>total_counts</code> column in the <code>gutbrain_genes</code> dataset (object).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gutbrain_genes<span class="sc">$</span>total_counts <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(gutbrain_genes[<span class="dv">2</span><span class="sc">:</span><span class="dv">59</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gutbrain_genes<span class="sc">$</span>total_counts <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(gutbrain_genes[<span class="dv">2</span><span class="sc">:</span><span class="dv">59</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Let’s look at the mean, median, maximum, and minimum values (called descriptive statistics) of the new <code>total_counts</code> column we made. This lets us know what sort of scale we might need to use when making a graph of the data. We can do this using the <code>summary</code> command.</p>
 <div class="cell" data-layout-align="center">
@@ -897,7 +898,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gutbrain_genes<span class="sc">$</span>total_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gutbrain_genes<span class="sc">$</span>total_counts)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
 0.000e+00 0.000e+00 2.958e+03 1.798e+06 3.478e+05 3.321e+09 </code></pre>
@@ -915,11 +916,11 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 <p>Let’s try saving the output of the summary statement with the <code>&lt;-</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>summary_stats <span class="ot">&lt;-</span> <span class="fu">summary</span>(gutbrain_genes<span class="sc">$</span>total_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>summary_stats <span class="ot">&lt;-</span> <span class="fu">summary</span>(gutbrain_genes<span class="sc">$</span>total_counts)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>When you save the output as <code>summary_stats</code>, R doesn’t automatically print the output into your console. You’ll have to use a second command to tell R to print.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>summary_stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>summary_stats</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
 0.000e+00 0.000e+00 2.958e+03 1.798e+06 3.478e+05 3.321e+09 </code></pre>
@@ -937,7 +938,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log10</span>(gutbrain_genes<span class="sc">$</span>total_counts), <span class="at">main=</span><span class="st">"Log10 Read Counts for Mouse RNA-seq sample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log10</span>(gutbrain_genes<span class="sc">$</span>total_counts), <span class="at">main=</span><span class="st">"Log10 Read Counts for Mouse RNA-seq sample"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -958,7 +959,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 <p>Remember you did this a couple steps ago when you make the “total_counts” column! You’ll do essentially the same thing, except you’ll tell R to add 0.1 to the “total_counts” column and save that value in a new column called “total_counts_01”.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gutbrain_genes<span class="sc">$</span>total_counts_01 <span class="ot">&lt;-</span> gutbrain_genes<span class="sc">$</span>total_counts <span class="sc">+</span> <span class="fl">0.1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gutbrain_genes<span class="sc">$</span>total_counts_01 <span class="ot">&lt;-</span> gutbrain_genes<span class="sc">$</span>total_counts <span class="sc">+</span> <span class="fl">0.1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now just recreate your histogram using “total_count_01” instead of “total_counts”.</p>
 <div class="cell" data-layout-align="center">
@@ -971,7 +972,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log10</span>(gutbrain_genes<span class="sc">$</span>total_counts_01), <span class="at">main=</span><span class="st">"Transformed Log10 Read Counts for Mouse RNA-seq sample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log10</span>(gutbrain_genes<span class="sc">$</span>total_counts_01), <span class="at">main=</span><span class="st">"Transformed Log10 Read Counts for Mouse RNA-seq sample"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -987,7 +988,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 <p>You may want to look at the read count for a specific gene in your dataset. This can be done with the <code>filter</code> command. Let’s look at the read counts for the Reg3a gene, across all mice. Remember, this is the gene we looked up earlier in the MGI database. The Ensembl gene ID is “ENSMUSG00000079516”.</p>
 <p>For <code>filter</code>, we need to tell R which dataset to use, and which column to search in.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(gutbrain_genes, GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(gutbrain_genes, GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Luckily, we chose a gene that is indeed expressed in the dataset! Making sure yours chosen genes are expressed will be important for our next step.</p>
 </section>
@@ -1027,7 +1028,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 <p>Each gene ID should have quotation marks around it, and the different IDs should be separated using a comma.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now we simply filter the <code>gutbrain_genes</code> dataset so that we only keep the rows for the gene IDs in our gene set. Remember, we want to use the <code>filter</code> command. The combination of <code>filter</code> and <code>%in%</code> tells R to only keep those rows in the <code>gutbrain_genes</code> dataset if the gene ID is also found in our gene list we made earlier.</p>
 <div class="cell" data-layout-align="center">
@@ -1040,7 +1041,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(gutbrain_genes, gutbrain_genes<span class="sc">$</span>GeneID <span class="sc">%in%</span> gene_set)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">filter</span>(gutbrain_genes, gutbrain_genes<span class="sc">$</span>GeneID <span class="sc">%in%</span> gene_set)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now we have our data subsetted the way we want, but we aren’t quite ready for the heatmap yet. In order for R to make a heatmap from our data, we do have to reformat things a little bit. Right now our data is in “tibble” format, but we want it in a numerical “matrix” format. We can’t switch directly from “tibble” to “matrix” (because the GeneID column is character data, not numerical data). Instead, let’s first convert from “tibble” to a format called “dataframe”.</p>
 <div class="cell" data-layout-align="center">
@@ -1053,7 +1054,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(gutbrain_motor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(gutbrain_motor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>To our eyes, not much has changed in the format, but it’s very different to R. Now we’re going to tell R to name the rows based on the “GeneID” column.</p>
 <div class="cell" data-layout-align="center">
@@ -1076,13 +1077,13 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(gutbrain_motor) <span class="ot">&lt;-</span> gutbrain_motor<span class="sc">$</span>GeneID</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(gutbrain_motor) <span class="ot">&lt;-</span> gutbrain_motor<span class="sc">$</span>GeneID</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>gutbrain_motor<span class="sc">$</span>GeneID <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>gutbrain_motor<span class="sc">$</span>total_counts <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>gutbrain_motor<span class="sc">$</span>total_counts_01 <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>gutbrain_motor<span class="sc">$</span>total_counts_01 <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Great! Now we can change the format of <code>gutbrain_motor_controls</code> dataset to “matrix” format in order to make our heatmap using the <code>heatmap</code> function.</p>
 <div class="cell" data-layout-align="center">
@@ -1095,9 +1096,9 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(gutbrain_motor)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(gutbrain_motor)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1124,7 +1125,7 @@ dbl (58): SRR6652471, SRR6652507, SRR6652508, SRR6652511, SRR6652512, SRR665...
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-How are the samples in my dataset ordered?
+<span class="screen-reader-only">Tip</span>How are the samples in my dataset ordered?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1137,7 +1138,7 @@ How are the samples in my dataset ordered?
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1160,7 +1161,7 @@ How are the samples in my dataset ordered?
 </div>
 <p>You can find an extensive list of all the colors available in R at <a href="https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/">https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/</a>. <strong>The general convention in biology is that the lightest colors on a heatmap indicate the lowest values.</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"darkblue"</span>))(<span class="dv">16</span>), <span class="at">main =</span> <span class="st">" Motor Neuron Gene List Expression"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"darkblue"</span>))(<span class="dv">16</span>), <span class="at">main =</span> <span class="st">" Motor Neuron Gene List Expression"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1180,18 +1181,18 @@ How are the samples in my dataset ordered?
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(gutbrain_motor) <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(gutbrain_motor) <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames</span>(gutbrain_motor) <span class="sc">==</span> <span class="st">"ENSMUSG00000028883"</span> <span class="sc">~</span> <span class="st">"Sema3a"</span>,</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames</span>(gutbrain_motor) <span class="sc">==</span> <span class="st">"ENSMUSG00000021936"</span> <span class="sc">~</span> <span class="st">"Mapk8"</span>,</span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames</span>(gutbrain_motor) <span class="sc">==</span> <span class="st">"ENSMUSG00000020598"</span> <span class="sc">~</span> <span class="st">"Nrcam"</span>,</span>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames</span>(gutbrain_motor) <span class="sc">==</span> <span class="st">"ENSMUSG00000020886"</span> <span class="sc">~</span> <span class="st">"Dlg4"</span>,</span>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames</span>(gutbrain_motor) <span class="sc">==</span> <span class="st">"ENSMUSG00000025020"</span> <span class="sc">~</span> <span class="st">"Slit1"</span>,</span>
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames</span>(gutbrain_motor) <span class="sc">==</span> <span class="st">"ENSMUSG00000025958"</span> <span class="sc">~</span> <span class="st">"Creb1"</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now we can run our heatmap code again.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"darkblue"</span>))(<span class="dv">16</span>), <span class="at">main =</span> <span class="st">" Motor Neuron Gene List Expression"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"darkblue"</span>))(<span class="dv">16</span>), <span class="at">main =</span> <span class="st">" Motor Neuron Gene List Expression"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1202,7 +1203,7 @@ How are the samples in my dataset ordered?
 </div>
 <p>Finally, here’s all the code you just ran to create your heatmap in one place, in case you want to run it again.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#define your geneset and make a vector</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#define your geneset and make a vector</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>gene_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ENSMUSG00000028883"</span>, <span class="st">"ENSMUSG00000021936"</span>, <span class="st">"ENSMUSG00000020598"</span>, <span class="st">"ENSMUSG00000020886"</span>, <span class="st">"ENSMUSG00000025020"</span>, <span class="st">"ENSMUSG00000025958"</span>)</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">#create new dataset that only include expression data for your geneset</span></span>
@@ -1216,7 +1217,7 @@ How are the samples in my dataset ordered?
 <span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>gutbrain_motor <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(gutbrain_motor)</span>
 <span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co">#create heatmap with custom colors and title</span></span>
-<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"darkblue"</span>))(<span class="dv">16</span>), <span class="at">main =</span> <span class="st">" Motor Neuron Gene List Expression"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(gutbrain_motor,  <span class="at">Colv =</span> <span class="cn">NA</span>, <span class="at">Rowv =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"darkblue"</span>))(<span class="dv">16</span>), <span class="at">main =</span> <span class="st">" Motor Neuron Gene List Expression"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -1227,14 +1228,14 @@ How are the samples in my dataset ordered?
 <h3 class="anchored" data-anchor-id="package-install-and-load-1">Package Install and Load</h3>
 <p>Before you start, make sure to load the <code>tidyverse</code> package! You should still have it installed from last time.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="loading-the-differential-expression-data" class="level3">
 <h3 class="anchored" data-anchor-id="loading-the-differential-expression-data">Loading the differential expression data</h3>
 <p>Let’s say you want to open the dataset that compares gene expression between ASD and control mice in both brain regions and call it <code>asd_vs_c</code>. We will do this using <code>read_csv</code>. Copy and paste this command into your console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -1261,7 +1262,7 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Which differential expression dataset should I use?
+<span class="screen-reader-only">Tip</span>Which differential expression dataset should I use?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1271,7 +1272,7 @@ Which differential expression dataset should I use?
 </div>
 <p>When you open the differential expression dataset, you’ll notice some new column names. The ones you want to pay attention to are <strong>gene</strong>, <strong>log2FoldChange</strong>, and <strong>padj</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   GeneID             baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -1312,8 +1313,8 @@ Which differential expression dataset should I use?
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_ascending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, log2FoldChange)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_ascending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_ascending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, log2FoldChange)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_ascending)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   GeneID             baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -1329,8 +1330,8 @@ Which differential expression dataset should I use?
 <p>The genes at the top of this table have the most negative log2FoldChange values and are downregulated in the experimental mice.</p>
 <p>We can use a similar command to look at the genes with the largest positive log2FoldChange. These are genes that are upregulated in experimental mice.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_descending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, <span class="fu">desc</span>(log2FoldChange))</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_descending)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_descending <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, <span class="fu">desc</span>(log2FoldChange))</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_descending)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   GeneID             baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -1351,8 +1352,8 @@ Which differential expression dataset should I use?
 <h3 class="anchored" data-anchor-id="arranging-dataset-based-on-padj">Arranging dataset based on padj</h3>
 <p>Maybe you also want to arrange the genes by whether the estimated differential expression is statistically significant. Instead of <code>log2FoldChange</code>, you will want to look at <code>padj</code>. You can use the <code>arrange</code> command to sort the results to put the smallest padj values first.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_sorted <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, padj)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_sorted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c_sorted <span class="ot">&lt;-</span> <span class="fu">arrange</span>(asd_vs_c, padj)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c_sorted)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   GeneID             baseMean log2FoldChange lfcSE  stat   pvalue     padj
@@ -1381,7 +1382,7 @@ Which differential expression dataset should I use?
 </div>
 <p>We will first need to do a log transformation of the <code>padj</code> variable. We do this in order to spread our values out along the y-axis - otherwise, all the dots that represent genes will be too scrunched together. Remember, we did this earlier when we made our histograms!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now, we just create a scatterplot. The code for this is kind of complicated, but we’ll walk through it.</p>
 <div class="cell" data-layout-align="center">
@@ -1395,8 +1396,8 @@ Which differential expression dataset should I use?
 </div>
 <p>Here’s the code for your basic volcano plot. Notice that we can just use the column names for <code>x</code> and <code>y</code>! There’s no need to use the <code>dataset$column_name</code> syntax. The <code>ggplot</code> command already knows to look for these column names in the <code>asd_vs_c</code> dataset.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans)) <span class="sc">+</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans)) <span class="sc">+</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -1422,13 +1423,13 @@ Which differential expression dataset should I use?
 <p>To recap: A gene is labeled “UP” if its log2FoldChange value is greater than 0.6 <em>and</em> its adjusted p-value is less than 0.05.</p>
 <p>A gene is labeled “DOWN” if its log2FoldChange value is less than -0.6 <em>and</em> its adjusted p-value is less than 0.05.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"UP"</span></span>
 <span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>diffexpressed[asd_vs_c<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.6</span> <span class="sc">&amp;</span> asd_vs_c<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"DOWN"</span></span>
 <span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 9
   GeneID        baseMean log2FoldChange lfcSE  stat   pvalue     padj padj_trans
@@ -1446,10 +1447,10 @@ Which differential expression dataset should I use?
 <p>We also add a line about the colors we want to use (<code>scale_color_manual</code>). In this case, we have chosen to make the points for downregulated genes turquoise and the points for upregulated genes gold. The additional command <code>labels</code> just creates the labels on the legend.</p>
 <p>You can find an extensive list of all the colors available in R at <a href="https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/">https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -1469,15 +1470,15 @@ Which differential expression dataset should I use?
 <p>In R, an “case_when” statement tells R to do something only when a condition is true. In our command, R is going through the <code>asd_vs_c</code> row by row. For each row, we are telling R to first check whether the geneID of that row is “ENSMUSG00000079516”. If it is, then R will fill in the <code>gene_label</code> column with the gene symbol “Reg3a”. If it is not, R moves onto the next part of our command.</p>
 <p>When R moves onto this second command, it’s now checking to see if the geneID for the row is “ENSMUSG00000024440”. If it is, then R fills in the <code>gene_label</code> column with the gene symbol “Pcdh12”. If it is not, R moves to the third command in the <code>case_when</code> statement. The final line tells R to fill in the <code>gene_label</code> column with “NA” for any row that didn’t match the previous commands. This will tell R in the future that the information for this column is missing.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>gene_label <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span> <span class="sc">~</span> <span class="st">"Reg3a"</span>,</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  asd_vs_c<span class="sc">$</span>GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000024440"</span> <span class="sc">~</span> <span class="st">"Pcdh12"</span>,</span>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Great! You can check to see what the new column <code>gene_label</code> looks like by using the <code>head</code> command.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asd_vs_c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 10
   GeneID        baseMean log2FoldChange lfcSE  stat   pvalue     padj padj_trans
@@ -1494,20 +1495,20 @@ Which differential expression dataset should I use?
 <p>Now we just need to remake our volcano plot and add some to code that tells R to label the points we’re interested in. The command <code>label = gene_label</code> goes right after the code that tells R how to color the points. We also need to add something at the end of our code that tells R to put the labels on top of the plot that we’ve made. That’s the <code>+   geom_text_repel(max.overlaps = Inf)</code> command.</p>
 <p>In order for this command to work, we do need to install and load a new library called <code>ggrepel</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'ggrepel'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'ggrepel'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Installing package into '/usr/local/lib/R/site-library'
 (as 'lib' is unspecified)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Excellent. Now that we have installed and loaded this package (which you only need to do once for each R session!), we can run the code to create the volcano plot. Remember, we added <code>label = gene_label</code> to tell R to add labels to the points, and <code>geom_text_repel(max.overlaps = Inf)</code> to tell R to put the labels on top of the plot so we can see them.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
 <span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -1526,12 +1527,12 @@ Which differential expression dataset should I use?
 </div>
 <p>You may want to add a title to your plot. This can be done with the <code>ggtitle</code> command.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> asd_vs_c, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> padj_trans, <span class="at">col =</span> diffexpressed, <span class="at">label =</span> gene_label)) <span class="sc">+</span></span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
 <span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
 <span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 17318 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -1550,7 +1551,7 @@ Which differential expression dataset should I use?
 </div>
 <p>Here’s all the code we used to build a volcano plot in one place so that you can easily run it again (and make modifications).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co">#log transform the padj values so the y-axis is formatted for plotting</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co">#log transform the padj values so the y-axis is formatted for plotting</span></span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>asd_vs_c<span class="sc">$</span>padj_trans <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(asd_vs_c<span class="sc">$</span>padj)</span>
 <span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the diffexpressed column so that we can color the upregulated and downregulated genes on the plot</span></span>
@@ -1573,7 +1574,7 @@ Which differential expression dataset should I use?
 <span id="cb59-21"><a href="#cb59-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"turquoise"</span>, <span class="st">"grey"</span>, <span class="st">"gold"</span>), </span>
 <span id="cb59-22"><a href="#cb59-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>, <span class="st">"Not significant"</span>, <span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
 <span id="cb59-23"><a href="#cb59-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">max.overlaps =</span> <span class="cn">Inf</span>) <span class="sc">+</span></span>
-<span id="cb59-24"><a href="#cb59-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb59-24"><a href="#cb59-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Differential Expression in Mouse Prefrontal Cortex"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
@@ -1643,13 +1644,14 @@ Which differential expression dataset should I use?
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

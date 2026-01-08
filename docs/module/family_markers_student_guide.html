@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -87,14 +87,15 @@ div.csl-indent {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9c4ded7fe67dcd3ed7c394c1ac0fd36b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1db3f541d99483cdc7a0d9cf38862b2c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -264,7 +265,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Check Your Knowledge
+<span class="screen-reader-only">Note</span>Check Your Knowledge
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -315,7 +316,7 @@ Check Your Knowledge
 <p>We will need to install the <code>kinship2</code> package for this activity.</p>
 <p>Type the following into your console and press return to run the code. You will see a lot of red text, but usually that’s a good thing!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"kinship2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"kinship2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -328,7 +329,7 @@ Check Your Knowledge
 </div>
 <p>Next, we will load the package so it’s ready to use:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kinship2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kinship2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -345,7 +346,7 @@ Check Your Knowledge
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-What are R Packages?
+<span class="screen-reader-only">Tip</span>What are R Packages?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -359,8 +360,8 @@ What are R Packages?
 <h3 class="anchored" data-anchor-id="get-pedigree-data">Get Pedigree Data</h3>
 <p>We’ll read in some data from the GEMs website. Run the following code in your console:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ped_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://genomicseducation.org/data/pedigree_data.csv"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ped_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ped_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://genomicseducation.org/data/pedigree_data.csv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ped_data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ped id father mother sex bipolar depression diagnosis_available DAO IL6
 1    1  1      0      0   1      NA         NA                   0        
@@ -401,7 +402,7 @@ What are R Packages?
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-What is an R object?
+<span class="screen-reader-only">Tip</span>What is an R object?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -412,7 +413,7 @@ What is an R object?
 </div>
 <p>Enter the following code in the console to view the data in tabular format:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(ped_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(ped_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -433,7 +434,7 @@ What is an R object?
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Pedigree Data Dictionary
+<span class="screen-reader-only">Tip</span>Pedigree Data Dictionary
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -460,7 +461,7 @@ Pedigree Data Dictionary
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Check Your Knowledge
+<span class="screen-reader-only">Note</span>Check Your Knowledge
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -479,13 +480,13 @@ Check Your Knowledge
 <h3 class="anchored" data-anchor-id="assemble-the-pedigree">Assemble the Pedigree</h3>
 <p>Paste the following code into your console and hit enter. You should not see any output.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree <span class="ot">&lt;-</span> <span class="fu">pedigree</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree <span class="ot">&lt;-</span> <span class="fu">pedigree</span>(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> ped_data<span class="sc">$</span>id,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">dadid =</span> ped_data<span class="sc">$</span>father,</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">momid =</span> ped_data<span class="sc">$</span>mother,</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> ped_data<span class="sc">$</span>sex,</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">famid =</span> ped_data<span class="sc">$</span>ped</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -511,7 +512,7 @@ Tip
 </div>
 <p>Type the name of the pedigree object in the console and observe the output.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Pedigree list with 20 total subjects in 1 families</code></pre>
 </div>
@@ -521,7 +522,7 @@ Tip
 <h3 class="anchored" data-anchor-id="plot-the-pedigree">Plot the Pedigree</h3>
 <p>Paste the following code into the console and hit enter.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -549,7 +550,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Check Your Knowledge
+<span class="screen-reader-only">Note</span>Check Your Knowledge
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -567,21 +568,21 @@ Check Your Knowledge
 <h3 class="anchored" data-anchor-id="adding-diagnosis">Adding Diagnosis</h3>
 <p>Modify your code from above to add “affected” to the pedigree information. Run the code in the console by pasting the following and hitting enter.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree <span class="ot">&lt;-</span> <span class="fu">pedigree</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bipolar_pedigree <span class="ot">&lt;-</span> <span class="fu">pedigree</span>(</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> ped_data<span class="sc">$</span>id,</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">dadid =</span> ped_data<span class="sc">$</span>father,</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">momid =</span> ped_data<span class="sc">$</span>mother,</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> ped_data<span class="sc">$</span>sex,</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">famid =</span> ped_data<span class="sc">$</span>ped,</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">affected =</span> <span class="fu">as.matrix</span>(ped_data[, <span class="fu">c</span>(<span class="st">"bipolar"</span>, <span class="st">"depression"</span>)])</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="mapping-diagnosis" class="level3">
 <h3 class="anchored" data-anchor-id="mapping-diagnosis">Mapping Diagnosis</h3>
 <p>Paste the following code into the console and hit enter.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -592,8 +593,8 @@ Check Your Knowledge
 </div>
 <p>We can now see some information about diagnosis but a key might be helpful. Add it by running the following:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>])</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -612,7 +613,7 @@ Check Your Knowledge
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Check Your Knowledge
+<span class="screen-reader-only">Note</span>Check Your Knowledge
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -630,9 +631,9 @@ Check Your Knowledge
 <h3 class="anchored" data-anchor-id="adding-genotypes">Adding Genotypes</h3>
 <p>Let’s add the genotype for the DAO gene to our pedigree. It will replace the numeric labels for individuals.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>],</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>],</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">id =</span> ped_data<span class="sc">$</span>DAO)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -665,9 +666,9 @@ Tip
 </div>
 <p>Modify Your code so that it shows the genotype for the IL6 gene.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>],</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bipolar_pedigree[<span class="st">'1'</span>],</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">id =</span> ped_data<span class="sc">$</span>IL6)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pedigree.legend</span>(bipolar_pedigree, <span class="at">location =</span> <span class="st">"topleft"</span>, <span class="at">radius =</span> .<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -695,7 +696,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Check Your Knowledge
+<span class="screen-reader-only">Note</span>Check Your Knowledge
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -768,13 +769,14 @@ Check Your Knowledge
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
