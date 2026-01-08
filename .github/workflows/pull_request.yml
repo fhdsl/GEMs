@@ -49,8 +49,6 @@ jobs:
       toggle_style_code: "${{ env.STYLE_CODE }}"
       toggle_url_check: "${{ env.URL_CHECKER }}"
       url_error_min: "${{ env.URL_ERROR_MIN }}"
-      toggle_quiz_check: "${{ env.CHECK_QUIZZES }}"
-      quiz_error_min: "${{ env.QUIZ_ERROR_MIN }}"
       toggle_md_linter: "${{ env.MARKDOWN_LINTER }}"
       toggle_readability: "${{ env.READABILITY_REPORT }}"
       toggle_render_preview: "${{ env.RENDER_PREVIEW }}"
@@ -61,7 +59,7 @@ jobs:
   ottr-reports:
     name: Run Reports
     needs: yaml-check
-    if: ${{needs.yaml-check.outputs.toggle_spell_check == 'true' || needs.yaml-check.outputs.toggle_url_check == 'true' || needs.yaml-check.outputs.toggle_quiz_check == 'true'}}
+    if: ${{needs.yaml-check.outputs.toggle_spell_check == 'true' || needs.yaml-check.outputs.toggle_url_check == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -80,8 +78,6 @@ jobs:
         spelling_error_min: ${{needs.yaml-check.outputs.spell_error_min}}
         check_urls: ${{needs.yaml-check.outputs.toggle_url_check}}
         url_error_min: ${{needs.yaml-check.outputs.url_error_min}}
-        check_quiz_form: ${{needs.yaml-check.outputs.toggle_spell_check}}
-        quiz_error_min: ${{needs.yaml-check.outputs.quiz_error_min}}
         sort_dictionary: ${{needs.yaml-check.outputs.toggle_dictionary_sort}}
 
 ############################# Style the code ###################################
