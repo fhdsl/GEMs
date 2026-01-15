@@ -1,0 +1,61 @@
+---
+title: "**All of Us: Understanding Ethics**"
+output:
+  html_document
+---
+
+## Overview
+
+This module uses the [All of Us Data Browser](https://databrowser.researchallofus.org/) to encourage critical thinking on ethical concepts in human genomics. 
+
+**Duration:** 30 minutes - 1 hour.
+
+## Learning Objectives
+
+1.  Identify and critique scientific issues relating to society or ethics (see [GSA](https://genetics-gsa.org/education/genetics-learning-framework/) core competencies).
+
+2.  Interpret the ethical, legal, medical, and social implications of biological data (see [NIBLSE](https://qubeshub.org/community/groups/niblse/core_competencies) core competencies).
+
+## Prerequisites
+
+Students will benefit from some awareness of genetically-based medical conditions and ethics in genomics. We suggest this activity could accompany lectures that discuss these topics. These ethics-related questions can also be added on to any activity that leverages the [All of Us Data Browser](https://databrowser.researchallofus.org/).
+
+## Evaluation
+
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.
+
+::: callout-tip
+## Help Us Improve!
+
+[Instructor experience survey](https://forms.gle/QExaV8pQ9tWpaiED9)
+
+[Student pre-activity survey](https://genomicseducation.shinyapps.io/student_pre_survey/)
+
+[Student post-activity survey](https://genomicseducation.shinyapps.io/student_post_survey/)
+:::
+
+You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing). Feel free to contact the GEMs team with any questions (gems **at** fredhutch **dot** org).
+
+## Materials
+
+### Student Activity
+
+You can use this module in several formats. Feel free to adapt to your needs!
+
+-   Web page: coming soon!
+-   Quarto (qmd): coming soon!
+-   Word (docx): coming soon!
+-   [Google Doc](https://docs.google.com/document/d/16mMbqNpuesXIzA0Uw5ZuBgoYgsRRtmwgpQmZr0JDkGY/edit?usp=sharing)
+
+Students will need a device that accesses the internet.
+
+::: callout-warning
+## This content contains URLs
+
+We suggest confirming links are still active prior to running this activity.
+:::
+
+
+### Instructor Materials
+
+
