@@ -1,0 +1,73 @@
+---
+title: "**Population Genetics**"
+output:
+  html_document
+---
+
+## Overview
+
+This module uses the [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html) to model natural selection and genetic drift, as well as explore whether populations are at Hardy-Weinberg equilibrium.
+
+**Duration:** 1 - 2 hours
+
+## Learning Objectives
+
+1.  Compare and contrast natural selection and genetic drift
+
+2.  Determine if a population is in Hardy-Weinberg equilibrium
+Predict outcomes of interactions between genotypes and environmental pressures
+
+3. Predict outcomes of interactions between genotypes and environmental pressures
+
+## Prerequisites
+
+Students will benefit from some awareness of basic evolutionary theory, particularly Mendelian inheritance, as well as the concepts of phenotypes, genotypes, and the relationship between the two. Students should also understand the concepts of genetic drift and natural selection.
+
+## Evaluation
+
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.
+
+::: callout-tip
+## Help Us Improve!
+
+[Instructor experience survey](https://forms.gle/QExaV8pQ9tWpaiED9)
+
+[Student pre-activity survey](https://genomicseducation.shinyapps.io/student_pre_survey/)
+
+[Student post-activity survey](https://genomicseducation.shinyapps.io/student_post_survey/)
+:::
+
+You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing). Feel free to contact the GEMs team with any questions (gems **at** fredhutch **dot** org).
+
+## Materials
+
+### Student Activity
+
+You can use this module in several formats. Feel free to adapt to your needs!
+
+-   Web page: coming soon!
+-   Quarto (qmd): coming soon!
+-   Word (docx): coming soon!
+-   [Google Doc](https://docs.google.com/document/d/16mMbqNpuesXIzA0Uw5ZuBgoYgsRRtmwgpQmZr0JDkGY/edit?usp=sharing)
+
+Students will need a device that accesses the internet. 
+
+::: callout-warning
+## This content contains URLs
+
+We suggest confirming links are still active prior to running this activity.
+
+In particular, students will be accessing the [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html).
+:::
+
+### Instructor Materials
+
+### Scientific Topics
+
+### Outline
+
+- Part 1: Modeling Natural Selection and Genetic Drift
+
+- Part 2: Hardy-Weinberg Equilibrium 
+
+
