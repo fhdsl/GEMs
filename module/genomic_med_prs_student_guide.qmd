@@ -223,16 +223,18 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ::: {.callout-note}
 ## Check Your Knowledge
 
-1. Based on the PRS and percentile you calculated, will Mr. J develop prostate cancer? Why or why not? 
+1. Provide a screenshot of your calculated PRS and percentile.
 
-2. Go to the [_Conti_ (GCST011047) study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". What ancestries are included?
+2. Based on the PRS and percentile you calculated, will Mr. J develop prostate cancer? Why or why not? 
+
+2. Go to the [_Conti_ (GCST011047) study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". What ancestries are included? Provide a screenshot.
     
 3. How many people were used to identify these variants in the _Conti_ study? Hint: add up the cases (has cancer) and controls (no cancer) under "Discovery sample description".
 :::
 
 ## Part 3
 
-In Part 3, we'll compare the previous PRS score to one calculated using a different study.
+In Part 3, we'll see what happens when we use a different study.
 
 ### Adding a Study
 
@@ -266,7 +268,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ::: callout-tip
 ## Capturing More Variants
 
-A mismatch between the study population and the patient's ancestry can create gaps in PRS analysis. Many early studies were performed on genomes of people of European ancestry. This means that more reliable data is present for people of European ancestry. In other words, their variants are better known. People of African or East Asian ancestry don't always had variant data that is as comprehensive. This means it's more likely to end up in the situation above, where we can't reliably calculate PRS.
+A mismatch between the study population and the patient's ancestry can create gaps in PRS analysis. Many early studies were performed on genomes of people of European ancestry. This means that more reliable data is present for people of European ancestry. In other words, their variants are better known. People of African or East Asian ancestry don't always have variant data that is as comprehensive. This means it's more likely to end up in the situation above, where we might think the risk is lower than it truly is.
 
 Scientists realized recently that this was a problem. Programs like [All of Us](https://allofus.nih.gov/) aim to collect better data on people from diverse backgrounds to improve PRS. Technology improvements have also made it more affordable to screen for more variants.
 :::
@@ -276,9 +278,29 @@ Scientists realized recently that this was a problem. Programs like [All of Us](
 ::: {.callout-note}
 ## Check Your Knowledge
 
-1. Go to the [_Eeles_ (GCST000152) study page](https://www.ebi.ac.uk/gwas/studies/GCST000152) and look at the description under "Discovery ancestry label". What ancestry is included?
+1. Provide a screenshot of your calculated PRS and percentile, now with both studies.
 
-2. Given that Mr. J has African ancestry, which study (_Conti_ or _Eeles_) is a more appropriate match to assess his risk?
+2. Go to the [_Eeles_ (GCST000152) study page](https://www.ebi.ac.uk/gwas/studies/GCST000152) and look at the description under "Discovery ancestry label". What ancestry is included? Provide a screenshot.
+
+3. Given that Mr. J has African ancestry, which study (_Conti_ or _Eeles_) is a more appropriate match to assess his risk?
     
-3. Imagine you were helping Mr. J's providers craft a care plan. Based on Mr. J's results, would you recommend more frequent screening? Why or why not?
+4. Imagine you were helping Mr. J's providers craft a care plan. Based on Mr. J's results, would you recommend more frequent screening? Why or why not?
+:::
+
+## Part 4
+
+In Part 3, we'll check out data for one of Mr. J's friends.
+
+Repeat the steps above, with Mr. B's data: <https://genomicseducation.org/data/prs_ind_2.txt>. Make sure to select both the _Conti_ and _Eeles_ studies.
+
+## Part 4 Questions
+
+::: {.callout-note}
+## Check Your Knowledge
+
+1. Provide a screenshot of your calculated PRS and percentile, with both studies.
+
+2. Which study is more appropriate if Mr. B has African ancestry? European ancestry?
+    
+3. Would you recommend more frequent screening to Mr. B? Why or why not? How do his results compare to Mr. J's results?
 :::
