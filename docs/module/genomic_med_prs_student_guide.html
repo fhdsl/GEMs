@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-01-16">
 
 <title>Genomic Medicine: Polygenic Risk Score Calculation – GEMs</title>
 <style>
@@ -175,6 +176,8 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#comparing-results" id="toc-comparing-results" class="nav-link" data-scroll-target="#comparing-results">Comparing Results</a></li>
   </ul></li>
   <li><a href="#part-3-questions" id="toc-part-3-questions" class="nav-link" data-scroll-target="#part-3-questions">Part 3 Questions</a></li>
+  <li><a href="#part-4" id="toc-part-4" class="nav-link" data-scroll-target="#part-4">Part 4</a></li>
+  <li><a href="#part-4-questions" id="toc-part-4-questions" class="nav-link" data-scroll-target="#part-4-questions">Part 4 Questions</a></li>
   </ul>
 </nav>
     </div>
@@ -191,6 +194,12 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 16, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -279,8 +288,8 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <section id="mr.-js-data" class="level3">
 <h3 class="anchored" data-anchor-id="mr.-js-data">Mr.&nbsp;J’s Data</h3>
 <p>Mr.&nbsp;J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher with Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr.&nbsp;J know he won’t make it to practice on Friday because he’s getting a cancer screening. Curious, Mr.&nbsp;J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results.</p>
-<p>The next time Mr.&nbsp;J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he’s not sure if it has a genetic link.</p>
-<p>We’re going to take gene screening data for Mr.&nbsp;J, to understand his risk. Mr.&nbsp;J has African ancestry, which will be important later. First, let’s explore a variant to learn more.</p>
+<p>The next time Mr.&nbsp;J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he’s not sure if it has a genetic link. Mr.&nbsp;J also has African ancestry, and he wonders if this is important to understanding his cancer risk.</p>
+<p>In the next steps, we’re going to look at some gene screening data for Mr.&nbsp;J, to understand his risk. First, let’s explore a variant to learn more.</p>
 </section>
 <section id="exploring-variants" class="level3">
 <h3 class="anchored" data-anchor-id="exploring-variants">Exploring Variants</h3>
@@ -304,7 +313,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<p>Notice the variant information. The most severe <strong>rs7463326</strong> variant lies in an <a href="https://www.genome.gov/genetics-glossary/Intergenic-Regions#:~:text=Definition,Medical%20Genetics%20Branch">intergenic region</a>, or between protein coding genes.</p>
+<p>Notice the variant information. The most severe <strong>rs7463326</strong> variant lies in an <a href="https://www.genome.gov/genetics-glossary/Intron">intron</a>, or in a part of the gene that doesn’t end up in the final protein.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -324,7 +333,8 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<p>Mr.&nbsp;J has a “G” here. Other patients might have “A” or “C”. This means he might be more at risk than other patients. However, we know risk is often dictated by multiple genes. In the next steps we’ll explore how to assess risk with multiple variants.</p>
+<p>Mr.&nbsp;J has a “G” here. Other people might have “A” or “C”.</p>
+<p>This means he might be more at risk than other people. However, we know risk is often dictated by multiple genes. In the next steps we’ll explore how to assess risk with multiple variants.</p>
 </section>
 </section>
 <section id="part-1-questions" class="level2">
@@ -351,14 +361,18 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </li>
 <li>All variants come from protein-coding genes.</li>
 </ol></li>
-<li><p>Try looking up another variant at <a href="https://www.ebi.ac.uk/gwas/variants" class="uri">https://www.ebi.ac.uk/gwas/variants</a>. Look up “rs2075650”. What kind of variant is listed under “Most severe consequence”? Are there any diseases associated with this variant?</p></li>
+<li><p>Try looking up another variant at <a href="https://www.ebi.ac.uk/gwas/variants" class="uri">https://www.ebi.ac.uk/gwas/variants</a>. Look up “rs2075650”. Take a screenshot/screenshots that capture:</p>
+<ol type="a">
+<li>The kind of variant is listed under “Most severe consequence”</li>
+<li>Any diseases associated with this variant?</li>
+</ol></li>
 </ol>
 </div>
 </div>
 </section>
 <section id="part-2" class="level2">
 <h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
-<p>In Part 2, we’ll calculate our first PRS score.</p>
+<p>We’ll now calculate our first PRS score.</p>
 <section id="entering-data" class="level3">
 <h3 class="anchored" data-anchor-id="entering-data">Entering Data</h3>
 <p>Go to <a href="https://prs.byu.edu/calculate_score.html" class="uri">https://prs.byu.edu/calculate_score.html</a> - this is the website we’ll use to calculate a PRS for Mr.&nbsp;J’s data.</p>
@@ -517,8 +531,9 @@ rs74001374:C
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
+<li><p>Provide a screenshot of your calculated PRS and percentile.</p></li>
 <li><p>Based on the PRS and percentile you calculated, will Mr.&nbsp;J develop prostate cancer? Why or why not?</p></li>
-<li><p>Go to the <a href="https://www.ebi.ac.uk/gwas/studies/GCST011047"><em>Conti</em> (GCST011047) study page</a> and look at the description under “Discovery ancestry label”. What ancestries are included?</p></li>
+<li><p>Go to the <a href="https://www.ebi.ac.uk/gwas/studies/GCST011047"><em>Conti</em> (GCST011047) study page</a> and look at the description under “Discovery ancestry label”. What ancestries are included? Provide a screenshot.</p></li>
 <li><p>How many people were used to identify these variants in the <em>Conti</em> study? Hint: add up the cases (has cancer) and controls (no cancer) under “Discovery sample description”.</p></li>
 </ol>
 </div>
@@ -526,7 +541,7 @@ rs74001374:C
 </section>
 <section id="part-3" class="level2">
 <h2 class="anchored" data-anchor-id="part-3">Part 3</h2>
-<p>In Part 3, we’ll compare the previous PRS score to one calculated using a different study.</p>
+<p>In Part 3, we’ll see what happens when we use a different study.</p>
 <section id="adding-a-study" class="level3">
 <h3 class="anchored" data-anchor-id="adding-a-study">Adding a Study</h3>
 <p>Scroll back up to the “Select from Filtered Studies” dropdown. Find Study “GCST000152” (<em>Eeles et al.&nbsp;2008</em>) and check the box. The <em>Eeles</em> study has different variants compared to the <em>Conti</em> study.</p>
@@ -579,7 +594,7 @@ rs74001374:C
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A mismatch between the study population and the patient’s ancestry can create gaps in PRS analysis. Many early studies were performed on genomes of people of European ancestry. This means that more reliable data is present for people of European ancestry. In other words, their variants are better known. People of African or East Asian ancestry don’t always had variant data that is as comprehensive. This means it’s more likely to end up in the situation above, where we can’t reliably calculate PRS.</p>
+<p>A mismatch between the study population and the patient’s ancestry can create gaps in PRS analysis. Many early studies were performed on genomes of people of European ancestry. This means that more reliable data is present for people of European ancestry. In other words, their variants are better known. People of African or East Asian ancestry don’t always have variant data that is as comprehensive. This means it’s more likely to end up in the situation above, where we might think the risk is lower than it truly is.</p>
 <p>Scientists realized recently that this was a problem. Programs like <a href="https://allofus.nih.gov/">All of Us</a> aim to collect better data on people from diverse backgrounds to improve PRS. Technology improvements have also made it more affordable to screen for more variants.</p>
 </div>
 </div>
@@ -598,9 +613,35 @@ rs74001374:C
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>Go to the <a href="https://www.ebi.ac.uk/gwas/studies/GCST000152"><em>Eeles</em> (GCST000152) study page</a> and look at the description under “Discovery ancestry label”. What ancestry is included?</p></li>
+<li><p>Provide a screenshot of your calculated PRS and percentile, now with both studies.</p></li>
+<li><p>Go to the <a href="https://www.ebi.ac.uk/gwas/studies/GCST000152"><em>Eeles</em> (GCST000152) study page</a> and look at the description under “Discovery ancestry label”. What ancestry is included? Provide a screenshot.</p></li>
 <li><p>Given that Mr.&nbsp;J has African ancestry, which study (<em>Conti</em> or <em>Eeles</em>) is a more appropriate match to assess his risk?</p></li>
 <li><p>Imagine you were helping Mr.&nbsp;J’s providers craft a care plan. Based on Mr.&nbsp;J’s results, would you recommend more frequent screening? Why or why not?</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="part-4" class="level2">
+<h2 class="anchored" data-anchor-id="part-4">Part 4</h2>
+<p>In Part 3, we’ll check out data for one of Mr.&nbsp;J’s friends.</p>
+<p>Repeat the steps above, with Mr.&nbsp;B’s data: <a href="https://genomicseducation.org/data/prs_ind_2.txt" class="uri">https://genomicseducation.org/data/prs_ind_2.txt</a>. Make sure to select both the <em>Conti</em> and <em>Eeles</em> studies.</p>
+</section>
+<section id="part-4-questions" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-questions">Part 4 Questions</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Provide a screenshot of your calculated PRS and percentile, with both studies.</p></li>
+<li><p>Which study is more appropriate if Mr.&nbsp;B has African ancestry? European ancestry?</p></li>
+<li><p>Would you recommend more frequent screening to Mr.&nbsp;B? Why or why not? How do his results compare to Mr.&nbsp;J’s results?</p></li>
 </ol>
 </div>
 </div>
