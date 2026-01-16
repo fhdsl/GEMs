@@ -1,5 +1,6 @@
 ---
 title: "Genomic Medicine: Polygenic Risk Score Calculation"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
 format:
