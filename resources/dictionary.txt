@@ -115,6 +115,7 @@ ifelse
 intergenic
 IntroMouse
 introns
+intron
 IRB
 ketamine
 knitr

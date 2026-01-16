@@ -1,5 +1,6 @@
 ---
 title: "Genomic Medicine: Polygenic Risk Score Calculation"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
 format:
@@ -68,9 +69,9 @@ This example will look at prostate carcinoma, or prostate cancer. While prostate
 
 Mr. J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher with Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr. J know he won't make it to practice on Friday because he's getting a cancer screening. Curious, Mr. J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results. 
 
-The next time Mr. J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he's not sure if it has a genetic link.
+The next time Mr. J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he's not sure if it has a genetic link. Mr. J also has African ancestry, and he wonders if this is important to understanding his cancer risk. 
 
-We're going to take gene screening data for Mr. J, to understand his risk. Mr. J has African ancestry, which will be important later. First, let's explore a variant to learn more.
+In the next steps, we're going to look at some gene screening data for Mr. J, to understand his risk. First, let's explore a variant to learn more.
 
 ### Exploring Variants
 
@@ -86,7 +87,7 @@ Select the first result.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f43ab35e5_0_11#slide=id.g35f43ab35e5_0_11")
 ```
 
-Notice the variant information. The most severe **rs7463326** variant lies in an [intergenic region](https://www.genome.gov/genetics-glossary/Intergenic-Regions#:~:text=Definition,Medical%20Genetics%20Branch), or between protein coding genes. 
+Notice the variant information. The most severe **rs7463326** variant lies in an [intron](https://www.genome.gov/genetics-glossary/Intron), or in a part of the gene that doesn't end up in the final protein. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_37#slide=id.g35f4636d8f5_0_37")
@@ -98,7 +99,9 @@ Scroll down to see the risk allele associated with the variant. For **rs7463326*
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?slide=id.g35f4636d8f5_0_42#slide=id.g35f4636d8f5_0_42")
 ```
 
-Mr. J has a "G" here. Other patients might have "A" or "C". This means he might be more at risk than other patients. However, we know risk is often dictated by multiple genes. In the next steps we'll explore how to assess risk with multiple variants.
+Mr. J has a "G" here. Other people might have "A" or "C". 
+
+This means he might be more at risk than other people. However, we know risk is often dictated by multiple genes. In the next steps we'll explore how to assess risk with multiple variants.
 
 ## Part 1 Questions
 
@@ -113,13 +116,15 @@ Mr. J has a "G" here. Other patients might have "A" or "C". This means he might 
     c. PRS must be based on an appropriate database of gene variants.  
     d. All variants come from protein-coding genes.  
 
-1. Try looking up another variant at <https://www.ebi.ac.uk/gwas/variants>. Look up "rs2075650". What kind of variant is listed under "Most severe consequence"? Are there any diseases associated with this variant?
+1. Try looking up another variant at <https://www.ebi.ac.uk/gwas/variants>. Look up "rs2075650". Take a screenshot/screenshots that capture:
+    a. The kind of variant is listed under "Most severe consequence"
+    b. Any diseases associated with this variant?
 
 :::
 
 ## Part 2
 
-In Part 2, we'll calculate our first PRS score.
+We'll now calculate our first PRS score.
 
 ### Entering Data
 
@@ -218,16 +223,18 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ::: {.callout-note}
 ## Check Your Knowledge
 
-1. Based on the PRS and percentile you calculated, will Mr. J develop prostate cancer? Why or why not? 
+1. Provide a screenshot of your calculated PRS and percentile.
 
-2. Go to the [_Conti_ (GCST011047) study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". What ancestries are included?
+2. Based on the PRS and percentile you calculated, will Mr. J develop prostate cancer? Why or why not? 
+
+2. Go to the [_Conti_ (GCST011047) study page](https://www.ebi.ac.uk/gwas/studies/GCST011047) and look at the description under "Discovery ancestry label". What ancestries are included? Provide a screenshot.
     
 3. How many people were used to identify these variants in the _Conti_ study? Hint: add up the cases (has cancer) and controls (no cancer) under "Discovery sample description".
 :::
 
 ## Part 3
 
-In Part 3, we'll compare the previous PRS score to one calculated using a different study.
+In Part 3, we'll see what happens when we use a different study.
 
 ### Adding a Study
 
@@ -261,7 +268,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ::: callout-tip
 ## Capturing More Variants
 
-A mismatch between the study population and the patient's ancestry can create gaps in PRS analysis. Many early studies were performed on genomes of people of European ancestry. This means that more reliable data is present for people of European ancestry. In other words, their variants are better known. People of African or East Asian ancestry don't always had variant data that is as comprehensive. This means it's more likely to end up in the situation above, where we can't reliably calculate PRS.
+A mismatch between the study population and the patient's ancestry can create gaps in PRS analysis. Many early studies were performed on genomes of people of European ancestry. This means that more reliable data is present for people of European ancestry. In other words, their variants are better known. People of African or East Asian ancestry don't always have variant data that is as comprehensive. This means it's more likely to end up in the situation above, where we might think the risk is lower than it truly is.
 
 Scientists realized recently that this was a problem. Programs like [All of Us](https://allofus.nih.gov/) aim to collect better data on people from diverse backgrounds to improve PRS. Technology improvements have also made it more affordable to screen for more variants.
 :::
@@ -271,9 +278,29 @@ Scientists realized recently that this was a problem. Programs like [All of Us](
 ::: {.callout-note}
 ## Check Your Knowledge
 
-1. Go to the [_Eeles_ (GCST000152) study page](https://www.ebi.ac.uk/gwas/studies/GCST000152) and look at the description under "Discovery ancestry label". What ancestry is included?
+1. Provide a screenshot of your calculated PRS and percentile, now with both studies.
 
-2. Given that Mr. J has African ancestry, which study (_Conti_ or _Eeles_) is a more appropriate match to assess his risk?
+2. Go to the [_Eeles_ (GCST000152) study page](https://www.ebi.ac.uk/gwas/studies/GCST000152) and look at the description under "Discovery ancestry label". What ancestry is included? Provide a screenshot.
+
+3. Given that Mr. J has African ancestry, which study (_Conti_ or _Eeles_) is a more appropriate match to assess his risk?
     
-3. Imagine you were helping Mr. J's providers craft a care plan. Based on Mr. J's results, would you recommend more frequent screening? Why or why not?
+4. Imagine you were helping Mr. J's providers craft a care plan. Based on Mr. J's results, would you recommend more frequent screening? Why or why not?
+:::
+
+## Part 4
+
+In Part 3, we'll check out data for one of Mr. J's friends.
+
+Repeat the steps above, with Mr. B's data: <https://genomicseducation.org/data/prs_ind_2.txt>. Make sure to select both the _Conti_ and _Eeles_ studies.
+
+## Part 4 Questions
+
+::: {.callout-note}
+## Check Your Knowledge
+
+1. Provide a screenshot of your calculated PRS and percentile, with both studies.
+
+2. Which study is more appropriate if Mr. B has African ancestry? European ancestry?
+    
+3. Would you recommend more frequent screening to Mr. B? Why or why not? How do his results compare to Mr. J's results?
 :::
