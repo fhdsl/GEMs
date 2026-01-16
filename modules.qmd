@@ -29,4 +29,3 @@ These modules can be run as part of a miniCURE with the C-MOOR project or as a s
 
 - [Differential Expression and the Mouse Gut-Brain Axis](module/mouse_gutbrain_de.html)
 
-
