@@ -116,7 +116,9 @@ This means he might be more at risk than other people. However, we know risk is 
     c. PRS must be based on an appropriate database of gene variants.  
     d. All variants come from protein-coding genes.  
 
-1. Try looking up another variant at <https://www.ebi.ac.uk/gwas/variants>. Look up "rs2075650". What kind of variant is listed under "Most severe consequence"? Are there any diseases associated with this variant?
+1. Try looking up another variant at <https://www.ebi.ac.uk/gwas/variants>. Look up "rs2075650". Take a screenshot/screenshots that capture:
+    a. The kind of variant is listed under "Most severe consequence"
+    b. Any diseases associated with this variant?
 
 :::
 
