@@ -20,6 +20,9 @@ These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
 - [Genomic Medicine: Polygenic Risk Score Calculation](module/genomic_med_prs.html)
 
+- [Population Genetics: Koi Pond Simulation](module/pop_gen_hwe.html)
+
+
 ## Research Modules
 
 These modules can be run as part of a miniCURE with the C-MOOR project or as a single, standalone lab activity.

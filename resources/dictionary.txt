@@ -118,6 +118,8 @@ introns
 IRB
 ketamine
 knitr
+koi
+Koi
 LDs
 lfcSE
 LifeMap
@@ -198,6 +200,7 @@ png
 png
 polygenic
 Polygenic
+PopGen
 PositCloud
 pre
 promotors
