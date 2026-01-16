@@ -20,10 +20,12 @@ These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
 - [Genomic Medicine: Polygenic Risk Score Calculation](module/genomic_med_prs.html)
 
-## Multi-period Modules
+- [Population Genetics: Koi Pond Simulation](module/pop_gen_hwe.html)
 
-These modules are designed to be run over several lab periods, but individual parts within the module can be adapted for a single lab period.
+
+## Research Modules
+
+These modules can be run as part of a miniCURE with the C-MOOR project or as a single, standalone lab activity.
 
 - [Differential Expression and the Mouse Gut-Brain Axis](module/mouse_gutbrain_de.html)
-
 
