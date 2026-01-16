@@ -118,6 +118,8 @@ introns
 IRB
 ketamine
 knitr
+koi
+Koi
 LDs
 lfcSE
 LifeMap
