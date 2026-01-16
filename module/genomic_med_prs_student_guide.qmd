@@ -69,7 +69,7 @@ This example will look at prostate carcinoma, or prostate cancer. While prostate
 
 Mr. J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher with Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr. J know he won't make it to practice on Friday because he's getting a cancer screening. Curious, Mr. J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results. 
 
-The next time Mr. J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he's not sure if it has a genetic link.
+The next time Mr. J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he's not sure if it has a genetic link. Mr. J also has African ancestry, and he wonders if this is important to understanding his cancer risk. 
 
 In the next steps, we're going to look at some gene screening data for Mr. J, to understand his risk. First, let's explore a variant to learn more.
 
@@ -124,7 +124,7 @@ This means he might be more at risk than other people. However, we know risk is 
 
 ## Part 2
 
-In Part 2, we'll calculate our first PRS score.
+We'll now calculate our first PRS score.
 
 ### Entering Data
 
@@ -158,8 +158,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QxPej8YIbgsToOIT
 ```
 
 ### Selecting the Study
-
-Mr. J has African ancestry, which will be important later. 
 
 Next, scroll down to "GWAS Summary Statistics". For item #1, "Select Disease(s) or Trait(s) of Interest", type in "prostate carcinoma" and select the checkbox. You might need to type slowly as the dropdown list has a lot of options! Then, click on "Apply Filters" to update the studies that can be used to calculate the PRS.
 
