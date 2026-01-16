@@ -1,24 +1,27 @@
 ---
-title: "**All of Us: Understanding Ethics**"
+title: "**Population Genetics**"
 output:
   html_document
 ---
 
 ## Overview
 
-This module uses the [All of Us Data Browser](https://databrowser.researchallofus.org/) to encourage critical thinking on ethical concepts in human genomics. 
+This module uses the [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html) to model natural selection and genetic drift, as well as explore whether populations are at Hardy-Weinberg equilibrium.
 
-**Duration:** 30 minutes - 1 hour.
+**Duration:** 1 - 2 hours
 
 ## Learning Objectives
 
-1.  Identify and critique scientific issues relating to society or ethics (see [GSA](https://genetics-gsa.org/education/genetics-learning-framework/) core competencies).
+1.  Compare and contrast natural selection and genetic drift
 
-2.  Interpret the ethical, legal, medical, and social implications of biological data (see [NIBLSE](https://qubeshub.org/community/groups/niblse/core_competencies) core competencies).
+2.  Determine if a population is in Hardy-Weinberg equilibrium
+Predict outcomes of interactions between genotypes and environmental pressures
+
+3. Predict outcomes of interactions between genotypes and environmental pressures
 
 ## Prerequisites
 
-Students will benefit from some awareness of genetically-based medical conditions and ethics in genomics. We suggest this activity could accompany lectures that discuss these topics. These ethics-related questions can also be added on to any activity that leverages the [All of Us Data Browser](https://databrowser.researchallofus.org/).
+Students will benefit from some awareness of basic evolutionary theory, particularly Mendelian inheritance, as well as the concepts of phenotypes, genotypes, and the relationship between the two. Students should also understand the concepts of genetic drift and natural selection.
 
 ## Evaluation
 
@@ -47,15 +50,24 @@ You can use this module in several formats. Feel free to adapt to your needs!
 -   Word (docx): coming soon!
 -   [Google Doc](https://docs.google.com/document/d/16mMbqNpuesXIzA0Uw5ZuBgoYgsRRtmwgpQmZr0JDkGY/edit?usp=sharing)
 
-Students will need a device that accesses the internet.
+Students will need a device that accesses the internet. 
 
 ::: callout-warning
 ## This content contains URLs
 
 We suggest confirming links are still active prior to running this activity.
+
+In particular, students will be accessing the [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html).
 :::
 
-
 ### Instructor Materials
+
+### Scientific Topics
+
+### Outline
+
+- Part 1: Modeling Natural Selection and Genetic Drift
+
+- Part 2: Hardy-Weinberg Equilibrium 
 
 
