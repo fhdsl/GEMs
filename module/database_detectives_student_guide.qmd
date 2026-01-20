@@ -1,5 +1,6 @@
 ---
 title: "Database Detectives: Exploring Public Genomic Databases Student Guide"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
 format:
