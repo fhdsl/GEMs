@@ -1,5 +1,6 @@
 ---
 title: "Differential Expression and the Mouse Gut-Brain Axis"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
 format:
