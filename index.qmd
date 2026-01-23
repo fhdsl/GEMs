@@ -29,4 +29,4 @@ knitr::include_graphics("resources/images/gems_concept.png")
 
 ### **Contact Us**
 
-If you have questions please contact: Ava Hoffman (ahoffma2 **at** fredhutch **dot** org)
+If you have questions please contact: gems **at** fredhutch **dot** org
