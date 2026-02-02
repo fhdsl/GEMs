@@ -10,7 +10,7 @@ format:
 Evolution is defined as a change in allele frequencies in a population over generations. Natural selection is one of the mechanisms driving these changes. Organisms with heritable traits that provide an advantage in a particular environment tend to survive longer and produce more offspring, causing those advantageous traits—and the alleles behind them—to become more common in the population.
 
 However, natural selection is not the only way allele frequencies change. Genetic drift, migration, mutation, and environmental shifts also influence how populations evolve, sometimes in unpredictable ways.
-Before working with quantitative models in the PopGen Fishbowl simulation, keep in mind:
+Before working with quantitative models in the PopGen fishpond simulation, keep in mind:
 
 - A trait is only advantageous in a specific environment.
 - Mutations introduce new variation, which selection may or may not favor.
@@ -92,7 +92,7 @@ In theory, if a population is at equilibrium — that is, there are no evolution
 ::: callout-tip
 No matter what genes you're working with, Hardy-Weinberg equilibrium uses standard symbols: p and q.
 
-| HWE symbol  | What does it stand for? | What does this mean in my koi? |
+| HWE symbol  | What does it stand for? | What does this mean in the koi? |
 |--------|--------|--------|
 | p | Allele frequency of the dominant allele | frequency of R allele |
 | q | Allele frequency of the recessive allele | frequency of r allele |
@@ -104,7 +104,7 @@ No matter what genes you're working with, Hardy-Weinberg equilibrium uses standa
 
 :::
 
-In this activity, you will use the PopGen Fishbowl online simulation to explore how populations evolve over time. Rather than working with real organisms (which would take generations to study), this model allows you to speed up time and watch how genetic drift and natural selection shape populations across dozens or even hundreds of generations. You will collect allele frequency data, analyze how evolutionary forces affect genetic variation, and compare different evolutionary scenarios.
+In this activity, you will use the PopGen Fishpond online simulation to explore how populations evolve over time. Rather than working with real organisms (which would take generations to study), this model allows you to speed up time and watch how genetic drift and natural selection shape populations across dozens or even hundreds of generations. You will collect allele frequency data, analyze how evolutionary forces affect genetic variation, and compare different evolutionary scenarios.
 
 The goal of this lab is to interpret patterns in allele frequencies and genotype frequencies under different conditions. By the end, you should be able to explain:
 - how random events cause allele frequencies to drift,
@@ -113,34 +113,34 @@ The goal of this lab is to interpret patterns in allele frequencies and genotype
 
 This activity reinforces what we discussed in lecture and provides a visual, dynamic way to observe evolution in action.
 
-Click here to access the [PopGen Fishbowl Simulation](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html).
+Click here to access the [PopGen Fishpond Simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html).
 
-In this activity, you will use the PopGen Fishbowl simulation to model three evolutionary processes:
+In this activity, you will use the PopGen Fishpond simulation to model three evolutionary processes:
 1. Genetic Drift
 2. Directional Natural Selection
 3. Selection After an Environmental Change
 
 Your goal is to observe how allele frequencies change over time and to explain why they change based on the evolutionary forces involved.
 
-# Part 1: Modeling Hardy-Weinberg Equilibrium
+# Activity 1: Modeling Hardy-Weinberg Equilibrium
 
-RUN MODEL AT WITH 500 KOI. RECORD DATA AT 25, 50, 75, and 100 GENERATIONS. USE CHI-SQUARE TEST TO DETERMINE IF THE POPULATION IS AT HWE AT EACH GENERATION TIME POINT.
-Use Excel to do a chi-square calculation?
+In this section, you'll explore what allele frequencies look like in a population at equilibrium (large population, no mutation, no migration, no selection, and random mating). This will also give you a chance to get used to the PopGen fishpond Simulator.
 
-RUN SIMULATION TWO MORE TIMES. WHAT ABOUT NOW? <- maybe let them see that while there’s some sampling error
-Data Analysis and Conclusions
-Based on your calculations are either of the populations in Hardy-Weinberg Equilibrium with respect to this particular gene?
+## Trial 1a. Population Size = 500 koi
+
+Open the [PopGen Fishpond Simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html) and click on "Run Experiments".
 
 
-# Part 2: Modeling Genetic Drift
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_231#slide=id.g3b94f7217d0_0_231")
+```
 
-In this first section, you will explore genetic drift, which is the random fluctuation of allele frequencies due to chance alone. No genotype has a fitness advantage in this model. You will run two trials: one with a large population and one with a small population.
 
-## Trial 1. Population Size = 200 koi
 
-Before running this simulation, change the settings to the following values.
-- Initial size: 200 
-- Carrying capacity: 200 
+This will open the page that allows you to change the settings for your simulation. Make sure the settings have the following values. (In order to change values, click the up or down arrow next to each number.)
+
+- Initial size: 500
+- Carrying capacity: 500 
 - Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0 
 - Mutation (R→r, r→R): 0 
 - Migration: 0 
@@ -150,7 +150,30 @@ Before running this simulation, change the settings to the following values.
 - Brood Size: 10 
 - Sex Ratio: 0.5 
 
-Run the model to 150 generations. You can speed this up since it’s a simulation!
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c30c8d4131_0_0#slide=id.g3c30c8d4131_0_0")
+```
+
+
+
+Once you've changed the settings, click on the arrow that says "To Data" in the bottom right corner of the lab notebook page. This will take you to the simulation results page.
+
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_245#slide=id.g3b94f7217d0_0_245")
+```
+
+
+On this page, you can see the number of generations that have been simulated as well as the allele and genotype frequencies of the fishpond population. At the moment, the simulation is running fairly slowly. You can make it run faster by pressing the "forward" button on the bottom. 
+
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c27d006627_0_3#slide=id.g3c27d006627_0_3")
+```
+
+
+Run the model for 75 generations, then pause the simulation and record the allele and genotype frequencies. Continue running for an additional 75 generations (until you have reached generation 150).
 
 | Generation  | Proportion R | Proportion r |
 |--------|--------|--------|
@@ -158,11 +181,72 @@ Run the model to 150 generations. You can speed this up since it’s a simulatio
 | 75 | | |
 | 150 |  |  |
 
-**Make sure to take a screenshot of your Trial 1 fishbowl and Data Collection page at 150 generations - you will submit this with your assignment!**
+**Make sure to take a screenshot of your Trial 1a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-## Trial 2: Population size = 25 koi
 
-Before running this simulation, change the settings to the following values. The only parameters that have changed at the initial size and the carrying capacity.
+## Trial 1b. Population Size = 500 koi
+
+Run the simulation again with the same parameters as before. You can do this by clicking the "reload" button in the upper right corner of the Data Collection lab notebook page.
+
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c27d006627_0_0#slide=id.g3c27d006627_0_0")
+```
+
+
+
+Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations.
+
+| Generation  | Proportion R | Proportion r |
+|--------|--------|--------|
+| 0 | 0.5 | 0.5 |
+| 75 | | |
+| 150 |  |  |
+
+**Make sure to take a screenshot of your Trial 1b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
+
+::: callout-tip
+#Check your knowledge: Drift questions
+
+1. Examine the change in allele frequencies for your two simulations. Did either population show a change in allele frequency? Why or why not?
+
+2. Compare the change in allele frequencies between your two simulations. Are the allele frequencies identical? Why or why not?
+
+3. Would you say the populations are at equilibrium without looking at the results of the chi-square test? What about afterwards?
+:::
+
+
+# Activity 2: Modeling Genetic Drift
+
+In this section, you will explore genetic drift, which is the random fluctuation of allele frequencies due to chance alone. No genotype has a fitness advantage in this model. You will run two trials: one with a large population and one with a small population.
+
+## Trial 2a. Population Size = 200 koi
+
+Before running this simulation, change the settings to the following values.
+- **Initial size: 200** 
+- **Carrying capacity: 200** 
+- Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0 
+- Mutation (R→r, r→R): 0 
+- Migration: 0 
+- Assortative Mating: 0 
+- Initial R Allele Proportion: 0.5 
+- Mortality Rate: 10 
+- Brood Size: 10 
+- Sex Ratio: 0.5 
+
+Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Feel free to speed this up since it’s a simulation!
+
+| Generation  | Proportion R | Proportion r |
+|--------|--------|--------|
+| 0 | 0.5 | 0.5 |
+| 75 | | |
+| 150 |  |  |
+
+**Make sure to take a screenshot of your Trial 2a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
+
+## Trial 2b: Population size = 25 koi
+
+Before running this simulation, change the settings to the following values. The only parameters that have changed between this and trial 2a at the initial size and the carrying capacity.
 - **Initial size: 25**
 - **Carrying capacity: 25**
 - Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0 
@@ -174,7 +258,7 @@ Before running this simulation, change the settings to the following values. The
 - Brood Size: 10 
 - Sex Ratio: 0.5 
 
-Run the model to 150 generations. You can speed this up since it’s a simulation!
+Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run!
 
 | Generation  | Proportion R | Proportion r |
 |--------|--------|--------|
@@ -182,12 +266,11 @@ Run the model to 150 generations. You can speed this up since it’s a simulatio
 | 75 | | |
 | 150 |  |  |
 
-**Make sure to take a screenshot of your Trial 2 fishbowl and Data Collection page at 150 generations - you will submit this with your assignment!**
+**Make sure to take a screenshot of your Trial 2b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-## 
 
 ::: callout-tip
-#Check your knowledge
+#Check your knowledge: Drift questions
 
 1. Compare the change in allele frequencies between the large and small population. Which population changed more, and why?
 
@@ -196,120 +279,85 @@ Run the model to 150 generations. You can speed this up since it’s a simulatio
 3. Why do the two drift trials show different outcomes even with the same allele frequencies and equal fitness?
 
 4. How does random sampling contribute to genetic drift over many generations?
+
+5. Which population is not in Hardy-Weinberg? Which condition of Hardy-Weinberg is not being met?
 :::
 
-# Part 3: Modeling Natural Selection
+# Activity 3: Modeling Natural Selection
+
+Let's introduce natural selection into the simulation by giving a fitness advantage to genotypes carrying the R allele.
+
+## Trial 3a: Reduced fitness for r allele
+
+Before running this simulation, change the settings to the following values.
+- Initial size: 500 
+- Carrying capacity: 500 
+- **Genotype Fitness: rr = 0.5, Rr = 1.0, RR = 1.0**
+- Mutation (R→r, r→R): 0 
+- Migration: 0 
+- Assortative Mating: 0 
+- Initial R Allele Proportion: 0.5 
+- Mortality Rate: 10 
+- Brood Size: 10 
+- Sex Ratio: 0.5 
+
+Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run!
+
+| Generation  | Proportion R | Proportion r |
+|--------|--------|--------|
+| 0 | 0.5 | 0.5 |
+| 75 | | |
+| 150 |  |  |
+
+**Make sure to take a screenshot of your Trial 3a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
 
+::: callout-tip
+#Check your knowledge: Natural Selection questions
 
-Which population is not in Hardy-Weinberg? Which condition of Hardy-Weinberg is not being met?
-
-
-
-
-
- 
-Activity 1: Modeling Genetic Drift and Natural Selection
-
-Part 1. Genetic Drift 
-Part 2. Natural Selection
-Here you will introduce natural selection by giving a fitness advantage to genotypes carrying the R allele.
-Initial Size: 200
-Carrying Capacity: 200
-Genotype Fitness: rr = 0.5, Rr = 1.0, RR = 1.0
-Mutation: 0
-Migration: 0
-Assortative Mating: 0
-Initial R Allele Proportion: 0.5
-Run the simulation until Generation 150 and record the following values:
-Generation
-Proportion R
-Proportion r
-0
- 
- 
-75
- 
- 
-150
- 
- 
-
-INSERT SCREENSHOT OF FISHBOWL FOR Natural Selection at 150 generations
-Directional Selection Analysis Questions
 1. How did the allele frequencies change over the 150 generations when R was beneficial?
-
-
-
-
 
 2. Why does the R allele increase in a predictable (non-random) pattern in this model?
 
-
-
-
-
-
 3. What happened to the rr genotype over time, and why?
 
-
-
-
-
-
 4. Compare this model to the drift-only model. What differences do you notice?
+:::
 
+##Trial 3b: Changing the fitness of the r allele
+Now you will change the environment so that the r allele becomes advantageous while **using the ending population from trial 3a**. This means you will _not_ press the reload button after changing the simulation settings.
 
+- Initial size: 500 
+- Carrying capacity: 500 
+- **Genotype Fitness: rr = 1.0, Rr = 0.8, RR = 0.5**
+- Mutation (R→r, r→R): 0 
+- Migration: 0 
+- Assortative Mating: 0 
+- Initial R Allele Proportion: 0.5 
+- Mortality Rate: 10 
+- Brood Size: 10 
+- Sex Ratio: 0.5 
 
+Run the model an additional 150 generations, recording the allele and genotype frequencies at both 225 and 300 generations. Make sure to just unpause the simulation from trial 3a instead of pressing the reload button!
 
+| Generation  | Proportion R | Proportion r |
+|--------|--------|--------|
+| 150 |  |  |
+| 225 | | |
+| 300 |  |  |
 
+**Make sure to take a screenshot of your Trial 3b fishpond and Data Collection page at 300 generations - you will submit this with your assignment!**
 
-Part 3. Changing the Environment 
-Now you will change the environment so that the r allele becomes advantageous while using the ending population from Part 2.
-New Fitness Values:
-rr = 1.0
-Rr = 0.8
-RR = 0.5
-Run the simulation for another 150 generations and record the following values:
-Generation
-Proportion R
-Proportion r
-0
- 
- 
-75
- 
- 
-150
- 
- 
-
-
-Environmental Change Analysis Questions
-1. What happened to the R allele when the environment changed? Did the pattern follow drift or selection?
-
-
-
-
-
+::: callout-tip
+#Check your knowledge: Environmental Change Analysis Questions
+1. What happened to the R allele when the environment changed (and the fitness of the alleles flipped)? Did the pattern follow drift or selection?
 
 2. Explain why rr became the most common genotype by the end of the simulation.
 
-
-
-
-
-
 3. How does this model illustrate that fitness depends on the environment?
 
+4. Compare the two selection scenarios (trials 3a and 3b). How quickly did the population respond to environmental change?
+:::
 
-
-
-
-
-4. Compare the two selection scenarios. How quickly did the population respond to environmental change?
-
-
-“Allele Frequency and the Gene Pool” by Khan Academy licensed CC BY-NC-SA 4.0.
 
 
