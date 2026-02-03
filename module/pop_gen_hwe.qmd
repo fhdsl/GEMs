@@ -45,7 +45,7 @@ You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmo
 
 You can use this module in several formats. Feel free to adapt to your needs!
 
--   Web page: coming soon!
+-   [Web page](https://genomicseducation.org/module/pop_gen_hwe_student_guide.html)
 -   Quarto (qmd): coming soon!
 -   Word (docx): coming soon!
 -   [Google Doc](https://docs.google.com/document/d/16mMbqNpuesXIzA0Uw5ZuBgoYgsRRtmwgpQmZr0JDkGY/edit?usp=sharing)
