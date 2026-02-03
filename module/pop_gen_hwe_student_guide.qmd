@@ -76,7 +76,7 @@ But what ultimately interests most biologists is not the frequencies of differen
 
 So in the above scenario, an individual koi fish could be pp (YY), and thus produce yellow peas; pq (Yy), also yellow; or qq (yy), and thus producing green peas (Figure 19.2). In other words, the frequency of pp individuals is simply p2; the frequency of pq individuals is 2pq; and the frequency of qq individuals is q2. And, again, if p and q are the only two possible alleles for a given trait in the population, these genotype frequencies will sum to one: p2 + 2pq + q2 = 1.
 
-## Hardy-Weinberg Equilibrium
+## Hardy-Weinberg Equilibrium (HWE)
 
 In the early twentieth century, English mathematician Godfrey Hardy and German physician Wilhelm Weinberg stated the principle of equilibrium to describe the genetic makeup of a population. The theory, which later became known as the Hardy-Weinberg principle of equilibrium, states that a population’s allele and genotype frequencies are inherently stable— unless some kind of evolutionary force is acting upon the population, neither the allele nor the genotypic frequencies would change. 
 
@@ -194,7 +194,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 ```
 
 
-
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations.
 
 | Generation  | Proportion R | Proportion r |
@@ -205,8 +204,14 @@ Run the model to 150 generations, recording the allele and genotype frequencies 
 
 **Make sure to take a screenshot of your Trial 1b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
+## Running a chi-square test
+
+Under HWE, the frequencies of the alleles R and r should be the same in generation 150 as they are at the start of your simulation. While it is tempting to simply eyeball the frequencies to determine if the popu
+
+
+
 ::: callout-tip
-#Check your knowledge: Drift questions
+#Check your knowledge: Hardy-Weinberg Equilibrium questions
 
 1. Examine the change in allele frequencies for your two simulations. Did either population show a change in allele frequency? Why or why not?
 
