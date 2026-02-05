@@ -12,10 +12,10 @@ Evolution is defined as a change in allele frequencies in a population over gene
 However, natural selection is not the only way allele frequencies change. Genetic drift, migration, mutation, and environmental shifts also influence how populations evolve, sometimes in unpredictable ways.
 Before working with quantitative models in the PopGen fishpond simulation, keep in mind:
 
-- A trait is only advantageous in a specific environment.
-- Mutations introduce new variation, which selection may or may not favor.
-- Natural selection is not random, but drift is random.
-- Environmental changes can reverse which alleles are beneficial.
+1. A trait is only advantageous in a specific environment.
+1. Mutations introduce new variation, which selection may or may not favor.
+1. Natural selection **is not** random, but drift **is** random.
+1. Environmental changes can reverse which alleles are beneficial.
 
 In this activity, you will use a population genetics simulation to observe how allele frequencies shift through time and how natural selection, genetic drift, and migration can impact these frequencies.
 
@@ -35,7 +35,10 @@ For instance, Mendel studied a gene that controls flower color in pea plants. Th
 
 Coloration among many organisms, including koi fish (which you will be using in your simulation), is controlled by multiple genes. However, we can use some aspects of color patterns to model single gene inheritance patterns and evolution in populations. For example, the red or orange color in the Kohaku variety of koi can be treated as a codominant system. For the purposes of this simulations, a fish with the _RR_ genotype will be a solid red color, a fish with the _rr_ genotype will be white, and a fish with the _Rr_ genotype (the heterozygous genotype) will be white with red spots.
 
-IMAGE
+```{r, fig.align='center', echo = FALSE, fig.alt= "Illustration of red, spotted, and white koi fish (phenotype) and their associated genotypes (RR, Rr, and rr).", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_9#slide=id.g3b94f7217d0_0_9")
+```
+
 
 **Allele frequency** refers to how frequently a particular allele appears in a population. For instance, if all the alleles in a population of koi were red alleles, R, the allele frequency of W would be 100%, or 1.0. However, if half the alleles were R and half were r, each allele would have an allele frequency of 50%, or 0.5.
 
@@ -59,7 +62,9 @@ The frequencies of all the alleles of a gene must add up to one, or 100%.
 
 Allele frequency is different from genotype frequency or phenotype frequency. Genotype and phenotype frequencies can also be calculated and are important for understanding how populations evolve, but they are not the same thing as allele frequency. The diagram below shows the difference.
 
-IMAGE
+```{r, fig.align='center', echo = FALSE, fig.alt= "Illustration of 9 koi fish, with calculations for the genotype frequency, phenotype frequency, and allele frequency.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_12#slide=id.g3c45f560b82_0_12")
+```
 
 Now, let’s suppose we come back a generation later and check the genotypes of the new koi fish that now make up the population. To find the allele frequencies, we again look at each individual’s genotype, count the number of copies of each allele, and divide by the total number of gene copies. Now, we find the frequency of R has dropped to 8/18 = 0.44 or 44%, and the frequency of r has risen to 10/18 = 0.56 or 56%.
 
@@ -74,7 +79,7 @@ By looking at all the copies of all the genes in a population, we can see global
 
 But what ultimately interests most biologists is not the frequencies of different alleles, but the frequencies of the resulting genotypes, known as the **population’s genetic structure**, from which scientists can surmise the distribution of phenotypes. If the phenotype is observed, only the genotype of the homozygous recessive alleles can be known; the calculations provide an estimate of the remaining genotypes. Since each individual carries two alleles per gene, if the allele frequencies (p and q) are known, predicting the frequencies of these genotypes is a simple mathematical calculation to determine the probability of getting these genotypes if two alleles are drawn at random from the gene pool. 
 
-So in the above scenario, an individual koi fish could be pp (YY), and thus produce yellow peas; pq (Yy), also yellow; or qq (yy), and thus producing green peas (Figure 19.2). In other words, the frequency of pp individuals is simply p2; the frequency of pq individuals is 2pq; and the frequency of qq individuals is q2. And, again, if p and q are the only two possible alleles for a given trait in the population, these genotype frequencies will sum to one: p2 + 2pq + q2 = 1.
+So in the above scenario, an individual koi fish could be pp (RR), and thus be all red; pq (Rr), spotted; or qq (rr), and thus be all white. In other words, the frequency of pp individuals is simply p^2^; the frequency of pq individuals is 2pq; and the frequency of qq individuals is q^2^. And, again, if p and q are the only two possible alleles for a given trait in the population, these genotype frequencies will sum to one: p^2^ + 2pq + q^2^ = 1.
 
 ## Hardy-Weinberg Equilibrium (HWE)
 
@@ -96,9 +101,9 @@ No matter what genes you're working with, Hardy-Weinberg equilibrium uses standa
 |--------|--------|--------|
 | p | Allele frequency of the dominant allele | frequency of R allele |
 | q | Allele frequency of the recessive allele | frequency of r allele |
-| p2 | Genotypic frequency of the homozygous dominant | frequency of RR (red) koi |
+| p^2^ | Genotypic frequency of the homozygous dominant | frequency of RR (red) koi |
 | 2pq | Genotypic frequency of the heterozygous | frequency of Rr (spotted) koi |
-| q2 | Genotypic frequency of the homozygous recessive | frequency of rr (white) koi |
+| q^2^ | Genotypic frequency of the homozygous recessive | frequency of rr (white) koi |
 
 : Hardy-Weinberg Equilibrium symbols {.striped .hover}
 
@@ -107,20 +112,13 @@ No matter what genes you're working with, Hardy-Weinberg equilibrium uses standa
 In this activity, you will use the PopGen Fishpond online simulation to explore how populations evolve over time. Rather than working with real organisms (which would take generations to study), this model allows you to speed up time and watch how genetic drift and natural selection shape populations across dozens or even hundreds of generations. You will collect allele frequency data, analyze how evolutionary forces affect genetic variation, and compare different evolutionary scenarios.
 
 The goal of this lab is to interpret patterns in allele frequencies and genotype frequencies under different conditions. By the end, you should be able to explain:
-- how random events cause allele frequencies to drift,
-- how selection favors certain alleles over others, and
-- how a change in environment can shift which alleles are beneficial.
+1. how random events cause allele frequencies to drift, 
+1. how selection favors certain alleles over others, and 
+1. how a change in environment can shift which alleles are beneficial.
 
 This activity reinforces what we discussed in lecture and provides a visual, dynamic way to observe evolution in action.
 
 Click here to access the [PopGen Fishpond Simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html).
-
-In this activity, you will use the PopGen Fishpond simulation to model three evolutionary processes:
-1. Genetic Drift
-2. Directional Natural Selection
-3. Selection After an Environmental Change
-
-Your goal is to observe how allele frequencies change over time and to explain why they change based on the evolutionary forces involved.
 
 # Activity 1: Modeling Hardy-Weinberg Equilibrium
 
@@ -131,7 +129,7 @@ In this section, you'll explore what allele frequencies look like in a populatio
 Open the [PopGen Fishpond Simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html) and click on "Run Experiments".
 
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the landing page for the PopGene Fishpond Simulation.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_231#slide=id.g3b94f7217d0_0_231")
 ```
 
@@ -151,7 +149,7 @@ This will open the page that allows you to change the settings for your simulati
 - Sex Ratio: 0.5 
 
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the Experimental Design tab of the fishpond simulation, where you can choose the settings for your simulation.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c30c8d4131_0_0#slide=id.g3c30c8d4131_0_0")
 ```
 
@@ -160,7 +158,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 Once you've changed the settings, click on the arrow that says "To Data" in the bottom right corner of the lab notebook page. This will take you to the simulation results page.
 
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "At the bottom of the Experimental Design tab, you can click the arrow to go to the Data Collection tab.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_245#slide=id.g3b94f7217d0_0_245")
 ```
 
@@ -168,7 +166,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 On this page, you can see the number of generations that have been simulated as well as the allele and genotype frequencies of the fishpond population. At the moment, the simulation is running fairly slowly. You can make it run faster by pressing the "forward" button on the bottom. 
 
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "At the bottom of both the Experimental Design and Data Collection tabs, you can speed up or slow down the simulation.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c27d006627_0_3#slide=id.g3c27d006627_0_3")
 ```
 
@@ -189,7 +187,7 @@ Run the model for 75 generations, then pause the simulation and record the allel
 Run the simulation again with the same parameters as before. You can do this by clicking the "reload" button in the upper right corner of the Data Collection lab notebook page.
 
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Click the circular arrow in the upper right corner to restart the simulation from 0.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c27d006627_0_0#slide=id.g3c27d006627_0_0")
 ```
 
@@ -222,7 +220,7 @@ Once you've created your table, you should fill in the total count of each allel
 
 Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure to fill in the total number of fish into your table, not the proportion.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_241#slide=id.g3b94f7217d0_0_241")
 ```
 
@@ -232,7 +230,7 @@ Next, type in the formula to run a chi-square test. In Excel, the formula follow
 
 The **actual_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the formula for the chi-square test command and choose the actual and expected range of values.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_0#slide=id.g3c33bb9375e_0_0")
 ```
 
@@ -254,7 +252,7 @@ Once you've created your table, you should fill in the total count of each allel
 
 Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure to fill in the total number of fish into your table, not the proportion.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_3#slide=id.g3c33bb9375e_0_3")
 ```
 
@@ -264,7 +262,7 @@ Next, type in the formula to run a chi-square test. In Google Sheets, the formul
 
 The **observed_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the formula for the chi-square test command and choose the observed and expected range of values.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_6#slide=id.g3c33bb9375e_0_6")
 ```
 
@@ -354,7 +352,7 @@ Once you've created your table, you should fill in the total count of each allel
 
 Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure to fill in the total number of fish into your table, not the proportion.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_241#slide=id.g3b94f7217d0_0_241")
 ```
 
@@ -364,7 +362,7 @@ Next, type in the formula to run a chi-square test. In Excel, the formula follow
 
 The **actual_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the formula for the chi-square test command and choose the actual and expected range of values.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_0#slide=id.g3c33bb9375e_0_0")
 ```
 
@@ -386,7 +384,7 @@ Once you've created your table, you should fill in the total count of each allel
 
 Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure to fill in the total number of fish into your table, not the proportion.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_3#slide=id.g3c33bb9375e_0_3")
 ```
 
@@ -396,7 +394,7 @@ Next, type in the formula to run a chi-square test. In Google Sheets, the formul
 
 The **observed_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the formula for the chi-square test command and choose the observed and expected range of values.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_6#slide=id.g3c33bb9375e_0_6")
 ```
 
@@ -502,7 +500,7 @@ Once you've created your table, you should fill in the total count of each allel
 
 Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure to fill in the total number of fish into your table, not the proportion.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_241#slide=id.g3b94f7217d0_0_241")
 ```
 
@@ -512,7 +510,7 @@ Next, type in the formula to run a chi-square test. In Excel, the formula follow
 
 The **actual_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the formula for the chi-square test command and choose the actual and expected range of values.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_0#slide=id.g3c33bb9375e_0_0")
 ```
 
@@ -534,7 +532,7 @@ Once you've created your table, you should fill in the total count of each allel
 
 Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure to fill in the total number of fish into your table, not the proportion.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_3#slide=id.g3c33bb9375e_0_3")
 ```
 
@@ -544,7 +542,7 @@ Next, type in the formula to run a chi-square test. In Google Sheets, the formul
 
 The **observed_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the formula for the chi-square test command and choose the actual and expected range of values.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_6#slide=id.g3c33bb9375e_0_6")
 ```
 
