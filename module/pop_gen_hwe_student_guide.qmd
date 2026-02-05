@@ -269,6 +269,7 @@ In this section, you will explore genetic drift, which is the random fluctuation
 ## Trial 2a. Population Size = 200 koi
 
 Before running this simulation, change the settings to the following values.
+
 - **Initial size: 200** 
 - **Carrying capacity: 200** 
 - Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0 
@@ -291,6 +292,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 ## Trial 2b: Population size = 25 koi
 
 Before running this simulation, change the settings to the following values. The only parameters that have changed between this and trial 2a at the initial size and the carrying capacity.
+
 - **Initial size: 25**
 - **Carrying capacity: 25**
 - Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0 
@@ -390,6 +392,7 @@ Let's introduce natural selection into the simulation by giving a fitness advant
 ## Trial 3a: Reduced fitness for r allele
 
 Before running this simulation, change the settings to the following values.
+
 - Initial size: 500 
 - Carrying capacity: 500 
 - **Genotype Fitness: rr = 0.5, Rr = 1.0, RR = 1.0**
