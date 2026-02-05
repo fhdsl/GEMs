@@ -97,15 +97,9 @@ In theory, if a population is at equilibrium — that is, there are no evolution
 ::: callout-tip
 No matter what genes you're working with, Hardy-Weinberg equilibrium uses standard symbols: p and q.
 
-| HWE symbol  | What does it stand for? | What does this mean in the koi? |
-|--------|--------|--------|
-| p | Allele frequency of the dominant allele | frequency of R allele |
-| q | Allele frequency of the recessive allele | frequency of r allele |
-| p^2^ | Genotypic frequency of the homozygous dominant | frequency of RR (red) koi |
-| 2pq | Genotypic frequency of the heterozygous | frequency of Rr (spotted) koi |
-| q^2^ | Genotypic frequency of the homozygous recessive | frequency of rr (white) koi |
-
-: Hardy-Weinberg Equilibrium symbols {.striped .hover}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Table of what the standard HWE symbols mean.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_53#slide=id.g3c45f560b82_0_53")
+```
 
 :::
 
@@ -173,11 +167,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 
 Run the model for 75 generations, then pause the simulation and record the allele and genotype frequencies. Continue running for an additional 75 generations (until you have reached generation 150).
 
-| Generation  | Proportion R | Proportion r |
-|--------|--------|--------|
-| 0 | 0.5 | 0.5 |
-| 75 | | |
-| 150 |  |  |
+```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
+```
 
 **Make sure to take a screenshot of your Trial 1a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
@@ -194,11 +186,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations.
 
-| Generation  | Proportion R | Proportion r |
-|--------|--------|--------|
-| 0 | 0.5 | 0.5 |
-| 75 | | |
-| 150 |  |  |
+```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
+```
 
 **Make sure to take a screenshot of your Trial 1b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
@@ -210,11 +200,6 @@ Under HWE, the frequencies of the alleles R and r should be the same in generati
 
 ::: {.callout-caution collapse="true"}
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
-
-| Generation  | 0 | 150 |
-|--------|--------|--------|
-| Frequency R |  |  |
-| Frequency r | | |
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)
 
@@ -242,11 +227,6 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 ::: {.callout-caution collapse="true"}
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
-
-| Generation  | 0 | 150 |
-|--------|--------|--------|
-| Frequency R |  |  |
-| Frequency r | | |
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)
 
@@ -302,11 +282,9 @@ Before running this simulation, change the settings to the following values.
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Feel free to speed this up since it’s a simulation!
 
-| Generation  | Proportion R | Proportion r |
-|--------|--------|--------|
-| 0 | 0.5 | 0.5 |
-| 75 | | |
-| 150 |  |  |
+```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
+```
 
 **Make sure to take a screenshot of your Trial 2a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
@@ -326,11 +304,9 @@ Before running this simulation, change the settings to the following values. The
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run!
 
-| Generation  | Proportion R | Proportion r |
-|--------|--------|--------|
-| 0 | 0.5 | 0.5 |
-| 75 | | |
-| 150 |  |  |
+```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
+```
 
 **Make sure to take a screenshot of your Trial 2b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
@@ -342,11 +318,6 @@ You will again run chi-square tests on both trials using either Excel or Google 
 
 ::: {.callout-caution collapse="true"}
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
-
-| Generation  | 0 | 150 |
-|--------|--------|--------|
-| Frequency R |  |  |
-| Frequency r | | |
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)
 
@@ -374,11 +345,6 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 ::: {.callout-caution collapse="true"}
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
-
-| Generation  | 0 | 150 |
-|--------|--------|--------|
-| Frequency R |  |  |
-| Frequency r | | |
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)
 
@@ -437,11 +403,9 @@ Before running this simulation, change the settings to the following values.
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run!
 
-| Generation  | Proportion R | Proportion r |
-|--------|--------|--------|
-| 0 | 0.5 | 0.5 |
-| 75 | | |
-| 150 |  |  |
+```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
+```
 
 **Make sure to take a screenshot of your Trial 3a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
@@ -474,11 +438,9 @@ Now you will change the environment so that the r allele becomes advantageous wh
 
 Run the model an additional 150 generations, recording the allele and genotype frequencies at both 225 and 300 generations. Make sure to just unpause the simulation from trial 3a instead of pressing the reload button!
 
-| Generation  | Proportion R | Proportion r |
-|--------|--------|--------|
-| 150 |  |  |
-| 225 | | |
-| 300 |  |  |
+```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_59#slide=id.g3c45f560b82_0_59")
+```
 
 **Make sure to take a screenshot of your Trial 3b fishpond and Data Collection page at 300 generations - you will submit this with your assignment!**
 
@@ -490,11 +452,6 @@ You will again run chi-square tests on both trials using either Excel or Google 
 
 ::: {.callout-caution collapse="true"}
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
-
-| Generation  | 0 | 150 |
-|--------|--------|--------|
-| Frequency R |  |  |
-| Frequency r | | |
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)
 
@@ -522,11 +479,6 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 ::: {.callout-caution collapse="true"}
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
-
-| Generation  | 0 | 150 |
-|--------|--------|--------|
-| Frequency R |  |  |
-| Frequency r | | |
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)
 
