@@ -86,6 +86,7 @@ So in the above scenario, an individual koi fish could be pp (RR), and thus be a
 In the early twentieth century, English mathematician Godfrey Hardy and German physician Wilhelm Weinberg stated the principle of equilibrium to describe the genetic makeup of a population. The theory, which later became known as the Hardy-Weinberg principle of equilibrium, states that a population’s allele and genotype frequencies are inherently stable— unless some kind of evolutionary force is acting upon the population, neither the allele nor the genotypic frequencies would change. 
 
 The Hardy-Weinberg principle assumes conditions with:
+
 - No mutations 
 - No migration or emigration 
 - No selective pressure for or against genotype 
@@ -289,7 +290,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 
 **Make sure to take a screenshot of your Trial 2a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-## Trial 2b: Population size = 25 koi
+## Trial 2b. Population size = 25 koi
 
 Before running this simulation, change the settings to the following values. The only parameters that have changed between this and trial 2a at the initial size and the carrying capacity.
 
@@ -389,7 +390,7 @@ Run a chi-square test for both trial 2a and 2b and record your p-values for each
 
 Let's introduce natural selection into the simulation by giving a fitness advantage to genotypes carrying the R allele.
 
-## Trial 3a: Reduced fitness for r allele
+## Trial 3a. Reduced fitness for r allele
 
 Before running this simulation, change the settings to the following values.
 
@@ -425,7 +426,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 4. Compare this model to the drift-only model. What differences do you notice?
 :::
 
-##Trial 3b: Changing the fitness of the r allele
+## Trial 3b. Changing the fitness of the r allele
 Now you will change the environment so that the r allele becomes advantageous while **using the ending population from trial 3a**. This means you will _not_ press the reload button after changing the simulation settings.
 
 - Initial size: 500 
