@@ -432,7 +432,7 @@ Now you will change the environment so that the r allele becomes advantageous wh
 - Initial size: 500 
 - Carrying capacity: 500 
 - **Genotype Fitness: rr = 1.0, Rr = 0.8, RR = 0.5**
-- Mutation (R→r, r→R): 0 
+- Mutation Rate (R→r, r→R): 0 
 - Migration: 0 
 - Assortative Mating: 0 
 - Initial R Allele Proportion: 0.5 
