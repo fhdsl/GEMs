@@ -253,7 +253,7 @@ In the cell where the formula is typed, Google Sheets will return the p-value fo
 Run a chi-square test for both trial 1a and 1b and record your p-values for each.
 
 ::: callout-tip
-#Check your knowledge: Hardy-Weinberg Equilibrium questions
+# Check your knowledge: Hardy-Weinberg Equilibrium questions
 
 1. Examine the change in allele frequencies for your two simulations. Did either population show a change in allele frequency? Why or why not?
 
