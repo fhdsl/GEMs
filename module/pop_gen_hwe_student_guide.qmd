@@ -571,7 +571,7 @@ Run a chi-square test for both trial 3a and 3b and record your p-values for each
 8. Compare the two selection scenarios (trials 3a and 3b). How quickly did the population respond to environmental change?
 :::
 
-## What do I need to submit for this assignment?
+# What do I need to submit for this assignment?
 
 Once you have finished all your simulations, you should submit your results and answers for grading. For each trial, you should submit:
 
@@ -585,3 +585,8 @@ You will have a total of six Data Collection screenshots, six allele proportion 
 
 Additionally, make sure to answer each of the assigned questions.
 
+# Bonus Challenge
+
+Try to create a list of settings that can create a population of all red fish, all white fish, or only red and spotted fish. Take a screenshot of your settings and the Data Collection page of your final population.
+
+What evolutionary forces did you use in your simulation?
