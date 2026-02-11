@@ -10,7 +10,8 @@ format:
 Evolution is defined as a change in allele frequencies in a population over generations. Natural selection is one of the mechanisms driving these changes. Organisms with heritable traits that provide an advantage in a particular environment tend to survive longer and produce more offspring, causing those advantageous traits—and the alleles behind them—to become more common in the population.
 
 However, natural selection is not the only way allele frequencies change. Genetic drift, migration, mutation, and environmental shifts also influence how populations evolve, sometimes in unpredictable ways.
-Before working with quantitative models in the PopGen fishpond simulation, keep in mind:
+
+In this activity, we will be working with the PopGen Fishpond Simulator. Before working with quantitative models in the PopGen fishpond simulation, keep in mind:
 
 1. A trait is only advantageous in a specific environment.
 1. Mutations introduce new variation, which selection may or may not favor.
