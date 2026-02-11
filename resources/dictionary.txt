@@ -1,6 +1,7 @@
 Abcb
 ADHD
 ahoffma
+Ai
 al
 Alcazar
 Amyotrophic
@@ -25,6 +26,7 @@ BRCA
 callout
 CHD
 cheatsheet
+codominant
 Clovis
 cloviscollege
 Coffman
@@ -96,6 +98,7 @@ GitHub
 glutamate
 glycine
 glyphicons
+Godfrey
 GutBrain
 gutbrain
 guttman
@@ -120,6 +123,7 @@ intron
 IRB
 ketamine
 knitr
+Kohaku
 koi
 Koi
 LDs
@@ -131,6 +135,8 @@ likeminded
 limbic
 LMS
 lncRNA
+macroevolution
+macroevolutionary
 MAF
 MalaCards
 Mapk
@@ -143,6 +149,8 @@ mgihome
 microbiome
 microbiota
 Microbiota
+microevolution
+Microevolution
 microglia
 microtubules
 midgut
@@ -205,6 +213,7 @@ polygenic
 Polygenic
 PopGen
 PositCloud
+pq
 pre
 promotors
 protocadherin
@@ -215,6 +224,7 @@ PubMed
 pvalue
 qmd
 qmd 
+qq
 quarto 
 readr
 repo
@@ -224,6 +234,8 @@ Rmd
 RNAs
 rnaseq
 ROS
+rr
+Rr
 RStudio
 scalable
 Schizoaffective
@@ -250,6 +262,7 @@ tranferase
 transmembrane
 TRPC
 UCSC
+unpause
 upregulated
 upregulation
 Ust
@@ -258,6 +271,9 @@ UST's
 usta
 VM
 www
+yy
+Yy
+YY
 ZDHHC
 zebrafish
 Zebrafish
