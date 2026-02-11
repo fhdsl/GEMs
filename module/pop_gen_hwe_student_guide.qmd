@@ -509,7 +509,7 @@ Run a chi-square test for both trial 3a and 3b and record your p-values for each
 
 
 ::: callout-tip
-#Check your knowledge: Environmental Change Analysis Questions
+# Check your knowledge: Environmental Change Analysis Questions
 1. What happened to the R allele when the environment changed (and the fitness of the alleles flipped)? Did the pattern follow drift or selection?
 
 2. Explain why rr became the most common genotype by the end of the simulation.
