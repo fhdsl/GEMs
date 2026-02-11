@@ -114,7 +114,6 @@ The goal of this lab is to interpret patterns in allele frequencies and genotype
 
 This activity reinforces what we discussed in lecture and provides a visual, dynamic way to observe evolution in action.
 
-Click here to access the [PopGen Fishpond Simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html).
 
 # Activity 1: Modeling Hardy-Weinberg Equilibrium
 
