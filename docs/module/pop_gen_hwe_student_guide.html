@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-02-11">
+
+<title>Population Genetics – GEMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1db3f541d99483cdc7a0d9cf38862b2c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XMR6CQ1L12"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">GEMs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules.html"> 
+<span class="menu-text">Modules</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../input.html"> 
+<span class="menu-text">Share Your Input</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#hardy-weinberg-equilibrium-hwe" id="toc-hardy-weinberg-equilibrium-hwe" class="nav-link" data-scroll-target="#hardy-weinberg-equilibrium-hwe">Hardy-Weinberg Equilibrium (HWE)</a></li>
+  </ul></li>
+  <li><a href="#activity-1-modeling-hardy-weinberg-equilibrium" id="toc-activity-1-modeling-hardy-weinberg-equilibrium" class="nav-link" data-scroll-target="#activity-1-modeling-hardy-weinberg-equilibrium">Activity 1: Modeling Hardy-Weinberg Equilibrium</a>
+  <ul class="collapse">
+  <li><a href="#trial-1a.-population-size-500-koi" id="toc-trial-1a.-population-size-500-koi" class="nav-link" data-scroll-target="#trial-1a.-population-size-500-koi">Trial 1a. Population Size = 500 koi</a></li>
+  <li><a href="#trial-1b.-population-size-500-koi" id="toc-trial-1b.-population-size-500-koi" class="nav-link" data-scroll-target="#trial-1b.-population-size-500-koi">Trial 1b. Population Size = 500 koi</a></li>
+  <li><a href="#running-a-chi-square-test" id="toc-running-a-chi-square-test" class="nav-link" data-scroll-target="#running-a-chi-square-test">Running a chi-square test</a></li>
+  </ul></li>
+  <li><a href="#activity-2-modeling-genetic-drift" id="toc-activity-2-modeling-genetic-drift" class="nav-link" data-scroll-target="#activity-2-modeling-genetic-drift">Activity 2: Modeling Genetic Drift</a>
+  <ul class="collapse">
+  <li><a href="#trial-2a.-population-size-200-koi" id="toc-trial-2a.-population-size-200-koi" class="nav-link" data-scroll-target="#trial-2a.-population-size-200-koi">Trial 2a. Population Size = 200 koi</a></li>
+  <li><a href="#trial-2b.-population-size-25-koi" id="toc-trial-2b.-population-size-25-koi" class="nav-link" data-scroll-target="#trial-2b.-population-size-25-koi">Trial 2b. Population size = 25 koi</a></li>
+  <li><a href="#running-a-chi-square-test-1" id="toc-running-a-chi-square-test-1" class="nav-link" data-scroll-target="#running-a-chi-square-test-1">Running a chi-square test</a></li>
+  </ul></li>
+  <li><a href="#activity-3-modeling-natural-selection" id="toc-activity-3-modeling-natural-selection" class="nav-link" data-scroll-target="#activity-3-modeling-natural-selection">Activity 3: Modeling Natural Selection</a>
+  <ul class="collapse">
+  <li><a href="#trial-3a.-reduced-fitness-for-r-allele" id="toc-trial-3a.-reduced-fitness-for-r-allele" class="nav-link" data-scroll-target="#trial-3a.-reduced-fitness-for-r-allele">Trial 3a. Reduced fitness for r allele</a></li>
+  <li><a href="#trial-3b.-changing-the-fitness-of-the-r-allele" id="toc-trial-3b.-changing-the-fitness-of-the-r-allele" class="nav-link" data-scroll-target="#trial-3b.-changing-the-fitness-of-the-r-allele">Trial 3b. Changing the fitness of the r allele</a></li>
+  <li><a href="#running-a-chi-square-test-2" id="toc-running-a-chi-square-test-2" class="nav-link" data-scroll-target="#running-a-chi-square-test-2">Running a chi-square test</a></li>
+  </ul></li>
+  <li><a href="#what-do-i-need-to-submit-for-this-assignment" id="toc-what-do-i-need-to-submit-for-this-assignment" class="nav-link" data-scroll-target="#what-do-i-need-to-submit-for-this-assignment">What do I need to submit for this assignment?</a></li>
+  <li><a href="#bonus-challenge" id="toc-bonus-challenge" class="nav-link" data-scroll-target="#bonus-challenge">Bonus Challenge</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Population Genetics</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 11, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Evolution is defined as a change in allele frequencies in a population over generations. Natural selection is one of the mechanisms driving these changes. Organisms with heritable traits that provide an advantage in a particular environment tend to survive longer and produce more offspring, causing those advantageous traits—and the alleles behind them—to become more common in the population.</p>
+<p>However, natural selection is not the only way allele frequencies change. Genetic drift, migration, mutation, and environmental shifts also influence how populations evolve, sometimes in unpredictable ways.</p>
+<p>In this activity, we will be working with the PopGen Fishpond Simulator. Before working with quantitative models in the PopGen fishpond simulation, keep in mind:</p>
+<ol type="1">
+<li>A trait is only advantageous in a specific environment.</li>
+<li>Mutations introduce new variation, which selection may or may not favor.</li>
+<li>Natural selection <strong>is not</strong> random, but drift <strong>is</strong> random.</li>
+<li>Environmental changes can reverse which alleles are beneficial.</li>
+</ol>
+<p>In this activity, you will use a population genetics simulation to observe how allele frequencies shift through time and how natural selection, genetic drift, and migration can impact these frequencies.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p><em>Microevolution</em>, or evolution on a small scale, is defined as a change in the frequency of gene variants, and alleles, in a population over generations. The field of biology that studies allele frequencies in populations and how they change over time is called <em>population genetics</em>.</p>
+<p>Microevolution is sometimes contrasted with <em>macroevolution</em>, which is evolution that involves large changes, such as the formation of new groups or species, and happens over long time periods. However, most biologists view microevolution and macroevolution as the same process happening on different timescales. Microevolution adds up gradually, over long periods of time to produce macroevolutionary changes.</p>
+<p>Let’s look at three concepts that are core to the definition of microevolution: populations, alleles, and allele frequency.</p>
+<p>A <strong>population</strong> is a group of organisms of the same species that are found in the same area and can interbreed. A population is the smallest unit that can evolve—in other words, an individual can’t evolve.</p>
+<p>An <strong>allele</strong> is a version of a gene, a heritable unit that controls a particular feature of an organism.</p>
+<p>For instance, Mendel studied a gene that controls flower color in pea plants. This gene comes in a white allele, w, and a purple allele, W. Each pea plant has two gene copies, which may be the same or different alleles. When the alleles are different, one—the dominant allele, W—may hide the other—the recessive allele, w. A plant’s set of alleles, called its genotype, determines its phenotype, or observable features, in this case, flower color.</p>
+<p>Coloration among many organisms, including koi fish (which you will be using in your simulation), is controlled by multiple genes. However, we can use some aspects of color patterns to model single gene inheritance patterns and evolution in populations. For example, the red or orange color in the Kohaku variety of koi can be treated as a codominant system. For the purposes of this simulations, a fish with the <em>RR</em> genotype will be a solid red color, a fish with the <em>rr</em> genotype will be white, and a fish with the <em>Rr</em> genotype (the heterozygous genotype) will be white with red spots.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3b94f7217d0_0_9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Illustration of red, spotted, and white koi fish (phenotype) and their associated genotypes (RR, Rr, and rr)."></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Allele frequency</strong> refers to how frequently a particular allele appears in a population. For instance, if all the alleles in a population of koi were red alleles, R, the allele frequency of W would be 100%, or 1.0. However, if half the alleles were R and half were r, each allele would have an allele frequency of 50%, or 0.5.</p>
+<p>In general, we can define allele frequency as <em>Allele frequency of A</em> = ( Total number of A alleles in population) / (Number of copies A/a alleles in population)</p>
+<p>Sometimes there are more than two alleles in a population (e.g., there might be A, a, and Ai alleles of a gene). In that case, you would want to add up all of the different alleles to get your denominator.</p>
+<p>It’s also possible to calculate genotype frequencies—the fraction of individuals with a given genotype—and phenotype frequencies—the fraction of individuals with a given phenotype. Keep in mind, though, that these are different concepts from allele frequency. We’ll see an example of this difference next.</p>
+<p>Let’s look at an example. Consider the very small population of nine koi fish shown below. Each fish has two copies of the color gene.</p>
+<p>If we look at the two gene copies in each koi and count up how many R copies are present, we find there are 13. If we count up how many r copies are present, we find that there are five. The total number of gene copies in the whole population is 13 + 5 = 18.</p>
+<p>We can divide the number of copies of each allele by the total number of copies to get the allele frequency. By convention, when there are just two alleles for a gene in a population, their frequencies are given the symbols p and q.</p>
+<p>p = frequency of R = 13/18 = 0.72 or 72% q = frequency of r = 5/18 = 0.28 or 28%</p>
+<p>The frequencies of all the alleles of a gene must add up to one, or 100%.</p>
+<p>Allele frequency is different from genotype frequency or phenotype frequency. Genotype and phenotype frequencies can also be calculated and are important for understanding how populations evolve, but they are not the same thing as allele frequency. The diagram below shows the difference.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c45f560b82_0_12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Illustration of 9 koi fish, with calculations for the genotype frequency, phenotype frequency, and allele frequency."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Now, let’s suppose we come back a generation later and check the genotypes of the new koi fish that now make up the population. To find the allele frequencies, we again look at each individual’s genotype, count the number of copies of each allele, and divide by the total number of gene copies. Now, we find the frequency of R has dropped to 8/18 = 0.44 or 44%, and the frequency of r has risen to 10/18 = 0.56 or 56%.</p>
+<p>There has been a change in allele frequencies in the population over generations, so—by the definition of microevolution—we can say that the population may have evolved. If we were actually doing research, we might want to use a statistical test (called a chi-square test) to confirm that these proportions were really different.</p>
+<p>The total set of gene copies for all genes in a population is referred to as its <strong>gene pool</strong>. The gene pool gets its name from the idea that we are essentially taking all the gene copies—for all genes—in the individuals of a population and dumping them into one large, common pool.</p>
+<p>What would this look like? In the example above, we went through all nine individuals in the population and looked at their copies of the color gene. There were 18 individual gene copies, each of which was a R or a r allele. Imagine that we went through this same process for every gene in the koi fish, including genes that control length, number of whiskers, tail shape, metabolism, etc. There would be 18 copies of each gene pulled out and dumped into the common pool. At the end of this process, the common pool of gene copies will be the gene pool of our population.</p>
+<p>By looking at all the copies of all the genes in a population, we can see globally how much genetic variation there is in the population. The more variation a population has, the better its ability to adapt to changes in its environment through natural selection. If there is more variation, the odds are better that there will be some alleles already present that allow organisms to survive and reproduce effectively under the new conditions.</p>
+<div class="dictionary">
+<p>What ultimately interests most biologists is not the frequencies of different alleles, but the frequencies of the resulting genotypes, known as the <strong>population’s genetic structure</strong>. Scientists can use the distribution of phenotypes to estimate the genotypes and alleles that make up a population. If the phenotype is observed, only the genotype of the homozygous recessive alleles can be known; the calculations provide an estimate of the remaining genotypes. Since each individual carries two alleles per gene, if the allele frequencies (p and q) are known, predicting the frequencies of these genotypes is a simple mathematical calculation to determine the probability of getting these genotypes if two alleles are drawn at random from the gene pool.</p>
+<p>In the koi pond scenario, an individual koi fish could be pp (RR), and thus be all red; pq (Rr), spotted; or qq (rr), and thus be all white. In other words, the frequency of pp individuals is simply p<sup>2</sup>; the frequency of pq individuals is 2pq; and the frequency of qq individuals is q<sup>2</sup>. And, again, if p and q are the only two possible alleles for a given trait in the population, these genotype frequencies will sum to one: p<sup>2</sup> + 2pq + q<sup>2</sup> = 1.</p>
+</div>
+<section id="hardy-weinberg-equilibrium-hwe" class="level2">
+<h2 class="anchored" data-anchor-id="hardy-weinberg-equilibrium-hwe">Hardy-Weinberg Equilibrium (HWE)</h2>
+<p>In the early twentieth century, English mathematician Godfrey Hardy and German physician Wilhelm Weinberg stated the principle of equilibrium to describe the genetic makeup of a population. The theory, which later became known as the Hardy-Weinberg principle of equilibrium, states that a population’s allele and genotype frequencies are inherently stable— unless some kind of evolutionary force is acting upon the population, neither the allele nor the genotypic frequencies would change.</p>
+<p>The Hardy-Weinberg principle assumes conditions with:</p>
+<ul>
+<li>No mutations</li>
+<li>No migration or emigration</li>
+<li>No selective pressure for or against genotype</li>
+<li>Large Sample Size</li>
+<li>Random Mating</li>
+</ul>
+<p>In theory, if a population is at equilibrium — that is, there are no evolutionary forces acting upon it — generation after generation would have the same gene pool and genetic structure, and these equations would all hold true all of the time. Of course, even Hardy and Weinberg recognized that no natural population is immune to evolution. Populations in nature are constantly changing in genetic makeup due to drift, mutation, possibly migration, and selection. As a result, the only way to determine the exact distribution of phenotypes in a population is to go out and count them. But the Hardy-Weinberg principle gives scientists a mathematical baseline of a non-evolving population to which they can compare evolving populations and thereby infer what evolutionary forces might be at play. <strong>If the frequencies of alleles or genotypes deviate from the value expected from the Hardy-Weinberg equation, then the population is evolving</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No matter what genes you’re working with, Hardy-Weinberg equilibrium uses standard symbols: p and q.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c45f560b82_0_53.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Table of what the standard HWE symbols mean."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In this activity, you will use the PopGen Fishpond online simulation to explore how populations evolve over time. Rather than working with real organisms (which would take generations to study), this model allows you to speed up time and watch how genetic drift and natural selection shape populations across dozens or even hundreds of generations. You will collect allele frequency data, analyze how evolutionary forces affect genetic variation, and compare different evolutionary scenarios.</p>
+<p>The goal of this lab is to interpret patterns in allele frequencies and genotype frequencies under different conditions. By the end, you should be able to explain: 1. how random events cause allele frequencies to drift, 1. how selection favors certain alleles over others, and 1. how a change in environment can shift which alleles are beneficial.</p>
+<p>This activity reinforces what we discussed in lecture and provides a visual, dynamic way to observe evolution in action.</p>
+</section>
+</section>
+<section id="activity-1-modeling-hardy-weinberg-equilibrium" class="level1">
+<h1>Activity 1: Modeling Hardy-Weinberg Equilibrium</h1>
+<p>In this section, you’ll explore what allele frequencies look like in a population at equilibrium (large population, no mutation, no migration, no selection, and random mating). This will also give you a chance to get used to the PopGen fishpond Simulator.</p>
+<section id="trial-1a.-population-size-500-koi" class="level2">
+<h2 class="anchored" data-anchor-id="trial-1a.-population-size-500-koi">Trial 1a. Population Size = 500 koi</h2>
+<p>Open the <a href="https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html">PopGen Fishpond Simulator</a> and click on “Run Experiments”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3b94f7217d0_0_231.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Image of the landing page for the PopGene Fishpond Simulation."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This will open the page that allows you to change the settings for your simulation. Make sure the settings have the following values. (In order to change values, click the up or down arrow next to each number.)</p>
+<ul>
+<li>Initial size: 500</li>
+<li>Carrying capacity: 500</li>
+<li>Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0</li>
+<li>Mutation Rate (R→r, r→R): 0</li>
+<li>Migration: 0</li>
+<li>Assortative Mating: 0</li>
+<li>Initial R Allele Proportion: 0.5</li>
+<li>Mortality Rate: 10</li>
+<li>Brood Size: 10</li>
+<li>Sex Ratio: 0.5</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c30c8d4131_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Image of the Experimental Design tab of the fishpond simulation, where you can choose the settings for your simulation."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Once you’ve changed the settings, click on the arrow that says “To Data” in the bottom right corner of the lab notebook page. This will take you to the simulation results page.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3b94f7217d0_0_245.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="At the bottom of the Experimental Design tab, you can click the arrow to go to the Data Collection tab."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>On this page, you can see the number of generations that have been simulated as well as the allele and genotype frequencies of the fishpond population. At the moment, the simulation is running fairly slowly. You can make it run faster by pressing the “forward” button on the bottom.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c27d006627_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="At the bottom of both the Experimental Design and Data Collection tabs, you can speed up or slow down the simulation."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Run the model for 75 generations, then pause the simulation and record the allele and genotype frequencies. Continue running for an additional 75 generations (until you have reached generation 150). <strong>Make sure to take a screenshot of your Trial 1a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Results: Hardy-Weinberg Equilibrium Simulation Trial 1a
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fill out the table below, and submit it <strong>and a screenshot</strong> of the Data Collection page at 150 generations as part of your assignment</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c45f560b82_0_45.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Table showing the information you should collect."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="trial-1b.-population-size-500-koi" class="level2">
+<h2 class="anchored" data-anchor-id="trial-1b.-population-size-500-koi">Trial 1b. Population Size = 500 koi</h2>
+<p>Run the simulation again with the same parameters as before. You can do this by clicking the “reload” button in the upper right corner of the Data Collection lab notebook page.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c27d006627_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Click the circular arrow in the upper right corner to restart the simulation from 0."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. <strong>Make sure to take a screenshot of your Trial 1b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Results: Hardy-Weinberg Equilibrium Simulation Trial 1b
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fill out the table below, and submit it <strong>and a screenshot</strong> of the Data Collection page at 150 generations as part of your assignment</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c45f560b82_0_45.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Table showing the information you should collect."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="running-a-chi-square-test" class="level2">
+<h2 class="anchored" data-anchor-id="running-a-chi-square-test">Running a chi-square test</h2>
+<p>Under HWE, the frequencies of the alleles R and r should be the same in generation 150 as they are at the start of your simulation. While it is tempting to simply eyeball the frequencies to determine if the population is at equilibrium, a more scientific approach is to run a statistical test. For testing HWE, you can use a chi-square test to compare allele frequencies. This can be done in a spreadsheet program like Microsoft Excel or Google Sheets.</p>
+<p><strong>Expand this section for instructions on running a chi-square test in Microsoft Excel.</strong></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
+<p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
+<p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
+<p>So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)</p>
+<p>Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3b94f7217d0_0_241.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Make sure to fill in the total number of fish into your table, not the proportion."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, type in the formula to run a chi-square test. In Excel, the formula follows the convention</p>
+<p><code>=chisq.test(actual_range, expected_range)</code></p>
+<p>The <strong>actual_range</strong> are the allele frequencies at generation 150. The <strong>expected_range</strong> are the allele frequencies at the start (generation 0).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Type the formula for the chi-square test command and choose the actual and expected range of values."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the cell where the formula is typed, Excel will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. (Note: Excel may tell you there is a possible error in your formula because adjacent cells are omitted. You can ignore this, because it’s asking why you omitted the “0” and “150” that are your column headers.)</p>
+</div>
+</div>
+</div>
+<p><strong>Expand this section for instructions on running a chi-square test in Google Sheets.</strong></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
+<p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
+<p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
+<p>So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)</p>
+<p>Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Make sure to fill in the total number of fish into your table, not the proportion."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, type in the formula to run a chi-square test. In Google Sheets, the formula follows the convention</p>
+<p><code>=CHISQ.TEST(observed_ values_range, expected_ values_range)</code></p>
+<p>The <strong>observed_range</strong> are the allele frequencies at generation 150. The <strong>expected_range</strong> are the allele frequencies at the start (generation 0).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Type the formula for the chi-square test command and choose the observed and expected range of values."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the cell where the formula is typed, Google Sheets will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium.</p>
+</div>
+</div>
+</div>
+<p>Run a chi-square test for both trial 1a and 1b and record your p-values for each.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Check your knowledge: Hardy-Weinberg Equilibrium questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Examine the change in allele frequencies for your two simulations. Did either population show a change in allele frequency? Why or why not?</p></li>
+<li><p>Compare the change in allele frequencies between your two simulations. Are the allele frequencies identical? Why or why not?</p></li>
+<li><p>Would you say the populations are at equilibrium without looking at the results of the chi-square test? What about afterwards? Make sure to report your p-values for both trials.</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="activity-2-modeling-genetic-drift" class="level1">
+<h1>Activity 2: Modeling Genetic Drift</h1>
+<p>In this section, you will explore genetic drift, which is the random fluctuation of allele frequencies due to chance alone. No genotype has a fitness advantage in this model. You will run two trials: one with a large population and one with a small population.</p>
+<section id="trial-2a.-population-size-200-koi" class="level2">
+<h2 class="anchored" data-anchor-id="trial-2a.-population-size-200-koi">Trial 2a. Population Size = 200 koi</h2>
+<p>Before running this simulation, change the settings to the following values.</p>
+<ul>
+<li><strong>Initial size: 200</strong></li>
+<li><strong>Carrying capacity: 200</strong></li>
+<li>Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0</li>
+<li>Mutation Rate (R→r, r→R): 0</li>
+<li>Migration: 0</li>
+<li>Assortative Mating: 0</li>
+<li>Initial R Allele Proportion: 0.5</li>
+<li>Mortality Rate: 10</li>
+<li>Brood Size: 10</li>
+<li>Sex Ratio: 0.5</li>
+</ul>
+<p>Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Feel free to speed this up since it’s a simulation! <strong>Make sure to take a screenshot of your Trial 2a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Results: Drift Simulation Trial 2a
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fill out the table below, and submit it <strong>and a screenshot</strong> of the Data Collection page at 150 generations as part of your assignment</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c45f560b82_0_45.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Table showing the information you should collect."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="trial-2b.-population-size-25-koi" class="level2">
+<h2 class="anchored" data-anchor-id="trial-2b.-population-size-25-koi">Trial 2b. Population size = 25 koi</h2>
+<p>Before running this simulation, change the settings to the following values. The only parameters that have changed between this and trial 2a at the initial size and the carrying capacity.</p>
+<ul>
+<li><strong>Initial size: 25</strong></li>
+<li><strong>Carrying capacity: 25</strong></li>
+<li>Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0</li>
+<li>Mutation Rate (R→r, r→R): 0</li>
+<li>Migration: 0</li>
+<li>Assortative Mating: 0</li>
+<li>Initial R Allele Proportion: 0.5</li>
+<li>Mortality Rate: 10</li>
+<li>Brood Size: 10</li>
+<li>Sex Ratio: 0.5</li>
+</ul>
+<p>Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the “reload” button so you start the simulation over from generation 1, not just continue the simulation from your previous run! <strong>Make sure to take a screenshot of your Trial 2b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Results: Drift Simulation Trial 2b
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fill out the table below, and submit it <strong>and a screenshot</strong> of the Data Collection page at 150 generations as part of your assignment.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c45f560b82_0_45.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Table showing the information you should collect."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="running-a-chi-square-test-1" class="level2">
+<h2 class="anchored" data-anchor-id="running-a-chi-square-test-1">Running a chi-square test</h2>
+<p>You will again run chi-square tests on both trials using either Excel or Google Sheets.</p>
+<p><strong>Expand this section for instructions on running a chi-square test in Microsoft Excel.</strong></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
+<p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
+<p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
+<p>So, if you start with 200 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 200. (Remember, each koi fish has 2 alleles, so a population of 200 fish means 400 alleles, and half of them are R to start.) A population of 75 koi fish means 150 total alleles.</p>
+<p>Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3b94f7217d0_0_241.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Make sure to fill in the total number of fish into your table, not the proportion."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, type in the formula to run a chi-square test. In Excel, the formula follows the convention</p>
+<p><code>=chisq.test(actual_range, expected_range)</code></p>
+<p>The <strong>actual_range</strong> are the allele frequencies at generation 150. The <strong>expected_range</strong> are the allele frequencies at the start (generation 0).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Type the formula for the chi-square test command and choose the actual and expected range of values."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the cell where the formula is typed, Excel will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. (Note: Excel may tell you there is a possible error in your formula because adjacent cells are omitted. You can ignore this, because it’s asking why you omitted the “0” and “150” that are your column headers.)</p>
+</div>
+</div>
+</div>
+<p><strong>Expand this section for instructions on running a chi-square test in Google Sheets.</strong></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
+<p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
+<p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
+<p>So, if you start with 200 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 200. (Remember, each koi fish has 2 alleles, so a population of 200 fish means 400 alleles, and half of them are R to start.) A population of 75 koi fish means a total of 150 alleles.</p>
+<p>Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Make sure to fill in the total number of fish into your table, not the proportion."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, type in the formula to run a chi-square test. In Google Sheets, the formula follows the convention</p>
+<p><code>=CHISQ.TEST(observed_ values_range, expected_ values_range)</code></p>
+<p>The <strong>observed_range</strong> are the allele frequencies at generation 150. The <strong>expected_range</strong> are the allele frequencies at the start (generation 0).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Type the formula for the chi-square test command and choose the observed and expected range of values."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the cell where the formula is typed, Google Sheets will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium.</p>
+</div>
+</div>
+</div>
+<p>Run a chi-square test for both trial 2a and 2b and record your p-values for each.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Check your knowledge: Drift questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Compare the change in allele frequencies between the large and small population. Which population changed more, and why?</p></li>
+<li><p>Did either population approach fixation? (<strong>Fixation</strong> occurs when one allele reaches an allele frequency = 1) Explain why drift is more pronounced in small populations.</p></li>
+<li><p>Why do the two drift trials show different outcomes even with the same allele frequencies and equal fitness?</p></li>
+<li><p>How does random sampling contribute to genetic drift over many generations?</p></li>
+<li><p>Which population is not in Hardy-Weinberg? Which condition of Hardy-Weinberg is not being met? Make sure to include the p-values from your chi-square tests to support your answer.</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="activity-3-modeling-natural-selection" class="level1">
+<h1>Activity 3: Modeling Natural Selection</h1>
+<p>Let’s introduce natural selection into the simulation by giving a fitness advantage to genotypes carrying the R allele.</p>
+<section id="trial-3a.-reduced-fitness-for-r-allele" class="level2">
+<h2 class="anchored" data-anchor-id="trial-3a.-reduced-fitness-for-r-allele">Trial 3a. Reduced fitness for r allele</h2>
+<p>Before running this simulation, change the settings to the following values.</p>
+<ul>
+<li>Initial size: 500</li>
+<li>Carrying capacity: 500</li>
+<li><strong>Genotype Fitness: rr = 0.5, Rr = 1.0, RR = 1.0</strong></li>
+<li>Mutation Rate (R→r, r→R): 0</li>
+<li>Migration: 0</li>
+<li>Assortative Mating: 0</li>
+<li>Initial R Allele Proportion: 0.5</li>
+<li>Mortality Rate: 10</li>
+<li>Brood Size: 10</li>
+<li>Sex Ratio: 0.5</li>
+</ul>
+<p>Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the “reload” button so you start the simulation over from generation 1, not just continue the simulation from your previous run! <strong>Make sure to take a screenshot of your Trial 3a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Results: Natural Selection Simulation Trial 3a
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fill out the table below, and submit it and a screenshot of the Data Collection page at 150 generations as part of your assignment</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c45f560b82_0_45.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Table showing the information you should collect."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="trial-3b.-changing-the-fitness-of-the-r-allele" class="level2">
+<h2 class="anchored" data-anchor-id="trial-3b.-changing-the-fitness-of-the-r-allele">Trial 3b. Changing the fitness of the r allele</h2>
+<p>Now you will change the environment so that the r allele becomes advantageous while <strong>using the ending population from trial 3a</strong>. This means you will <em>not</em> press the reload button after changing the simulation settings.</p>
+<ul>
+<li>Initial size: 500</li>
+<li>Carrying capacity: 500</li>
+<li><strong>Genotype Fitness: rr = 1.0, Rr = 0.8, RR = 0.5</strong></li>
+<li>Mutation Rate (R→r, r→R): 0</li>
+<li>Migration: 0</li>
+<li>Assortative Mating: 0</li>
+<li>Initial R Allele Proportion: 0.5</li>
+<li>Mortality Rate: 10</li>
+<li>Brood Size: 10</li>
+<li>Sex Ratio: 0.5</li>
+</ul>
+<p>Run the model an additional 150 generations, recording the allele and genotype frequencies at both 225 and 300 generations. Make sure to just unpause the simulation from trial 3a instead of pressing the reload button! <strong>Make sure to take a screenshot of your Trial 3b fishpond and Data Collection page at 300 generations - you will submit this with your assignment!</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Results: Natural Selection Simulation Trial 3b
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fill out the table below, and submit it and a screenshot of the Data Collection page at 150 generations as part of your assignment</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c45f560b82_0_59.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Table showing the information you should collect."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="running-a-chi-square-test-2" class="level2">
+<h2 class="anchored" data-anchor-id="running-a-chi-square-test-2">Running a chi-square test</h2>
+<p>You will again run chi-square tests on both trials using either Excel or Google Sheets.</p>
+<p><strong>Expand this section for instructions on running a chi-square test in Microsoft Excel.</strong></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
+<p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
+<p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
+<p>So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)</p>
+<p>Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3b94f7217d0_0_241.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Make sure to fill in the total number of fish into your table, not the proportion."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, type in the formula to run a chi-square test. In Excel, the formula follows the convention</p>
+<p><code>=chisq.test(actual_range, expected_range)</code></p>
+<p>The <strong>actual_range</strong> are the allele frequencies at generation 150. The <strong>expected_range</strong> are the allele frequencies at the start (generation 0).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Type the formula for the chi-square test command and choose the actual and expected range of values."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the cell where the formula is typed, Excel will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. (Note: Excel may tell you there is a possible error in your formula because adjacent cells are omitted. You can ignore this, because it’s asking why you omitted the “0” and “150” that are your column headers.)</p>
+</div>
+</div>
+</div>
+<p><strong>Expand this section for instructions on running a chi-square test in Google Sheets.</strong></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
+<p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
+<p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
+<p>So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)</p>
+<p>Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Make sure to fill in the total number of fish into your table, not the proportion."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, type in the formula to run a chi-square test. In Google Sheets, the formula follows the convention</p>
+<p><code>=CHISQ.TEST(observed_ values_range, expected_ values_range)</code></p>
+<p>The <strong>observed_range</strong> are the allele frequencies at generation 150. The <strong>expected_range</strong> are the allele frequencies at the start (generation 0).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Type the formula for the chi-square test command and choose the actual and expected range of values."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the cell where the formula is typed, Google Sheets will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium.</p>
+</div>
+</div>
+</div>
+<p>Run a chi-square test for both trial 3a and 3b and record your p-values for each. Remember that for trial 3b, you started with generation 150, so the expected frequencies will be the allele frequencies observed at generation 150 in trial 3a.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Check your knowledge: Natural Selection questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>How did the allele frequencies change over the 150 generations when R was beneficial?</p></li>
+<li><p>Why does the R allele increase in a predictable (non-random) pattern in this model?</p></li>
+<li><p>What happened to the rr genotype over time, and why?</p></li>
+<li><p>Compare this model to the drift-only model. What differences do you notice?</p></li>
+<li><p>What happened to the R allele when the environment changed (and the fitness of the alleles flipped)? Did the pattern follow drift or selection?</p></li>
+<li><p>Explain why rr became the most common genotype by the end of the simulation.</p></li>
+<li><p>How does this model illustrate that fitness depends on the environment?</p></li>
+<li><p>Compare the two selection scenarios (trials 3a and 3b). How quickly did the population respond to environmental change?</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="what-do-i-need-to-submit-for-this-assignment" class="level1">
+<h1>What do I need to submit for this assignment?</h1>
+<p>Once you have finished all your simulations, you should submit your results and answers for grading. For each trial, you should submit:</p>
+<ul>
+<li>table of allele proportions at generations 75 and 150 (or 225 and 300, for trial 3b)</li>
+<li>screenshot of the Data Collection screen from the last generation of each trial</li>
+<li>the chi-square tables and calculated p-values</li>
+</ul>
+<p>You will have a total of six Data Collection screenshots, six allele proportion tables, and six chi-square tables and p-values.</p>
+<p><strong>Check that you calculated the allele frequencies correctly for each trial. Make sure to use the correct number of koi (it’s not always 500)!</strong></p>
+<p>Additionally, make sure to answer each of the assigned questions.</p>
+</section>
+<section id="bonus-challenge" class="level1">
+<h1>Bonus Challenge</h1>
+<p>Try to create a list of settings that can create a population of all red fish, all white fish, or only red and spotted fish. Take a screenshot of your settings and the Data Collection page of your final population.</p>
+<p>What evolutionary forces did you use in your simulation?</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/genomicseducation\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p style="text-align:center;">
+<small> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. </small>
+</p>
+<p style="text-align:center;">
+<small> GEMs is funded by the National Human Genome Research Institute <a href="https://reporter.nih.gov/search/SjWuEKrSVEGVaHvRb9L-vg/project-details/10854368">1R25HG013489.</a>
+</small></p><small>
+</small><p><small></small></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
