@@ -373,7 +373,7 @@ In the cell where the formula is typed, Google Sheets will return the p-value fo
 Run a chi-square test for both trial 2a and 2b and record your p-values for each.
 
 ::: callout-tip
-#Check your knowledge: Drift questions
+# Check your knowledge: Drift questions
 
 1. Compare the change in allele frequencies between the large and small population. Which population changed more, and why?
 
