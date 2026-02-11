@@ -415,7 +415,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 
 
 ::: callout-tip
-#Check your knowledge: Natural Selection questions
+# Check your knowledge: Natural Selection questions
 
 1. How did the allele frequencies change over the 150 generations when R was beneficial?
 
