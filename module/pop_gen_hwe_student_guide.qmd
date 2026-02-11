@@ -274,7 +274,7 @@ Before running this simulation, change the settings to the following values.
 - **Initial size: 200** 
 - **Carrying capacity: 200** 
 - Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0 
-- Mutation (R→r, r→R): 0 
+- Mutation Rate (R→r, r→R): 0 
 - Migration: 0 
 - Assortative Mating: 0 
 - Initial R Allele Proportion: 0.5 
