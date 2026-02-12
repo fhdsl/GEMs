@@ -5,4 +5,52 @@ output:
   html_document
 ---
 
-Coming soon
+This activity will walk through interpretation of data from wearable devices intended to measure stress in humans. You will work with real data from a study where researchers measured stress in students taking exams.
+
+## Part 1
+
+In Part 1, we'll go over some background context for this activity. Then, we'll get set up on Posit Cloud for the next steps.
+
+### Background
+
+First, let's read the "plain language" summary from a publication entitled "A Wearable Exam Stress Dataset for Predicting Grades using Physiological Signals" [@amin2022wearable].
+
+> Most stress research happens in labs, not real life. This means there aren't many datasets showing how people's bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity—a sign of stress) and skin temperature. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We're making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.
+
+As the summary suggests, lab settings do not always reflect reality. Most stress research uses controlled laboratory settings with standardized stressors like electric shocks, loud noises, or disturbing images. These methods allow researchers to isolate specific physiological responses and build reliable datasets. This approach has helped us understand how the autonomic nervous system responds to stress. Howevever, the challenge is that Real cognitive stressors like academic exams involve anticipatory anxiety, sustained pressure, and outcomes that actually matter to participants. The physiological responses may differ substantially. This "real world" research is important for validating findings from the lab.
+
+**Electrodermal activity**, also known as skin conductance or EDA, measures how electrical properties of the skin change over time. When you are stressed or anxious, your sympathetic nervous system activates your sweat glands, which changes how well your skin conducts electricity. More stress generally means greater EDA. This makes EDA a good indicator of psychological and physiological stress.
+
+::: callout-note
+## Check Your Knowledge
+
+1. What variables were the researchers trying to measure?
+
+2.  True or False: High Electrodermal activity (EDA) means the person being measured might be stressed.
+:::
+
+### Start Posit Cloud
+
+In the next steps, we will look at the data from the publication described above.
+
+We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
+
+<!-- callout about what cloud computing is ? -->
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+```
+
+Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
+```
+
+Rename your project "Exam Physiology" by clicking on "Untitled Project".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
+```
+
+### Package Install and Load
