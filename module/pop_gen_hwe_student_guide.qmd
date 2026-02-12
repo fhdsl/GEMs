@@ -53,7 +53,7 @@ It's also possible to calculate genotype frequencies—the fraction of individua
 Let’s look at an example. Consider the very small population of nine koi fish shown below. Each fish has two copies of the color gene.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Illustration of 9 koi fish, with calculations for the genotype frequency, phenotype frequency, and allele frequency.", out.width = '90%'}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c7aa53d2fa_0_0#slide=id.g3c7aa53d2fa_0_0")
 ```
 
 If we look at the two gene copies in each koi and count up how many R copies are present, we find there are 13. If we count up how many r copies are present, we find that there are five. The total number of gene copies in the whole population is 13 + 5 = 18.
