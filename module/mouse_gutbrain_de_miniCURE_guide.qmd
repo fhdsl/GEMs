@@ -941,10 +941,6 @@ install.packages('ggrepel')
 library(ggrepel)
 ```
 
-```{r echo = F}
-library(ggrepel)
-```
-
 Excellent. Now that we have installed and loaded this package (which you only need to do once for each R session!), we can run the code to create the volcano plot. Remember, we added `label = gene_label` to tell R to add labels to the points, and `geom_text_repel(max.overlaps = Inf)` to tell R to put the labels on top of the plot so we can see them.
 
 ```{r}
