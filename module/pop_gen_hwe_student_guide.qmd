@@ -221,7 +221,7 @@ Under HWE, the frequencies of the alleles R and r should be the same in generati
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {.callout-tip collapse="true"}
+::: {.callout-caution collapse="true"}
 # Using Microsoft Excel for Chi-Square Tests
 
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -254,7 +254,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -363,7 +363,7 @@ You will again run chi-square tests on both trials using either Excel or Google 
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Microsoft Excel for Chi-Square Tests
 
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -396,7 +396,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -507,7 +507,7 @@ You will again run chi-square tests on both trials using either Excel or Google 
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Microsoft Excel for Chi-Square Tests
 
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -540,7 +540,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
