@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1db3f541d99483cdc7a0d9cf38862b2c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5ed461e1afb6a4e5f5371742e95fc51e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -205,6 +205,15 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>A <strong>population</strong> is a group of organisms of the same species that are found in the same area and can interbreed. A population is the smallest unit that can evolve—in other words, an individual can’t evolve.</p>
 <p>An <strong>allele</strong> is a version of a gene, a heritable unit that controls a particular feature of an organism.</p>
 <p>For instance, Mendel studied a gene that controls flower color in pea plants. This gene comes in a white allele, w, and a purple allele, W. Each pea plant has two gene copies, which may be the same or different alleles. When the alleles are different, one—the dominant allele, W—may hide the other—the recessive allele, w. A plant’s set of alleles, called its genotype, determines its phenotype, or observable features, in this case, flower color.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pop_gen_hwe_student_guide_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c7aa53d2fa_0_62.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Illustration of pea plant flowers and the alleles that cause color."></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Coloration among many organisms, including koi fish (which you will be using in your simulation), is controlled by multiple genes. However, we can use some aspects of color patterns to model single gene inheritance patterns and evolution in populations. For example, the red or orange color in the Kohaku variety of koi can be treated as a codominant system. For the purposes of this simulations, a fish with the <em>RR</em> genotype will be a solid red color, a fish with the <em>rr</em> genotype will be white, and a fish with the <em>Rr</em> genotype (the heterozygous genotype) will be white with red spots.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -231,7 +240,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <p>If we look at the two gene copies in each koi and count up how many R copies are present, we find there are 13. If we count up how many r copies are present, we find that there are five. The total number of gene copies in the whole population is 13 + 5 = 18.</p>
 <p>We can divide the number of copies of each allele by the total number of copies to get the allele frequency. By convention, when there are just two alleles for a gene in a population, their frequencies are given the symbols p and q.</p>
-<p><br> p = frequency of R = 13/18 = 0.72 or 72% <br> q = frequency of r = 5/18 = 0.28 or 28% <br> The frequencies of all the alleles of a gene must add up to one, or 100%.</p>
+<p><br> p = frequency of R = 13/18 = 0.72 or 72% <br><br> q = frequency of r = 5/18 = 0.28 or 28% <br><br> The frequencies of all the alleles of a gene must add up to one, or 100%.</p>
 <p>Allele frequency is different from genotype frequency or phenotype frequency. Genotype and phenotype frequencies can also be calculated and are important for understanding how populations evolve, but they are not the same thing as allele frequency. The diagram below shows the difference.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -421,13 +430,13 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="running-a-chi-square-test">Running a chi-square test</h2>
 <p>Under HWE, the frequencies of the alleles R and r should be the same in generation 150 as they are at the start of your simulation. While it is tempting to simply eyeball the frequencies to determine if the population is at equilibrium, a more scientific approach is to run a statistical test. For testing HWE, you can use a chi-square test to compare allele frequencies. This can be done in a spreadsheet program like Microsoft Excel or Google Sheets.</p>
 <p><strong>Expand this section for instructions on running a chi-square test in Microsoft Excel.</strong></p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Using Microsoft Excel for Chi-Square Tests
+<span class="screen-reader-only">Caution</span>Using Microsoft Excel for Chi-Square Tests
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -464,7 +473,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 <p><strong>Expand this section for instructions on running a chi-square test in Google Sheets.</strong></p>
-<p>::: {callout-tip collapse=“true”} # Using Google Sheets for Chi-Square Tests</p>
+<p>::: {callout-caution collapse=“true”} # Using Google Sheets for Chi-Square Tests</p>
 <p>First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
 <p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
 <p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
@@ -597,7 +606,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="running-a-chi-square-test-1">Running a chi-square test</h2>
 <p>You will again run chi-square tests on both trials using either Excel or Google Sheets.</p>
 <p><strong>Expand this section for instructions on running a chi-square test in Microsoft Excel.</strong></p>
-<p>::: {callout-tip collapse=“true”} # Using Microsoft Excel for Chi-Square Tests</p>
+<p>::: {callout-caution collapse=“true”} # Using Microsoft Excel for Chi-Square Tests</p>
 <p>First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
 <p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
 <p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
@@ -626,7 +635,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <p>In the cell where the formula is typed, Excel will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. (Note: Excel may tell you there is a possible error in your formula because adjacent cells are omitted. You can ignore this, because it’s asking why you omitted the “0” and “150” that are your column headers.) :::</p>
 <p><strong>Expand this section for instructions on running a chi-square test in Google Sheets.</strong></p>
-<p>::: {callout-tip collapse=“true”} # Using Google Sheets for Chi-Square Tests</p>
+<p>::: {callout-caution collapse=“true”} # Using Google Sheets for Chi-Square Tests</p>
 <p>First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
 <p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
 <p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
@@ -761,7 +770,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="running-a-chi-square-test-2">Running a chi-square test</h2>
 <p>You will again run chi-square tests on both trials using either Excel or Google Sheets.</p>
 <p><strong>Expand this section for instructions on running a chi-square test in Microsoft Excel.</strong></p>
-<p>::: {callout-tip collapse=“true”} # Using Microsoft Excel for Chi-Square Tests</p>
+<p>::: {callout-caution collapse=“true”} # Using Microsoft Excel for Chi-Square Tests</p>
 <p>First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
 <p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
 <p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
@@ -790,7 +799,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <p>In the cell where the formula is typed, Excel will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. (Note: Excel may tell you there is a possible error in your formula because adjacent cells are omitted. You can ignore this, because it’s asking why you omitted the “0” and “150” that are your column headers.) :::</p>
 <p><strong>Expand this section for instructions on running a chi-square test in Google Sheets.</strong></p>
-<p>::: {callout-tip collapse=“true”} # Using Google Sheets for Chi-Square Tests</p>
+<p>::: {callout-caution collapse=“true”} # Using Google Sheets for Chi-Square Tests</p>
 <p>First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.</p>
 <p>Once you’ve created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele.</p>
 <p>The formula for calculating allele frequency is (total number of fish)*(allele proportion).</p>
