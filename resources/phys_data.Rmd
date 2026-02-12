@@ -1,0 +1,77 @@
+---
+title: "Physiology data preparation"
+author: "Ava Hoffman"
+date: "2026-02-11"
+execute:
+  eval: false
+output: html_document
+---
+
+Data for the physiology activity comes from: https://www.physionet.org/content/wearable-exam-stress/1.0.0/
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+compile_params <- function(str_, stu_) {
+  eda <- read_csv(paste0("../GEMs_local/phys_data/", stu_, "/", str_, "/EDA.csv"),
+                  col_names = F)
+  hr <- read_csv(paste0("../GEMs_local/phys_data/", stu_, "/", str_, "/HR.csv"),
+                 col_names = F)
+  temp <- read_csv(paste0("../GEMs_local/phys_data/", stu_, "/", str_, "/TEMP.csv"),
+                   col_names = F)
+  
+  eda_time <- as.POSIXct(pull(eda[1, 1]), tz = "America/Chicago")
+  hr_time <- as.POSIXct(pull(hr[1, 1]), tz = "America/Chicago")
+  temp_time <- as.POSIXct(pull(temp[1, 1]), tz = "America/Chicago")
+  
+  eda <- eda[-c(1:2), ]
+  hr <- hr[-c(1:2), ]
+  temp <- temp[-c(1:2), ]
+  
+  # measure taken at 4Hz, or 4x per second
+  eda_adj <- eda %>% mutate(date_time = eda_time + milliseconds(row_number() -
+                                                                  1) * 250) %>% mutate(timestamp = floor_date(date_time, unit = "second"))
+  eda_adj <- eda_adj %>% group_by(timestamp) %>% summarize(eda = mean(X1))
+  
+  # measure taken once per second
+  hr_adj <- hr %>% mutate(timestamp = hr_time + seconds(row_number() - 1), hr = X1) %>% select(-X1)
+  
+  # measure taken at 4Hz, or 4x per second
+  temp_adj <- temp %>% mutate(date_time = temp_time + milliseconds(row_number() -
+                                                                     1) * 250) %>% mutate(timestamp = floor_date(date_time, unit = "second"))
+  temp_adj <- temp_adj %>% group_by(timestamp) %>% summarize(temp = mean(X1))
+  
+  # Merge everything
+  dat <- full_join(eda_adj, hr_adj) %>% full_join(temp_adj) %>% mutate(test = str_) %>% mutate(studentID = stu_)
+  
+  return(dat)
+}
+
+dat <- data.frame()
+for (student in c("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10")) {
+  for (exam in c("Midterm 1", "Midterm 2", "Final")) {
+    sub_dat <- compile_params(str_ = exam, stu_ = student)
+    dat <- bind_rows(dat, sub_dat)
+  }
+}
+
+dat <- na.omit(dat)
+```
+
+```{r}
+write_csv(dat, "data/phys_data.csv")
+```
+
+```{r}
+corrplot::corrplot(cor(dat[, 2:4], use = "complete.obs"))
+
+ggplot(data = dat %>% filter(studentID == "S9"),
+       aes(x = timestamp, y = eda, color = studentID)) +
+  geom_line() + scale_x_datetime(
+    date_minor_breaks = "60 min",
+    date_breaks = "60 min",
+    date_labels = "%H:%M"
+  ) + facet_wrap( ~ test, scales = "free_x")
+```
