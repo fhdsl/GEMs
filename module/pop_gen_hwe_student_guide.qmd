@@ -52,13 +52,19 @@ It's also possible to calculate genotype frequencies—the fraction of individua
 
 Let’s look at an example. Consider the very small population of nine koi fish shown below. Each fish has two copies of the color gene.
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "Illustration of 9 koi fish, with calculations for the genotype frequency, phenotype frequency, and allele frequency.", out.width = '90%'}
+ottrpal::include_slide("")
+```
+
 If we look at the two gene copies in each koi and count up how many R copies are present, we find there are 13. If we count up how many r copies are present, we find that there are five. The total number of gene copies in the whole population is 13 + 5 = 18.
 
 We can divide the number of copies of each allele by the total number of copies to get the allele frequency. By convention, when there are just two alleles for a gene in a population, their frequencies are given the symbols p and q.
 
-p = frequency of R = 13/18 = 0.72 or 72%
+<br>
+p = frequency of R = 13/18 = 0.72 or 72% 
+<br>
 q = frequency of r = 5/18 = 0.28 or 28%
-
+<br>
 The frequencies of all the alleles of a gene must add up to one, or 100%.
 
 Allele frequency is different from genotype frequency or phenotype frequency. Genotype and phenotype frequencies can also be calculated and are important for understanding how populations evolve, but they are not the same thing as allele frequency. The diagram below shows the difference.
@@ -79,6 +85,8 @@ What would this look like? In the example above, we went through all nine indivi
 By looking at all the copies of all the genes in a population, we can see globally how much genetic variation there is in the population. The more variation a population has, the better its ability to adapt to changes in its environment through natural selection. If there is more variation, the odds are better that there will be some alleles already present that allow organisms to survive and reproduce effectively under the new conditions.
 
 ::: callout-tip
+# It's all about the genotype frequency!
+
 What ultimately interests most biologists is not the frequencies of different alleles, but the frequencies of the resulting genotypes, known as the **population’s genetic structure**. Scientists can use the distribution of phenotypes to estimate the genotypes and alleles that make up a population. If the phenotype is observed, only the genotype of the homozygous recessive alleles can be known; the calculations provide an estimate of the remaining genotypes. Since each individual carries two alleles per gene, if the allele frequencies (p and q) are known, predicting the frequencies of these genotypes is a simple mathematical calculation to determine the probability of getting these genotypes if two alleles are drawn at random from the gene pool. 
 
 In the koi pond scenario, an individual koi fish could be pp (RR), and thus be all red; pq (Rr), spotted; or qq (rr), and thus be all white. In other words, the frequency of pp individuals is simply p^2^; the frequency of pq individuals is 2pq; and the frequency of qq individuals is q^2^. And, again, if p and q are the only two possible alleles for a given trait in the population, these genotype frequencies will sum to one: p^2^ + 2pq + q^2^ = 1.
@@ -212,6 +220,8 @@ Under HWE, the frequencies of the alleles R and r should be the same in generati
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
 ::: {.callout-tip collapse="true"}
+# Using Microsoft Excel for Chi-Square Tests
+
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
@@ -243,6 +253,8 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
 ::: {.callout-caution collapse="true"}
+# Using Google Sheets for Chi-Square Tests
+
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
@@ -350,6 +362,8 @@ You will again run chi-square tests on both trials using either Excel or Google 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
 ::: {.callout-caution collapse="true"}
+# Using Microsoft Excel for Chi-Square Tests
+
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
@@ -381,6 +395,8 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
 ::: {.callout-caution collapse="true"}
+# Using Google Sheets for Chi-Square Tests
+
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
@@ -490,6 +506,8 @@ You will again run chi-square tests on both trials using either Excel or Google 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
 ::: {.callout-caution collapse="true"}
+# Using Microsoft Excel for Chi-Square Tests
+
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
@@ -521,6 +539,8 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
 ::: {.callout-caution collapse="true"}
+# Using Google Sheets for Chi-Square Tests
+
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
