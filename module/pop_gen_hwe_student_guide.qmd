@@ -78,7 +78,7 @@ What would this look like? In the example above, we went through all nine indivi
 
 By looking at all the copies of all the genes in a population, we can see globally how much genetic variation there is in the population. The more variation a population has, the better its ability to adapt to changes in its environment through natural selection. If there is more variation, the odds are better that there will be some alleles already present that allow organisms to survive and reproduce effectively under the new conditions.
 
-::: dictionary
+::: callout-tip
 What ultimately interests most biologists is not the frequencies of different alleles, but the frequencies of the resulting genotypes, known as the **population’s genetic structure**. Scientists can use the distribution of phenotypes to estimate the genotypes and alleles that make up a population. If the phenotype is observed, only the genotype of the homozygous recessive alleles can be known; the calculations provide an estimate of the remaining genotypes. Since each individual carries two alleles per gene, if the allele frequencies (p and q) are known, predicting the frequencies of these genotypes is a simple mathematical calculation to determine the probability of getting these genotypes if two alleles are drawn at random from the gene pool. 
 
 In the koi pond scenario, an individual koi fish could be pp (RR), and thus be all red; pq (Rr), spotted; or qq (rr), and thus be all white. In other words, the frequency of pp individuals is simply p^2^; the frequency of pq individuals is 2pq; and the frequency of qq individuals is q^2^. And, again, if p and q are the only two possible alleles for a given trait in the population, these genotype frequencies will sum to one: p^2^ + 2pq + q^2^ = 1.
@@ -170,7 +170,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 
 Run the model for 75 generations, then pause the simulation and record the allele and genotype frequencies. Continue running for an additional 75 generations (until you have reached generation 150). **Make sure to take a screenshot of your Trial 1a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-::: callout-tip
+::: callout-note
 # Results: Hardy-Weinberg Equilibrium Simulation Trial 1a
 
 Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment
@@ -194,7 +194,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. **Make sure to take a screenshot of your Trial 1b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-::: callout-tip
+::: callout-note
 # Results: Hardy-Weinberg Equilibrium Simulation Trial 1b
 
 Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment
@@ -211,7 +211,7 @@ Under HWE, the frequencies of the alleles R and r should be the same in generati
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {.callout-caution collapse="true"}
+::: {.callout-tip collapse="true"}
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
 
 Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
