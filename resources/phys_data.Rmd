@@ -2,6 +2,8 @@
 title: "Physiology data preparation"
 author: "Ava Hoffman"
 date: "2026-02-11"
+execute:
+  eval: false
 output: html_document
 ---
 
