@@ -52,7 +52,7 @@ It's also possible to calculate genotype frequencies—the fraction of individua
 
 Let’s look at an example. Consider the very small population of nine koi fish shown below. Each fish has two copies of the color gene.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Illustration of 9 koi fish, with calculations for the genotype frequency, phenotype frequency, and allele frequency.", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Illustration of 9 koi fish, with explanation of the allele frequency calculation.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c7aa53d2fa_0_0#slide=id.g3c7aa53d2fa_0_0")
 ```
 
@@ -107,6 +107,8 @@ The Hardy-Weinberg principle assumes conditions with:
 In theory, if a population is at equilibrium — that is, there are no evolutionary forces acting upon it — generation after generation would have the same gene pool and genetic structure, and these equations would all hold true all of the time. Of course, even Hardy and Weinberg recognized that no natural population is immune to evolution. Populations in nature are constantly changing in genetic makeup due to drift, mutation, possibly migration, and selection. As a result, the only way to determine the exact distribution of phenotypes in a population is to go out and count them. But the Hardy-Weinberg principle gives scientists a mathematical baseline of a non-evolving population to which they can compare evolving populations and thereby infer what evolutionary forces might be at play. **If the frequencies of alleles or genotypes deviate from the value expected from the Hardy-Weinberg equation, then the population is evolving**.
 
 ::: callout-tip
+# Hardy-Weinberg Notation
+
 No matter what genes you're working with, Hardy-Weinberg equilibrium uses standard symbols: p and q.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Table of what the standard HWE symbols mean.", out.width = '90%'}
@@ -252,7 +254,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {.callout-caution collapse="true"}
+::: {callout-tip collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -284,7 +286,7 @@ In the cell where the formula is typed, Google Sheets will return the p-value fo
 
 Run a chi-square test for both trial 1a and 1b and record your p-values for each.
 
-::: callout-tip
+::: callout-note
 # Check your knowledge: Hardy-Weinberg Equilibrium questions
 
 1. Examine the change in allele frequencies for your two simulations. Did either population show a change in allele frequency? Why or why not?
@@ -316,7 +318,7 @@ Before running this simulation, change the settings to the following values.
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Feel free to speed this up since it’s a simulation! **Make sure to take a screenshot of your Trial 2a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-::: callout-tip
+::: callout-note
 # Results: Drift Simulation Trial 2a
 
 Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment
@@ -344,7 +346,7 @@ Before running this simulation, change the settings to the following values. The
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run! **Make sure to take a screenshot of your Trial 2b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-::: callout-tip
+::: callout-note
 # Results: Drift Simulation Trial 2b
 
 Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment.
@@ -361,7 +363,7 @@ You will again run chi-square tests on both trials using either Excel or Google 
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {.callout-caution collapse="true"}
+::: {callout-tip collapse="true"}
 # Using Microsoft Excel for Chi-Square Tests
 
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -394,7 +396,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {.callout-caution collapse="true"}
+::: {callout-tip collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -426,7 +428,7 @@ In the cell where the formula is typed, Google Sheets will return the p-value fo
 
 Run a chi-square test for both trial 2a and 2b and record your p-values for each.
 
-::: callout-tip
+::: callout-note
 # Check your knowledge: Drift questions
 
 1. Compare the change in allele frequencies between the large and small population. Which population changed more, and why?
@@ -461,7 +463,7 @@ Before running this simulation, change the settings to the following values.
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run! **Make sure to take a screenshot of your Trial 3a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-::: callout-tip
+::: callout-note
 # Results: Natural Selection Simulation Trial 3a
 
 Fill out the table below, and submit it and a screenshot of the Data Collection page at 150 generations as part of your assignment
@@ -488,7 +490,7 @@ Now you will change the environment so that the r allele becomes advantageous wh
 
 Run the model an additional 150 generations, recording the allele and genotype frequencies at both 225 and 300 generations. Make sure to just unpause the simulation from trial 3a instead of pressing the reload button! **Make sure to take a screenshot of your Trial 3b fishpond and Data Collection page at 300 generations - you will submit this with your assignment!**
 
-::: callout-tip
+::: callout-note
 # Results: Natural Selection Simulation Trial 3b
 
 Fill out the table below, and submit it and a screenshot of the Data Collection page at 150 generations as part of your assignment
@@ -505,7 +507,7 @@ You will again run chi-square tests on both trials using either Excel or Google 
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {.callout-caution collapse="true"}
+::: {callout-tip collapse="true"}
 # Using Microsoft Excel for Chi-Square Tests
 
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -538,7 +540,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {.callout-caution collapse="true"}
+::: {callout-tip collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -571,7 +573,7 @@ In the cell where the formula is typed, Google Sheets will return the p-value fo
 Run a chi-square test for both trial 3a and 3b and record your p-values for each. Remember that for trial 3b, you started with generation 150, so the expected frequencies will be the allele frequencies observed at generation 150 in trial 3a.
 
 
-::: callout-tip
+::: callout-note
 # Check your knowledge: Natural Selection questions
 
 1. How did the allele frequencies change over the 150 generations when R was beneficial?
