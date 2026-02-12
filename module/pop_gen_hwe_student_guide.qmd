@@ -62,9 +62,9 @@ We can divide the number of copies of each allele by the total number of copies 
 
 <br>
 p = frequency of R = 13/18 = 0.72 or 72% 
-<br>
+<br><br>
 q = frequency of r = 5/18 = 0.28 or 28%
-<br>
+<br><br>
 The frequencies of all the alleles of a gene must add up to one, or 100%.
 
 Allele frequency is different from genotype frequency or phenotype frequency. Genotype and phenotype frequencies can also be calculated and are important for understanding how populations evolve, but they are not the same thing as allele frequency. The diagram below shows the difference.
