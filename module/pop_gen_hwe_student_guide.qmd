@@ -34,6 +34,10 @@ An **allele** is a version of a gene, a heritable unit that controls a particula
 
 For instance, Mendel studied a gene that controls flower color in pea plants. This gene comes in a white allele, w, and a purple allele, W. Each pea plant has two gene copies, which may be the same or different alleles. When the alleles are different, one—the dominant allele, W—may hide the other—the recessive allele, w. A plant's set of alleles, called its genotype, determines its phenotype, or observable features, in this case, flower color.
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "Illustration of pea plant flowers and the alleles that cause color.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c7aa53d2fa_0_62#slide=id.g3c7aa53d2fa_0_62")
+```
+
 Coloration among many organisms, including koi fish (which you will be using in your simulation), is controlled by multiple genes. However, we can use some aspects of color patterns to model single gene inheritance patterns and evolution in populations. For example, the red or orange color in the Kohaku variety of koi can be treated as a codominant system. For the purposes of this simulations, a fish with the _RR_ genotype will be a solid red color, a fish with the _rr_ genotype will be white, and a fish with the _Rr_ genotype (the heterozygous genotype) will be white with red spots.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Illustration of red, spotted, and white koi fish (phenotype) and their associated genotypes (RR, Rr, and rr).", out.width = '90%'}
@@ -62,9 +66,9 @@ We can divide the number of copies of each allele by the total number of copies 
 
 <br>
 p = frequency of R = 13/18 = 0.72 or 72% 
-<br>
+<br><br>
 q = frequency of r = 5/18 = 0.28 or 28%
-<br>
+<br><br>
 The frequencies of all the alleles of a gene must add up to one, or 100%.
 
 Allele frequency is different from genotype frequency or phenotype frequency. Genotype and phenotype frequencies can also be calculated and are important for understanding how populations evolve, but they are not the same thing as allele frequency. The diagram below shows the difference.
@@ -221,7 +225,7 @@ Under HWE, the frequencies of the alleles R and r should be the same in generati
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {.callout-tip collapse="true"}
+::: {.callout-caution collapse="true"}
 # Using Microsoft Excel for Chi-Square Tests
 
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -254,7 +258,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -363,7 +367,7 @@ You will again run chi-square tests on both trials using either Excel or Google 
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Microsoft Excel for Chi-Square Tests
 
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -396,7 +400,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -507,7 +511,7 @@ You will again run chi-square tests on both trials using either Excel or Google 
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Microsoft Excel for Chi-Square Tests
 
 First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
@@ -540,7 +544,7 @@ In the cell where the formula is typed, Excel will return the p-value for your c
 
 **Expand this section for instructions on running a chi-square test in Google Sheets.**
 
-::: {callout-tip collapse="true"}
+::: {callout-caution collapse="true"}
 # Using Google Sheets for Chi-Square Tests
 
 First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
