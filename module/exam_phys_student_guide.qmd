@@ -93,7 +93,7 @@ We'll read in the data from this study the GEMs website. Run the following code 
 
 ```{r}
 phys_data <- read.csv("https://genomicseducation.org/data/phys_data.csv")
-phys_data
+head(phys_data)
 ```
 
 If everything went correctly, you should see both an object called `phys_data` in the Environment Pane (top right) and the data printed to the console.
@@ -124,16 +124,16 @@ View(phys_data)
 
 ### Data Dictionaries
 
-Take a look at the column names. Compare these to the data dictionary below to interpret what the columns represent.
+Take a look at the column names in the Viewer you just opened. Compare these to the data dictionary below to interpret what the columns represent.
 
 ::: callout-tip
 ## Pedigree Data Dictionary
 
-**timestamp**: Time that an individual measurement was taken from a wearable device worn by a student.\
-**eda**: Data from the electrodermal activity sensor.\
+**timestamp**: Time the measurement was taken. The measurement comes from a wearable device worn by a student.\
+**eda**: Measurement from the electrodermal activity sensor.\
 **hr**: Heart rate measurement, in beats per minute.\
 **temp**: Skin temperature measurement, in Celcius.\
-**test**: Test during which measurments were taken.\
+**test**: Which test/exam was being taken.\
 **studentID**: Student being measured.\
 :::
 
@@ -147,6 +147,9 @@ Take a look at the column names. Compare these to the data dictionary below to i
 2.  How can we confirm that our data loaded correctly? Take a screenshot and point to your evidence.
 
 3.  Looking at the `timestamp` column, how often are measurements being collected?
+
+4.  How many rows of data, or observations, does this data have? Hint: look at the Environment Pane (top right) and see how many `obs.` you have.
 :::
 
 ## Part 2
+
