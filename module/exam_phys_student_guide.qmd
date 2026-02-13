@@ -146,9 +146,10 @@ Take a look at the column names in the Viewer you just opened. Compare these to 
 
 2.  How can we confirm that our data loaded correctly? Take a screenshot and point to your evidence.
 
-3.  How many rows of data, or observations, does this data have? Hint: look at the Environment Pane (top right) and see how many `obs.` you have.
+3.  Looking at the `timestamp` column, how often are measurements being collected?
+
+4.  How many rows of data, or observations, does this data have? Hint: look at the Environment Pane (top right) and see how many `obs.` you have.
 :::
 
 ## Part 2
 
-<!-- 3.  Looking at the `timestamp` column, how often are measurements being collected? -->
