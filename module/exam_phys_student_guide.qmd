@@ -31,9 +31,9 @@ As the summary suggests, lab settings do not always reflect reality. Most stress
 
 ### Start Posit Cloud
 
-In the next steps, we will look at the data from the publication described above.
+In the next steps, we will look at the data from the publication described above. We will be working in a programming language called R that is widely used for analysis and making graphs/plots. We'll use the version of R available online on Posit Cloud.
 
-We will use Posit Cloud for this activity. Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
+Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
 
 <!-- callout about what cloud computing is ? -->
 
@@ -54,3 +54,99 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 ```
 
 ### Package Install and Load
+
+We will need to install the `tidyverse` package for this activity.
+
+Type the following into your console and press return to run the code. You will see a lot of text, but usually that's a good thing!
+
+```{r message=FALSE}
+install.packages("tidyverse")
+```
+
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
+<!-- ``` -->
+
+Next, we will load the package so it's ready to use:
+
+```{r message=FALSE}
+library(tidyverse)
+```
+
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_61#slide=id.g357ffc10808_0_61") -->
+<!-- ``` -->
+
+::: callout-tip
+## What are R Packages?
+
+Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like "expansion packs" on top of your basic R software.
+
+Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!
+
+We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
+:::
+
+### Get Physiology Data
+
+We'll read in the data from this study the GEMs website. Run the following code in your console:
+
+```{r}
+phys_data <- read.csv("https://genomicseducation.org/data/phys_data.csv")
+phys_data
+```
+
+If everything went correctly, you should see both an object called `phys_data` in the Environment Pane (top right) and the data printed to the console.
+
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_47#slide=id.g357ffc10808_0_47") -->
+<!-- ``` -->
+
+::: callout-tip
+## What is an R object?
+
+An object is something stored in a programming language, such as data. Think of it like a "noun".
+
+In R, we assign objects using the `<-` symbol, with the name of your choice on the left, and the contents of the object on the right.
+
+Objects will show up in your Environment Pane. It's a good idea to check the Environment Pane regularly.
+:::
+
+Enter the following code in the console to view the data in tabular format:
+
+```{r eval=F}
+View(phys_data)
+```
+
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_74#slide=id.g357ffc10808_0_74") -->
+<!-- ``` -->
+
+### Data Dictionaries
+
+Take a look at the column names. Compare these to the data dictionary below to interpret what the columns represent.
+
+::: callout-tip
+## Pedigree Data Dictionary
+
+**timestamp**: Time that an individual measurement was taken from a wearable device worn by a student.\
+**eda**: Data from the electrodermal activity sensor.\
+**hr**: Heart rate measurement, in beats per minute.\
+**temp**: Skin temperature measurement, in Celcius.\
+**test**: Test during which measurments were taken.\
+**studentID**: Student being measured.\
+:::
+
+## Part 1 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Why might we want to install add-on packages in R?
+
+2.  How can we confirm that our data loaded correctly? Take a screenshot and point to your evidence.
+
+3.  Looking at the `timestamp` column, how often are measurements being collected?
+:::
+
+## Part 2
