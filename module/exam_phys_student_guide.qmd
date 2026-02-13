@@ -87,12 +87,12 @@ Packages are developed by the R community and made available through repositorie
 We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
 :::
 
-### Get Physiology Data
+### Get the Physiology Data
 
 We'll read in the data from this study the GEMs website. Run the following code in your console:
 
 ```{r}
-phys_data <- read.csv("https://genomicseducation.org/data/phys_data.csv")
+phys_data <- read_csv("https://genomicseducation.org/data/phys_data.csv")
 head(phys_data)
 ```
 
@@ -157,7 +157,7 @@ Now, we'll run some R code to better understand our data.
 
 ### Counting Tests and Students
 
-First, let's see how many different tests/exams are represented, and how many observations we have of each.
+First, let's see how many different tests/exams are represented, and how many observations we have of each. Run the following code in your console:
 
 ```{r}
 count(phys_data, test)
@@ -165,13 +165,19 @@ count(phys_data, test)
 
 Looks like we have three tests: Midterm 1, Midterm 2, and the Final exam.
 
-Now let's look at how many different students are represented, and how many observations we have of each.
+::: callout-tip
+## What is the code doing?
+
+`count` here is something called a "function". We can think of it like a verb that transforms an object. In the code snippet above, `count` takes the `phys_data` object, and counts up how many observations are in each type of `test`.
+:::
+
+Now let's look at how many different students are represented, and how many observations we have of each. Run the following code in your console:
 
 ```{r}
 count(phys_data, studentID)
 ```
 
-Looks like we have 10 students who were measured. The number of observations vary a bit because some students might have had their sensors turned on a bit longer than others.
+Looks like we have 10 students who were measured. The number of observations varies a bit because some students might have had their sensors turned on a bit longer than others.
 
 ### Part 2a Questions
 
@@ -204,3 +210,87 @@ In the data Viewer (top left), click on the variable/column names to sort them. 
 
 2.  Which two students had the greatest `eda` values? Take a screenshot of your evidence.
 :::
+
+## Part 3
+
+Now, we'll look at the relationship between the measured variables.
+
+### Understanding Correlation
+
+Correlation measures whether two things tend to change together in a predictable way. Correlation is usually measured on a scale from -1 to +1, where numbers closer to -1 or +1 indicate stronger relationships, and numbers close to 0 mean little to no relationship.
+
+- Positive correlation: When one thing goes up, the other tends to go up too. For example, height and weight. Taller people tend to weigh more.
+
+- Negative correlation: When one thing goes up, the other tends to go down. For example, hours of sleep and tiredness. More sleep usually means less tiredness.
+
+- No correlation: The two things change independently with no consistent pattern. Example: shoe size and test scores.
+
+It's important to remember that correlation doesn't mean that one variable causes another. For example, shark attacks and ice cream sales are correlated because both increase in the summer. Ice cream sales do not cause shark attacks. Check out [this site](https://www.tylervigen.com/spurious-correlations) for more unrelated variables that happen to be correlated.
+
+(example from website)
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
+<!-- ``` -->
+
+### Correlation with Heart Rate
+
+Calculate the correlation between heart rate and skin temperature. Run the following code in your console:
+
+```{r}
+cor(phys_data$hr, phys_data$temp)
+```
+
+Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change [@k2025exploring, @jerem2023s].
+
+### Part 3 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Change the code above slightly, replacing `hr` with `eda`. Run the changed code in your console. What is the correlation between the `hr` and `eda` variables? Take a screenshot of your evidence.
+
+2.  What does the correlation value tell you about the relationship between these two variables? (E.g., as one goes up, the other does what ?)
+
+3.  (Optional) Try changing the code again to look at the correlation value between `eda` and `temp`. Run the changed code in your console. What is the correlation between these variables, and what is the relationship? Take a screenshot of your evidence.
+:::
+
+## Part 4
+
+Now, we'll take a look at just one student's data. We'll also make some plots!
+
+### Plotting Student S9
+
+We're going to plot student `S9`. Let's look at heart rate (`hr`) across the three different tests. Run the following code in your console:
+
+```{r}
+filter(phys_data, studentID == "S9") %>% 
+ggplot(
+  aes(x = timestamp, y = hr)) +
+  geom_line() +
+  facet_wrap( ~ test, scales = "free_x")
+```
+
+It looks like this particular student had a slightly lower heart rate during the final than the midterms. 
+
+We can calculate the means to assess this more accurately:
+
+```{r}
+filter(phys_data, studentID == "S9") %>% 
+  group_by(test) %>%
+  summarize(hr = mean(hr))
+```
+
+### Part 4 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Change the code that creates the plots slightly, replacing `hr` with `eda`. Run the changed code in your console. Take a screenshot of your plots.
+
+2.  Which test/exam appears to have the greatest electrodermal activity (EDA) for student `S9`?
+
+3.  To confirm your results, calculate the mean `eda` for each test. Run the code above to calculate the means, remembering to replace `hr` with `eda`. Do the results surprise you? Take a screenshot of your results table in the console.
+
+4.  (Optional) Try running 1-3 above with student `S8` instead of `S9`. You'll need to replace anywhere `S9` was mentioned in the code! Take a screenshot of your plots/results.
+:::
+
