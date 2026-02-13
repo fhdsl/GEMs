@@ -150,7 +150,7 @@ Take a look at the column names. Compare these to the data dictionary below to i
 **available_color**: Pedigree color variable corresponding to diagnosis_available.
 :::
 
-## Part 1 Questions
+### Part 1 Questions
 
 ::: callout-note
 ## Check Your Knowledge
@@ -206,7 +206,7 @@ plot(bipolar_pedigree['1'])
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_30#slide=id.g35ad481b335_0_30")
 ```
 
-## Part 2 Questions
+### Part 2 Questions
 
 ::: callout-note
 ## Check Your Knowledge
@@ -250,7 +250,7 @@ plot(bipolar_pedigree['1'])
 pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
 ```
 
-## Part 3 Questions
+### Part 3 Questions
 
 ::: callout-note
 ## Check Your Knowledge
@@ -294,7 +294,7 @@ pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_55#slide=id.g35ad481b335_0_55")
 ```
 
-## Part 4 Questions
+### Part 4 Questions
 
 ::: callout-note
 ## Check Your Knowledge
