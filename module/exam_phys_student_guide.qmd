@@ -95,7 +95,7 @@ We use the `library` command to load and attach packages to the R environment. T
 
 We'll read in the data from this study the GEMs website. Run the following code in your console:
 
-```{r}
+```{r message=FALSE}
 phys_data <- read_csv("https://genomicseducation.org/data/phys_data.csv")
 head(phys_data)
 ```
