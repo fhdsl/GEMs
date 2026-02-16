@@ -5,6 +5,10 @@ output:
   html_document
 ---
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "A wrist showing a wearable device and inset, several students taking an exam.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_25#slide=id.g3c8730600da_1_25")
+```
+
 This activity will walk through interpretation of data from wearable devices intended to measure stress in humans. You will work with real data from a study where researchers measured stress in students taking exams.
 
 ## Part 1
@@ -234,6 +238,8 @@ Correlation measures whether two things tend to change together in a predictable
 - No correlation: The two things change independently with no consistent pattern. Example: shoe size and test scores.
 
 It's important to remember that correlation doesn't mean that one variable causes another. For example, shark attacks and ice cream sales are correlated because both increase in the summer. Ice cream sales do not cause shark attacks. Check out [this site](https://www.tylervigen.com/spurious-correlations) for more unrelated variables that happen to be correlated.
+
+<br>
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Netflix stock price and the first name Stevie are strongly correlated, but there is no causation. Many correlation relationships are like this.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_16#slide=id.g3c8730600da_1_16")

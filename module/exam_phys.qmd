@@ -4,6 +4,10 @@ output:
   html_document
 ---
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "A wrist showing a wearable device and inset, several students taking an exam.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_25#slide=id.g3c8730600da_1_25")
+```
+
 ## Overview
 
 This module ..
@@ -50,7 +54,10 @@ Students will need a device that accesses the internet.
 ::: callout-warning
 ## This content contains URLs
 
-We suggest confirming links are still active prior to running this activity.
+We suggest confirming links are still active prior to running this activity:
+
+* https://posit.cloud/plans/free
+* https://genomicseducation.org/data/phys_data.csv
 :::
 
 
