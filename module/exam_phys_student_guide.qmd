@@ -37,19 +37,19 @@ Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can 
 
 <!-- callout about what cloud computing is ? -->
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
 ```
 
 Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
 ```
 
 Rename your project "Exam Physiology" by clicking on "Untitled Project".
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
 ```
 
@@ -57,25 +57,29 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 
 We will need to install the `tidyverse` package for this activity.
 
-Type the following into your console and press return to run the code. You will see a lot of text, but usually that's a good thing!
+Type the following into your console and press return to run the code. You can use the **clipboard button** on the top right of the code block to copy everything. You will see a lot of text when the code is running, but usually that's a good thing!
 
 ```{r message=FALSE}
 install.packages("tidyverse")
 ```
 
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
-<!-- ``` -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "Paste the code above into the Posit Cloud console and click enter to run the code.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c33bb9375e_0_6#slide=id.g3c33bb9375e_0_6")
+```
 
-Next, we will load the package so it's ready to use:
+```{r, fig.align='center', echo = FALSE, fig.alt= "If tidyverse installs successfully, you'll see several 'DONE' messages and 'The downloaded source packages are in...'.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_3#slide=id.g3c8730600da_0_3")
+```
+
+Next, we will "load the package" so it's ready to use:
 
 ```{r message=FALSE}
 library(tidyverse)
 ```
 
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_61#slide=id.g357ffc10808_0_61") -->
-<!-- ``` -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "Successfully loading tidyverse with the library command shows that several other packages are attached.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_11#slide=id.g3c8730600da_0_11")
+```
 
 ::: callout-tip
 ## What are R Packages?
@@ -96,11 +100,11 @@ phys_data <- read_csv("https://genomicseducation.org/data/phys_data.csv")
 head(phys_data)
 ```
 
-If everything went correctly, you should see both an object called `phys_data` in the Environment Pane (top right) and the data printed to the console.
+If everything went correctly, you should see both an object called `phys_data` in the Environment Pane (top right) and the top few rows of the data printed to the console.
 
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_47#slide=id.g357ffc10808_0_47") -->
-<!-- ``` -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "Running the code above stores a data object in the environment called phys_data; some data is also printed in the console showing timestamp, eda, hr, test, and studentID columns.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_22#slide=id.g3c8730600da_0_22")
+```
 
 ::: callout-tip
 ## What is an R object?
@@ -118,9 +122,9 @@ Enter the following code in the console to view the data in tabular format:
 View(phys_data)
 ```
 
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_74#slide=id.g357ffc10808_0_74") -->
-<!-- ``` -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "Using the View command opens the data in a tabular browser, much like Excel or Google Sheets. Data cannot be edited in the Viewer.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_35#slide=id.g3c8730600da_0_35")
+```
 
 ### Data Dictionaries
 
@@ -136,6 +140,10 @@ Take a look at the column names in the Viewer you just opened. Compare these to 
 **test**: Which test/exam was being taken.\
 **studentID**: Student being measured.\
 :::
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Column names are surrounded by a box in the Viewer.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_43#slide=id.g3c8730600da_0_43")
+```
 
 ### Part 1 Questions
 
@@ -193,11 +201,11 @@ Looks like we have 10 students who were measured. The number of observations var
 
 In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click `timestamp`, we can see the earliest timestamp is `2018-10-13 12:55:31`. We can click it again to see the latest timestamp is `2018-10-13 12:55:31`.
 
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'} -->
 <!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
 <!-- ``` -->
 
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'} -->
 <!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
 <!-- ``` -->
 
@@ -228,7 +236,7 @@ Correlation measures whether two things tend to change together in a predictable
 It's important to remember that correlation doesn't mean that one variable causes another. For example, shark attacks and ice cream sales are correlated because both increase in the summer. Ice cream sales do not cause shark attacks. Check out [this site](https://www.tylervigen.com/spurious-correlations) for more unrelated variables that happen to be correlated.
 
 (example from website)
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'} -->
 <!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
 <!-- ``` -->
 
