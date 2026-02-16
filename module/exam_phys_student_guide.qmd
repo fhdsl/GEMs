@@ -100,7 +100,7 @@ phys_data <- read_csv("https://genomicseducation.org/data/phys_data.csv")
 head(phys_data)
 ```
 
-If everything went correctly, you should see both an object called `phys_data` in the Environment Pane (top right) and the top few rows of the data printed to the console.
+If everything went correctly, you should see (1) an object called `phys_data` in the Environment Pane (top right) and (2) the top few rows of the data printed to the console.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Running the code above stores a data object in the environment called phys_data; some data is also printed in the console showing timestamp, eda, hr, test, and studentID columns.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_22#slide=id.g3c8730600da_0_22")
@@ -192,7 +192,7 @@ Looks like we have 10 students who were measured. The number of observations var
 ::: callout-note
 ## Check Your Knowledge
 
-1.  Run `count(phys_data, test, studentID)`. How many observations does student `S1` have for Midterm 1? Take a screenshot showing this number.
+1.  Run `count(phys_data, test, studentID)` to see student and test combinations. How many observations does student `S1` have for Midterm 1? Take a screenshot showing this number.
 
 2.  Which student & test combination has the lowest number of observations?
 :::
