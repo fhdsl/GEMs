@@ -24,16 +24,12 @@ This module ..
 
 ## Evaluation
 
-GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content. This activity's evaluation is a bit different, as it's not part of the core GEMs curriculum.
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. This activity's evaluation is a bit different, as it's not part of the core GEMs curriculum.
 
 ::: callout-tip
 ## Help Us Improve!
 
-<!-- [Instructor experience survey](https://forms.gle/QExaV8pQ9tWpaiED9) -->
-
-<!-- [Student pre-activity survey](https://genomicseducation.shinyapps.io/student_pre_survey/) -->
-
-<!-- [Student post-activity survey](https://genomicseducation.shinyapps.io/student_post_survey/) -->
+[Instructor experience survey](https://forms.gle/vquSK16nrbdmjFF28)
 :::
 
 You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing). Feel free to contact the GEMs team with any questions (gems **at** fredhutch **dot** org).
