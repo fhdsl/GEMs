@@ -272,6 +272,14 @@ ggplot(
 
 It looks like this particular student had a slightly lower heart rate during the final than the midterms. 
 
+::: callout-note
+## A note about test timing
+
+* Midterm 1 was conducted from **14:00 - 15:30**.
+* Midterm 2 was conducted from **15:00 - 16:30**.
+* The Final was conducted from **17:00 - 20:00**.
+:::
+
 We can calculate the means to assess this more accurately:
 
 ```{r}
@@ -294,3 +302,97 @@ filter(phys_data, studentID == "S9") %>%
 4.  (Optional) Try running 1-3 above with student `S8` instead of `S9`. You'll need to replace anywhere `S9` was mentioned in the code! Take a screenshot of your plots/results.
 :::
 
+## Part 5
+
+In this part, we'll compare two students.
+
+### Plotting Student S9
+
+We're going to plot student `S9` _and_ `S8`. Let's look at heart rate (`hr`) across the three different tests. Run the following code in your console:
+
+```{r}
+filter(phys_data, studentID == "S9" | studentID == "S8") %>% 
+ggplot(
+  aes(x = timestamp, y = hr, color = studentID)) +
+  geom_line() +
+  facet_wrap( ~ test, scales = "free_x")
+```
+
+These students' heart rates look pretty similar across the exams!
+
+### Part 5 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Change the code that creates the plots, replacing `hr` with `eda`. Run the changed code in your console. Take a screenshot of your plots.
+
+2.  What conclusions can you draw about stress in these two students, based on their `EDA` measurements?
+
+3.  (Optional) To confirm your results, calculate the mean `eda` for each test and student. Return to the code from Part 4 to calculate the means, remembering to replace `hr` with `eda`. You already ran student `S9`, so you can just run `S8`. Do the results back up your conclusions? Take a screenshot of your results table in the console.
+
+4.  (Optional) Try running 1-3 above with two different students. You'll need to replace anywhere `S9` or `S8` was mentioned in the code with the students of your choice. Take a screenshot of your plots/results.
+:::
+
+## Part 6
+
+Let's looks at an additional source of data: the students' grades.
+
+```
+
+GRADES - MIDTERM 1
+------------------
+
+S01 = 78
+S02 = 82
+S03 = 77
+S04 = 75
+S05 = 67
+S06 = 71
+S07 = 64
+S08 = 92
+S09 = 80
+S10 = 89
+
+
+
+GRADES - MIDTERM 2
+------------------
+
+S01 = 82
+S02 = 85
+S03 = 90
+S04 = 77
+S05 = 77
+S06 = 64
+S07 = 33
+S08 = 88
+S09 = 39
+S10 = 64
+
+
+
+GRADES - FINAL (OUT OF 200)
+---------------------------
+
+S01 = 182
+S02 = 180
+S03 = 188
+S04 = 149
+S05 = 157
+S06 = 175
+S07 = 110
+S08 = 184
+S09 = 126
+S10 = 116
+```
+
+### Part 6 Questions
+
+::: callout-note
+## Going Deeper
+
+1.  Based on your plots and information so far, do you have any ideas (hypotheses!) about how stress and grades might be related?
+
+2.  Would looking at more data help you feel more or less comfortable with your hypotheses?
+:::
