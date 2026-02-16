@@ -17,7 +17,7 @@ First, let's read the "plain language" summary from a publication entitled "A We
 
 > Most stress research happens in labs, not real life. This means there aren't many datasets showing how people's bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity—a sign of stress) and skin temperature. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We're making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.
 
-As the summary suggests, lab settings do not always reflect reality. Most stress research uses controlled laboratory settings with standardized stressors like electric shocks, loud noises, or disturbing images. These methods allow researchers to isolate specific physiological responses and build reliable datasets. This approach has helped us understand how the autonomic nervous system responds to stress. Howevever, the challenge is that Real cognitive stressors like academic exams involve anticipatory anxiety, sustained pressure, and outcomes that actually matter to participants. The physiological responses may differ substantially. This "real world" research is important for validating findings from the lab.
+As the summary suggests, lab settings do not always reflect reality. Most stress research uses controlled laboratory settings with standardized stressors like electric shocks, loud noises, or disturbing images. These methods allow researchers to isolate specific physiological responses and build reliable datasets. This approach has helped us understand how the autonomic nervous system responds to stress. However, the challenge is that Real cognitive stressors like academic exams involve anticipatory anxiety, sustained pressure, and outcomes that actually matter to participants. The physiological responses may differ substantially. This "real world" research is important for validating findings from the lab.
 
 **Electrodermal activity**, also known as skin conductance or EDA, measures how electrical properties of the skin change over time. When you are stressed or anxious, your sympathetic nervous system activates your sweat glands, which changes how well your skin conducts electricity. More stress generally means greater EDA. This makes EDA a good indicator of psychological and physiological stress.
 
@@ -136,7 +136,7 @@ Take a look at the column names in the Viewer you just opened. Compare these to 
 **timestamp**: Time the measurement was taken. The measurement comes from a wearable device worn by a student.\
 **eda**: Measurement from the electrodermal activity sensor.\
 **hr**: Heart rate measurement, in beats per minute.\
-**temp**: Skin temperature measurement, in Celcius.\
+**temp**: Skin temperature measurement, in Celsius.\
 **test**: Which test/exam was being taken.\
 **studentID**: Student being measured.\
 :::
