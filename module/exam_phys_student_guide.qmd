@@ -59,7 +59,7 @@ We will need to install the `tidyverse` package for this activity.
 
 Type the following into your console and press return to run the code. You can use the **clipboard button** on the top right of the code block to copy everything. You will see a lot of text when the code is running, but usually that's a good thing!
 
-```{r message=FALSE}
+```{r message=FALSE, eval=FALSE}
 install.packages("tidyverse")
 ```
 
