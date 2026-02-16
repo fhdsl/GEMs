@@ -235,10 +235,9 @@ Correlation measures whether two things tend to change together in a predictable
 
 It's important to remember that correlation doesn't mean that one variable causes another. For example, shark attacks and ice cream sales are correlated because both increase in the summer. Ice cream sales do not cause shark attacks. Check out [this site](https://www.tylervigen.com/spurious-correlations) for more unrelated variables that happen to be correlated.
 
-(example from website)
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
-<!-- ``` -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "Netflix stock price and the first name Stevie are strongly correlated, but there is no causation. Many correlation relationships are like this.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_16#slide=id.g3c8730600da_1_16")
+```
 
 ### Correlation with Heart Rate
 
