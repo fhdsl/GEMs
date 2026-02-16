@@ -145,7 +145,6 @@ Take a look at the column names in the Viewer you just opened. Compare these to 
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_43#slide=id.g3c8730600da_0_43")
 ```
 
-
 ### Part 1 Questions
 
 ::: callout-note
@@ -202,13 +201,13 @@ Looks like we have 10 students who were measured. The number of observations var
 
 In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click `timestamp`, we can see the earliest timestamp is `2018-10-13 12:55:31`. We can click it again to see the latest timestamp is `2018-10-13 12:55:31`.
 
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
-<!-- ``` -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking on the column name sorts the timestamp column to reveal the earliest value.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_0#slide=id.g3c8730600da_1_0")
+```
 
-<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_30#slide=id.g357ffc10808_0_30") -->
-<!-- ``` -->
+```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking the column name again sorts it in the other direction, revealing the latest timepoint.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_7#slide=id.g3c8730600da_1_7")
+```
 
 ### Part 2b Questions
 
