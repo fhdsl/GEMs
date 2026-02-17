@@ -1,5 +1,5 @@
 ---
-title: "**Exam Physiology: Wearable Data**"
+title: "Exam Physiology: Wearable Data"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
@@ -101,7 +101,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883F
 
 ### Get the Physiology Data
 
-We'll read in the data from this study the GEMs website. Run the following code in your console:
+Let’s read in the data. We’ve hosted a snapshot on this website, so let’s read it in from that URL. Run the following code in your console:
 
 ```{r message=FALSE}
 phys_data <- read_csv("https://genomicseducation.org/data/phys_data.csv")
@@ -200,9 +200,9 @@ Looks like we have 10 students who were measured. The number of observations var
 ::: callout-note
 ## Check Your Knowledge
 
-1.  Run `count(phys_data, test, studentID)` to see student and test combinations. How many observations does student `S1` have for Midterm 1? Take a screenshot showing this number.
+1.  Run `count(phys_data, test, studentID)` to see student and test combinations. How many observations does student `S2` have for the Final? Take a screenshot showing this number.
 
-2.  Which student & test combination has the lowest number of observations?
+2.  Which student has the lowest number of observations for the Final?
 :::
 
 ### Sorting in Viewer
@@ -257,18 +257,18 @@ Calculate the correlation between heart rate and skin temperature. Run the follo
 cor(phys_data$hr, phys_data$temp)
 ```
 
-Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change [@k2025exploring, @jerem2023s].
+Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change [@k2025exploring; @jerem2023s].
 
 ### Part 3 Questions
 
 ::: callout-note
 ## Check Your Knowledge
 
-1.  Change the code above slightly, replacing `hr` with `eda`. Run the changed code in your console. What is the correlation between the `hr` and `eda` variables? Take a screenshot of your evidence.
+1.  Change the code above slightly, replacing `hr` with `eda`. Run the changed code in your console. What is the correlation between the `temp` and `eda` variables? Take a screenshot of your evidence.
 
 2.  What does the correlation value tell you about the relationship between these two variables? (E.g., as one goes up, the other does what ?)
 
-3.  (Optional) Try changing the code again to look at the correlation value between `eda` and `temp`. Run the changed code in your console. What is the correlation between these variables, and what is the relationship? Take a screenshot of your evidence.
+3.  (Optional) Try changing the code again to look at the correlation value between `eda` and `hr`. Run the changed code in your console. What is the correlation between these variables, and what is the relationship? Take a screenshot of your evidence.
 :::
 
 ## Part 4
@@ -346,14 +346,14 @@ These students' heart rates look pretty similar across the exams!
 
 2.  What conclusions can you draw about stress in these two students, based on their `EDA` measurements?
 
-3.  (Optional) To confirm your results, calculate the mean `eda` for each test and student. Return to the code from Part 4 to calculate the means, remembering to replace `hr` with `eda`. You already ran student `S9`, so you can just run `S8`. Do the results back up your conclusions? Take a screenshot of your results table in the console.
+3.  (Optional) To confirm your results, compare the mean eda for each test and student (`S9` and `S8`). You can return to the code from Part 4 and re-calculate it if you need to. Do the results back up your conclusions from question 2? Take a screenshot of your results table in the console.
 
 4.  (Optional) Try running 1-3 above with two different students. You'll need to replace anywhere `S9` or `S8` was mentioned in the code with the students of your choice. Take a screenshot of your plots/results.
 :::
 
 ## Part 6
 
-Let's looks at an additional source of data: the students' grades.
+Let's look at an additional source of data: the students' grades.
 
 ```
 
