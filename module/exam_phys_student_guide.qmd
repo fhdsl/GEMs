@@ -13,7 +13,7 @@ This activity will walk through interpretation of data from wearable devices int
 
 ## Part 1
 
-In Part 1, we'll go over some background context for this activity. Then, we'll get set up on Posit Cloud for the next steps.
+Let's go over some background context for this activity. Then, we'll get set up on Posit Cloud for the next steps.
 
 ### Background
 
@@ -41,49 +41,25 @@ Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can 
 
 <!-- callout about what cloud computing is ? -->
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
 ```
 
 Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
 ```
 
 Rename your project "Exam Physiology" by clicking on "Untitled Project".
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
 ```
 
 ### Package Install and Load
 
 We will need to install the `tidyverse` package for this activity.
-
-Type the following into your console and press return to run the code. You can use the **clipboard button** on the top right of the code block to copy everything. You will see a lot of text when the code is running, but usually that's a good thing!
-
-```{r message=FALSE, eval=FALSE}
-install.packages("tidyverse")
-```
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Paste the code above into the Posit Cloud console and click enter to run the code.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c33bb9375e_0_6#slide=id.g3c33bb9375e_0_6")
-```
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "If tidyverse installs successfully, you'll see several 'DONE' messages and 'The downloaded source packages are in...'.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_3#slide=id.g3c8730600da_0_3")
-```
-
-Next, we will "load the package" so it's ready to use:
-
-```{r message=FALSE}
-library(tidyverse)
-```
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Successfully loading tidyverse with the library command shows that several other packages are attached.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_11#slide=id.g3c8730600da_0_11")
-```
 
 ::: callout-tip
 ## What are R Packages?
@@ -94,6 +70,32 @@ Packages are developed by the R community and made available through repositorie
 
 We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
 :::
+
+Type the following into your console and press return to run the code.
+
+```{r message=FALSE, eval=FALSE}
+install.packages("tidyverse")
+```
+
+You can use the **clipboard button** on the top right of the code block to copy everything. You will see a lot of text when the code is running, but usually that's a good thing!
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Paste the code above into the Posit Cloud console and click enter to run the code.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c33bb9375e_0_6#slide=id.g3c33bb9375e_0_6")
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "If tidyverse installs successfully, you'll see several 'DONE' messages and 'The downloaded source packages are in...'.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_3#slide=id.g3c8730600da_0_3")
+```
+
+Next, we will "load the package" so it's ready to use:
+
+```{r message=FALSE}
+library(tidyverse)
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Successfully loading tidyverse with the library command shows that several other packages are attached.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_11#slide=id.g3c8730600da_0_11")
+```
 
 ### Get the Physiology Data
 
@@ -106,7 +108,7 @@ head(phys_data)
 
 If everything went correctly, you should see (1) an object called `phys_data` in the Environment Pane (top right) and (2) the top few rows of the data printed to the console.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Running the code above stores a data object in the environment called phys_data; some data is also printed in the console showing timestamp, eda, hr, test, and studentID columns.", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Running the code above stores a data object in the environment called phys_data; some data is also printed in the console showing timestamp, eda, hr, test, and studentID columns.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_22#slide=id.g3c8730600da_0_22")
 ```
 
@@ -126,7 +128,7 @@ Enter the following code in the console to view the data in tabular format:
 View(phys_data)
 ```
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Using the View command opens the data in a tabular browser, much like Excel or Google Sheets. Data cannot be edited in the Viewer.", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Using the View command opens the data in a tabular browser, much like Excel or Google Sheets. Data cannot be edited in the Viewer.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_35#slide=id.g3c8730600da_0_35")
 ```
 
@@ -145,7 +147,7 @@ Take a look at the column names in the Viewer you just opened. Compare these to 
 **studentID**: Student being measured.\
 :::
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Column names are surrounded by a box in the Viewer.", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Column names are surrounded by a box in the Viewer.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_43#slide=id.g3c8730600da_0_43")
 ```
 
@@ -165,7 +167,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883F
 
 ## Part 2
 
-Now, we'll run some R code to better understand our data.
+Let's run some R code to better understand our data.
 
 ### Counting Tests and Students
 
@@ -189,7 +191,7 @@ Now let's look at how many different students are represented, and how many obse
 count(phys_data, studentID)
 ```
 
-Looks like we have 10 students who were measured. The number of observations varies a bit because some students might have had their sensors turned on a bit longer than others.
+Looks like we have 10 students who were measured. The number of observations varies a bit because some students had their sensors turned on a bit longer than others.
 
 ### Part 2a Questions
 
@@ -205,11 +207,11 @@ Looks like we have 10 students who were measured. The number of observations var
 
 In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click `timestamp`, we can see the earliest timestamp is `2018-10-13 12:55:31`. We can click it again to see the latest timestamp is `2018-10-13 12:55:31`.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking on the column name sorts the timestamp column to reveal the earliest value.", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking on the column name sorts the timestamp column to reveal the earliest value.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_0#slide=id.g3c8730600da_1_0")
 ```
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking the column name again sorts it in the other direction, revealing the latest timepoint.", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking the column name again sorts it in the other direction, revealing the latest timepoint.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_7#slide=id.g3c8730600da_1_7")
 ```
 
@@ -241,7 +243,7 @@ It's important to remember that correlation doesn't mean that one variable cause
 
 <br>
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Netflix stock price and the first name Stevie are strongly correlated, but there is no causation. Many correlation relationships are like this.", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Netflix stock price and the first name Stevie are strongly correlated, but there is no causation. Many correlation relationships are like this.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_16#slide=id.g3c8730600da_1_16")
 ```
 
@@ -269,7 +271,7 @@ Our correlation is negative, meaning that as heart rate increases, skin temperat
 
 ## Part 4
 
-Now, we'll take a look at just one student's data. We'll also make some plots!
+Let's take a look at just one student's data. We'll also make some plots!
 
 ### Plotting Student S9
 
@@ -288,8 +290,8 @@ It looks like this particular student had a slightly lower heart rate during the
 ::: callout-note
 ## A note about test timing
 
-* Midterm 1 was conducted from **14:00 - 15:30**.
-* Midterm 2 was conducted from **15:00 - 16:30**.
+* Midterm 1 was conducted from **14:00 - 15:30**.\
+* Midterm 2 was conducted from **15:00 - 16:30**.\
 * The Final was conducted from **17:00 - 20:00**.
 :::
 
@@ -317,7 +319,7 @@ filter(phys_data, studentID == "S9") %>%
 
 ## Part 5
 
-In this part, we'll compare two students.
+Now, we'll compare two students.
 
 ### Plotting Student S9
 
