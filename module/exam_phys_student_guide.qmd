@@ -101,7 +101,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883F
 
 ### Get the Physiology Data
 
-Let’s read in the data. We’ve hosted a snapshot on genomicseducation.org, so let’s read it in from that URL. Run the following code in your console:
+Let’s read in the data. We’ve hosted a snapshot on this website, so let’s read it in from that URL. Run the following code in your console:
 
 ```{r message=FALSE}
 phys_data <- read_csv("https://genomicseducation.org/data/phys_data.csv")
