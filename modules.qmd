@@ -29,3 +29,10 @@ These modules can be run as part of a miniCURE with the C-MOOR project or as a s
 
 - [Differential Expression and the Mouse Gut-Brain Axis](module/mouse_gutbrain_de.html)
 
+
+## Related Modules
+
+These modules are not strictly part of GEMs, but were created by our group and others.
+
+- [Exam Physiology: Wearable Data and Stress](module/exam_phys.html)
+

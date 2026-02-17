@@ -33,6 +33,7 @@ Coffman
 colorcode
 compacta
 Conti
+counterintuitive
 Creb
 Crohn's
 css
@@ -63,6 +64,10 @@ dysregulated
 EBI
 edu
 Eeles
+eda
+EDA
+electrodermal
+Electrodermal
 else's
 EMBL
 endomembrane
@@ -246,6 +251,7 @@ Sema
 SRR
 striatum
 Striatum
+studentID
 subdir
 sulfotransferase
 superpopulations

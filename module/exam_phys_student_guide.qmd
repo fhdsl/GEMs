@@ -5,4 +5,407 @@ output:
   html_document
 ---
 
-Coming soon
+```{r, fig.align='center', echo = FALSE, fig.alt= "A wrist showing a wearable device and inset, several students taking an exam.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_25#slide=id.g3c8730600da_1_25")
+```
+
+This activity will walk through interpretation of data from wearable devices intended to measure stress in humans. You will work with real data from a study where researchers measured stress in students taking exams.
+
+## Part 1
+
+In Part 1, we'll go over some background context for this activity. Then, we'll get set up on Posit Cloud for the next steps.
+
+### Background
+
+First, let's read the "plain language" summary from a publication entitled "A Wearable Exam Stress Dataset for Predicting Grades using Physiological Signals" [@amin2022wearable].
+
+> Most stress research happens in labs, not real life. This means there aren't many datasets showing how people's bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity—a sign of stress) and skin temperature. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We're making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.
+
+As the summary suggests, lab settings do not always reflect reality. Most stress research uses controlled laboratory settings with standardized stressors like electric shocks, loud noises, or disturbing images. These methods allow researchers to isolate specific physiological responses and build reliable datasets. This approach has helped us understand how the autonomic nervous system responds to stress. However, the challenge is that Real cognitive stressors like academic exams involve anticipatory anxiety, sustained pressure, and outcomes that actually matter to participants. The physiological responses may differ substantially. This "real world" research is important for validating findings from the lab.
+
+**Electrodermal activity**, also known as skin conductance or EDA, measures how electrical properties of the skin change over time. When you are stressed or anxious, your sympathetic nervous system activates your sweat glands, which changes how well your skin conducts electricity. More stress generally means greater EDA. This makes EDA a good indicator of psychological and physiological stress.
+
+::: callout-note
+## Check Your Knowledge
+
+1. What variables were the researchers trying to measure?
+
+2.  True or False: High Electrodermal activity (EDA) means the person being measured might be stressed.
+:::
+
+### Start Posit Cloud
+
+In the next steps, we will look at the data from the publication described above. We will be working in a programming language called R that is widely used for analysis and making graphs/plots. We'll use the version of R available online on Posit Cloud.
+
+Go to <https://posit.cloud/plans/free> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.
+
+<!-- callout about what cloud computing is ? -->
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+```
+
+Once logged in, select "New Project" and "New RStudio Project". It will take a few seconds to deploy and load.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_3#slide=id.g357ffc10808_0_3")
+```
+
+Rename your project "Exam Physiology" by clicking on "Untitled Project".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_12#slide=id.g357ffc10808_0_12")
+```
+
+### Package Install and Load
+
+We will need to install the `tidyverse` package for this activity.
+
+Type the following into your console and press return to run the code. You can use the **clipboard button** on the top right of the code block to copy everything. You will see a lot of text when the code is running, but usually that's a good thing!
+
+```{r message=FALSE, eval=FALSE}
+install.packages("tidyverse")
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Paste the code above into the Posit Cloud console and click enter to run the code.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c33bb9375e_0_6#slide=id.g3c33bb9375e_0_6")
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "If tidyverse installs successfully, you'll see several 'DONE' messages and 'The downloaded source packages are in...'.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_3#slide=id.g3c8730600da_0_3")
+```
+
+Next, we will "load the package" so it's ready to use:
+
+```{r message=FALSE}
+library(tidyverse)
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Successfully loading tidyverse with the library command shows that several other packages are attached.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_11#slide=id.g3c8730600da_0_11")
+```
+
+::: callout-tip
+## What are R Packages?
+
+Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like "expansion packs" on top of your basic R software.
+
+Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!
+
+We use the `library` command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.
+:::
+
+### Get the Physiology Data
+
+We'll read in the data from this study the GEMs website. Run the following code in your console:
+
+```{r message=FALSE}
+phys_data <- read_csv("https://genomicseducation.org/data/phys_data.csv")
+head(phys_data)
+```
+
+If everything went correctly, you should see (1) an object called `phys_data` in the Environment Pane (top right) and (2) the top few rows of the data printed to the console.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Running the code above stores a data object in the environment called phys_data; some data is also printed in the console showing timestamp, eda, hr, test, and studentID columns.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_22#slide=id.g3c8730600da_0_22")
+```
+
+::: callout-tip
+## What is an R object?
+
+An object is something stored in a programming language, such as data. Think of it like a "noun".
+
+In R, we assign objects using the `<-` symbol, with the name of your choice on the left, and the contents of the object on the right.
+
+Objects will show up in your Environment Pane. It's a good idea to check the Environment Pane regularly.
+:::
+
+Enter the following code in the console to view the data in tabular format:
+
+```{r eval=F}
+View(phys_data)
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Using the View command opens the data in a tabular browser, much like Excel or Google Sheets. Data cannot be edited in the Viewer.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_35#slide=id.g3c8730600da_0_35")
+```
+
+### Data Dictionaries
+
+Take a look at the column names in the Viewer you just opened. Compare these to the data dictionary below to interpret what the columns represent.
+
+::: callout-tip
+## Pedigree Data Dictionary
+
+**timestamp**: Time the measurement was taken. The measurement comes from a wearable device worn by a student.\
+**eda**: Measurement from the electrodermal activity sensor.\
+**hr**: Heart rate measurement, in beats per minute.\
+**temp**: Skin temperature measurement, in Celsius.\
+**test**: Which test/exam was being taken.\
+**studentID**: Student being measured.\
+:::
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Column names are surrounded by a box in the Viewer.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_0_43#slide=id.g3c8730600da_0_43")
+```
+
+### Part 1 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Why might we want to install add-on packages in R?
+
+2.  How can we confirm that our data loaded correctly? Take a screenshot and point to your evidence.
+
+3.  Looking at the `timestamp` column, how often are measurements being collected?
+
+4.  How many rows of data, or observations, does this data have? Hint: look at the Environment Pane (top right) and see how many `obs.` you have.
+:::
+
+## Part 2
+
+Now, we'll run some R code to better understand our data.
+
+### Counting Tests and Students
+
+First, let's see how many different tests/exams are represented, and how many observations we have of each. Run the following code in your console:
+
+```{r}
+count(phys_data, test)
+```
+
+Looks like we have three tests: Midterm 1, Midterm 2, and the Final exam.
+
+::: callout-tip
+## What is the code doing?
+
+`count` here is something called a "function". We can think of it like a verb that transforms an object. In the code snippet above, `count` takes the `phys_data` object, and counts up how many observations are in each type of `test`.
+:::
+
+Now let's look at how many different students are represented, and how many observations we have of each. Run the following code in your console:
+
+```{r}
+count(phys_data, studentID)
+```
+
+Looks like we have 10 students who were measured. The number of observations varies a bit because some students might have had their sensors turned on a bit longer than others.
+
+### Part 2a Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Run `count(phys_data, test, studentID)` to see student and test combinations. How many observations does student `S1` have for Midterm 1? Take a screenshot showing this number.
+
+2.  Which student & test combination has the lowest number of observations?
+:::
+
+### Sorting in Viewer
+
+In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click `timestamp`, we can see the earliest timestamp is `2018-10-13 12:55:31`. We can click it again to see the latest timestamp is `2018-10-13 12:55:31`.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking on the column name sorts the timestamp column to reveal the earliest value.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_0#slide=id.g3c8730600da_1_0")
+```
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking the column name again sorts it in the other direction, revealing the latest timepoint.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_7#slide=id.g3c8730600da_1_7")
+```
+
+### Part 2b Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Sort the `hr` column. What is the greatest heart rate observed? Which student was this? Take a screenshot of your evidence.
+
+2.  Which two students had the greatest `eda` values? Take a screenshot of your evidence.
+:::
+
+## Part 3
+
+Now, we'll look at the relationship between the measured variables.
+
+### Understanding Correlation
+
+Correlation measures whether two things tend to change together in a predictable way. Correlation is usually measured on a scale from -1 to +1, where numbers closer to -1 or +1 indicate stronger relationships, and numbers close to 0 mean little to no relationship.
+
+- Positive correlation: When one thing goes up, the other tends to go up too. For example, height and weight. Taller people tend to weigh more.
+
+- Negative correlation: When one thing goes up, the other tends to go down. For example, hours of sleep and tiredness. More sleep usually means less tiredness.
+
+- No correlation: The two things change independently with no consistent pattern. Example: shoe size and test scores.
+
+It's important to remember that correlation doesn't mean that one variable causes another. For example, shark attacks and ice cream sales are correlated because both increase in the summer. Ice cream sales do not cause shark attacks. Check out [this site](https://www.tylervigen.com/spurious-correlations) for more unrelated variables that happen to be correlated.
+
+<br>
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Netflix stock price and the first name Stevie are strongly correlated, but there is no causation. Many correlation relationships are like this.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_16#slide=id.g3c8730600da_1_16")
+```
+
+### Correlation with Heart Rate
+
+Calculate the correlation between heart rate and skin temperature. Run the following code in your console:
+
+```{r}
+cor(phys_data$hr, phys_data$temp)
+```
+
+Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change [@k2025exploring, @jerem2023s].
+
+### Part 3 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Change the code above slightly, replacing `hr` with `eda`. Run the changed code in your console. What is the correlation between the `hr` and `eda` variables? Take a screenshot of your evidence.
+
+2.  What does the correlation value tell you about the relationship between these two variables? (E.g., as one goes up, the other does what ?)
+
+3.  (Optional) Try changing the code again to look at the correlation value between `eda` and `temp`. Run the changed code in your console. What is the correlation between these variables, and what is the relationship? Take a screenshot of your evidence.
+:::
+
+## Part 4
+
+Now, we'll take a look at just one student's data. We'll also make some plots!
+
+### Plotting Student S9
+
+We're going to plot student `S9`. Let's look at heart rate (`hr`) across the three different tests. Run the following code in your console:
+
+```{r}
+filter(phys_data, studentID == "S9") %>% 
+ggplot(
+  aes(x = timestamp, y = hr)) +
+  geom_line() +
+  facet_wrap( ~ test, scales = "free_x")
+```
+
+It looks like this particular student had a slightly lower heart rate during the final than the midterms. 
+
+::: callout-note
+## A note about test timing
+
+* Midterm 1 was conducted from **14:00 - 15:30**.
+* Midterm 2 was conducted from **15:00 - 16:30**.
+* The Final was conducted from **17:00 - 20:00**.
+:::
+
+We can calculate the means to assess this more accurately:
+
+```{r}
+filter(phys_data, studentID == "S9") %>% 
+  group_by(test) %>%
+  summarize(hr = mean(hr))
+```
+
+### Part 4 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Change the code that creates the plots slightly, replacing `hr` with `eda`. Run the changed code in your console. Take a screenshot of your plots.
+
+2.  Which test/exam appears to have the greatest electrodermal activity (EDA) for student `S9`?
+
+3.  To confirm your results, calculate the mean `eda` for each test. Run the code above to calculate the means, remembering to replace `hr` with `eda`. Do the results surprise you? Take a screenshot of your results table in the console.
+
+4.  (Optional) Try running 1-3 above with student `S8` instead of `S9`. You'll need to replace anywhere `S9` was mentioned in the code! Take a screenshot of your plots/results.
+:::
+
+## Part 5
+
+In this part, we'll compare two students.
+
+### Plotting Student S9
+
+We're going to plot student `S9` _and_ `S8`. Let's look at heart rate (`hr`) across the three different tests. Run the following code in your console:
+
+```{r}
+filter(phys_data, studentID == "S9" | studentID == "S8") %>% 
+ggplot(
+  aes(x = timestamp, y = hr, color = studentID)) +
+  geom_line() +
+  facet_wrap( ~ test, scales = "free_x")
+```
+
+These students' heart rates look pretty similar across the exams!
+
+### Part 5 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Change the code that creates the plots, replacing `hr` with `eda`. Run the changed code in your console. Take a screenshot of your plots.
+
+2.  What conclusions can you draw about stress in these two students, based on their `EDA` measurements?
+
+3.  (Optional) To confirm your results, calculate the mean `eda` for each test and student. Return to the code from Part 4 to calculate the means, remembering to replace `hr` with `eda`. You already ran student `S9`, so you can just run `S8`. Do the results back up your conclusions? Take a screenshot of your results table in the console.
+
+4.  (Optional) Try running 1-3 above with two different students. You'll need to replace anywhere `S9` or `S8` was mentioned in the code with the students of your choice. Take a screenshot of your plots/results.
+:::
+
+## Part 6
+
+Let's looks at an additional source of data: the students' grades.
+
+```
+
+GRADES - MIDTERM 1
+------------------
+
+S01 = 78
+S02 = 82
+S03 = 77
+S04 = 75
+S05 = 67
+S06 = 71
+S07 = 64
+S08 = 92
+S09 = 80
+S10 = 89
+
+
+
+GRADES - MIDTERM 2
+------------------
+
+S01 = 82
+S02 = 85
+S03 = 90
+S04 = 77
+S05 = 77
+S06 = 64
+S07 = 33
+S08 = 88
+S09 = 39
+S10 = 64
+
+
+
+GRADES - FINAL (OUT OF 200)
+---------------------------
+
+S01 = 182
+S02 = 180
+S03 = 188
+S04 = 149
+S05 = 157
+S06 = 175
+S07 = 110
+S08 = 184
+S09 = 126
+S10 = 116
+```
+
+### Part 6 Questions
+
+::: callout-note
+## Going Deeper
+
+1.  Based on your plots and information so far, do you have any ideas (hypotheses!) about how stress and grades might be related?
+
+2.  Would looking at more data help you feel more or less comfortable with your hypotheses?
+:::
