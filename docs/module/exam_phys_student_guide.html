@@ -56,7 +56,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -246,10 +266,10 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>This activity will walk through interpretation of data from wearable devices intended to measure stress in humans. You will work with real data from a study where researchers measured stress in students taking exams.</p>
 <section id="part-1" class="level2">
 <h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
-<p>In Part 1, we’ll go over some background context for this activity. Then, we’ll get set up on Posit Cloud for the next steps.</p>
+<p>Let’s go over some background context for this activity. Then, we’ll get set up on Posit Cloud for the next steps.</p>
 <section id="background" class="level3">
 <h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>First, let’s read the “plain language” summary from a publication entitled “A Wearable Exam Stress Dataset for Predicting Grades using Physiological Signals” <span class="citation" data-cites="amin2022wearable">[@amin2022wearable]</span>.</p>
+<p>First, let’s read the “plain language” summary from a publication entitled “A Wearable Exam Stress Dataset for Predicting Grades using Physiological Signals” <span class="citation" data-cites="amin2022wearable"><a href="#ref-amin2022wearable" role="doc-biblioref">[1]</a></span>.</p>
 <blockquote class="blockquote">
 <p>Most stress research happens in labs, not real life. This means there aren’t many datasets showing how people’s bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity—a sign of stress) and skin temperature. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We’re making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.</p>
 </blockquote>
@@ -281,7 +301,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g1965a5f7f0a_0_44.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="TO ADD"></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g1965a5f7f0a_0_44.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
 </figure>
 </div>
 </div>
@@ -291,7 +311,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g357ffc10808_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="TO ADD"></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g357ffc10808_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
 </figure>
 </div>
 </div>
@@ -301,7 +321,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g357ffc10808_0_12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="TO ADD"></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g357ffc10808_0_12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
 </figure>
 </div>
 </div>
@@ -310,41 +330,6 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <section id="package-install-and-load" class="level3">
 <h3 class="anchored" data-anchor-id="package-install-and-load">Package Install and Load</h3>
 <p>We will need to install the <code>tidyverse</code> package for this activity.</p>
-<p>Type the following into your console and press return to run the code. You can use the <strong>clipboard button</strong> on the top right of the code block to copy everything. You will see a lot of text when the code is running, but usually that’s a good thing!</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c33bb9375e_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Paste the code above into the Posit Cloud console and click enter to run the code."></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="If tidyverse installs successfully, you'll see several 'DONE' messages and 'The downloaded source packages are in...'."></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Next, we will “load the package” so it’s ready to use:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Successfully loading tidyverse with the library command shows that several other packages are attached."></p>
-</figure>
-</div>
-</div>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -358,6 +343,42 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like “expansion packs” on top of your basic R software.</p>
 <p>Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!</p>
 <p>We use the <code>library</code> command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.</p>
+</div>
+</div>
+<p>Type the following into your console and press return to run the code.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>You can use the <strong>clipboard button</strong> on the top right of the code block to copy everything. You will see a lot of text when the code is running, but usually that’s a good thing!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c33bb9375e_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Paste the code above into the Posit Cloud console and click enter to run the code."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="If tidyverse installs successfully, you'll see several 'DONE' messages and 'The downloaded source packages are in...'."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, we will “load the package” so it’s ready to use:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Successfully loading tidyverse with the library command shows that several other packages are attached."></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -384,7 +405,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_22.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Running the code above stores a data object in the environment called phys_data; some data is also printed in the console showing timestamp, eda, hr, test, and studentID columns."></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_22.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Running the code above stores a data object in the environment called phys_data; some data is also printed in the console showing timestamp, eda, hr, test, and studentID columns."></p>
 </figure>
 </div>
 </div>
@@ -412,7 +433,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_35.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Using the View command opens the data in a tabular browser, much like Excel or Google Sheets. Data cannot be edited in the Viewer."></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_35.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Using the View command opens the data in a tabular browser, much like Excel or Google Sheets. Data cannot be edited in the Viewer."></p>
 </figure>
 </div>
 </div>
@@ -444,7 +465,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_43.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Column names are surrounded by a box in the Viewer."></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_43.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Column names are surrounded by a box in the Viewer."></p>
 </figure>
 </div>
 </div>
@@ -474,7 +495,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </section>
 <section id="part-2" class="level2">
 <h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
-<p>Now, we’ll run some R code to better understand our data.</p>
+<p>Let’s run some R code to better understand our data.</p>
 <section id="counting-tests-and-students" class="level3">
 <h3 class="anchored" data-anchor-id="counting-tests-and-students">Counting Tests and Students</h3>
 <p>First, let’s see how many different tests/exams are represented, and how many observations we have of each. Run the following code in your console:</p>
@@ -522,7 +543,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 10 S9        39286</code></pre>
 </div>
 </div>
-<p>Looks like we have 10 students who were measured. The number of observations varies a bit because some students might have had their sensors turned on a bit longer than others.</p>
+<p>Looks like we have 10 students who were measured. The number of observations varies a bit because some students had their sensors turned on a bit longer than others.</p>
 </section>
 <section id="part-2a-questions" class="level3">
 <h3 class="anchored" data-anchor-id="part-2a-questions">Part 2a Questions</h3>
@@ -550,7 +571,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Clicking on the column name sorts the timestamp column to reveal the earliest value."></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Clicking on the column name sorts the timestamp column to reveal the earliest value."></p>
 </figure>
 </div>
 </div>
@@ -559,7 +580,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Clicking the column name again sorts it in the other direction, revealing the latest timepoint."></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Clicking the column name again sorts it in the other direction, revealing the latest timepoint."></p>
 </figure>
 </div>
 </div>
@@ -602,7 +623,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_16.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Netflix stock price and the first name Stevie are strongly correlated, but there is no causation. Many correlation relationships are like this."></p>
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_16.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Netflix stock price and the first name Stevie are strongly correlated, but there is no causation. Many correlation relationships are like this."></p>
 </figure>
 </div>
 </div>
@@ -617,7 +638,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <pre><code>[1] -0.5648441</code></pre>
 </div>
 </div>
-<p>Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change <span class="citation" data-cites="k2025exploring">[@k2025exploring, @jerem2023s]</span>.</p>
+<p>Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change <span class="citation" data-cites="k2025exploring"><a href="#ref-jerem2023s" role="doc-biblioref">[3]</a></span>.</p>
 </section>
 <section id="part-3-questions" class="level3">
 <h3 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h3>
@@ -642,7 +663,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </section>
 <section id="part-4" class="level2">
 <h2 class="anchored" data-anchor-id="part-4">Part 4</h2>
-<p>Now, we’ll take a look at just one student’s data. We’ll also make some plots!</p>
+<p>Let’s take a look at just one student’s data. We’ll also make some plots!</p>
 <section id="plotting-student-s9" class="level3">
 <h3 class="anchored" data-anchor-id="plotting-student-s9">Plotting Student S9</h3>
 <p>We’re going to plot student <code>S9</code>. Let’s look at heart rate (<code>hr</code>) across the three different tests. Run the following code in your console:</p>
@@ -672,8 +693,10 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Midterm 1 was conducted from <strong>14:00 - 15:30</strong>.</li>
-<li>Midterm 2 was conducted from <strong>15:00 - 16:30</strong>.</li>
+<li>Midterm 1 was conducted from <strong>14:00 - 15:30</strong>.<br>
+</li>
+<li>Midterm 2 was conducted from <strong>15:00 - 16:30</strong>.<br>
+</li>
 <li>The Final was conducted from <strong>17:00 - 20:00</strong>.</li>
 </ul>
 </div>
@@ -717,7 +740,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </section>
 <section id="part-5" class="level2">
 <h2 class="anchored" data-anchor-id="part-5">Part 5</h2>
-<p>In this part, we’ll compare two students.</p>
+<p>Now, we’ll compare two students.</p>
 <section id="plotting-student-s9-1" class="level3">
 <h3 class="anchored" data-anchor-id="plotting-student-s9-1">Plotting Student S9</h3>
 <p>We’re going to plot student <code>S9</code> <em>and</em> <code>S8</code>. Let’s look at heart rate (<code>hr</code>) across the three different tests. Run the following code in your console:</p>
@@ -828,10 +851,21 @@ S10 = 116</code></pre>
 </div>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-amin2022wearable" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">M. R. Amin, D. S. Wickramasuriya, and R. T. Faghih, <span>“A wearable exam stress dataset for predicting grades using physiological signals,”</span> in <em>2022 IEEE healthcare innovations and point of care technologies (HI-POCT)</em>, IEEE, 2022, pp. 30–36. Available: <a href="https://drive.google.com/file/d/1v_Gjov9IDctVHt5-8Cm7A7qQgnyB_wNu/view">https://drive.google.com/file/d/1v_Gjov9IDctVHt5-8Cm7A7qQgnyB_wNu/view</a></div>
+</div>
+<div id="ref-k2025exploring" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">A. K. Kasap and B. Kurt, <span>“Exploring the correlation of physiological stress signals with student exam performance: A preliminary study,”</span> <em>Applied Psychophysiology and Biofeedback</em>, vol. 50, no. 1, pp. 149–164, 2025.</div>
+</div>
+<div id="ref-jerem2023s" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">P. Jerem and L. M. Romero, <span>“It’s cool to be stressed: Body surface temperatures track sympathetic nervous system activation during acute stress,”</span> <em>Journal of Experimental Biology</em>, vol. 226, no. 20, p. jeb246552, 2023.</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
