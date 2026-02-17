@@ -1,8 +1,10 @@
 ---
 title: "**Exam Physiology: Wearable Data**"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-output:
-  html_document
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
 ---
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "A wrist showing a wearable device and inset, several students taking an exam.", out.width = '90%'}
