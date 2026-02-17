@@ -231,7 +231,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Exam Physiology: Wearable Data</strong></h1>
+<h1 class="title">Exam Physiology: Wearable Data</h1>
 </div>
 
 
@@ -384,7 +384,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </section>
 <section id="get-the-physiology-data" class="level3">
 <h3 class="anchored" data-anchor-id="get-the-physiology-data">Get the Physiology Data</h3>
-<p>We’ll read in the data from this study the GEMs website. Run the following code in your console:</p>
+<p>Let’s read in the data. We’ve hosted a snapshot on this website, so let’s read it in from that URL. Run the following code in your console:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>phys_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/phys_data.csv"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(phys_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -558,8 +558,8 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>Run <code>count(phys_data, test, studentID)</code> to see student and test combinations. How many observations does student <code>S1</code> have for Midterm 1? Take a screenshot showing this number.</p></li>
-<li><p>Which student &amp; test combination has the lowest number of observations?</p></li>
+<li><p>Run <code>count(phys_data, test, studentID)</code> to see student and test combinations. How many observations does student <code>S2</code> have for the Final? Take a screenshot showing this number.</p></li>
+<li><p>Which student has the lowest number of observations for the Final?</p></li>
 </ol>
 </div>
 </div>
@@ -638,7 +638,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <pre><code>[1] -0.5648441</code></pre>
 </div>
 </div>
-<p>Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change <span class="citation" data-cites="k2025exploring"><a href="#ref-jerem2023s" role="doc-biblioref">[3]</a></span>.</p>
+<p>Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change <span class="citation" data-cites="k2025exploring jerem2023s"><a href="#ref-k2025exploring" role="doc-biblioref">[2]</a>, <a href="#ref-jerem2023s" role="doc-biblioref">[3]</a></span>.</p>
 </section>
 <section id="part-3-questions" class="level3">
 <h3 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h3>
@@ -653,9 +653,9 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>Change the code above slightly, replacing <code>hr</code> with <code>eda</code>. Run the changed code in your console. What is the correlation between the <code>hr</code> and <code>eda</code> variables? Take a screenshot of your evidence.</p></li>
+<li><p>Change the code above slightly, replacing <code>hr</code> with <code>eda</code>. Run the changed code in your console. What is the correlation between the <code>temp</code> and <code>eda</code> variables? Take a screenshot of your evidence.</p></li>
 <li><p>What does the correlation value tell you about the relationship between these two variables? (E.g., as one goes up, the other does what ?)</p></li>
-<li><p>(Optional) Try changing the code again to look at the correlation value between <code>eda</code> and <code>temp</code>. Run the changed code in your console. What is the correlation between these variables, and what is the relationship? Take a screenshot of your evidence.</p></li>
+<li><p>(Optional) Try changing the code again to look at the correlation value between <code>eda</code> and <code>hr</code>. Run the changed code in your console. What is the correlation between these variables, and what is the relationship? Take a screenshot of your evidence.</p></li>
 </ol>
 </div>
 </div>
@@ -775,7 +775,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <ol type="1">
 <li><p>Change the code that creates the plots, replacing <code>hr</code> with <code>eda</code>. Run the changed code in your console. Take a screenshot of your plots.</p></li>
 <li><p>What conclusions can you draw about stress in these two students, based on their <code>EDA</code> measurements?</p></li>
-<li><p>(Optional) To confirm your results, calculate the mean <code>eda</code> for each test and student. Return to the code from Part 4 to calculate the means, remembering to replace <code>hr</code> with <code>eda</code>. You already ran student <code>S9</code>, so you can just run <code>S8</code>. Do the results back up your conclusions? Take a screenshot of your results table in the console.</p></li>
+<li><p>(Optional) To confirm your results, compare the mean eda for each test and student (<code>S9</code> and <code>S8</code>). You can return to the code from Part 4 and re-calculate it if you need to. Do the results back up your conclusions from question 2? Take a screenshot of your results table in the console.</p></li>
 <li><p>(Optional) Try running 1-3 above with two different students. You’ll need to replace anywhere <code>S9</code> or <code>S8</code> was mentioned in the code with the students of your choice. Take a screenshot of your plots/results.</p></li>
 </ol>
 </div>
@@ -784,7 +784,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </section>
 <section id="part-6" class="level2">
 <h2 class="anchored" data-anchor-id="part-6">Part 6</h2>
-<p>Let’s looks at an additional source of data: the students’ grades.</p>
+<p>Let’s look at an additional source of data: the students’ grades.</p>
 <pre><code>
 GRADES - MIDTERM 1
 ------------------
