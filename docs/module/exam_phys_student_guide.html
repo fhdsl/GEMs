@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-02-17">
 
 <title>Exam Physiology: Wearable Data – GEMs</title>
 <style>
@@ -19,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -126,8 +162,49 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-1" id="toc-part-1" class="nav-link active" data-scroll-target="#part-1">Part 1</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#start-posit-cloud" id="toc-start-posit-cloud" class="nav-link" data-scroll-target="#start-posit-cloud">Start Posit Cloud</a></li>
+  <li><a href="#package-install-and-load" id="toc-package-install-and-load" class="nav-link" data-scroll-target="#package-install-and-load">Package Install and Load</a></li>
+  <li><a href="#get-the-physiology-data" id="toc-get-the-physiology-data" class="nav-link" data-scroll-target="#get-the-physiology-data">Get the Physiology Data</a></li>
+  <li><a href="#data-dictionaries" id="toc-data-dictionaries" class="nav-link" data-scroll-target="#data-dictionaries">Data Dictionaries</a></li>
+  <li><a href="#part-1-questions" id="toc-part-1-questions" class="nav-link" data-scroll-target="#part-1-questions">Part 1 Questions</a></li>
+  </ul></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
+  <ul class="collapse">
+  <li><a href="#counting-tests-and-students" id="toc-counting-tests-and-students" class="nav-link" data-scroll-target="#counting-tests-and-students">Counting Tests and Students</a></li>
+  <li><a href="#part-2a-questions" id="toc-part-2a-questions" class="nav-link" data-scroll-target="#part-2a-questions">Part 2a Questions</a></li>
+  <li><a href="#sorting-in-viewer" id="toc-sorting-in-viewer" class="nav-link" data-scroll-target="#sorting-in-viewer">Sorting in Viewer</a></li>
+  <li><a href="#part-2b-questions" id="toc-part-2b-questions" class="nav-link" data-scroll-target="#part-2b-questions">Part 2b Questions</a></li>
+  </ul></li>
+  <li><a href="#part-3" id="toc-part-3" class="nav-link" data-scroll-target="#part-3">Part 3</a>
+  <ul class="collapse">
+  <li><a href="#understanding-correlation" id="toc-understanding-correlation" class="nav-link" data-scroll-target="#understanding-correlation">Understanding Correlation</a></li>
+  <li><a href="#correlation-with-heart-rate" id="toc-correlation-with-heart-rate" class="nav-link" data-scroll-target="#correlation-with-heart-rate">Correlation with Heart Rate</a></li>
+  <li><a href="#part-3-questions" id="toc-part-3-questions" class="nav-link" data-scroll-target="#part-3-questions">Part 3 Questions</a></li>
+  </ul></li>
+  <li><a href="#part-4" id="toc-part-4" class="nav-link" data-scroll-target="#part-4">Part 4</a>
+  <ul class="collapse">
+  <li><a href="#plotting-student-s9" id="toc-plotting-student-s9" class="nav-link" data-scroll-target="#plotting-student-s9">Plotting Student S9</a></li>
+  <li><a href="#part-4-questions" id="toc-part-4-questions" class="nav-link" data-scroll-target="#part-4-questions">Part 4 Questions</a></li>
+  </ul></li>
+  <li><a href="#part-5" id="toc-part-5" class="nav-link" data-scroll-target="#part-5">Part 5</a>
+  <ul class="collapse">
+  <li><a href="#plotting-student-s9-1" id="toc-plotting-student-s9-1" class="nav-link" data-scroll-target="#plotting-student-s9-1">Plotting Student S9</a></li>
+  <li><a href="#part-5-questions" id="toc-part-5-questions" class="nav-link" data-scroll-target="#part-5-questions">Part 5 Questions</a></li>
+  </ul></li>
+  <li><a href="#part-6" id="toc-part-6" class="nav-link" data-scroll-target="#part-6">Part 6</a>
+  <ul class="collapse">
+  <li><a href="#part-6-questions" id="toc-part-6-questions" class="nav-link" data-scroll-target="#part-6-questions">Part 6 Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -145,7 +222,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
+      <p class="date">February 17, 2026</p>
     </div>
   </div>
   
@@ -157,9 +234,602 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </header>
 
 
-<p>Coming soon</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_25.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="A wrist showing a wearable device and inset, several students taking an exam."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This activity will walk through interpretation of data from wearable devices intended to measure stress in humans. You will work with real data from a study where researchers measured stress in students taking exams.</p>
+<section id="part-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
+<p>In Part 1, we’ll go over some background context for this activity. Then, we’ll get set up on Posit Cloud for the next steps.</p>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<p>First, let’s read the “plain language” summary from a publication entitled “A Wearable Exam Stress Dataset for Predicting Grades using Physiological Signals” <span class="citation" data-cites="amin2022wearable">[@amin2022wearable]</span>.</p>
+<blockquote class="blockquote">
+<p>Most stress research happens in labs, not real life. This means there aren’t many datasets showing how people’s bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity—a sign of stress) and skin temperature. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We’re making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.</p>
+</blockquote>
+<p>As the summary suggests, lab settings do not always reflect reality. Most stress research uses controlled laboratory settings with standardized stressors like electric shocks, loud noises, or disturbing images. These methods allow researchers to isolate specific physiological responses and build reliable datasets. This approach has helped us understand how the autonomic nervous system responds to stress. However, the challenge is that Real cognitive stressors like academic exams involve anticipatory anxiety, sustained pressure, and outcomes that actually matter to participants. The physiological responses may differ substantially. This “real world” research is important for validating findings from the lab.</p>
+<p><strong>Electrodermal activity</strong>, also known as skin conductance or EDA, measures how electrical properties of the skin change over time. When you are stressed or anxious, your sympathetic nervous system activates your sweat glands, which changes how well your skin conducts electricity. More stress generally means greater EDA. This makes EDA a good indicator of psychological and physiological stress.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>What variables were the researchers trying to measure?</p></li>
+<li><p>True or False: High Electrodermal activity (EDA) means the person being measured might be stressed.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="start-posit-cloud" class="level3">
+<h3 class="anchored" data-anchor-id="start-posit-cloud">Start Posit Cloud</h3>
+<p>In the next steps, we will look at the data from the publication described above. We will be working in a programming language called R that is widely used for analysis and making graphs/plots. We’ll use the version of R available online on Posit Cloud.</p>
+<p>Go to <a href="https://posit.cloud/plans/free" class="uri">https://posit.cloud/plans/free</a> and follow the steps to sign up. You can also Log In using the button on the top right if you have used Posit Cloud in the past.</p>
+<!-- callout about what cloud computing is ? -->
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g1965a5f7f0a_0_44.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Once logged in, select “New Project” and “New RStudio Project”. It will take a few seconds to deploy and load.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g357ffc10808_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Rename your project “Exam Physiology” by clicking on “Untitled Project”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c_g357ffc10808_0_12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="package-install-and-load" class="level3">
+<h3 class="anchored" data-anchor-id="package-install-and-load">Package Install and Load</h3>
+<p>We will need to install the <code>tidyverse</code> package for this activity.</p>
+<p>Type the following into your console and press return to run the code. You can use the <strong>clipboard button</strong> on the top right of the code block to copy everything. You will see a lot of text when the code is running, but usually that’s a good thing!</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c33bb9375e_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Paste the code above into the Posit Cloud console and click enter to run the code."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="If tidyverse installs successfully, you'll see several 'DONE' messages and 'The downloaded source packages are in...'."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, we will “load the package” so it’s ready to use:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Successfully loading tidyverse with the library command shows that several other packages are attached."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>What are R Packages?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Packages are collections of R code, data, and documentation that extend the base functionality of R. Think of them like “expansion packs” on top of your basic R software.</p>
+<p>Packages are developed by the R community and made available through repositories like CRAN (Comprehensive R Archive Network), Bioconductor, and GitHub. They are especially useful if you want to do a specialized kind of analysis, such as genomic analysis!</p>
+<p>We use the <code>library</code> command to load and attach packages to the R environment. This means links the package you downloaded to your current session of R.</p>
+</div>
+</div>
+</section>
+<section id="get-the-physiology-data" class="level3">
+<h3 class="anchored" data-anchor-id="get-the-physiology-data">Get the Physiology Data</h3>
+<p>We’ll read in the data from this study the GEMs website. Run the following code in your console:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>phys_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/phys_data.csv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(phys_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  timestamp              eda    hr  temp test      studentID
+  &lt;dttm&gt;               &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;    
+1 2018-10-13 12:56:16 0.0237  84    22.5 Midterm 1 S1       
+2 2018-10-13 12:56:17 0.0231  85    22.5 Midterm 1 S1       
+3 2018-10-13 12:56:18 0.0227  86    22.5 Midterm 1 S1       
+4 2018-10-13 12:56:19 0.0237  86.8  22.5 Midterm 1 S1       
+5 2018-10-13 12:56:20 0.0224  87.4  22.5 Midterm 1 S1       
+6 2018-10-13 12:56:21 0.0237  91    22.5 Midterm 1 S1       </code></pre>
+</div>
+</div>
+<p>If everything went correctly, you should see (1) an object called <code>phys_data</code> in the Environment Pane (top right) and (2) the top few rows of the data printed to the console.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_22.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Running the code above stores a data object in the environment called phys_data; some data is also printed in the console showing timestamp, eda, hr, test, and studentID columns."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>What is an R object?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An object is something stored in a programming language, such as data. Think of it like a “noun”.</p>
+<p>In R, we assign objects using the <code>&lt;-</code> symbol, with the name of your choice on the left, and the contents of the object on the right.</p>
+<p>Objects will show up in your Environment Pane. It’s a good idea to check the Environment Pane regularly.</p>
+</div>
+</div>
+<p>Enter the following code in the console to view the data in tabular format:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(phys_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_35.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Using the View command opens the data in a tabular browser, much like Excel or Google Sheets. Data cannot be edited in the Viewer."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-dictionaries" class="level3">
+<h3 class="anchored" data-anchor-id="data-dictionaries">Data Dictionaries</h3>
+<p>Take a look at the column names in the Viewer you just opened. Compare these to the data dictionary below to interpret what the columns represent.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Pedigree Data Dictionary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>timestamp</strong>: Time the measurement was taken. The measurement comes from a wearable device worn by a student.<br>
+<strong>eda</strong>: Measurement from the electrodermal activity sensor.<br>
+<strong>hr</strong>: Heart rate measurement, in beats per minute.<br>
+<strong>temp</strong>: Skin temperature measurement, in Celsius.<br>
+<strong>test</strong>: Which test/exam was being taken.<br>
+<strong>studentID</strong>: Student being measured.<br>
+</p>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_0_43.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Column names are surrounded by a box in the Viewer."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="part-1-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-questions">Part 1 Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Why might we want to install add-on packages in R?</p></li>
+<li><p>How can we confirm that our data loaded correctly? Take a screenshot and point to your evidence.</p></li>
+<li><p>Looking at the <code>timestamp</code> column, how often are measurements being collected?</p></li>
+<li><p>How many rows of data, or observations, does this data have? Hint: look at the Environment Pane (top right) and see how many <code>obs.</code> you have.</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
+<p>Now, we’ll run some R code to better understand our data.</p>
+<section id="counting-tests-and-students" class="level3">
+<h3 class="anchored" data-anchor-id="counting-tests-and-students">Counting Tests and Students</h3>
+<p>First, let’s see how many different tests/exams are represented, and how many observations we have of each. Run the following code in your console:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(phys_data, test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  test           n
+  &lt;chr&gt;      &lt;int&gt;
+1 Final     204339
+2 Midterm 1 117648
+3 Midterm 2 120958</code></pre>
+</div>
+</div>
+<p>Looks like we have three tests: Midterm 1, Midterm 2, and the Final exam.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>What is the code doing?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>count</code> here is something called a “function”. We can think of it like a verb that transforms an object. In the code snippet above, <code>count</code> takes the <code>phys_data</code> object, and counts up how many observations are in each type of <code>test</code>.</p>
+</div>
+</div>
+<p>Now let’s look at how many different students are represented, and how many observations we have of each. Run the following code in your console:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(phys_data, studentID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+   studentID     n
+   &lt;chr&gt;     &lt;int&gt;
+ 1 S1        45680
+ 2 S10       47720
+ 3 S2        51174
+ 4 S3        48247
+ 5 S4        40964
+ 6 S5        39228
+ 7 S6        49226
+ 8 S7        42814
+ 9 S8        38606
+10 S9        39286</code></pre>
+</div>
+</div>
+<p>Looks like we have 10 students who were measured. The number of observations varies a bit because some students might have had their sensors turned on a bit longer than others.</p>
+</section>
+<section id="part-2a-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-2a-questions">Part 2a Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Run <code>count(phys_data, test, studentID)</code> to see student and test combinations. How many observations does student <code>S1</code> have for Midterm 1? Take a screenshot showing this number.</p></li>
+<li><p>Which student &amp; test combination has the lowest number of observations?</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="sorting-in-viewer" class="level3">
+<h3 class="anchored" data-anchor-id="sorting-in-viewer">Sorting in Viewer</h3>
+<p>In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click <code>timestamp</code>, we can see the earliest timestamp is <code>2018-10-13 12:55:31</code>. We can click it again to see the latest timestamp is <code>2018-10-13 12:55:31</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Clicking on the column name sorts the timestamp column to reveal the earliest value."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Clicking the column name again sorts it in the other direction, revealing the latest timepoint."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="part-2b-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-2b-questions">Part 2b Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Sort the <code>hr</code> column. What is the greatest heart rate observed? Which student was this? Take a screenshot of your evidence.</p></li>
+<li><p>Which two students had the greatest <code>eda</code> values? Take a screenshot of your evidence.</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="part-3" class="level2">
+<h2 class="anchored" data-anchor-id="part-3">Part 3</h2>
+<p>Now, we’ll look at the relationship between the measured variables.</p>
+<section id="understanding-correlation" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-correlation">Understanding Correlation</h3>
+<p>Correlation measures whether two things tend to change together in a predictable way. Correlation is usually measured on a scale from -1 to +1, where numbers closer to -1 or +1 indicate stronger relationships, and numbers close to 0 mean little to no relationship.</p>
+<ul>
+<li><p>Positive correlation: When one thing goes up, the other tends to go up too. For example, height and weight. Taller people tend to weigh more.</p></li>
+<li><p>Negative correlation: When one thing goes up, the other tends to go down. For example, hours of sleep and tiredness. More sleep usually means less tiredness.</p></li>
+<li><p>No correlation: The two things change independently with no consistent pattern. Example: shoe size and test scores.</p></li>
+</ul>
+<p>It’s important to remember that correlation doesn’t mean that one variable causes another. For example, shark attacks and ice cream sales are correlated because both increase in the summer. Ice cream sales do not cause shark attacks. Check out <a href="https://www.tylervigen.com/spurious-correlations">this site</a> for more unrelated variables that happen to be correlated.</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html//1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI_g3c8730600da_1_16.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Netflix stock price and the first name Stevie are strongly correlated, but there is no causation. Many correlation relationships are like this."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="correlation-with-heart-rate" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-with-heart-rate">Correlation with Heart Rate</h3>
+<p>Calculate the correlation between heart rate and skin temperature. Run the following code in your console:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(phys_data<span class="sc">$</span>hr, phys_data<span class="sc">$</span>temp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.5648441</code></pre>
+</div>
+</div>
+<p>Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change <span class="citation" data-cites="k2025exploring">[@k2025exploring, @jerem2023s]</span>.</p>
+</section>
+<section id="part-3-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Change the code above slightly, replacing <code>hr</code> with <code>eda</code>. Run the changed code in your console. What is the correlation between the <code>hr</code> and <code>eda</code> variables? Take a screenshot of your evidence.</p></li>
+<li><p>What does the correlation value tell you about the relationship between these two variables? (E.g., as one goes up, the other does what ?)</p></li>
+<li><p>(Optional) Try changing the code again to look at the correlation value between <code>eda</code> and <code>temp</code>. Run the changed code in your console. What is the correlation between these variables, and what is the relationship? Take a screenshot of your evidence.</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="part-4" class="level2">
+<h2 class="anchored" data-anchor-id="part-4">Part 4</h2>
+<p>Now, we’ll take a look at just one student’s data. We’ll also make some plots!</p>
+<section id="plotting-student-s9" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-student-s9">Plotting Student S9</h3>
+<p>We’re going to plot student <code>S9</code>. Let’s look at heart rate (<code>hr</code>) across the three different tests. Run the following code in your console:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(phys_data, studentID <span class="sc">==</span> <span class="st">"S9"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> timestamp, <span class="at">y =</span> hr)) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>( <span class="sc">~</span> test, <span class="at">scales =</span> <span class="st">"free_x"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>It looks like this particular student had a slightly lower heart rate during the final than the midterms.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A note about test timing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Midterm 1 was conducted from <strong>14:00 - 15:30</strong>.</li>
+<li>Midterm 2 was conducted from <strong>15:00 - 16:30</strong>.</li>
+<li>The Final was conducted from <strong>17:00 - 20:00</strong>.</li>
+</ul>
+</div>
+</div>
+<p>We can calculate the means to assess this more accurately:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(phys_data, studentID <span class="sc">==</span> <span class="st">"S9"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(test) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">hr =</span> <span class="fu">mean</span>(hr))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  test         hr
+  &lt;chr&gt;     &lt;dbl&gt;
+1 Final      86.7
+2 Midterm 1 108. 
+3 Midterm 2 103. </code></pre>
+</div>
+</div>
+</section>
+<section id="part-4-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-questions">Part 4 Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Change the code that creates the plots slightly, replacing <code>hr</code> with <code>eda</code>. Run the changed code in your console. Take a screenshot of your plots.</p></li>
+<li><p>Which test/exam appears to have the greatest electrodermal activity (EDA) for student <code>S9</code>?</p></li>
+<li><p>To confirm your results, calculate the mean <code>eda</code> for each test. Run the code above to calculate the means, remembering to replace <code>hr</code> with <code>eda</code>. Do the results surprise you? Take a screenshot of your results table in the console.</p></li>
+<li><p>(Optional) Try running 1-3 above with student <code>S8</code> instead of <code>S9</code>. You’ll need to replace anywhere <code>S9</code> was mentioned in the code! Take a screenshot of your plots/results.</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="part-5" class="level2">
+<h2 class="anchored" data-anchor-id="part-5">Part 5</h2>
+<p>In this part, we’ll compare two students.</p>
+<section id="plotting-student-s9-1" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-student-s9-1">Plotting Student S9</h3>
+<p>We’re going to plot student <code>S9</code> <em>and</em> <code>S8</code>. Let’s look at heart rate (<code>hr</code>) across the three different tests. Run the following code in your console:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(phys_data, studentID <span class="sc">==</span> <span class="st">"S9"</span> <span class="sc">|</span> studentID <span class="sc">==</span> <span class="st">"S8"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> timestamp, <span class="at">y =</span> hr, <span class="at">color =</span> studentID)) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>( <span class="sc">~</span> test, <span class="at">scales =</span> <span class="st">"free_x"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exam_phys_student_guide_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>These students’ heart rates look pretty similar across the exams!</p>
+</section>
+<section id="part-5-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-questions">Part 5 Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Change the code that creates the plots, replacing <code>hr</code> with <code>eda</code>. Run the changed code in your console. Take a screenshot of your plots.</p></li>
+<li><p>What conclusions can you draw about stress in these two students, based on their <code>EDA</code> measurements?</p></li>
+<li><p>(Optional) To confirm your results, calculate the mean <code>eda</code> for each test and student. Return to the code from Part 4 to calculate the means, remembering to replace <code>hr</code> with <code>eda</code>. You already ran student <code>S9</code>, so you can just run <code>S8</code>. Do the results back up your conclusions? Take a screenshot of your results table in the console.</p></li>
+<li><p>(Optional) Try running 1-3 above with two different students. You’ll need to replace anywhere <code>S9</code> or <code>S8</code> was mentioned in the code with the students of your choice. Take a screenshot of your plots/results.</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="part-6" class="level2">
+<h2 class="anchored" data-anchor-id="part-6">Part 6</h2>
+<p>Let’s looks at an additional source of data: the students’ grades.</p>
+<pre><code>
+GRADES - MIDTERM 1
+------------------
+
+S01 = 78
+S02 = 82
+S03 = 77
+S04 = 75
+S05 = 67
+S06 = 71
+S07 = 64
+S08 = 92
+S09 = 80
+S10 = 89
 
 
+
+GRADES - MIDTERM 2
+------------------
+
+S01 = 82
+S02 = 85
+S03 = 90
+S04 = 77
+S05 = 77
+S06 = 64
+S07 = 33
+S08 = 88
+S09 = 39
+S10 = 64
+
+
+
+GRADES - FINAL (OUT OF 200)
+---------------------------
+
+S01 = 182
+S02 = 180
+S03 = 188
+S04 = 149
+S05 = 157
+S06 = 175
+S07 = 110
+S08 = 184
+S09 = 126
+S10 = 116</code></pre>
+<section id="part-6-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-6-questions">Part 6 Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Going Deeper
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Based on your plots and information so far, do you have any ideas (hypotheses!) about how stress and grades might be related?</p></li>
+<li><p>Would looking at more data help you feel more or less comfortable with your hypotheses?</p></li>
+</ol>
+</div>
+</div>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
