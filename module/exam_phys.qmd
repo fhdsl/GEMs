@@ -10,17 +10,25 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883F
 
 ## Overview
 
-This module ..
+This module introduces data analysis of physiology data. Students work with real physiological data collected from college students wearing stress-monitoring devices during exams. The data includes skin conductance (EDA), heart rate, and skin temperature measurements. The eventual goal of the researchers was to predict students' grades from stress measurements.
 
-**Duration:** ..
+Students will use Posit Cloud (an online version of R programming language and R Studio) to load and explore the data, calculate correlations between variables, visualize individual student data, compare two students side by side, and finally explore other students and form hypotheses about how physiological data is related to actual grades.
+
+**Duration:** 1.5 - 2.5 hours
 
 ## Learning Objectives
 
-1.  ..
+1.  Work with data related to functional cardiovascular activity, temperature homeostasis, and stress
+
+2.  Experiment with technical R skills
+
+3.  Think scientifically (interpret data, form hypotheses)
+
+3.  Understand correlation and causation
 
 ## Prerequisites
 
-..
+Students will benefit from being enrolled in an anatomy and physiology course. They do not need to have programming experience (code is largely copied and pasted).
 
 ## Evaluation
 
@@ -52,8 +60,8 @@ Students will need a device that accesses the internet.
 
 We suggest confirming links are still active prior to running this activity:
 
-* https://posit.cloud/plans/free
-* https://genomicseducation.org/data/phys_data.csv
+* <https://posit.cloud/plans/free>
+* <https://genomicseducation.org/data/phys_data.csv>
 :::
 
 
