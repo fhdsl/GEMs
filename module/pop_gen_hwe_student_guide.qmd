@@ -328,7 +328,7 @@ Run the model to 150 generations, recording the allele and genotype frequencies 
 Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c90e55b9a5_0_1#slide=id.g3c90e55b9a5_0_1")
 ```
 
 :::
@@ -356,7 +356,7 @@ Run the model to 150 generations, recording the allele and genotype frequencies 
 Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c90e55b9a5_0_7#slide=id.g3c90e55b9a5_0_7")
 ```
 
 :::
@@ -473,24 +473,15 @@ Run the model to 150 generations, recording the allele and genotype frequencies 
 Fill out the table below, and submit it and a screenshot of the Data Collection page at 150 generations as part of your assignment
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c90e55b9a5_0_21#slide=id.g3c90e55b9a5_0_21")
 ```
 
 :::
 
 ## Trial 3b. Changing the fitness of the r allele
-Now you will change the environment so that the r allele becomes advantageous while **using the ending population from trial 3a**. This means you will _not_ press the reload button after changing the simulation settings.
+Now you will change the environment so that the r allele becomes advantageous while **using the ending population from trial 3a**. This means you will _not_ press the reload button after changing the simulation settings. The only setting you will change is the genotype fitness!
 
-- Initial size: 500 
-- Carrying capacity: 500 
 - **Genotype Fitness: rr = 1.0, Rr = 0.8, RR = 0.5**
-- Mutation Rate (R→r, r→R): 0 
-- Migration: 0 
-- Assortative Mating: 0 
-- Initial R Allele Proportion: 0.5 
-- Mortality Rate: 10 
-- Brood Size: 10 
-- Sex Ratio: 0.5 
 
 Run the model an additional 150 generations, recording the allele and genotype frequencies at both 225 and 300 generations. Make sure to just unpause the simulation from trial 3a instead of pressing the reload button! **Make sure to take a screenshot of your Trial 3b fishpond and Data Collection page at 300 generations - you will submit this with your assignment!**
 
@@ -500,7 +491,7 @@ Run the model an additional 150 generations, recording the allele and genotype f
 Fill out the table below, and submit it and a screenshot of the Data Collection page at 150 generations as part of your assignment
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_59#slide=id.g3c45f560b82_0_59")
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c90e55b9a5_0_27#slide=id.g3c90e55b9a5_0_27")
 ```
 
 :::
