@@ -20,7 +20,7 @@ These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
 - [Genomic Medicine: Polygenic Risk Score Calculation](module/genomic_med_prs.html)
 
-- [Population Genetics: Koi Pond Simulation](module/pop_gen_hwe.html)
+- [Population Genetics: Fish Pond Simulator](module/pop_gen_hwe.html)
 
 
 ## Research Modules

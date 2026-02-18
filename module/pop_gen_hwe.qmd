@@ -1,8 +1,12 @@
 ---
-title: "**Population Genetics**"
+title: "Population Genetics: Fish Pond Simulator"
 output:
   html_document
 ---
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "A pond full of koi, a single koi fish, and a data collection table from the simulation.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c933021525_28_0#slide=id.g3c933021525_28_0")
+```
 
 ## Overview
 

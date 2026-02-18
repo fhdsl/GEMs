@@ -1,11 +1,15 @@
 ---
-title: "Population Genetics"
+title: "Population Genetics: Fish Pond Simulator"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "A pond full of koi, a single koi fish, and a data collection table from the simulation.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c933021525_28_0#slide=id.g3c933021525_28_0")
+```
 
 Evolution is defined as a change in allele frequencies in a population over generations. Natural selection is one of the mechanisms driving these changes. Organisms with heritable traits that provide an advantage in a particular environment tend to survive longer and produce more offspring, causing those advantageous traits—and the alleles behind them—to become more common in the population.
 
