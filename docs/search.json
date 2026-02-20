@@ -249,7 +249,7 @@
     "href": "module/pop_gen_hwe.html#overview",
     "title": "Population Genetics: Fish Pond Simulator",
     "section": "Overview",
-    "text": "Overview\nThis module uses the PopGen Fishbowl simulator to model natural selection and genetic drift, as well as explore whether populations are at Hardy-Weinberg equilibrium.\nDuration: 1 - 2 hours"
+    "text": "Overview\nThis module uses the PopGen Fishbowl simulator to model natural selection and genetic drift, as well as explore whether populations are at Hardy-Weinberg equilibrium.\nThis activity was adapted from an original activity by Rosa Alcazar and Stephanie Coffman of Clovis Community College. Introductory Information are derivatives of the following works:\n\n“Darwin, Evolution and Natural Selection” by Khan Academy licensed CC BY-NC-SA 4.0.\n“Allele Frequency and the Gene Pool” by Khan Academy licensed CC BY-NC-SA 4.0.\n\nDuration: 1 - 2 hours"
   },
   {
     "objectID": "module/pop_gen_hwe.html#learning-objectives",
@@ -277,7 +277,7 @@
     "href": "module/pop_gen_hwe.html#materials",
     "title": "Population Genetics: Fish Pond Simulator",
     "section": "Materials",
-    "text": "Materials\n\nStudent Activity\nYou can use this module in several formats. Feel free to adapt to your needs!\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle doc\n\nStudents will need a device that accesses the internet.\n\n\n\n\n\n\nWarningThis content contains URLs\n\n\n\nWe suggest confirming links are still active prior to running this activity.\nIn particular, students will be accessing the PopGen Fishbowl simulator.\n\n\n\n\nInstructor Materials\nAn answer key is available here. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.\nThis answer key also provides guidance on areas of the activity that students may find tricky.\n\n\nScientific Topics\n\n\nOutline\n\nActivity 1: Hardy-Weinberg Equilibrium\nActivity 2: Drift\nActivity 3: Natural Selection and Environmental Pressures\nBonus Activity"
+    "text": "Materials\n\nStudent Activity\nYou can use this module in several formats. Feel free to adapt to your needs!\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle doc\n\nStudents will need a device that accesses the internet.\n\n\n\n\n\n\nWarningThis content contains URLs\n\n\n\nWe suggest confirming links are still active prior to running this activity.\nIn particular, students will be accessing the PopGen Fishbowl simulator.\n\n\n\n\nInstructor Materials\nAn answer key is available here. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.\nThis answer key also provides guidance on areas of the activity that students may find tricky.\n\n\nOutline\n\nActivity 1: Hardy-Weinberg Equilibrium\nActivity 2: Drift\nActivity 3: Natural Selection and Environmental Pressures\nBonus Activity"
   },
   {
     "objectID": "module/family_markers_student_guide.html",
