@@ -120,6 +120,8 @@ dat_clean <- bind_rows(dat_m1, dat_m2, dat_f) %>%
     temp = stats::filter(temp, sides = 2, filter = rep(1 / 120, 120))
   )
 
+dat_clean <- na.omit(dat_clean)
+
 write_csv(dat_clean, "data/phys_data_clean.csv")
 ```
 
