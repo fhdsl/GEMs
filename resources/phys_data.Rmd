@@ -67,12 +67,59 @@ write_csv(dat, "data/phys_data.csv")
 ```{r}
 corrplot::corrplot(cor(dat[, 2:4], use = "complete.obs"))
 
-ggplot(data = dat %>% filter(studentID == "S9"),
-       aes(x = timestamp, y = eda, color = studentID)) +
+ggplot(data = dat,
+       aes(x = timestamp, y = temp_smooth, color = studentID)) +
   geom_line() + scale_x_datetime(
     date_minor_breaks = "60 min",
     date_breaks = "60 min",
     date_labels = "%H:%M",
     timezone = "America/Chicago"
-  ) + facet_wrap( ~ test, scales = "free_x")
+  ) + facet_wrap(studentID ~ test, scales = "free_x")
 ```
+
+```{r}
+# Mostly filter to remove any measurements outside of testing window.
+
+dat_m1 <- dat %>% filter(
+    test == "Midterm 1" & 
+    timestamp >= as.POSIXct("2018-10-13 09:00:00", tz = "America/Chicago") & 
+    timestamp <= as.POSIXct("2018-10-13 10:30:00", tz = "America/Chicago") &
+    eda > 0.01  &
+      temp >= 25
+)
+
+dat_m2 <- dat %>% filter(
+    test == "Midterm 2" & 
+    timestamp >= as.POSIXct("2018-11-10 09:00:00", tz = "America/Chicago") & 
+    timestamp <= as.POSIXct("2018-11-10 10:30:00", tz = "America/Chicago") &
+    eda > 0.01  &
+      temp >= 25
+)
+
+dat_f <- dat %>% filter(
+  test == "Final" &
+    timestamp >= as.POSIXct("2018-12-05 11:00:00", tz = "America/Chicago") &
+    timestamp <= as.POSIXct("2018-12-05 14:00:00", tz = "America/Chicago") &
+    eda > 0.01 &
+    temp >= 25
+) %>% 
+  # Remove some drop offs at the end
+  mutate(temp =
+           case_when(
+             test == "Final" &
+               timestamp > as.POSIXct("2018-12-05 13:50:00", tz = "America/Chicago") ~ NA,
+             TRUE ~ temp
+           ))
+
+dat_clean <- bind_rows(dat_m1, dat_m2, dat_f) %>%
+  group_by(test, studentID) %>%
+  # Smooth curves by student and test
+  mutate(
+    eda = stats::filter(eda, sides = 2, filter = rep(1 / 120, 120)),
+    hr = stats::filter(hr, sides = 2, filter = rep(1 / 120, 120)),
+    temp = stats::filter(temp, sides = 2, filter = rep(1 / 120, 120))
+  )
+
+write_csv(dat_clean, "data/phys_data_clean.csv")
+```
+
