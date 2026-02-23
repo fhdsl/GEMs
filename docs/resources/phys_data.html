@@ -308,7 +308,9 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">temp =</span> stats<span class="sc">::</span><span class="fu">filter</span>(temp, <span class="at">sides =</span> <span class="dv">2</span>, <span class="at">filter =</span> <span class="fu">rep</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">120</span>, <span class="dv">120</span>))</span>
 <span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(dat_clean, <span class="st">"data/phys_data_clean.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>dat_clean <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(dat_clean)</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(dat_clean, <span class="st">"data/phys_data_clean.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
