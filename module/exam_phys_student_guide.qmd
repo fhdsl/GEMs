@@ -30,7 +30,7 @@ As the summary suggests, lab settings do not always reflect reality. Most stress
 ::: callout-note
 ## Check Your Knowledge
 
-1. What variables were the researchers trying to measure?
+1.  What variables were the researchers trying to measure?
 
 2.  True or False: High Electrodermal activity (EDA) means the person being measured might be stressed.
 :::
@@ -195,19 +195,25 @@ count(phys_data, studentID)
 
 Looks like we have 10 students who were measured. The number of observations varies a bit because some students had their sensors turned on a bit longer than others.
 
+::: callout-tip
+## Scroll to View Output
+
+If there is a lot of output when you run code, simply scroll up and down in the console to view it all.
+:::
+
 ### Part 2a Questions
 
 ::: callout-note
 ## Check Your Knowledge
 
-1.  Run `count(phys_data, test, studentID) %>% print(n=30)` to see student and test combinations. How many observations does student `S2` have for the Final? Take a screenshot showing this number.
+1.  Run `count(phys_data, test, studentID) %>% print(n=30)` to see student and test combinations. How many observations does student `S8` have for the Final? Take a screenshot showing this number.
 
 2.  Which student has the lowest number of observations for the Final?
 :::
 
 ### Sorting in Viewer
 
-In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click `timestamp`, we can see the earliest timestamp is `2018-10-13 12:55:31`. We can click it again to see the latest timestamp is `2018-10-13 12:55:31`.
+In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click `timestamp`, we can see the earliest timestamp is `2018-10-13 14:00:59`. We can click it again to see the latest timestamp is `2018-12-05 19:49:00`.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking on the column name sorts the timestamp column to reveal the earliest value.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_0#slide=id.g3c8730600da_1_0")
@@ -224,7 +230,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883F
 
 1.  Sort the `hr` column. What is the greatest heart rate observed? Which student was this? Take a screenshot of your evidence.
 
-2.  Which two students had the greatest `eda` values? Take a screenshot of your evidence.
+2.  Which student had the greatest eda values? Which exam was this? Take a screenshot of your evidence.
 :::
 
 ## Part 3
