@@ -200,7 +200,7 @@ Looks like we have 10 students who were measured. The number of observations var
 ::: callout-note
 ## Check Your Knowledge
 
-1.  Run `count(phys_data, test, studentID)` to see student and test combinations. How many observations does student `S2` have for the Final? Take a screenshot showing this number.
+1.  Run `count(phys_data, test, studentID) %>% print(n=30)` to see student and test combinations. How many observations does student `S2` have for the Final? Take a screenshot showing this number.
 
 2.  Which student has the lowest number of observations for the Final?
 :::
