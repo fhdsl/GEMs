@@ -64,7 +64,7 @@ We suggest confirming links are still active prior to running this activity:
 * <https://genomicseducation.org/data/phys_data.csv>
 :::
 
-::: callout-note
+::: callout-important
 ## Student errors
 
 You might get some installation errors on the first step (`install.packages("tidyverse")`). If this happens, restart your session and try again ("turn it off and on again"!). Sometimes Posit Cloud gets a lot of URL-based installation requests and not all of them go through. If you continue to have problems after a couple of tries, let us know.
