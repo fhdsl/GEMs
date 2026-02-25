@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-24">
+<meta name="dcterms.date" content="2026-02-25">
 
 <title>Exam Physiology: Wearable Data – GEMs</title>
 <style>
@@ -96,7 +96,7 @@ div.csl-indent {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1db3f541d99483cdc7a0d9cf38862b2c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5ed461e1afb6a4e5f5371742e95fc51e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -242,7 +242,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 24, 2026</p>
+      <p class="date">February 25, 2026</p>
     </div>
   </div>
   
@@ -390,14 +390,14 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(phys_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 6
-  timestamp              eda    hr  temp test      studentID
-  &lt;dttm&gt;               &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;    
-1 2018-10-13 12:56:16 0.0237  84    22.5 Midterm 1 S1       
-2 2018-10-13 12:56:17 0.0231  85    22.5 Midterm 1 S1       
-3 2018-10-13 12:56:18 0.0227  86    22.5 Midterm 1 S1       
-4 2018-10-13 12:56:19 0.0237  86.8  22.5 Midterm 1 S1       
-5 2018-10-13 12:56:20 0.0224  87.4  22.5 Midterm 1 S1       
-6 2018-10-13 12:56:21 0.0237  91    22.5 Midterm 1 S1       </code></pre>
+  timestamp             eda    hr  temp test      studentID
+  &lt;dttm&gt;              &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;    
+1 2018-10-13 14:00:59 0.753  68.1  27.2 Midterm 1 S1       
+2 2018-10-13 14:01:00 0.751  68.0  27.2 Midterm 1 S1       
+3 2018-10-13 14:01:01 0.750  68.0  27.2 Midterm 1 S1       
+4 2018-10-13 14:01:02 0.748  67.9  27.2 Midterm 1 S1       
+5 2018-10-13 14:01:03 0.746  67.8  27.2 Midterm 1 S1       
+6 2018-10-13 14:01:04 0.744  67.8  27.2 Midterm 1 S1       </code></pre>
 </div>
 </div>
 <p>If everything went correctly, you should see (1) an object called <code>phys_data</code> in the Environment Pane (top right) and (2) the top few rows of the data printed to the console.</p>
@@ -505,9 +505,9 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <pre><code># A tibble: 3 × 2
   test           n
   &lt;chr&gt;      &lt;int&gt;
-1 Final     204339
-2 Midterm 1 117648
-3 Midterm 2 120958</code></pre>
+1 Final     100268
+2 Midterm 1  52320
+3 Midterm 2  51580</code></pre>
 </div>
 </div>
 <p>Looks like we have three tests: Midterm 1, Midterm 2, and the Final exam.</p>
@@ -531,16 +531,16 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <pre><code># A tibble: 10 × 2
    studentID     n
    &lt;chr&gt;     &lt;int&gt;
- 1 S1        45680
- 2 S10       47720
- 3 S2        51174
- 4 S3        48247
- 5 S4        40964
- 6 S5        39228
- 7 S6        49226
- 8 S7        42814
- 9 S8        38606
-10 S9        39286</code></pre>
+ 1 S1        20646
+ 2 S10       20646
+ 3 S2        20502
+ 4 S3        20646
+ 5 S4        20569
+ 6 S5        20646
+ 7 S6        20646
+ 8 S7        19991
+ 9 S8        19269
+10 S9        20607</code></pre>
 </div>
 </div>
 <p>Looks like we have 10 students who were measured. The number of observations varies a bit because some students had their sensors turned on a bit longer than others.</p>
@@ -635,7 +635,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(phys_data<span class="sc">$</span>hr, phys_data<span class="sc">$</span>temp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.5648441</code></pre>
+<pre><code>[1] 0.006431191</code></pre>
 </div>
 </div>
 <p>Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change <span class="citation" data-cites="k2025exploring jerem2023s"><a href="#ref-k2025exploring" role="doc-biblioref">[2]</a>, <a href="#ref-jerem2023s" role="doc-biblioref">[3]</a></span>.</p>
@@ -710,9 +710,9 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <pre><code># A tibble: 3 × 2
   test         hr
   &lt;chr&gt;     &lt;dbl&gt;
-1 Final      86.7
-2 Midterm 1 108. 
-3 Midterm 2 103. </code></pre>
+1 Final      81.2
+2 Midterm 1  91.1
+3 Midterm 2  87.3</code></pre>
 </div>
 </div>
 </section>
