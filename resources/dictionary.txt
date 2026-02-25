@@ -157,6 +157,7 @@ Microbiota
 microevolution
 Microevolution
 microglia
+microsiemens
 microtubules
 midgut
 miniCURE
@@ -276,6 +277,7 @@ UST
 UST's
 usta
 VM
+wearables
 www
 yy
 Yy

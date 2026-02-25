@@ -27,10 +27,16 @@ As the summary suggests, lab settings do not always reflect reality. Most stress
 
 **Electrodermal activity**, also known as skin conductance or EDA, measures how electrical properties of the skin change over time. When you are stressed or anxious, your sympathetic nervous system activates your sweat glands, which changes how well your skin conducts electricity. More stress generally means greater EDA. This makes EDA a good indicator of psychological and physiological stress.
 
+::: callout-tip
+## Electrodermal Activity and Criminal Justice
+
+Electrodermal activity (EDA) is used in many contexts to measure human emotions, including in polygraph tests [@Synnott2015]. Scientists have found, even in tightly controlled experiments, that EDA is extremely variable [@amin2022wearable]. Some individuals have spikes of EDA, while others do not [@Synnott2015]. EDA can also be affected by environmental factors, such as the testing area's temperature and humidity, and the examiner's pre-existing beliefs [@macneill2016temperature; @elaad1994effects]. Do you think it's acceptable to use EDA to look at stress during exams? What about in a criminal justice setting? 
+:::
+
 ::: callout-note
 ## Check Your Knowledge
 
-1. What variables were the researchers trying to measure?
+1.  What variables were the researchers trying to measure?
 
 2.  True or False: High Electrodermal activity (EDA) means the person being measured might be stressed.
 :::
@@ -139,10 +145,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883F
 Take a look at the column names in the Viewer you just opened. Compare these to the data dictionary below to interpret what the columns represent.
 
 ::: callout-tip
-## Pedigree Data Dictionary
+## Exam Physiology Data Dictionary
 
 **timestamp**: Time the measurement was taken. The measurement comes from a wearable device worn by a student.\
-**eda**: Measurement from the electrodermal activity sensor.\
+**eda**: Measurement from the electrodermal activity sensor, in microsiemens.\
 **hr**: Heart rate measurement, in beats per minute.\
 **temp**: Skin temperature measurement, in Celsius.\
 **test**: Which test/exam was being taken.\
@@ -195,19 +201,25 @@ count(phys_data, studentID)
 
 Looks like we have 10 students who were measured. The number of observations varies a bit because some students had their sensors turned on a bit longer than others.
 
+::: callout-tip
+## Scroll to View Output
+
+If there is a lot of output when you run code, simply scroll up and down in the console to view it all.
+:::
+
 ### Part 2a Questions
 
 ::: callout-note
 ## Check Your Knowledge
 
-1.  Run `count(phys_data, test, studentID)` to see student and test combinations. How many observations does student `S2` have for the Final? Take a screenshot showing this number.
+1.  Run `count(phys_data, test, studentID) %>% print(n=30)` to see student and test combinations. How many observations does student `S8` have for the Final? Take a screenshot showing this number.
 
 2.  Which student has the lowest number of observations for the Final?
 :::
 
 ### Sorting in Viewer
 
-In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click `timestamp`, we can see the earliest timestamp is `2018-10-13 12:55:31`. We can click it again to see the latest timestamp is `2018-10-13 12:55:31`.
+In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click `timestamp`, we can see the earliest timestamp is `2018-10-13 14:00:59`. We can click it again to see the latest timestamp is `2018-12-05 19:49:00`.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking on the column name sorts the timestamp column to reveal the earliest value.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883FSzZRgqFTJnbv54-w0-uuPUNJDHI/edit?slide=id.g3c8730600da_1_0#slide=id.g3c8730600da_1_0")
@@ -224,7 +236,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883F
 
 1.  Sort the `hr` column. What is the greatest heart rate observed? Which student was this? Take a screenshot of your evidence.
 
-2.  Which two students had the greatest `eda` values? Take a screenshot of your evidence.
+2.  Which student had the greatest eda values? Which exam was this? Take a screenshot of your evidence.
 :::
 
 ## Part 3
@@ -257,7 +269,7 @@ Calculate the correlation between heart rate and skin temperature. Run the follo
 cor(phys_data$hr, phys_data$temp)
 ```
 
-Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change [@k2025exploring; @jerem2023s].
+Our correlation is close to zero and very slightly positive, meaning that as heart rate increases, skin temperature also increases. The value being close to zero means the relationship between these two variables is weak. This could be because the is a lot of variability in heart rate and temperature. The wearables data is pretty "noisy."
 
 ### Part 3 Questions
 
@@ -288,14 +300,6 @@ ggplot(
 ```
 
 It looks like this particular student had a slightly lower heart rate during the final than the midterms. 
-
-::: callout-note
-## A note about test timing
-
-* Midterm 1 was conducted from **14:00 - 15:30**.\
-* Midterm 2 was conducted from **15:00 - 16:30**.\
-* The Final was conducted from **17:00 - 20:00**.
-:::
 
 We can calculate the means to assess this more accurately:
 
@@ -412,6 +416,6 @@ S10 = 116
 1.  Based on your plots and information so far, do you have any ideas (hypotheses!) about how stress and grades might be related?
 
 2.  Would looking at more data help you feel more or less comfortable with your hypotheses?
+
+3.  Look at some of the values for `temp`. Are these realistic? Why or why not?
 :::
-
-

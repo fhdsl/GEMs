@@ -64,7 +64,22 @@ We suggest confirming links are still active prior to running this activity:
 * <https://genomicseducation.org/data/phys_data.csv>
 :::
 
+::: callout-important
+## Student errors
+
+You might get some installation errors on the first step (`install.packages("tidyverse")`). If this happens, restart your session and try again ("turn it off and on again"!). Sometimes Posit Cloud gets a lot of URL-based installation requests and not all of them go through. If you continue to have problems after a couple of tries, let us know.
+
+This activity mostly consists of copying code and changing it slightly. It's easy to delete a parenthesis or comma, get an error, and not know what you did wrong. Encourage students to start over with copying and changing the code if this happens.
+:::
+
+::: callout-note
+## Messy Data
+
+You can also run a version of this activity with "messy" data from [this link](https://genomicseducation.org/data/phys_data_messy.csv). Note that the plots and correlations students calculate will be different!
+:::
 
 ### Instructor Materials
 
 An answer key is available [here](https://docs.google.com/document/d/13sftVTyWNY7Rya1D39doqlBG2_yqtC0o/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+
+
