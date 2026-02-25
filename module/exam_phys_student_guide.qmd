@@ -139,7 +139,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1PxVdyZui3Hpn883F
 Take a look at the column names in the Viewer you just opened. Compare these to the data dictionary below to interpret what the columns represent.
 
 ::: callout-tip
-## Pedigree Data Dictionary
+## Exam Physiology Data Dictionary
 
 **timestamp**: Time the measurement was taken. The measurement comes from a wearable device worn by a student.\
 **eda**: Measurement from the electrodermal activity sensor.\
@@ -411,8 +411,3 @@ S10 = 116
 
 2.  Would looking at more data help you feel more or less comfortable with your hypotheses?
 :::
-
-
-
-
-
