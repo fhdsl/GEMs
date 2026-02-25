@@ -275,6 +275,19 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </blockquote>
 <p>As the summary suggests, lab settings do not always reflect reality. Most stress research uses controlled laboratory settings with standardized stressors like electric shocks, loud noises, or disturbing images. These methods allow researchers to isolate specific physiological responses and build reliable datasets. This approach has helped us understand how the autonomic nervous system responds to stress. However, the challenge is that Real cognitive stressors like academic exams involve anticipatory anxiety, sustained pressure, and outcomes that actually matter to participants. The physiological responses may differ substantially. This “real world” research is important for validating findings from the lab.</p>
 <p><strong>Electrodermal activity</strong>, also known as skin conductance or EDA, measures how electrical properties of the skin change over time. When you are stressed or anxious, your sympathetic nervous system activates your sweat glands, which changes how well your skin conducts electricity. More stress generally means greater EDA. This makes EDA a good indicator of psychological and physiological stress.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Electrodermal Activity and Criminal Justice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Electrodermal activity (EDA) is used in many contexts to measure human emotions, including in polygraph tests <span class="citation" data-cites="Synnott2015"><a href="#ref-Synnott2015" role="doc-biblioref">[2]</a></span>. Scientists have found, even in tightly controlled experiments, that EDA is extremely variable <span class="citation" data-cites="amin2022wearable"><a href="#ref-amin2022wearable" role="doc-biblioref">[1]</a></span>. Some individuals have spikes of EDA, while others do not <span class="citation" data-cites="Synnott2015"><a href="#ref-Synnott2015" role="doc-biblioref">[2]</a></span>. EDA can also be affected by environmental factors, such as the testing area’s temperature and humidity, and the examiner’s pre-existing beliefs <span class="citation" data-cites="macneill2016temperature elaad1994effects"><a href="#ref-macneill2016temperature" role="doc-biblioref">[3]</a>, <a href="#ref-elaad1994effects" role="doc-biblioref">[4]</a></span>. Do you think it’s acceptable to use EDA to look at stress during exams? What about in a criminal justice setting?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -448,12 +461,12 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Pedigree Data Dictionary
+<span class="screen-reader-only">Tip</span>Exam Physiology Data Dictionary
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>timestamp</strong>: Time the measurement was taken. The measurement comes from a wearable device worn by a student.<br>
-<strong>eda</strong>: Measurement from the electrodermal activity sensor.<br>
+<strong>eda</strong>: Measurement from the electrodermal activity sensor, in microsiemens.<br>
 <strong>hr</strong>: Heart rate measurement, in beats per minute.<br>
 <strong>temp</strong>: Skin temperature measurement, in Celsius.<br>
 <strong>test</strong>: Which test/exam was being taken.<br>
@@ -544,6 +557,19 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 <p>Looks like we have 10 students who were measured. The number of observations varies a bit because some students had their sensors turned on a bit longer than others.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Scroll to View Output
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If there is a lot of output when you run code, simply scroll up and down in the console to view it all.</p>
+</div>
+</div>
 </section>
 <section id="part-2a-questions" class="level3">
 <h3 class="anchored" data-anchor-id="part-2a-questions">Part 2a Questions</h3>
@@ -558,7 +584,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>Run <code>count(phys_data, test, studentID)</code> to see student and test combinations. How many observations does student <code>S2</code> have for the Final? Take a screenshot showing this number.</p></li>
+<li><p>Run <code>count(phys_data, test, studentID) %&gt;% print(n=30)</code> to see student and test combinations. How many observations does student <code>S8</code> have for the Final? Take a screenshot showing this number.</p></li>
 <li><p>Which student has the lowest number of observations for the Final?</p></li>
 </ol>
 </div>
@@ -566,7 +592,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </section>
 <section id="sorting-in-viewer" class="level3">
 <h3 class="anchored" data-anchor-id="sorting-in-viewer">Sorting in Viewer</h3>
-<p>In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click <code>timestamp</code>, we can see the earliest timestamp is <code>2018-10-13 12:55:31</code>. We can click it again to see the latest timestamp is <code>2018-10-13 12:55:31</code>.</p>
+<p>In the data Viewer (top left), click on the variable/column names to sort them. For example, If we click <code>timestamp</code>, we can see the earliest timestamp is <code>2018-10-13 14:00:59</code>. We can click it again to see the latest timestamp is <code>2018-12-05 19:49:00</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -600,7 +626,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>Sort the <code>hr</code> column. What is the greatest heart rate observed? Which student was this? Take a screenshot of your evidence.</p></li>
-<li><p>Which two students had the greatest <code>eda</code> values? Take a screenshot of your evidence.</p></li>
+<li><p>Which student had the greatest eda values? Which exam was this? Take a screenshot of your evidence.</p></li>
 </ol>
 </div>
 </div>
@@ -638,7 +664,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <pre><code>[1] 0.006431191</code></pre>
 </div>
 </div>
-<p>Our correlation is negative, meaning that as heart rate increases, skin temperature decreases. This might seem counterintuitive, given what we know about exercise (heart rate goes up and we might feel hot). Research shows that under psychologically stressful scenarios, the relationship between these two variables can change <span class="citation" data-cites="k2025exploring jerem2023s"><a href="#ref-k2025exploring" role="doc-biblioref">[2]</a>, <a href="#ref-jerem2023s" role="doc-biblioref">[3]</a></span>.</p>
+<p>Our correlation is close to zero and very slightly positive, meaning that as heart rate increases, skin temperature also increases. The value being close to zero means the relationship between these two variables is weak. This could be because the is a lot of variability in heart rate and temperature. The wearables data is pretty “noisy.”</p>
 </section>
 <section id="part-3-questions" class="level3">
 <h3 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h3>
@@ -682,25 +708,6 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 <p>It looks like this particular student had a slightly lower heart rate during the final than the midterms.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>A note about test timing
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Midterm 1 was conducted from <strong>14:00 - 15:30</strong>.<br>
-</li>
-<li>Midterm 2 was conducted from <strong>15:00 - 16:30</strong>.<br>
-</li>
-<li>The Final was conducted from <strong>17:00 - 20:00</strong>.</li>
-</ul>
-</div>
-</div>
 <p>We can calculate the means to assess this more accurately:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(phys_data, studentID <span class="sc">==</span> <span class="st">"S9"</span>) <span class="sc">%&gt;%</span> </span>
@@ -846,6 +853,7 @@ S10 = 116</code></pre>
 <ol type="1">
 <li><p>Based on your plots and information so far, do you have any ideas (hypotheses!) about how stress and grades might be related?</p></li>
 <li><p>Would looking at more data help you feel more or less comfortable with your hypotheses?</p></li>
+<li><p>Look at some of the values for <code>temp</code>. Are these realistic? Why or why not?</p></li>
 </ol>
 </div>
 </div>
@@ -859,11 +867,14 @@ S10 = 116</code></pre>
 <div id="ref-amin2022wearable" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">M. R. Amin, D. S. Wickramasuriya, and R. T. Faghih, <span>“A wearable exam stress dataset for predicting grades using physiological signals,”</span> in <em>2022 IEEE healthcare innovations and point of care technologies (HI-POCT)</em>, IEEE, 2022, pp. 30–36. Available: <a href="https://drive.google.com/file/d/1v_Gjov9IDctVHt5-8Cm7A7qQgnyB_wNu/view">https://drive.google.com/file/d/1v_Gjov9IDctVHt5-8Cm7A7qQgnyB_wNu/view</a></div>
 </div>
-<div id="ref-k2025exploring" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">A. K. Kasap and B. Kurt, <span>“Exploring the correlation of physiological stress signals with student exam performance: A preliminary study,”</span> <em>Applied Psychophysiology and Biofeedback</em>, vol. 50, no. 1, pp. 149–164, 2025.</div>
+<div id="ref-Synnott2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">J. Synnott, D. Dietzel, and M. Ioannou, <span>“A review of the polygraph: History, methodology and current status,”</span> <em>Crime Psychology Review</em>, vol. 1, no. 1, pp. 59–83, 2015, doi: <a href="https://doi.org/10.1080/23744006.2015.1060080">10.1080/23744006.2015.1060080</a>. Available: <a href="https://doi.org/10.1080/23744006.2015.1060080">https://doi.org/10.1080/23744006.2015.1060080</a></div>
 </div>
-<div id="ref-jerem2023s" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">P. Jerem and L. M. Romero, <span>“It’s cool to be stressed: Body surface temperatures track sympathetic nervous system activation during acute stress,”</span> <em>Journal of Experimental Biology</em>, vol. 226, no. 20, p. jeb246552, 2023.</div>
+<div id="ref-macneill2016temperature" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">A. L. MacNeill and M. Bradley, <span>“Temperature effects on polygraph detection of concealed information,”</span> <em>Psychophysiology</em>, vol. 53, no. 2, pp. 143–150, 2016.</div>
+</div>
+<div id="ref-elaad1994effects" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">E. Elaad, A. Ginton, and G. Ben-Shakhar, <span>“The effects of prior expectations and outcome knowledge on polygraph examiners’ decisions,”</span> <em>Journal of Behavioral Decision Making</em>, vol. 7, no. 4, pp. 279–292, 1994.</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
