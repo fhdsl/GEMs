@@ -61,7 +61,7 @@ dat <- na.omit(dat)
 ```
 
 ```{r}
-write_csv(dat, "data/phys_data.csv")
+write_csv(dat, "data/phys_data_messy.csv")
 ```
 
 ```{r}
@@ -122,6 +122,6 @@ dat_clean <- bind_rows(dat_m1, dat_m2, dat_f) %>%
 
 dat_clean <- na.omit(dat_clean)
 
-write_csv(dat_clean, "data/phys_data_clean.csv")
+write_csv(dat_clean, "data/phys_data.csv")
 ```
 
