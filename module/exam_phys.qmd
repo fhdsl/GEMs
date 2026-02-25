@@ -64,6 +64,14 @@ We suggest confirming links are still active prior to running this activity:
 * <https://genomicseducation.org/data/phys_data.csv>
 :::
 
+::: callout-note
+## Student errors
+
+
+
+This activity mostly consists of copying code and changing it slightly. It's easy to delete a parenthesis or comma, get an error, and not know what you did wrong. Encourage students to start over with copying and changing the code if this happens.
+:::
+
 
 ### Instructor Materials
 

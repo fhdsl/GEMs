@@ -276,6 +276,7 @@ UST
 UST's
 usta
 VM
+wearables
 www
 yy
 Yy

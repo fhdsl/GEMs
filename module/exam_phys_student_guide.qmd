@@ -263,7 +263,7 @@ Calculate the correlation between heart rate and skin temperature. Run the follo
 cor(phys_data$hr, phys_data$temp)
 ```
 
-Our correlation is close to zero and very slightly positive, meaning that as heart rate increases, skin temperature also increases. The value being close to zero means the relationship between these two variables is weak. This coudl be because the is a lot of variability in heart rate and temperature. The wearables data is pretty "noisy."
+Our correlation is close to zero and very slightly positive, meaning that as heart rate increases, skin temperature also increases. The value being close to zero means the relationship between these two variables is weak. This could be because the is a lot of variability in heart rate and temperature. The wearables data is pretty "noisy."
 
 ### Part 3 Questions
 
