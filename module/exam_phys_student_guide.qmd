@@ -21,7 +21,7 @@ Let's go over some background context for this activity. Then, we'll get set up 
 
 First, let's read the "plain language" summary from a publication entitled "A Wearable Exam Stress Dataset for Predicting Grades using Physiological Signals" [@amin2022wearable].
 
-> Most stress research happens in labs, not real life. This means there aren't many datasets showing how people's bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity—a sign of stress) and skin temperature. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We're making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.
+> Most stress research happens in labs, not real life. This means there aren't many datasets showing how people's bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity, a sign of stress), skin temperature, and heart rate. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We're making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.
 
 As the summary suggests, lab settings do not always reflect reality. Most stress research uses controlled laboratory settings with standardized stressors like electric shocks, loud noises, or disturbing images. These methods allow researchers to isolate specific physiological responses and build reliable datasets. This approach has helped us understand how the autonomic nervous system responds to stress. However, the challenge is that Real cognitive stressors like academic exams involve anticipatory anxiety, sustained pressure, and outcomes that actually matter to participants. The physiological responses may differ substantially. This "real world" research is important for validating findings from the lab.
 
@@ -30,7 +30,7 @@ As the summary suggests, lab settings do not always reflect reality. Most stress
 ::: callout-tip
 ## Electrodermal Activity and Criminal Justice
 
-Electrodermal activity (EDA) is used in many contexts to measure human emotions, including in polygraph tests [@Synnott2015]. Scientists have found, even in tightly controlled experiments, that EDA is extremely variable [@amin2022wearable]. Some individuals have spikes of EDA, while others do not [@Synnott2015]. EDA can also be affected by environmental factors, such as the testing area's temperature and humidity, and the examiner's pre-existing beliefs [@macneill2016temperature; @elaad1994effects]. Do you think it's acceptable to use EDA to look at stress during exams? What about in a criminal justice setting? 
+Electrodermal activity (EDA) is used in many contexts to measure human emotions, including in polygraph tests [@Synnott2015]. Scientists have found, even in tightly controlled experiments, that EDA is extremely variable [@Suryanarayanan2005]. Some individuals have spikes of EDA, while others do not [@Synnott2015]. EDA can also be affected by environmental factors, such as the testing area's temperature and humidity, and the examiner's pre-existing beliefs [@macneill2016temperature; @elaad1994effects]. Do you think it's acceptable to use EDA to look at stress during exams? What about in a criminal justice setting? 
 :::
 
 ::: callout-note
@@ -269,7 +269,7 @@ Calculate the correlation between heart rate and skin temperature. Run the follo
 cor(phys_data$hr, phys_data$temp)
 ```
 
-Our correlation is close to zero and very slightly positive, meaning that as heart rate increases, skin temperature also increases. The value being close to zero means the relationship between these two variables is weak. This could be because the is a lot of variability in heart rate and temperature. The wearables data is pretty "noisy."
+Our correlation is close to zero and very slightly positive, meaning that as heart rate increases, skin temperature also increases. The value being close to zero means the relationship between these two variables is very weak. This could be because there is a lot of variability in heart rate and temperature. The wearables data is pretty "noisy."
 
 ### Part 3 Questions
 
