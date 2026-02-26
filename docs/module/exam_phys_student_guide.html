@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-25">
+<meta name="dcterms.date" content="2026-02-26">
 
 <title>Exam Physiology: Wearable Data – GEMs</title>
 <style>
@@ -242,7 +242,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 25, 2026</p>
+      <p class="date">February 26, 2026</p>
     </div>
   </div>
   
@@ -271,7 +271,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="background">Background</h3>
 <p>First, let’s read the “plain language” summary from a publication entitled “A Wearable Exam Stress Dataset for Predicting Grades using Physiological Signals” <span class="citation" data-cites="amin2022wearable"><a href="#ref-amin2022wearable" role="doc-biblioref">[1]</a></span>.</p>
 <blockquote class="blockquote">
-<p>Most stress research happens in labs, not real life. This means there aren’t many datasets showing how people’s bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity—a sign of stress) and skin temperature. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We’re making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.</p>
+<p>Most stress research happens in labs, not real life. This means there aren’t many datasets showing how people’s bodies respond to actual stressful situations. We measured stress in 10 students during three real exams using wearable sensors that tracked skin conductance (how much their skin conducted electricity, a sign of stress), skin temperature, and heart rate. We then looked at patterns in the data to see if we could predict whether students would get high or low grades based on their stress levels. Our prediction method was 70-80% accurate at identifying high versus low performers. We also found general patterns showing how stress levels changed throughout the exams. This shows that wearable devices could potentially be used to monitor stress and predict performance during real-world stressful situations. We’re making this dataset publicly available so other researchers can use it to tackle the challenges of measuring stress outside the lab.</p>
 </blockquote>
 <p>As the summary suggests, lab settings do not always reflect reality. Most stress research uses controlled laboratory settings with standardized stressors like electric shocks, loud noises, or disturbing images. These methods allow researchers to isolate specific physiological responses and build reliable datasets. This approach has helped us understand how the autonomic nervous system responds to stress. However, the challenge is that Real cognitive stressors like academic exams involve anticipatory anxiety, sustained pressure, and outcomes that actually matter to participants. The physiological responses may differ substantially. This “real world” research is important for validating findings from the lab.</p>
 <p><strong>Electrodermal activity</strong>, also known as skin conductance or EDA, measures how electrical properties of the skin change over time. When you are stressed or anxious, your sympathetic nervous system activates your sweat glands, which changes how well your skin conducts electricity. More stress generally means greater EDA. This makes EDA a good indicator of psychological and physiological stress.</p>
@@ -285,7 +285,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Electrodermal activity (EDA) is used in many contexts to measure human emotions, including in polygraph tests <span class="citation" data-cites="Synnott2015"><a href="#ref-Synnott2015" role="doc-biblioref">[2]</a></span>. Scientists have found, even in tightly controlled experiments, that EDA is extremely variable <span class="citation" data-cites="amin2022wearable"><a href="#ref-amin2022wearable" role="doc-biblioref">[1]</a></span>. Some individuals have spikes of EDA, while others do not <span class="citation" data-cites="Synnott2015"><a href="#ref-Synnott2015" role="doc-biblioref">[2]</a></span>. EDA can also be affected by environmental factors, such as the testing area’s temperature and humidity, and the examiner’s pre-existing beliefs <span class="citation" data-cites="macneill2016temperature elaad1994effects"><a href="#ref-macneill2016temperature" role="doc-biblioref">[3]</a>, <a href="#ref-elaad1994effects" role="doc-biblioref">[4]</a></span>. Do you think it’s acceptable to use EDA to look at stress during exams? What about in a criminal justice setting?</p>
+<p>Electrodermal activity (EDA) is used in many contexts to measure human emotions, including in polygraph tests <span class="citation" data-cites="Synnott2015"><a href="#ref-Synnott2015" role="doc-biblioref">[2]</a></span>. Scientists have found, even in tightly controlled experiments, that EDA is extremely variable <span class="citation" data-cites="Suryanarayanan2005"><a href="#ref-Suryanarayanan2005" role="doc-biblioref">[3]</a></span>. Some individuals have spikes of EDA, while others do not <span class="citation" data-cites="Synnott2015"><a href="#ref-Synnott2015" role="doc-biblioref">[2]</a></span>. EDA can also be affected by environmental factors, such as the testing area’s temperature and humidity, and the examiner’s pre-existing beliefs <span class="citation" data-cites="macneill2016temperature elaad1994effects"><a href="#ref-macneill2016temperature" role="doc-biblioref">[4]</a>, <a href="#ref-elaad1994effects" role="doc-biblioref">[5]</a></span>. Do you think it’s acceptable to use EDA to look at stress during exams? What about in a criminal justice setting?</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -664,7 +664,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <pre><code>[1] 0.006431191</code></pre>
 </div>
 </div>
-<p>Our correlation is close to zero and very slightly positive, meaning that as heart rate increases, skin temperature also increases. The value being close to zero means the relationship between these two variables is weak. This could be because the is a lot of variability in heart rate and temperature. The wearables data is pretty “noisy.”</p>
+<p>Our correlation is close to zero and very slightly positive, meaning that as heart rate increases, skin temperature also increases. The value being close to zero means the relationship between these two variables is very weak. This could be because there is a lot of variability in heart rate and temperature. The wearables data is pretty “noisy.”</p>
 </section>
 <section id="part-3-questions" class="level3">
 <h3 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h3>
@@ -870,11 +870,14 @@ S10 = 116</code></pre>
 <div id="ref-Synnott2015" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[2] </div><div class="csl-right-inline">J. Synnott, D. Dietzel, and M. Ioannou, <span>“A review of the polygraph: History, methodology and current status,”</span> <em>Crime Psychology Review</em>, vol. 1, no. 1, pp. 59–83, 2015, doi: <a href="https://doi.org/10.1080/23744006.2015.1060080">10.1080/23744006.2015.1060080</a>. Available: <a href="https://doi.org/10.1080/23744006.2015.1060080">https://doi.org/10.1080/23744006.2015.1060080</a></div>
 </div>
+<div id="ref-Suryanarayanan2005" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">P. Suryanarayanan, D. K. Kumar, and P. Burton, <span>“Validity of polygraphs,”</span> in <em>2005 IEEE engineering in medicine and biology 27th annual conference</em>, 2005, pp. 1200–1203. doi: <a href="https://doi.org/10.1109/IEMBS.2005.1616639">10.1109/IEMBS.2005.1616639</a></div>
+</div>
 <div id="ref-macneill2016temperature" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">A. L. MacNeill and M. Bradley, <span>“Temperature effects on polygraph detection of concealed information,”</span> <em>Psychophysiology</em>, vol. 53, no. 2, pp. 143–150, 2016.</div>
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">A. L. MacNeill and M. Bradley, <span>“Temperature effects on polygraph detection of concealed information,”</span> <em>Psychophysiology</em>, vol. 53, no. 2, pp. 143–150, 2016.</div>
 </div>
 <div id="ref-elaad1994effects" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">E. Elaad, A. Ginton, and G. Ben-Shakhar, <span>“The effects of prior expectations and outcome knowledge on polygraph examiners’ decisions,”</span> <em>Journal of Behavioral Decision Making</em>, vol. 7, no. 4, pp. 279–292, 1994.</div>
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">E. Elaad, A. Ginton, and G. Ben-Shakhar, <span>“The effects of prior expectations and outcome knowledge on polygraph examiners’ decisions,”</span> <em>Journal of Behavioral Decision Making</em>, vol. 7, no. 4, pp. 279–292, 1994.</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
