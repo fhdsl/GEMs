@@ -139,6 +139,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <ul class="collapse">
   <li><a href="#student-activity" id="toc-student-activity" class="nav-link" data-scroll-target="#student-activity">Student Activity</a></li>
   <li><a href="#instructor-materials" id="toc-instructor-materials" class="nav-link" data-scroll-target="#instructor-materials">Instructor Materials</a></li>
+  <li><a href="#alternative-datasets" id="toc-alternative-datasets" class="nav-link" data-scroll-target="#alternative-datasets">Alternative Datasets</a></li>
   </ul></li>
   <li><a href="#scientific-topics" id="toc-scientific-topics" class="nav-link" data-scroll-target="#scientific-topics">Scientific Topics</a></li>
   <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
@@ -251,6 +252,42 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>A Google Slides presentation is available for borrowing images <a href="https://docs.google.com/presentation/d/1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0/edit?usp=sharing">here</a>.</p>
 <p>An answer key is available <a href="https://docs.google.com/document/d/1JJ0hsDxtZZU5dg3xZ7GfK2ifkETH0NaK/edit?usp=sharing&amp;ouid=116032995747974603894&amp;rtpof=true&amp;sd=true">here</a>. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.</p>
 <p>You might wish to review additional background on <a href="https://drive.google.com/file/d/1iIf2Ju3FQ-G6jltcZwaQ5uK8wdcifHy2/view?usp=sharing">PRS Scores</a> and <a href="https://drive.google.com/file/d/1JRhhsvLnt3agfExkF59ay4fqExVCaYcR/view?usp=sharing">Prostate Cancer</a>.</p>
+</section>
+<section id="alternative-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="alternative-datasets">Alternative Datasets</h3>
+<p>You might want to swap out some of the datasets used. Here are some additional individuals with prostate cancer markers that are appropriate for the <em>Conti</em> and <em>Eeles</em> studies:</p>
+<ul>
+<li><a href="https://genomicseducation.org/data/prs_ind_3.txt" class="uri">https://genomicseducation.org/data/prs_ind_3.txt</a><br>
+</li>
+<li><a href="https://genomicseducation.org/data/prs_ind_4.txt" class="uri">https://genomicseducation.org/data/prs_ind_4.txt</a><br>
+</li>
+<li><a href="https://genomicseducation.org/data/prs_ind_5.txt" class="uri">https://genomicseducation.org/data/prs_ind_5.txt</a></li>
+</ul>
+<p>You can also generate your own! Just change a few of the alleles.</p>
+<p>To create an activity around a different condition, we recommend the following steps:</p>
+<ul>
+<li>Identify a study of interest. For example, you might look at a study on addiction like GCST001880.<br>
+</li>
+<li>Looks this study up on https://www.ebi.ac.uk/gwas/home.</li>
+<li>Find risk markers and start creating some test results! For example, we can see that rs2377339-G is a risk allele. We might want to include that in the panel.<br>
+</li>
+<li>Try to include some non-risk alleles and make sure there is enough data (at least 10 markers). Don’t forget to replace the <code>-</code> with <code>:</code>. For example, we might start tweaking the following panel:</li>
+</ul>
+<pre><code>rs1465641:A
+rs12995333:T
+rs2163349:T
+rs7589342:T
+rs2377339:G
+rs4851870:C
+rs7589561:T
+rs4851095:C
+rs6741172:A
+rs1465639:G
+rs12043259:A
+rs2163350:C
+rs6747023:G
+rs12995849:T
+..</code></pre>
 </section>
 </section>
 <section id="scientific-topics" class="level2">
