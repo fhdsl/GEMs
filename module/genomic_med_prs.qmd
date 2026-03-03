@@ -77,6 +77,41 @@ An answer key is available [here](https://docs.google.com/document/d/1JJ0hsDxtZZ
 
 You might wish to review additional background on [PRS Scores](https://drive.google.com/file/d/1iIf2Ju3FQ-G6jltcZwaQ5uK8wdcifHy2/view?usp=sharing) and [Prostate Cancer](https://drive.google.com/file/d/1JRhhsvLnt3agfExkF59ay4fqExVCaYcR/view?usp=sharing).
 
+### Alternative Datasets
+
+You might want to swap out some of the datasets used. Here are some additional individuals with prostate cancer markers that are appropriate for the _Conti_ and _Eeles_ studies:
+
+- <https://genomicseducation.org/data/prs_ind_3.txt>  
+- <https://genomicseducation.org/data/prs_ind_4.txt>  
+- <https://genomicseducation.org/data/prs_ind_5.txt>  
+
+You can also generate your own! Just change a few of the alleles.
+
+To create an activity around a different condition, we recommend the following steps:
+
+- Identify a study of interest. For example, you might look at a study on addiction like GCST001880.  
+- Looks this study up on https://www.ebi.ac.uk/gwas/home. 
+- Find risk markers and start creating some test results! For example, we can see that rs2377339-G is a risk allele. We might want to include that in the panel.  
+- Try to include some non-risk alleles and make sure there is enough data (at least 10 markers). Don't forget to replace the `-` with `:`. For example, we might start tweaking the following panel:
+
+```
+rs1465641:A
+rs12995333:T
+rs2163349:T
+rs7589342:T
+rs2377339:G
+rs4851870:C
+rs7589561:T
+rs4851095:C
+rs6741172:A
+rs1465639:G
+rs12043259:A
+rs2163350:C
+rs6747023:G
+rs12995849:T
+..
+```
+
 ## Scientific Topics
 
 This activity focuses on understanding genetic risk in human disease. Students will gain exposure to the following:
