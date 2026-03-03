@@ -81,9 +81,9 @@ You might wish to review additional background on [PRS Scores](https://drive.goo
 
 You might want to swap out some of the datasets used. Here are some additional individuals with prostate cancer markers that are appropriate for the _Conti_ and _Eeles_ studies:
 
-- https://genomicseducation.org/data/prs_ind_3.txt  
-- https://genomicseducation.org/data/prs_ind_4.txt  
-- https://genomicseducation.org/data/prs_ind_5.txt  
+- <https://genomicseducation.org/data/prs_ind_3.txt>  
+- <https://genomicseducation.org/data/prs_ind_4.txt>  
+- <https://genomicseducation.org/data/prs_ind_5.txt>  
 
 You can also generate your own! Just change a few of the alleles.
 
