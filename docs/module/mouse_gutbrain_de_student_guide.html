@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-03-03">
+<meta name="dcterms.date" content="2026-03-17">
 
 <title>Differential Expression and the Mouse Gut-Brain Axis – GEMs</title>
 <style>
@@ -200,7 +200,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   </ul></li>
   <li><a href="#part-3" id="toc-part-3" class="nav-link" data-scroll-target="#part-3">Part 3</a>
   <ul class="collapse">
-  <li><a href="#creating-a-gene-list" id="toc-creating-a-gene-list" class="nav-link" data-scroll-target="#creating-a-gene-list">Creating a gene list</a></li>
+  <li><a href="#look-up-gene-expression-in-the-prefrontal-cortex" id="toc-look-up-gene-expression-in-the-prefrontal-cortex" class="nav-link" data-scroll-target="#look-up-gene-expression-in-the-prefrontal-cortex">Look up gene expression in the prefrontal cortex</a></li>
   <li><a href="#compare-differential-gene-expression-across-regions" id="toc-compare-differential-gene-expression-across-regions" class="nav-link" data-scroll-target="#compare-differential-gene-expression-across-regions">Compare differential gene expression across regions</a></li>
   </ul></li>
   </ul>
@@ -222,7 +222,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 3, 2026</p>
+      <p class="date">March 17, 2026</p>
     </div>
   </div>
   
@@ -536,15 +536,19 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <div class="callout-body-container callout-body">
 <p>When working with someone else’s data, it can be difficult to figure out what a particular column or variable name means. A <strong>data dictionary</strong> is a key to decode these!</p>
+<p>There are three columns that you should pay close attention to.</p>
 <ul>
 <li><p><strong>gene</strong>: the geneID (see below for more detail).</p></li>
-<li><p><strong>baseMean</strong>: the average of the normalized count values for this gene, taken over all samples.</p></li>
 <li><p><strong>log2FoldChange</strong>: a measure of the change in gene expression for this gene between the ASD and control mice. A positive value indicates upregulation (increased expression), while a negative Log2FC indicates downregulation (decreased expression).</p></li>
-<li><p><strong>lfcSE</strong>: the standard error calculated for log2FoldChange.</p></li>
-<li><p><strong>stat</strong>: t-value calculated to determine if the log2FoldChange is significantly different from zero.</p></li>
+<li><p><strong>padj</strong>: the p-value for the log2FoldChange, adjusted for the fact you are testing thousands of genes. This is a standard adjustment done in statistics when you run a statistical test multiple times.</p></li>
 </ul>
-<p>-<strong>pvalue</strong>: the p-value for the log2FoldChange.</p>
-<p>-<strong>padj</strong>: the p-value, adjusted for multiple testing.</p>
+<p>The dataset also contains other columns, but you won’t be working with them specifically.</p>
+<ul>
+<li><p>baseMean: the average of the normalized count values for this gene, taken over all samples.</p></li>
+<li><p>lfcSE: the standard error calculated for log2FoldChange.</p></li>
+<li><p>stat: t-value calculated to determine if the log2FoldChange is significantly different from zero.</p></li>
+<li><p>pvalue: the uncorrected p-value for the log2FoldChange.</p></li>
+</ul>
 </div>
 </div>
 <p>In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:</p>
@@ -675,36 +679,29 @@ Tip
 </section>
 <section id="part-3" class="level2">
 <h2 class="anchored" data-anchor-id="part-3">Part 3</h2>
-<p>In part 3, we’ll create a list of genes that are differentially expressed in the prefrontal cortex, then examine whether they show the same differential expression pattern in the striatum.</p>
-<section id="creating-a-gene-list" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-gene-list">Creating a gene list</h3>
-<p>In the previous section, we identified genes with the highest and lowest log2FoldChange. However, this metric isn’t always the best indicator of differential expression. The adjusted p-value, or padj, is preferred over log2FoldChange for identifying statistically significant changes in gene expression because padj accounts for multiple testing. This is crucial when analyzing a large number of genes simultaneously, as each additional statistical test increases the risk of identifying a false positive. The adjusted p-value provides a statistical correction that minimizes this risk. log2FoldChange provides information about the magnitude of expression change, while padj indicates its statistical significance.</p>
-<p>Let’s create a list of all the genes that are differentially expressed between ASD and control mice using the <code>filter</code> command. We’ll set the padj threshold to 0.05.</p>
+<p>In part 3, we’ll examine the gene expression in the prefrontal cortex for specific genes that have been previously associated with ASD and compare the expression to the gene expression in the striatum.</p>
+<section id="look-up-gene-expression-in-the-prefrontal-cortex" class="level3">
+<h3 class="anchored" data-anchor-id="look-up-gene-expression-in-the-prefrontal-cortex">Look up gene expression in the prefrontal cortex</h3>
+<p>Let’s take a look at the differential expression (log2FoldChange) of gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>prefrontal_sig <span class="ot">&lt;-</span> <span class="fu">filter</span>(prefrontal, padj <span class="sc">&lt;</span> <span class="fl">0.05</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prefrontal_sig)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal <span class="ot">&lt;-</span> <span class="fu">filter</span>(prefrontal, GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 7
+<pre><code># A tibble: 1 × 7
   GeneID             baseMean log2FoldChange lfcSE  stat   pvalue     padj
   &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-1 ENSMUSG00000090303     23.2          -25.1  1.92 -13.1 3.75e-39 1.36e-34
-2 ENSMUSG00000086112     17.5          -24.7  1.93 -12.8 2.63e-37 4.74e-33
-3 ENSMUSG00000101734     20.2          -24.9  2.06 -12.1 8.68e-34 1.04e-29
-4 ENSMUSG00000118036     17.6          -24.7  2.07 -11.9 6.87e-33 6.20e-29
-5 ENSMUSG00000111968     25.0          -25.2  2.18 -11.6 5.79e-31 3.64e-27
-6 ENSMUSG00000080716     25.4          -25.2  2.18 -11.6 6.05e-31 3.64e-27</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(prefrontal_sig)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 103   7</code></pre>
+1 ENSMUSG00000079516     10.6          -22.6  2.11 -10.7 7.30e-27 2.63e-23</code></pre>
 </div>
 </div>
+<p>Based on the negative log2FoldChange value for reg3a, we know that this gene has <em>decreased expression</em> in the ASD-type mice compared to control-type mice. If you click on the black triangle on the right side of the table, you can scroll through all the columns. The padj value for reg3a is 2.63 x 10<sup>-23</sup>, which suggests the calculated decrease in expression is statistically significant.</p>
+<p>That means reg3a is being downregulated in the prefrontal cortex of ASD-type mice!</p>
 </section>
 <section id="compare-differential-gene-expression-across-regions" class="level3">
 <h3 class="anchored" data-anchor-id="compare-differential-gene-expression-across-regions">Compare differential gene expression across regions</h3>
 <p>It might be interesting to look at the expression of a gene across all the possible regions. To do this, we will need to load the differential expression data for the striatum.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>striatum <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 55421 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -716,26 +713,11 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
-<p>Then we’ll filter out the gene in which we’re interested from each object. Let’s take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.</p>
+<p>Then we’ll run code that lets us look at the gene expression of just reg3a in the striatum.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal <span class="ot">&lt;-</span> <span class="fu">filter</span>(prefrontal, GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>reg3a_striatum <span class="ot">&lt;-</span> <span class="fu">filter</span>(striatum, GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Finally, take a look at the differential expression of reg3a in each region.</p>
-<p>In the prefrontal cortex:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>reg3a_prefrontal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 7
-  GeneID             baseMean log2FoldChange lfcSE  stat   pvalue     padj
-  &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-1 ENSMUSG00000079516     10.6          -22.6  2.11 -10.7 7.30e-27 2.63e-23</code></pre>
-</div>
-</div>
-<p>In the striatum:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>reg3a_striatum</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>reg3a_striatum <span class="ot">&lt;-</span> <span class="fu">filter</span>(striatum, GeneID <span class="sc">==</span> <span class="st">"ENSMUSG00000079516"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>reg3a_striatum</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   GeneID             baseMean log2FoldChange lfcSE  stat pvalue  padj
@@ -743,6 +725,8 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 1 ENSMUSG00000079516    0.371           2.27  2.96 0.765  0.444    NA</code></pre>
 </div>
 </div>
+<p>Interesting! The log2FoldChange of reg3a is positive, which <em>might</em> mean reg3a has increased expression in the striatum when comparing ASD_type mice to control-type mice. However, if we scroll through all the columns (by clicking the black arrow on the right side of the table), we can see the padj hasn’t been calculated. Hmm. Why would that be? This sometimes happens for gene expression data when a gene fails to pass a filtering test. Essentially, the software was unable to calculate an adjusted p-value for this gene.</p>
+<p>However, we do have a non-adjusted p-value for reg3a expression in the striatum. Since this non-adjusted p-value is quite large (0.44!), we can safely assume reg3a does <em>not</em> have different expression in ASD-type mice compared to control-type mice in the striatum.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -754,10 +738,14 @@ dbl (6): baseMean, log2FoldChange, lfcSE, stat, pvalue, padj
 </div>
 <div class="callout-body-container callout-body">
 <ol start="8" type="1">
-<li><p>How many genes did you keep after filtering out any genes with a padj &gt; 0.05?</p></li>
-<li><p>How many genes in #8 show increased expression in ASD-type mice?</p></li>
-<li><p>Did the genes you identified in part 2 (the one with the greatest positive log2FoldChange, as well as the one with the greatest negative log2FoldChange) meet the padj threshold? That is, did you keep these genes in your dataset after filtering?</p></li>
-<li><p>Is the differential expression pattern of Reg3a the same in the striatum as in the prefrontal cortex?</p></li>
+<li><p>Is the differential expression pattern of reg3a the same or different between the prefrontal cortex and the striatum? What might a biological reason for this be?</p></li>
+<li><p>Choose one of the following genes that has been suggested as an ASD risk gene. Look this gene up in the MGI. What is the gene symbol and what does this gene do?</p></li>
+</ol>
+<p><strong>Possible gene choices:</strong> - ENSMUSG00000053754 - ENSMUSG00000067629 - ENSMUSG00000022623 - ENSMUSG00000075318 - ENSMUSG00000022897</p>
+<ol start="10" type="1">
+<li><p>What is the log2FoldChange value of this gene in the prefrontal cortex? Is this gene upregulated or downregulated? Is this gene expression difference statistically significant?</p></li>
+<li><p>What is the log2FoldChange value of this gene in the striatum? Is this gene upregulated or downregulated? Is this gene expression difference statistically significant?</p></li>
+<li><p>What is a biological reason this gene might be differentially expressed in ASD_type mice?</p></li>
 </ol>
 </div>
 </div>
