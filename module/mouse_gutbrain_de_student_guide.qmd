@@ -215,19 +215,23 @@ head(prefrontal)
 
 When working with someone else's data, it can be difficult to figure out what a particular column or variable name means. A **data dictionary** is a key to decode these!
 
-- **gene**: the geneID (see below for more detail). 
+There are three columns that you should pay close attention to.
 
-- **baseMean**: the average of the normalized count values for this gene, taken over all samples.
+- **gene**: the geneID (see below for more detail). 
 
 - **log2FoldChange**: a measure of the change in gene expression for this gene between the ASD and control mice. A positive value indicates upregulation (increased expression), while a negative Log2FC indicates downregulation (decreased expression).
 
-- **lfcSE**: the standard error calculated for log2FoldChange.
+- **padj**: the p-value for the log2FoldChange, adjusted for the fact you are testing thousands of genes. This is a standard adjustment done in statistics when you run a statistical test multiple times.
 
-- **stat**: t-value calculated to determine if the log2FoldChange is significantly different from zero.
+The dataset also contains other columns, but you won't be working with them specifically.
 
--**pvalue**: the p-value for the log2FoldChange.
+- baseMean: the average of the normalized count values for this gene, taken over all samples.
 
--**padj**: the p-value, adjusted for multiple testing.
+- lfcSE: the standard error calculated for log2FoldChange.
+
+- stat: t-value calculated to determine if the log2FoldChange is significantly different from zero.
+
+- pvalue: the uncorrected p-value for the log2FoldChange. 
 :::
 
 In this dataset, genes are identified using their Ensembl Gene ID code. Every gene has an ID that looks something like this:
@@ -319,19 +323,21 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1
 
 ## Part 3
 
-In part 3, we'll create a list of genes that are differentially expressed in the prefrontal cortex, then examine whether they show the same differential expression pattern in the striatum.
+In part 3, we'll examine the gene expression in the prefrontal cortex for specific genes that have been previously associated with ASD and compare the expression to the gene expression in the striatum.
 
-### Creating a gene list
+### Look up gene expression in the prefrontal cortex
 
-In the previous section, we identified genes with the highest and lowest log2FoldChange. However, this metric isn't always the best indicator of differential expression. The adjusted p-value, or padj, is preferred over log2FoldChange for identifying statistically significant changes in gene expression because padj accounts for multiple testing. This is crucial when analyzing a large number of genes simultaneously, as each additional statistical test increases the risk of identifying a false positive. The adjusted p-value provides a statistical correction that minimizes this risk. log2FoldChange provides information about the magnitude of expression change, while padj indicates its statistical significance.
-
-Let's create a list of all the genes that are differentially expressed between ASD and control mice using the `filter` command. We'll set the padj threshold to 0.05.
+Let's take a look at the differential expression (log2FoldChange) of gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.
 
 ```{r}
-prefrontal_sig <- filter(prefrontal, padj < 0.05)
-head(prefrontal_sig)
-dim(prefrontal_sig)
+reg3a_prefrontal <- filter(prefrontal, GeneID == "ENSMUSG00000079516")
+
+reg3a_prefrontal
 ```
+
+Based on the negative log2FoldChange value for reg3a, we know that this gene has _decreased expression_ in the ASD-type mice compared to control-type mice. If you click on the black triangle on the right side of the table, you can scroll through all the columns. The padj value  for reg3a is 2.63 x 10^-23^, which suggests the calculated decrease in expression is statistically significant.
+
+That means reg3a is being downregulated in the prefrontal cortex of ASD-type mice!
 
 ### Compare differential gene expression across regions
 
@@ -341,36 +347,36 @@ It might be interesting to look at the expression of a gene across all the possi
 striatum <- read_csv("https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv")
 ```
 
-Then we'll filter out the gene in which we're interested from each object. Let's take a look at gene ENSMUSG00000079516, which is the reg3a gene we previously looked up on MGI.
+Then we'll run code that lets us look at the gene expression of just reg3a in the striatum.
 
 ```{r}
-reg3a_prefrontal <- filter(prefrontal, GeneID == "ENSMUSG00000079516")
-
 reg3a_striatum <- filter(striatum, GeneID == "ENSMUSG00000079516")
-```
 
-Finally, take a look at the differential expression of reg3a in each region.
-
-In the prefrontal cortex:
-
-```{r}
-reg3a_prefrontal
-```
-
-In the striatum:
-
-```{r}
 reg3a_striatum
 ```
+
+Interesting! The log2FoldChange of reg3a is positive, which _might_ mean reg3a has increased expression in the striatum when comparing ASD_type mice to control-type mice. However, if we scroll through all the columns (by clicking the black arrow on the right side of the table), we can see the padj hasn't been calculated. Hmm. Why would that be? This sometimes happens for gene expression data when a gene fails to pass a filtering test. Essentially, the software was unable to calculate an adjusted p-value for this gene.
+
+However, we do have a non-adjusted p-value for reg3a expression in the striatum. Since this non-adjusted p-value is quite large (0.44!), we can safely assume reg3a does _not_ have different expression in ASD-type mice compared to control-type mice in the striatum.
+
 
 ::: callout-note
 ## Check Your Knowledge
 
-8.  How many genes did you keep after filtering out any genes with a padj > 0.05?
+8.  Is the differential expression pattern of reg3a the same or different between the prefrontal cortex and the striatum? What might a biological reason for this be?
 
-9.  How many genes in #8 show increased expression in ASD-type mice?
+9. Choose one of the following genes that has been suggested as an ASD risk gene. Look this gene up in the MGI. What is the gene symbol and what does this gene do?
 
-10.  Did the genes you identified in part 2 (the one with the greatest positive log2FoldChange, as well as the one with the greatest negative log2FoldChange) meet the padj threshold? That is, did you keep these genes in your dataset after filtering?
+**Possible gene choices:**
+- ENSMUSG00000053754 
+- ENSMUSG00000067629 
+- ENSMUSG00000022623 
+- ENSMUSG00000075318 
+- ENSMUSG00000022897 
 
-11.  Is the differential expression pattern of Reg3a the same in the striatum as in the prefrontal cortex? 
+10. What is the log2FoldChange value of this gene in the prefrontal cortex? Is this gene upregulated or downregulated? Is this gene expression difference statistically significant? 
+
+11. What is the log2FoldChange value of this gene in the striatum? Is this gene upregulated or downregulated? Is this gene expression difference statistically significant? 
+
+12. What is a biological reason this gene might be differentially expressed in ASD_type mice?
 :::
