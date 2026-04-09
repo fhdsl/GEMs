@@ -22,6 +22,8 @@ These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
 - [Population Genetics: Fish Pond Simulator](module/pop_gen_hwe.html)
 
+- [DNA Fingerprinting](module/dna_fingerprinting.html)
+
 
 ## Research Modules
 

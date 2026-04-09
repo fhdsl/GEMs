@@ -6,3 +6,61 @@ csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
+
+## Part 1
+
+What is DNA fingerprinting?
+
+DNA fingerprinting and forensics
+
+Expand each case file.
+
+::: {.callout-caution collapse="true"}
+# Case File: Parrot Smuggling
+
+overview
+why would you use forensics for this?
+what they use for fingerprinting
+original paper/data
+:::
+
+::: {.callout-caution collapse="true"}
+# Case file: Fish Market
+
+overview
+why would you use forensics for this?
+what they use for fingerprinting
+original paper/data
+:::
+
+::: {.callout-caution collapse="true"}
+# Case file: Herbal Supplements
+overview
+why would you use forensics for this?
+what they use for fingerprinting
+original paper/data
+:::
+
+::: {.callout-caution collapse="true"}
+# Case file: Toxic Mushrooms
+overview
+why would you use forensics for this?
+what they use for fingerprinting
+original paper/data
+:::
+
+## Part 2
+
+What are the samples? Are the samples what they are claimed to be? (use BOLD)
+
+## Part 3
+
+Verify sample identity (use GenBank)
+
+## Part 4
+
+parrots: are the eggs endangered?
+
+fish: are the fish endangered?
+
+plants: are the plants toxic?
