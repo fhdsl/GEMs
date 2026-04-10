@@ -1,5 +1,5 @@
 ---
-title: "**Title_Student Guide**"
+title: "**DNA Barcoding and Forensics_Student Guide**"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
@@ -7,16 +7,20 @@ format:
     html: default
 ---
 
+This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with real data from several forensic investigations in order to identify species based on a small fragment of DNA.
+
 ## Part 1
 
-What is DNA fingerprinting?
+In Part 1, we'll go over some background context for this activity. Then, you'll choose which case file you want to investigate.
+
+### What is DNA fingerprinting?
 
 DNA fingerprinting and forensics
 
-Expand each case file.
+Expand each case file to learn more about how DNA fingerprinting has been used in forensic investigations.
 
 ::: {.callout-caution collapse="true"}
-# Case File: Parrot Smuggling
+# Case File: Suspected Parrot Smuggling
 
 overview
 why would you use forensics for this?
@@ -25,7 +29,7 @@ original paper/data
 :::
 
 ::: {.callout-caution collapse="true"}
-# Case file: Fish Market
+# Case file: Fish Market Fraud
 
 overview
 why would you use forensics for this?
@@ -34,7 +38,7 @@ original paper/data
 :::
 
 ::: {.callout-caution collapse="true"}
-# Case file: Herbal Supplements
+# Case file: Livestock Necropsy/ Accidental Plant Poisoning?
 overview
 why would you use forensics for this?
 what they use for fingerprinting
@@ -42,7 +46,7 @@ original paper/data
 :::
 
 ::: {.callout-caution collapse="true"}
-# Case file: Toxic Mushrooms
+# Case file: Mushroom Market Fraud
 overview
 why would you use forensics for this?
 what they use for fingerprinting
