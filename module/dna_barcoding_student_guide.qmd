@@ -13,16 +13,38 @@ This activity explores forensic uses of DNA barcoding and DNA reference datasets
 
 In Part 1, we'll go over some background context for this activity. Then, you'll choose which case file you want to investigate.
 
-### What is DNA fingerprinting?
+### What is DNA barcoding?
 
-DNA fingerprinting and forensics
+**DNA barcoding** is a technique that involves sequencing a small piece of DNA in order to determine an organism's species identity. The **DNA barcode** is a short (400-800 bp in length) section of the genome that is highly variable and can be used to reliably distinguish one species from another. Although the gold standard for species identification is typically based on an individual's appearance, or morphology, this method isn't always possible in forensic investigations. For example, an investigator may be asked to identify only a small part of an organism, or be given a sample of plant matter that has been partly digested. DNA barcoding can provide identity when morphology fails.
 
-Expand each case file to learn more about how DNA fingerprinting has been used in forensic investigations.
+<!-- add references! -->
+
+DNA barcoding is only as accurate as the reference database you use... 
+
+### What makes a good DNA barcoding region?
+
+
+
+
+Sometimes the DNA barcode can't perfectly identify to species....
+
+::: callout-tip
+
+DNA barcoding vs DNA fingerprinting
+
+:::
+
+Expand each case file to learn more about how DNA fingerprinting has been used in forensic investigations. Pick one of these datasets to use in Parts 2, 3, and 4.
 
 ::: {.callout-caution collapse="true"}
 # Case File: Suspected Parrot Smuggling
 
-overview
+In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves et al. detail a forensic investigation of a potential animal smuggling incident. This is their brief overview of the case:
+
+> Here we report a case from 2003 of a man who was arrested at Recife International Airport in Brazil carrying 58 unhatched avian eggs and intending to fly to Europe. The eggs were packed around his abdomen to keep them alive during the trip. The police were already investigating him, and during this trip to Brazil he visited various states where he could have acquired the eggs. When arrested, he claimed that they were quail eggs, but their external morphology did not support his claim. The embryos never hatched; thus, it was not possible to identify them based on their morphology. However, the external morphology of the eggs and embryos suggested that they were from parrots.
+
+This is an excellent situation for DNA barcoding! Many bird eggs look alike and can't easily be identified to species level.
+
 why would you use forensics for this?
 what they use for fingerprinting
 original paper/data
