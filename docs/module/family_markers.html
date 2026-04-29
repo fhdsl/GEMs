@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-04-29">
 
 <title>Family Markers: Using Multiply-Affected Families to Identify Risk Genes – GEMs</title>
 <style>
@@ -40,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ed461e1afb6a4e5f5371742e95fc51e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-06d14a085bd48a55215ce052b3a2a528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -158,6 +159,12 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 29, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -179,7 +186,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>This activity teaches students to interpret pedigree information and use bioinformatics tools (R) to build pedigrees for tracking disease traits in families. Students will work with real data from a bipolar disorder genetics study to understand how researchers understand risk genes using pedigrees.</p>
-<p><strong>Duration:</strong> Approximately 2-3 hours (depending on student familiarity with R) (<a href="https://forms.gle/pgvLDMChG19pGjCq7">help us improve this estimate!</a>)</p>
+<p><strong>Duration:</strong> Approximately 1.5 - 2 hours (estimated with community college students) (<a href="https://forms.gle/pgvLDMChG19pGjCq7">help us improve this estimate!</a>)</p>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
@@ -223,6 +230,20 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/family_markers_student_guide.docx">Word (docx)</a></li>
 <li><a href="https://docs.google.com/document/d/1PBGugINV2mOrq-knq5MXPOC-WcQSxnMA/edit?usp=sharing&amp;ouid=116032995747974603894&amp;rtpof=true&amp;sd=true">Google Doc</a></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Instructors have mentioned this works well as an <strong>in-class</strong> activity, compared to an independent modality such as assigned homework.</p>
+<p>You might have students work in teams with one doing the code and the other following the instructions</p>
+</div>
+</div>
 <p>Students will need RStudio, data, and the R package: <code>kinship2</code>. This means either:</p>
 <ul>
 <li>A device with an internet connection for this activity as written (using Posit Cloud), access to the data hosted at https://genomicseducation.org/data/pedigree_data.csv.</li>
@@ -244,6 +265,19 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <li><p>NMDA Receptors: Glutamate receptors crucial for memory and learning; blocked by substances like alcohol and ketamine</p></li>
 <li><p>DAO Gene: D-amino acid oxidase gene identified as significantly associated with bipolar disorder risk</p></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Students might struggle with the question, “Many individuals are missing diagnoses, genotypes, or both. Why do you think that might be the case?” Encourage them to think critically and consider ethics here!</p>
+</div>
+</div>
 </section>
 <section id="outline" class="level2">
 <h2 class="anchored" data-anchor-id="outline">Outline</h2>

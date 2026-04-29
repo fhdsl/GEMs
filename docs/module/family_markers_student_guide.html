@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-03-17">
+<meta name="dcterms.date" content="2026-04-29">
 
 <title>Family Markers: Using Multiply-Affected Families to Identify Risk Genes – GEMs</title>
 <style>
@@ -96,7 +96,7 @@ div.csl-indent {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ed461e1afb6a4e5f5371742e95fc51e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-06d14a085bd48a55215ce052b3a2a528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -232,7 +232,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2026</p>
+      <p class="date">April 29, 2026</p>
     </div>
   </div>
   
@@ -337,6 +337,19 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <p>Next, we will load the package so it’s ready to use:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kinship2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You might see a message like <code>Warning: kinship2 package is deprecated for R &lt;= 4.5; switch functionality to Pedixplorer from BioConductor</code>. This is not a problem, and you can still proceed!</p>
+</div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -474,7 +487,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <ol type="1">
 <li><p>Why might we want to install add-on packages in R?</p></li>
 <li><p>How can we confirm that our data loaded correctly?</p></li>
-<li><p>Looking at the description and contents of the <code>bipolar</code> and <code>depression</code> columns, what do you think the column <code>diagnosis_available</code> represents?</p></li>
+<li><p>Looking at the description and contents of the <code>bipolar</code> and <code>depression</code> columns, what do you think the column <code>diagnosis_available</code> represents? Take a screenshot that shows this column.</p></li>
 </ol>
 </div>
 </div>
@@ -561,8 +574,8 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>How many generations were assessed in this pedigree?</p></li>
-<li><p>How many male individuals and how many female individuals are present?</p></li>
+<li><p>How many generations were assessed in this pedigree? Take a screenshot and label them.</p></li>
+<li><p>How many male individuals and how many female individuals are present? Take a screenshot and label them.</p></li>
 </ol>
 </div>
 </div>
@@ -624,8 +637,8 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>What is the diagnosis for individual 9? Individual 10?</p></li>
-<li><p>What is the diagnosis for individual 12?</p></li>
+<li><p>What is the diagnosis for individual 9? Individual 10? Take a screenshot and circle these individuals.</p></li>
+<li><p>What is the diagnosis for individual 12? Take a screenshot and circle this individual.</p></li>
 </ol>
 </div>
 </div>
@@ -707,7 +720,7 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>We already know that DAO is the gene of interest. Why is DAO a better match for the diagnosis based on the pedigree?</p></li>
+<li><p>We already know that DAO is the gene of interest. Why is DAO a better match than IL6 for the diagnosis (based on the pedigree)?</p></li>
 <li><p>How many copies of the DAO variant do you think are necessary to cause bipolar disorder?</p></li>
 <li><p>Many individuals are missing diagnoses, genotypes, or both. Why do you think that might be the case?</p></li>
 <li><p>What could be done to add more certainty to our conclusions? More genotyping, more diagnostics, or more genes collected?</p></li>
