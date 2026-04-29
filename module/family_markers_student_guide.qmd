@@ -81,6 +81,12 @@ Next, we will load the package so it's ready to use:
 library(kinship2)
 ```
 
+::: callout-note
+# Note
+
+You might see a message like `Warning: kinship2 package is deprecated for R <= 4.5; switch functionality to Pedixplorer from BioConductor`. This is not a problem, and you can still proceed!
+:::
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_61#slide=id.g357ffc10808_0_61")
 ```
