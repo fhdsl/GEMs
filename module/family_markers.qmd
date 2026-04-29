@@ -1,6 +1,8 @@
 ---
 title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
@@ -62,14 +64,14 @@ Students will need RStudio, data, and the R package: `kinship2`. This means eith
 
 Instructors have mentioned this works well as an **in-class** activity, compared to an independent modality such as assigned homework.
 
-You might have students work in teams with one doing the code and the other following the instructions
+You might have students work in teams with one doing the code and the other following the instructions.
 :::
 
 ### Instructor Materials
 
 A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?usp=sharing).
 
-An answer key is available [here](https://docs.google.com/document/d/13sftVTyWNY7Rya1D39doqlBG2_yqtC0o/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+An answer key is available [here](https://docs.google.com/document/d/1kPMygksOgVh5n7UUkETU4vX1TCekbQWA/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
 
 ## Scientific Topics
 
@@ -89,12 +91,18 @@ The activity is based a [published research study](https://www.nature.com/articl
 Students might struggle with the question, "Many individuals are missing diagnoses, genotypes, or both. Why do you think that might be the case?" Encourage them to think critically and consider ethics here!
 :::
 
+::: {.callout-note}
+## Note
+
+You might also wish to include a discussion of genetic sex versus gender expression. There is growing awareness of the nonbinary nature of sex and gender, as well as respect for the importance in clinical settings of a person's self-identified gender and sexuality  [@Bennett2022]. For example, more inclusive pedigrees might use shapes that align with gender expression, while noting biological sex (such as assigned female at birth, or AFAB) underneath.
+:::
+
 ## Outline
 
--   Part 1: Background and Setup (30-45 minutes)
+-   Part 1: Background and Setup (20-25 minutes)
 
--   Part 2: Basic Pedigree Construction (20-30 minutes)
+-   Part 2: Basic Pedigree Construction (20-25 minutes)
 
--   Part 3: Adding Diagnostic Information (15-20 minutes)
+-   Part 3: Adding Diagnostic Information (15 minutes)
 
 -   Part 4: Genotype Mapping and Analysis (30-40 minutes)

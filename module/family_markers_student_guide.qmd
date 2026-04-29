@@ -163,7 +163,7 @@ Take a look at the column names. Compare these to the data dictionary below to i
 
 1.  Why might we want to install add-on packages in R?
 
-2.  How can we confirm that our data loaded correctly?
+2.  How can we confirm that our data loaded correctly? Take a screenshot and point to your evidence.
 
 3.  Looking at the description and contents of the `bipolar` and `depression` columns, what do you think the column `diagnosis_available` represents? Take a screenshot that shows this column.
 :::
