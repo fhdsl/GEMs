@@ -1,5 +1,6 @@
 ---
 title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
     html: default
 ---
@@ -56,7 +57,7 @@ You can use this module in several formats. Feel free to adapt to your needs!
 
 Instructors have mentioned this works well as an **in-class** activity, compared to an independent modality such as assigned homework.
 
-You might have students work in teams, with one doing the code and the other following the instructions.
+You might have students work in teams with one doing the code and the other following the instructions
 :::
 
 Students will need RStudio, data, and the R package: `kinship2`. This means either:
