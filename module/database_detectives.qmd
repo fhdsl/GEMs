@@ -1,5 +1,6 @@
 ---
 title: "Database Detectives: Exploring Public Genomic Databases"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
     html: default
 ---
