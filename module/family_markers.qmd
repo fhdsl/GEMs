@@ -52,6 +52,11 @@ You can use this module in several formats. Feel free to adapt to your needs!
 -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/family_markers_student_guide.docx)
 -   [Google Doc](https://docs.google.com/document/d/1PBGugINV2mOrq-knq5MXPOC-WcQSxnMA/edit?usp=sharing&ouid=116032995747974603894&rtpof=true&sd=true)
 
+Students will need RStudio, data, and the R package: `kinship2`. This means either:
+
+-   A device with an internet connection for this activity as written (using Posit Cloud), access to the data hosted at https://genomicseducation.org/data/pedigree_data.csv.
+-   A local installation of R or RStudio, the ability to install the `kinship2` package, and downloaded data from https://genomicseducation.org/data/pedigree_data.csv. Instructors are welcome to download the data and provide it via email or an LMS system if desired.
+
 ::: {.callout-tip}
 ## Instructor Tip
 
@@ -59,11 +64,6 @@ Instructors have mentioned this works well as an **in-class** activity, compared
 
 You might have students work in teams with one doing the code and the other following the instructions
 :::
-
-Students will need RStudio, data, and the R package: `kinship2`. This means either:
-
--   A device with an internet connection for this activity as written (using Posit Cloud), access to the data hosted at https://genomicseducation.org/data/pedigree_data.csv.
--   A local installation of R or RStudio, the ability to install the `kinship2` package, and downloaded data from https://genomicseducation.org/data/pedigree_data.csv. Instructors are welcome to download the data and provide it via email or an LMS system if desired.
 
 ### Instructor Materials
 
