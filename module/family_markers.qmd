@@ -1,6 +1,8 @@
 ---
 title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
@@ -62,7 +64,7 @@ Students will need RStudio, data, and the R package: `kinship2`. This means eith
 
 Instructors have mentioned this works well as an **in-class** activity, compared to an independent modality such as assigned homework.
 
-You might have students work in teams with one doing the code and the other following the instructions
+You might have students work in teams with one doing the code and the other following the instructions.
 :::
 
 ### Instructor Materials
@@ -82,6 +84,8 @@ The activity is based a [published research study](https://www.nature.com/articl
 -   NMDA Receptors: Glutamate receptors crucial for memory and learning; blocked by substances like alcohol and ketamine
 
 -   DAO Gene: D-amino acid oxidase gene identified as significantly associated with bipolar disorder risk
+
+-   You might also wish to include a discussion of genetic sex versus gender expression. There is growing awareness of the nonbinary nature of sex and gender, as well as respect for the importance in clinical settings of a person's self-identified gender and sexuality  [@Bennett2022]. For example, more inclusive pedigrees might use shapes that align with gender expression, while noting biological sex (such as assigned female at birth, or AFAB) underneath.
 
 ::: {.callout-tip}
 ## Instructor Tip
