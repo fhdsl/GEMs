@@ -1,5 +1,8 @@
 ---
 title: "**Family Markers: Using Multiply-Affected Families to Identify Risk Genes**"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
 format:
     html: default
 ---
@@ -12,7 +15,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 
 This activity teaches students to interpret pedigree information and use bioinformatics tools (R) to build pedigrees for tracking disease traits in families. Students will work with real data from a bipolar disorder genetics study to understand how researchers understand risk genes using pedigrees.
 
-**Duration:** Approximately 2-3 hours (depending on student familiarity with R) ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
+**Duration:** Approximately 1.5 - 2 hours (estimated with community college students) ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
 
 ## Learning Objectives
 
@@ -56,11 +59,19 @@ Students will need RStudio, data, and the R package: `kinship2`. This means eith
 -   A device with an internet connection for this activity as written (using Posit Cloud), access to the data hosted at https://genomicseducation.org/data/pedigree_data.csv.
 -   A local installation of R or RStudio, the ability to install the `kinship2` package, and downloaded data from https://genomicseducation.org/data/pedigree_data.csv. Instructors are welcome to download the data and provide it via email or an LMS system if desired.
 
+::: {.callout-tip}
+## Instructor Tip
+
+Instructors have mentioned this works well as an **in-class** activity, compared to an independent modality such as assigned homework.
+
+You might have students work in teams with one doing the code and the other following the instructions.
+:::
+
 ### Instructor Materials
 
 A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?usp=sharing).
 
-An answer key is available [here](https://docs.google.com/document/d/1KcX30s2fYzFw16boGVO4MlhSAA2Pr3OzqwmndeO043U/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+An answer key is available [here](https://docs.google.com/document/d/1kPMygksOgVh5n7UUkETU4vX1TCekbQWA/edit?usp=sharing). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
 
 ## Scientific Topics
 
@@ -74,12 +85,24 @@ The activity is based a [published research study](https://www.nature.com/articl
 
 -   DAO Gene: D-amino acid oxidase gene identified as significantly associated with bipolar disorder risk
 
+::: {.callout-tip}
+## Instructor Tip
+
+Students might struggle with the question, "Many individuals are missing diagnoses, genotypes, or both. Why do you think that might be the case?" Encourage them to think critically and consider ethics here!
+:::
+
+::: {.callout-note}
+## Note
+
+You might also wish to include a discussion of genetic sex versus gender expression. There is growing awareness of the nonbinary nature of sex and gender, as well as respect for the importance in clinical settings of a person's self-identified gender and sexuality  [@Bennett2022]. For example, more inclusive pedigrees might use shapes that align with gender expression, while noting biological sex (such as assigned female at birth, or AFAB) underneath.
+:::
+
 ## Outline
 
--   Part 1: Background and Setup (30-45 minutes)
+-   Part 1: Background and Setup (20-25 minutes)
 
--   Part 2: Basic Pedigree Construction (20-30 minutes)
+-   Part 2: Basic Pedigree Construction (20-25 minutes)
 
--   Part 3: Adding Diagnostic Information (15-20 minutes)
+-   Part 3: Adding Diagnostic Information (15 minutes)
 
 -   Part 4: Genotype Mapping and Analysis (30-40 minutes)

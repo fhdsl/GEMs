@@ -81,6 +81,12 @@ Next, we will load the package so it's ready to use:
 library(kinship2)
 ```
 
+::: callout-note
+# Note
+
+You might see a message like `Warning: kinship2 package is deprecated for R <= 4.5; switch functionality to Pedixplorer from BioConductor`. This is not a problem, and you can still proceed!
+:::
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g357ffc10808_0_61#slide=id.g357ffc10808_0_61")
 ```
@@ -157,9 +163,9 @@ Take a look at the column names. Compare these to the data dictionary below to i
 
 1.  Why might we want to install add-on packages in R?
 
-2.  How can we confirm that our data loaded correctly?
+2.  How can we confirm that our data loaded correctly? Take a screenshot and point to your evidence.
 
-3.  Looking at the description and contents of the `bipolar` and `depression` columns, what do you think the column `diagnosis_available` represents?
+3.  Looking at the description and contents of the `bipolar` and `depression` columns, what do you think the column `diagnosis_available` represents? Take a screenshot that shows this column.
 :::
 
 ## Part 2
@@ -211,9 +217,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 ::: callout-note
 ## Check Your Knowledge
 
-1.  How many generations were assessed in this pedigree?
+1.  How many generations were assessed in this pedigree? Take a screenshot and label them.
 
-2.  How many male individuals and how many female individuals are present?
+2.  How many male individuals and how many female individuals are present? Take a screenshot and label them.
 :::
 
 ## Part 3
@@ -255,9 +261,9 @@ pedigree.legend(bipolar_pedigree, location = "topleft", radius = .2)
 ::: callout-note
 ## Check Your Knowledge
 
-1.  What is the diagnosis for individual 9? Individual 10?
+1.  What is the diagnosis for individual 9? Individual 10? Take a screenshot and circle these individuals.
 
-2.  What is the diagnosis for individual 12?
+2.  What is the diagnosis for individual 12? Take a screenshot and circle this individual.
 :::
 
 ## Part 4
@@ -299,7 +305,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 ::: callout-note
 ## Check Your Knowledge
 
-1.  We already know that DAO is the gene of interest. Why is DAO a better match for the diagnosis based on the pedigree?
+1.  We already know that DAO is the gene of interest. Why is DAO a better match than IL6 for the diagnosis (based on the pedigree)?
 
 2.  How many copies of the DAO variant do you think are necessary to cause bipolar disorder?
 

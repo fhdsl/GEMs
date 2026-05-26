@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-04-29">
 
 <title>Family Markers: Using Multiply-Affected Families to Identify Risk Genes – GEMs</title>
 <style>
@@ -20,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ed461e1afb6a4e5f5371742e95fc51e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-06d14a085bd48a55215ce052b3a2a528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -158,6 +179,12 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 29, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -179,7 +206,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>This activity teaches students to interpret pedigree information and use bioinformatics tools (R) to build pedigrees for tracking disease traits in families. Students will work with real data from a bipolar disorder genetics study to understand how researchers understand risk genes using pedigrees.</p>
-<p><strong>Duration:</strong> Approximately 2-3 hours (depending on student familiarity with R) (<a href="https://forms.gle/pgvLDMChG19pGjCq7">help us improve this estimate!</a>)</p>
+<p><strong>Duration:</strong> Approximately 1.5 - 2 hours (estimated with community college students) (<a href="https://forms.gle/pgvLDMChG19pGjCq7">help us improve this estimate!</a>)</p>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
@@ -228,11 +255,25 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <li>A device with an internet connection for this activity as written (using Posit Cloud), access to the data hosted at https://genomicseducation.org/data/pedigree_data.csv.</li>
 <li>A local installation of R or RStudio, the ability to install the <code>kinship2</code> package, and downloaded data from https://genomicseducation.org/data/pedigree_data.csv. Instructors are welcome to download the data and provide it via email or an LMS system if desired.</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Instructors have mentioned this works well as an <strong>in-class</strong> activity, compared to an independent modality such as assigned homework.</p>
+<p>You might have students work in teams with one doing the code and the other following the instructions.</p>
+</div>
+</div>
 </section>
 <section id="instructor-materials" class="level3">
 <h3 class="anchored" data-anchor-id="instructor-materials">Instructor Materials</h3>
 <p>A Google Slides presentation is available for borrowing images <a href="https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?usp=sharing">here</a>.</p>
-<p>An answer key is available <a href="https://docs.google.com/document/d/1KcX30s2fYzFw16boGVO4MlhSAA2Pr3OzqwmndeO043U/edit?usp=sharing">here</a>. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.</p>
+<p>An answer key is available <a href="https://docs.google.com/document/d/1kPMygksOgVh5n7UUkETU4vX1TCekbQWA/edit?usp=sharing">here</a>. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.</p>
 </section>
 </section>
 <section id="scientific-topics" class="level2">
@@ -244,20 +285,51 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <li><p>NMDA Receptors: Glutamate receptors crucial for memory and learning; blocked by substances like alcohol and ketamine</p></li>
 <li><p>DAO Gene: D-amino acid oxidase gene identified as significantly associated with bipolar disorder risk</p></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Students might struggle with the question, “Many individuals are missing diagnoses, genotypes, or both. Why do you think that might be the case?” Encourage them to think critically and consider ethics here!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You might also wish to include a discussion of genetic sex versus gender expression. There is growing awareness of the nonbinary nature of sex and gender, as well as respect for the importance in clinical settings of a person’s self-identified gender and sexuality <span class="citation" data-cites="Bennett2022"><a href="#ref-Bennett2022" role="doc-biblioref">[1]</a></span>. For example, more inclusive pedigrees might use shapes that align with gender expression, while noting biological sex (such as assigned female at birth, or AFAB) underneath.</p>
+</div>
+</div>
 </section>
 <section id="outline" class="level2">
 <h2 class="anchored" data-anchor-id="outline">Outline</h2>
 <ul>
-<li><p>Part 1: Background and Setup (30-45 minutes)</p></li>
-<li><p>Part 2: Basic Pedigree Construction (20-30 minutes)</p></li>
-<li><p>Part 3: Adding Diagnostic Information (15-20 minutes)</p></li>
+<li><p>Part 1: Background and Setup (20-25 minutes)</p></li>
+<li><p>Part 2: Basic Pedigree Construction (20-25 minutes)</p></li>
+<li><p>Part 3: Adding Diagnostic Information (15 minutes)</p></li>
 <li><p>Part 4: Genotype Mapping and Analysis (30-40 minutes)</p></li>
 </ul>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-Bennett2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">R. L. Bennett, K. S. French, R. G. Resta, and J. Austin, <span>“Practice resource-focused revision: Standardized pedigree nomenclature update centered on sex and gender inclusivity: A practice resource of the national society of genetic counselors,”</span> <em>Journal of Genetic Counseling</em>, vol. 31, no. 6, pp. 1238–1248, 2022, doi: <a href="https://doi.org/10.1002/jgc4.1621">https://doi.org/10.1002/jgc4.1621</a>. Available: <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jgc4.1621">https://onlinelibrary.wiley.com/doi/abs/10.1002/jgc4.1621</a></div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
