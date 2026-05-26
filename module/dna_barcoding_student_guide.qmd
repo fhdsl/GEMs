@@ -39,12 +39,11 @@ You may have heard of a technique called DNA fingerprinting. While similar to DN
 
 In 2015, the New York Attorney General temporarily halted the sale of store-brand herbal supplements from GNC, Target, Walgreens and Walmart after an investigation revealed many of these supplements did not contain any quantity of the herbs on their labels. This investigation was prompted by a 2013 New York Times article entitled "Herbal Supplements Are Not What They Seem" and reviewed research by a group of Canadian scientists that used DNA barcoding to examine whether the ingredients on the labels of herbal supplements matched the ingredients inside the capsules. The NY AG and the companies reached an agreement to resume sales, with the companies promising to implement reforms and prominently announce in stores and on its website if a supplement product was derived from whole herbs or extracts.
 
-In 2018, inspired by these events and other research suggesting ingredient mismatch was still common, two reseachers and three high schoolers from the Urban Barcode Research Program published a study examining whether herbal medicinal products bought online contained what their labels said they contained. The Urban Barcode Research Program is a science education initiative based in New York City that connects high school students with researchers to do biodiversity studies in the city. These students were particularly interested in this research question because they belonged to communities where herbal supplements and herbal medicine were commonly used.
+In 2018, inspired by these events and other research suggesting ingredient mismatch was still common, two researchers and three high schoolers from the Urban Barcode Research Program published a study examining whether herbal medicinal products bought online contained what their labels said they contained. The Urban Barcode Research Program is a science education initiative based in New York City that connects high school students with researchers to do biodiversity studies in the city. These students were particularly interested in this research question because they belonged to communities where herbal supplements and herbal medicine were commonly used.
 
 This type of forensic DNA activity is a type of _pharmacovigilance_ research.
 
 You can read more about the students' study here.
-
 >Molina J, Sherpa C, Ng J, Sonam T, Stuhr N. DNA Barcoding of Online Herbal Supplements: Crowd-sourcing Pharmacovigilance in High School. Open Life Sci. 2018 Apr 6;13:48-55. doi: 10.1515/biol-2018-0007. PMID: 33817067; PMCID: PMC7874675.
 
 ::: callout.tip
@@ -66,6 +65,8 @@ In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves 
 > Here we report a case from 2003 of a man who was arrested at Recife International Airport in Brazil carrying 58 unhatched avian eggs and intending to fly to Europe. The eggs were packed around his abdomen to keep them alive during the trip. The police were already investigating him, and during this trip to Brazil he visited various states where he could have acquired the eggs. When arrested, he claimed that they were quail eggs, but their external morphology did not support his claim. The embryos never hatched; thus, it was not possible to identify them based on their morphology. However, the external morphology of the eggs and embryos suggested that they were from parrots.
 
 This is an excellent situation for DNA barcoding! Many bird eggs look alike and can't easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law.
+
+WHAT REGION THEY USE FOR FINGERPRINTING IN PARROTS
 
 You can read more about the study here.
 >Gonçalves PF, Oliveira-Marques AR, Matsumoto TE, Miyaki CY. DNA Barcoding Identifies Illegal Parrot Trade. J Hered. 2015;106 Suppl 1:560-4. doi: 10.1093/jhered/esv035. PMID: 26245790.
