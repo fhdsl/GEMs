@@ -66,36 +66,13 @@ In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves 
 
 This is an excellent situation for DNA barcoding! Many bird eggs look alike and can't easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law.
 
-WHAT REGION THEY USE FOR FINGERPRINTING IN PARROTS
-
 You can read more about the study here.
 >Gonçalves PF, Oliveira-Marques AR, Matsumoto TE, Miyaki CY. DNA Barcoding Identifies Illegal Parrot Trade. J Hered. 2015;106 Suppl 1:560-4. doi: 10.1093/jhered/esv035. PMID: 26245790.
+
+## What barcoding gene do they use for birds?
+
 :::
 
-::: {.callout-caution collapse="true"}
-# Case file: Fish Market Fraud
-
-overview
-why would you use forensics for this?
-what they use for fingerprinting
-original paper/data
-:::
-
-::: {.callout-caution collapse="true"}
-# Case file: Livestock Necropsy/ Accidental Plant Poisoning?
-overview
-why would you use forensics for this?
-what they use for fingerprinting
-original paper/data
-:::
-
-::: {.callout-caution collapse="true"}
-# Case file: Mushroom Market Fraud
-overview
-why would you use forensics for this?
-what they use for fingerprinting
-original paper/data
-:::
 
 ## Part 2: What organism do your samples come from?
 
