@@ -140,7 +140,7 @@ ADD SAMPLE LINKS
 ::: {.callout-caution collapse="true"}
 # Case File: Suspected Parrot Smuggling
 
-Following the instructions from above, use the BOLD website to identify these three samples, then answer the questions.
+Following the instructions from above, use the BOLD website to identify these three samples, then answer the questions. **Make sure to choose the ANIMAL LIBRARY (PUBLIC) database.**
 
 The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitochondrial gene that is popular for barcoding work among animals, as it shows high variability between many species but low variability among individuals within a species. 
 
