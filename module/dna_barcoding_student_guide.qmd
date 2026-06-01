@@ -1,0 +1,266 @@
+---
+title: "**DNA Barcoding and Forensics_Student Guide**"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with real data from several forensic investigations in order to identify species based on a small fragment of DNA.
+
+## Part 1
+
+In Part 1, we'll go over some background context for this activity. Then, you'll choose which case file you want to investigate.
+
+### What is DNA barcoding?
+
+**DNA barcoding** is a technique that involves sequencing a small piece of DNA in order to determine an organism's species identity. The **DNA barcode** is a short (400-800 bp in length) section of the genome that is highly variable and can be used to reliably distinguish one species from another. Although the gold standard for species identification is typically based on an individual's appearance, or morphology, this method isn't always possible in forensic investigations. For example, an investigator may be asked to identify only a small part of an organism, or be given a sample of plant matter that has been partly digested. DNA barcoding can provide identity when morphology fails.
+
+However, DNA barcoding is only as accurate as the reference database you use. Sometimes a sample cannot be identified because the reference database doesn't happen to include a known representative of that species. 
+
+### What makes a good DNA barcoding region?
+
+Not all genomes regions are useful for barcoding. A good DNA barcoding region need to have enough variation among species so that the species are distinguishable, but it also needs to have very low variation among members of the same species (so that a single reference barcode can match fairly closely to all individuals within a species). Additionally, the barcoding region has to have highly-conserved flanking regions (that is, regions next to the barcode with very little variation) so that researchers can use a common set of PCR primers to analyze a wide variety of species.  
+
+Unfortunately, no single barcoding region exists that can be used universally across all biological life. Thus, researchers use different barcoding regions for animals, plants, fungi, or bacteria. Researchers may also use a variety of barcoding regions within these groups to answer particular questions or to deal with varying sample quality.
+
+::: callout-tip
+
+You may have heard of a technique called DNA fingerprinting. While similar to DNA barcoding, there are several important differences between the two techniques. 
+
+**Region of DNA**: The DNA barcoding technique amplifies a single, highly variable region of DNA that is 400-800 base pairs long. DNA fingerprinting, on the other hand, amplifies multiple DNA regions called _variable number tandem repeats_, or VNTRs. These regions are 10-100 base pairs in length. There are many VNTR regions scattered throughout the genome. It is common to examine at least 13 different VNTR regions in a DNA fingerprinting analysis.
+
+**Level of identification**: DNA barcoding is used to identify the species of a sample, while DNA fingerprinting identifies an individual organism. The larger number of shorter variable DNA regions allows researchers to be more precise when determining the individual a sample comes from.
+
+:::
+
+## Case Study: Identifying ingredients in over-the-counter herbal supplements
+
+In 2015, the New York Attorney General temporarily halted the sale of store-brand herbal supplements from GNC, Target, Walgreens and Walmart after an investigation revealed many of these supplements did not contain any quantity of the herbs on their labels. This investigation was prompted by a 2013 New York Times article entitled "Herbal Supplements Are Not What They Seem" and reviewed research by a group of Canadian scientists that used DNA barcoding to examine whether the ingredients on the labels of herbal supplements matched the ingredients inside the capsules. The NY AG and the companies reached an agreement to resume sales, with the companies promising to implement reforms and prominently announce in stores and on its website if a supplement product was derived from whole herbs or extracts.
+
+In 2018, inspired by these events and other research suggesting ingredient mismatch was still common, two researchers and three high schoolers from the Urban Barcode Research Program published a study examining whether herbal medicinal products bought online contained what their labels said they contained. The Urban Barcode Research Program is a science education initiative based in New York City that connects high school students with researchers to do biodiversity studies in the city. These students were particularly interested in this research question because they belonged to communities where herbal supplements and herbal medicine were commonly used.
+
+This type of forensic DNA activity is a type of _pharmacovigilance_ research.
+
+You can read more about the students' study here.
+>Molina J, Sherpa C, Ng J, Sonam T, Stuhr N. DNA Barcoding of Online Herbal Supplements: Crowd-sourcing Pharmacovigilance in High School. Open Life Sci. 2018 Apr 6;13:48-55. doi: 10.1515/biol-2018-0007. PMID: 33817067; PMCID: PMC7874675.
+
+::: callout.tip
+
+In the United States, pharmaceuticals are regulated by the FDA under the authority of the Federal Food, Drug, and Cosmetic Act (FFDC). This law gives the US government the authority to oversee the safety of food, pharmaceuticals, medical devices, and cosmetics. In particular, the FFDC requires that food, pharmaceuticals, medical devices, and cosmetics be clearly and accurately labeled with their ingredients.
+
+However, herbal supplements and herbal medicinal products are not regulated in the same way as pharmaceuticals. These products are considered dietary supplements, which are regulated under the Dietary Supplement Health and Education Act. Products that fall under the purview of the Dietary Supplement Health and Education Act have much looser regulations around labeling, testing, and effectiveness. Although companies are required to verify that their dietary supplements are safe and accurately labeled, the FDA generally relies on an honor system.
+:::
+
+Pharmacovigilance is only one use of DNA barcoding in forensics! Expand each case file to learn more about how DNA fingerprinting has been used in forensic investigations.
+
+::: {.callout-caution collapse="true"}
+# Case File: Suspected Parrot Smuggling
+
+In Brazil, wildlife is considered the property of the Brazilian State and the commercial trade of wild animals is strictly controlled (Wildlife Protection Law; law no. 5197/1967). Anyone who catches, transports, keeps captive, or sells wild animals _without proper authorization_ can face fines and up to 6-12 months of prison time. These penalties increase if the wild animal is endangered or belongs to a migratory species, among other things (Environmental Crimes Law; law no. 9605/1998).
+
+In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves et al. detail a forensic investigation of a potential animal smuggling incident at an airport in Brazil. This is their brief overview of the case:
+
+> Here we report a case from 2003 of a man who was arrested at Recife International Airport in Brazil carrying 58 unhatched avian eggs and intending to fly to Europe. The eggs were packed around his abdomen to keep them alive during the trip. The police were already investigating him, and during this trip to Brazil he visited various states where he could have acquired the eggs. When arrested, he claimed that they were quail eggs, but their external morphology did not support his claim. The embryos never hatched; thus, it was not possible to identify them based on their morphology. However, the external morphology of the eggs and embryos suggested that they were from parrots.
+
+This is an excellent situation for DNA barcoding! Many bird eggs look alike and can't easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect).
+
+You can read more about the study here.
+>Gonçalves PF, Oliveira-Marques AR, Matsumoto TE, Miyaki CY. DNA Barcoding Identifies Illegal Parrot Trade. J Hered. 2015;106 Suppl 1:560-4. doi: 10.1093/jhered/esv035. PMID: 26245790.
+
+:::
+
+
+
+## Part 2: What organism do your samples come from?
+
+In our herbal medicine example, the students ordered products from online retailers and then amplified the DNA for DNA barcoding. One product they tested is Devil's Claw (also called grapple plant or wood spider), a member of the sesame plant family. This particular herb is native to southern Africa and is commonly taken as an anti-inflammatory, especially for low back pain. According to the packaging, this product should contain the species _Harpagophytum procumbens_.
+
+Let's explore the genomic sequence from the plant gene _rbcL_. This sequence is stored as a fasta file (pronounced "fast A"). This is a standard bioinformatics data file that stores information on two lines: a header line beginning with a greater-than symbol (">"), as well as a second line with the raw sequence data.
+
+
+Get the data at <https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta>.
+
+Next, open the Barcode ID website <https://id.boldsystems.org/>. This is an open database that you can use to search for a species match to your DNA barcode. The Barcode ID project was originally created as a searchable database for all animal species, but has expanded to other organisms like fungi and plants.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e7166b2ac9_0_0#slide=id.g3e7166b2ac9_0_0")
+```
+
+
+Scroll down to the images of all the possible sequence reference libraries that can be searched using BOLD. For the herbal medicine example, we're interested in identifying plants. Click on the box for the PLANT LIBRARY (PUBLIC). This particular database includes reference sequences from the gene regions _rcbL_, _matk_, and _ITS_. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_16#slide=id.g3e4fcb5031f_0_16")
+```
+
+
+Continue scrolling down and make sure that "Rapid Species Search" is selected. This is the quickest option and will only return IDs for sequences that are at least 94% the same as the sample.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_19#slide=id.g3e4fcb5031f_0_19")
+```
+
+
+Scroll down until you reach a gray box titled Upload FASTA file. This is where you actually submit your sample sequence. For this example, you will submit a sequence from the _rcbL_ barcode region for your putative devil's claw sample. 
+
+::: callout.tip
+
+The _rcbL_ (Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit) gene is located in the chloroplast genome and encodes a subunit of the Rubisco enzyme. You might remember from previous lessons on photosynthesis that the Rubisco enzyme plays a big part in fixing the carbon from carbon dioxide into glucose. Because it plays such an important role in a vital plant process, it's highly conserved and can be found in almost all plants!
+
+:::
+
+
+Paste the following sequence into the box:
+
+>putative_devils_claw_sample
+GAGTAACTCCTCAACCTGGAGTTCCGCCTGAAGAAGCAGGGGCCGCGGTAGCTGCCGAATCTTCTACTGGTACATGGACAACTGTGTGGACCGATGGACTTACCTCAACCTGGAGTTCCGCCTGAAGAAGCAGGGGCCGCGGTAGCTGCCGAATCTTCTACTGGTACATGGACAACTGTGTGGACCGATGGACTTACCAGCCTTGATCGTTACAAAGGGCGATGCTACCACATCGAGCCGGTTCCTGGAGAAACAGATCAATATATCTGTTATGTAGCTTACCCTTTAGACCTTTTTGAAGAAGGTTCTGTTACTAACATGTTTACTTCCATTGTAGGAAATGTATTTGGATTCAAAGCCCTGCGTGCTCTACGTCTGGAAGATCTGCGAATCCCTACTGCTTATATTAAAACTTTCCAAGGCCCGCCTCATGGGATCCAAGTTGAGAGAGATAAATTGAACAAGTATGGTCGTCCTCTGTTGGGATGTACTATTAAACCTAAATTGGGG
+
+You can also download this file at <https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta>.
+
+Once you have pasted the sequence, click Identify.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_22#slide=id.g3e4fcb5031f_0_22")
+```
+
+The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open. When the search is complete, the status bar will turn green, but there will still be a lag before you see the results. Just be patient!
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_0#slide=id.g3ec9ec989c2_0_0")
+```
+
+The Identification Engine - Result page takes a about a minute to fully load. The first section (Classification) will be empty - _this is totally normal_. Scroll down until you reach the Combined Hits section. 
+The results table is organized with the "best" sequence matches listed first. Each row in the table will include the Query ID (the name of the sample in your fasta file), taxonomic information, and the ID%, or percent identity. This is the percentage of your sample (query) that exactly matches a reference sample in the database.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_9#slide=id.g3ec9ec989c2_0_9")
+```
+
+::: {.callout-note}
+## Check Your Knowledge
+Two other herbal medicines the researchers tested were black cumin seeds and cat's claw, both which are also often taken as anti-inflammatory medication. Use the BOLD website to identify these additional two samples, then answer the questions.
+
+ADD SAMPLE LINKS
+
+1. According to your BOLD search, what is the species identity of the three herbal medicine samples (devil's claw, black cumin seed, and cat's claw)? What are the common names of these species?
+
+:::
+
+::: {.callout-caution collapse="true"}
+# Case File: Suspected Parrot Smuggling
+
+Following the instructions from above, use the BOLD website to identify these three samples, then answer the questions.
+
+The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitochondrial gene that is popular for barcoding work among animals, as it shows high variability between many species but low variability among individuals within a species. 
+
+Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_COI.fasta>
+Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_COI.fasta>
+Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
+
+1. According to your BOLD search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
+:::
+
+## Part 3: Verify sample identification
+
+Researchers will frequently sequence two different barcoding genes from a sample to increase their confidence in their species identification. The BOLD database, while quite useful, mostly focuses on curating reference data for a limited number of barcoding genes. Luckily, we can search other databases to check the species identity based on genes (or reference samples) not found in the BOLD database.
+
+For this section, you will use sequence from the ITS2 region.
+
+::: callout.tip
+
+ITS2 (Internal Transcribed Spacer 2) is a a short, highly variable segment of nuclear ribosomal DNA located between the 5.8S and 28S rRNA genes. ITS2 is not a gene, but this region of DNA can be found across animals, plants, and fungi.
+
+:::
+
+One of the most extensive genomic reference databases in the world is Genbank, which is maintained by the National Institutes of Health. We will use a tool called the Basic Local Alignment Search Tool (BLAST) to match the sample sequences to the reference database. 
+
+First, open [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi).
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_12#slide=id.g3ec9ec989c2_0_12")
+```
+
+Click on the "Nucleotide BLAST" image. This is the type of search you do when you have a nucleotide sequence and you want to compare it to other nucleotide sequences.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_21#slide=id.g3ec9ec989c2_0_21")
+```
+
+Paste the Following gene sequence (in fasta format) into the box.
+
+>barcoding_devils_claw_ITS2
+gtgtgaattg cagaatcccg tgaaccatcg agtctttgaa cgcaagttgc gcccgaagcc
+attaggccag ggcacgtctg cctgggcgtc acgcatcgcg tcgcccccct ccctcgtccc
+gatggggcag aaatggcgag ggggtggaca ttggcctccc gtgcgccggt gcgcgcggcc
+ggcccaaatg cgatcccgcg gtgatgctcg tcacgaccag tggtggttga acgctcaact
+cgcgtgctgt cgtgcgatgt ggcatcgtcc gctcgggcat catgtcgaac ccaaaggcgc
+gaagcgcttt cgaccgcgac cccaggtcag gcgggattac ccgctgagtt taagcatatc
+aataagcgga ggaaaagaaa cttacaagga ttcccctagt aacggcgagc gaaccgggaa
+tagcccaact tgagaatcgg gcggccccgc cgtccgaatt gna
+
+You can also download the file  at <https://genomicseducation.org/data/barcoding_devils_claw_ITS2.fasta>
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_24#slide=id.g3ec9ec989c2_0_24")
+```
+
+Scroll to the bottom of the page and click the BLAST button.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_24#slide=id.g3ec9ec989c2_0_24")
+```
+
+The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_30#slide=id.g3ec9ec989c2_0_30")
+```
+
+The results page will automatically open. Details about your job are on the top.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_33#slide=id.g3ec9ec989c2_0_33")
+```
+
+As you scroll down, you will see a list of potential reference sequences that match your sample. There are two values in particular that are helpful: query cover (the amount of overlap between your sample sequence and the reference sequence) and percent identity (abbreviated per. ident., the percentage of nucleotides in the sample sequence that match the reference sequence). The best-matching reference sequences will be at the top of the list. Click on the link for the best match.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_36#slide=id.g3ec9ec989c2_0_36")
+```
+
+BLAST will open a more detailed image comparing your sample sequence ("Query") and the possible matching reference ("Sbjct"). This allows you to look more closely at any regions that do not match between your sample and the reference sequence.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_27#slide=id.g3ec9ec989c2_0_27")
+```
+
+::: {.callout-note}
+## Check Your Knowledge
+Following the instructions from above, do a BLAST search on Genbank to identify the two additional herbal medicine samples, then answer the questions.
+
+2. According to your Genbank search, what is the species identity of herbal medicine samples 1, 2, and 3? What are the common names of these species?
+
+3. Do the species identities from the ITS2 Genbank search match the species identities from the _rbcL_ BOLD search?
+
+4. Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
+:::
+
+::: {.callout-caution collapse="true"}
+# Case File: Suspected Parrot Smuggling
+
+Following the instructions from above, do a BLAST search on Genbank to identify these three samples, then answer the questions.
+
+The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA. It is an excellent barcoding choice when working with samples that may be degraded or difficult to amplify.
+
+Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_16s.fasta>
+Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_16s.fasta>
+Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16s.fasta>
+
+2. According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
+
+3. Do the species identities from the 16S Genbank search match the species identities from the _COI_ BOLD search?
+
+4. Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?
+:::
