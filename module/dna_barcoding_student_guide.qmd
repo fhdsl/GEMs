@@ -251,9 +251,9 @@ Following the instructions from above, do a BLAST search on Genbank to identify 
 
 The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA. It is an excellent barcoding choice when working with samples that may be degraded or difficult to amplify.
 
-Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_16S.fasta>
-Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_16S.fasta>
-Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16S.fasta>
+Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_16s.fasta>
+Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_16s.fasta>
+Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16s.fasta>
 
 2. According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
 
