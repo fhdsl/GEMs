@@ -94,10 +94,48 @@ TODO: Add image
 
 ## Part 3: Verify sample identification
 
-## Part 4: Are the samples what we expect?
+Researchers will frequently sequence two different barcoding genes from a sample to increase their confidence in their species identification. The BOLD database, while quite useful, mostly focuses on curating reference data for a limited number of barcoding genes. Luckily, we can search other databases to check the species identity based on genes (or reference samples) not found in the BOLD database.
 
-parrots: do the eggs belong to endangered or migratory species?
+SOMETHING ABOUT THE ITS2 REGION SAMPLES
 
-fish: are the fish endangered?
+One of the most extensive genomic reference databases in the world is Genbank, which is maintained by the National Institutes of Health. We will use a tool called the Basic Local Alignment Search Tool (BLAST) to match the sample sequences to the reference database. 
 
-plants: are the plants toxic?
+First, open [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi).
+
+TODO: add image
+
+Click on the "Nucleotide BLAST" image. This is the type of search you do when you have a nucleotide sequence and you want to compare it to other nucleotide sequences.
+
+TODO: add image
+
+Paste the Following gene sequence (in fasta format) into the box.
+
+>barcoding_devils_claw_ITS2
+gtgtgaattg cagaatcccg tgaaccatcg agtctttgaa cgcaagttgc gcccgaagcc
+attaggccag ggcacgtctg cctgggcgtc acgcatcgcg tcgcccccct ccctcgtccc
+gatggggcag aaatggcgag ggggtggaca ttggcctccc gtgcgccggt gcgcgcggcc
+ggcccaaatg cgatcccgcg gtgatgctcg tcacgaccag tggtggttga acgctcaact
+cgcgtgctgt cgtgcgatgt ggcatcgtcc gctcgggcat catgtcgaac ccaaaggcgc
+gaagcgcttt cgaccgcgac cccaggtcag gcgggattac ccgctgagtt taagcatatc
+aataagcgga ggaaaagaaa cttacaagga ttcccctagt aacggcgagc gaaccgggaa
+tagcccaact tgagaatcgg gcggccccgc cgtccgaatt gna
+
+You can also download the file  at <https://genomicseducation.org/data/barcoding_devils_claw_ITS2.fasta>
+
+TODO: add image
+
+Scroll to the bottom of the page and click the BLAST button.
+
+TODO: add image
+
+The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open.
+
+TODO: add image
+
+The results page will automatically open. Details about your job are on the top.
+
+TODO: add image
+
+As you scroll down, you will see a list of potential matches 
+
+
