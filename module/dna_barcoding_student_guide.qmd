@@ -21,6 +21,9 @@ However, DNA barcoding is only as accurate as the reference database you use. So
 
 ### What makes a good DNA barcoding region?
 
+Not all genomes regions are useful for barcoding. A good DNA barcoding region need to have enough variation among species so that the species are distinguishable, but it also needs to have very low variation among members of the same species (so that a single reference barcode can match fairly closely to all individuals within a species). Additionally, the barcoding region has to have highly-conserved flanking regions (that is, regions next to the barcode with very little variation) so that researchers can use a common set of PCR primers to analyze a wide variety of species.  
+
+Unfortunately, no single barcoding region exists that can be used universally across all biological life. Thus, researchers use different barcoding regions for animals, plants, fungi, or bacteria. Researchers may also use a variety of barcoding regions within these groups to answer particular questions or to deal with varying sample quality.
 
 ::: callout-tip
 
