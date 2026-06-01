@@ -30,7 +30,9 @@ Click "Human" under "Browse/Select Species".
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
 ```
 
-You will be working from the Human Assembly **Dec. 2013 (GRCh38/hg38)**. Make sure this is selected under the "Find Position" dropdown menu. Enter **HOXA7** in Position/Search Term and select GO. 
+You will be working from the Human Assembly **Mar. 2006 (NCBI36/hg18)**. Make sure this is selected under the "Find Position" dropdown menu. We are using an older genome because it has more detail about epigenetic regulation.
+
+Enter **HOXA7** in Position/Search Term and select GO. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "December 2013 assembly is highlighted on the Find Position dropdown menu. HOXA7 has been typed in the search term.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_2#slide=id.g3e71c81166f_0_2")
@@ -46,7 +48,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbS
 
 Let's make this easier to look at.
 
-Under "Visible Tracks", select "Hide" under all the drop downs _except_ "NCBI RefSeq". Set this one to "Full".
+Under "Visible Tracks", select "Hide" under all the drop downs _except_ "UCSC Genes" and "NCBI RefSeq". Set these to "Pack" and "Full", respectively
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "...", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_19#slide=id.g3e71c81166f_0_19")
@@ -93,63 +95,43 @@ Now we’ll visualize histone marks to show that the same chromosome locus can h
 Scroll down to the "Regulation" menu and click the **Broad Histone** track hyperlink.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "The Broad Histone track hyperlink is highlighted.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_0_0")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_71#slide=id.g3e71c81166f_0_71")
 ```
 
-Scroll down and deselect all boxes.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Cell line and antibody combinations have been deselected.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_1_8")
-```
+Scroll down and deselect all boxes by clicking on the "-" sign next to "All".
 
 Select **H3K4me3** and **H3K27me3** marks for **H1-hESC** and **NHLF**. To learn more about these options you can click on their blue hyperlinks for more information. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Selected cell line and antibody combinations have been highlighted.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_0_9")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_78#slide=id.g3e71c81166f_0_78")
 ```
 
-<div class = "notice">
-**H3K4me3** is a known histone mark on Histone 3 (H3). It occurs on lysine 4 (K4) and has three methyl groups (me3) that indicate active gene expression. In other words, the DNA is open and ready to be accessed.
+::: callout-note
+- **H3K4me3** is a known histone mark on Histone 3 (H3). It occurs on lysine 4 (K4) and has three methyl groups (me3) that indicate active gene expression. In other words, the DNA is open and ready to be accessed.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Histone H3 (tri methyl K4). Marks promoters that are active or poised to be activated.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_1_18")
-```
+- **H3K27me3** is a known histone mark on on Histone 3 (H3). It occurs on lysine 27 (K27) and has three methyl groups (me3) that indicate inactive gene expression. In other words, the DNA is closed off and cannot be accessed.
 
-**H3K27me3** is a known histone mark on on Histone 3 (H3). It occurs on lysine 27 (K27) and has three methyl groups (me3) that indicate inactive gene expression. In other words, the DNA is closed off and cannot be accessed.
+- The **H1-hESC** cell line consists of embryonic stem cells.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Histone H3 (tri-methyl K27). Marks promoters that are silenced by Polycomb proteins in a given lineage; large domains are found at inactive developmental loci.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_1_22")
-```
-
-The **H1-hESC** cell line consists of embryonic stem cells.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "The table of statistics on H1-hESC cell line.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_53_0")
-```
-
-The **NHLF** cell line consists of lung fibroblasts. Fibroblasts are important for building the connective structures around cells and healing wounds.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "The table of statistics on NHLF cell line.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_1")
-```
-</div>
+- The **NHLF** cell line consists of lung fibroblasts. Fibroblasts are important for building the connective structures around cells and healing wounds.
+:::
 
 Scroll below and deselect the Peak views. You will only need Signal views. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Peak check boxes are highlighted.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_5")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_1_0#slide=id.g3e71c81166f_1_0")
 ```
 
 Your selected subtracks should only display Signal views as shown below. Click "Submit".
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Only Signal views are visible among subtracks. The Submit button is highlighted", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_13")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_1_13#slide=id.g3e71c81166f_1_13")
 ```
 
-Scroll down, and your browser should look like the image below. 
+Your browser should look like the image below. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Histone marks are shown below the HOXA loci in the genome browser.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_18")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_1_23#slide=id.g3e71c81166f_1_23")
 ```
 
 ## Comparing Histone Marks
