@@ -1,0 +1,14 @@
+---
+title: "Epigenetics Explorer: Differentiating Cell Types"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_0#slide=id.g35ad481b335_0_0") -->
+<!-- ``` -->
+
+This activity will walk through..
