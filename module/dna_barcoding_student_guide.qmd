@@ -35,7 +35,7 @@ You may have heard of a technique called DNA fingerprinting. While similar to DN
 
 :::
 
-## Case Study: Verifying the Identity of Herbal Medications
+## Case Study: Verifying the Identity of Herbal Medicines
 
 In 2015, the New York Attorney General temporarily halted the sale of store-brand herbal supplements from GNC, Target, Walgreens and Walmart after an investigation revealed many of these supplements did not contain any quantity of the herbs on their labels. This investigation was prompted by a 2013 New York Times article entitled "Herbal Supplements Are Not What They Seem" and reviewed research by a group of Canadian scientists that used DNA barcoding to examine whether the ingredients on the labels of herbal supplements matched the ingredients inside the capsules. The NY AG and the companies reached an agreement to resume sales, with the companies promising to implement reforms and prominently announce in stores and on its website if a supplement product was derived from whole herbs or extracts.
 
