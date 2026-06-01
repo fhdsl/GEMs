@@ -1,6 +1,6 @@
 ---
 title: "Family Markers: Using Multiply-Affected Families to Identify Risk Genes"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+date: last-modified
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
 format:

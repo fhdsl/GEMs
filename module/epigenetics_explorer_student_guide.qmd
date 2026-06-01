@@ -1,6 +1,6 @@
 ---
 title: "Epigenetics Explorer: Differentiating Cell Types"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+date: last-modified
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
 format:
