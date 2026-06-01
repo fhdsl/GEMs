@@ -45,9 +45,7 @@ This type of forensic DNA activity is a type of _pharmacovigilance_ research.
 
 You can read more about the students' study here.
 
->Molina J, Sherpa C, Ng J, Sonam T, Stuhr N. DNA Barcoding of Online Herbal Supplements: Crowd-sourcing Pharmacovigilance in High School. Open Life Sci. 2018 Apr 6;13:48-55. doi: 10.1515/biol-2018-0007. PMID: 33817067; PMCID: PMC7874675.
-
-::: callout.tip
+::: callout-tip
 
 In the United States, pharmaceuticals are regulated by the FDA under the authority of the Federal Food, Drug, and Cosmetic Act (FFDC). This law gives the US government the authority to oversee the safety of food, pharmaceuticals, medical devices, and cosmetics. In particular, the FFDC requires that food, pharmaceuticals, medical devices, and cosmetics be clearly and accurately labeled with their ingredients.
 
@@ -68,8 +66,6 @@ In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves 
 This is an excellent situation for DNA barcoding! Many bird eggs look alike and can't easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect).
 
 You can read more about the study here.
->Gonçalves PF, Oliveira-Marques AR, Matsumoto TE, Miyaki CY. DNA Barcoding Identifies Illegal Parrot Trade. J Hered. 2015;106 Suppl 1:560-4. doi: 10.1093/jhered/esv035. PMID: 26245790.
-
 :::
 
 
@@ -80,7 +76,7 @@ In our herbal medicine example, the students ordered products from online retail
 
 Let's explore the genomic sequence from the plant gene _rbcL_. This sequence is stored as a fasta file (pronounced "fast A"). This is a standard bioinformatics data file that stores information on two lines: a header line beginning with a greater-than symbol (">"), as well as a second line with the raw sequence data.
 
-::: {.callout-tip}
+::: callout-tip
 
 The _rcbL_ (Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit) gene is located in the chloroplast genome and encodes a subunit of the Rubisco enzyme. You might remember from previous lessons on photosynthesis that the Rubisco enzyme plays a big part in fixing the carbon from carbon dioxide into glucose. Because it plays such an important role in a vital plant process, it's highly conserved and can be found in almost all plants!
 
@@ -163,7 +159,7 @@ Researchers will frequently sequence two different barcoding genes from a sample
 For this section, you will use sequence from the ITS2 region.
 
 
-::: {.callout-tip}
+::: callout-tip
 
 ITS2 (Internal Transcribed Spacer 2) is a a short, highly variable segment of nuclear ribosomal DNA located between the 5.8S and 28S rRNA genes. ITS2 is not a gene, but this region of DNA can be found across animals, plants, and fungi.
 
