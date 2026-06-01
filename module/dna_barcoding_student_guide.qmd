@@ -128,7 +128,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open. When the search is complete, the status bar will turn green, but there will still be a lag before you see the results. Just be patient!
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_0#slide=id.g3ec9ec989c2_0_02")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_0#slide=id.g3ec9ec989c2_0_0")
 ```
 
 The Identification Engine - Result page takes a about a minute to fully load. The first section (Classification) will be empty - _this is totally normal_. Scroll down until you reach the Combined Hits section. 
