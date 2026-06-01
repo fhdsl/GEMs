@@ -75,6 +75,10 @@ The authors of this study looked at DNA from two regions, COI and 16S. The COI r
 
 :::
 
+::: {.callout-note}
+## Check Your Knowledge
+
+:::
 
 ## Part 2: What organism do your samples come from?
 
@@ -82,7 +86,9 @@ In our herbal medicine example, the students ordered products from online retail
 
 Let's explore the genomic sequence from the plant gene _rbcL_. This sequence is stored as a fasta file (pronounced "fast A"). This is a standard bioinformatics data file that stores information on two lines: a header line beginning with a greater-than symbol (">"), as well as a second line with the raw sequence data.
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("")
+```
 
 Get the data at <https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta>.
 
@@ -90,13 +96,64 @@ Next, open the Barcode ID website <https://id.boldsystems.org/>. This is an open
 
 TODO: Add image
 
+Scroll down to the images of all the possible sequence reference libraries that can be searched using BOLD. For the herbal medicine example, we're interested in identifying plants. Click on the box for the PLANT LIBRARY (PUBLIC). This particular database includes reference sequences from the gene regions _rcbL_, _matk_, and _ITS_. 
+
+TODO: Add image
+
+Continue scrolling down and make sure that "Rapid Species Search" is selected. This is the quickest option and will only return IDs for sequences that are at least 94% the same as the sample.
+
+TODO: Add image
+
+Scroll down until you reach a gray box titled Upload FASTA file. This is where you actually submit your sample sequence. For this example, you will submit a sequence from the _rcbL_ barcode region for your putative devil's claw sample. 
+
+::: callout.tip
+
+The _rcbL_ (Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit) gene is located in the chloroplast genome and encodes a subunit of the Rubisco enzyme. You might remember from previous lessons on photosynthesis that the Rubisco enzyme plays a big part in fixing the carbon from carbon dioxide into glucose. Because it plays such an important role in a vital plant process, it's highly conserved and can be found in almost all plants!
+
+:::
+
+
+Paste the following sequence into the box:
+
+>putative_devils_claw_sample
+GAGTAACTCCTCAACCTGGAGTTCCGCCTGAAGAAGCAGGGGCCGCGGTAGCTGCCGAATCTTCTACTGGTACATGGACAACTGTGTGGACCGATGGACTTACCTCAACCTGGAGTTCCGCCTGAAGAAGCAGGGGCCGCGGTAGCTGCCGAATCTTCTACTGGTACATGGACAACTGTGTGGACCGATGGACTTACCAGCCTTGATCGTTACAAAGGGCGATGCTACCACATCGAGCCGGTTCCTGGAGAAACAGATCAATATATCTGTTATGTAGCTTACCCTTTAGACCTTTTTGAAGAAGGTTCTGTTACTAACATGTTTACTTCCATTGTAGGAAATGTATTTGGATTCAAAGCCCTGCGTGCTCTACGTCTGGAAGATCTGCGAATCCCTACTGCTTATATTAAAACTTTCCAAGGCCCGCCTCATGGGATCCAAGTTGAGAGAGATAAATTGAACAAGTATGGTCGTCCTCTGTTGGGATGTACTATTAAACCTAAATTGGGG
+
+You can also download this file at <https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta>.
+
+Once you have pasted the sequence, click Identify.
+
+TODO: add image
+
+The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open. 
+
+TODO: add image
+
+When the search is complete, the status bar will turn green, but there will still be a lag before you see the results. Just be patient!
+
+TODO: add image
+
+The Identification Engine - Result page takes a about a minute to fully load. The first section (Classification) will be empty - _this is totally normal_. Scroll down until you reach the Combined Hits section. 
+The results table is organized with the "best" sequence matches listed first. Each row in the table will include the Query ID (the name of the sample in your fasta file), taxonomic information, and the ID%, or percent identity. This is the percentage of your sample (query) that exactly matches a reference sample in the database.
+
+TODO: add image
+
+::: {.callout-note}
+## Check Your Knowledge
+
+:::
 
 
 ## Part 3: Verify sample identification
 
 Researchers will frequently sequence two different barcoding genes from a sample to increase their confidence in their species identification. The BOLD database, while quite useful, mostly focuses on curating reference data for a limited number of barcoding genes. Luckily, we can search other databases to check the species identity based on genes (or reference samples) not found in the BOLD database.
 
-SOMETHING ABOUT THE ITS2 REGION SAMPLES
+For this section, you will use sequence from the ITS2 region.
+
+::: callout.tip
+
+ITS2 (Internal Transcribed Spacer 2) is a a short, highly variable segment of nuclear ribosomal DNA located between the 5.8S and 28S rRNA genes. ITS2 is not a gene, but this region of DNA can be found across animals, plants, and fungi.
+
+:::
 
 One of the most extensive genomic reference databases in the world is Genbank, which is maintained by the National Institutes of Health. We will use a tool called the Basic Local Alignment Search Tool (BLAST) to match the sample sequences to the reference database. 
 
@@ -136,6 +193,16 @@ The results page will automatically open. Details about your job are on the top.
 
 TODO: add image
 
-As you scroll down, you will see a list of potential matches 
+As you scroll down, you will see a list of potential reference sequences that match your sample. There are two values in particular that are helpful: query cover (the amount of overlap between your sample sequence and the reference sequence) and percent identity (abbreviated per. ident., the percentage of nucleotides in the sample sequence that match the reference sequence). The best-matching reference sequences will be at the top of the list. Click on the link for the best match.
 
+TODO: add image
+
+BLAST will open a more detailed image comparing your sample sequence ("Query") and the possible matching reference ("Sbjct"). This allows you to look more closely at any regions that do not match between your sample and the reference sequence.
+
+TODO: add image
+
+::: {.callout-note}
+## Check Your Knowledge
+
+:::
 
