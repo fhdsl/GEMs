@@ -43,7 +43,7 @@ In 2018, inspired by these events and other research suggesting ingredient misma
 
 This type of forensic DNA activity is a type of _pharmacovigilance_ research.
 
-You can read more about the students' study [here](https://genomicseducation.org/articles/Molina_2018_DNA_barcoding_herbalmedicine.pdf).
+You can read more about the students' study here.
 >Molina J, Sherpa C, Ng J, Sonam T, Stuhr N. DNA Barcoding of Online Herbal Supplements: Crowd-sourcing Pharmacovigilance in High School. Open Life Sci. 2018 Apr 6;13:48-55. doi: 10.1515/biol-2018-0007. PMID: 33817067; PMCID: PMC7874675.
 
 ::: callout.tip
@@ -66,19 +66,12 @@ In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves 
 
 This is an excellent situation for DNA barcoding! Many bird eggs look alike and can't easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect).
 
-You can read more about the study [here](https://genomicseducation.org/articles/Goncalves_2015_dna_barcoding_parrotsmuggling.pdf).
+You can read more about the study here.
 >Gonçalves PF, Oliveira-Marques AR, Matsumoto TE, Miyaki CY. DNA Barcoding Identifies Illegal Parrot Trade. J Hered. 2015;106 Suppl 1:560-4. doi: 10.1093/jhered/esv035. PMID: 26245790.
 
-## What barcoding gene did they use? 
-
-The authors of this study looked at DNA from two regions, COI and 16S. The COI region (Cytochrome c oxidase subunit I) is a mitochondrial gene that is popular for barcoding work among animals, as it shows high variability between many species but low variability among individuals within a species. 16S is a mitochondrial ribosomal RNA that is highly conserved among birds and is an excellent barcoding choice when working with samples that may be degraded or difficult to amplify.
-
 :::
 
-::: {.callout-note}
-## Check Your Knowledge
 
-:::
 
 ## Part 2: What organism do your samples come from?
 
@@ -86,23 +79,29 @@ In our herbal medicine example, the students ordered products from online retail
 
 Let's explore the genomic sequence from the plant gene _rbcL_. This sequence is stored as a fasta file (pronounced "fast A"). This is a standard bioinformatics data file that stores information on two lines: a header line beginning with a greater-than symbol (">"), as well as a second line with the raw sequence data.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("")
-```
 
 Get the data at <https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta>.
 
 Next, open the Barcode ID website <https://id.boldsystems.org/>. This is an open database that you can use to search for a species match to your DNA barcode. The Barcode ID project was originally created as a searchable database for all animal species, but has expanded to other organisms like fungi and plants.
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_0#slide=id.g3e4fcb5031f_0_0")
+```
+
 
 Scroll down to the images of all the possible sequence reference libraries that can be searched using BOLD. For the herbal medicine example, we're interested in identifying plants. Click on the box for the PLANT LIBRARY (PUBLIC). This particular database includes reference sequences from the gene regions _rcbL_, _matk_, and _ITS_. 
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_16#slide=id.g3e4fcb5031f_0_16")
+```
+
 
 Continue scrolling down and make sure that "Rapid Species Search" is selected. This is the quickest option and will only return IDs for sequences that are at least 94% the same as the sample.
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_19#slide=id.g3e4fcb5031f_0_19")
+```
+
 
 Scroll down until you reach a gray box titled Upload FASTA file. This is where you actually submit your sample sequence. For this example, you will submit a sequence from the _rcbL_ barcode region for your putative devil's claw sample. 
 
@@ -122,26 +121,45 @@ You can also download this file at <https://genomicseducation.org/data/barcoding
 
 Once you have pasted the sequence, click Identify.
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_22#slide=id.g3e4fcb5031f_0_22")
+```
 
-The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open. 
+The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open. When the search is complete, the status bar will turn green, but there will still be a lag before you see the results. Just be patient!
 
-TODO: add image
-
-When the search is complete, the status bar will turn green, but there will still be a lag before you see the results. Just be patient!
-
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_0#slide=id.g3ec9ec989c2_0_02")
+```
 
 The Identification Engine - Result page takes a about a minute to fully load. The first section (Classification) will be empty - _this is totally normal_. Scroll down until you reach the Combined Hits section. 
 The results table is organized with the "best" sequence matches listed first. Each row in the table will include the Query ID (the name of the sample in your fasta file), taxonomic information, and the ID%, or percent identity. This is the percentage of your sample (query) that exactly matches a reference sample in the database.
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_9#slide=id.g3ec9ec989c2_0_9")
+```
 
 ::: {.callout-note}
 ## Check Your Knowledge
 
 :::
 
+::: {.callout-caution collapse="true"}
+# Case File: Suspected Parrot Smuggling
+
+Following the instructions from above, use the BOLD website to identify these three samples, then answer the questions.
+
+The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitochondrial gene that is popular for barcoding work among animals, as it shows high variability between many species but low variability among individuals within a species. 
+
+Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_COI.fasta>
+Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_COI.fasta>
+Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
+
+1. 
+
+2.
+
+3. 
+:::
 
 ## Part 3: Verify sample identification
 
@@ -159,11 +177,15 @@ One of the most extensive genomic reference databases in the world is Genbank, w
 
 First, open [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi).
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_12#slide=id.g3ec9ec989c2_0_12")
+```
 
 Click on the "Nucleotide BLAST" image. This is the type of search you do when you have a nucleotide sequence and you want to compare it to other nucleotide sequences.
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_21#slide=id.g3ec9ec989c2_0_21")
+```
 
 Paste the Following gene sequence (in fasta format) into the box.
 
@@ -179,30 +201,59 @@ tagcccaact tgagaatcgg gcggccccgc cgtccgaatt gna
 
 You can also download the file  at <https://genomicseducation.org/data/barcoding_devils_claw_ITS2.fasta>
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_24#slide=id.g3ec9ec989c2_0_24")
+```
 
 Scroll to the bottom of the page and click the BLAST button.
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_24#slide=id.g3ec9ec989c2_0_24")
+```
 
 The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open.
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_30#slide=id.g3ec9ec989c2_0_30")
+```
 
 The results page will automatically open. Details about your job are on the top.
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_33#slide=id.g3ec9ec989c2_0_33")
+```
 
 As you scroll down, you will see a list of potential reference sequences that match your sample. There are two values in particular that are helpful: query cover (the amount of overlap between your sample sequence and the reference sequence) and percent identity (abbreviated per. ident., the percentage of nucleotides in the sample sequence that match the reference sequence). The best-matching reference sequences will be at the top of the list. Click on the link for the best match.
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_36#slide=id.g3ec9ec989c2_0_36")
+```
 
 BLAST will open a more detailed image comparing your sample sequence ("Query") and the possible matching reference ("Sbjct"). This allows you to look more closely at any regions that do not match between your sample and the reference sequence.
 
-TODO: add image
+```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_27#slide=id.g3ec9ec989c2_0_27")
+```
 
 ::: {.callout-note}
 ## Check Your Knowledge
 
 :::
 
+::: {.callout-caution collapse="true"}
+# Case File: Suspected Parrot Smuggling
+
+Following the instructions from above, use the BOLD website to identify these three samples, then answer the questions.
+
+The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA. It is an excellent barcoding choice when working with samples that may be degraded or difficult to amplify.
+
+Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_16S.fasta>
+Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_16S.fasta>
+Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16S.fasta>
+
+1. 
+
+2.
+
+3. 
+:::
