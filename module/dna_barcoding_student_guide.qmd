@@ -17,13 +17,10 @@ In Part 1, we'll go over some background context for this activity. Then, you'll
 
 **DNA barcoding** is a technique that involves sequencing a small piece of DNA in order to determine an organism's species identity. The **DNA barcode** is a short (400-800 bp in length) section of the genome that is highly variable and can be used to reliably distinguish one species from another. Although the gold standard for species identification is typically based on an individual's appearance, or morphology, this method isn't always possible in forensic investigations. For example, an investigator may be asked to identify only a small part of an organism, or be given a sample of plant matter that has been partly digested. DNA barcoding can provide identity when morphology fails.
 
-<!-- add references! -->
-
-DNA barcoding is only as accurate as the reference database you use... 
+However, DNA barcoding is only as accurate as the reference database you use. Sometimes a sample cannot be identified because the reference database doesn't happen to include a known representative of that species. 
 
 ### What makes a good DNA barcoding region?
 
-Sometimes the DNA barcode can't perfectly identify to species....
 
 ::: callout-tip
 
@@ -58,7 +55,7 @@ Pharmacovigilance is only one use of DNA barcoding in forensics! Expand each cas
 ::: {.callout-caution collapse="true"}
 # Case File: Suspected Parrot Smuggling
 
-In Brazil, wildlife is considered the property of the Brazilian State and the commercial trade of wild animals is strictly controlled (Fauna Protection Law; law no. 5197/1967). Anyone who catches, transports, keeps captive, or sells wild animals _without proper authorization_ can face fines and up to 6-12 months of prison time. These penalties increase if the wild animal is endangered or belongs to a migratory species, among other things (Environmental Crimes Law; law no. 9605/1998).
+In Brazil, wildlife is considered the property of the Brazilian State and the commercial trade of wild animals is strictly controlled (Wildlife Protection Law; law no. 5197/1967). Anyone who catches, transports, keeps captive, or sells wild animals _without proper authorization_ can face fines and up to 6-12 months of prison time. These penalties increase if the wild animal is endangered or belongs to a migratory species, among other things (Environmental Crimes Law; law no. 9605/1998).
 
 In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves et al. detail a forensic investigation of a potential animal smuggling incident at an airport in Brazil. This is their brief overview of the case:
 
@@ -140,6 +137,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 
 ::: {.callout-note}
 ## Check Your Knowledge
+Two other herbal medicines the researchers tested were black cumin seeds and cat's claw, both which are also often taken as anti-inflammatory medication. Use the BOLD website to identify these additional two samples, then answer the questions.
+
+ADD SAMPLE LINKS
+
+1. According to your BOLD search, what is the species identity of the three herbal medicine samples (devil's claw, black cumin seed, and cat's claw)? What are the common names of these species?
 
 :::
 
@@ -154,11 +156,7 @@ Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_COI.fasta>
 Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_COI.fasta>
 Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
 
-1. 
-
-2.
-
-3. 
+1. According to your BOLD search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
 :::
 
 ## Part 3: Verify sample identification
@@ -237,13 +235,19 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 
 ::: {.callout-note}
 ## Check Your Knowledge
+Following the instructions from above, do a BLAST search on Genbank to identify the two additional herbal medicine samples, then answer the questions.
 
+2. According to your Genbank search, what is the species identity of herbal medicine samples 1, 2, and 3? What are the common names of these species?
+
+3. Do the species identities from the ITS2 Genbank search match the species identities from the _rbcL_ BOLD search?
+
+4. Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
 :::
 
 ::: {.callout-caution collapse="true"}
 # Case File: Suspected Parrot Smuggling
 
-Following the instructions from above, use the BOLD website to identify these three samples, then answer the questions.
+Following the instructions from above, do a BLAST search on Genbank to identify these three samples, then answer the questions.
 
 The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA. It is an excellent barcoding choice when working with samples that may be degraded or difficult to amplify.
 
@@ -251,9 +255,9 @@ Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_16S.fasta>
 Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_16S.fasta>
 Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16S.fasta>
 
-1. 
+2. According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
 
-2.
+3. Do the species identities from the 16S Genbank search match the species identities from the _COI_ BOLD search?
 
-3. 
+4. Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?
 :::
