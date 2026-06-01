@@ -85,7 +85,7 @@ Get the data at <https://genomicseducation.org/data/barcoding_devils_claw_rbcL.f
 Next, open the Barcode ID website <https://id.boldsystems.org/>. This is an open database that you can use to search for a species match to your DNA barcode. The Barcode ID project was originally created as a searchable database for all animal species, but has expanded to other organisms like fungi and plants.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_0#slide=id.g3e4fcb5031f_0_0")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e7166b2ac9_0_0#slide=id.g3e7166b2ac9_0_0")
 ```
 
 
