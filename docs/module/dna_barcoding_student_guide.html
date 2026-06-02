@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-06-02">
+
+<title>DNA Barcoding and Forensics_Student Guide – GEMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-75b69987270d423d216eddcf4b1a5e80.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XMR6CQ1L12"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">GEMs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules.html"> 
+<span class="menu-text">Modules</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../input.html"> 
+<span class="menu-text">Share Your Input</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-1" id="toc-part-1" class="nav-link active" data-scroll-target="#part-1">Part 1</a>
+  <ul class="collapse">
+  <li><a href="#what-is-dna-barcoding" id="toc-what-is-dna-barcoding" class="nav-link" data-scroll-target="#what-is-dna-barcoding">What is DNA barcoding?</a></li>
+  <li><a href="#what-makes-a-good-dna-barcoding-region" id="toc-what-makes-a-good-dna-barcoding-region" class="nav-link" data-scroll-target="#what-makes-a-good-dna-barcoding-region">What makes a good DNA barcoding region?</a></li>
+  </ul></li>
+  <li><a href="#case-study-verifying-the-identity-of-herbal-medicines" id="toc-case-study-verifying-the-identity-of-herbal-medicines" class="nav-link" data-scroll-target="#case-study-verifying-the-identity-of-herbal-medicines">Case Study: Verifying the Identity of Herbal Medicines</a></li>
+  <li><a href="#part-2-what-organism-do-your-samples-come-from" id="toc-part-2-what-organism-do-your-samples-come-from" class="nav-link" data-scroll-target="#part-2-what-organism-do-your-samples-come-from">Part 2: What organism do your samples come from?</a></li>
+  <li><a href="#part-3-verify-sample-identification" id="toc-part-3-verify-sample-identification" class="nav-link" data-scroll-target="#part-3-verify-sample-identification">Part 3: Verify sample identification</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>DNA Barcoding and Forensics_Student Guide</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 2, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with real data from several forensic investigations in order to identify species based on a small fragment of DNA.</p>
+<section id="part-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
+<p>In Part 1, we’ll go over some background context for this activity. Then, you’ll choose which case file you want to investigate.</p>
+<section id="what-is-dna-barcoding" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-dna-barcoding">What is DNA barcoding?</h3>
+<p><strong>DNA barcoding</strong> is a technique that involves sequencing a small piece of DNA in order to determine an organism’s species identity. The <strong>DNA barcode</strong> is a short (400-800 bp in length) section of the genome that is highly variable and can be used to reliably distinguish one species from another. Although the gold standard for species identification is typically based on an individual’s appearance, or morphology, this method isn’t always possible in forensic investigations. For example, an investigator may be asked to identify only a small part of an organism, or be given a sample of plant matter that has been partly digested. DNA barcoding can provide identity when morphology fails.</p>
+<p>However, DNA barcoding is only as accurate as the reference database you use. Sometimes a sample cannot be identified because the reference database doesn’t happen to include a known representative of that species.</p>
+</section>
+<section id="what-makes-a-good-dna-barcoding-region" class="level3">
+<h3 class="anchored" data-anchor-id="what-makes-a-good-dna-barcoding-region">What makes a good DNA barcoding region?</h3>
+<p>Not all genomes regions are useful for barcoding. A good DNA barcoding region need to have enough variation among species so that the species are distinguishable, but it also needs to have very low variation among members of the same species (so that a single reference barcode can match fairly closely to all individuals within a species). Additionally, the barcoding region has to have highly-conserved flanking regions (that is, regions next to the barcode with very little variation) so that researchers can use a common set of PCR primers to analyze a wide variety of species.</p>
+<p>Unfortunately, no single barcoding region exists that can be used universally across all biological life. Thus, researchers use different barcoding regions for animals, plants, fungi, or bacteria. Researchers may also use a variety of barcoding regions within these groups to answer particular questions or to deal with varying sample quality.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may have heard of a technique called DNA fingerprinting. While similar to DNA barcoding, there are several important differences between the two techniques.</p>
+<p><strong>Region of DNA</strong>: The DNA barcoding technique amplifies a single, highly variable region of DNA that is 400-800 base pairs long. DNA fingerprinting, on the other hand, amplifies multiple DNA regions called <em>variable number tandem repeats</em>, or VNTRs. These regions are 10-100 base pairs in length. There are many VNTR regions scattered throughout the genome. It is common to examine at least 13 different VNTR regions in a DNA fingerprinting analysis.</p>
+<p><strong>Level of identification</strong>: DNA barcoding is used to identify the species of a sample, while DNA fingerprinting identifies an individual organism. The larger number of shorter variable DNA regions allows researchers to be more precise when determining the individual a sample comes from.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="case-study-verifying-the-identity-of-herbal-medicines" class="level2">
+<h2 class="anchored" data-anchor-id="case-study-verifying-the-identity-of-herbal-medicines">Case Study: Verifying the Identity of Herbal Medicines</h2>
+<p>In 2015, the New York Attorney General temporarily halted the sale of store-brand herbal supplements from GNC, Target, Walgreens and Walmart after an investigation revealed many of these supplements did not contain any quantity of the herbs on their labels. This investigation was prompted by a 2013 New York Times article entitled “Herbal Supplements Are Not What They Seem” and reviewed research by a group of Canadian scientists that used DNA barcoding to examine whether the ingredients on the labels of herbal supplements matched the ingredients inside the capsules. The NY AG and the companies reached an agreement to resume sales, with the companies promising to implement reforms and prominently announce in stores and on its website if a supplement product was derived from whole herbs or extracts.</p>
+<p>In 2018, inspired by these events and other research suggesting ingredient mismatch was still common, two researchers and three high schoolers from the Urban Barcode Research Program published a study examining whether herbal medicinal products bought online contained what their labels said they contained. The Urban Barcode Research Program is a science education initiative based in New York City that connects high school students with researchers to do biodiversity studies in the city. These students were particularly interested in this research question because they belonged to communities where herbal supplements and herbal medicine were commonly used.</p>
+<p>This type of forensic DNA activity is a type of <strong>pharmacovigilance</strong> research.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the United States, pharmaceuticals are regulated by the FDA under the authority of the Federal Food, Drug, and Cosmetic Act (FFDC). This law gives the US government the authority to oversee the safety of food, pharmaceuticals, medical devices, and cosmetics. In particular, the FFDC requires that food, pharmaceuticals, medical devices, and cosmetics be clearly and accurately labeled with their ingredients.</p>
+<p>However, herbal supplements and herbal medicinal products are not regulated in the same way as pharmaceuticals. These products are considered dietary supplements, which are regulated under the Dietary Supplement Health and Education Act. Products that fall under the purview of the Dietary Supplement Health and Education Act have much looser regulations around labeling, testing, and effectiveness. Although companies are required to verify that their dietary supplements are safe and accurately labeled, the FDA generally relies on an honor system.</p>
+</div>
+</div>
+<p>Pharmacovigilance is only one use of DNA barcoding in forensics! Expand each case file to learn more about how DNA fingerprinting has been used in forensic investigations.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Case File: Suspected Parrot Smuggling
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In Brazil, wildlife is considered the property of the Brazilian State and the commercial trade of wild animals is strictly controlled (Wildlife Protection Law; law no. 5197/1967). Anyone who catches, transports, keeps captive, or sells wild animals <em>without proper authorization</em> can face fines and up to 6-12 months of prison time. These penalties increase if the wild animal is endangered or belongs to a migratory species, among other things (Environmental Crimes Law; law no. 9605/1998).</p>
+<p>In their 2015 paper “DNA Barcoding Identifies Illegal Parrot Trade”, Gonçalves et al.&nbsp;detail a forensic investigation of a potential animal smuggling incident at an airport in Brazil. This is their brief overview of the case:</p>
+<blockquote class="blockquote">
+<p>Here we report a case from 2003 of a man who was arrested at Recife International Airport in Brazil carrying 58 unhatched avian eggs and intending to fly to Europe. The eggs were packed around his abdomen to keep them alive during the trip. The police were already investigating him, and during this trip to Brazil he visited various states where he could have acquired the eggs. When arrested, he claimed that they were quail eggs, but their external morphology did not support his claim. The embryos never hatched; thus, it was not possible to identify them based on their morphology. However, the external morphology of the eggs and embryos suggested that they were from parrots.</p>
+</blockquote>
+<p>This is an excellent situation for DNA barcoding! Many bird eggs look alike and can’t easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect).</p>
+<p>You can read more about the study here.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="part-2-what-organism-do-your-samples-come-from" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-what-organism-do-your-samples-come-from">Part 2: What organism do your samples come from?</h2>
+<p>In our herbal medicine example, the students ordered products from online retailers and then amplified the DNA for DNA barcoding. One product they tested is Devil’s Claw (also called grapple plant or wood spider), a member of the sesame plant family. This particular herb is native to southern Africa and is commonly taken as an anti-inflammatory, especially for low back pain. According to the packaging, this product should contain the species <em>Harpagophytum procumbens</em>.</p>
+<p>Let’s explore the genomic sequence from the plant gene <em>rbcL</em>. This sequence is stored as a fasta file (pronounced “fast A”). This is a standard bioinformatics data file that stores information on two lines: a header line beginning with a greater-than symbol (“&gt;”), as well as a second line with the raw sequence data.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <em>rcbL</em> (Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit) gene is located in the chloroplast genome and encodes a subunit of the Rubisco enzyme. You might remember from previous lessons on photosynthesis that the Rubisco enzyme plays a big part in fixing the carbon from carbon dioxide into glucose. Because it plays such an important role in a vital plant process, it’s highly conserved and can be found in almost all plants!</p>
+</div>
+</div>
+<p>Get the data at <a href="https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta" class="uri">https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta</a>.</p>
+<p>Next, open the Barcode ID website <a href="https://id.boldsystems.org/" class="uri">https://id.boldsystems.org/</a>. This is an open database that you can use to search for a species match to your DNA barcode. The Barcode ID project was originally created as a searchable database for all animal species, but has expanded to other organisms like fungi and plants.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3e7166b2ac9_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Scroll down to the images of all the possible sequence reference libraries that can be searched using BOLD. For the herbal medicine example, we’re interested in identifying plants. Click on the box for the PLANT LIBRARY (PUBLIC). This particular database includes reference sequences from the gene regions <em>rcbL</em>, <em>matk</em>, and <em>ITS</em>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3e4fcb5031f_0_16.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Continue scrolling down and make sure that “Rapid Species Search” is selected. This is the quickest option and will only return IDs for sequences that are at least 94% the same as the sample.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3e4fcb5031f_0_19.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Scroll down until you reach a gray box titled Upload FASTA file. This is where you actually submit your sample sequence. For this example, you will submit a sequence from the <em>rcbL</em> barcode region for your putative devil’s claw sample.</p>
+<p>Paste the sequence you downloaded earlier into the box. (Remember, you can download this file at <a href="https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta" class="uri">https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta</a>.)</p>
+<p>Once you have pasted the sequence, click Identify.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3e4fcb5031f_0_22.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open. When the search is complete, the status bar will turn green, but there will still be a lag before you see the results. Just be patient!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The Identification Engine - Result page takes a about a minute to fully load. The first section (Classification) will be empty - <em>this is totally normal</em>. Scroll down until you reach the Combined Hits section. The results table is organized with the “best” sequence matches listed first. Each row in the table will include the Query ID (the name of the sample in your fasta file), taxonomic information, and the ID%, or percent identity. This is the percentage of your sample (query) that exactly matches a reference sample in the database.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Two other herbal medicines the researchers tested were black cumin seeds and cat’s claw, both which are also often taken as anti-inflammatory medication. Use the BOLD website to identify these additional two samples, then answer the questions.</p>
+<p>ADD SAMPLE LINKS</p>
+<ol type="1">
+<li>According to your BOLD search, what is the species identity of the three herbal medicine samples (devil’s claw, black cumin seed, and cat’s claw)? What are the common names of these species?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Case File: Suspected Parrot Smuggling
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Following the instructions from above, use the BOLD website to identify these three samples, then answer the questions. <strong>Make sure to choose the ANIMAL LIBRARY (PUBLIC) database.</strong></p>
+<p>The sequences are from the <em>COI</em> (Cytochrome c oxidase subunit I) gene, a mitochondrial gene that is popular for barcoding work among animals, as it shows high variability between many species but low variability among individuals within a species.</p>
+<p>Unknown egg #1: <a href="https://genomicseducation.org/data/barcoding_bird1_COI.fasta" class="uri">https://genomicseducation.org/data/barcoding_bird1_COI.fasta</a> Unknown egg #2: <a href="https://genomicseducation.org/data/barcoding_bird2_COI.fasta" class="uri">https://genomicseducation.org/data/barcoding_bird2_COI.fasta</a> Unknown egg #3: <a href="https://genomicseducation.org/data/barcoding_bird3_COI.fasta" class="uri">https://genomicseducation.org/data/barcoding_bird3_COI.fasta</a></p>
+<ol type="1">
+<li>According to your BOLD search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="part-3-verify-sample-identification" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-verify-sample-identification">Part 3: Verify sample identification</h2>
+<p>Researchers will frequently sequence two different barcoding genes from a sample to increase their confidence in their species identification. The BOLD database, while quite useful, mostly focuses on curating reference data for a limited number of barcoding genes. Luckily, we can search other databases to check the species identity based on genes (or reference samples) not found in the BOLD database.</p>
+<p>For this section, you will use sequence from the ITS2 region.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ITS2 (Internal Transcribed Spacer 2) is a a short, highly variable segment of nuclear ribosomal DNA located between the 5.8S and 28S rRNA genes. ITS2 is not a gene, but this region of DNA can be found across animals, plants, and fungi.</p>
+</div>
+</div>
+<p>One of the most extensive genomic reference databases in the world is Genbank, which is maintained by the National Institutes of Health. We will use a tool called the Basic Local Alignment Search Tool (BLAST) to match the sample sequences to the reference database.</p>
+<p>First, open <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST</a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Click on the “Nucleotide BLAST” image. This is the type of search you do when you have a nucleotide sequence and you want to compare it to other nucleotide sequences.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_21.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Download the data at <a href="https://genomicseducation.org/data/barcoding_devils_claw_ITS2.fasta" class="uri">https://genomicseducation.org/data/barcoding_devils_claw_ITS2.fasta</a>, then paste the sequence into the box</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_24.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Scroll to the bottom of the page and click the BLAST button.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_24.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The browser will take you to a new page while your search is happening. It may take a minute or two for your search to complete, but keep the webpage open.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_30.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The results page will automatically open. Details about your job are on the top.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_33.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As you scroll down, you will see a list of potential reference sequences that match your sample. There are two values in particular that are helpful: query cover (the amount of overlap between your sample sequence and the reference sequence) and percent identity (abbreviated per. ident., the percentage of nucleotides in the sample sequence that match the reference sequence). The best-matching reference sequences will be at the top of the list. Click on the link for the best match.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_36.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>BLAST will open a more detailed image comparing your sample sequence (“Query”) and the possible matching reference (“Sbjct”). This allows you to look more closely at any regions that do not match between your sample and the reference sequence.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_barcoding_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3ec9ec989c2_0_27.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Following the instructions from above, do a BLAST search on Genbank to identify the two additional herbal medicine samples, then answer the questions.</p>
+<ol start="2" type="1">
+<li><p>According to your Genbank search, what is the species identity of herbal medicine samples 1, 2, and 3? What are the common names of these species?</p></li>
+<li><p>Do the species identities from the ITS2 Genbank search match the species identities from the <em>rbcL</em> BOLD search?</p></li>
+<li><p>Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them?</p></li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Case File: Suspected Parrot Smuggling
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Following the instructions from above, do a BLAST search on Genbank to identify these three samples, then answer the questions.</p>
+<p>The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA. It is an excellent barcoding choice when working with samples that may be degraded or difficult to amplify.</p>
+<p>Unknown egg #1: <a href="https://genomicseducation.org/data/barcoding_bird1_16s.fasta" class="uri">https://genomicseducation.org/data/barcoding_bird1_16s.fasta</a> Unknown egg #2: <a href="https://genomicseducation.org/data/barcoding_bird2_16s.fasta" class="uri">https://genomicseducation.org/data/barcoding_bird2_16s.fasta</a> Unknown egg #3: <a href="https://genomicseducation.org/data/barcoding_bird3_16s.fasta" class="uri">https://genomicseducation.org/data/barcoding_bird3_16s.fasta</a></p>
+<ol start="2" type="1">
+<li><p>According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?</p></li>
+<li><p>Do the species identities from the 16S Genbank search match the species identities from the <em>COI</em> BOLD search?</p></li>
+<li><p>Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/genomicseducation\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p style="text-align:center;">
+<small> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. </small>
+</p>
+<p style="text-align:center;">
+<small> GEMs is funded by the National Human Genome Research Institute <a href="https://reporter.nih.gov/search/SjWuEKrSVEGVaHvRb9L-vg/project-details/10854368">1R25HG013489.</a>
+</small></p><small>
+</small><p><small></small></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
