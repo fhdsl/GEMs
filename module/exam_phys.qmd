@@ -1,6 +1,6 @@
 ---
 title: "Exam Physiology: Wearable Data"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+date: last-modified
 output:
   html_document
 ---

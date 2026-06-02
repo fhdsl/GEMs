@@ -1,6 +1,6 @@
 ---
 title: "Genomic Medicine: Polygenic Risk Score Calculation"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+date: last-modified
 format:
     html: default
 ---

@@ -1,0 +1,120 @@
+---
+title: "Epigenetics Explorer: Differentiating Cell Types"
+date: last-modified
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_0#slide=id.g35ad481b335_0_0") -->
+
+<!-- ``` -->
+
+## Overview
+
+This activity teaches students to use the [UCSC Genome Browser](https://genome.ucsc.edu/cgi-bin/hgGateway) to explore differences in epigenetic signals across cell types.
+
+**Duration:** Approximately 1 hour ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
+
+## Learning Objectives
+
+Learning objectives for this activity come from the [Genetics Core Competencies](https://genetics-gsa.org/education/genetics-learning-framework/):
+
+- Discuss how DNA is packaged in the chromosomes in terms of histones, nucleosomes, and chromatin.
+
+- Defend how most cells can have the same genetic content and yet have different functions in the body.
+
+- Contrast the packaging of DNA into euchromatin versus heterochromatin in the context of histone modification, and DNA modification (where applicable).
+
+- Discuss the potential roles of DNA modification, histone modification, and non-coding RNA in epigenetic inheritance, both somatic and germline.
+
+- Discuss environmental impacts on epigenetic systems.
+
+- Describe how differential histone modification modulates gene activity and is utilized in developmental progression.
+
+## Prerequisites
+
+Students will benefit from awareness of the central dogma. We suggest this activity could accompany lectures that discuss epigenetics or sources of genomic variation beyond single mutations.
+
+## Evaluation
+
+GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.
+
+::: callout-tip
+## Help us improve!
+
+[Instructor survey](https://forms.gle/W2WxuTRoJ1pkER3cA)
+
+[Student pre-activity survey](https://genomicseducation.shinyapps.io/student_pre_survey/)
+
+[Student post-activity survey](https://genomicseducation.shinyapps.io/student_post_survey/)
+:::
+
+You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing). Feel free to contact the GEMs team with any questions (gems **at** fredhutch **dot** org).
+
+## Materials
+
+### Student Activity
+
+You can use this module in several formats. Feel free to adapt to your needs!
+
+- [Web page](https://genomicseducation.org/module/epigenetics_explorer_student_guide.html)
+- [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/epigenetics_explorer_student_guide.qmd)
+- [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/epigenetics_explorer_student_guide.docx)
+- [Google Doc]()
+
+Students will need:
+
+- A device that accesses the internet.
+- Access to this website: <https://genome.ucsc.edu/cgi-bin/hgGateway>. Access to a larger monitor may be helpful.
+
+::: callout-warning
+## This content contains URLs
+
+We suggest confirming links are still active prior to running this activity. Students will use this website: <https://genome.ucsc.edu/cgi-bin/hgGateway>.
+:::
+
+### Instructor Materials
+
+A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?usp=sharing).
+
+An answer key is available [here](). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+
+## Scientific Topics
+
+A Google Slides lecture about epigenetics is available [here](https://docs.google.com/presentation/d/1f4W8dbi28Rivl9n4vl8bz9GdjwK-s3LoLMm4RyMjcGk/edit); a YouTube version is available [here](https://youtu.be/HE6M3ZX1VCw?si=2YbfoBT3cHZJTU3n).
+
+This activity also discusses HOX genes.
+
+### Epigenetics in the Media
+
+You might wish to assign some of these pieces for student review during lecture topics on epigenetics.
+
+- *The Legacy of Trauma: Can Experiences Leave A Biological Imprint?* Can epigenetics explain why descendants of trauma victims seem to have worse health outcomes? Bianca Jones Marlin and Brian Dias dive into epigenetics and its role in trauma inheritance on the [Shortwave Podcast](https://www.npr.org/2020/12/16/947232031/the-legacy-of-trauma-can-experiences-leave-a-biological-imprint).
+
+<iframe id="inlineFrameExample" title="Inline Frame Example" width="95%" height="300" src="https://www.npr.org/2020/12/16/947232031/the-legacy-of-trauma-can-experiences-leave-a-biological-imprint">
+
+</iframe>
+
+- *Finding out if more than your DNA passes on to the next generation.* In [this episode](https://geneticsunzipped.com/blog/2020/7/16/s315-pimp-my-genome-the-wonderful-world-of-epigenetics) of Genetics Unzipped, Dr. Kat Arney takes a look at the world of epigenetics - finding out if more than DNA passes on to the next generation, whether Darwin was wrong and Lamarck was right, and how to pimp your genome.
+
+<iframe id="inlineFrameExample" title="Inline Frame Example" width="95%" height="300" src="https://geneticsunzipped.com/blog/2020/7/16/s315-pimp-my-genome-the-wonderful-world-of-epigenetics">
+
+</iframe>
+
+- *Instructions for Life: How Food, Stress, and Our Genes Shape Our Health*. In [this episode](https://sph.umich.edu/podcast/season2/epigenetics.html) of Population Healthy, Experts from the University of Michigan School of Public Health unpack how our genes respond to changes in our diets, stress levels, and exposure to toxins—and what these interactions mean for human health.
+
+- *Exploring the history of epigenetics, and what the future may hold for the field*. In [this Nature Podcast Extra](https://www.nature.com/articles/d41586-019-03877-7), Nick Howe speaks to Edith Heard, Director General of the EMBL, and Giacomo Cavalli, from the Institute of Human Genetics, exploring the history and future of epigenetics.
+
+- *The Effect of lncRNAs on Chromatin and Gene Regulation (John Rinn)*. In [this episode of Epigenetics Podcast](https://activemotif.podbean.com/e/the-effect-of-lncrnas-on-chromatin-and-gene-regulation-john-rinn/), Dr. John Rinn from the University of Colorado in Boulder discusses the role of long noncoding RNAs (lncRNAs) in regulating the expression of genes and chromatin organization.
+
+## Outline
+
+1.  Background
+
+2.  Setting Up the Genome Browser
+
+3.  Selecting and Comparing Histone Marks

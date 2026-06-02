@@ -1,6 +1,6 @@
 ---
 title: "Population Genetics: Fish Pond Simulator"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+date: last-modified
 output:
   html_document
 ---
