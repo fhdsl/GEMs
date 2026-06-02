@@ -140,12 +140,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 
 ::: {.callout-note}
 ## Check Your Knowledge
-Two other herbal medicines the researchers tested were black cumin seeds and cat's claw, both which are also often taken as anti-inflammatory medication. Use the BOLD website to identify these additional two samples, then answer the questions.
+Two other herbal medicines the researchers tested were black cumin seeds and guarana. Use the BOLD website to identify these additional two samples, then answer the questions.
 
 ADD SAMPLE LINKS
 
-1. According to your BOLD search, what is the species identity of the three herbal medicine samples (devil's claw, black cumin seed, and cat's claw)? What are the common names of these species?
+1. According to your BOLD search, what is the species identity of the three herbal medicine samples (devil's claw, black cumin seed, and guarana)? What are the common names of these species?
 
+2. Do these species identities match what the packages claim?
 :::
 
 ::: {.callout-caution collapse="true"}
@@ -160,6 +161,8 @@ Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_COI.fasta>
 Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
 
 1. According to your BOLD search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
+
+2. Do these species identities match the suspected smuggler's claim?
 :::
 
 ## Part 3: Verify sample identification
@@ -240,11 +243,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 ## Check Your Knowledge
 Following the instructions from above, do a BLAST search on Genbank to identify the two additional herbal medicine samples, then answer the questions.
 
-2. According to your Genbank search, what is the species identity of herbal medicine samples 1, 2, and 3? What are the common names of these species?
+3. According to your Genbank search, what is the species identity of herbal medicine samples 1, 2, and 3? What are the common names of these species?
 
-3. Do the species identities from the ITS2 Genbank search match the species identities from the _rbcL_ BOLD search?
+4. Do the species identities from the ITS2 Genbank search match the species identities from the _rbcL_ BOLD search?
 
-4. Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
+5. Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
 :::
 
 ::: {.callout-caution collapse="true"}
@@ -258,9 +261,9 @@ Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_16s.fasta>
 Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_16s.fasta>
 Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16s.fasta>
 
-2. According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
+3. According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
 
-3. Do the species identities from the 16S Genbank search match the species identities from the _COI_ BOLD search?
+4. Do the species identities from the 16S Genbank search match the species identities from the _COI_ BOLD search?
 
-4. Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?
+5. Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?
 :::
