@@ -7,7 +7,7 @@ format:
     html: default
 ---
 
-This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with real data from several forensic investigations in order to identify species based on a small fragment of DNA.
+This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data from several real forensic investigations in order to identify species based on a small fragment of DNA.
 
 ## Part 1
 
@@ -51,6 +51,13 @@ In the United States, pharmaceuticals are regulated by the FDA under the authori
 However, herbal supplements and herbal medicinal products are not regulated in the same way as pharmaceuticals. These products are considered dietary supplements, which are regulated under the Dietary Supplement Health and Education Act. Products that fall under the purview of the Dietary Supplement Health and Education Act have much looser regulations around labeling, testing, and effectiveness. Although companies are required to verify that their dietary supplements are safe and accurately labeled, the FDA generally relies on an honor system.
 :::
 
+::: {.callout-note}
+## Check Your Knowledge
+
+1. Why is DNA barcoding useful for this investigation?
+
+:::
+
 Pharmacovigilance is only one use of DNA barcoding in forensics! Expand each case file to learn more about how DNA fingerprinting has been used in forensic investigations.
 
 ::: {.callout-caution collapse="true"}
@@ -62,9 +69,10 @@ In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves 
 
 > Here we report a case from 2003 of a man who was arrested at Recife International Airport in Brazil carrying 58 unhatched avian eggs and intending to fly to Europe. The eggs were packed around his abdomen to keep them alive during the trip. The police were already investigating him, and during this trip to Brazil he visited various states where he could have acquired the eggs. When arrested, he claimed that they were quail eggs, but their external morphology did not support his claim. The embryos never hatched; thus, it was not possible to identify them based on their morphology. However, the external morphology of the eggs and embryos suggested that they were from parrots.
 
-This is an excellent situation for DNA barcoding! Many bird eggs look alike and can't easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect).
+Many bird eggs look alike and can't easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect).
 
-You can read more about the study here.
+1. Why is DNA barcoding useful in this investigation?
+
 :::
 
 
@@ -131,11 +139,12 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 ## Check Your Knowledge
 Two other herbal medicines the researchers tested were black cumin seeds and guarana. Use the BOLD website to identify these additional two samples, then answer the questions.
 
-ADD SAMPLE LINKS
+putative black cumin sample: <https://genomicseducation.org/data/barcoding_black_cumin_rbcL.fasta>
+putative guarana sample: <https://genomicseducation.org/data/barcoding_guarana_rbcL.fasta>
 
-1. According to your BOLD search, what is the species identity of the three herbal medicine samples (devil's claw, black cumin seed, and guarana)? What are the common names of these species?
+2. According to your BOLD search, what is the species identity of the three herbal medicine samples (devil's claw, black cumin seed, and guarana)? What are the common names of these species?
 
-2. Do these species identities match what the packages claim?
+3. Do these species identities match what the herbal medicine packaging claim?
 :::
 
 ::: {.callout-caution collapse="true"}
@@ -149,9 +158,9 @@ Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_COI.fasta>
 Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_COI.fasta>
 Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
 
-1. According to your BOLD search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
+2. According to your BOLD search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
 
-2. Do these species identities match the suspected smuggler's claim?
+3. Do these species identities match the suspected smuggler's claim?
 :::
 
 ## Part 3: Verify sample identification
@@ -221,11 +230,14 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 ## Check Your Knowledge
 Following the instructions from above, do a BLAST search on Genbank to identify the two additional herbal medicine samples, then answer the questions.
 
-3. According to your Genbank search, what is the species identity of herbal medicine samples 1, 2, and 3? What are the common names of these species?
+putative black cumin sample: <https://genomicseducation.org/data/barcoding_black_cumin_ITS2.fasta>
+putative guarana sample: <https://genomicseducation.org/data/barcoding_guarana_ITS2.fasta>
 
-4. Do the species identities from the ITS2 Genbank search match the species identities from the _rbcL_ BOLD search?
+4. According to your Genbank search, what is the species identity of herbal medicine samples 1, 2, and 3? What are the common names of these species?
 
-5. Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
+5. Do the species identities from the ITS2 Genbank search match the species identities from the _rbcL_ BOLD search?
+
+6. Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
 :::
 
 ::: {.callout-caution collapse="true"}
@@ -239,9 +251,9 @@ Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_16s.fasta>
 Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_16s.fasta>
 Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16s.fasta>
 
-3. According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
+4. According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
 
-4. Do the species identities from the 16S Genbank search match the species identities from the _COI_ BOLD search?
+5. Do the species identities from the 16S Genbank search match the species identities from the _COI_ BOLD search?
 
-5. Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?
+6. Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?
 :::
