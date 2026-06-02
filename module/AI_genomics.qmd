@@ -51,12 +51,16 @@ You can use this module in several formats. Feel free to adapt to your needs!
 Students will need a device that accesses the internet.
 
 ::: callout-warning
-## This content contains URLs
+## This content uses URLs
 
-We suggest confirming links are still active prior to running this activity.
+We suggest confirming links to chatbots are still active prior to running this activity.
 :::
 
 
 ### Instructor Materials
 
 An answer key is available [here](). Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.
+
+## Scientific Topics
+
+Some of the questions in this activity are based on an online resource called [DataWISE](https://ncse.ngo/datawise), produced by the National Center for Science Education. DataWISE is a tool that scaffolds key science practices and media literacy skills to guide students in critical analysis of data-based claims. We think the DataWISE worksheet is a fantastic framework/activity for science literacy and we encourage you to check it out! 
