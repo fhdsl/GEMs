@@ -144,7 +144,9 @@ putative guarana sample: <https://genomicseducation.org/data/barcoding_guarana_r
 
 2. According to your BOLD search, what is the species identity of the three herbal medicine samples (devil's claw, black cumin seed, and guarana)? What are the common names of these species?
 
-3. Do these species identities match what the herbal medicine packaging claim?
+3. What is the percent identity value for the top result of each search?
+
+4. Do these species identities match what the herbal medicine packaging claim?
 :::
 
 ::: {.callout-caution collapse="true"}
@@ -160,7 +162,9 @@ Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
 
 2. According to your BOLD search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
 
-3. Do these species identities match the suspected smuggler's claim?
+3. What is the percent identity value for the top result of each search?
+
+4. Do these species identities match the suspected smuggler's claim?
 :::
 
 ## Part 3: Verify sample identification
@@ -235,9 +239,11 @@ putative guarana sample: <https://genomicseducation.org/data/barcoding_guarana_I
 
 4. According to your Genbank search, what is the species identity of herbal medicine samples 1, 2, and 3? What are the common names of these species?
 
-5. Do the species identities from the ITS2 Genbank search match the species identities from the _rbcL_ BOLD search?
+5. What is the percent identity value for the top result of each search?
 
-6. Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
+6. Do the species identities from the ITS2 Genbank search match the species identities from the _rbcL_ BOLD search?
+
+7. Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
 :::
 
 ::: {.callout-caution collapse="true"}
@@ -253,7 +259,9 @@ Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16s.fasta>
 
 4. According to your Genbank search, what is the species identity of eggs 1, 2, and 3? What are the common names of these species?
 
-5. Do the species identities from the 16S Genbank search match the species identities from the _COI_ BOLD search?
+5. What is the percent identity value for the top result of each search?
 
-6. Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?
+6. Do the species identities from the 16S Genbank search match the species identities from the _COI_ BOLD search?
+
+7. Should this man be prosecuted for parrot smuggling? If so, should he face additional penalties (for attempting to smuggle endangered or migratory species)?
 :::
