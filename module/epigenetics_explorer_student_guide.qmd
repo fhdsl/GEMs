@@ -18,6 +18,10 @@ This activity will walk through..
 
 ## Part 1: Background
 
+Hox genes have an important role in proper embryonic development and occur similarly across many organisms, including fruit flies (_Drosophila_). For humans, these genes ensure certain organs develop close to the proper place along the vertebral column [hubert2023hox]. Hox genes are turned on (expressed) not only during embryo formation but also in adult organisms, where they are necessary for functional differentiation of cells.
+
+Mutations in Hox genes are associated with several cancers, including breast, pancreatic, lung, liver, and ovarian cancer [hubert2023hox, shah2010hox]. Hoxa9, with other genes, can induce acute myeloid leukemia (AML) in mice and humans [calvo2001meis1a].
+
 ## Part 2: Setting Up the Genome Browser
 
 ### Launch the Genome Browser Gateway
@@ -30,7 +34,9 @@ Click "Human" under "Browse/Select Species".
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
 ```
 
-You will be working from the Human Assembly **Mar. 2006 (NCBI36/hg18)**. Make sure this is selected under the "Find Position" dropdown menu. We are using an older genome because it has more detail about epigenetic regulation.
+You will be working from the Human Assembly **Mar. 2006 (NCBI36/hg18)**. Make sure this is selected under the "Find Position" dropdown menu. 
+
+<!-- Older genome has a bit more versatility for selecting cell types. -->
 
 Enter **HOXA7** in Position/Search Term and select GO. 
 
@@ -48,13 +54,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbS
 
 Let's make this easier to look at.
 
-Under "Visible Tracks", select "Hide" under all the drop downs _except_ "UCSC Genes" and "NCBI RefSeq". Set these to "Pack" and "Full", respectively
+Scroll down to "Visible Tracks". Select "Hide" under all the drop downs _except_ "UCSC Genes" and "NCBI RefSeq". Set these to "Pack" and "Full", respectively.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "...", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_19#slide=id.g3e71c81166f_0_19")
 ```
 
-Click "refresh" to update the viewer.
+Click "Refresh" to update the viewer.
 
 Your browser should look like the image below, where only HOXA7 is shown. 
 
@@ -70,7 +76,7 @@ Zoom out your display by 10x, 3x or 1.5x to see HOXA1-HOXA13 genes on your brows
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_35#slide=id.g3e71c81166f_0_35")
 ```
 
-Instead of zooming in and out, you can always manually enter your chromosome region of choice. For this exercise, try entering the following region: **chr7:27,087,367-27,235,317**. Click "go". 
+Instead of zooming in and out, you can always manually enter your chromosome region of choice. For this exercise, try entering the following region: **chr7:27,087,367-27,235,317**. Click "Search". 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "The specific chromosome locus has been typed into the search bar.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_40#slide=id.g3e71c81166f_0_40")
@@ -82,9 +88,19 @@ Ideally your browser should like the image below.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_46#slide=id.g3e71c81166f_0_46")
 ```
 
-<div class = "notice">
+::: callout-tip
 You could also enter **chr7:27,087,367-27,235,317** in the search bar at the start of this exercise instead of HOXA7. 
-</div>
+:::
+
+### Part 2 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Which genes are on either side of HOXA7? Take a screenshot and point to these genes.
+
+2.  What gene or genes are present at **chr7:27,110,536-27,132,455**? Take a screenshot of this location in the genome.
+:::
 
 ## Part 3: Selecting and Comparing Histone Marks
 
@@ -169,3 +185,17 @@ We can also see that HOXA9-13 is not expressed (turned off).
 ```{r, fig.align='center', echo = FALSE, fig.alt= "HOXA9 through 13 are highlighted to indicate expression is turned off.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_46")
 ```
+
+### Part 3 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  The two cell lines differ in their gene expression (genes turned on or off). Does this mean that the genome varies as well? Why might gene expression vary?
+
+2.  Locate the HOXA5 gene and record the genome location (e.g., chr7:###-###). Exact numbers will vary a bit, but make sure the whole gene is in frame.
+
+3. Return to the Broad Histone track menu and select cell line **HUVEC** (umbilical vein endothelial cells) and K562 (leukemia cells). Do these cell lines have expression turned on or off, or some other pattern for HOXA5?
+
+4. Return to the Broad Histone track menu and find **H3K27ac**. Click on the link for this histone mark to learn more about it. Does **H3K27ac** work more like **H3K4me3** or **H3K27me3**? Take a screenshot showing this histone mark across the HOXA locus (HOXA 1-13).
+:::
