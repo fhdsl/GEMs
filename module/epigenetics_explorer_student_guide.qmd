@@ -11,16 +11,17 @@ format:
 <!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_0#slide=id.g35ad481b335_0_0") -->
 <!-- ``` -->
 
-This activity will walk through..
-..
-..
-..
+This activity will walk through an epigenetic exploration of the HOXA locus, involving different histone markers and cell types.
 
 ## Part 1: Background
 
-Hox genes have an important role in proper embryonic development and occur similarly across many organisms, including fruit flies (_Drosophila_). For humans, these genes ensure certain organs develop close to the proper place along the vertebral column [hubert2023hox]. Hox genes are turned on (expressed) not only during embryo formation but also in adult organisms, where they are necessary for functional differentiation of cells.
+The Central Dogma describes the fundamental flow of biological information: DNA is transcribed into RNA, which is then translated into protein. While we often think of this as a linear process, the physical reality inside a cell nucleus is more complex. The human genome contains roughly 3 billion base pairs of DNA, yet it must be compacted to fit inside a tiny cell nucleus. This is achieved by wrapping DNA around histone proteins to form chromatin. How tightly DNA is wrapped directly dictates gene expression: tightly packed chromatin (heterochromatin) is physically inaccessible to the transcriptional machinery, effectively silencing the genes within it, while loosely packed chromatin (euchromatin) permits transcription factors and RNA polymerase to access the DNA and initiate gene expression. So before a gene can even begin the journey from DNA to protein, the chromatin must be in the right configuration.
 
-Mutations in Hox genes are associated with several cancers, including breast, pancreatic, lung, liver, and ovarian cancer [hubert2023hox, shah2010hox]. Hoxa9, with other genes, can induce acute myeloid leukemia (AML) in mice and humans [calvo2001meis1a].
+Histones are small, positively charged proteins that DNA (which is negatively charged) wraps around. Eight histones together create the fundamental repeating unit of chromatin, the nucleosome. Extending from each histone is an unstructured "tail" that protrudes from the nucleosome and serves as a critical regulatory platform. These tails are subject to a wide variety of covalent chemical modifications, including acetylation, methylation, phosphorylation, and ubiquitination, each at specific amino acid residues (particularly lysine and arginine). The combination of modifications present on a given nucleosome determines whether a nearby gene is silenced or expressed.
+
+HOX genes have an important role in proper embryonic development and occur similarly across many organisms, including fruit flies (_Drosophila_). For humans, these genes ensure certain organs develop close to the proper place along the vertebral column [hubert2023hox]. HOX genes are turned on (expressed) not only during embryo formation but also in adult organisms, where they are necessary for functional differentiation of cells. Many HOX genes belong to a special group of genes called [transcription factors](https://www.nature.com/scitable/topicpage/transcription-factors-and-transcriptional-control-in-eukaryotic-1046/) that help turn other genes on and off. These genes dictate what, when, and where structures get built. Mutations in HOX genes are associated with several cancers, including breast, pancreatic, lung, liver, and ovarian cancer [hubert2023hox, shah2010hox]. HOXA9 mutations can induce acute myeloid leukemia (AML) in mice and humans [calvo2001meis1a]. However, modifications to chromatin structure can affect HOX gene expression as well.
+
+This activity will walk through several histone modifications that can happen near the HOXA locus, exploring different cell types and parts of this area of the genome.
 
 ## Part 2: Setting Up the Genome Browser
 
@@ -62,7 +63,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbS
 
 Click "Refresh" to update the viewer.
 
-Your browser should look like the image below, where only HOXA7 is shown. 
+Your browser should look like the image below, where only **HOXA7** is shown. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "The genome is zoomed in to the HOXA7 gene.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_28#slide=id.g3e71c81166f_0_28")
