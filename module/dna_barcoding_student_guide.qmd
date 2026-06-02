@@ -7,7 +7,7 @@ format:
     html: default
 ---
 
-This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data from several real forensic investigations in order to identify species based on a small fragment of DNA.
+This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data from several real forensic investigations in order to identify the species of a sample based on a small fragment of DNA.
 
 ## Part 1
 
