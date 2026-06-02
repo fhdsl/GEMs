@@ -1,6 +1,6 @@
 ---
-title: "**DNA Barcoding and Forensics_Student Guide**"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+title: "DNA Barcoding and Forensics"
+date: last-modified
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
 format:
