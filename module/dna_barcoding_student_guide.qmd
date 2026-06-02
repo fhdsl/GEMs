@@ -194,7 +194,7 @@ Click on the "Nucleotide BLAST" image. This is the type of search you do when yo
 ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_21#slide=id.g3ec9ec989c2_0_21")
 ```
 
-Download the data at <https://genomicseducation.org/data/barcoding_devils_claw_ITS2.fasta>, then paste the sequence into the box
+Download the data at <https://genomicseducation.org/data/barcoding_devils_claw_ITS2.fasta>, then paste the sequence into the box.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_24#slide=id.g3ec9ec989c2_0_24")
