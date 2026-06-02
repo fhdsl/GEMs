@@ -1,5 +1,5 @@
 ---
-title: "**All of Us: Understanding Ethics**"
+title: "All of Us: Understanding Ethics"
 date: last-modified
 output:
   html_document

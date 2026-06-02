@@ -1,0 +1,56 @@
+---
+title: "Gut Check: AI and Genomic Literature"
+date: last-modified
+output:
+  html_document
+---
+
+## Overview
+
+These questions focus on the critical approach scientists must use to evaluate the validity of information, including information provided by Large Language Model (LLM) chat sources.
+
+## Build Your Query
+
+First, select one of the following topics:
+
+- Differential expression
+
+- Epigenetics
+
+- Ethical considerations in genomic research
+
+- Genomic databases
+
+- Genomic medicine
+
+- The gut-brain axis
+
+- Hardy-Weinberg Equilibrium
+
+- Human pedigrees with family markers
+
+- Polygenic risk scores
+
+- Population genetics
+
+- RNAseq
+
+Next, insert your topic into the following:
+
+> Explain the meaning and significance of ______. Include references.
+
+Finally, submit the completed query to the chatbot of your choice (e.g., ChatGPT, Claude, etc.)
+
+## Questions
+
+::: {.callout-note}
+## Evaluate Evidence
+
+1. Examine the references provided by the chat's response. Can you find an original source online? Who is presenting the source?  _Consider: individual and organization qualifications, conflict of interest, and trustworthiness._
+
+2. For references that link to a scientific article, what is the take home message? Does it match the statement made by the chatbot's response? Is it relevant and sufficient? _Consider: the article's abstract (if present)._
+
+3. How does the chatbot's response compare with other reliable sources? What do the experts say? 
+
+4. How does the chatbot's response and evidence make me feel? Is this what I already believed before I read it? What might make me change my mind? 
+:::
