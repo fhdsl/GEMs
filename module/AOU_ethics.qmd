@@ -1,6 +1,6 @@
 ---
-title: "**All of Us: Understanding Ethics**"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+title: "All of Us: Understanding Ethics"
+date: last-modified
 output:
   html_document
 ---

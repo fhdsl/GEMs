@@ -10,20 +10,23 @@ These materials are under 1 hour.
 
 - [All of Us: Understanding Ethics](module/AOU_ethics.html)
 
+- [Gut Check: AI and Genomic Literature](module/AI_genomics.html)
+
 ## Lab-Period Modules
 
 These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
 - [Database Detectives: Exploring Public Genomic Databases](module/database_detectives.html)
 
+- [DNA Barcoding](module/dna_barcoding.html)
+
+- [Epigenetics Explorer: Differentiating Cell Types](module/epigenetics_explorer.html)
+
 - [Family Markers: Using Multiply-Affected Families to Identify Risk Genes](module/family_markers.html)
 
 - [Genomic Medicine: Polygenic Risk Score Calculation](module/genomic_med_prs.html)
 
 - [Population Genetics: Fish Pond Simulator](module/pop_gen_hwe.html)
-
-- [DNA Barcoding](module/dna_barcoding.html)
-
 
 ## Research Modules
 

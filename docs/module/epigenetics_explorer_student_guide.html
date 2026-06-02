@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-06-02">
+
+<title>Epigenetics Explorer: Differentiating Cell Types – GEMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-75b69987270d423d216eddcf4b1a5e80.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XMR6CQ1L12"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">GEMs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules.html"> 
+<span class="menu-text">Modules</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../input.html"> 
+<span class="menu-text">Share Your Input</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-1-background" id="toc-part-1-background" class="nav-link active" data-scroll-target="#part-1-background">Part 1: Background</a></li>
+  <li><a href="#part-2-setting-up-the-genome-browser" id="toc-part-2-setting-up-the-genome-browser" class="nav-link" data-scroll-target="#part-2-setting-up-the-genome-browser">Part 2: Setting Up the Genome Browser</a>
+  <ul class="collapse">
+  <li><a href="#launch-the-genome-browser-gateway" id="toc-launch-the-genome-browser-gateway" class="nav-link" data-scroll-target="#launch-the-genome-browser-gateway">Launch the Genome Browser Gateway</a></li>
+  <li><a href="#clean-up-visual-settings" id="toc-clean-up-visual-settings" class="nav-link" data-scroll-target="#clean-up-visual-settings">Clean up Visual Settings</a></li>
+  <li><a href="#zooming-out" id="toc-zooming-out" class="nav-link" data-scroll-target="#zooming-out">Zooming Out</a></li>
+  <li><a href="#part-2-questions" id="toc-part-2-questions" class="nav-link" data-scroll-target="#part-2-questions">Part 2 Questions</a></li>
+  </ul></li>
+  <li><a href="#part-3-selecting-and-comparing-histone-marks" id="toc-part-3-selecting-and-comparing-histone-marks" class="nav-link" data-scroll-target="#part-3-selecting-and-comparing-histone-marks">Part 3: Selecting and Comparing Histone Marks</a>
+  <ul class="collapse">
+  <li><a href="#selecting-histone-marks" id="toc-selecting-histone-marks" class="nav-link" data-scroll-target="#selecting-histone-marks">Selecting Histone Marks</a></li>
+  </ul></li>
+  <li><a href="#comparing-histone-marks" id="toc-comparing-histone-marks" class="nav-link" data-scroll-target="#comparing-histone-marks">Comparing Histone Marks</a>
+  <ul class="collapse">
+  <li><a href="#part-3-questions" id="toc-part-3-questions" class="nav-link" data-scroll-target="#part-3-questions">Part 3 Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Epigenetics Explorer: Differentiating Cell Types</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 2, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_0#slide=id.g35ad481b335_0_0") -->
+<!-- ``` -->
+<p>This activity will walk through an epigenetic exploration of the HOXA locus, involving different histone markers and cell types.</p>
+<section id="part-1-background" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-background">Part 1: Background</h2>
+<p>The Central Dogma describes the fundamental flow of biological information: DNA is transcribed into RNA, which is then translated into protein. While we often think of this as a linear process, the physical reality inside a cell nucleus is more complex. The human genome contains roughly 3 billion base pairs of DNA, yet it must be compacted to fit inside a tiny cell nucleus. This is achieved by wrapping DNA around histone proteins to form chromatin. How tightly DNA is wrapped directly dictates gene expression: tightly packed chromatin (heterochromatin) is physically inaccessible to the transcriptional machinery, effectively silencing the genes within it, while loosely packed chromatin (euchromatin) permits transcription factors and RNA polymerase to access the DNA and initiate gene expression. So before a gene can even begin the journey from DNA to protein, the chromatin must be in the right configuration.</p>
+<p>Histones are small, positively charged proteins that DNA (which is negatively charged) wraps around. Eight histones together create the fundamental repeating unit of chromatin, the nucleosome. Extending from each histone is an unstructured “tail” that protrudes from the nucleosome and serves as a critical regulatory platform. These tails are subject to a wide variety of covalent chemical modifications, including acetylation, methylation, phosphorylation, and ubiquitination, each at specific amino acid residues (particularly lysine and arginine). The combination of modifications present on a given nucleosome determines whether a nearby gene is silenced or expressed.</p>
+<p>HOX genes have an important role in proper embryonic development and occur similarly across many organisms, including fruit flies (<em>Drosophila</em>). For humans, these genes ensure certain organs develop close to the proper place along the vertebral column [hubert2023hox]. HOX genes are turned on (expressed) not only during embryo formation but also in adult organisms, where they are necessary for functional differentiation of cells. Many HOX genes belong to a special group of genes called <a href="https://www.nature.com/scitable/topicpage/transcription-factors-and-transcriptional-control-in-eukaryotic-1046/">transcription factors</a> that help turn other genes on and off. These genes dictate what, when, and where structures get built. Mutations in HOX genes are associated with several cancers, including breast, pancreatic, lung, liver, and ovarian cancer [hubert2023hox, shah2010hox]. HOXA9 mutations can induce acute myeloid leukemia (AML) in mice and humans [calvo2001meis1a]. However, modifications to chromatin structure can affect HOX gene expression as well.</p>
+<p>This activity will walk through several histone modifications that can happen near the HOXA locus, exploring different cell types and parts of this area of the genome.</p>
+</section>
+<section id="part-2-setting-up-the-genome-browser" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-setting-up-the-genome-browser">Part 2: Setting Up the Genome Browser</h2>
+<section id="launch-the-genome-browser-gateway" class="level3">
+<h3 class="anchored" data-anchor-id="launch-the-genome-browser-gateway">Launch the Genome Browser Gateway</h3>
+<p>Go to <a href="https://genome.ucsc.edu/cgi-bin/hgGateway"><code>https://genome.ucsc.edu/cgi-bin/hgGateway</code></a>.</p>
+<p>Click “Human” under “Browse/Select Species”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g1965a5f7f0a_0_44.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Landing page for the UCSC Genome browser Gateway."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>You will be working from the Human Assembly <strong>Mar.&nbsp;2006 (NCBI36/hg18)</strong>. Make sure this is selected under the “Find Position” dropdown menu.</p>
+<!-- Older genome has a bit more versatility for selecting cell types. -->
+<p>Enter <strong>HOXA7</strong> in Position/Search Term and select GO.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="December 2013 assembly is highlighted on the Find Position dropdown menu. HOXA7 has been typed in the search term."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Your Genome Browser should now look like this. There’s a lot going on!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Dec 2013 assembly results for the HOXA7 locus."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="clean-up-visual-settings" class="level3">
+<h3 class="anchored" data-anchor-id="clean-up-visual-settings">Clean up Visual Settings</h3>
+<p>Let’s make this easier to look at.</p>
+<p>Scroll down to “Visible Tracks”. Select “Hide” under all the drop downs <em>except</em> “UCSC Genes” and “NCBI RefSeq”. Set these to “Pack” and “Full”, respectively.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_19.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="..."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Click “Refresh” to update the viewer.</p>
+<p>Your browser should look like the image below, where only <strong>HOXA7</strong> is shown.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_28.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The genome is zoomed in to the HOXA7 gene."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="zooming-out" class="level3">
+<h3 class="anchored" data-anchor-id="zooming-out">Zooming Out</h3>
+<p>Zoom out your display by 10x, 3x or 1.5x to see HOXA1-HOXA13 genes on your browser. The zoom out value you’ll select will be dependent on your computer display screen. You may need to use the zoom in option if you’ve zoomed out the display beyond the HOXA1-HOXA13 genes. Zoom buttons can be clicked more than once.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_35.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The zoom in and out buttons are highlighted"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Instead of zooming in and out, you can always manually enter your chromosome region of choice. For this exercise, try entering the following region: <strong>chr7:27,087,367-27,235,317</strong>. Click “Search”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_40.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The specific chromosome locus has been typed into the search bar."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ideally your browser should like the image below.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_46.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="HOX loci are now visible on the genome."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You could also enter <strong>chr7:27,087,367-27,235,317</strong> in the search bar at the start of this exercise instead of HOXA7.</p>
+</div>
+</div>
+</section>
+<section id="part-2-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-questions">Part 2 Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Which genes are on either side of HOXA7? Take a screenshot and point to these genes.</p></li>
+<li><p>What gene or genes are present at <strong>chr7:27,110,536-27,132,455</strong>? Take a screenshot of this location in the genome.</p></li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="part-3-selecting-and-comparing-histone-marks" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-selecting-and-comparing-histone-marks">Part 3: Selecting and Comparing Histone Marks</h2>
+<section id="selecting-histone-marks" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-histone-marks">Selecting Histone Marks</h3>
+<p>Now we’ll visualize histone marks to show that the same chromosome locus can have drastically different histone patterns.</p>
+<p>Scroll down to the “Regulation” menu and click the <strong>Broad Histone</strong> track hyperlink.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_71.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The Broad Histone track hyperlink is highlighted."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Scroll down and deselect all boxes by clicking on the “-” sign next to “All”.</p>
+<p>Select <strong>H3K4me3</strong> and <strong>H3K27me3</strong> marks for <strong>H1-hESC</strong> and <strong>NHLF</strong>. To learn more about these options you can click on their blue hyperlinks for more information.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_0_78.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Selected cell line and antibody combinations have been highlighted."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>H3K4me3</strong> is a known histone mark on Histone 3 (H3). It occurs on lysine 4 (K4) and has three methyl groups (me3) that indicate active gene expression. In other words, the DNA is open and ready to be accessed.</p></li>
+<li><p><strong>H3K27me3</strong> is a known histone mark on on Histone 3 (H3). It occurs on lysine 27 (K27) and has three methyl groups (me3) that indicate inactive gene expression. In other words, the DNA is closed off and cannot be accessed.</p></li>
+<li><p>The <strong>H1-hESC</strong> cell line consists of embryonic stem cells.</p></li>
+<li><p>The <strong>NHLF</strong> cell line consists of lung fibroblasts. Fibroblasts are important for building the connective structures around cells and healing wounds.</p></li>
+</ul>
+</div>
+</div>
+<p>Scroll below and deselect the Peak views. You will only need Signal views.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_1_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Peak check boxes are highlighted."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Your selected subtracks should only display Signal views as shown below. Click “Submit”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_1_13.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Only Signal views are visible among subtracks. The Submit button is highlighted"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Your browser should look like the image below.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88_g3e71c81166f_1_23.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Histone marks are shown below the HOXA loci in the genome browser."></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="comparing-histone-marks" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-histone-marks">Comparing Histone Marks</h2>
+<p>Let’s first examine the <strong>H1-hESC</strong> cell line (embryonic stem cells).</p>
+<p>Signals are high for the H3K27me3 histone mark. You’ll also notice that H3K4me3 signals are minimal. This signal pattern demonstrates that embryonic stem cells are in the repressed chromatin configuration at the HOXA locus and indicates that HOXA genes in blue are not expressed in this cell line.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4_g152864d54a7_70_22.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="High signals for the H3K27me3 histone mark in the H1-hESC cell line indicate these genes are not expressed in these cells."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Now, let’s examine the <strong>NHLF</strong> cell line (lung fibroblasts).</p>
+<p>The pattern is different for NHLF. H3K4me3 signals are high for the first half of the HOXA locus, but low for the second half of the locus.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4_g152864d54a7_70_30.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="H3K4me3 signals are high then low in the genome browser."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>H3K27me3 signals are low and then high for the same locus.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4_g152864d54a7_70_35.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="H3K27me3 signals are low then high in the genome browser."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This signal pattern demonstrates that for lung fibroblasts only half of the HOXA locus is expressed while the other half is not expressed. Specifically, we can use the full image to see that HOXA1-7 are expressed (turned on).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4_g152864d54a7_70_40.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="HOXA1 through 7 are highlighted to indicate expression is turned on."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can also see that HOXA9-13 is not expressed (turned off).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epigenetics_explorer_student_guide_files/figure-html//1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4_g152864d54a7_70_46.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="HOXA9 through 13 are highlighted to indicate expression is turned off."></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="part-3-questions" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>The two cell lines differ in their gene expression (genes turned on or off). Does this mean that the genome varies as well? Why might gene expression vary?</p></li>
+<li><p>Locate the HOXA5 gene and record the genome location (e.g., chr7:###-###). Exact numbers will vary a bit, but make sure the whole gene is in frame.</p></li>
+<li><p>Return to the Broad Histone track menu and select cell line <strong>HUVEC</strong> (umbilical vein endothelial cells) and K562 (leukemia cells). Do these cell lines have expression turned on or off, or some other pattern for HOXA5?</p></li>
+<li><p>Return to the Broad Histone track menu and find <strong>H3K27ac</strong>. Click on the link for this histone mark to learn more about it. Does <strong>H3K27ac</strong> work more like <strong>H3K4me3</strong> or <strong>H3K27me3</strong>? Take a screenshot showing this histone mark across the HOXA locus (HOXA 1-13).</p></li>
+</ol>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/genomicseducation\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p style="text-align:center;">
+<small> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. </small>
+</p>
+<p style="text-align:center;">
+<small> GEMs is funded by the National Human Genome Research Institute <a href="https://reporter.nih.gov/search/SjWuEKrSVEGVaHvRb9L-vg/project-details/10854368">1R25HG013489.</a>
+</small></p><small>
+</small><p><small></small></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

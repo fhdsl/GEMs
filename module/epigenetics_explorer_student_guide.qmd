@@ -1,0 +1,202 @@
+---
+title: "Epigenetics Explorer: Differentiating Cell Types"
+date: last-modified
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+<!-- ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'} -->
+<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7mKxuFzk8b8LhLrPBPHb1bpYpbk3c/edit?slide=id.g35ad481b335_0_0#slide=id.g35ad481b335_0_0") -->
+<!-- ``` -->
+
+This activity will walk through an epigenetic exploration of the HOXA locus, involving different histone markers and cell types.
+
+## Part 1: Background
+
+The Central Dogma describes the fundamental flow of biological information: DNA is transcribed into RNA, which is then translated into protein. While we often think of this as a linear process, the physical reality inside a cell nucleus is more complex. The human genome contains roughly 3 billion base pairs of DNA, yet it must be compacted to fit inside a tiny cell nucleus. This is achieved by wrapping DNA around histone proteins to form chromatin. How tightly DNA is wrapped directly dictates gene expression: tightly packed chromatin (heterochromatin) is physically inaccessible to the transcriptional machinery, effectively silencing the genes within it, while loosely packed chromatin (euchromatin) permits transcription factors and RNA polymerase to access the DNA and initiate gene expression. So before a gene can even begin the journey from DNA to protein, the chromatin must be in the right configuration.
+
+Histones are small, positively charged proteins that DNA (which is negatively charged) wraps around. Eight histones together create the fundamental repeating unit of chromatin, the nucleosome. Extending from each histone is an unstructured "tail" that protrudes from the nucleosome and serves as a critical regulatory platform. These tails are subject to a wide variety of covalent chemical modifications, including acetylation, methylation, phosphorylation, and ubiquitination, each at specific amino acid residues (particularly lysine and arginine). The combination of modifications present on a given nucleosome determines whether a nearby gene is silenced or expressed.
+
+HOX genes have an important role in proper embryonic development and occur similarly across many organisms, including fruit flies (_Drosophila_). For humans, these genes ensure certain organs develop close to the proper place along the vertebral column [hubert2023hox]. HOX genes are turned on (expressed) not only during embryo formation but also in adult organisms, where they are necessary for functional differentiation of cells. Many HOX genes belong to a special group of genes called [transcription factors](https://www.nature.com/scitable/topicpage/transcription-factors-and-transcriptional-control-in-eukaryotic-1046/) that help turn other genes on and off. These genes dictate what, when, and where structures get built. Mutations in HOX genes are associated with several cancers, including breast, pancreatic, lung, liver, and ovarian cancer [hubert2023hox, shah2010hox]. HOXA9 mutations can induce acute myeloid leukemia (AML) in mice and humans [calvo2001meis1a]. However, modifications to chromatin structure can affect HOX gene expression as well.
+
+This activity will walk through several histone modifications that can happen near the HOXA locus, exploring different cell types and parts of this area of the genome.
+
+## Part 2: Setting Up the Genome Browser
+
+### Launch the Genome Browser Gateway
+
+Go to [`https://genome.ucsc.edu/cgi-bin/hgGateway`](https://genome.ucsc.edu/cgi-bin/hgGateway). 
+
+Click "Human" under "Browse/Select Species".  
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Landing page for the UCSC Genome browser Gateway.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g1965a5f7f0a_0_44#slide=id.g1965a5f7f0a_0_44")
+```
+
+You will be working from the Human Assembly **Mar. 2006 (NCBI36/hg18)**. Make sure this is selected under the "Find Position" dropdown menu. 
+
+<!-- Older genome has a bit more versatility for selecting cell types. -->
+
+Enter **HOXA7** in Position/Search Term and select GO. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "December 2013 assembly is highlighted on the Find Position dropdown menu. HOXA7 has been typed in the search term.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_2#slide=id.g3e71c81166f_0_2")
+```
+
+Your Genome Browser should now look like this. There's a lot going on!
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Dec 2013 assembly results for the HOXA7 locus.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_9#slide=id.g3e71c81166f_0_9")
+```
+
+### Clean up Visual Settings
+
+Let's make this easier to look at.
+
+Scroll down to "Visible Tracks". Select "Hide" under all the drop downs _except_ "UCSC Genes" and "NCBI RefSeq". Set these to "Pack" and "Full", respectively.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "...", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_19#slide=id.g3e71c81166f_0_19")
+```
+
+Click "Refresh" to update the viewer.
+
+Your browser should look like the image below, where only **HOXA7** is shown. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The genome is zoomed in to the HOXA7 gene.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_28#slide=id.g3e71c81166f_0_28")
+```
+
+### Zooming Out
+
+Zoom out your display by 10x, 3x or 1.5x to see HOXA1-HOXA13 genes on your browser. The zoom out value you’ll select will be dependent on your computer display screen. You may need to use the zoom in option if you’ve zoomed out the display beyond the HOXA1-HOXA13 genes. Zoom buttons can be clicked more than once.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The zoom in and out buttons are highlighted", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_35#slide=id.g3e71c81166f_0_35")
+```
+
+Instead of zooming in and out, you can always manually enter your chromosome region of choice. For this exercise, try entering the following region: **chr7:27,087,367-27,235,317**. Click "Search". 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The specific chromosome locus has been typed into the search bar.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_40#slide=id.g3e71c81166f_0_40")
+```
+
+Ideally your browser should like the image below. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "HOX loci are now visible on the genome.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_46#slide=id.g3e71c81166f_0_46")
+```
+
+::: callout-tip
+You could also enter **chr7:27,087,367-27,235,317** in the search bar at the start of this exercise instead of HOXA7. 
+:::
+
+### Part 2 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Which genes are on either side of HOXA7? Take a screenshot and point to these genes.
+
+2.  What gene or genes are present at **chr7:27,110,536-27,132,455**? Take a screenshot of this location in the genome.
+:::
+
+## Part 3: Selecting and Comparing Histone Marks
+
+### Selecting Histone Marks
+
+Now we’ll visualize histone marks to show that the same chromosome locus can have drastically different histone patterns.
+
+Scroll down to the "Regulation" menu and click the **Broad Histone** track hyperlink.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The Broad Histone track hyperlink is highlighted.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_71#slide=id.g3e71c81166f_0_71")
+```
+
+Scroll down and deselect all boxes by clicking on the "-" sign next to "All".
+
+Select **H3K4me3** and **H3K27me3** marks for **H1-hESC** and **NHLF**. To learn more about these options you can click on their blue hyperlinks for more information. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Selected cell line and antibody combinations have been highlighted.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_0_78#slide=id.g3e71c81166f_0_78")
+```
+
+::: callout-note
+- **H3K4me3** is a known histone mark on Histone 3 (H3). It occurs on lysine 4 (K4) and has three methyl groups (me3) that indicate active gene expression. In other words, the DNA is open and ready to be accessed.
+
+- **H3K27me3** is a known histone mark on on Histone 3 (H3). It occurs on lysine 27 (K27) and has three methyl groups (me3) that indicate inactive gene expression. In other words, the DNA is closed off and cannot be accessed.
+
+- The **H1-hESC** cell line consists of embryonic stem cells.
+
+- The **NHLF** cell line consists of lung fibroblasts. Fibroblasts are important for building the connective structures around cells and healing wounds.
+:::
+
+Scroll below and deselect the Peak views. You will only need Signal views. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Peak check boxes are highlighted.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_1_0#slide=id.g3e71c81166f_1_0")
+```
+
+Your selected subtracks should only display Signal views as shown below. Click "Submit".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Only Signal views are visible among subtracks. The Submit button is highlighted", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_1_13#slide=id.g3e71c81166f_1_13")
+```
+
+Your browser should look like the image below. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Histone marks are shown below the HOXA loci in the genome browser.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1HaJDefpQuuZR4lbSDGC8CjGQwj86ETxL434xcSv1v88/edit?slide=id.g3e71c81166f_1_23#slide=id.g3e71c81166f_1_23")
+```
+
+## Comparing Histone Marks
+
+Let's first examine the **H1-hESC** cell line (embryonic stem cells).
+
+Signals are high for the H3K27me3 histone mark. You’ll also notice that H3K4me3 signals are minimal. This signal pattern demonstrates that embryonic stem cells are in the repressed chromatin configuration at the HOXA locus and indicates that HOXA genes in blue are not expressed in this cell line. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "High signals for the H3K27me3 histone mark in the H1-hESC cell line indicate these genes are not expressed in these cells.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_22")
+```
+
+Now, let's examine the **NHLF** cell line (lung fibroblasts).
+
+The pattern is different for NHLF. H3K4me3 signals are high for the first half of the HOXA locus, but low for the second half of the locus. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "H3K4me3 signals are high then low in the genome browser.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_30")
+```
+
+H3K27me3 signals are low and then high for the same locus. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "H3K27me3 signals are low then high in the genome browser.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_35")
+```
+
+This signal pattern demonstrates that for lung fibroblasts only half of the HOXA locus is expressed while the other half is not expressed. Specifically, we can use the full image to see that HOXA1-7 are expressed (turned on).
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "HOXA1 through 7 are highlighted to indicate expression is turned on.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_40")
+```
+
+We can also see that HOXA9-13 is not expressed (turned off). 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "HOXA9 through 13 are highlighted to indicate expression is turned off.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1B7y_jm8GuHZMUvTU1TFdW4nqQQV6nOT9XuFwgSflXz4/edit#slide=id.g152864d54a7_70_46")
+```
+
+### Part 3 Questions
+
+::: callout-note
+## Check Your Knowledge
+
+1.  The two cell lines differ in their gene expression (genes turned on or off). Does this mean that the genome varies as well? Why might gene expression vary?
+
+2.  Locate the HOXA5 gene and record the genome location (e.g., chr7:###-###). Exact numbers will vary a bit, but make sure the whole gene is in frame.
+
+3. Return to the Broad Histone track menu and select cell line **HUVEC** (umbilical vein endothelial cells) and K562 (leukemia cells). Do these cell lines have expression turned on or off, or some other pattern for HOXA5?
+
+4. Return to the Broad Histone track menu and find **H3K27ac**. Click on the link for this histone mark to learn more about it. Does **H3K27ac** work more like **H3K4me3** or **H3K27me3**? Take a screenshot showing this histone mark across the HOXA locus (HOXA 1-13).
+:::
