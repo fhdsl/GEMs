@@ -67,6 +67,7 @@ Many bird eggs look alike and can't easily be identified to genus level, let alo
 
 1. Why is DNA barcoding useful for the case study you chose?
 
+2. For your particular case study, what are some of the potential consequences of your forensic investigation?
 :::
 
 
@@ -158,11 +159,11 @@ The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitoch
 ::: {.callout-note}
 ## Check Your Knowledge
 
-2. According to your BOLD search, what is the species identity of the each sample in the case study you chose? What are the common names of these species?
+3. According to your BOLD search, what is the species identity of the each sample in the case study you chose? What are the common names of these species?
 
-3. What is the percent identity value for the top result of each search?
+4. What is the percent identity value for the top result of each search?
 
-4. Do these species identities match the putative identity of each sample?
+5. Do these species identities match the putative identity of each sample?
 :::
 
 
@@ -257,13 +258,13 @@ The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA
 ::: {.callout-note}
 ## Check Your Knowledge
 
-4. According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
+6. According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
 
-5. What is the percent identity value for the top result of each search?
+7. What is the percent identity value for the top result of each search?
 
-6. Do the species identities from the GenBank search match the species identities from the BOLD search?
+8. Do the species identities from the GenBank search match the species identities from the BOLD search?
 
-7. Answer the question that matches the case file you chose.
+9. Answer the question that matches the case file you chose.
 
 __Herbal Medicine Investigation__ Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
 
