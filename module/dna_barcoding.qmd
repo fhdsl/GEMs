@@ -1,7 +1,8 @@
 ---
-title: "**DNA Barcoding**"
-format:
-    html: default
+title: "DNA Barcoding"
+date: last-modified
+output:
+  html_document
 ---
 
 

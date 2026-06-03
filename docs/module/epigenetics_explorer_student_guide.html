@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -187,7 +207,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="part-1-background">Part 1: Background</h2>
 <p>The Central Dogma describes the fundamental flow of biological information: DNA is transcribed into RNA, which is then translated into protein. While we often think of this as a linear process, the physical reality inside a cell nucleus is more complex. The human genome contains roughly 3 billion base pairs of DNA, yet it must be compacted to fit inside a tiny cell nucleus. This is achieved by wrapping DNA around histone proteins to form chromatin. How tightly DNA is wrapped directly dictates gene expression: tightly packed chromatin (heterochromatin) is physically inaccessible to the transcriptional machinery, effectively silencing the genes within it, while loosely packed chromatin (euchromatin) permits transcription factors and RNA polymerase to access the DNA and initiate gene expression. So before a gene can even begin the journey from DNA to protein, the chromatin must be in the right configuration.</p>
 <p>Histones are small, positively charged proteins that DNA (which is negatively charged) wraps around. Eight histones together create the fundamental repeating unit of chromatin, the nucleosome. Extending from each histone is an unstructured “tail” that protrudes from the nucleosome and serves as a critical regulatory platform. These tails are subject to a wide variety of covalent chemical modifications, including acetylation, methylation, phosphorylation, and ubiquitination, each at specific amino acid residues (particularly lysine and arginine). The combination of modifications present on a given nucleosome determines whether a nearby gene is silenced or expressed.</p>
-<p>HOX genes have an important role in proper embryonic development and occur similarly across many organisms, including fruit flies (<em>Drosophila</em>). For humans, these genes ensure certain organs develop close to the proper place along the vertebral column [hubert2023hox]. HOX genes are turned on (expressed) not only during embryo formation but also in adult organisms, where they are necessary for functional differentiation of cells. Many HOX genes belong to a special group of genes called <a href="https://www.nature.com/scitable/topicpage/transcription-factors-and-transcriptional-control-in-eukaryotic-1046/">transcription factors</a> that help turn other genes on and off. These genes dictate what, when, and where structures get built. Mutations in HOX genes are associated with several cancers, including breast, pancreatic, lung, liver, and ovarian cancer [hubert2023hox, shah2010hox]. HOXA9 mutations can induce acute myeloid leukemia (AML) in mice and humans [calvo2001meis1a]. However, modifications to chromatin structure can affect HOX gene expression as well.</p>
+<p>HOX genes have an important role in proper embryonic development and occur similarly across many organisms, including fruit flies (<em>Drosophila</em>). For humans, these genes ensure certain organs develop close to the proper place along the vertebral column <span class="citation" data-cites="hubert2023hox"><a href="#ref-hubert2023hox" role="doc-biblioref">[1]</a></span>. HOX genes are turned on (expressed) not only during embryo formation but also in adult organisms, where they are necessary for functional differentiation of cells. Many HOX genes belong to a special group of genes called <a href="https://www.nature.com/scitable/topicpage/transcription-factors-and-transcriptional-control-in-eukaryotic-1046/">transcription factors</a> that help turn other genes on and off. These genes dictate what, when, and where structures get built. Mutations in HOX genes are associated with several cancers, including breast, pancreatic, lung, liver, and ovarian cancer <span class="citation" data-cites="hubert2023hox"><a href="#ref-shah2010hox" role="doc-biblioref">[2]</a></span>. HOXA9 mutations can induce acute myeloid leukemia (AML) in mice and humans <span class="citation" data-cites="calvo2001meis1a"><a href="#ref-calvo2001meis1a" role="doc-biblioref">[3]</a></span>. However, modifications to chromatin structure can affect HOX gene expression as well.</p>
 <p>This activity will walk through several histone modifications that can happen near the HOXA locus, exploring different cell types and parts of this area of the genome.</p>
 </section>
 <section id="part-2-setting-up-the-genome-browser" class="level2">
@@ -471,10 +491,21 @@ Note
 </div>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-hubert2023hox" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">K. A. Hubert and D. M. Wellik, <span>“Hox genes in development and beyond,”</span> <em>Development</em>, vol. 150, no. 1, p. dev192476, 2023, doi: <a href="https://doi.org/10.1242/dev.192476">https://doi.org/10.1242/dev.192476</a>. Available: <a href="https://journals.biologists.com/dev/article/150/1/dev192476/286593/Hox-genes-in-development-and-beyond">https://journals.biologists.com/dev/article/150/1/dev192476/286593/Hox-genes-in-development-and-beyond</a></div>
+</div>
+<div id="ref-shah2010hox" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">N. Shah and S. Sukumar, <span>“The hox genes and their roles in oncogenesis,”</span> <em>Nature Reviews Cancer</em>, vol. 10, no. 5, pp. 361–371, 2010, doi: <a href="https://doi.org/10.1038/nrc2826">https://doi.org/10.1038/nrc2826</a>. Available: <a href="https://www.nature.com/articles/nrc2826">https://www.nature.com/articles/nrc2826</a></div>
+</div>
+<div id="ref-calvo2001meis1a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">K. R. Calvo, P. S. Knoepfler, D. B. Sykes, M. P. Pasillas, and M. P. Kamps, <span>“Meis1a suppresses differentiation by g-CSF and promotes proliferation by SCF: Potential mechanisms of cooperativity with Hoxa9 in myeloid leukemia,”</span> <em>Proceedings of the National Academy of Sciences</em>, vol. 98, no. 23, pp. 13120–13125, 2001, doi: <a href="https://doi.org/10.1073/pnas.231115398">https://doi.org/10.1073/pnas.231115398</a>. Available: <a href="https://www.pnas.org/doi/full/10.1073/pnas.231115398">https://www.pnas.org/doi/full/10.1073/pnas.231115398</a></div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

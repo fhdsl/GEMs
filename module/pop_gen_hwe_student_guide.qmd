@@ -135,9 +135,10 @@ The goal of this lab is to interpret patterns in allele frequencies and genotype
 This activity reinforces what we discussed in lecture and provides a visual, dynamic way to observe evolution in action.
 
 
-# Activity 1: Modeling Hardy-Weinberg Equilibrium
 
-In this section, you'll explore what allele frequencies look like in a population at equilibrium (large population, no mutation, no migration, no selection, and random mating). This will also give you a chance to get used to the PopGen fishpond Simulator.
+# Activity 1: Modeling Genetic Drift
+
+In this section, you will explore genetic drift, which is the random fluctuation of allele frequencies due to chance alone. No genotype has a fitness advantage in this model. You will run two trials: one with a large population and one with a small population.
 
 ## Trial 1a. Population Size = 500 koi
 
@@ -148,12 +149,12 @@ Open the [PopGen Fishpond Simulator](https://virtualbiologylab.org/ModelsHTML5/P
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_231#slide=id.g3b94f7217d0_0_231")
 ```
 
-
-
 This will open the page that allows you to change the settings for your simulation. Make sure the settings have the following values. (In order to change values, click the up or down arrow next to each number.)
 
-- Initial size: 500
-- Carrying capacity: 500 
+Before running this simulation, change the settings to the following values.
+
+- **Initial size: 500** 
+- **Carrying capacity: 500** 
 - Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0 
 - Mutation Rate (R→r, r→R): 0 
 - Migration: 0 
@@ -162,7 +163,6 @@ This will open the page that allows you to change the settings for your simulati
 - Mortality Rate: 10 
 - Brood Size: 10 
 - Sex Ratio: 0.5 
-
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Image of the Experimental Design tab of the fishpond simulation, where you can choose the settings for your simulation.", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c30c8d4131_0_0#slide=id.g3c30c8d4131_0_0")
@@ -177,7 +177,6 @@ Once you've changed the settings, click on the arrow that says "To Data" in the 
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_245#slide=id.g3b94f7217d0_0_245")
 ```
 
-
 On this page, you can see the number of generations that have been simulated as well as the allele and genotype frequencies of the fishpond population. At the moment, the simulation is running fairly slowly. You can make it run faster by pressing the "forward" button on the bottom. 
 
 
@@ -185,161 +184,11 @@ On this page, you can see the number of generations that have been simulated as 
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c27d006627_0_3#slide=id.g3c27d006627_0_3")
 ```
 
+Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Feel free to speed this up since it’s a simulation! **Make sure to take a screenshot of your Trial 1a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-Run the model for 75 generations, then pause the simulation and record the allele and genotype frequencies. Continue running for an additional 75 generations (until you have reached generation 150). **Make sure to take a screenshot of your Trial 1a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
+## Trial 1b. Population size = 25 koi
 
-::: callout-note
-# Results: Hardy-Weinberg Equilibrium Simulation Trial 1a
-
-Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
-```
-
-:::
-
-
-## Trial 1b. Population Size = 500 koi
-
-Run the simulation again with the same parameters as before. You can do this by clicking the "reload" button in the upper right corner of the Data Collection lab notebook page.
-
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Click the circular arrow in the upper right corner to restart the simulation from 0.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c27d006627_0_0#slide=id.g3c27d006627_0_0")
-```
-
-
-Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. **Make sure to take a screenshot of your Trial 1b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
-
-::: callout-note
-# Results: Hardy-Weinberg Equilibrium Simulation Trial 1b
-
-Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c45f560b82_0_45#slide=id.g3c45f560b82_0_45")
-```
-
-:::
-
-## Running a chi-square test
-
-Under HWE, the frequencies of the alleles R and r should be the same in generation 150 as they are at the start of your simulation. While it is tempting to simply eyeball the frequencies to determine if the population is at equilibrium, a more scientific approach is to run a statistical test. For testing HWE, you can use a chi-square test to compare allele frequencies. This can be done in a spreadsheet program like Microsoft Excel or Google Sheets.
-
-**Expand this section for instructions on running a chi-square test in Microsoft Excel.**
-
-::: {.callout-caution collapse="true"}
-# Using Microsoft Excel for Chi-Square Tests
-
-First, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
-
-Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
-
-The formula for calculating allele frequency is (total number of fish)*(allele proportion).
-
-So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)
-
-Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure to fill in the total number of fish into your table, not the proportion.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3b94f7217d0_0_241#slide=id.g3b94f7217d0_0_241")
-```
-
-Next, type in the formula to run a chi-square test. In Excel, the formula follows the convention
-
-`=chisq.test(actual_range, expected_range)`
-
-The **actual_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Type the formula for the chi-square test command and choose the actual and expected range of values.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_0#slide=id.g3c33bb9375e_0_0")
-```
-
-In the cell where the formula is typed, Excel will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. (Note: Excel may tell you there is a possible error in your formula because adjacent cells are omitted. You can ignore this, because it's asking why you omitted the "0" and "150" that are your column headers.)
-:::
-
-
-**Expand this section for instructions on running a chi-square test in Google Sheets.**
-
-::: {.callout-caution collapse="true"}
-# Using Google Sheets for Chi-Square Tests
-
-First, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.
-
-Once you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. 
-
-The formula for calculating allele frequency is (total number of fish)*(allele proportion).
-
-So, if you start with 500 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 500. (Remember, each koi fish has 2 alleles, so a population of 500 fish means 1000 alleles, and half of them are R to start.)
-
-Type in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure to fill in the total number of fish into your table, not the proportion.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_3#slide=id.g3c33bb9375e_0_3")
-```
-
-Next, type in the formula to run a chi-square test. In Google Sheets, the formula follows the convention
-
-`=CHISQ.TEST(observed_ values_range, expected_ values_range)`
-
-The **observed_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Type the formula for the chi-square test command and choose the observed and expected range of values.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c33bb9375e_0_6#slide=id.g3c33bb9375e_0_6")
-```
-
-In the cell where the formula is typed, Google Sheets will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. 
-:::
-
-Run a chi-square test for both trial 1a and 1b and record your p-values for each.
-
-::: callout-note
-# Check your knowledge: Hardy-Weinberg Equilibrium questions
-
-1. Examine the change in allele frequencies for your two simulations. Did either population show a change in allele frequency? Why or why not?
-
-2. Compare the change in allele frequencies between your two simulations. Are the allele frequencies identical? Why or why not?
-
-3. Would you say the populations are at equilibrium without looking at the results of the chi-square test? What about afterwards? Make sure to report your p-values for both trials.
-:::
-
-
-# Activity 2: Modeling Genetic Drift
-
-In this section, you will explore genetic drift, which is the random fluctuation of allele frequencies due to chance alone. No genotype has a fitness advantage in this model. You will run two trials: one with a large population and one with a small population.
-
-## Trial 2a. Population Size = 200 koi
-
-Before running this simulation, change the settings to the following values.
-
-- **Initial size: 200** 
-- **Carrying capacity: 200** 
-- Genotype Fitness: rr = 1.0, Rr = 1.0, RR = 1.0 
-- Mutation Rate (R→r, r→R): 0 
-- Migration: 0 
-- Assortative Mating: 0 
-- Initial R Allele Proportion: 0.5 
-- Mortality Rate: 10 
-- Brood Size: 10 
-- Sex Ratio: 0.5 
-
-Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Feel free to speed this up since it’s a simulation! **Make sure to take a screenshot of your Trial 2a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
-
-::: callout-note
-# Results: Drift Simulation Trial 2a
-
-Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c90e55b9a5_0_1#slide=id.g3c90e55b9a5_0_1")
-```
-
-:::
-
-## Trial 2b. Population size = 25 koi
-
-Before running this simulation, change the settings to the following values. The only parameters that have changed between this and trial 2a at the initial size and the carrying capacity.
+Before running this simulation, change the settings to the following values. **The only parameters that have changed between this and trial 1a at the initial size and the carrying capacity.**
 
 - **Initial size: 25**
 - **Carrying capacity: 25**
@@ -354,20 +203,9 @@ Before running this simulation, change the settings to the following values. The
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run! **Make sure to take a screenshot of your Trial 2b fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-::: callout-note
-# Results: Drift Simulation Trial 2b
-
-Fill out the table below, and submit it **and a screenshot** of the Data Collection page at 150 generations as part of your assignment.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c90e55b9a5_0_7#slide=id.g3c90e55b9a5_0_7")
-```
-
-:::
-
 ## Running a chi-square test
 
-You will again run chi-square tests on both trials using either Excel or Google Sheets.
+You will run chi-square tests on both trials. This can be calculated by hand, or by using either Excel or Google Sheets. Instructions for using Excel or Google Sheets are below.
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
@@ -434,7 +272,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 In the cell where the formula is typed, Google Sheets will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. 
 :::
 
-Run a chi-square test for both trial 2a and 2b and record your p-values for each.
+Run a chi-square test for both trial 1a and 1b and record your p-values for each.
 
 ::: callout-note
 # Check your knowledge: Drift questions
@@ -450,11 +288,13 @@ Run a chi-square test for both trial 2a and 2b and record your p-values for each
 5. Which population is not in Hardy-Weinberg? Which condition of Hardy-Weinberg is not being met? Make sure to include the p-values from your chi-square tests to support your answer.
 :::
 
-# Activity 3: Modeling Natural Selection
+# Activity 2: Modeling Natural Selection
 
 Let's introduce natural selection into the simulation by giving a fitness advantage to genotypes carrying the R allele.
 
-## Trial 3a. Reduced fitness for r allele
+## Trial 2a. Reduced fitness for r allele
+
+In this simulation, any koi who is homozygous for the r allele (rr) is 50% less likely to reproduce compared to koi who carry at least one copy of the R allele (RR and Rr individuals). Carrying two copies of the r allele is disadvantageous! Let's imagine that the fishpond water is very muddy and dark. Red (RR) and red-spotted (Rr) koi blend in better with the dark water, but the white (rr) koi are easier for predators like herons to see and catch.
 
 Before running this simulation, change the settings to the following values.
 
@@ -471,38 +311,21 @@ Before running this simulation, change the settings to the following values.
 
 Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run! **Make sure to take a screenshot of your Trial 3a fishpond and Data Collection page at 150 generations - you will submit this with your assignment!**
 
-::: callout-note
-# Results: Natural Selection Simulation Trial 3a
+## Trial 2b. Changing the fitness of the r allele
+Now you will change the environment so that the r allele becomes advantageous while **using the ending population from trial 2a**. This means you will _not_ press the reload button after changing the simulation settings. The only setting you will change is the genotype fitness!
 
-Fill out the table below, and submit it and a screenshot of the Data Collection page at 150 generations as part of your assignment
+Genotype fitness is always environment-dependent. Let's imagine the water in the fishpond becomes clearer and predators (like herons) can suddenly see the red (RR) and red-spotted (Rr) koi much more easily than the white (rr) koi. We are modeling this environmental change by changing the genotype fitness values!
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c90e55b9a5_0_21#slide=id.g3c90e55b9a5_0_21")
-```
-
-:::
-
-## Trial 3b. Changing the fitness of the r allele
-Now you will change the environment so that the r allele becomes advantageous while **using the ending population from trial 3a**. This means you will _not_ press the reload button after changing the simulation settings. The only setting you will change is the genotype fitness!
+**DO NOT PRESS THE RELOAD BUTTON. KEEP USING THE ENDING POPULATION FROM TRIAL 2a.**
 
 - **Genotype Fitness: rr = 1.0, Rr = 0.8, RR = 0.5**
 
-Run the model an additional 150 generations, recording the allele and genotype frequencies at both 225 and 300 generations. Make sure to just unpause the simulation from trial 3a instead of pressing the reload button! **Make sure to take a screenshot of your Trial 3b fishpond and Data Collection page at 300 generations - you will submit this with your assignment!**
+Run the model an additional 150 generations, recording the allele and genotype frequencies at both 225 and 300 generations. Make sure to just unpause the simulation from trial 2a instead of pressing the reload button! **Make sure to take a screenshot of your Trial 2b fishpond and Data Collection page at 300 generations - you will submit this with your assignment!**
 
-::: callout-note
-# Results: Natural Selection Simulation Trial 3b
-
-Fill out the table below, and submit it and a screenshot of the Data Collection page at 150 generations as part of your assignment
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Table showing the information you should collect.", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c90e55b9a5_0_27#slide=id.g3c90e55b9a5_0_27")
-```
-
-:::
 
 ## Running a chi-square test
 
-You will again run chi-square tests on both trials using either Excel or Google Sheets.
+You will run again chi-square tests on both trials. This can be calculated by hand, or by using either Excel or Google Sheets. Instructions for using Excel or Google Sheets are below.
 
 **Expand this section for instructions on running a chi-square test in Microsoft Excel.**
 
@@ -581,7 +404,7 @@ Run a chi-square test for both trial 3a and 3b and record your p-values for each
 
 3. What happened to the rr genotype over time, and why?
 
-4. Compare this model to the drift-only model. What differences do you notice?
+4. Compare this model to the model you ran in part 1 (where you changed the population size, but all the genotype fitness values were equal). What differences do you notice?
 
 5. What happened to the R allele when the environment changed (and the fitness of the alleles flipped)? Did the pattern follow drift or selection?
 
@@ -589,18 +412,18 @@ Run a chi-square test for both trial 3a and 3b and record your p-values for each
 
 7. How does this model illustrate that fitness depends on the environment?
 
-8. Compare the two selection scenarios (trials 3a and 3b). How quickly did the population respond to environmental change?
+8. Compare the two selection scenarios (trials 2a and 2b). How quickly did the population respond to environmental change?
 :::
 
 # What do I need to submit for this assignment?
 
 Once you have finished all your simulations, you should submit your results and answers for grading. For each trial, you should submit:
 
-- table of allele proportions at generations 75 and 150 (or 225 and 300, for trial 3b) 
+- table of allele proportions at generations 75 and 150 (or 225 and 300, for trial 2b) 
 - screenshot of the Data Collection screen from the last generation of each trial
 - the chi-square tables and calculated p-values 
 
-You will have a total of six Data Collection screenshots, six allele proportion tables, and six chi-square tables and p-values.
+You will have a total of four Data Collection screenshots, four allele proportion tables, and four chi-square calculations and p-values.
 
 **Check that you calculated the allele frequencies correctly for each trial. Make sure to use the correct number of koi (it's not always 500)!**
 
