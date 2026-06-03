@@ -7,7 +7,7 @@ format:
     html: default
 ---
 
-This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data from several real forensic investigations in order to identify the species of a sample based on a small fragment of DNA.
+This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data based on real forensic investigations in order to identify the species of a sample based on a small fragment of DNA.
 
 ## Part 1
 
@@ -17,7 +17,7 @@ In Part 1, we'll go over some background context for this activity. Then, you'll
 
 **DNA barcoding** is a technique that involves sequencing a small piece of DNA in order to determine an organism's species identity. The **DNA barcode** is a short (400-800 bp in length) section of the genome that is highly variable and can be used to reliably distinguish one species from another. Although the gold standard for species identification is typically based on an individual's appearance, or morphology, this method isn't always possible in forensic investigations. For example, an investigator may be asked to identify only a small part of an organism, or be given a sample of plant matter that has been partly digested. DNA barcoding can provide identity when morphology fails.
 
-However, DNA barcoding is only as accurate as the reference database you use. Sometimes a sample cannot be identified because the reference database doesn't happen to include a known representative of that species. 
+However, DNA barcoding is only as accurate as the reference database you use. Sometimes a sample cannot be identified because the reference database doesn't happen to include a known representative of that species. In these instances, a sample may be identified to a genus, or matched to the closely related species that _is_ represented in the reference database.
 
 ### What makes a good DNA barcoding region?
 
@@ -46,7 +46,7 @@ In 2015, the New York Attorney General temporarily halted the sale of store-bran
 
 In 2018, inspired by these events and other research suggesting ingredient mismatch was still common, two researchers and three high schoolers from the [Urban Barcode Research Program](https://dnabarcoding101.org/programs/ubrp/index.html) published a study examining whether herbal medicinal products bought online contained what their labels said they contained. The Urban Barcode Research Program is a science education initiative based in New York City that connects high school students with researchers to do biodiversity studies in the city. These students were particularly interested in this research question because they belonged to communities where herbal supplements and herbal medicine were commonly used.
 
-What we've been describing in this case file is called  __pharmacovigilance__.
+This study is an example of __pharmacovigilance__.
 :::
 
 ::: {.callout-caution collapse="true"}
@@ -134,10 +134,11 @@ zeyheri_, which is not the species we expected! The common name for this species
 ::: {.callout-caution collapse="true"}
 # Part 2: Herbal Medicine Investigation
 
-Three additional herbal medicines the researchers tested were black cumin seeds and guarana. Following the devil's claw example, use the BOLD website to identify these three samples, then answer the questions below.
+Three additional herbal medicines the researchers tested were black cumin, goat's head, and epazote. Following the devil's claw example, use the BOLD website to identify these three samples, then answer the questions below.
 
 *   putative black cumin sample: <https://genomicseducation.org/data/barcoding_black_cumin_rbcL.fasta>
-*   putative guarana sample: <https://genomicseducation.org/data/barcoding_guarana_rbcL.fasta>
+*   putative goat's head sample: <https://genomicseducation.org/data/barcoding_goats_head_rbcL.fasta>
+*   putative epazote sample: <https://genomicseducation.org/data/barcoding_epazote_rbcL.fasta>
 
 :::
 
@@ -178,7 +179,7 @@ ITS2 (Internal Transcribed Spacer 2) is a a short, highly variable segment of nu
 
 :::
 
-One of the most extensive genomic reference databases in the world is Genbank, which is maintained by the National Institutes of Health. We will use a tool called the Basic Local Alignment Search Tool (BLAST) to match the sample sequences to the reference database. 
+One of the most extensive genomic reference databases in the world is GenBank, which is maintained by the National Institutes of Health. We will use a tool called the Basic Local Alignment Search Tool (BLAST) to match the sample sequences to the reference database. 
 
 First, open [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi).
 
@@ -232,17 +233,19 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 ::: {.callout-caution collapse="true"}
 # Part 3: Herbal Medicine Investigation
 
-Following the instructions from the devil's claw example, do a BLAST search on Genbank to identify the three additional herbal medicine samples, then answer the questions below.
+Following the instructions from the devil's claw example, do a BLAST search on GenBank to identify the three additional herbal medicine samples, then answer the questions below.
 
 *   putative black cumin sample: <https://genomicseducation.org/data/barcoding_black_cumin_ITS2.fasta>
-*   putative guarana sample: <https://genomicseducation.org/data/barcoding_guarana_ITS2.fasta>
+*   putative goat's head sample: <https://genomicseducation.org/data/barcoding_goats_head_ITS2.fasta>
+*   putative epazote sample: <https://genomicseducation.org/data/barcoding_epazote_ITS2.fasta>
+
 
 :::
 
 ::: {.callout-caution collapse="true"}
 # Part 3: Suspected Parrot Smuggling
 
-Following the instructions from the devil's claw example, , do a BLAST search on Genbank to identify the three unknown egg samples, then answer the questions below.
+Following the instructions from the devil's claw example, do a BLAST search on GenBank to identify the three unknown egg samples, then answer the questions below.
 
 The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA. It is an excellent barcoding choice when working with samples that may be degraded or difficult to amplify.
 
@@ -254,11 +257,11 @@ The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA
 ::: {.callout-note}
 ## Check Your Knowledge
 
-4. According to your Genbank search, what is the species identity of your three samples? What are the common names of these species?
+4. According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
 
 5. What is the percent identity value for the top result of each search?
 
-6. Do the species identities from the Genbank search match the species identities from the BOLD search?
+6. Do the species identities from the GenBank search match the species identities from the BOLD search?
 
 7. Answer the question that matches the case file you chose.
 
