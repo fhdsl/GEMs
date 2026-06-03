@@ -130,7 +130,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 ```
 
 We can see that the top hit here is for the species _Harpagophytum
-zeyheri_, which is not the species we expected! The common name for this species is also devil's claw. Despite sharing the same common name, _Harpagophytum zeyheri_ and _Harpagophytum procumbens_ are distinct (though related) species. 
+zeyheri_, which is not the species we expected! The common name for this species is also devil's claw. Despite sharing the same common name, _Harpagophytum zeyheri_ and _Harpagophytum procumbens_ are distinct (though related) species. Notice that there are three reference sequences with a 100% percent identity to our sample, and all three reference sequences are from _Harpagophytum zeyheri_.  
 
 ::: {.callout-caution collapse="true"}
 # Part 2: Herbal Medicine Investigation
@@ -159,11 +159,14 @@ The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitoch
 ::: {.callout-note}
 ## Check Your Knowledge
 
-3. According to your BOLD search, what is the species identity of the each sample in the case study you chose? What are the common names of these species?
+3. In our example, what are some reasons for the mismatch between the expected species (_Harpagophytum procumbens_) and the species identity suggested by BOLD (_Harpagophytum zeyheri_)?
 
-4. What is the percent identity value for the top result of each search?
+Answer the next questions for the case file you chose.
+4. According to your BOLD search, what is the species identity of the each sample in the case study you chose? What are the common names of these species?
 
-5. Do these species identities match the putative identity of each sample?
+5. What is the percent identity value for the top result of each search?
+
+6. Do these species identities match the putative identity of each sample?
 :::
 
 
@@ -218,18 +221,11 @@ The results page will automatically open. Details about your job are on the top.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_33#slide=id.g3ec9ec989c2_0_33")
 ```
 
-As you scroll down, you will see a list of potential reference sequences that match your sample. There are two values in particular that are helpful: query cover (the amount of overlap between your sample sequence and the reference sequence) and percent identity (abbreviated per. ident., the percentage of nucleotides in the sample sequence that match the reference sequence). The best-matching reference sequences will be at the top of the list. Click on the link for the best match.
+As you scroll down, you will see a list of potential reference sequences that match your sample. There are two values in particular that are helpful: query cover (the amount of overlap between your sample sequence and the reference sequence) and percent identity (abbreviated per. ident., the percentage of nucleotides in the sample sequence that match the reference sequence). The best-matching reference sequences will be at the top of the list. GenBank has many reference sequences that are 100% matches to our sample (though only one of the sequences has a 100% overlap, a query cover value in the 90s is still quite high!). According to GenBank, our sample matches both _Harpagophytum procumbens_ and _Harpagophytum zeyheri_ ITS2 barcodes.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_36#slide=id.g3ec9ec989c2_0_36")
 ```
-
-BLAST will open a more detailed image comparing your sample sequence ("Query") and the possible matching reference ("Sbjct"). This allows you to look more closely at any regions that do not match between your sample and the reference sequence.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_27#slide=id.g3ec9ec989c2_0_27")
-```
-
 
 ::: {.callout-caution collapse="true"}
 # Part 3: Herbal Medicine Investigation
@@ -258,13 +254,16 @@ The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA
 ::: {.callout-note}
 ## Check Your Knowledge
 
-6. According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
+7. Why do you think we got matches to both _Harpagophytum procumbens_ and _Harpagophytum zeyheri_ for our sample?
 
-7. What is the percent identity value for the top result of each search?
+Answer the following questions based on your case file samples.
+8. According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
 
-8. Do the species identities from the GenBank search match the species identities from the BOLD search?
+9. What is the percent identity value for the top result of each search?
 
-9. Answer the question that matches the case file you chose.
+10. Do the species identities from the GenBank search match the species identities from the BOLD search?
+
+11. Answer the question that matches the case file you chose.
 
 __Herbal Medicine Investigation__ Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
 
