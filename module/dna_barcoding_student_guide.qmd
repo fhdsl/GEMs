@@ -161,8 +161,7 @@ The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitoch
 
 3. In our example, what are some reasons for the mismatch between the expected species (_Harpagophytum procumbens_) and the species identity suggested by BOLD (_Harpagophytum zeyheri_)?
 
-Answer the next questions for the case file you chose.
-4. According to your BOLD search, what is the species identity of the each sample in the case study you chose? What are the common names of these species?
+4. _Answer the following questions based on your case file samples._ According to your BOLD search, what is the species identity of the each sample in the case study you chose? What are the common names of these species?
 
 5. What is the percent identity value for the top result of each search?
 
@@ -256,8 +255,7 @@ The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA
 
 7. Why do you think we got matches to both _Harpagophytum procumbens_ and _Harpagophytum zeyheri_ for our sample?
 
-Answer the following questions based on your case file samples.
-8. According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
+8. _Answer the following questions based on your case file samples._ According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
 
 9. What is the percent identity value for the top result of each search?
 
