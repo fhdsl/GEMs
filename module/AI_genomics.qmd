@@ -77,5 +77,5 @@ Need additional activities?
 
 - You could have students sit in pairs using the same prompt and chatbot website. They could compare the responses as a way to understand reproducibility.
 
-- Have students try different chatbots and tweak the prompts. For example, specifically asking for scientific articles.
+- Have students try different chatbots and tweak the prompts. For example, specifically asking for scientific articles or specific quotes from sources.
 :::
