@@ -1,0 +1,83 @@
+{
+  "input.qmd": {
+    "input.html": "73fd4686"
+  },
+  "resources/phys_data.Rmd": {
+    "phys_data.html": "c8123894"
+  },
+  "module/family_markers.qmd": {
+    "family_markers.html": "5ce95cbf"
+  },
+  "module/genomic_med_prs.qmd": {
+    "genomic_med_prs.html": "faeaa716"
+  },
+  "module/exam_phys_student_guide.qmd": {
+    "exam_phys_student_guide.html": "9560cf8b"
+  },
+  "module/pop_gen_hwe_student_guide.qmd": {
+    "pop_gen_hwe_student_guide.html": "f04b6c73"
+  },
+  "module/AI_genomics_student_guide.qmd": {
+    "AI_genomics_student_guide.html": "28a737de"
+  },
+  "module/database_detectives.qmd": {
+    "database_detectives.html": "6bc29f48"
+  },
+  "module/dna_barcoding_student_guide.qmd": {
+    "dna_barcoding_student_guide.html": "86eb0293"
+  },
+  "module/pop_gen_hwe.qmd": {
+    "pop_gen_hwe.html": "f1f172a1"
+  },
+  "module/mouse_gutbrain_de_student_only_code.qmd": {
+    "mouse_gutbrain_de_student_only_code.html": "af9350f6"
+  },
+  "module/AOU_ethics_student_guide.qmd": {
+    "AOU_ethics_student_guide.html": "670fdc39"
+  },
+  "module/AI_genomics.qmd": {
+    "AI_genomics.html": "5dac363b"
+  },
+  "module/family_markers_student_guide.qmd": {
+    "family_markers_student_guide.html": "208a8d33"
+  },
+  "module/epigenetics_explorer.qmd": {
+    "epigenetics_explorer.html": "da4088dd"
+  },
+  "module/exam_phys.qmd": {
+    "exam_phys.html": "058163fd"
+  },
+  "module/mouse_gutbrain_de_miniCURE_guide.qmd": {
+    "mouse_gutbrain_de_miniCURE_guide.html": "9bc25cab"
+  },
+  "module/AOU_ethics.qmd": {
+    "AOU_ethics.html": "fbb60964"
+  },
+  "module/genomic_med_prs_student_guide.qmd": {
+    "genomic_med_prs_student_guide.html": "26d0a8ec"
+  },
+  "module/mouse_gutbrain_de.qmd": {
+    "mouse_gutbrain_de.html": "a63b28b8"
+  },
+  "module/dna_barcoding.qmd": {
+    "dna_barcoding.html": "ad8a52e7"
+  },
+  "module/database_detectives_student_guide.qmd": {
+    "database_detectives_student_guide.html": "47ae01c5"
+  },
+  "module/epigenetics_explorer_student_guide.qmd": {
+    "epigenetics_explorer_student_guide.html": "c5dacee1"
+  },
+  "module/mouse_gutbrain_de_student_guide.qmd": {
+    "mouse_gutbrain_de_student_guide.html": "236ee958"
+  },
+  "resources.qmd": {
+    "resources.html": "57f49449"
+  },
+  "index.qmd": {
+    "index.html": "23fa7639"
+  },
+  "modules.qmd": {
+    "modules.html": "5844f1d6"
+  }
+}
