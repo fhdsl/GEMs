@@ -48,6 +48,12 @@ You can use this module in several formats. Feel free to adapt to your needs!
 -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/AI_genomics_student_guide.docx)
 -   [Google Doc]()
 
+We also have the questions only in several formats:
+
+-   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/AI_genomics_questions_only.qmd)
+-   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/AI_genomics_questions_only.docx)
+-   [Google Doc]()
+
 Students will need a device that accesses the internet.
 
 ::: callout-warning
