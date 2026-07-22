@@ -27,7 +27,7 @@ Changes that happen in the brain as a result of the gut microbiome are suspected
 
 The samples in this dataset are from mice that _do not_ carry genes associated with any neurodevelopmental or neurodegenerative diseases. Instead, any symptoms or changes in the brain they show are the result of microbes introduced to their gut via transplant. **This dataset gives you the opportunity to study possible effects of the gut-brain axis firsthand.**
 
-::: callout-note
+::: callout-caution 
 It is important to note that researchers are **not** suggesting that ASD or _any neurodevelopment disorder_ is entirely induced by gut bacteria. There is a **strong genetic component to ASD.** Scientists have known for years that there are **both genetic and environmental components** to the development or severity of **some** ASD symptoms. This research explores one possible environmental component (gut bacteria).
 :::
 
