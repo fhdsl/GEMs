@@ -1,0 +1,82 @@
+---
+title: "Database Detectives: Exploring Public Genomic Databases Student Guide"
+date: last-modified
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+
+::: {.callout-note}
+## TASK ONE
+
+For each gene (**scarlet**, **plum**, **mustard**, and **white**), find the following information:
+
+- FlyBase gene ID
+- chromosomal location
+- molecular function
+- the biological processes the gene product is involved in
+- where in the cell the gene product can be found
+
+:::
+
+::: {.callout-note}
+A **homolog** is a gene or protein that is similar to another due to having a common evolutionary origin. Many genes in _Drosophila_ have homologs in the human genome, as well as in the genomes of common model organisms like mice and zebrafish.
+
+An **ortholog** is another term for a gene or protein that is similar due to having a common evolutionary origin, but in order to be an ortholog, the two genes must _also_ have similar functions within the different species. An ortholog is a specialized kind of homolog.
+
+Genomic databases will report both homologs and orthologs.
+:::
+
+::: {.callout-note}
+Why do we have a database devoted to the mouse?
+
+The mouse is the most commonly-used model organism in laboratory work. In fact, mice and rats make up 95% of the lab animal population, and more than 80% of the research that has been awarded the Nobel Prize for Medicine was done at least in part with mouse models (https://www.cshl.edu/of-mice-and-model-organisms/, https://fbresearch.org/medical-advances/nobel-prizes).
+
+So what makes mice such good model organisms for biomedical research? One reason is that mice and humans are both mammals and have about 85% of their protein-coding genome in common. As a result, mouse physiology is quite similar to human physiology. The mouse circulatory, reproductive, digestive, hormonal, and nervous systems are frequently used as models to study how humans grow, age, and develop chronic diseases. 
+:::
+
+::: {.callout-note}
+"Gene ontology" is a bioinformatics initiative focused on standardizing the vocabulary and annotations researchers use to describe genes, proteins, and data about gene and protein function. This effort allows us to more easily make comparisons about homologous and orthologous genes and proteins across species.
+:::
+
+::: {.callout-note}
+Why do we have a database devoted to the zebrafish?
+
+Zebrafish are a popular model organism for researchers who focus on developmental biology, genetics, and modeling diseases. They develop rapidly and have high fertility, so it can be relatively quick and fast to study the effects of genes or diseases over multiple generations. They are also transparent, which is especially useful for watching how organs develop as the zebrafish matures.
+
+Zebrafish share a high degree of genetic homology with humans!
+:::
+
+::: {.callout-note}
+A genome assembly is just a version of the genome map. As scientists unlock more detail about genomes, they periodically publish an updated "reference genome", with everything we have discovered about where genes, enhancers, promotors, and non-coding regions are located in the genome. Think of an updated genome assembly as a better map.
+:::
+
+::: {.callout-note}
+## TASK TWO
+
+For each of the _Drosophila_ genes (**scarlet**, **plum**, **mustard**, and **white**), find the following information for the _mouse, zebrafish, and human homologs_:
+
+- name
+- chromosomal location
+- molecular function
+
+Does this information differ among the homologs? For example, do the homologs of **scarlet** do the same things as **scarlet**?
+:::
+
+::: {.callout-note}
+## TASK THREE
+
+What human disease or disorder (if any) are the homologs of **scarlet**, **plum**, **mustard**, and **white** associated with?
+
+:::
+
+::: {.callout-note}
+## TASK FOUR
+
+1. Which _Drosophila_ genes are associated with each experiment?
+
+2. Which background research on human disease belongs with each experiment?
+:::
+

@@ -1,0 +1,40 @@
+---
+title: "Epigenetics Explorer: Differentiating Cell Types"
+date: last-modified
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Which genes are on either side of HOXA7? Take a screenshot and point to these genes.
+
+2.  What gene or genes are present at **chr7:27,110,536-27,132,455**? Take a screenshot of this location in the genome.
+:::
+
+::: callout-note
+- **H3K4me3** is a known histone mark on Histone 3 (H3). It occurs on lysine 4 (K4) and has three methyl groups (me3) that indicate active gene expression. In other words, the DNA is open and ready to be accessed.
+
+- **H3K27me3** is a known histone mark on on Histone 3 (H3). It occurs on lysine 27 (K27) and has three methyl groups (me3) that indicate inactive gene expression. In other words, the DNA is closed off and cannot be accessed.
+
+- The **H1-hESC** cell line consists of embryonic stem cells.
+
+- The **NHLF** cell line consists of lung fibroblasts. Fibroblasts are important for building the connective structures around cells and healing wounds.
+:::
+
+::: callout-note
+## Check Your Knowledge
+
+1.  The two cell lines differ in their gene expression (genes turned on or off). Does this mean that the genome varies as well? Why might gene expression vary?
+
+2.  Locate the HOXA5 gene and record the genome location (e.g., chr7:###-###). Exact numbers will vary a bit, but make sure the whole gene is in frame.
+
+3. Return to the Broad Histone track menu and select cell line **HUVEC** (umbilical vein endothelial cells) and K562 (leukemia cells). Do these cell lines have expression turned on or off, or some other pattern for HOXA5?
+
+4. Return to the Broad Histone track menu and find **H3K27ac**. Click on the link for this histone mark to learn more about it. Does **H3K27ac** work more like **H3K4me3** or **H3K27me3**? Take a screenshot showing this histone mark across the HOXA locus (HOXA 1-13).
+:::
+

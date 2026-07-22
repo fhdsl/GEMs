@@ -1,0 +1,62 @@
+---
+title: "Family Markers: Using Multiply-Affected Families to Identify Risk Genes"
+date: last-modified
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+
+::: callout-note
+## Check Your Knowledge
+
+1.  What does the DAO gene do?
+
+2.  How did researchers identify DAO and other possible genes linked to bipolar disorder?
+:::
+
+::: callout-note
+# Note
+
+You might see a message like `Warning: kinship2 package is deprecated for R <= 4.5; switch functionality to Pedixplorer from BioConductor`. This is not a problem, and you can still proceed!
+:::
+
+::: callout-note
+## Check Your Knowledge
+
+1.  Why might we want to install add-on packages in R?
+
+2.  How can we confirm that our data loaded correctly? Take a screenshot and point to your evidence.
+
+3.  Looking at the description and contents of the `bipolar` and `depression` columns, what do you think the column `diagnosis_available` represents? Take a screenshot that shows this column.
+:::
+
+::: callout-note
+## Check Your Knowledge
+
+1.  How many generations were assessed in this pedigree? Take a screenshot and label them.
+
+2.  How many male individuals and how many female individuals are present? Take a screenshot and label them.
+:::
+
+::: callout-note
+## Check Your Knowledge
+
+1.  What is the diagnosis for individual 9? Individual 10? Take a screenshot and circle these individuals.
+
+2.  What is the diagnosis for individual 12? Take a screenshot and circle this individual.
+:::
+
+::: callout-note
+## Check Your Knowledge
+
+1.  We already know that DAO is the gene of interest. Why is DAO a better match than IL6 for the diagnosis (based on the pedigree)?
+
+2.  How many copies of the DAO variant do you think are necessary to cause bipolar disorder?
+
+3.  Many individuals are missing diagnoses, genotypes, or both. Why do you think that might be the case?
+
+4.  What could be done to add more certainty to our conclusions? More genotyping, more diagnostics, or more genes collected?
+:::
+

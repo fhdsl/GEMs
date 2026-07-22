@@ -1,0 +1,44 @@
+---
+title: "Population Genetics: Fish Pond Simulator"
+date: last-modified
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+
+::: callout-note
+# Check your knowledge: Drift questions
+
+1. Compare the change in allele frequencies between the large and small population. Which population changed more, and why?
+
+2. Did either population approach fixation? (**Fixation** occurs when one allele reaches an allele frequency = 1) Explain why drift is more pronounced in small populations. 
+
+3. Why do the two drift trials show different outcomes even with the same allele frequencies and equal fitness?
+
+4. How does random sampling contribute to genetic drift over many generations?
+
+5. Which population is not in Hardy-Weinberg? Which condition of Hardy-Weinberg is not being met? Make sure to include the p-values from your chi-square tests to support your answer.
+:::
+
+::: callout-note
+# Check your knowledge: Natural Selection questions
+
+1. How did the allele frequencies change over the 150 generations when R was beneficial?
+
+2. Why does the R allele increase in a predictable (non-random) pattern in this model?
+
+3. What happened to the rr genotype over time, and why?
+
+4. Compare this model to the model you ran in part 1 (where you changed the population size, but all the genotype fitness values were equal). What differences do you notice?
+
+5. What happened to the R allele when the environment changed (and the fitness of the alleles flipped)? Did the pattern follow drift or selection?
+
+6. Explain why rr became the most common genotype by the end of the simulation.
+
+7. How does this model illustrate that fitness depends on the environment?
+
+8. Compare the two selection scenarios (trials 2a and 2b). How quickly did the population respond to environmental change?
+:::
+

@@ -1,0 +1,53 @@
+---
+title: "Differential Expression and the Mouse Gut-Brain Axis"
+date: last-modified
+bibliography: ../book.bib
+csl: ../resources/ieee-with-url.csl
+format:
+    html: default
+---
+
+
+::: callout-note
+## Check Your Knowledge
+
+1.  What is the gut-brain axis?
+
+2.  Why do you think the researchers looked at gene expression in the prefrontal cortex and the striatum?
+
+3.  Why are mice useful as model organisms for human disease studies?
+:::
+
+::: callout-note
+## Check Your Knowledge
+
+4.  What gene shows the greatest upregulation (increase in gene expression) in ASD-type mice compared to control mice? Give both the gene ID and the gene name.
+
+5.  What molecular functions does this gene do?
+
+6.  What gene shows the greatest downregulation (decrease in gene expression) in ASD-type mice compared to control mice? Give both the gene ID and the gene name.
+
+7.  What biological processes is this gene involved in?
+:::
+
+::: callout-note
+## Check Your Knowledge
+
+8.  Is the differential expression pattern of reg3a the same or different between the prefrontal cortex and the striatum? What might a biological reason for this be?
+
+9. Choose one of the following genes that has been suggested as an ASD risk gene. Look this gene up in the MGI. What is the gene symbol and what does this gene do?
+
+**Possible gene choices:**
+- ENSMUSG00000053754 
+- ENSMUSG00000067629 
+- ENSMUSG00000022623 
+- ENSMUSG00000075318 
+- ENSMUSG00000022897 
+
+10. What is the log2FoldChange value of this gene in the prefrontal cortex? Is this gene upregulated or downregulated? Is this gene expression difference statistically significant? 
+
+11. What is the log2FoldChange value of this gene in the striatum? Is this gene upregulated or downregulated? Is this gene expression difference statistically significant? 
+
+12. What is a biological reason this gene might be differentially expressed in ASD_type mice?
+:::
+
