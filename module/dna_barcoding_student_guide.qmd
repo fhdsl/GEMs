@@ -9,69 +9,9 @@ format:
 
 This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data based on real forensic investigations in order to identify the species of a sample based on a small fragment of DNA.
 
-## Part 1
+Before doing this activity, make sure to read about these case files here!
 
-In Part 1, we'll go over some background context for this activity. Then, you'll choose which case file you want to investigate.
-
-### What is DNA barcoding?
-
-**DNA barcoding** is a technique that involves sequencing a small piece of DNA in order to determine an organism's species identity. The **DNA barcode** is a short (400-800 bp in length) section of the genome that is highly variable and can be used to reliably distinguish one species from another. Although the gold standard for species identification is typically based on an individual's appearance, or morphology, this method isn't always possible in forensic investigations. For example, an investigator may be asked to identify only a small part of an organism, or be given a sample of plant matter that has been partly digested. DNA barcoding can provide identity when morphology fails.
-
-However, DNA barcoding is only as accurate as the reference database you use. Sometimes a sample cannot be identified because the reference database doesn't happen to include a known representative of that species. In these instances, a sample may be identified to a genus, or matched to the closely related species that _is_ represented in the reference database.
-
-### What makes a good DNA barcoding region?
-
-Not all genomes regions are useful for barcoding. A good DNA barcoding region need to have enough variation among species so that the species are distinguishable, but it also needs to have very low variation among members of the same species (so that a single reference barcode can match fairly closely to all individuals within a species). Additionally, the barcoding region has to have highly-conserved flanking regions (that is, regions next to the barcode with very little variation) so that researchers can use a common set of PCR primers to analyze a wide variety of species.  
-
-Unfortunately, no single barcoding region exists that can be used universally across all biological life. Thus, researchers use different barcoding regions for animals, plants, fungi, or bacteria. Researchers may also use a variety of barcoding regions within these groups to answer particular questions or to deal with varying sample quality.
-
-::: callout-tip
-
-You may have heard of a technique called DNA fingerprinting. While similar to DNA barcoding, there are several important differences between the two techniques. 
-
-**Region of DNA**: The DNA barcoding technique amplifies a single, highly variable region of DNA that is 400-800 base pairs long. DNA fingerprinting, on the other hand, amplifies multiple DNA regions called _variable number tandem repeats_, or VNTRs. These regions are 10-100 base pairs in length. There are many VNTR regions scattered throughout the genome. It is common to examine at least 13 different VNTR regions in a DNA fingerprinting analysis.
-
-**Level of identification**: DNA barcoding is used to identify the species of a sample, while DNA fingerprinting identifies an individual organism. The larger number of shorter variable DNA regions allows researchers to be more precise when determining the individual a sample comes from.
-
-:::
-
-Expand each case file to learn how DNA fingerprinting has been used in forensic investigations, then pick one case file to use for the activity.
-
-::: {.callout-caution collapse="true"}
-# Case File: Herbal Medicine Investigation
-
-In the United States, pharmaceuticals are regulated by the FDA under the authority of the Federal Food, Drug, and Cosmetic Act (FFDC). This law gives the US government the authority to oversee the safety of food, pharmaceuticals, medical devices, and cosmetics. In particular, the FFDC requires that food, pharmaceuticals, medical devices, and cosmetics be clearly and accurately labeled with their ingredients. However, herbal supplements and herbal medicinal products are not regulated in the same way as pharmaceuticals. These products are considered dietary supplements, which are regulated under the Dietary Supplement Health and Education Act. Products that fall under the purview of the Dietary Supplement Health and Education Act have much looser regulations around labeling, testing, and effectiveness. Although companies are required to verify that their dietary supplements are safe and accurately labeled, the FDA generally relies on an honor system.
-
-In 2015, the New York Attorney General temporarily halted the sale of store-brand herbal supplements from GNC, Target, Walgreens, and Walmart after an investigation revealed many of these supplements did not contain any quantity of the herbs on their labels. This investigation was prompted by a 2013 New York Times article entitled ["Herbal Supplements Are Not What They Seem"](https://www.nytimes.com/2013/11/05/science/herbal-supplements-are-often-not-what-they-seem.html?unlocked_article_code=1.nFA.NdG9._hW2wfRWe_wx&smid=url-share) and reviewed research by a group of Canadian scientists that used DNA barcoding to examine whether the ingredients on the labels of herbal supplements matched the ingredients inside the capsules. The NY AG and the companies reached an agreement to resume sales, with the companies promising to implement reforms and prominently announce in stores and on its website if a supplement product was derived from whole herbs or extracts.
-
-In 2018, inspired by these events and other research suggesting ingredient mismatch was still common, two researchers and three high schoolers from the [Urban Barcode Research Program](https://dnabarcoding101.org/programs/ubrp/index.html) published a study examining whether herbal medicinal products bought online contained what their labels said they contained. The Urban Barcode Research Program is a science education initiative based in New York City that connects high school students with researchers to do biodiversity studies in the city. These students were particularly interested in this research question because they belonged to communities where herbal supplements and herbal medicine were commonly used.
-
-This study is an example of __pharmacovigilance__.
-:::
-
-::: {.callout-caution collapse="true"}
-# Case File: Suspected Parrot Smuggling
-
-In Brazil, wildlife is considered the property of the Brazilian State and the commercial trade of wild animals is strictly controlled (Wildlife Protection Law; law no. 5197/1967). Anyone who catches, transports, keeps captive, or sells wild animals _without proper authorization_ can face fines and up to 6-12 months of prison time. These penalties increase if the wild animal is endangered or belongs to a migratory species, among other things (Environmental Crimes Law; law no. 9605/1998).
-
-In their 2015 paper "DNA Barcoding Identifies Illegal Parrot Trade", Gonçalves et al. detail a forensic investigation of a potential animal smuggling incident at an airport in Brazil. This is their brief overview of the case:
-
-> Here we report a case from 2003 of a man who was arrested at Recife International Airport in Brazil carrying 58 unhatched avian eggs and intending to fly to Europe. The eggs were packed around his abdomen to keep them alive during the trip. The police were already investigating him, and during this trip to Brazil he visited various states where he could have acquired the eggs. When arrested, he claimed that they were quail eggs, but their external morphology did not support his claim. The embryos never hatched; thus, it was not possible to identify them based on their morphology. However, the external morphology of the eggs and embryos suggested that they were from parrots.
-
-Many bird eggs look alike and can't easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect).
-
-:::
-
-::: {.callout-note}
-## Check Your Knowledge
-
-1. Why is DNA barcoding useful for the case study you chose?
-
-2. For your particular case study, what are some of the potential consequences of your forensic investigation?
-:::
-
-
-## Part 2: What organism do your samples come from?
+## Part 1: What organism do your samples come from?
 
 In the herbal medicine case study, the students ordered products from online retailers and then amplified the DNA for DNA barcoding. One product they tested is Devil's Claw (also called grapple plant or wood spider), a member of the sesame plant family. This particular herb is native to southern Africa and is commonly taken as an anti-inflammatory, especially for low back pain. According to the packaging, this product should contain the species _Harpagophytum procumbens_.
 
@@ -133,7 +73,7 @@ We can see that the top hit here is for the species _Harpagophytum
 zeyheri_, which is not the species we expected! The common name for this species is also devil's claw. Despite sharing the same common name, _Harpagophytum zeyheri_ and _Harpagophytum procumbens_ are distinct (though related) species. Notice that there are three reference sequences with a 100% percent identity to our sample, and all three reference sequences are from _Harpagophytum zeyheri_.  
 
 ::: {.callout-caution collapse="true"}
-# Part 2: Herbal Medicine Investigation
+# Part 1: Herbal Medicine Investigation
 
 Three additional herbal medicines the researchers tested were black cumin, goat's head, and epazote. Following the devil's claw example, use the BOLD website to identify these three samples, then answer the questions below.
 
@@ -144,7 +84,7 @@ Three additional herbal medicines the researchers tested were black cumin, goat'
 :::
 
 ::: {.callout-caution collapse="true"}
-# Part 2: Suspected Parrot Smuggling
+# Part 1: Suspected Parrot Smuggling
 
 The accused smuggler claimed the eggs he was carrying were quail eggs. Following the devil's claw example, use the BOLD website to identify these three unknown egg samples, then answer the questions below. **Make sure to choose the ANIMAL LIBRARY (PUBLIC) database.**
 
@@ -159,17 +99,17 @@ The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitoch
 ::: {.callout-note}
 ## Check Your Knowledge
 
-3. In our example, what are some reasons for the mismatch between the expected species (_Harpagophytum procumbens_) and the species identity suggested by BOLD (_Harpagophytum zeyheri_)?
+1. In our example, what are some reasons for the mismatch between the expected species (_Harpagophytum procumbens_) and the species identity suggested by BOLD (_Harpagophytum zeyheri_)?
 
-4. _Answer the following questions based on your case file samples._ According to your BOLD search, what is the species identity of the each sample in the case study you chose? What are the common names of these species?
+2. _Answer the following questions based on your case file samples._ According to your BOLD search, what is the species identity of the each sample in the case study you chose? What are the common names of these species?
 
-5. What is the percent identity value for the top result of each search?
+3. What is the percent identity value for the top result of each search?
 
-6. Do these species identities match the putative identity of each sample?
+4. Do these species identities match the putative identity of each sample?
 :::
 
 
-## Part 3: Verify sample identification
+## Part 2: Verify sample identification
 
 Researchers will frequently sequence two different barcoding genes from a sample to increase their confidence in their species identification. The BOLD database, while quite useful, mostly focuses on curating reference data for a limited number of barcoding genes. Luckily, we can search other databases to check the species identity based on genes (or reference samples) not found in the BOLD database.
 
@@ -227,7 +167,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 ```
 
 ::: {.callout-caution collapse="true"}
-# Part 3: Herbal Medicine Investigation
+# Part 2: Herbal Medicine Investigation
 
 Following the instructions from the devil's claw example, do a BLAST search on GenBank to identify the three additional herbal medicine samples, then answer the questions below.
 
@@ -239,7 +179,7 @@ Following the instructions from the devil's claw example, do a BLAST search on G
 :::
 
 ::: {.callout-caution collapse="true"}
-# Part 3: Suspected Parrot Smuggling
+# Part 2: Suspected Parrot Smuggling
 
 Following the instructions from the devil's claw example, do a BLAST search on GenBank to identify the three unknown egg samples, then answer the questions below.
 
@@ -253,15 +193,15 @@ The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA
 ::: {.callout-note}
 ## Check Your Knowledge
 
-7. Why do you think we got matches to both _Harpagophytum procumbens_ and _Harpagophytum zeyheri_ for our sample?
+5. Why do you think we got matches to both _Harpagophytum procumbens_ and _Harpagophytum zeyheri_ for our sample?
 
-8. _Answer the following questions based on your case file samples._ According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
+6. _Answer the following questions based on your case file samples._ According to your GenBank search, what is the species identity of your three samples? What are the common names of these species?
 
-9. What is the percent identity value for the top result of each search?
+7. What is the percent identity value for the top result of each search?
 
-10. Do the species identities from the GenBank search match the species identities from the BOLD search?
+8. Do the species identities from the GenBank search match the species identities from the BOLD search?
 
-11. Answer the question that matches the case file you chose.
+9. Answer the question that matches the case file you chose.
 
 __Herbal Medicine Investigation__ Do you think the herbal medicine manufacturers are being truthful in their advertising? If not, would you recommend any regulatory action against them? 
 
