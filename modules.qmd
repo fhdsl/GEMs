@@ -10,6 +10,8 @@ These materials are under 1 hour.
 
 - [All of Us: Understanding Ethics](module/AOU_ethics.html)
 
+- [DNA Forensics](module/dna_forensics.html)
+
 - [Gut Check: AI and Genomic Literature](module/AI_genomics.html)
 
 ## Lab-Period Modules
