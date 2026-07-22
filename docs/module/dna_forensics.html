@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-07-22">
 
-<title>Differential Expression and the Mouse Gut-Brain Axis – GEMs</title>
+<title>DNA Forensices – GEMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -162,8 +142,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
   <li><a href="#instructor-materials" id="toc-instructor-materials" class="nav-link" data-scroll-target="#instructor-materials">Instructor Materials</a></li>
   </ul></li>
   <li><a href="#scientific-topics" id="toc-scientific-topics" class="nav-link" data-scroll-target="#scientific-topics">Scientific Topics</a></li>
-  <li><a href="#outline-for-rna-seq-minicure-extension" id="toc-outline-for-rna-seq-minicure-extension" class="nav-link" data-scroll-target="#outline-for-rna-seq-minicure-extension">Outline for RNA-seq miniCURE Extension</a></li>
-  <li><a href="#outline-for-rna-seq-standalone-activity" id="toc-outline-for-rna-seq-standalone-activity" class="nav-link" data-scroll-target="#outline-for-rna-seq-standalone-activity">Outline for RNA-seq standalone activity</a></li>
+  <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
   </ul>
 </nav>
     </div>
@@ -172,7 +151,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Differential Expression and the Mouse Gut-Brain Axis</h1>
+<h1 class="title">DNA Forensices</h1>
 </div>
 
 
@@ -197,26 +176,15 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.</p>
-<p>There are two options for this module:</p>
-<ol type="1">
-<li><p>a companion and expansion to the C-MOOR RNA-seq miniCURE. This module adds an additional RNA-seq dataset that is suitable for an independent research project.</p></li>
-<li><p>a standalone activity that fits into a single laboratory session.</p></li>
-</ol>
-<p><strong>Duration:</strong> miniCURE: Three lab periods; standalone activity: 1-2 hours (<a href="https://forms.gle/Qd9KLiDsUFY4s1LV8">help us improve this estimate!</a>)</p>
+<p>This activity explores forensic uses of DNA barcoding. Students will read about two real-life cases using DNA barcoding and consider the legal and biological consequences.</p>
+<p><strong>Duration:</strong> Approximately 30 minutes (<a href="https://forms.gle/pgvLDMChG19pGjCq7">help us improve this estimate!</a>)</p>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<ol type="1">
-<li><p>Explore differential expression data in mice.</p></li>
-<li><p>Identify genes that are differentially expressed in an RNA-seq dataset.</p></li>
-<li><p>(Optional) Formulate and test a hypothesis about differential expression of genes as a result of the gut-brain axis.</p></li>
-</ol>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>Students will benefit from some understanding of the Central Dogma and genetically-based trait expression. They should be aware of mice as a model organism and be comfortable using online genomic databases. We suggest this activity could accompany lectures that discuss these topics.</p>
-<p>This activity also requires plotting and an understanding of data visualization.</p>
+<p>Students will benefit from a basic understanding of genome organization and taxonomic classification, as well as some awareness of PCR and genomic sequencing methods. We suggest this activity could accompany lectures that discuss the genome or PCR methods.</p>
 </section>
 <section id="evaluation" class="level2">
 <h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
@@ -231,7 +199,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="https://forms.gle/Qd9KLiDsUFY4s1LV8">Instructor survey</a></p>
+<p><a href="https://forms.gle/pgvLDMChG19pGjCq7">Instructor survey</a></p>
 <p><a href="https://genomicseducation.shinyapps.io/student_pre_survey/">Student pre-activity survey</a></p>
 <p><a href="https://genomicseducation.shinyapps.io/student_post_survey/">Student post-activity survey</a></p>
 </div>
@@ -244,79 +212,27 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="student-activity">Student Activity</h3>
 <p>You can use this module in several formats. Feel free to adapt to your needs!</p>
 <ul>
-<li><p>Standalone R student activity:</p>
-<ul>
-<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_student_guide.html">Web page</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_student_guide.qmd">Quarto (qmd)</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_student_guide.docx">Word (docx)</a></li>
-<li><a href="">Google Doc</a> - coming soon!</li>
-</ul></li>
+<li><a href="https://genomicseducation.org/module/dna_barcoding_student_guide.html">Web page</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/dna_barcoding_student_guide.docx">Word (docx)</a></li>
+<li>Google Doc</li>
 </ul>
-<p>Students will need RStudio, data, and the R packages <code>tidyverse</code>.</p>
-<p>This means students will need either:</p>
-<ul>
-<li>An internet connection for this activity as written (using Posit Cloud)</li>
-<li>A local installation of R or RStudio (with data downloaded and <code>tidyverse</code> package installed ahead of time)</li>
-</ul>
-<p>Students can use any of the following datasets to compare gene expression:</p>
-<ul>
-<li><p><a href="mouse_gutbrain_metadata.csv">Sample metadata</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_controls.csv">Gene expression count data for all control-type mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_asd.csv">Gene expression count data for all ASD-type mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_prefrontalcortex.csv">Gene expression count data for all prefrontal cortex samples</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_striatum.csv">Gene expression count data for all striatum samples</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv">Comparing gene expression between ASD and control mice, both brain regions</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv">Comparing gene expression between ASD and control mice, prefrontal cortex only</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv">Comparing gene expression between ASD and control mice, striatum only</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv">Comparing gene expression between prefrontal cortex and striatum, all mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv">Comparing gene expression between prefrontal cortex and striatum, only ASD mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv">Comparing gene expression between prefrontal cortex and striatum, only control mice</a></p></li>
-</ul>
+<p>Students do not need any outside material.</p>
 </section>
 <section id="instructor-materials" class="level3">
 <h3 class="anchored" data-anchor-id="instructor-materials">Instructor Materials</h3>
-<p>A Google Slides presentation is available for borrowing images <a href="https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing">here</a>.</p>
+<p>This activity can be used as the prework for the <a href="https://genomicseducation.org/module/dna_barcoding.html">DNA Barcoding activity</a></p>
 </section>
 </section>
 <section id="scientific-topics" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-topics">Scientific Topics</h2>
-<p>The activity uses data from a <a href="https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1">published research study</a> “Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice” <span class="citation" data-cites="sharon2019"><a href="#ref-sharon2019" role="doc-biblioref">[1]</a></span>. Students will gain exposure to the following:</p>
-<ul>
-<li><p>Differential expression: the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or “turned on”, while others are “turned off”</p></li>
-<li><p>Gut-brain axis: the proposed connection between the gut microbiome and gene expression in the brain</p></li>
-<li><p>Autism Spectrum Disorder: a neurological disorder that affects behavioral and social interactions</p></li>
-<li><p>Neurodevelopmental disorders: disorders that are the result of altered brain development (miniCURE only)</p></li>
-<li><p>Neurodegenerative disorders: disorders that that occur when brain structures and systems experience degradation (miniCURE only)</p></li>
-<li><p>Prefrontal cortex: the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions</p></li>
-<li><p>Striatum: the part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions</p></li>
-</ul>
 </section>
-<section id="outline-for-rna-seq-minicure-extension" class="level2">
-<h2 class="anchored" data-anchor-id="outline-for-rna-seq-minicure-extension">Outline for RNA-seq miniCURE Extension</h2>
-<ul>
-<li><p>Background and Setup</p></li>
-<li><p>Developing a Hypothesis; Identifying Genes of Interest</p></li>
-<li><p>Exploring Gene Expression Data</p></li>
-<li><p>Analyzing Differential Expression Data</p></li>
-</ul>
-</section>
-<section id="outline-for-rna-seq-standalone-activity" class="level2">
-<h2 class="anchored" data-anchor-id="outline-for-rna-seq-standalone-activity">Outline for RNA-seq standalone activity</h2>
-<ul>
-<li><p>Background and Setup</p></li>
-<li><p>Exploring Gene Expression Data</p></li>
-<li><p>Analyzing Differential Expression Data</p></li>
-</ul>
-
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-sharon2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">G. Sharon <em>et al.</em>, <span>“Human gut microbiota from autism spectrum disorder promote behavioral symptoms in mice,”</span> <em>Cell</em>, vol. 177, no. 6, pp. 1600–1618, 2019, Available: <a href="https://pubmed.ncbi.nlm.nih.gov/31150625/">https://pubmed.ncbi.nlm.nih.gov/31150625/</a></div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-07-22">
 
-<title>Differential Expression and the Mouse Gut-Brain Axis – GEMs</title>
+<title>DNA Forensics Prework – GEMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -152,18 +132,18 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a>
+  <li><a href="#what-is-dna-barcoding" id="toc-what-is-dna-barcoding" class="nav-link active" data-scroll-target="#what-is-dna-barcoding">What is DNA barcoding?</a></li>
+  <li><a href="#what-makes-a-good-dna-barcoding-region" id="toc-what-makes-a-good-dna-barcoding-region" class="nav-link" data-scroll-target="#what-makes-a-good-dna-barcoding-region">What makes a good DNA barcoding region?</a></li>
+  <li><a href="#case-file-herbal-medicine-investigation" id="toc-case-file-herbal-medicine-investigation" class="nav-link" data-scroll-target="#case-file-herbal-medicine-investigation">Case File: Herbal Medicine Investigation</a>
   <ul class="collapse">
-  <li><a href="#student-activity" id="toc-student-activity" class="nav-link" data-scroll-target="#student-activity">Student Activity</a></li>
-  <li><a href="#instructor-materials" id="toc-instructor-materials" class="nav-link" data-scroll-target="#instructor-materials">Instructor Materials</a></li>
+  <li><a href="#new-york-investigation-into-herbal-medicine" id="toc-new-york-investigation-into-herbal-medicine" class="nav-link" data-scroll-target="#new-york-investigation-into-herbal-medicine">New York Investigation into herbal medicine</a></li>
+  <li><a href="#how-much-money-is-there-in-herbal-medicine" id="toc-how-much-money-is-there-in-herbal-medicine" class="nav-link" data-scroll-target="#how-much-money-is-there-in-herbal-medicine">How much money is there in herbal medicine?</a></li>
   </ul></li>
-  <li><a href="#scientific-topics" id="toc-scientific-topics" class="nav-link" data-scroll-target="#scientific-topics">Scientific Topics</a></li>
-  <li><a href="#outline-for-rna-seq-minicure-extension" id="toc-outline-for-rna-seq-minicure-extension" class="nav-link" data-scroll-target="#outline-for-rna-seq-minicure-extension">Outline for RNA-seq miniCURE Extension</a></li>
-  <li><a href="#outline-for-rna-seq-standalone-activity" id="toc-outline-for-rna-seq-standalone-activity" class="nav-link" data-scroll-target="#outline-for-rna-seq-standalone-activity">Outline for RNA-seq standalone activity</a></li>
+  <li><a href="#case-file-suspected-parrot-smuggling" id="toc-case-file-suspected-parrot-smuggling" class="nav-link" data-scroll-target="#case-file-suspected-parrot-smuggling">Case File: Suspected Parrot Smuggling</a>
+  <ul class="collapse">
+  <li><a href="#brazilian-parrot-smuggling-investigation" id="toc-brazilian-parrot-smuggling-investigation" class="nav-link" data-scroll-target="#brazilian-parrot-smuggling-investigation">Brazilian parrot smuggling investigation</a></li>
+  <li><a href="#how-much-money-is-there-in-parrot-egg-smuggling" id="toc-how-much-money-is-there-in-parrot-egg-smuggling" class="nav-link" data-scroll-target="#how-much-money-is-there-in-parrot-egg-smuggling">How much money is there in parrot egg smuggling?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -172,7 +152,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Differential Expression and the Mouse Gut-Brain Axis</h1>
+<h1 class="title">DNA Forensics Prework</h1>
 </div>
 
 
@@ -195,128 +175,132 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This module introduces students to differential expression analyses using the R programming language. Previous programming experience is helpful but not necessary. Students will work with real data from a mouse RNA-seq study to explore how the gut-brain axis might impact symptoms in Autism Spectrum Disorder.</p>
-<p>There are two options for this module:</p>
-<ol type="1">
-<li><p>a companion and expansion to the C-MOOR RNA-seq miniCURE. This module adds an additional RNA-seq dataset that is suitable for an independent research project.</p></li>
-<li><p>a standalone activity that fits into a single laboratory session.</p></li>
-</ol>
-<p><strong>Duration:</strong> miniCURE: Three lab periods; standalone activity: 1-2 hours (<a href="https://forms.gle/Qd9KLiDsUFY4s1LV8">help us improve this estimate!</a>)</p>
+<p>This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data based on real forensic investigations in order to identify the species of a sample based on a small fragment of DNA.</p>
+<section id="what-is-dna-barcoding" class="level1">
+<h1>What is DNA barcoding?</h1>
+<p><strong>DNA barcoding</strong> is a technique that involves sequencing a small piece of DNA in order to determine an organism’s species identity. The <strong>DNA barcode</strong> is a short (400-800 bp in length) section of the genome that is highly variable and can be used to reliably distinguish one species from another. Although the gold standard for species identification is typically based on an individual’s appearance, or morphology, this method isn’t always possible in forensic investigations. For example, an investigator may be asked to identify only a small part of an organism, or be given a sample of plant matter that has been partly digested. DNA barcoding can provide identity when morphology fails.</p>
+<p>However, DNA barcoding is only as accurate as the reference database you use. Sometimes a sample cannot be identified because the reference database doesn’t happen to include a known representative of that species. In these instances, a sample may be identified to a genus, or matched to the closely related species that <em>is</em> represented in the reference database.</p>
 </section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<ol type="1">
-<li><p>Explore differential expression data in mice.</p></li>
-<li><p>Identify genes that are differentially expressed in an RNA-seq dataset.</p></li>
-<li><p>(Optional) Formulate and test a hypothesis about differential expression of genes as a result of the gut-brain axis.</p></li>
-</ol>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>Students will benefit from some understanding of the Central Dogma and genetically-based trait expression. They should be aware of mice as a model organism and be comfortable using online genomic databases. We suggest this activity could accompany lectures that discuss these topics.</p>
-<p>This activity also requires plotting and an understanding of data visualization.</p>
-</section>
-<section id="evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
-<p>GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.</p>
+<section id="what-makes-a-good-dna-barcoding-region" class="level1">
+<h1>What makes a good DNA barcoding region?</h1>
+<p>Not all genomes regions are useful for barcoding. A good DNA barcoding region need to have enough variation among species so that the species are distinguishable, but it also needs to have very low variation among members of the same species (so that a single reference barcode can match fairly closely to all individuals within a species). Additionally, the barcoding region has to have highly-conserved flanking regions (that is, regions next to the barcode with very little variation) so that researchers can use a common set of PCR primers to analyze a wide variety of species.</p>
+<p>Unfortunately, no single barcoding region exists that can be used universally across all biological life. Thus, researchers use different barcoding regions for animals, plants, fungi, or bacteria. Researchers may also use a variety of barcoding regions within these groups to answer particular questions or to deal with varying sample quality.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Help us improve!
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="https://forms.gle/Qd9KLiDsUFY4s1LV8">Instructor survey</a></p>
-<p><a href="https://genomicseducation.shinyapps.io/student_pre_survey/">Student pre-activity survey</a></p>
-<p><a href="https://genomicseducation.shinyapps.io/student_post_survey/">Student post-activity survey</a></p>
+<p>You may have heard of a technique called DNA fingerprinting. While similar to DNA barcoding, there are several important differences between the two techniques.</p>
+<p><strong>Region of DNA</strong>: The DNA barcoding technique amplifies a single, highly variable region of DNA that is 400-800 base pairs long. DNA fingerprinting, on the other hand, amplifies multiple DNA regions called <em>variable number tandem repeats</em>, or VNTRs. These regions are 10-100 base pairs in length. There are many VNTR regions scattered throughout the genome. It is common to examine at least 13 different VNTR regions in a DNA fingerprinting analysis.</p>
+<p><strong>Level of identification</strong>: DNA barcoding is used to identify the species of a sample, while DNA fingerprinting identifies an individual organism. The larger number of shorter variable DNA regions allows researchers to be more precise when determining the individual a sample comes from.</p>
 </div>
 </div>
-<p>You can view our IRB approval <a href="https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing">here</a>. Feel free to contact the GEMs team with any questions (gems <strong>at</strong> fredhutch <strong>dot</strong> org).</p>
 </section>
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials</h2>
-<section id="student-activity" class="level3">
-<h3 class="anchored" data-anchor-id="student-activity">Student Activity</h3>
-<p>You can use this module in several formats. Feel free to adapt to your needs!</p>
-<ul>
-<li><p>Standalone R student activity:</p>
-<ul>
-<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_student_guide.html">Web page</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_student_guide.qmd">Quarto (qmd)</a></li>
-<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_student_guide.docx">Word (docx)</a></li>
-<li><a href="">Google Doc</a> - coming soon!</li>
-</ul></li>
-</ul>
-<p>Students will need RStudio, data, and the R packages <code>tidyverse</code>.</p>
-<p>This means students will need either:</p>
-<ul>
-<li>An internet connection for this activity as written (using Posit Cloud)</li>
-<li>A local installation of R or RStudio (with data downloaded and <code>tidyverse</code> package installed ahead of time)</li>
-</ul>
-<p>Students can use any of the following datasets to compare gene expression:</p>
-<ul>
-<li><p><a href="mouse_gutbrain_metadata.csv">Sample metadata</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_controls.csv">Gene expression count data for all control-type mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_asd.csv">Gene expression count data for all ASD-type mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_prefrontalcortex.csv">Gene expression count data for all prefrontal cortex samples</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_striatum.csv">Gene expression count data for all striatum samples</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv">Comparing gene expression between ASD and control mice, both brain regions</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv">Comparing gene expression between ASD and control mice, prefrontal cortex only</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv">Comparing gene expression between ASD and control mice, striatum only</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv">Comparing gene expression between prefrontal cortex and striatum, all mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv">Comparing gene expression between prefrontal cortex and striatum, only ASD mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv">Comparing gene expression between prefrontal cortex and striatum, only control mice</a></p></li>
-</ul>
-</section>
-<section id="instructor-materials" class="level3">
-<h3 class="anchored" data-anchor-id="instructor-materials">Instructor Materials</h3>
-<p>A Google Slides presentation is available for borrowing images <a href="https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing">here</a>.</p>
-</section>
-</section>
-<section id="scientific-topics" class="level2">
-<h2 class="anchored" data-anchor-id="scientific-topics">Scientific Topics</h2>
-<p>The activity uses data from a <a href="https://www.cell.com/cell/fulltext/S0092-8674(19)30502-1">published research study</a> “Human Gut Microbiota from Autism Spectrum Disorder Induces Behavioral Deficits in Mice” <span class="citation" data-cites="sharon2019"><a href="#ref-sharon2019" role="doc-biblioref">[1]</a></span>. Students will gain exposure to the following:</p>
-<ul>
-<li><p>Differential expression: the process where different cells within an organism, even those with the same DNA, express different genes, with some genes being expressed or “turned on”, while others are “turned off”</p></li>
-<li><p>Gut-brain axis: the proposed connection between the gut microbiome and gene expression in the brain</p></li>
-<li><p>Autism Spectrum Disorder: a neurological disorder that affects behavioral and social interactions</p></li>
-<li><p>Neurodevelopmental disorders: disorders that are the result of altered brain development (miniCURE only)</p></li>
-<li><p>Neurodegenerative disorders: disorders that that occur when brain structures and systems experience degradation (miniCURE only)</p></li>
-<li><p>Prefrontal cortex: the part of the brain that is primarily in charge of decision making, reasoning, personality, maintaining social appropriateness, and other complex behaviors that fall under the umbrella of executive functions</p></li>
-<li><p>Striatum: the part of the brain involved in motor control and cognitive tasks like reward processing, decision-making, and social interactions</p></li>
-</ul>
-</section>
-<section id="outline-for-rna-seq-minicure-extension" class="level2">
-<h2 class="anchored" data-anchor-id="outline-for-rna-seq-minicure-extension">Outline for RNA-seq miniCURE Extension</h2>
-<ul>
-<li><p>Background and Setup</p></li>
-<li><p>Developing a Hypothesis; Identifying Genes of Interest</p></li>
-<li><p>Exploring Gene Expression Data</p></li>
-<li><p>Analyzing Differential Expression Data</p></li>
-</ul>
-</section>
-<section id="outline-for-rna-seq-standalone-activity" class="level2">
-<h2 class="anchored" data-anchor-id="outline-for-rna-seq-standalone-activity">Outline for RNA-seq standalone activity</h2>
-<ul>
-<li><p>Background and Setup</p></li>
-<li><p>Exploring Gene Expression Data</p></li>
-<li><p>Analyzing Differential Expression Data</p></li>
-</ul>
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-sharon2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">G. Sharon <em>et al.</em>, <span>“Human gut microbiota from autism spectrum disorder promote behavioral symptoms in mice,”</span> <em>Cell</em>, vol. 177, no. 6, pp. 1600–1618, 2019, Available: <a href="https://pubmed.ncbi.nlm.nih.gov/31150625/">https://pubmed.ncbi.nlm.nih.gov/31150625/</a></div>
+<section id="case-file-herbal-medicine-investigation" class="level1">
+<h1>Case File: Herbal Medicine Investigation</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_forensics_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3f58dd9ea1a_0_37.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
 </div>
-</div></section></div></main> <!-- /main -->
+</div>
+</div>
+<p>In the United States, pharmaceuticals are regulated by the FDA under the authority of the Federal Food, Drug, and Cosmetic Act (FFDC). This law gives the US government the authority to oversee the safety of food, pharmaceuticals, medical devices, and cosmetics. In particular, the FFDC requires that food, pharmaceuticals, medical devices, and cosmetics be clearly and accurately labeled with their ingredients. However, herbal supplements and herbal medicinal products are not regulated in the same way as pharmaceuticals. These products are considered dietary supplements, which are regulated under the Dietary Supplement Health and Education Act. Products that fall under the purview of the Dietary Supplement Health and Education Act have much looser regulations around labeling, testing, and effectiveness. Although companies are required to verify that their dietary supplements are safe and accurately labeled, the FDA generally relies on an honor system.</p>
+<section id="new-york-investigation-into-herbal-medicine" class="level2">
+<h2 class="anchored" data-anchor-id="new-york-investigation-into-herbal-medicine">New York Investigation into herbal medicine</h2>
+<p>In 2015, the New York Attorney General temporarily halted the sale of store-brand herbal supplements from GNC, Target, Walgreens, and Walmart after an investigation revealed many of these supplements did not contain any quantity of the herbs on their labels. This investigation was prompted by a 2013 New York Times article entitled <a href="https://www.nytimes.com/2013/11/05/science/herbal-supplements-are-often-not-what-they-seem.html?unlocked_article_code=1.nFA.NdG9._hW2wfRWe_wx&amp;smid=url-share">“Herbal Supplements Are Not What They Seem”</a> and reviewed research by a group of Canadian scientists that used DNA barcoding to examine whether the ingredients on the labels of herbal supplements matched the ingredients inside the capsules. The NY AG and the companies reached an agreement to resume sales, with the companies promising to implement reforms and prominently announce in stores and on its website if a supplement product was derived from whole herbs or extracts.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_forensics_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3f58dd9ea1a_0_64.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In 2018, inspired by these events and other research suggesting ingredient mismatch was still common, two researchers and three high schoolers from the <a href="https://dnabarcoding101.org/programs/ubrp/index.html">Urban Barcode Research Program</a> published a study examining whether herbal medicinal products bought online contained what their labels said they contained. The Urban Barcode Research Program is a science education initiative based in New York City that connects high school students with researchers to do biodiversity studies in the city. These students were particularly interested in this research question because they belonged to communities where herbal supplements and herbal medicine were commonly used.</p>
+<p>This study is an example of <strong>pharmacovigilance</strong>.</p>
+</section>
+<section id="how-much-money-is-there-in-herbal-medicine" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-money-is-there-in-herbal-medicine">How much money is there in herbal medicine?</h2>
+<p>In 2025, the US herbal medicine market earned $36.1 billion in profit and it continues to grow. However, international regulatory changes of how plants may be used, sold, or imported can have implications for the availability of different ingredients. Some ingredients may become more expensive or difficult to procure, especially if supply chains are long or complicated. It is estimated that material costs may be cut by as much as 20% when a manufacturer swaps more easily-obtained ingredients for rare ones, or at least 80% if expensive plant powders are cut or replaced entirely with fillers like rice powder or common weeds,</p>
+<p>Keep in mind that these swaps may happen at any point along the supply chain! These changes may be as simple as swapping the leaf of a plant for the more expensive root (as can happen with ashwagandha), or could be as complex as swapping turmeric powder with dyed rice powder.</p>
+</section>
+</section>
+<section id="case-file-suspected-parrot-smuggling" class="level1">
+<h1>Case File: Suspected Parrot Smuggling</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_forensics_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3f58dd9ea1a_0_24.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In Brazil, wildlife is considered the property of the Brazilian State and the commercial trade of wild animals is strictly controlled (Wildlife Protection Law; law no. 5197/1967). Anyone who catches, transports, keeps captive, or sells wild animals <em>without proper authorization</em> can face fines and up to 6-12 months of prison time. These penalties increase if the wild animal is endangered or belongs to a migratory species, among other things (Environmental Crimes Law; law no. 9605/1998).</p>
+<section id="brazilian-parrot-smuggling-investigation" class="level2">
+<h2 class="anchored" data-anchor-id="brazilian-parrot-smuggling-investigation">Brazilian parrot smuggling investigation</h2>
+<p>In their 2015 paper “DNA Barcoding Identifies Illegal Parrot Trade”, Gonçalves et al.&nbsp;detail a forensic investigation of a potential animal smuggling incident at an airport in Brazil. This is their brief overview of the case:</p>
+<blockquote class="blockquote">
+<p>Here we report a case from 2003 of a man who was arrested at Recife International Airport in Brazil carrying 58 unhatched avian eggs and intending to fly to Europe. The eggs were packed around his abdomen to keep them alive during the trip. The police were already investigating him, and during this trip to Brazil he visited various states where he could have acquired the eggs. When arrested, he claimed that they were quail eggs, but their external morphology did not support his claim. The embryos never hatched; thus, it was not possible to identify them based on their morphology. However, the external morphology of the eggs and embryos suggested that they were from parrots.</p>
+</blockquote>
+<p>Many bird eggs look alike and can’t easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_forensics_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g1965a5f7f0a_0_44.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="how-much-money-is-there-in-parrot-egg-smuggling" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-money-is-there-in-parrot-egg-smuggling">How much money is there in parrot egg smuggling?</h2>
+<p>Among parrot enthusiasts, there is a high demand for many of the rarer or protected parrot species. The only birds that are legally allowed to be sold are ones that have been born in captivity. Popular and common species, like the Blue and Gold Macaw (<em>Ara ararauna</em>), can fetch between $1,200 and $3,000 on the market. Rare or “high-end” species, like the Hyacinth Macaw (<em>Anodorhynchus hyacinthinus</em>), are worth up to $20,000 a bird.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dna_forensics_student_guide_files/figure-html//1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ_g3f58dd9ea1a_0_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Although many people do legally breed captive birds for sale and trade, the demand often outweighs the supply. One way for smugglers to fill this gap is to poach fertilized eggs from nest and smuggle them into aviaries in other countries, where the eggs hatch into birds that are tagged as “captive-born”. In one case in Switzerland, investigators found seven live parrots that had been hatched from smuggled eggs. They estimated the seven birds were collectively worth more than $100,000.</p>
+<p>You can read more about egg smuggling <a href="https://earthjournalism.net/stories/this-amazon-birds-eggs-are-black-market-gold-heres-why">here</a> and <a href="https://www.occrp.org/en/investigation/astronomical-money-how-smugglers-made-tens-of-millions-moving-rare-birds-around-the-world">here</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check Your Knowledge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Why is DNA barcoding useful for the herbal medicine investigation case study?</p></li>
+<li><p>What are some potential negative consequences of taking an herbal medication that is mislabeled?</p></li>
+<li><p>Why is DNA barcoding useful for the suspected parrot smuggling case study?</p></li>
+<li><p>What are some potential negative consequences of smuggling wildlife out of Brazil?</p></li>
+</ol>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
