@@ -72,7 +72,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 We can see that the top hit here is for the species _Harpagophytum
 zeyheri_, which is not the species we expected! The common name for this species is also devil's claw. Despite sharing the same common name, _Harpagophytum zeyheri_ and _Harpagophytum procumbens_ are distinct (though related) species. Notice that there are three reference sequences with a 100% percent identity to our sample, and all three reference sequences are from _Harpagophytum zeyheri_.  
 
-::: {.callout-caution collapse="true"}
+::: callout-tip
 # Part 1: Herbal Medicine Investigation
 
 Three additional herbal medicines the researchers tested were black cumin, goat's head, and epazote. Following the devil's claw example, use the BOLD website to identify these three samples, then answer the questions below.
@@ -83,7 +83,7 @@ Three additional herbal medicines the researchers tested were black cumin, goat'
 
 :::
 
-::: {.callout-caution collapse="true"}
+::: callout-tip
 # Part 1: Suspected Parrot Smuggling
 
 The accused smuggler claimed the eggs he was carrying were quail eggs. Following the devil's claw example, use the BOLD website to identify these three unknown egg samples, then answer the questions below. **Make sure to choose the ANIMAL LIBRARY (PUBLIC) database.**
@@ -166,7 +166,7 @@ As you scroll down, you will see a list of potential reference sequences that ma
 ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3ec9ec989c2_0_36#slide=id.g3ec9ec989c2_0_36")
 ```
 
-::: {.callout-caution collapse="true"}
+::: callout-tip
 # Part 2: Herbal Medicine Investigation
 
 Following the instructions from the devil's claw example, do a BLAST search on GenBank to identify the three additional herbal medicine samples, then answer the questions below.
@@ -178,7 +178,7 @@ Following the instructions from the devil's claw example, do a BLAST search on G
 
 :::
 
-::: {.callout-caution collapse="true"}
+::: callout-tip
 # Part 2: Suspected Parrot Smuggling
 
 Following the instructions from the devil's claw example, do a BLAST search on GenBank to identify the three unknown egg samples, then answer the questions below.
