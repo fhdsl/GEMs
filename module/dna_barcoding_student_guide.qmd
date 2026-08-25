@@ -9,13 +9,17 @@ format:
 
 This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data based on real forensic investigations in order to identify the species of a sample based on a small fragment of DNA.
 
-Before doing this activity, make sure to read about these case files here!
+Before doing this activity, make sure to read about these case files [here](https://genomicseducation.org/module/dna_forensics_student_guide.html)!
 
 ## Part 1: What organism do your samples come from?
 
 In the herbal medicine case study, the students ordered products from online retailers and then amplified the DNA for DNA barcoding. One product they tested is Devil's Claw (also called grapple plant or wood spider), a member of the sesame plant family. This particular herb is native to southern Africa and is commonly taken as an anti-inflammatory, especially for low back pain. According to the packaging, this product should contain the species _Harpagophytum procumbens_.
 
 Let's explore the genomic sequence from the plant gene _rbcL_. This sequence is stored as a fasta file (pronounced "fast A"). This is a standard bioinformatics data file that stores information on two lines: a header line beginning with a greater-than symbol (">"), as well as a second line with the raw sequence data.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "This is an example of the fasta file formatting.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3f85dacaf63_1_0#slide=id.g3f85dacaf63_1_0")
+```
 
 ::: callout-tip
 
