@@ -17,6 +17,10 @@ In the herbal medicine case study, the students ordered products from online ret
 
 Let's explore the genomic sequence from the plant gene _rbcL_. This sequence is stored as a fasta file (pronounced "fast A"). This is a standard bioinformatics data file that stores information on two lines: a header line beginning with a greater-than symbol (">"), as well as a second line with the raw sequence data.
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "This is an example of the fasta file formatting.", out.width = '90%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3f85dacaf63_1_0#slide=id.g3f85dacaf63_1_0")
+```
+
 ::: callout-tip
 
 The _rcbL_ (Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit) gene is located in the chloroplast genome and encodes a subunit of the Rubisco enzyme. You might remember from previous lessons on photosynthesis that the Rubisco enzyme plays a big part in fixing the carbon from carbon dioxide into glucose. Because it plays such an important role in a vital plant process, it's highly conserved and can be found in almost all plants!
