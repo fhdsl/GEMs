@@ -48,17 +48,9 @@ You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmo
 
 Students will benefit from some awareness of basic evolutionary theory, particularly Mendelian inheritance, as well as the concepts of phenotypes, genotypes, and the relationship between the two. Students should also understand the concepts of genetic drift and natural selection.
 
-Students will need a device that accesses the internet. 
+## Student Materials
 
-::: callout-warning
-## This content contains URLs
-
-We suggest confirming links are still active prior to running this activity.
-
-Link: [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html).
-:::
-
-## Materials
+You can use this module in several formats. Feel free to adapt to your needs!
 
 ::: {.callout-note icon=false}
 
@@ -82,7 +74,15 @@ Link: [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopG
 
 :::
 
-::: {.callout-tip icon=false}
+Students will need a device that accesses the internet. 
+
+::: callout-warning
+## This content contains URLs
+
+We suggest confirming links are still active prior to running this activity.
+
+Link: [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html).
+:::
 
 ## Instructor Materials
 
@@ -90,4 +90,9 @@ An answer key is available [here](https://docs.google.com/document/d/15mUV8ZTZq9
 
 This answer key also provides guidance on areas of the activity that students may find tricky.
 
-:::
+## Outline
+
+- Activity 1: Hardy-Weinberg Equilibrium 
+- Activity 2: Drift 
+- Activity 3: Natural Selection and Environmental Pressures 
+- Bonus Activity
