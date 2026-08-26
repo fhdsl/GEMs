@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-07-22">
+<meta name="dcterms.date" content="2026-08-26">
 
 <title>Differential Expression and the Mouse Gut-Brain Axis – GEMs</title>
 <style>
@@ -61,7 +61,7 @@ div.csl-indent {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-818ccface5225d20867bac3b8eec4f82.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-798a98bb8d5566aeee842d74b9e91279.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -153,14 +153,11 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a>
-  <ul class="collapse">
-  <li><a href="#student-activity" id="toc-student-activity" class="nav-link" data-scroll-target="#student-activity">Student Activity</a></li>
+  <li><a href="#student-materials" id="toc-student-materials" class="nav-link" data-scroll-target="#student-materials">Student Materials</a></li>
   <li><a href="#instructor-materials" id="toc-instructor-materials" class="nav-link" data-scroll-target="#instructor-materials">Instructor Materials</a></li>
-  </ul></li>
   <li><a href="#scientific-topics" id="toc-scientific-topics" class="nav-link" data-scroll-target="#scientific-topics">Scientific Topics</a></li>
   <li><a href="#outline-for-rna-seq-minicure-extension" id="toc-outline-for-rna-seq-minicure-extension" class="nav-link" data-scroll-target="#outline-for-rna-seq-minicure-extension">Outline for RNA-seq miniCURE Extension</a></li>
   <li><a href="#outline-for-rna-seq-standalone-activity" id="toc-outline-for-rna-seq-standalone-activity" class="nav-link" data-scroll-target="#outline-for-rna-seq-standalone-activity">Outline for RNA-seq standalone activity</a></li>
@@ -183,7 +180,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 22, 2026</p>
+      <p class="date">August 26, 2026</p>
     </div>
   </div>
   
@@ -205,19 +202,6 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </ol>
 <p><strong>Duration:</strong> miniCURE: Three lab periods; standalone activity: 1-2 hours (<a href="https://forms.gle/Qd9KLiDsUFY4s1LV8">help us improve this estimate!</a>)</p>
 </section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<ol type="1">
-<li><p>Explore differential expression data in mice.</p></li>
-<li><p>Identify genes that are differentially expressed in an RNA-seq dataset.</p></li>
-<li><p>(Optional) Formulate and test a hypothesis about differential expression of genes as a result of the gut-brain axis.</p></li>
-</ol>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>Students will benefit from some understanding of the Central Dogma and genetically-based trait expression. They should be aware of mice as a model organism and be comfortable using online genomic databases. We suggest this activity could accompany lectures that discuss these topics.</p>
-<p>This activity also requires plotting and an understanding of data visualization.</p>
-</section>
 <section id="evaluation" class="level2">
 <h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
 <p>GEMs is an NIH-funded program. Part of our mission is understanding the impact of our materials. Please take the time to review our program as an instructor after this activity. We also appreciate you distributing our survey to students before and after they participate in GEMs content.</p>
@@ -238,45 +222,77 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <p>You can view our IRB approval <a href="https://drive.google.com/file/d/16Wx2CxDsmojfWacb2S1SHbYdI3kqBzFX/view?usp=sharing">here</a>. Feel free to contact the GEMs team with any questions (gems <strong>at</strong> fredhutch <strong>dot</strong> org).</p>
 </section>
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials</h2>
-<section id="student-activity" class="level3">
-<h3 class="anchored" data-anchor-id="student-activity">Student Activity</h3>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<ol type="1">
+<li><p>Explore differential expression data in mice.</p></li>
+<li><p>Identify genes that are differentially expressed in an RNA-seq dataset.</p></li>
+<li><p>(Optional) Formulate and test a hypothesis about differential expression of genes as a result of the gut-brain axis.</p></li>
+</ol>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>Students will benefit from some understanding of the Central Dogma and genetically-based trait expression. They should be aware of mice as a model organism and be comfortable using online genomic databases. We suggest this activity could accompany lectures that discuss these topics.</p>
+<p>This activity also requires plotting and an understanding of data visualization.</p>
+</section>
+<section id="student-materials" class="level2">
+<h2 class="anchored" data-anchor-id="student-materials">Student Materials</h2>
 <p>You can use this module in several formats. Feel free to adapt to your needs!</p>
-<ul>
-<li><p>Standalone R student activity:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Student Activity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Standalone R student activity:</p>
 <ul>
 <li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_student_guide.html">Web page</a></li>
 <li><a href="https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_student_guide.qmd">Quarto (qmd)</a></li>
 <li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_student_guide.docx">Word (docx)</a></li>
 <li><a href="">Google Doc</a> - coming soon!</li>
-</ul></li>
-</ul>
-<p>Students will need RStudio, data, and the R packages <code>tidyverse</code>.</p>
-<p>This means students will need either:</p>
-<ul>
-<li>An internet connection for this activity as written (using Posit Cloud)</li>
-<li>A local installation of R or RStudio (with data downloaded and <code>tidyverse</code> package installed ahead of time)</li>
 </ul>
 <p>Students can use any of the following datasets to compare gene expression:</p>
 <ul>
-<li><p><a href="mouse_gutbrain_metadata.csv">Sample metadata</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_controls.csv">Gene expression count data for all control-type mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_asd.csv">Gene expression count data for all ASD-type mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_prefrontalcortex.csv">Gene expression count data for all prefrontal cortex samples</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_striatum.csv">Gene expression count data for all striatum samples</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv">Comparing gene expression between ASD and control mice, both brain regions</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv">Comparing gene expression between ASD and control mice, prefrontal cortex only</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv">Comparing gene expression between ASD and control mice, striatum only</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv">Comparing gene expression between prefrontal cortex and striatum, all mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv">Comparing gene expression between prefrontal cortex and striatum, only ASD mice</a></p></li>
-<li><p><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv">Comparing gene expression between prefrontal cortex and striatum, only control mice</a></p></li>
+<li><a href="mouse_gutbrain_metadata.csv">Sample metadata</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_controls.csv">Gene expression count data for all control-type mice</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_asd.csv">Gene expression count data for all ASD-type mice</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_prefrontalcortex.csv">Gene expression count data for all prefrontal cortex samples</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_counts_striatum.csv">Gene expression count data for all striatum samples</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol.csv">Comparing gene expression between ASD and control mice, both brain regions</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_prefrontalcortex.csv">Comparing gene expression between ASD and control mice, prefrontal cortex only</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_autismVcontrol_in_striatum.csv">Comparing gene expression between ASD and control mice, striatum only</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype.csv">Comparing gene expression between prefrontal cortex and striatum, all mice</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_ASDmice.csv">Comparing gene expression between prefrontal cortex and striatum, only ASD mice</a></li>
+<li><a href="https://genomicseducation.org/data/mouse_gutbrain_de_tissuetype_in_controlmice.csv">Comparing gene expression between prefrontal cortex and striatum, only control mice</a></li>
 </ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Student Activity - Questions Only
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://genomicseducation.org/module/mouse_gutbrain_de_questions_only.html">Web page</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_questions_only.qmd">Quarto (qmd)</a></li>
+<li><a href="https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_questions_only.docx">Word (docx)</a></li>
+<li><a href="">Google doc</a></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="instructor-materials" class="level3">
-<h3 class="anchored" data-anchor-id="instructor-materials">Instructor Materials</h3>
+<section id="instructor-materials" class="level2">
+<h2 class="anchored" data-anchor-id="instructor-materials">Instructor Materials</h2>
 <p>A Google Slides presentation is available for borrowing images <a href="https://docs.google.com/presentation/d/1vikcyml6uw-_DaC1yFpS-UWoWNEGxFukMB_eCi42BqY/edit?usp=sharing">here</a>.</p>
-</section>
 </section>
 <section id="scientific-topics" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-topics">Scientific Topics</h2>

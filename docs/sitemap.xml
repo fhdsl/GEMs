@@ -1,163 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://genomicseducation.org/modules.html</loc>
-    <lastmod>2026-07-22T22:28:39.464Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/resources.html</loc>
-    <lastmod>2026-07-22T22:28:39.464Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/epigenetics_explorer_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/dna_barcoding.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
+    <loc>https://genomicseducation.org/module/database_detectives.html</loc>
+    <lastmod>2026-08-26T15:00:08.794Z</lastmod>
   </url>
   <url>
     <loc>https://genomicseducation.org/module/genomic_med_prs_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.463Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/AOU_ethics.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/AI_genomics_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/exam_phys.html</loc>
-    <lastmod>2026-07-22T22:28:39.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/dna_forensics.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/family_markers_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.462Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/AOU_ethics_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/AOU_ethics_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/mouse_gutbrain_de_student_only_code.html</loc>
-    <lastmod>2026-07-22T22:28:39.463Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/pop_gen_hwe.html</loc>
-    <lastmod>2026-07-22T22:28:39.463Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/dna_barcoding_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/database_detectives.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/pop_gen_hwe_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.464Z</lastmod>
+    <lastmod>2026-08-26T15:00:08.798Z</lastmod>
   </url>
   <url>
     <loc>https://genomicseducation.org/module/genomic_med_prs.html</loc>
-    <lastmod>2026-07-22T22:28:39.462Z</lastmod>
+    <lastmod>2026-08-26T15:00:08.798Z</lastmod>
   </url>
   <url>
-    <loc>https://genomicseducation.org/module/family_markers.html</loc>
-    <lastmod>2026-07-22T22:28:39.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/resources/phys_data.html</loc>
-    <lastmod>2026-07-22T22:28:39.486Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/input.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/dna_forensics_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/genomic_med_prs_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.462Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/exam_phys_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/AI_genomics_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/dna_barcoding_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/epigenetics_explorer_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/database_detectives_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/exam_phys_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/dna_forensics_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/AI_genomics.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
+    <loc>https://genomicseducation.org/module/AOU_ethics_student_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.794Z</lastmod>
   </url>
   <url>
     <loc>https://genomicseducation.org/module/epigenetics_explorer.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
+    <lastmod>2026-08-26T15:00:08.796Z</lastmod>
   </url>
   <url>
-    <loc>https://genomicseducation.org/module/mouse_gutbrain_de_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.463Z</lastmod>
+    <loc>https://genomicseducation.org/module/dna_barcoding.html</loc>
+    <lastmod>2026-08-26T15:00:08.794Z</lastmod>
   </url>
   <url>
-    <loc>https://genomicseducation.org/module/mouse_gutbrain_de_miniCURE_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.463Z</lastmod>
+    <loc>https://genomicseducation.org/module/AOU_ethics.html</loc>
+    <lastmod>2026-08-26T15:00:08.794Z</lastmod>
   </url>
   <url>
-    <loc>https://genomicseducation.org/module/family_markers_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/pop_gen_hwe_questions_only.html</loc>
-    <lastmod>2026-07-22T22:28:39.463Z</lastmod>
-  </url>
-  <url>
-    <loc>https://genomicseducation.org/module/mouse_gutbrain_de.html</loc>
-    <lastmod>2026-07-22T22:28:39.463Z</lastmod>
+    <loc>https://genomicseducation.org/module/family_markers_student_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.798Z</lastmod>
   </url>
   <url>
     <loc>https://genomicseducation.org/module/database_detectives_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.460Z</lastmod>
+    <lastmod>2026-08-26T15:00:08.794Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/mouse_gutbrain_de_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/AI_genomics.html</loc>
+    <lastmod>2026-08-26T15:00:08.793Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/family_markers.html</loc>
+    <lastmod>2026-08-26T15:00:08.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/exam_phys_student_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/AI_genomics_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.793Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/dna_barcoding_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.795Z</lastmod>
   </url>
   <url>
     <loc>https://genomicseducation.org/module/mouse_gutbrain_de_student_guide.html</loc>
-    <lastmod>2026-07-22T22:28:39.463Z</lastmod>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/dna_forensics_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.795Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/mouse_gutbrain_de.html</loc>
+    <lastmod>2026-08-26T15:00:08.798Z</lastmod>
   </url>
   <url>
     <loc>https://genomicseducation.org/index.html</loc>
-    <lastmod>2026-07-22T22:28:39.459Z</lastmod>
+    <lastmod>2026-08-26T15:00:08.793Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/resources.html</loc>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/modules.html</loc>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/resources/phys_data.html</loc>
+    <lastmod>2026-08-26T15:00:08.820Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/input.html</loc>
+    <lastmod>2026-08-26T15:00:08.793Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/pop_gen_hwe.html</loc>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/dna_forensics.html</loc>
+    <lastmod>2026-08-26T15:00:08.795Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/mouse_gutbrain_de_miniCURE_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/AOU_ethics_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.794Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/genomic_med_prs_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.798Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/pop_gen_hwe_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/dna_forensics_student_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/mouse_gutbrain_de_student_only_code.html</loc>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/AI_genomics_student_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.793Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/epigenetics_explorer_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/epigenetics_explorer_student_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/exam_phys_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/database_detectives_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.794Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/pop_gen_hwe_student_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/family_markers_questions_only.html</loc>
+    <lastmod>2026-08-26T15:00:08.797Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/exam_phys.html</loc>
+    <lastmod>2026-08-26T15:00:08.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://genomicseducation.org/module/dna_barcoding_student_guide.html</loc>
+    <lastmod>2026-08-26T15:00:08.795Z</lastmod>
   </url>
 </urlset>
