@@ -13,6 +13,8 @@ These questions focus on the critical approach scientists must use to evaluate t
 
 First, select one of the following topics:
 
+- The All of Us project
+
 - Differential expression
 
 - Epigenetics
@@ -52,5 +54,6 @@ Finally, submit the completed query to the chatbot of your choice (e.g., ChatGPT
 
 3. How does the chatbot's response compare with other reliable sources? What do the experts say? 
 
-4. How does the chatbot's response and evidence make me feel? Is this what I already believed before I read it? What might make me change my mind? 
+4. How does the chatbot's response and evidence make you feel? Is this what you already believed before you read it? What might make you change my mind? 
 :::
+
