@@ -1124,21 +1124,21 @@
     "href": "module/dna_barcoding.html",
     "title": "DNA Barcoding",
     "section": "",
-    "text": "This activity explores forensic uses of DNA barcoding and DNA reference datasets. Students will walk through using online genomic reference databases and interpret their results within the framework of a forensic case study.\nDuration: Approximately 1 hour (help us improve this estimate!)"
+    "text": "This activity explores forensic uses of DNA barcoding and DNA reference datasets. In the prework, students will read about two real-life cases using DNA barcoding and consider the legal and biological consequences. In the lab module, students will walk through using online genomic reference databases and interpret their results within the framework of a forensic case study.\nPrework can be run as a stand-alone activity.\nDuration:\n\nPrework: Approximately 30 minutes\nLab: Approximately 1 hour (help us improve this estimate!)"
   },
   {
     "objectID": "module/dna_barcoding.html#overview",
     "href": "module/dna_barcoding.html#overview",
     "title": "DNA Barcoding",
     "section": "",
-    "text": "This activity explores forensic uses of DNA barcoding and DNA reference datasets. Students will walk through using online genomic reference databases and interpret their results within the framework of a forensic case study.\nDuration: Approximately 1 hour (help us improve this estimate!)"
+    "text": "This activity explores forensic uses of DNA barcoding and DNA reference datasets. In the prework, students will read about two real-life cases using DNA barcoding and consider the legal and biological consequences. In the lab module, students will walk through using online genomic reference databases and interpret their results within the framework of a forensic case study.\nPrework can be run as a stand-alone activity.\nDuration:\n\nPrework: Approximately 30 minutes\nLab: Approximately 1 hour (help us improve this estimate!)"
   },
   {
     "objectID": "module/dna_barcoding.html#learning-objectives",
     "href": "module/dna_barcoding.html#learning-objectives",
     "title": "DNA Barcoding",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nUse online tools to compare sequence in fasta format to DNA barcoding reference databases.\nExplore species identification via DNA barcoding.\nInterpret DNA barcoding results within the framework of a forensic DNA investigation."
+    "text": "Learning Objectives\n\nConsider the legal and biological consequences of using DNA barcoding as part of forensic investigations.\nUse online tools to compare sequence in fasta format to DNA barcoding reference databases.\nExplore species identification via DNA barcoding.\nInterpret DNA barcoding results within the framework of a forensic DNA investigation."
   },
   {
     "objectID": "module/dna_barcoding.html#prerequisites",
@@ -1159,7 +1159,7 @@
     "href": "module/dna_barcoding.html#materials",
     "title": "DNA Barcoding",
     "section": "Materials",
-    "text": "Materials\n\nStudent Activity\nYou can use this module in several formats. Feel free to adapt to your needs!\n\nWeb page\nWord (docx)\nGoogle Doc\n\nStudents will need:\n\nA device that accesses the internet.\nAccess to the BOLD website: https://id.boldsystems.org/.\nAccess to BLASTn on the NCBI website: https://blast.ncbi.nlm.nih.gov/Blast.cgi\nAbility to download toy data hosted at: https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta\n\n\n\nInstructor Materials"
+    "text": "Materials\n\nStudent Activity\nYou can use this module in several formats. Feel free to adapt to your needs!\nPrework\n\nWeb page\nWord (docx)\nGoogle Doc\n\nFor the prework, students do not need any additional materials.\nLab\n\nWeb page\nWord (docx)\nGoogle Doc\n\nFor the lab, students will need:\n\nA device that accesses the internet.\nAccess to the BOLD website: https://id.boldsystems.org/.\nAccess to BLASTn on the NCBI website: https://blast.ncbi.nlm.nih.gov/Blast.cgi\nAbility to download toy data hosted at: https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta\n\n\n\nInstructor Materials"
   },
   {
     "objectID": "module/dna_barcoding.html#scientific-topics",
@@ -1173,7 +1173,7 @@
     "href": "module/dna_barcoding.html#outline",
     "title": "DNA Barcoding",
     "section": "Outline",
-    "text": "Outline"
+    "text": "Outline\n\nPart 1: Prework (30 minutes)\nPart 2: What organism do your samples come from? (30 minutes)\nPart 3: Verify sample identification (30 minutes)"
   },
   {
     "objectID": "index.html",
