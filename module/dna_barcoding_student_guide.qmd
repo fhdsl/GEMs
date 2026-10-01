@@ -9,7 +9,7 @@ format:
 
 This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data based on real forensic investigations in order to identify the species of a sample based on a small fragment of DNA.
 
-Before doing this activity, make sure to read about these case files here!
+Before doing this activity, make sure to read about these case files [here](https://genomicseducation.org/module/dna_forensics_student_guide.html)!
 
 ## Part 1: What organism do your samples come from?
 
