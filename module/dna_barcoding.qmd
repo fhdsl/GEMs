@@ -13,8 +13,9 @@ This activity explores forensic uses of DNA barcoding and DNA reference datasets
 Prework can be run as a stand-alone activity.
 
 **Duration:** 
-Prework: Approximately 30 minutes
-Lab: Approximately 1 hour ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
+- Prework: Approximately 30 minutes
+
+- Lab: Approximately 1 hour ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
 
 ## Learning Objectives
 
