@@ -23,7 +23,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 
 ::: callout-tip
 
-The _rcbL_ (Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit) gene is located in the chloroplast genome and encodes a subunit of the Rubisco enzyme. You might remember from previous lessons on photosynthesis that the Rubisco enzyme plays a big part in fixing the carbon from carbon dioxide into glucose. Because it plays such an important role in a vital plant process, it's highly conserved and can be found in almost all plants!
+The _rbcL_ (Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit) gene is located in the chloroplast genome and encodes a subunit of the Rubisco enzyme. You might remember from previous lessons on photosynthesis that the Rubisco enzyme plays a big part in fixing the carbon from carbon dioxide into glucose. Because it plays such an important role in a vital plant process, it's highly conserved and can be found in almost all plants!
 
 :::
 
@@ -36,7 +36,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 ```
 
 
-Scroll down to the images of all the possible sequence reference libraries that can be searched using BOLD. For the herbal medicine example, we're interested in identifying plants. Click on the box for the PLANT LIBRARY (PUBLIC). This particular database includes reference sequences from the gene regions _rcbL_, _matk_, and _ITS_. 
+Scroll down to the images of all the possible sequence reference libraries that can be searched using BOLD. For the herbal medicine example, we're interested in identifying plants. Click on the box for the PLANT LIBRARY (PUBLIC). This particular database includes reference sequences from the gene regions _rbcL_, _matk_, and _ITS_. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "TO ADD", out.width = '90%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?slide=id.g3e4fcb5031f_0_16#slide=id.g3e4fcb5031f_0_16")
@@ -50,7 +50,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2
 ```
 
 
-Scroll down until you reach a gray box titled Upload FASTA file. This is where you actually submit your sample sequence. For this example, you will submit a sequence from the _rcbL_ barcode region for your putative devil's claw sample. 
+Scroll down until you reach a gray box titled Upload FASTA file. This is where you actually submit your sample sequence. For this example, you will submit a sequence from the _rbcL_ barcode region for your putative devil's claw sample. 
 
 Paste the sequence you downloaded earlier into the box. (Remember, you can download this file at <https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta>.)
 
