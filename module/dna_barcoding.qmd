@@ -8,17 +8,23 @@ output:
 
 ## Overview
 
-This activity explores forensic uses of DNA barcoding and DNA reference datasets. Students will walk through using online genomic reference databases and interpret their results within the framework of a forensic case study.
+This activity explores forensic uses of DNA barcoding and DNA reference datasets. In the prework, students will read about two real-life cases using DNA barcoding and consider the legal and biological consequences. In the lab module, students will walk through using online genomic reference databases and interpret their results within the framework of a forensic case study.
 
-**Duration:** Approximately 1 hour ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
+Prework can be run as a stand-alone activity.
+
+**Duration:** 
+Prework: Approximately 30 minutes
+Lab: Approximately 1 hour ([help us improve this estimate!](https://forms.gle/pgvLDMChG19pGjCq7))
 
 ## Learning Objectives
 
-1.  Use online tools to compare sequence in fasta format to DNA barcoding reference databases.
+1.  Consider the legal and biological consequences of using DNA barcoding as part of forensic investigations.
 
-2.  Explore species identification via DNA barcoding.
+2.  Use online tools to compare sequence in fasta format to DNA barcoding reference databases.
 
-3.  Interpret DNA barcoding results within the framework of a forensic DNA investigation.
+3.  Explore species identification via DNA barcoding.
+
+4.  Interpret DNA barcoding results within the framework of a forensic DNA investigation.
 
 ## Prerequisites
 
@@ -46,11 +52,19 @@ You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmo
 
 You can use this module in several formats. Feel free to adapt to your needs!
 
+*Prework*
 -   [Web page](https://genomicseducation.org/module/dna_barcoding_student_guide.html)
 -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/dna_barcoding_student_guide.docx)
 -   Google Doc
 
-Students will need: 
+For the prework, students do not need any additional materials.
+
+*Lab*
+-   [Web page](https://genomicseducation.org/module/dna_barcoding_student_guide.html)
+-   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/dna_barcoding_student_guide.docx)
+-   Google Doc
+
+For the lab, students will need: 
 
 - A device that accesses the internet. 
 - Access to the BOLD website: <https://id.boldsystems.org/>. 
