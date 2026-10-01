@@ -1,5 +1,5 @@
 ---
-title: "DNA Forensices"
+title: "DNA Forensics"
 date: last-modified
 output:
   html_document

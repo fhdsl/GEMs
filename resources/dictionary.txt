@@ -13,6 +13,7 @@ AnVIL
 AOU
 ararauna
 ARIH
+Arney
 ASD
 ashwagandha
 aspartic
@@ -29,7 +30,7 @@ Bertollo
 BioDIGS
 Bioinformatics
 bioinformatics
-biphosphate
+bisphosphate
 Bootstrap
 bp
 bradykinesia
@@ -157,6 +158,7 @@ HTTPS
 https
 Humphries
 HUVEC
+hyacinthinus
 hyperuricemia
 hypomania
 hypothalamic
@@ -242,6 +244,8 @@ noncoding
 norepinephrine
 Nrcam
 NRXN
+nucleosome
+nucleosomes
 nucleotides
 nvcc
 NVCC
