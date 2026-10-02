@@ -1,0 +1,122 @@
+{
+  "modules.qmd": {
+    "modules.html": "6d7043f6"
+  },
+  "module/database_detectives_student_guide.qmd": {
+    "database_detectives_student_guide.html": "f5ac3c96"
+  },
+  "module/dna_barcoding_student_guide.qmd": {
+    "dna_barcoding_student_guide.html": "66481e20"
+  },
+  "module/database_detectives_questions_only.qmd": {
+    "database_detectives_questions_only.html": "3291e93e"
+  },
+  "module/mouse_gutbrain_de_student_guide.qmd": {
+    "mouse_gutbrain_de_student_guide.html": "5b1be1f0"
+  },
+  "module/exam_phys_questions_only.qmd": {
+    "exam_phys_questions_only.html": "41e1f5f4"
+  },
+  "module/AOU_ethics_questions_only.qmd": {
+    "AOU_ethics_questions_only.html": "89cd5834"
+  },
+  "module/genomic_med_prs_student_guide.qmd": {
+    "genomic_med_prs_student_guide.html": "6ce852f4"
+  },
+  "module/pop_gen_hwe.qmd": {
+    "pop_gen_hwe.html": "19b16639"
+  },
+  "module/database_detectives.qmd": {
+    "database_detectives.html": "d6d9d79d"
+  },
+  "module/AI_genomics_student_guide.qmd": {
+    "AI_genomics_student_guide.html": "9d7bb27a"
+  },
+  "module/epigenetics_explorer.qmd": {
+    "epigenetics_explorer.html": "d3185a20"
+  },
+  "module/pop_gen_hwe_questions_only.qmd": {
+    "pop_gen_hwe_questions_only.html": "ae9fe6a5"
+  },
+  "module/mouse_gutbrain_de_miniCURE_guide.qmd": {
+    "mouse_gutbrain_de_miniCURE_guide.html": "db346c76"
+  },
+  "module/family_markers_student_guide.qmd": {
+    "family_markers_student_guide.html": "bae3f163"
+  },
+  "module/mouse_gutbrain_de.qmd": {
+    "mouse_gutbrain_de.html": "eddd4677"
+  },
+  "module/epigenetics_explorer_student_guide.qmd": {
+    "epigenetics_explorer_student_guide.html": "6cf60efa"
+  },
+  "module/dna_forensics_student_guide.qmd": {
+    "dna_forensics_student_guide.html": "c52ca9c3"
+  },
+  "module/epigenetics_explorer_questions_only.qmd": {
+    "epigenetics_explorer_questions_only.html": "af98b941"
+  },
+  "module/AOU_ethics.qmd": {
+    "AOU_ethics.html": "ed9c30f2"
+  },
+  "module/exam_phys_student_guide.qmd": {
+    "exam_phys_student_guide.html": "547d1684"
+  },
+  "module/AI_genomics.qmd": {
+    "AI_genomics.html": "f0012a73"
+  },
+  "module/pop_gen_hwe_student_guide.qmd": {
+    "pop_gen_hwe_student_guide.html": "95deb5aa"
+  },
+  "module/genomic_med_prs.qmd": {
+    "genomic_med_prs.html": "a84c7aa9"
+  },
+  "module/dna_forensics.qmd": {
+    "dna_forensics.html": "7e2d3ac7"
+  },
+  "module/genomic_med_prs_questions_only.qmd": {
+    "genomic_med_prs_questions_only.html": "8ab69814"
+  },
+  "module/family_markers.qmd": {
+    "family_markers.html": "4ff91b5f"
+  },
+  "module/mouse_gutbrain_de_questions_only.qmd": {
+    "mouse_gutbrain_de_questions_only.html": "e6653085"
+  },
+  "module/dna_forensics_questions_only.qmd": {
+    "dna_forensics_questions_only.html": "8f572d76"
+  },
+  "module/AOU_ethics_student_guide.qmd": {
+    "AOU_ethics_student_guide.html": "e515e370"
+  },
+  "module/family_markers_questions_only.qmd": {
+    "family_markers_questions_only.html": "7e7d1e7d"
+  },
+  "module/dna_barcoding_questions_only.qmd": {
+    "dna_barcoding_questions_only.html": "09ce955a"
+  },
+  "module/AI_genomics_questions_only.qmd": {
+    "AI_genomics_questions_only.html": "0c650034"
+  },
+  "module/exam_phys.qmd": {
+    "exam_phys.html": "69071387"
+  },
+  "module/dna_barcoding.qmd": {
+    "dna_barcoding.html": "b00e595c"
+  },
+  "module/mouse_gutbrain_de_student_only_code.qmd": {
+    "mouse_gutbrain_de_student_only_code.html": "922fd859"
+  },
+  "index.qmd": {
+    "index.html": "47075020"
+  },
+  "input.qmd": {
+    "input.html": "c0fd662f"
+  },
+  "resources/phys_data.Rmd": {
+    "phys_data.html": "cc08080f"
+  },
+  "resources.qmd": {
+    "resources.html": "b8a5b886"
+  }
+}

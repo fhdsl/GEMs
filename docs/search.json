@@ -354,7 +354,7 @@
     "href": "module/mouse_gutbrain_de.html#student-materials",
     "title": "Differential Expression and the Mouse Gut-Brain Axis",
     "section": "Student Materials",
-    "text": "Student Materials\nYou can use this module in several formats. Feel free to adapt to your needs!\n\n\n\n\n\n\nNoteStudent Activity\n\n\n\nStandalone R student activity:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc - coming soon!\n\nStudents can use any of the following datasets to compare gene expression:\n\nSample metadata\nGene expression count data for all control-type mice\nGene expression count data for all ASD-type mice\nGene expression count data for all prefrontal cortex samples\nGene expression count data for all striatum samples\nComparing gene expression between ASD and control mice, both brain regions\nComparing gene expression between ASD and control mice, prefrontal cortex only\nComparing gene expression between ASD and control mice, striatum only\nComparing gene expression between prefrontal cortex and striatum, all mice\nComparing gene expression between prefrontal cortex and striatum, only ASD mice\nComparing gene expression between prefrontal cortex and striatum, only control mice\n\n\n\n\n\n\n\n\n\nNoteStudent Activity - Questions Only\n\n\n\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle doc"
+    "text": "Student Materials\nYou can use this module in several formats. Feel free to adapt to your needs!\n\n\n\n\n\n\nNoteStudent Activity\n\n\n\nStandalone R student activity:\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle Doc\n\nStudents can use any of the following datasets to compare gene expression:\n\nSample metadata\nGene expression count data for all control-type mice\nGene expression count data for all ASD-type mice\nGene expression count data for all prefrontal cortex samples\nGene expression count data for all striatum samples\nComparing gene expression between ASD and control mice, both brain regions\nComparing gene expression between ASD and control mice, prefrontal cortex only\nComparing gene expression between ASD and control mice, striatum only\nComparing gene expression between prefrontal cortex and striatum, all mice\nComparing gene expression between prefrontal cortex and striatum, only ASD mice\nComparing gene expression between prefrontal cortex and striatum, only control mice\n\n\n\n\n\n\n\n\n\nNoteStudent Activity - Questions Only\n\n\n\n\nWeb page\nQuarto (qmd)\nWord (docx)\nGoogle doc"
   },
   {
     "objectID": "module/mouse_gutbrain_de.html#instructor-materials",
@@ -770,6 +770,13 @@
     "text": "Instructor Materials\nAn answer key is available here. Please message Ava Hoffman (ahoffma2 at fredhutch dot org) to get access.\nThis answer key also provides guidance on areas of the activity that students may find tricky."
   },
   {
+    "objectID": "module/pop_gen_hwe.html#scientific-topics",
+    "href": "module/pop_gen_hwe.html#scientific-topics",
+    "title": "Population Genetics: Fish Pond Simulator",
+    "section": "Scientific Topics",
+    "text": "Scientific Topics\nStudents will gain exposure to the following:\n\nPopulation genetics (microevolution as changes in allele frequencies over generations)\nAlleles, genotypes, and phenotypes (and how genotype/phenotype frequencies relate to allele frequencies)\nHardy–Weinberg equilibrium (HWE) as a baseline model for a non-evolving population\nGenetic drift (random changes in allele frequencies due to chance, especially in small populations)\nNatural selection (environment-dependent differences in reproductive fitness)\nMigration (gene flow) and how it can alter allele frequencies (modeled as a parameter in the simulator)\nEnvironmental change and fitness landscapes (how reversing which genotype is favored changes allele trajectories)\nStatistical hypothesis testing using chi-square tests to test equilibrium vs. deviation from expected frequencies\nRandom mating vs. assortative mating (assortative mating parameter affects mating patterns and outcomes)\nFixation of an allele (when an allele reaches frequency 1 in the population)"
+  },
+  {
     "objectID": "module/pop_gen_hwe.html#outline",
     "href": "module/pop_gen_hwe.html#outline",
     "title": "Population Genetics: Fish Pond Simulator",
@@ -1012,7 +1019,7 @@
     "href": "module/dna_forensics.html#learning-objectives",
     "title": "DNA Forensics",
     "section": "Learning Objectives",
-    "text": "Learning Objectives"
+    "text": "Learning Objectives\n\nUnderstand how DNA barcoding is used in forensics.\nConsider the legal and biological consequences of using DNA barcoding as part of forensic investigations."
   },
   {
     "objectID": "module/dna_forensics.html#prerequisites",
@@ -1033,21 +1040,21 @@
     "href": "module/dna_forensics.html#materials",
     "title": "DNA Forensics",
     "section": "Materials",
-    "text": "Materials\n\nStudent Activity\nYou can use this module in several formats. Feel free to adapt to your needs!\n\nWeb page\nWord (docx)\nGoogle Doc\n\nStudents do not need any outside material.\n\n\nInstructor Materials\nThis activity can be used as the prework for the DNA Barcoding activity"
+    "text": "Materials\n\nStudent Activity\nYou can use this module in several formats. Feel free to adapt to your needs!\n\nWeb page\nWord (docx)\nGoogle Doc\n\nStudents do not need any outside material.\n\n\nInstructor Materials\nThis activity can be used as the prework for the DNA Barcoding activity\nA Google Slides presentation is available for borrowing images here."
   },
   {
     "objectID": "module/dna_forensics.html#scientific-topics",
     "href": "module/dna_forensics.html#scientific-topics",
     "title": "DNA Forensics",
     "section": "Scientific Topics",
-    "text": "Scientific Topics"
+    "text": "Scientific Topics\nStudents will gain exposure to the following:\n\nDNA Barcoding: a molecular biology method that identifies the species of an organism using a short, standardized section of its DNA. The DNA section used for barcoding depends on the species being barcoded.\nSpecies Identification: the process of matching an individual organism to a known scientific name, or to a known taxonomic group (like family or genus)\nRelevant laws around herbal supplements in the USA and wildlife smuggling in Brazil"
   },
   {
     "objectID": "module/dna_forensics.html#outline",
     "href": "module/dna_forensics.html#outline",
     "title": "DNA Forensics",
     "section": "Outline",
-    "text": "Outline"
+    "text": "Outline\n\nPart 1: Student reading and reflection (20 minutes)\nPart 2: Class discussion (10 minutes)"
   },
   {
     "objectID": "module/family_markers.html#overview",
@@ -1159,14 +1166,14 @@
     "href": "module/dna_barcoding.html#materials",
     "title": "DNA Barcoding",
     "section": "Materials",
-    "text": "Materials\n\nStudent Activity\nYou can use this module in several formats. Feel free to adapt to your needs!\nPrework\n\nWeb page\nWord (docx)\nGoogle Doc\n\nFor the prework, students do not need any additional materials.\nLab\n\nWeb page\nWord (docx)\nGoogle Doc\n\nFor the lab, students will need:\n\nA device that accesses the internet.\nAccess to the BOLD website: https://id.boldsystems.org/.\nAccess to BLASTn on the NCBI website: https://blast.ncbi.nlm.nih.gov/Blast.cgi\nAbility to download toy data hosted at: https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta\n\n\n\nInstructor Materials"
+    "text": "Materials\n\nStudent Activity\nYou can use this module in several formats. Feel free to adapt to your needs!\nPrework\n\nWeb page\nWord (docx)\nGoogle Doc\n\nFor the prework, students do not need any additional materials.\nLab\n\nWeb page\nWord (docx)\nGoogle Doc\n\nFor the lab, students will need:\n\nA device that accesses the internet.\nAccess to the BOLD website: https://id.boldsystems.org/.\nAccess to BLASTn on the NCBI website: https://blast.ncbi.nlm.nih.gov/Blast.cgi\nAbility to download toy data hosted at: https://genomicseducation.org/data/barcoding_devils_claw_rbcL.fasta\n\n\n\nInstructor Materials\nA Google Slides presentation is available for borrowing images here."
   },
   {
     "objectID": "module/dna_barcoding.html#scientific-topics",
     "href": "module/dna_barcoding.html#scientific-topics",
     "title": "DNA Barcoding",
     "section": "Scientific Topics",
-    "text": "Scientific Topics"
+    "text": "Scientific Topics\nStudents will gain exposure to the following:\n\nDNA Barcoding: a molecular biology method that identifies the species of an organism using a short, standardized section of its DNA. The DNA section used for barcoding depends on the species being barcoded.\nCurated Databases: databases where information is screened, validated, and organized by experts to ensure the data are accurate and reliable. Information from these databases is typically standardized and organized in a consistent way so it is easily accessible and searchable.\nSpecies Identification: the process of matching an individual organism to a known scientific name, or to a known taxonomic group (like family or genus)\nRelevant laws around herbal supplements in the USA and wildlife smuggling in Brazil"
   },
   {
     "objectID": "module/dna_barcoding.html#outline",
