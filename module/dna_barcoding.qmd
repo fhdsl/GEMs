@@ -57,8 +57,8 @@ You can use this module in several formats. Feel free to adapt to your needs!
 *Prework*
 
 -   [Web page](https://genomicseducation.org/module/dna_barcoding_student_guide.html)
--   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/dna_barcoding_student_guide.docx)
--   Google Doc
+-   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/dna_forensics_student_guide.docx)
+-   [Google Doc](https://docs.google.com/document/d/15oZa2TNwvOFMxOf8mxBbP_P-TqDPpzXq/edit?usp=sharing&ouid=101727846555185296348&rtpof=true&sd=true)
 
 For the prework, students do not need any additional materials.
 
@@ -66,7 +66,7 @@ For the prework, students do not need any additional materials.
 
 -   [Web page](https://genomicseducation.org/module/dna_barcoding_student_guide.html)
 -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/dna_barcoding_student_guide.docx)
--   Google Doc
+-   [Google Doc](https://docs.google.com/document/d/1oALRkxlSXo0wBMgBgiOV73c_k_4SZYtL/edit?usp=sharing&ouid=101727846555185296348&rtpof=true&sd=true)
 
 For the lab, students will need: 
 
@@ -77,7 +77,7 @@ For the lab, students will need:
 
 ### Instructor Materials
 
-
+A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?usp=sharing).
 
 ## Scientific Topics
 

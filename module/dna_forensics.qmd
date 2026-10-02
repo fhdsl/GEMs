@@ -14,6 +14,9 @@ This activity explores forensic uses of DNA barcoding. Students will read about 
 
 ## Learning Objectives
 
+1. Understand how DNA barcoding is used in forensics. 
+
+2. Consider the legal and biological consequences of using DNA barcoding as part of forensic investigations.
 
 
 ## Prerequisites
@@ -43,14 +46,16 @@ You can view our IRB approval [here](https://drive.google.com/file/d/16Wx2CxDsmo
 You can use this module in several formats. Feel free to adapt to your needs!
 
 -   [Web page](https://genomicseducation.org/module/dna_forensics_student_guide.html)
--   Word (docx)
--   Google Doc
+-   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/dna_forensics_student_guide.docx)
+-   [Google Doc](https://docs.google.com/document/d/15oZa2TNwvOFMxOf8mxBbP_P-TqDPpzXq/edit?usp=sharing&ouid=101727846555185296348&rtpof=true&sd=true)
 
 Students do not need any outside material.
 
 ### Instructor Materials
 
 This activity can be used as the prework for the [DNA Barcoding activity](https://genomicseducation.org/module/dna_barcoding.html)
+
+A Google Slides presentation is available for borrowing images [here](https://docs.google.com/presentation/d/1intNjOu2eeZLBrZ2sW_BOa6acI1ZEtrjbyrazuQiawQ/edit?usp=sharing).
 
 ## Scientific Topics
 
