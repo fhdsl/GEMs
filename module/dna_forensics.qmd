@@ -59,7 +59,17 @@ A Google Slides presentation is available for borrowing images [here](https://do
 
 ## Scientific Topics
 
+Students will gain exposure to the following:
 
+-   DNA Barcoding: a molecular biology method that identifies the species of an organism using a short, standardized section of its DNA. The DNA section used for barcoding depends on the species being barcoded.
+
+-   Species Identification: the process of matching an individual organism to a known scientific name, or to a known taxonomic group (like family or genus)
+
+-   Relevant laws around herbal supplements in the USA and wildlife smuggling in Brazil
 
 ## Outline
+
+-   Part 1: Student reading and reflection (20 minutes)
+
+-   Part 2: Class discussion (10 minutes)
 

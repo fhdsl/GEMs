@@ -81,7 +81,15 @@ A Google Slides presentation is available for borrowing images [here](https://do
 
 ## Scientific Topics
 
+Students will gain exposure to the following:
 
+-   DNA Barcoding: a molecular biology method that identifies the species of an organism using a short, standardized section of its DNA. The DNA section used for barcoding depends on the species being barcoded.
+
+-   Curated Databases: databases where information is screened, validated, and organized by experts to ensure the data are accurate and reliable. Information from these databases is typically standardized and organized in a consistent way so it is easily accessible and searchable.
+
+-   Species Identification: the process of matching an individual organism to a known scientific name, or to a known taxonomic group (like family or genus)
+
+-   Relevant laws around herbal supplements in the USA and wildlife smuggling in Brazil
 
 ## Outline
 
