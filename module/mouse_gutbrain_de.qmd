@@ -67,7 +67,7 @@ Standalone R student activity:
 -   [Web page](https://genomicseducation.org/module/mouse_gutbrain_de_student_guide.html)
 -   [Quarto (qmd)](https://github.com/fhdsl/GEMs/blob/main/module/mouse_gutbrain_de_student_guide.qmd)
 -   [Word (docx)](https://github.com/fhdsl/GEMs/raw/main/docs/docx/module/mouse_gutbrain_de_student_guide.docx)
--   [Google Doc]() - coming soon!
+-   [Google Doc](https://docs.google.com/document/d/1832nmbVvC3xpT-iTGak_8zl-YOvyYsKY/edit?usp=sharing&ouid=101727846555185296348&rtpof=true&sd=true)
  
 Students can use any of the following datasets to compare gene expression:
 
