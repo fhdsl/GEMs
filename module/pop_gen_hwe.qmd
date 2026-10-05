@@ -90,6 +90,30 @@ An answer key is available [here](https://docs.google.com/document/d/15mUV8ZTZq9
 
 This answer key also provides guidance on areas of the activity that students may find tricky.
 
+## Scientific Topics
+
+Students will gain exposure to the following:
+
+- **Population genetics** (microevolution as changes in allele frequencies over generations)
+
+- **Alleles, genotypes, and phenotypes** (and how genotype/phenotype frequencies relate to allele frequencies)
+
+- **Hardy–Weinberg equilibrium (HWE)** as a baseline model for a non-evolving population
+
+- **Genetic drift** (random changes in allele frequencies due to chance, especially in small populations)
+
+- **Natural selection** (environment-dependent differences in reproductive fitness)
+
+- **Migration (gene flow)** and how it can alter allele frequencies (modeled as a parameter in the simulator)
+
+- **Environmental change and fitness landscapes** (how reversing which genotype is favored changes allele trajectories)
+
+- **Statistical hypothesis testing** using **chi-square tests** to test equilibrium vs. deviation from expected frequencies
+
+- **Random mating vs. assortative mating** (assortative mating parameter affects mating patterns and outcomes)
+
+- **Fixation** of an allele (when an allele reaches frequency 1 in the population)
+
 ## Outline
 
 - Activity 1: Hardy-Weinberg Equilibrium 
