@@ -62,6 +62,11 @@ Students will need a device that accesses the internet.
 We suggest confirming links to chatbots are still active prior to running this activity.
 :::
 
+::: {.callout-tip}
+## Instructor Tip
+
+It may be helpful to have students crowd source what they see from the chatbot responses. For example, some students might observe all legitimate references, while others might see hallucinated references.
+:::
 
 ### Instructor Materials
 
@@ -70,3 +75,13 @@ An answer key is available [here](). Please message Ava Hoffman (ahoffma2 at fre
 ## Scientific Topics
 
 Some of the questions in this activity are based on an online resource called [DataWISE](https://ncse.ngo/datawise), produced by the National Center for Science Education. DataWISE is a tool that scaffolds key science practices and media literacy skills to guide students in critical analysis of data-based claims. We think the DataWISE worksheet is a fantastic framework/activity for science literacy and we encourage you to check it out! 
+
+::: {.callout-tip}
+## Instructor Tip
+
+Need additional activities? 
+
+- You could have students sit in pairs using the same prompt and chatbot website. They could compare the responses as a way to understand reproducibility.
+
+- Have students try different chatbots and tweak the prompts. For example, specifically asking for scientific articles or specific quotes from sources.
+:::
