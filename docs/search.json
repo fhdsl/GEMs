@@ -282,35 +282,35 @@
   {
     "objectID": "module/dna_forensics_student_guide.html",
     "href": "module/dna_forensics_student_guide.html",
-    "title": "DNA Forensics Prework",
+    "title": "DNA Barcoding in Forensics",
     "section": "",
     "text": "This activity explores forensic uses of DNA barcoding and DNA reference datasets. You will work with data based on real forensic investigations in order to identify the species of a sample based on a small fragment of DNA."
   },
   {
     "objectID": "module/dna_forensics_student_guide.html#new-york-investigation-into-herbal-medicine",
     "href": "module/dna_forensics_student_guide.html#new-york-investigation-into-herbal-medicine",
-    "title": "DNA Forensics Prework",
+    "title": "DNA Barcoding in Forensics",
     "section": "New York Investigation into herbal medicine",
     "text": "New York Investigation into herbal medicine\nIn 2015, the New York Attorney General temporarily halted the sale of store-brand herbal supplements from GNC, Target, Walgreens, and Walmart after an investigation revealed many of these supplements did not contain any quantity of the herbs on their labels. This investigation was prompted by a 2013 New York Times article entitled “Herbal Supplements Are Not What They Seem” and reviewed research by a group of Canadian scientists that used DNA barcoding to examine whether the ingredients on the labels of herbal supplements matched the ingredients inside the capsules. The NY AG and the companies reached an agreement to resume sales, with the companies promising to implement reforms and prominently announce in stores and on its website if a supplement product was derived from whole herbs or extracts.\n\n\n\n\n\n\n\n\n\nIn 2018, inspired by these events and other research suggesting ingredient mismatch was still common, two researchers and three high schoolers from the Urban Barcode Research Program published a study examining whether herbal medicinal products bought online contained what their labels said they contained. The Urban Barcode Research Program is a science education initiative based in New York City that connects high school students with researchers to do biodiversity studies in the city. These students were particularly interested in this research question because they belonged to communities where herbal supplements and herbal medicine were commonly used.\nThis study is an example of pharmacovigilance."
   },
   {
     "objectID": "module/dna_forensics_student_guide.html#how-much-money-is-there-in-herbal-medicine",
     "href": "module/dna_forensics_student_guide.html#how-much-money-is-there-in-herbal-medicine",
-    "title": "DNA Forensics Prework",
+    "title": "DNA Barcoding in Forensics",
     "section": "How much money is there in herbal medicine?",
     "text": "How much money is there in herbal medicine?\nIn 2025, the US herbal medicine market earned $36.1 billion in profit and it continues to grow. However, international regulatory changes of how plants may be used, sold, or imported can have implications for the availability of different ingredients. Some ingredients may become more expensive or difficult to procure, especially if supply chains are long or complicated. It is estimated that material costs may be cut by as much as 20% when a manufacturer swaps more easily-obtained ingredients for rare ones, or at least 80% if expensive plant powders are cut or replaced entirely with fillers like rice powder or common weeds,\nKeep in mind that these swaps may happen at any point along the supply chain! These changes may be as simple as swapping the leaf of a plant for the more expensive root (as can happen with ashwagandha), or could be as complex as swapping turmeric powder with dyed rice powder."
   },
   {
     "objectID": "module/dna_forensics_student_guide.html#brazilian-parrot-smuggling-investigation",
     "href": "module/dna_forensics_student_guide.html#brazilian-parrot-smuggling-investigation",
-    "title": "DNA Forensics Prework",
+    "title": "DNA Barcoding in Forensics",
     "section": "Brazilian parrot smuggling investigation",
     "text": "Brazilian parrot smuggling investigation\nIn their 2015 paper “DNA Barcoding Identifies Illegal Parrot Trade”, Gonçalves et al. detail a forensic investigation of a potential animal smuggling incident at an airport in Brazil. This is their brief overview of the case:\n\nHere we report a case from 2003 of a man who was arrested at Recife International Airport in Brazil carrying 58 unhatched avian eggs and intending to fly to Europe. The eggs were packed around his abdomen to keep them alive during the trip. The police were already investigating him, and during this trip to Brazil he visited various states where he could have acquired the eggs. When arrested, he claimed that they were quail eggs, but their external morphology did not support his claim. The embryos never hatched; thus, it was not possible to identify them based on their morphology. However, the external morphology of the eggs and embryos suggested that they were from parrots.\n\nMany bird eggs look alike and can’t easily be identified to genus level, let alone species level. Additionally, 30% of parrot species are endangered. It is important to know the parrot species in order to properly charge this man under Brazilian law (if these eggs are parrot eggs, as authorities suspect)."
   },
   {
     "objectID": "module/dna_forensics_student_guide.html#how-much-money-is-there-in-parrot-egg-smuggling",
     "href": "module/dna_forensics_student_guide.html#how-much-money-is-there-in-parrot-egg-smuggling",
-    "title": "DNA Forensics Prework",
+    "title": "DNA Barcoding in Forensics",
     "section": "How much money is there in parrot egg smuggling?",
     "text": "How much money is there in parrot egg smuggling?\nAmong parrot enthusiasts, there is a high demand for many of the rarer or protected parrot species. The only birds that are legally allowed to be sold are ones that have been born in captivity. Popular and common species, like the Blue and Gold Macaw (Ara ararauna), can fetch between $1,200 and $3,000 on the market. Rare or “high-end” species, like the Hyacinth Macaw (Anodorhynchus hyacinthinus), are worth up to $20,000 a bird.\n\n\n\n\n\n\n\n\n\nAlthough many people do legally breed captive birds for sale and trade, the demand often outweighs the supply. One way for smugglers to fill this gap is to poach fertilized eggs from nest and smuggle them into aviaries in other countries, where the eggs hatch into birds that are tagged as “captive-born”. In one case in Switzerland, investigators found seven live parrots that had been hatched from smuggled eggs. They estimated the seven birds were collectively worth more than $100,000.\nYou can read more about egg smuggling here and here.\n\n\n\n\n\n\nNoteCheck Your Knowledge\n\n\n\n\nWhy is DNA barcoding useful for the herbal medicine investigation case study?\nWhat are some potential negative biological consequences of taking an herbal medication that is mislabeled?\nWhy is DNA barcoding useful for the suspected parrot smuggling case study?\nWhat are some potential negative biological consequences of smuggling wildlife out of Brazil?"
   },
