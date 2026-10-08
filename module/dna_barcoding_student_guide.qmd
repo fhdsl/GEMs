@@ -79,24 +79,25 @@ zeyheri_, which is not the species we expected! The common name for this species
 ::: callout-tip
 # Part 1: Herbal Medicine Investigation
 
-Three additional herbal medicines the researchers tested were black cumin, goat's head, and epazote. Following the devil's claw example, use the BOLD website to identify these three samples, then answer the questions below.
+Four additional herbal medicines the researchers tested were black cumin, goat's head, epazote, and yerba mate. Following the devil's claw example, use the BOLD website to identify these three samples, then answer the questions below.
 
-*   putative black cumin sample: <https://genomicseducation.org/data/barcoding_black_cumin_rbcL.fasta>
-*   putative goat's head sample: <https://genomicseducation.org/data/barcoding_goats_head_rbcL.fasta>
-*   putative epazote sample: <https://genomicseducation.org/data/barcoding_epazote_rbcL.fasta>
-
+*   putative black cumin (_Nigella sativa_) sample: <https://genomicseducation.org/data/barcoding_black_cumin_rbcL.fasta>
+*   putative goat's head (_Tribulus terrestris_) sample: <https://genomicseducation.org/data/barcoding_goats_head_rbcL.fasta>
+*   putative epazote (_Dysphania ambroisioides_) sample: <https://genomicseducation.org/data/barcoding_epazote_rbcL.fasta>
+*   putative yerba mate (_Ilex paraguariensis_) sample: <https://genomicseducation.org/data/barcoding_yerba_mate_rbcL.fasta>
 :::
 
 ::: callout-tip
 # Part 1: Suspected Parrot Smuggling
 
-The accused smuggler claimed the eggs he was carrying were quail eggs. Following the devil's claw example, use the BOLD website to identify these three unknown egg samples, then answer the questions below. **Make sure to choose the ANIMAL LIBRARY (PUBLIC) database.**
+The accused smuggler claimed the eggs he was carrying were quail eggs. In Brazil, all wild quail are New World Quail species and members of the genus _Odontophorus_) Following the devil's claw example, use the BOLD website to identify these four unknown egg samples, then answer the questions below. **Make sure to choose the ANIMAL LIBRARY (PUBLIC) database.**
 
 The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitochondrial gene that is popular for barcoding work among animals, as it shows high variability between many species but low variability among individuals within a species. 
 
-*   putative quail egg #1: <https://genomicseducation.org/data/barcoding_bird1_COI.fasta>
-*   putative quail egg #2: <https://genomicseducation.org/data/barcoding_bird2_COI.fasta>
-*   putative egg #3: <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
+*   putative quail  #1 (_Odontophorus sp_): <https://genomicseducation.org/data/barcoding_bird1_COI.fasta>
+*   putative quail  #2 (_Odontophorus sp_): <https://genomicseducation.org/data/barcoding_bird2_COI.fasta>
+*   putative quail #3 (_Odontophorus sp_): <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
+*   putative quail #4 (_Odontophorus sp_): <https://genomicseducation.org/data/barcoding_bird4_COI.fasta>
 
 :::
 
