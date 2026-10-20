@@ -213,7 +213,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1dhP4CeUIJAqy3z7m
 ```
 
 ::: callout-warning
-If you see an error like `Error in plot.pedigree(bipolar_pedigree["1"]) : Labels leave no room for the graph, reduce cex`, it means the plotting pane is **too small** to create the pedigree. You can adjust the panes by clicking and dragging the pane borders in the direction you want. 
+If you see an error like `Error in plot.pedigree(bipolar_pedigree["1"]) : Labels leave no room for the graph, reduce cex`, it means the plotting pane is **too small** to create the pedigree. Try adjusting the panes by clicking and dragging the pane borders in the direction you want and re-running the code. 
 :::
 
 ### Part 2 Questions
