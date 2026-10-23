@@ -10,7 +10,7 @@ These materials are under 1 hour.
 
 - [All of Us: Understanding Ethics](module/AOU_ethics.html)
 
-- [DNA Forensics](module/dna_forensics.html)
+- [Forensic Case Files: DNA Barcoding](module/dna_forensics.html)
 
 - [Gut Check: AI and Genomic Literature](module/AI_genomics.html)
 
@@ -20,7 +20,7 @@ These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
 - [Database Detectives: Exploring Public Genomic Databases](module/database_detectives.html)
 
-- [DNA Barcoding](module/dna_barcoding.html) 
+- [DNA BarcodingL Forensic Investigators](module/dna_barcoding.html) 
 
 - [Epigenetics Explorer: Differentiating Cell Types](module/epigenetics_explorer.html)
 
