@@ -94,7 +94,7 @@ The accused smuggler claimed the eggs he was carrying were quail eggs. Following
 
 The sequences are from the _COI_ (Cytochrome c oxidase subunit I) gene, a mitochondrial gene that is popular for barcoding work among animals, as it shows high variability between many species but low variability among individuals within a species. 
 
-*   putative quail  #1): <https://genomicseducation.org/data/barcoding_bird1_COI.fasta>
+*   putative quail  #1: <https://genomicseducation.org/data/barcoding_bird1_COI.fasta>
 *   putative quail  #2: <https://genomicseducation.org/data/barcoding_bird2_COI.fasta>
 *   putative quail #3: <https://genomicseducation.org/data/barcoding_bird3_COI.fasta>
 *   putative quail #4: <https://genomicseducation.org/data/barcoding_bird4_COI.fasta>
@@ -179,6 +179,8 @@ Following the instructions from the devil's claw example, do a BLAST search on G
 *   putative black cumin sample: <https://genomicseducation.org/data/barcoding_black_cumin_ITS2.fasta>
 *   putative goat's head sample: <https://genomicseducation.org/data/barcoding_goats_head_ITS2.fasta>
 *   putative epazote sample: <https://genomicseducation.org/data/barcoding_epazote_ITS2.fasta>
+*   putative yerba mate sample: <https://genomicseducation.org/data/barcoding_yerba_mate_ITS2.fasta>
+
 
 
 :::
@@ -193,6 +195,7 @@ The sequences are from the mitochondrial 16S region, which codes a ribosomal RNA
 *   Unknown egg #1: <https://genomicseducation.org/data/barcoding_bird1_16s.fasta>
 *   Unknown egg #2: <https://genomicseducation.org/data/barcoding_bird2_16s.fasta>
 *   Unknown egg #3: <https://genomicseducation.org/data/barcoding_bird3_16s.fasta>
+*   Unknown egg #4: <https://genomicseducation.org/data/barcoding_bird4_16s.fasta>
 :::
 
 ::: {.callout-note}
