@@ -1,5 +1,5 @@
 ---
-title: "DNA Barcoding"
+title: "DNA Barcoding: Forensic Investigators"
 date: last-modified
 output:
   html_document

@@ -1,5 +1,5 @@
 ---
-title: "DNA Barcoding in Forensics"
+title: "Forensic Case Files: DNA Barcoding"
 date: last-modified
 bibliography: ../book.bib
 csl: ../resources/ieee-with-url.csl
