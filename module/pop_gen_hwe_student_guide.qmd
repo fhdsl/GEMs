@@ -141,6 +141,8 @@ This activity provides a visual, dynamic way to observe evolution in action.
 
 In this section, you will explore genetic drift, which is the random fluctuation of allele frequencies due to chance alone. No genotype has a fitness advantage in this model. You will run two trials: one with a large population and one with a small population.
 
+Let's imagine you are trying to maintain a pond of koi fish with a stable genotype frequencies. You want to have red, spotted, _and_ white fish available at any moment! Let's see if you can do this with two different starting population sizes.
+
 ## Trial 1a. Population Size = 500 koi
 
 Open the [PopGen Fishpond Simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html) and click on "Run Experiments".
@@ -185,7 +187,7 @@ On this page, you can see the number of generations that have been simulated as 
 ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I/edit?slide=id.g3c27d006627_0_3#slide=id.g3c27d006627_0_3")
 ```
 
-Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Feel free to speed this up since it’s a simulation! 
+Run the model to 150 generations, recording the allele frequencies at both 75 and 150 generations. Feel free to speed this up since it’s a simulation! 
 
 ## Trial 1b. Population size = 50 koi
 
@@ -202,7 +204,7 @@ Before running this simulation, change the settings to the following values. **T
 - Brood Size: 10 
 - Sex Ratio: 0.5 
 
-Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run! 
+Run the model to 150 generations, recording the allele frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run! 
 
 ## Running a chi-square test
 
@@ -235,11 +237,15 @@ Run a chi-square test for trial 1a and 1b and record your p-values for each.
 
 Let's introduce natural selection into the simulation by giving a fitness advantage to genotypes carrying the R allele.
 
+Koi need a lot of space, and the population you're managing happens to live in an outside pond. This means that your koi population may be vulnerable to hungry herons or other fish-eating birds that want a snack. Remember, any fish that is eaten by a predator before reproducing is a fish that did not pass its alleles onto the next generation.
+
 ## Trial 2a. Reduced fitness for r allele
 
 In this simulation, any koi who is homozygous for the r allele (rr) is 50% less likely to reproduce compared to koi who carry at least one copy of the R allele (RR and Rr individuals). Carrying two copies of the r allele is disadvantageous! 
 
 Let's imagine that the fishpond water is very muddy and dark. Red (RR) and red-spotted (Rr) koi blend in better with the dark water, but the white (rr) koi are easier for predators like herons to see and catch.
+
+**In this scenario, the white koi are more likely to be eaten by predators compared to the other patterns, and not all of the white koi will reproduce.**
 
 Before running this simulation, change the settings to the following values. (The values that you should change are in bold. Everything else can remain the same.)
 
@@ -254,7 +260,7 @@ Before running this simulation, change the settings to the following values. (Th
 - Brood Size: 10 
 - Sex Ratio: 0.5 
 
-Run the model to 150 generations, recording the allele and genotype frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run! 
+Run the model to 150 generations, recording the allele frequencies at both 75 and 150 generations. Make sure to press the "reload" button so you start the simulation over from generation 1, not just continue the simulation from your previous run! 
 
 **Once you have reached 150 generations, PAUSE the simulation! You will continue this simulation in the next part.**
 
@@ -262,6 +268,8 @@ Run the model to 150 generations, recording the allele and genotype frequencies 
 Now you will change the environment so that the r allele becomes advantageous while **using the ending population from trial 2a**. This means you will _not_ press the reload button after changing the simulation settings. The only setting you will change is the genotype fitness!
 
 Genotype fitness is always environment-dependent. Let's imagine the water in the fishpond becomes clearer and predators (like herons) can suddenly see the red (RR) and red-spotted (Rr) koi much more easily than the white (rr) koi. If the water is very clear, it will appear much lighter and lighter-colored fish (like the white koi) will be difficult to spot.
+
+**In this scenario, the red and spotted koi are more likely to be eaten by predators compared to the white koi, and not all of the red or spotted koi will reproduce.**
 
 We are modeling this environmental change by changing the genotype fitness values!
 
@@ -282,7 +290,7 @@ Before continuing this simulation, change the settings to the following values. 
 
 **AGAIN, DO NOT PRESS THE RELOAD BUTTON. KEEP RUNNING THE SIMULATION FROM WHERE YOU PAUSED IT AFTER TRIAL 2a.**
 
-Run the model an additional 150 generations, recording the allele and genotype frequencies at both 225 and 300 generations. Make sure to just **UNPAUSE** the simulation from trial 2a instead of pressing the reload button! 
+Run the model an additional 150 generations, recording the allele frequencies at both 225 and 300 generations. Make sure to just **UNPAUSE** the simulation from trial 2a instead of pressing the reload button! 
 
 
 ## Running a chi-square test
