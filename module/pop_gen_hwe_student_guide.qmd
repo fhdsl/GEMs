@@ -322,7 +322,7 @@ Instructions for running chi-square tests in Google Sheets are here.
 You have been asked to use your stock population of koi fish to make a new pond. Can you create a pond that contains:
 
 1. all red fish?
-2. all white fish?
-3. all spotted fish?
+1. all white fish?
+1. all spotted fish?
 
 Start with the default settings. What evolutionary forces did you manipulate in your simulation?
