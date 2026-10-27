@@ -11,9 +11,9 @@ format:
 ::: callout-note
 # Check your knowledge: Drift questions
 
-1. Compare the change in allele frequencies between the large and small population. Which population changed more, and why?
+1. Compare the change in allele frequencies between the large (n=500) and small (n=50) populations. Which population changed more, and why?
 
-2. Did either population approach fixation? (**Fixation** occurs when one allele reaches an allele frequency = 1) Explain why drift is more pronounced in small populations. 
+2. Did either population approach fixation? (**Fixation** occurs when one allele reaches an allele frequency = 1.) Why might drift be more pronounced in small populations?
 
 3. Why do the two drift trials show different outcomes even with the same allele frequencies and equal fitness?
 
