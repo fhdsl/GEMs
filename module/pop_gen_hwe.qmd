@@ -18,7 +18,7 @@ This activity was adapted from an original activity by Rosa Alcazar and Stephani
 - “Darwin, Evolution and Natural Selection” by Khan Academy licensed CC BY-NC-SA 4.0. 
 - “Allele Frequency and the Gene Pool” by Khan Academy licensed CC BY-NC-SA 4.0. 
 
-**Duration:** 1 - 2 hours
+**Duration:** 1 - 2 hours. In initial tests, instructors found that it takes about 40 minutes to go through the background material with the students.
 
 ## Evaluation
 
