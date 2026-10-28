@@ -208,8 +208,6 @@ Run the model to 150 generations, recording the allele frequencies at both 75 an
 
 You will run chi-square tests on both trials using the method specified by your instructor. 
 
-Instructions for running chi-square tests by hand are [here](https://genomicseducation.org/module/chi_square_by_hand.html).
-
 Instructions for running chi-square tests in Microsoft Excel are [here](https://genomicseducation.org/module/chi_square_excel.html).
 
 Instructions for running chi-square tests in Google Sheets are [here](](https://genomicseducation.org/module/chi_square_google_sheets.html).
@@ -294,8 +292,6 @@ Run the model an additional 150 generations, recording the allele frequencies at
 ## Running a chi-square test
 
 Run a chi-square test (again using the method specified by your instructor) for both trial 2a and 2b, Record your p-values for each. **Remember that for trial 2b, you started with generation 150, so the expected frequencies will be the allele frequencies observed at generation 150 in trial 2a.**
-
-Instructions for running chi-square tests by hand are [here](https://genomicseducation.org/module/chi_square_by_hand.html).
 
 Instructions for running chi-square tests in Microsoft Excel are [here](https://genomicseducation.org/module/chi_square_excel.html).
 
