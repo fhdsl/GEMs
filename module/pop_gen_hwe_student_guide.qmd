@@ -15,7 +15,7 @@ Evolution is defined as a change in allele frequencies in a population over gene
 
 However, natural selection is not the only way allele frequencies change. Genetic drift, migration, mutation, and environmental shifts also influence how populations evolve, sometimes in unpredictable ways.
 
-Knowing how allele frequencies are likely to change over time is useful when it comes to managing wildlife and hunting populations, rare  and endangered species, and even prized breeds for pets or working animals. In this activity, we will be working with the PopGen Fishpond Simulator. This simulation allows you to make changes in a koi population and quickly see how the allele frequencies change in subsequent populations - much faster than if you had to wait for the fish to breed in real life!
+Knowing how allele frequencies are likely to change over time is useful when it comes to managing wildlife and populations for hunting. In this activity, we will be working with the PopGen Fishpond Simulator. This simulation allows you to make changes in a koi population and quickly see how the allele frequencies change in subsequent populations - much faster than if you had to wait for the fish to breed in real life!
 
 Before working with quantitative models in the fishpond simulation, keep in mind:
 
@@ -134,8 +134,6 @@ The goal of this lab is to interpret patterns in allele frequencies and genotype
 1. how selection favors certain alleles over others, and 
 1. how a change in environment can shift which alleles are beneficial.
 
-This activity provides a visual, dynamic way to observe evolution in action.
-
 
 # Activity 1: Modeling Genetic Drift
 
@@ -210,11 +208,11 @@ Run the model to 150 generations, recording the allele frequencies at both 75 an
 
 You will run chi-square tests on both trials using the method specified by your instructor. 
 
-Instructions for running chi-square tests by hand are here.
+Instructions for running chi-square tests by hand are [here](https://genomicseducation.org/module/chi_square_by_hand.html).
 
-Instructions for running chi-square tests in Microsoft Excel are here.
+Instructions for running chi-square tests in Microsoft Excel are [here](https://genomicseducation.org/module/chi_square_excel.html).
 
-Instructions for running chi-square tests in Google Sheets are here.
+Instructions for running chi-square tests in Google Sheets are [here](](https://genomicseducation.org/module/chi_square_google_sheets.html).
 
 
 Run a chi-square test for trial 1a and 1b and record your p-values for each.
@@ -297,11 +295,11 @@ Run the model an additional 150 generations, recording the allele frequencies at
 
 Run a chi-square test (again using the method specified by your instructor) for both trial 2a and 2b, Record your p-values for each. **Remember that for trial 2b, you started with generation 150, so the expected frequencies will be the allele frequencies observed at generation 150 in trial 2a.**
 
-Instructions for running chi-square tests by hand are here.
+Instructions for running chi-square tests by hand are [here](https://genomicseducation.org/module/chi_square_by_hand.html).
 
-Instructions for running chi-square tests in Microsoft Excel are here.
+Instructions for running chi-square tests in Microsoft Excel are [here](https://genomicseducation.org/module/chi_square_excel.html).
 
-Instructions for running chi-square tests in Google Sheets are here.
+Instructions for running chi-square tests in Google Sheets are [here](](https://genomicseducation.org/module/chi_square_google_sheets.html).
 
 
 ::: callout-note
