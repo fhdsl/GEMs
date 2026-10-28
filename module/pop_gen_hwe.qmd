@@ -11,7 +11,8 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/10EohJqU8e_A34_Wx
 
 ## Overview
 
-This module uses the [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html) to model natural selection and genetic drift, as well as explore whether populations are at Hardy-Weinberg equilibrium.
+This module uses the [PopGen Fishbowl simulator](https://virtualbiologylab.org/ModelsHTML5/PopGenFishbowl/PopGenFishbowl.html) to model natural selection and genetic drift, as well as explore whether populations are at Hardy-Weinberg equilibrium. 
+This activity provides a visual, dynamic way to observe evolution in action.
 
 This activity was adapted from an original activity by Rosa Alcazar and Stephanie Coffman of Clovis Community College. Introductory Information are derivatives of the following works: 
 
