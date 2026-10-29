@@ -1,0 +1,17 @@
+{
+  "hash": "344dac76541e0d53d0016be21603b411",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Chi-Square Tests Using Microsoft Excel\"\ndate: last-modified\nbibliography: ../book.bib\ncsl: ../resources/ieee-with-url.csl\nformat:\n    html: default\n---\n\n# Using Microsoft Excel for Chi-Square Tests\n\nFirst, open a new Excel spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.\n\nOnce you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. \n\nThe formula for calculating allele frequency is (total number of fish)*(allele proportion).\n\nSo, if you start with 200 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 200. (Remember, each koi fish has 2 alleles, so a population of 200 fish means 400 alleles, and half of them are R to start.) A population of 75 koi fish means 150 total alleles.\n\nType in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](chi_square_by_hand_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3b94f7217d0_0_241.png){fig-align='center' fig-alt='Make sure to fill in the total number of fish into your table, not the proportion.' width=90%}\n:::\n:::\n\n\nNext, type in the formula to run a chi-square test. In Excel, the formula follows the convention\n\n`=chisq.test(actual_range, expected_range)`\n\nThe **actual_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](chi_square_by_hand_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_0.png){fig-align='center' fig-alt='Type the formula for the chi-square test command and choose the actual and expected range of values.' width=90%}\n:::\n:::\n\n\nIn the cell where the formula is typed, Excel will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. (Note: Excel may tell you there is a possible error in your formula because adjacent cells are omitted. You can ignore this, because it's asking why you omitted the \"0\" and \"150\" that are your column headers.)\n\n",
+    "supporting": [
+      "chi_square_by_hand_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

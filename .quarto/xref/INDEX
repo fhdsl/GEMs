@@ -1,0 +1,140 @@
+{
+  "input.qmd": {
+    "input.html": "4660d990"
+  },
+  "resources/phys_data.Rmd": {
+    "phys_data.html": "82d20091"
+  },
+  "resources.qmd": {
+    "resources.html": "96039c54"
+  },
+  "modules.qmd": {
+    "modules.html": "6d09a0fc"
+  },
+  "module/family_markers_student_guide.qmd": {
+    "family_markers_student_guide.html": "459587d7"
+  },
+  "module/AOU_ethics_questions_only.qmd": {
+    "AOU_ethics_questions_only.html": "92a34262"
+  },
+  "module/AI_genomics.qmd": {
+    "AI_genomics.html": "952eaf2b"
+  },
+  "module/AI_genomics_questions_only.qmd": {
+    "AI_genomics_questions_only.html": "8d5123e1"
+  },
+  "module/epigenetics_explorer_questions_only.qmd": {
+    "epigenetics_explorer_questions_only.html": "fb4119b1"
+  },
+  "module/dna_barcoding_student_guide.qmd": {
+    "dna_barcoding_student_guide.html": "8a734c62"
+  },
+  "module/genomic_med_prs.qmd": {
+    "genomic_med_prs.html": "3761c132"
+  },
+  "module/pop_gen_hwe.qmd": {
+    "pop_gen_hwe.html": "f9371402"
+  },
+  "module/mouse_gutbrain_de.qmd": {
+    "mouse_gutbrain_de.html": "760464ca"
+  },
+  "module/dna_barcoding.qmd": {
+    "dna_barcoding.html": "9787e0e2"
+  },
+  "module/prs_uses_and_regulations.qmd": {
+    "prs_uses_and_regulations.html": "93820ff9"
+  },
+  "module/mouse_gutbrain_de_miniCURE_guide.qmd": {
+    "mouse_gutbrain_de_miniCURE_guide.html": "f56d8e98"
+  },
+  "module/AOU_ethics.qmd": {
+    "AOU_ethics.html": "66d07ec3"
+  },
+  "module/exam_phys.qmd": {
+    "exam_phys.html": "7757f413"
+  },
+  "module/exam_phys_student_guide.qmd": {
+    "exam_phys_student_guide.html": "569053ce"
+  },
+  "module/database_detectives_questions_only.qmd": {
+    "database_detectives_questions_only.html": "9455059b"
+  },
+  "module/dna_barcoding_questions_only.qmd": {
+    "dna_barcoding_questions_only.html": "048d38a3"
+  },
+  "module/mouse_gutbrain_de_student_only_code.qmd": {
+    "mouse_gutbrain_de_student_only_code.html": "43ce71cb"
+  },
+  "module/family_markers.qmd": {
+    "family_markers.html": "f6af90f1"
+  },
+  "module/AI_genomics_student_guide.qmd": {
+    "AI_genomics_student_guide.html": "ffb0895b"
+  },
+  "module/dna_forensics_questions_only.qmd": {
+    "dna_forensics_questions_only.html": "6f36f360"
+  },
+  "module/pop_gen_hwe_questions_only.qmd": {
+    "pop_gen_hwe_questions_only.html": "ae016988"
+  },
+  "module/dna_forensics_student_guide.qmd": {
+    "dna_forensics_student_guide.html": "2a6b6e61"
+  },
+  "module/database_detectives.qmd": {
+    "database_detectives.html": "c86157d1"
+  },
+  "module/chi_square_by_hand.qmd": {
+    "chi_square_by_hand.html": "da5e2b60"
+  },
+  "module/family_markers_questions_only.qmd": {
+    "family_markers_questions_only.html": "68de1508"
+  },
+  "module/genomic_med_prs_student_guide.qmd": {
+    "genomic_med_prs_student_guide.html": "297cbfe5"
+  },
+  "module/epigenetics_explorer_student_guide.qmd": {
+    "epigenetics_explorer_student_guide.html": "884072c9"
+  },
+  "module/exam_phys_questions_only.qmd": {
+    "exam_phys_questions_only.html": "aacbeb7c"
+  },
+  "module/prs_uses_and_regulations_questions_only.qmd": {
+    "prs_uses_and_regulations_questions_only.html": "e6dfc783"
+  },
+  "module/database_detectives_student_guide.qmd": {
+    "database_detectives_student_guide.html": "717b8705"
+  },
+  "module/pop_gen_hwe_student_guide.qmd": {
+    "pop_gen_hwe_student_guide.html": "f31f113e"
+  },
+  "module/epigenetics_explorer.qmd": {
+    "epigenetics_explorer.html": "f0827cbb"
+  },
+  "module/mouse_gutbrain_de_student_guide.qmd": {
+    "mouse_gutbrain_de_student_guide.html": "a3512760"
+  },
+  "module/mouse_gutbrain_de_questions_only.qmd": {
+    "mouse_gutbrain_de_questions_only.html": "b515f4dd"
+  },
+  "module/chi_square_google_sheets.qmd": {
+    "chi_square_google_sheets.html": "db8daf86"
+  },
+  "module/dna_forensics.qmd": {
+    "dna_forensics.html": "99bfabaa"
+  },
+  "module/AOU_ethics_student_guide.qmd": {
+    "AOU_ethics_student_guide.html": "5c98a661"
+  },
+  "module/genomic_med_prs_questions_only.qmd": {
+    "genomic_med_prs_questions_only.html": "a8e3010a"
+  },
+  "module/chi_square_excel.qmd": {
+    "chi_square_excel.html": "9386db73"
+  },
+  "module/prs_uses_and_regulations_student_guide.qmd": {
+    "prs_uses_and_regulations_student_guide.html": "22d8fe00"
+  },
+  "index.qmd": {
+    "index.html": "6027c3ee"
+  }
+}

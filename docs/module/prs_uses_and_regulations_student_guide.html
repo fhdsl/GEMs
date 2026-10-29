@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-10-28">
+<meta name="dcterms.date" content="2026-10-29">
 
-<title>Genomic Medicine: Polygenic Risk Score Calculation – GEMs</title>
+<title>Polygenic Risk Scores – GEMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -147,46 +127,15 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#part-1" id="toc-part-1" class="nav-link active" data-scroll-target="#part-1">Part 1</a>
-  <ul class="collapse">
-  <li><a href="#polygenic-inheritance" id="toc-polygenic-inheritance" class="nav-link" data-scroll-target="#polygenic-inheritance">Polygenic Inheritance</a></li>
-  <li><a href="#polygenic-risk-scores" id="toc-polygenic-risk-scores" class="nav-link" data-scroll-target="#polygenic-risk-scores">Polygenic Risk Scores</a></li>
-  <li><a href="#genomic-ancestry" id="toc-genomic-ancestry" class="nav-link" data-scroll-target="#genomic-ancestry">Genomic Ancestry</a></li>
-  <li><a href="#exploring-variant-data" id="toc-exploring-variant-data" class="nav-link" data-scroll-target="#exploring-variant-data">Exploring Variant Data</a></li>
-  <li><a href="#mr.-js-data" id="toc-mr.-js-data" class="nav-link" data-scroll-target="#mr.-js-data">Mr.&nbsp;J’s Data</a></li>
-  <li><a href="#exploring-variants" id="toc-exploring-variants" class="nav-link" data-scroll-target="#exploring-variants">Exploring Variants</a></li>
-  </ul></li>
-  <li><a href="#part-1-questions" id="toc-part-1-questions" class="nav-link" data-scroll-target="#part-1-questions">Part 1 Questions</a></li>
-  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
-  <ul class="collapse">
-  <li><a href="#entering-data" id="toc-entering-data" class="nav-link" data-scroll-target="#entering-data">Entering Data</a></li>
-  <li><a href="#selecting-the-study" id="toc-selecting-the-study" class="nav-link" data-scroll-target="#selecting-the-study">Selecting the Study</a></li>
-  <li><a href="#selecting-the-population" id="toc-selecting-the-population" class="nav-link" data-scroll-target="#selecting-the-population">Selecting the Population</a></li>
-  <li><a href="#interpreting-the-score" id="toc-interpreting-the-score" class="nav-link" data-scroll-target="#interpreting-the-score">Interpreting the Score</a></li>
-  </ul></li>
-  <li><a href="#part-2-questions" id="toc-part-2-questions" class="nav-link" data-scroll-target="#part-2-questions">Part 2 Questions</a></li>
-  <li><a href="#part-3" id="toc-part-3" class="nav-link" data-scroll-target="#part-3">Part 3</a>
-  <ul class="collapse">
-  <li><a href="#adding-a-study" id="toc-adding-a-study" class="nav-link" data-scroll-target="#adding-a-study">Adding a Study</a></li>
-  <li><a href="#comparing-results" id="toc-comparing-results" class="nav-link" data-scroll-target="#comparing-results">Comparing Results</a></li>
-  </ul></li>
-  <li><a href="#part-3-questions" id="toc-part-3-questions" class="nav-link" data-scroll-target="#part-3-questions">Part 3 Questions</a></li>
-  <li><a href="#part-4" id="toc-part-4" class="nav-link" data-scroll-target="#part-4">Part 4</a></li>
-  <li><a href="#part-4-questions" id="toc-part-4-questions" class="nav-link" data-scroll-target="#part-4-questions">Part 4 Questions</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Genomic Medicine: Polygenic Risk Score Calculation</h1>
+<h1 class="title">Polygenic Risk Scores</h1>
 </div>
 
 
@@ -197,7 +146,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 28, 2026</p>
+      <p class="date">October 29, 2026</p>
     </div>
   </div>
   
@@ -218,127 +167,7 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<section id="part-1" class="level2">
-<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
-<p>In Part 1, we’ll go over the background and data for this activity.</p>
-<p>Many human diseases are caused by a combination of genetic and environmental factors. For most of these diseases, it can be difficult to predict what combination will lead to a person developing disease. Instead, physicians and researchers talk about the increased risk - essentially, we know what factors increase the likelihood of developing diseases, even if we can’t predict with 100% certainty whether someone might get sick.</p>
-<section id="polygenic-inheritance" class="level3">
-<h3 class="anchored" data-anchor-id="polygenic-inheritance">Polygenic Inheritance</h3>
-<p>When we think about genetically-inherited diseases, we usually think about those where a single gene variant can cause disease. Most of the classic examples of genetic disease, like sickle cell anemia, Tay Sachs, or cystic fibrosis, are passed along via <em>Mendelian inheritance</em>. A mutation in a single gene is sometimes enough to disrupt normal protein synthesis and cellular processes, causing a person to become sick. For example, the large “V” in the image below indicate disease-causing variants for cystic fibrosis.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g33d1509000c_54_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>However, most diseases, particularly common diseases, are not the result of a mutation to a single gene. Instead, they are the result of mutations to many different genes. Each mutation itself isn’t enough to cause problems, but when all of them show up together, the cellular processes aren’t able to function normally. This type of inheritance (when a trait is caused by a combination of mutations to many genes) is called <em>polygenic inheritance</em>. For example, coronary artery disease is complex. There are about 60 genomic variants across the genome that are more common in people with coronary artery disease.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g33d1509000c_54_14.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Polygenic traits are quite common, and they aren’t always diseases! Any trait that shows a range of phenotypes is likely to be the result of polygenic inheritance. Some of the more famous polygenic traits include height and skin color.</p>
-</section>
-<section id="polygenic-risk-scores" class="level3">
-<h3 class="anchored" data-anchor-id="polygenic-risk-scores">Polygenic Risk Scores</h3>
-<p>Researchers have developed something called a “polygenic risk score” (PRS) to estimate <strong>relative</strong> risk for a disease based on genetics. First, researchers gather genomic data from many people, dividing them into two groups: those with versus those without the disease. They compare these groups to find genetic differences. These differences are used in the PRS calculation.</p>
-<p>We can look at all the variants a person might have, add them up, and then get an idea of whether they have more variants that contribute to a disease relative to how many protective variants they have.</p>
-<p>Typically, values greater than 1 mean that variant is more common in the disease group. Let’s imagine we are helping a patient determine their risk for coronary artery disease. Their score is <strong>1.0234</strong>. We have to look at the score relative to others to determine the risk. This patient is in the 33rd percentile, meaning that they have higher risk than 33% of the people in the study population.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g33d1509000c_54_22.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Understanding Risk
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>It’s always important to remember that <strong>having a higher PRS does not guarantee someone will get a disease.</strong> Likewise, having a lower PRS does not guarantee someone is protected from a disease.</p>
-<p>A PRS is just a rough estimate based on what we know at the moment about the genetics that contribute to developing a disease. In many case, a high PRS will only increase a person’s overall risk for a disease by less than 5%.</p>
-<p><strong>A PRS is only as good as the reference database for a particular disease or trait.</strong></p>
-</div>
-</div>
-</section>
-<section id="genomic-ancestry" class="level3">
-<h3 class="anchored" data-anchor-id="genomic-ancestry">Genomic Ancestry</h3>
-<p>The human genome contains a huge amount of variation. Different geographic regions have different frequencies of variants. By comparing individuals to others, an individual person’s variants can be used to determine the geographic region of their most likely ancestors. Several commercial companies perform these comparisons. Variants in the mitochondrial DNA are maternally inherited, variants in the Y chromosome are paternally inherited, and autosomal variants can come from either parent <span class="citation" data-cites="jorde2020"><a href="#ref-jorde2020" role="doc-biblioref">[1]</a></span>.</p>
-</section>
-<section id="exploring-variant-data" class="level3">
-<h3 class="anchored" data-anchor-id="exploring-variant-data">Exploring Variant Data</h3>
-<p>In the next steps, we’ll be looking at how PRS can help patients be more informed about disease risk.</p>
-<p>This example will look at prostate carcinoma, or prostate cancer. While prostate cancer is common in men and is a leading cause of cancer-related death, it tends to be slow growing with limited aggressiveness <span class="citation" data-cites="leslie2024"><a href="#ref-leslie2024" role="doc-biblioref">[2]</a></span>. This means that genetic screening and symptom monitoring, especially in older age, can have a big impact on outcomes.</p>
-</section>
-<section id="mr.-js-data" class="level3">
-<h3 class="anchored" data-anchor-id="mr.-js-data">Mr.&nbsp;J’s Data</h3>
-<p>Mr.&nbsp;J is a man living in Baltimore, and recently celebrated his 50th birthday. He is a history teacher with Baltimore City Schools and recently has been enjoying spending more time with his bowling league. One of his teammates let Mr.&nbsp;J know he won’t make it to practice on Friday because he’s getting a cancer screening. Curious, Mr.&nbsp;J asks how often that has to happen. He wonders if he needs to get screened. He learns that his teammate has been getting screened more often because of a family history of prostate cancer and genetic testing results.</p>
-<p>The next time Mr.&nbsp;J goes to his doctor, he asks if he should get genetic testing done. His uncle had prostate cancer but he’s not sure if it has a genetic link. Mr.&nbsp;J also has African ancestry, and he wonders if this is important to understanding his cancer risk.</p>
-<p>In the next steps, we’re going to look at some gene screening data for Mr.&nbsp;J, to understand his risk. First, let’s explore a variant to learn more.</p>
-</section>
-<section id="exploring-variants" class="level3">
-<h3 class="anchored" data-anchor-id="exploring-variants">Exploring Variants</h3>
-<p>Let’s explore the <strong>rs7463326</strong> variant a bit more. Go to <a href="https://www.ebi.ac.uk/gwas/variants" class="uri">https://www.ebi.ac.uk/gwas/variants</a> and type “rs7463326” in the search bar.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f43ab35e5_0_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Select the first result.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f43ab35e5_0_11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Notice the variant information. The most severe <strong>rs7463326</strong> variant lies in an <a href="https://www.genome.gov/genetics-glossary/Intron">intron</a>, or in a part of the gene that doesn’t end up in the final protein.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_37.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Scroll down to see the risk allele associated with the variant. For <strong>rs7463326</strong>, the risk allele is “G” and it’s associated with prostate carcinoma.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_42.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Mr.&nbsp;J has a “G” here. Other people might have “A” or “C”.</p>
-<p>This means he might be more at risk than other people. However, we know risk is often dictated by multiple genes. In the next steps we’ll explore how to assess risk with multiple variants.</p>
-</section>
-</section>
-<section id="part-1-questions" class="level2">
-<h2 class="anchored" data-anchor-id="part-1-questions">Part 1 Questions</h2>
+<p>Read the article <a href="https://magazine.hms.harvard.edu/articles/what-polygenic-risk-score-can-and-cant-tell-you">“What a Polygenic Risk Score Can and Can’t Tell You”</a> and answer the following questions.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -350,176 +179,12 @@ gtag('config', 'G-XMR6CQ1L12', { 'anonymize_ip': true});
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>When treating genetic disease, why is it important to examine multiple genes, rather than examine one gene at a time?</p></li>
-<li><p>Which of these are accurate statements?</p>
-<ol type="a">
-<li>Having certain gene variants can mean increased risk of disease.<br>
-</li>
-<li>Higher PRS scores guarantee development of disease.<br>
-</li>
-<li>PRS must be based on an appropriate database of gene variants.<br>
-</li>
-<li>All variants come from protein-coding genes.</li>
-</ol></li>
-<li><p>Try looking up another variant at <a href="https://www.ebi.ac.uk/gwas/variants" class="uri">https://www.ebi.ac.uk/gwas/variants</a>. Look up “rs2075650”. Take a screenshot/screenshots that capture:</p>
-<ol type="a">
-<li>The kind of variant is listed under “Most severe consequence”</li>
-<li>Any diseases associated with this variant?</li>
-</ol></li>
+<li></li>
+<li>SOMETHING ABOUT GENETIC TESTING OR YEARLY METABOLIC TESTING? Do you think PRS testing should be a standard part of medical care?</li>
 </ol>
 </div>
 </div>
-</section>
-<section id="part-2" class="level2">
-<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
-<p>We’ll now calculate our first PRS score.</p>
-<section id="entering-data" class="level3">
-<h3 class="anchored" data-anchor-id="entering-data">Entering Data</h3>
-<p>Go to <a href="https://prs.byu.edu/calculate_score.html" class="uri">https://prs.byu.edu/calculate_score.html</a> - this is the website we’ll use to calculate a PRS for Mr.&nbsp;J’s data.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f43ab35e5_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Get the data at <a href="https://genomicseducation.org/data/prs_ind_1.txt" class="uri">https://genomicseducation.org/data/prs_ind_1.txt</a>. It should look like:</p>
-<pre><code>rs7463326:G
-rs58235267:G
-rs74001374:C
-...</code></pre>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>What does the data mean?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Each line of the data represents a variant location in the genome and individual person’s version of that gene (allele).</p>
-<p>For example, <strong>rs7463326</strong> is the variant. Mr.&nbsp;J has a “G” here. Other patients might have “A” or “C”.</p>
-</div>
-</div>
-<p>Copy this data into the top part of the PRS calculator website.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_57.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="selecting-the-study" class="level3">
-<h3 class="anchored" data-anchor-id="selecting-the-study">Selecting the Study</h3>
-<p>Next, scroll down to “GWAS Summary Statistics”. For item #1, “Select Disease(s) or Trait(s) of Interest”, type in “prostate carcinoma” and select the checkbox. You might need to type slowly as the dropdown list has a lot of options! Then, click on “Apply Filters” to update the studies that can be used to calculate the PRS.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_63.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Under “Select from Filtered Studies”, type in the study number, “GCST011047”, or find it from the dropdown menu. You will also see the name of the study, <em>Conti et al.&nbsp;2021</em>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_70.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Why a Specific Research Study?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In order to be accurate, PRS scores must be calculated based on the right variants. Variants should be collected from the same ancestral population as the patient. This is because some alleles are more rare in specific human ancestries and can confer different amount of risk / protection. Mr.&nbsp;J has African ancestry, so we should use a study whose participants also have African ancestry.</p>
-<p>Mr.&nbsp;J’s variant data was carefully collected based on the variants identified in the <em>Conti</em> study (GCST011047).</p>
-</div>
-</div>
-</section>
-<section id="selecting-the-population" class="level3">
-<h3 class="anchored" data-anchor-id="selecting-the-population">Selecting the Population</h3>
-<p>Select “African” as the “Preferred Super Population” and “1000 Genomes - AFR population” under “MAF Population”.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_77.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Finally, click “Calculate Risk Scores”.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_84.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="interpreting-the-score" class="level3">
-<h3 class="anchored" data-anchor-id="interpreting-the-score">Interpreting the Score</h3>
-<p>The calculated score for this study will appear in the box at the bottom. You will have to scroll over.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_92.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Viewing Results
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>It might be easier to view the results if you (1) download the results and (2) open the results in a tabular data program like Microsoft Excel or Google Sheets.</p>
-</div>
-</div>
-<p>Let’s review a few important values in the results.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_99.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li><strong>SNP Overlap</strong>: This tells us how many variants in the patient’s data were also present in the study. 19 of Mr.&nbsp;J’s variants matched the <em>Conti</em> study.</li>
-<li><strong>Included SNPs</strong>: This tells us how many variants were in the study overall. Mr.&nbsp;J’s data was comprehensive and included all of the 19 variants described in the <em>Conti</em> study. We can feel confident that there is not a lot of missing data.</li>
-<li><strong>Polygenic Risk Score</strong>: Risk estimate based on all of Mr.&nbsp;J’s variants. Because the score is greater than 1, generally that means some increased risk.</li>
-<li><strong>Percentile</strong>: Risk described relative to others in the population. A percentile of 100 means that Mr.&nbsp;J has <em>greater risk</em> than almost everyone else! He has more of the disease causing variants compared to others in the population.</li>
-</ul>
-</section>
-</section>
-<section id="part-2-questions" class="level2">
-<h2 class="anchored" data-anchor-id="part-2-questions">Part 2 Questions</h2>
+<p>Now read the article<a href="https://www.nytimes.com/2026/05/28/health/polygenic-risk-scores-workplace.html?login=smartlock&amp;auth=login-smartlock&amp;login=smartlock&amp;auth=login-smartlock">“What Happens When Your Employer Knows the Diseases You Might Get?”</a> and answer these additional questions.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -531,133 +196,16 @@ rs74001374:C
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>Provide a screenshot of your calculated PRS and percentile.</p></li>
-<li><p>Based on the PRS and percentile you calculated, will Mr.&nbsp;J develop prostate cancer? Why or why not?</p></li>
-<li><p>Go to the <a href="https://www.ebi.ac.uk/gwas/studies/GCST011047"><em>Conti</em> (GCST011047) study page</a> and look at the description under “Discovery ancestry label”. What ancestries are included? Provide a screenshot.</p></li>
-<li><p>How many people were used to identify these variants in the <em>Conti</em> study? Hint: add up the cases (has cancer) and controls (no cancer) under “Discovery sample description”.</p></li>
-</ol>
-</div>
-</div>
-</section>
-<section id="part-3" class="level2">
-<h2 class="anchored" data-anchor-id="part-3">Part 3</h2>
-<p>In Part 3, we’ll see what happens when we use a different study.</p>
-<section id="adding-a-study" class="level3">
-<h3 class="anchored" data-anchor-id="adding-a-study">Adding a Study</h3>
-<p>Scroll back up to the “Select from Filtered Studies” dropdown. Find Study “GCST000152” (<em>Eeles et al.&nbsp;2008</em>) and check the box. The <em>Eeles</em> study has different variants compared to the <em>Conti</em> study.</p>
-<p>You can leave the previous study checked. Now there are two studies included.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_119.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Click on “Calculate Risk Scores” again. This time you should have two lines of results.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_127.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="comparing-results" class="level3">
-<h3 class="anchored" data-anchor-id="comparing-results">Comparing Results</h3>
-<p>Let’s look at the results.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_134.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="TO ADD"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li><strong>SNP Overlap</strong>: 11 of Mr.&nbsp;J’s variants matched the <em>Eeles</em> (GCST000152) study.</li>
-<li><strong>Included SNPs</strong>: Mr.&nbsp;J’s data had all of the 11 variants described in the <em>Eeles</em> study.</li>
-<li><strong>Polygenic Risk Score</strong>: The score is greater than 1, generally that means some increased risk.</li>
-<li><strong>Percentile</strong>: Risk described relative to others in the population. A percentile of 82 means that Mr.&nbsp;J has <em>greater risk</em> than 82% of other people.</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Capturing More Variants
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A mismatch between the study population and the patient’s ancestry can create gaps in PRS analysis. Many early studies were performed on genomes of people of European ancestry. This means that more reliable data is present for people of European ancestry. In other words, their variants are better known. People of African or East Asian ancestry don’t always have variant data that is as comprehensive. This means it’s more likely to end up in the situation above, where we might think the risk is lower than it truly is.</p>
-<p>Scientists realized recently that this was a problem. Programs like <a href="https://allofus.nih.gov/">All of Us</a> aim to collect better data on people from diverse backgrounds to improve PRS. Technology improvements have also made it more affordable to screen for more variants.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="part-3-questions" class="level2">
-<h2 class="anchored" data-anchor-id="part-3-questions">Part 3 Questions</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Check Your Knowledge
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><p>Provide a screenshot of your calculated PRS and percentile, now with both studies.</p></li>
-<li><p>Go to the <a href="https://www.ebi.ac.uk/gwas/studies/GCST000152"><em>Eeles</em> (GCST000152) study page</a> and look at the description under “Discovery ancestry label”. What ancestry is included? Provide a screenshot.</p></li>
-<li><p>Given that Mr.&nbsp;J has African ancestry, which study (<em>Conti</em> or <em>Eeles</em>) is a more appropriate match to assess his risk?</p></li>
-<li><p>Imagine you were helping Mr.&nbsp;J’s providers craft a care plan. Based on Mr.&nbsp;J’s results, would you recommend more frequent screening? Why or why not?</p></li>
-</ol>
-</div>
-</div>
-</section>
-<section id="part-4" class="level2">
-<h2 class="anchored" data-anchor-id="part-4">Part 4</h2>
-<p>In Part 3, we’ll check out data for one of Mr.&nbsp;J’s friends.</p>
-<p>Repeat the steps above, with Mr.&nbsp;B’s data: <a href="https://genomicseducation.org/data/prs_ind_2.txt" class="uri">https://genomicseducation.org/data/prs_ind_2.txt</a>. Make sure to select both the <em>Conti</em> and <em>Eeles</em> studies.</p>
-</section>
-<section id="part-4-questions" class="level2">
-<h2 class="anchored" data-anchor-id="part-4-questions">Part 4 Questions</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Check Your Knowledge
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><p>Provide a screenshot of your calculated PRS and percentile, with both studies.</p></li>
-<li><p>Which study is more appropriate if Mr.&nbsp;B has African ancestry? European ancestry?</p></li>
-<li><p>Would you recommend more frequent screening to Mr.&nbsp;B? Why or why not? How do his results compare to Mr.&nbsp;J’s results?</p></li>
+<li><p>What laws or regulations currently cover genomic information?</p></li>
+<li><p>What are some potential issues with getting PRS testing as part of a regular medical checkup? (Remember, the results from any tests that are done will be in your medical records.)</p></li>
+<li><p>In the US, federal anti-discrimination laws protect individuals from protected classes from unfair treatment, harassment, or retaliation related to their group status. For example, employers must provide reasonable accommodations, modifications, or adjustments for qualified applicants and employees with disabilities, unless doing so causes an undue hardship. Do you think people with higher PRS values should be a protected class? What do you think qualifies as “reasonable accommodations”?</p></li>
 </ol>
 </div>
 </div>
 
 
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-jorde2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">L. B. Jorde and M. J. Bamshad, <span>“Genetic ancestry testing: What is it and why is it important?”</span> <em>Jama</em>, vol. 323, no. 11, pp. 1089–1090, 2020, Available: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8202415/">https://pmc.ncbi.nlm.nih.gov/articles/PMC8202415/</a></div>
-</div>
-<div id="ref-leslie2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. Leslie, T. Soon-Sutton, and W. Skelton, <span>“Prostate cancer,”</span> in <em>StatPearls [internet]</em>, Treasure Island (FL): StatPearls Publishing, 2024. Available: <a href="https://www.ncbi.nlm.nih.gov/books/NBK470550/">https://www.ncbi.nlm.nih.gov/books/NBK470550/</a></div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

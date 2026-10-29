@@ -1,0 +1,17 @@
+{
+  "hash": "09c1e6247c7e67d6edcd8df3bb5b9348",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Chi-Square Tests Using Google Sheets\"\ndate: last-modified\nbibliography: ../book.bib\ncsl: ../resources/ieee-with-url.csl\nformat:\n    html: default\n---\n\n\n# Using Google Sheets for Chi-Square Tests\n\nFirst, open a new Google spreadsheet. You will create a table that has the frequency of each allele as rows and the generations (generation 0, or the start, and generation 150) as columns.\n\nOnce you've created your table, you should fill in the total count of each allele in the appropriate cell. In your earlier tables, you recorded the allele proportions, but the chi-square formula requires the actual number of each allele. \n\nThe formula for calculating allele frequency is (total number of fish)*(allele proportion).\n\nSo, if you start with 200 koi fish and an allele proportion of 0.5 for R, the total number of R alleles present in the population is 200. (Remember, each koi fish has 2 alleles, so a population of 200 fish means 400 alleles, and half of them are R to start.) A population of 75 koi fish means a total of 150 alleles.\n\nType in the number of R and r alleles for both the starting population (generation 0) and the ending population (generation 150).\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](chi_square_google_sheets_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_3.png){fig-align='center' fig-alt='Make sure to fill in the total number of fish into your table, not the proportion.' width=90%}\n:::\n:::\n\n\nNext, type in the formula to run a chi-square test. In Google Sheets, the formula follows the convention\n\n`=CHISQ.TEST(observed_ values_range, expected_ values_range)`\n\nThe **observed_range** are the allele frequencies at generation 150. The **expected_range** are the allele frequencies at the start (generation 0).\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](chi_square_google_sheets_files/figure-html//10EohJqU8e_A34_WxDvBKAvLnk9wMkrB_b_YRAw-0Q6I_g3c33bb9375e_0_6.png){fig-align='center' fig-alt='Type the formula for the chi-square test command and choose the observed and expected range of values.' width=90%}\n:::\n:::\n\n\nIn the cell where the formula is typed, Google Sheets will return the p-value for your chi-square test. A p-value greater than 0.05 suggests that your koi fishpond population is indeed at equilibrium. \n:::\n\nRun a chi-square test for both trial 1a and 1b and record your p-values for each.\n\n",
+    "supporting": [
+      "chi_square_google_sheets_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

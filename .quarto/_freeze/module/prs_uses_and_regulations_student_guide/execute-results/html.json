@@ -1,0 +1,17 @@
+{
+  "hash": "f4594c66bd974dc10806042ed1b7c6e6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Polygenic Risk Scores\"\ndate: last-modified\nbibliography: ../book.bib\ncsl: ../resources/ieee-with-url.csl\nformat:\n    html: default\n---\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](prs_uses_and_regulations_student_guide_files/figure-html//1QxPej8YIbgsToOITRYKLxmGScjo0Eu5ldiKEE-lXvF0_g35f4636d8f5_0_6.png){fig-align='center' fig-alt='TO ADD' width=90%}\n:::\n:::\n\n\nRead the article [\"What a Polygenic Risk Score Can and Can’t Tell You\"](https://magazine.hms.harvard.edu/articles/what-polygenic-risk-score-can-and-cant-tell-you) and answer the following questions.\n\n::: {.callout-note}\n## Check Your Knowledge\n\n1.\n\n2. SOMETHING ABOUT GENETIC TESTING OR YEARLY METABOLIC TESTING? Do you think PRS testing should be a standard part of medical care?\n:::\n\nNow read the article[\"What Happens When Your Employer Knows the Diseases You Might Get?\"](https://www.nytimes.com/2026/05/28/health/polygenic-risk-scores-workplace.html?login=smartlock&auth=login-smartlock&login=smartlock&auth=login-smartlock) and answer these additional questions.\n\n::: {.callout-note}\n## Check Your Knowledge\n\n1. What laws or regulations currently cover genomic information?\n\n2. What are some potential issues with getting PRS testing as part of a regular medical checkup? (Remember, the results from any tests that are done will be in your medical records.)\n\n3. In the US, federal anti-discrimination laws protect individuals from protected classes from unfair treatment, harassment, or retaliation related to their group status. For example, employers must provide reasonable accommodations, modifications, or adjustments for qualified applicants and employees with disabilities, unless doing so causes an undue hardship. Do you think people with higher PRS values should be a protected class? What do you think qualifies as \"reasonable accommodations\"?\n\n:::",
+    "supporting": [
+      "prs_uses_and_regulations_student_guide_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
