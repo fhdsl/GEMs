@@ -16,7 +16,9 @@ Read the article ["What a Polygenic Risk Score Can and Can’t Tell You"](https:
 ::: {.callout-note}
 ## Check Your Knowledge
 
+1.
 
+2. SOMETHING ABOUT GENETIC TESTING OR YEARLY METABOLIC TESTING? Do you think PRS testing should be a standard part of medical care?
 :::
 
 Now read the article["What Happens When Your Employer Knows the Diseases You Might Get?"](https://www.nytimes.com/2026/05/28/health/polygenic-risk-scores-workplace.html?login=smartlock&auth=login-smartlock&login=smartlock&auth=login-smartlock) and answer these additional questions.
@@ -26,5 +28,8 @@ Now read the article["What Happens When Your Employer Knows the Diseases You Mig
 
 1. What laws or regulations currently cover genomic information?
 
-2. What are some potential issues with getting a medical 
+2. What are some potential issues with getting PRS testing as part of a regular medical checkup? (Remember, the results from any tests that are done will be in your medical records.)
+
+3. In the US, federal anti-discrimination laws protect individuals from protected classes from unfair treatment, harassment, or retaliation related to their group status. For example, employers must provide reasonable accommodations, modifications, or adjustments for qualified applicants and employees with disabilities, unless doing so causes an undue hardship. Do you think people with higher PRS values should be a protected class? What do you think qualifies as "reasonable accommodations"?
+
 :::
