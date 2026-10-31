@@ -20,7 +20,11 @@ These modules are intended to fill a lab period, about 1.5 - 3 hours.
 
 - [Database Detectives: Exploring Public Genomic Databases](module/database_detectives.html)
 
-- [DNA Barcoding: Forensic Investigators](module/dna_barcoding.html) 
+- [DNA Barcoding: Forensic Investigators](module/dna_barcoding.html)
+
+- DNA Fingerprinting (_coming soon!_)
+
+- Escape Room: All of Us Research Bench (_coming soon!_)
 
 - [Epigenetics Explorer: Differentiating Cell Types](module/epigenetics_explorer.html)
 
